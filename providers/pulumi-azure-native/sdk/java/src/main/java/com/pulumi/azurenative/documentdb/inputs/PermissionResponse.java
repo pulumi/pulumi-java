@@ -26,6 +26,10 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataActions")
     private @Nullable List<String> dataActions;
 
+    /**
+     * @return An array of data actions that are allowed.
+     * 
+     */
     public Optional<List<String>> dataActions() {
         return Optional.ofNullable(this.dataActions);
     }
@@ -37,6 +41,10 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="notDataActions")
     private @Nullable List<String> notDataActions;
 
+    /**
+     * @return An array of data actions that are denied.
+     * 
+     */
     public Optional<List<String>> notDataActions() {
         return Optional.ofNullable(this.notDataActions);
     }
@@ -66,20 +74,44 @@ public final class PermissionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PermissionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataActions An array of data actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(@Nullable List<String> dataActions) {
             $.dataActions = dataActions;
             return this;
         }
 
+        /**
+         * @param dataActions An array of data actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataActions(String... dataActions) {
             return dataActions(List.of(dataActions));
         }
 
+        /**
+         * @param notDataActions An array of data actions that are denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(@Nullable List<String> notDataActions) {
             $.notDataActions = notDataActions;
             return this;
         }
 
+        /**
+         * @param notDataActions An array of data actions that are denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notDataActions(String... notDataActions) {
             return notDataActions(List.of(notDataActions));
         }

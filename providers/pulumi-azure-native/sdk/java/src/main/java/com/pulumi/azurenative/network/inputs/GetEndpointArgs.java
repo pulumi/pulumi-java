@@ -19,6 +19,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return The name of the Traffic Manager endpoint.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -30,6 +34,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointType", required=true)
     private String endpointType;
 
+    /**
+     * @return The type of the Traffic Manager endpoint.
+     * 
+     */
     public String endpointType() {
         return this.endpointType;
     }
@@ -41,6 +49,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return The name of the Traffic Manager profile.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -52,6 +64,10 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Traffic Manager endpoint.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName The name of the Traffic Manager endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointType The type of the Traffic Manager endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param profileName The name of the Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Traffic Manager endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

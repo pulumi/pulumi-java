@@ -30,6 +30,10 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="assets")
     private @Nullable List<ImageAssetResponse> assets;
 
+    /**
+     * @return The list of assets.
+     * 
+     */
     public Optional<List<ImageAssetResponse>> assets() {
         return Optional.ofNullable(this.assets);
     }
@@ -41,6 +45,10 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="driverProgram")
     private @Nullable String driverProgram;
 
+    /**
+     * @return The name of the driver file.
+     * 
+     */
     public Optional<String> driverProgram() {
         return Optional.ofNullable(this.driverProgram);
     }
@@ -52,6 +60,10 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="environment")
     private @Nullable EnvironmentImageResponseResponseEnvironment environment;
 
+    /**
+     * @return The details of the AZURE ML environment.
+     * 
+     */
     public Optional<EnvironmentImageResponseResponseEnvironment> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -63,6 +75,10 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="environmentReference")
     private @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
 
+    /**
+     * @return The unique identifying details of the AZURE ML environment.
+     * 
+     */
     public Optional<EnvironmentImageResponseResponseEnvironmentReference> environmentReference() {
         return Optional.ofNullable(this.environmentReference);
     }
@@ -74,6 +90,10 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="modelIds")
     private @Nullable List<String> modelIds;
 
+    /**
+     * @return The list of model Ids.
+     * 
+     */
     public Optional<List<String>> modelIds() {
         return Optional.ofNullable(this.modelIds);
     }
@@ -85,6 +105,10 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
     @Import(name="models")
     private @Nullable List<ModelResponse> models;
 
+    /**
+     * @return The list of models.
+     * 
+     */
     public Optional<List<ModelResponse>> models() {
         return Optional.ofNullable(this.models);
     }
@@ -118,44 +142,98 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends com
             $ = new AKSServiceResponseResponseEnvironmentImageRequest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assets The list of assets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assets(@Nullable List<ImageAssetResponse> assets) {
             $.assets = assets;
             return this;
         }
 
+        /**
+         * @param assets The list of assets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assets(ImageAssetResponse... assets) {
             return assets(List.of(assets));
         }
 
+        /**
+         * @param driverProgram The name of the driver file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverProgram(@Nullable String driverProgram) {
             $.driverProgram = driverProgram;
             return this;
         }
 
+        /**
+         * @param environment The details of the AZURE ML environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable EnvironmentImageResponseResponseEnvironment environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environmentReference The unique identifying details of the AZURE ML environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentReference(@Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference) {
             $.environmentReference = environmentReference;
             return this;
         }
 
+        /**
+         * @param modelIds The list of model Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelIds(@Nullable List<String> modelIds) {
             $.modelIds = modelIds;
             return this;
         }
 
+        /**
+         * @param modelIds The list of model Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modelIds(String... modelIds) {
             return modelIds(List.of(modelIds));
         }
 
+        /**
+         * @param models The list of models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder models(@Nullable List<ModelResponse> models) {
             $.models = models;
             return this;
         }
 
+        /**
+         * @param models The list of models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder models(ModelResponse... models) {
             return models(List.of(models));
         }

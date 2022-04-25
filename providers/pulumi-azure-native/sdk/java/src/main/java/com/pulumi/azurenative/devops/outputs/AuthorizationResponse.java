@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AuthorizationResponse {
-    /**
-     * Type of authorization.
-     * 
-     */
+        /**
+         * @return Type of authorization.
+         * 
+         */
     private final String authorizationType;
-    /**
-     * Authorization parameters corresponding to the authorization type.
-     * 
-     */
+        /**
+         * @return Authorization parameters corresponding to the authorization type.
+         * 
+         */
     private final @Nullable Map<String,String> parameters;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AuthorizationResponse {
     }
 
     /**
-     * Type of authorization.
+     * @return Type of authorization.
      * 
-    */
+     */
     public String authorizationType() {
         return this.authorizationType;
     }
     /**
-     * Authorization parameters corresponding to the authorization type.
+     * @return Authorization parameters corresponding to the authorization type.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }

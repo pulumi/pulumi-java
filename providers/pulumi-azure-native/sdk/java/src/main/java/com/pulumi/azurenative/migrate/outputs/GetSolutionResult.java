@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSolutionResult {
-    /**
-     * Gets or sets the ETAG for optimistic concurrency control.
-     * 
-     */
+        /**
+         * @return Gets or sets the ETAG for optimistic concurrency control.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Gets the relative URL to get to this REST resource.
-     * 
-     */
+        /**
+         * @return Gets the relative URL to get to this REST resource.
+         * 
+         */
     private final String id;
-    /**
-     * Gets the name of this REST resource.
-     * 
-     */
+        /**
+         * @return Gets the name of this REST resource.
+         * 
+         */
     private final String name;
-    /**
-     * Gets or sets the properties of the solution.
-     * 
-     */
+        /**
+         * @return Gets or sets the properties of the solution.
+         * 
+         */
     private final SolutionPropertiesResponse properties;
-    /**
-     * Gets the type of this REST resource.
-     * 
-     */
+        /**
+         * @return Gets the type of this REST resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GetSolutionResult {
     }
 
     /**
-     * Gets or sets the ETAG for optimistic concurrency control.
+     * @return Gets or sets the ETAG for optimistic concurrency control.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Gets the relative URL to get to this REST resource.
+     * @return Gets the relative URL to get to this REST resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the name of this REST resource.
+     * @return Gets the name of this REST resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the properties of the solution.
+     * @return Gets or sets the properties of the solution.
      * 
-    */
+     */
     public SolutionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Gets the type of this REST resource.
+     * @return Gets the type of this REST resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

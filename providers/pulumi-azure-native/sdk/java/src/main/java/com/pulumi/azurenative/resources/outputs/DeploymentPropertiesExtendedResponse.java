@@ -19,90 +19,90 @@ import java.util.Objects;
 
 @CustomType
 public final class DeploymentPropertiesExtendedResponse {
-    /**
-     * The correlation ID of the deployment.
-     * 
-     */
+        /**
+         * @return The correlation ID of the deployment.
+         * 
+         */
     private final String correlationId;
-    /**
-     * The debug setting of the deployment.
-     * 
-     */
+        /**
+         * @return The debug setting of the deployment.
+         * 
+         */
     private final DebugSettingResponse debugSetting;
-    /**
-     * The list of deployment dependencies.
-     * 
-     */
+        /**
+         * @return The list of deployment dependencies.
+         * 
+         */
     private final List<DependencyResponse> dependencies;
-    /**
-     * The duration of the template deployment.
-     * 
-     */
+        /**
+         * @return The duration of the template deployment.
+         * 
+         */
     private final String duration;
-    /**
-     * The deployment error.
-     * 
-     */
+        /**
+         * @return The deployment error.
+         * 
+         */
     private final ErrorResponseResponse error;
-    /**
-     * The deployment mode. Possible values are Incremental and Complete.
-     * 
-     */
+        /**
+         * @return The deployment mode. Possible values are Incremental and Complete.
+         * 
+         */
     private final String mode;
-    /**
-     * The deployment on error behavior.
-     * 
-     */
+        /**
+         * @return The deployment on error behavior.
+         * 
+         */
     private final OnErrorDeploymentExtendedResponse onErrorDeployment;
-    /**
-     * Array of provisioned resources.
-     * 
-     */
+        /**
+         * @return Array of provisioned resources.
+         * 
+         */
     private final List<ResourceReferenceResponse> outputResources;
-    /**
-     * Key/value pairs that represent deployment output.
-     * 
-     */
+        /**
+         * @return Key/value pairs that represent deployment output.
+         * 
+         */
     private final Object outputs;
-    /**
-     * Deployment parameters.
-     * 
-     */
+        /**
+         * @return Deployment parameters.
+         * 
+         */
     private final Object parameters;
-    /**
-     * The URI referencing the parameters.
-     * 
-     */
+        /**
+         * @return The URI referencing the parameters.
+         * 
+         */
     private final ParametersLinkResponse parametersLink;
-    /**
-     * The list of resource providers needed for the deployment.
-     * 
-     */
+        /**
+         * @return The list of resource providers needed for the deployment.
+         * 
+         */
     private final List<ProviderResponse> providers;
-    /**
-     * Denotes the state of provisioning.
-     * 
-     */
+        /**
+         * @return Denotes the state of provisioning.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The hash produced for the template.
-     * 
-     */
+        /**
+         * @return The hash produced for the template.
+         * 
+         */
     private final String templateHash;
-    /**
-     * The URI referencing the template.
-     * 
-     */
+        /**
+         * @return The URI referencing the template.
+         * 
+         */
     private final TemplateLinkResponse templateLink;
-    /**
-     * The timestamp of the template deployment.
-     * 
-     */
+        /**
+         * @return The timestamp of the template deployment.
+         * 
+         */
     private final String timestamp;
-    /**
-     * Array of validated resources.
-     * 
-     */
+        /**
+         * @return Array of validated resources.
+         * 
+         */
     private final List<ResourceReferenceResponse> validatedResources;
 
     @CustomType.Constructor
@@ -144,121 +144,121 @@ public final class DeploymentPropertiesExtendedResponse {
     }
 
     /**
-     * The correlation ID of the deployment.
+     * @return The correlation ID of the deployment.
      * 
-    */
+     */
     public String correlationId() {
         return this.correlationId;
     }
     /**
-     * The debug setting of the deployment.
+     * @return The debug setting of the deployment.
      * 
-    */
+     */
     public DebugSettingResponse debugSetting() {
         return this.debugSetting;
     }
     /**
-     * The list of deployment dependencies.
+     * @return The list of deployment dependencies.
      * 
-    */
+     */
     public List<DependencyResponse> dependencies() {
         return this.dependencies;
     }
     /**
-     * The duration of the template deployment.
+     * @return The duration of the template deployment.
      * 
-    */
+     */
     public String duration() {
         return this.duration;
     }
     /**
-     * The deployment error.
+     * @return The deployment error.
      * 
-    */
+     */
     public ErrorResponseResponse error() {
         return this.error;
     }
     /**
-     * The deployment mode. Possible values are Incremental and Complete.
+     * @return The deployment mode. Possible values are Incremental and Complete.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
     /**
-     * The deployment on error behavior.
+     * @return The deployment on error behavior.
      * 
-    */
+     */
     public OnErrorDeploymentExtendedResponse onErrorDeployment() {
         return this.onErrorDeployment;
     }
     /**
-     * Array of provisioned resources.
+     * @return Array of provisioned resources.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> outputResources() {
         return this.outputResources;
     }
     /**
-     * Key/value pairs that represent deployment output.
+     * @return Key/value pairs that represent deployment output.
      * 
-    */
+     */
     public Object outputs() {
         return this.outputs;
     }
     /**
-     * Deployment parameters.
+     * @return Deployment parameters.
      * 
-    */
+     */
     public Object parameters() {
         return this.parameters;
     }
     /**
-     * The URI referencing the parameters.
+     * @return The URI referencing the parameters.
      * 
-    */
+     */
     public ParametersLinkResponse parametersLink() {
         return this.parametersLink;
     }
     /**
-     * The list of resource providers needed for the deployment.
+     * @return The list of resource providers needed for the deployment.
      * 
-    */
+     */
     public List<ProviderResponse> providers() {
         return this.providers;
     }
     /**
-     * Denotes the state of provisioning.
+     * @return Denotes the state of provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The hash produced for the template.
+     * @return The hash produced for the template.
      * 
-    */
+     */
     public String templateHash() {
         return this.templateHash;
     }
     /**
-     * The URI referencing the template.
+     * @return The URI referencing the template.
      * 
-    */
+     */
     public TemplateLinkResponse templateLink() {
         return this.templateLink;
     }
     /**
-     * The timestamp of the template deployment.
+     * @return The timestamp of the template deployment.
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }
     /**
-     * Array of validated resources.
+     * @return Array of validated resources.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> validatedResources() {
         return this.validatedResources;
     }

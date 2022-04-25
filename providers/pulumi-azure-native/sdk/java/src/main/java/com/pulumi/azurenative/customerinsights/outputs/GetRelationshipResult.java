@@ -15,80 +15,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRelationshipResult {
-    /**
-     * The Relationship Cardinality.
-     * 
-     */
+        /**
+         * @return The Relationship Cardinality.
+         * 
+         */
     private final @Nullable String cardinality;
-    /**
-     * Localized descriptions for the Relationship.
-     * 
-     */
+        /**
+         * @return Localized descriptions for the Relationship.
+         * 
+         */
     private final @Nullable Map<String,String> description;
-    /**
-     * Localized display name for the Relationship.
-     * 
-     */
+        /**
+         * @return Localized display name for the Relationship.
+         * 
+         */
     private final @Nullable Map<String,String> displayName;
-    /**
-     * The expiry date time in UTC.
-     * 
-     */
+        /**
+         * @return The expiry date time in UTC.
+         * 
+         */
     private final @Nullable String expiryDateTimeUtc;
-    /**
-     * The properties of the Relationship.
-     * 
-     */
+        /**
+         * @return The properties of the Relationship.
+         * 
+         */
     private final @Nullable List<PropertyDefinitionResponse> fields;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Optional property to be used to map fields in profile to their strong ids in related profile.
-     * 
-     */
+        /**
+         * @return Optional property to be used to map fields in profile to their strong ids in related profile.
+         * 
+         */
     private final @Nullable List<RelationshipTypeMappingResponse> lookupMappings;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Profile type.
-     * 
-     */
+        /**
+         * @return Profile type.
+         * 
+         */
     private final String profileType;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Related profile being referenced.
-     * 
-     */
+        /**
+         * @return Related profile being referenced.
+         * 
+         */
     private final String relatedProfileType;
-    /**
-     * The relationship guid id.
-     * 
-     */
+        /**
+         * @return The relationship guid id.
+         * 
+         */
     private final String relationshipGuidId;
-    /**
-     * The Relationship name.
-     * 
-     */
+        /**
+         * @return The Relationship name.
+         * 
+         */
     private final String relationshipName;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -126,107 +126,107 @@ public final class GetRelationshipResult {
     }
 
     /**
-     * The Relationship Cardinality.
+     * @return The Relationship Cardinality.
      * 
-    */
+     */
     public Optional<String> cardinality() {
         return Optional.ofNullable(this.cardinality);
     }
     /**
-     * Localized descriptions for the Relationship.
+     * @return Localized descriptions for the Relationship.
      * 
-    */
+     */
     public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
-     * Localized display name for the Relationship.
+     * @return Localized display name for the Relationship.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * The expiry date time in UTC.
+     * @return The expiry date time in UTC.
      * 
-    */
+     */
     public Optional<String> expiryDateTimeUtc() {
         return Optional.ofNullable(this.expiryDateTimeUtc);
     }
     /**
-     * The properties of the Relationship.
+     * @return The properties of the Relationship.
      * 
-    */
+     */
     public List<PropertyDefinitionResponse> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Optional property to be used to map fields in profile to their strong ids in related profile.
+     * @return Optional property to be used to map fields in profile to their strong ids in related profile.
      * 
-    */
+     */
     public List<RelationshipTypeMappingResponse> lookupMappings() {
         return this.lookupMappings == null ? List.of() : this.lookupMappings;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Profile type.
+     * @return Profile type.
      * 
-    */
+     */
     public String profileType() {
         return this.profileType;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Related profile being referenced.
+     * @return Related profile being referenced.
      * 
-    */
+     */
     public String relatedProfileType() {
         return this.relatedProfileType;
     }
     /**
-     * The relationship guid id.
+     * @return The relationship guid id.
      * 
-    */
+     */
     public String relationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
-     * The Relationship name.
+     * @return The Relationship name.
      * 
-    */
+     */
     public String relationshipName() {
         return this.relationshipName;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

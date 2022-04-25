@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SolutionPropertiesResponse {
-    /**
-     * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
-     * 
-     */
+        /**
+         * @return The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+         * 
+         */
     private final @Nullable List<String> containedResources;
-    /**
-     * The provisioning state for the solution.
-     * 
-     */
+        /**
+         * @return The provisioning state for the solution.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
-     * 
-     */
+        /**
+         * @return The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+         * 
+         */
     private final @Nullable List<String> referencedResources;
-    /**
-     * The azure resourceId for the workspace where the solution will be deployed/enabled.
-     * 
-     */
+        /**
+         * @return The azure resourceId for the workspace where the solution will be deployed/enabled.
+         * 
+         */
     private final String workspaceResourceId;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class SolutionPropertiesResponse {
     }
 
     /**
-     * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+     * @return The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
      * 
-    */
+     */
     public List<String> containedResources() {
         return this.containedResources == null ? List.of() : this.containedResources;
     }
     /**
-     * The provisioning state for the solution.
+     * @return The provisioning state for the solution.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+     * @return The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
      * 
-    */
+     */
     public List<String> referencedResources() {
         return this.referencedResources == null ? List.of() : this.referencedResources;
     }
     /**
-     * The azure resourceId for the workspace where the solution will be deployed/enabled.
+     * @return The azure resourceId for the workspace where the solution will be deployed/enabled.
      * 
-    */
+     */
     public String workspaceResourceId() {
         return this.workspaceResourceId;
     }

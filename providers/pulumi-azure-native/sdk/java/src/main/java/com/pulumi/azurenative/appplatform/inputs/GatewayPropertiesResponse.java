@@ -33,6 +33,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="apiMetadataProperties")
     private @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties;
 
+    /**
+     * @return API metadata property for Spring Cloud Gateway
+     * 
+     */
     public Optional<GatewayApiMetadataPropertiesResponse> apiMetadataProperties() {
         return Optional.ofNullable(this.apiMetadataProperties);
     }
@@ -44,6 +48,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="corsProperties")
     private @Nullable GatewayCorsPropertiesResponse corsProperties;
 
+    /**
+     * @return Cross-Origin Resource Sharing property
+     * 
+     */
     public Optional<GatewayCorsPropertiesResponse> corsProperties() {
         return Optional.ofNullable(this.corsProperties);
     }
@@ -55,6 +63,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="httpsOnly")
     private @Nullable Boolean httpsOnly;
 
+    /**
+     * @return Indicate if only https is allowed.
+     * 
+     */
     public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
@@ -66,6 +78,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="instances", required=true)
     private List<GatewayInstanceResponse> instances;
 
+    /**
+     * @return Collection of instances belong to Spring Cloud Gateway.
+     * 
+     */
     public List<GatewayInstanceResponse> instances() {
         return this.instances;
     }
@@ -77,6 +93,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="operatorProperties", required=true)
     private GatewayOperatorPropertiesResponse operatorProperties;
 
+    /**
+     * @return Properties of the Spring Cloud Gateway Operator.
+     * 
+     */
     public GatewayOperatorPropertiesResponse operatorProperties() {
         return this.operatorProperties;
     }
@@ -88,6 +108,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the Spring Cloud Gateway.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -99,6 +123,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="public")
     private @Nullable Boolean public_;
 
+    /**
+     * @return Indicates whether the Spring Cloud Gateway exposes endpoint.
+     * 
+     */
     public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
@@ -110,6 +138,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceRequests")
     private @Nullable GatewayResourceRequestsResponse resourceRequests;
 
+    /**
+     * @return The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public Optional<GatewayResourceRequestsResponse> resourceRequests() {
         return Optional.ofNullable(this.resourceRequests);
     }
@@ -121,6 +153,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="ssoProperties")
     private @Nullable SsoPropertiesResponse ssoProperties;
 
+    /**
+     * @return Single sign-on related configuration
+     * 
+     */
     public Optional<SsoPropertiesResponse> ssoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
@@ -132,6 +168,10 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return URL of the Spring Cloud Gateway, exposed when &#39;public&#39; is true.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -169,55 +209,121 @@ public final class GatewayPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new GatewayPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiMetadataProperties API metadata property for Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMetadataProperties(@Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties) {
             $.apiMetadataProperties = apiMetadataProperties;
             return this;
         }
 
+        /**
+         * @param corsProperties Cross-Origin Resource Sharing property
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsProperties(@Nullable GatewayCorsPropertiesResponse corsProperties) {
             $.corsProperties = corsProperties;
             return this;
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<GatewayInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(GatewayInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param operatorProperties Properties of the Spring Cloud Gateway Operator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorProperties(GatewayOperatorPropertiesResponse operatorProperties) {
             $.operatorProperties = operatorProperties;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the Spring Cloud Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param public_ Indicates whether the Spring Cloud Gateway exposes endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(@Nullable Boolean public_) {
             $.public_ = public_;
             return this;
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(@Nullable GatewayResourceRequestsResponse resourceRequests) {
             $.resourceRequests = resourceRequests;
             return this;
         }
 
+        /**
+         * @param ssoProperties Single sign-on related configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
             $.ssoProperties = ssoProperties;
             return this;
         }
 
+        /**
+         * @param url URL of the Spring Cloud Gateway, exposed when &#39;public&#39; is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

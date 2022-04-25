@@ -27,6 +27,10 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceState", required=true)
     private String resourceState;
 
+    /**
+     * @return Resource status.
+     * 
+     */
     public String resourceState() {
         return this.resourceState;
     }
@@ -60,6 +72,10 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rules")
     private @Nullable List<RulesEngineRuleResponse> rules;
 
+    /**
+     * @return A list of rules that define a particular Rules Engine Configuration.
+     * 
+     */
     public Optional<List<RulesEngineRuleResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -71,6 +87,10 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,30 +123,66 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RulesEngineResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceState Resource status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceState(String resourceState) {
             $.resourceState = resourceState;
             return this;
         }
 
+        /**
+         * @param rules A list of rules that define a particular Rules Engine Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<RulesEngineRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of rules that define a particular Rules Engine Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RulesEngineRuleResponse... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

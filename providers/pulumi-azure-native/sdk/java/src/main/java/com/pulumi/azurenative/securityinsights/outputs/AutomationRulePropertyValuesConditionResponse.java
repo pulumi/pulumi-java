@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class AutomationRulePropertyValuesConditionResponse {
-    /**
-     * The configuration of the automation rule condition
-     * 
-     */
+        /**
+         * @return The configuration of the automation rule condition
+         * 
+         */
     private final AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties;
-    /**
-     * The type of the automation rule condition
-     * Expected value is &#39;Property&#39;.
-     * 
-     */
+        /**
+         * @return The type of the automation rule condition
+         * Expected value is &#39;Property&#39;.
+         * 
+         */
     private final String conditionType;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class AutomationRulePropertyValuesConditionResponse {
     }
 
     /**
-     * The configuration of the automation rule condition
+     * @return The configuration of the automation rule condition
      * 
-    */
+     */
     public AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties() {
         return this.conditionProperties;
     }
     /**
-     * The type of the automation rule condition
+     * @return The type of the automation rule condition
      * Expected value is &#39;Property&#39;.
      * 
-    */
+     */
     public String conditionType() {
         return this.conditionType;
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceMoveDetailsResponse {
-    /**
-     * Denotes whether move operation is in progress
-     * 
-     */
+        /**
+         * @return Denotes whether move operation is in progress
+         * 
+         */
     private final @Nullable String operationInProgress;
-    /**
-     * Denotes the timeout of the operation to finish
-     * 
-     */
+        /**
+         * @return Denotes the timeout of the operation to finish
+         * 
+         */
     private final @Nullable String operationInProgressLockTimeoutInUTC;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ResourceMoveDetailsResponse {
     }
 
     /**
-     * Denotes whether move operation is in progress
+     * @return Denotes whether move operation is in progress
      * 
-    */
+     */
     public Optional<String> operationInProgress() {
         return Optional.ofNullable(this.operationInProgress);
     }
     /**
-     * Denotes the timeout of the operation to finish
+     * @return Denotes the timeout of the operation to finish
      * 
-    */
+     */
     public Optional<String> operationInProgressLockTimeoutInUTC() {
         return Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
     }

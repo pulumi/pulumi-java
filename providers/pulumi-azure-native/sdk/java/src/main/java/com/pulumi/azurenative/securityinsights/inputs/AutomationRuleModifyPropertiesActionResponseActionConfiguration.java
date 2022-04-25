@@ -28,6 +28,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="classification")
     private @Nullable String classification;
 
+    /**
+     * @return The reason the incident was closed
+     * 
+     */
     public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
@@ -39,6 +43,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="classificationComment")
     private @Nullable String classificationComment;
 
+    /**
+     * @return Describes the reason the incident was closed
+     * 
+     */
     public Optional<String> classificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
@@ -50,6 +58,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="classificationReason")
     private @Nullable String classificationReason;
 
+    /**
+     * @return The classification reason to close the incident with
+     * 
+     */
     public Optional<String> classificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
@@ -61,6 +73,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="labels")
     private @Nullable List<IncidentLabelResponse> labels;
 
+    /**
+     * @return List of labels to add to the incident
+     * 
+     */
     public Optional<List<IncidentLabelResponse>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -72,6 +88,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="owner")
     private @Nullable IncidentOwnerInfoResponse owner;
 
+    /**
+     * @return Describes a user that the incident is assigned to
+     * 
+     */
     public Optional<IncidentOwnerInfoResponse> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -83,6 +103,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="severity")
     private @Nullable String severity;
 
+    /**
+     * @return The severity of the incident
+     * 
+     */
     public Optional<String> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -94,6 +118,10 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the incident
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -128,40 +156,88 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
             $ = new AutomationRuleModifyPropertiesActionResponseActionConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(@Nullable String classification) {
             $.classification = classification;
             return this;
         }
 
+        /**
+         * @param classificationComment Describes the reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationComment(@Nullable String classificationComment) {
             $.classificationComment = classificationComment;
             return this;
         }
 
+        /**
+         * @param classificationReason The classification reason to close the incident with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(@Nullable String classificationReason) {
             $.classificationReason = classificationReason;
             return this;
         }
 
+        /**
+         * @param labels List of labels to add to the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of labels to add to the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(IncidentLabelResponse... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param owner Describes a user that the incident is assigned to
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable String severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

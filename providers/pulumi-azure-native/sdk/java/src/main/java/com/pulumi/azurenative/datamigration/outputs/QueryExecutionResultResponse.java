@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class QueryExecutionResultResponse {
-    /**
-     * Query text retrieved from the source server
-     * 
-     */
+        /**
+         * @return Query text retrieved from the source server
+         * 
+         */
     private final String queryText;
-    /**
-     * Query analysis result from the source
-     * 
-     */
+        /**
+         * @return Query analysis result from the source
+         * 
+         */
     private final ExecutionStatisticsResponse sourceResult;
-    /**
-     * Total no. of statements in the batch
-     * 
-     */
+        /**
+         * @return Total no. of statements in the batch
+         * 
+         */
     private final Double statementsInBatch;
-    /**
-     * Query analysis result from the target
-     * 
-     */
+        /**
+         * @return Query analysis result from the target
+         * 
+         */
     private final ExecutionStatisticsResponse targetResult;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class QueryExecutionResultResponse {
     }
 
     /**
-     * Query text retrieved from the source server
+     * @return Query text retrieved from the source server
      * 
-    */
+     */
     public String queryText() {
         return this.queryText;
     }
     /**
-     * Query analysis result from the source
+     * @return Query analysis result from the source
      * 
-    */
+     */
     public ExecutionStatisticsResponse sourceResult() {
         return this.sourceResult;
     }
     /**
-     * Total no. of statements in the batch
+     * @return Total no. of statements in the batch
      * 
-    */
+     */
     public Double statementsInBatch() {
         return this.statementsInBatch;
     }
     /**
-     * Query analysis result from the target
+     * @return Query analysis result from the target
      * 
-    */
+     */
     public ExecutionStatisticsResponse targetResult() {
         return this.targetResult;
     }

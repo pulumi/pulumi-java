@@ -15,110 +15,110 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class A2AProtectedDiskDetailsResponse {
-    /**
-     * The disk level operations list.
-     * 
-     */
+        /**
+         * @return The disk level operations list.
+         * 
+         */
     private final @Nullable List<String> allowedDiskLevelOperation;
-    /**
-     * The data pending at source virtual machine in MB.
-     * 
-     */
+        /**
+         * @return The data pending at source virtual machine in MB.
+         * 
+         */
     private final @Nullable Double dataPendingAtSourceAgentInMB;
-    /**
-     * The data pending for replication in MB at staging account.
-     * 
-     */
+        /**
+         * @return The data pending for replication in MB at staging account.
+         * 
+         */
     private final @Nullable Double dataPendingInStagingStorageAccountInMB;
-    /**
-     * The KeyVault resource id for secret (BEK).
-     * 
-     */
+        /**
+         * @return The KeyVault resource id for secret (BEK).
+         * 
+         */
     private final @Nullable String dekKeyVaultArmId;
-    /**
-     * The disk capacity in bytes.
-     * 
-     */
+        /**
+         * @return The disk capacity in bytes.
+         * 
+         */
     private final @Nullable Double diskCapacityInBytes;
-    /**
-     * The disk name.
-     * 
-     */
+        /**
+         * @return The disk name.
+         * 
+         */
     private final @Nullable String diskName;
-    /**
-     * The disk state.
-     * 
-     */
+        /**
+         * @return The disk state.
+         * 
+         */
     private final @Nullable String diskState;
-    /**
-     * The type of disk.
-     * 
-     */
+        /**
+         * @return The type of disk.
+         * 
+         */
     private final @Nullable String diskType;
-    /**
-     * The disk uri.
-     * 
-     */
+        /**
+         * @return The disk uri.
+         * 
+         */
     private final @Nullable String diskUri;
-    /**
-     * A value indicating whether vm has encrypted os disk or not.
-     * 
-     */
+        /**
+         * @return A value indicating whether vm has encrypted os disk or not.
+         * 
+         */
     private final @Nullable Boolean isDiskEncrypted;
-    /**
-     * A value indicating whether disk key got encrypted or not.
-     * 
-     */
+        /**
+         * @return A value indicating whether disk key got encrypted or not.
+         * 
+         */
     private final @Nullable Boolean isDiskKeyEncrypted;
-    /**
-     * The KeyVault resource id for key (KEK).
-     * 
-     */
+        /**
+         * @return The KeyVault resource id for key (KEK).
+         * 
+         */
     private final @Nullable String kekKeyVaultArmId;
-    /**
-     * The key URL / identifier (KEK).
-     * 
-     */
+        /**
+         * @return The key URL / identifier (KEK).
+         * 
+         */
     private final @Nullable String keyIdentifier;
-    /**
-     * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
-     * 
-     */
+        /**
+         * @return The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+         * 
+         */
     private final @Nullable String monitoringJobType;
-    /**
-     * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
-     * 
-     */
+        /**
+         * @return The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+         * 
+         */
     private final @Nullable Integer monitoringPercentageCompletion;
-    /**
-     * The primary disk storage account.
-     * 
-     */
+        /**
+         * @return The primary disk storage account.
+         * 
+         */
     private final @Nullable String primaryDiskAzureStorageAccountId;
-    /**
-     * The primary staging storage account.
-     * 
-     */
+        /**
+         * @return The primary staging storage account.
+         * 
+         */
     private final @Nullable String primaryStagingAzureStorageAccountId;
-    /**
-     * The recovery disk storage account.
-     * 
-     */
+        /**
+         * @return The recovery disk storage account.
+         * 
+         */
     private final @Nullable String recoveryAzureStorageAccountId;
-    /**
-     * Recovery disk uri.
-     * 
-     */
+        /**
+         * @return Recovery disk uri.
+         * 
+         */
     private final @Nullable String recoveryDiskUri;
-    /**
-     * A value indicating whether resync is required for this disk.
-     * 
-     */
+        /**
+         * @return A value indicating whether resync is required for this disk.
+         * 
+         */
     private final @Nullable Boolean resyncRequired;
-    /**
-     * The secret URL / identifier (BEK).
-     * 
-     */
+        /**
+         * @return The secret URL / identifier (BEK).
+         * 
+         */
     private final @Nullable String secretIdentifier;
 
     @CustomType.Constructor
@@ -168,149 +168,149 @@ public final class A2AProtectedDiskDetailsResponse {
     }
 
     /**
-     * The disk level operations list.
+     * @return The disk level operations list.
      * 
-    */
+     */
     public List<String> allowedDiskLevelOperation() {
         return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
     }
     /**
-     * The data pending at source virtual machine in MB.
+     * @return The data pending at source virtual machine in MB.
      * 
-    */
+     */
     public Optional<Double> dataPendingAtSourceAgentInMB() {
         return Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
     /**
-     * The data pending for replication in MB at staging account.
+     * @return The data pending for replication in MB at staging account.
      * 
-    */
+     */
     public Optional<Double> dataPendingInStagingStorageAccountInMB() {
         return Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
     /**
-     * The KeyVault resource id for secret (BEK).
+     * @return The KeyVault resource id for secret (BEK).
      * 
-    */
+     */
     public Optional<String> dekKeyVaultArmId() {
         return Optional.ofNullable(this.dekKeyVaultArmId);
     }
     /**
-     * The disk capacity in bytes.
+     * @return The disk capacity in bytes.
      * 
-    */
+     */
     public Optional<Double> diskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
-     * The disk state.
+     * @return The disk state.
      * 
-    */
+     */
     public Optional<String> diskState() {
         return Optional.ofNullable(this.diskState);
     }
     /**
-     * The type of disk.
+     * @return The type of disk.
      * 
-    */
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
-     * The disk uri.
+     * @return The disk uri.
      * 
-    */
+     */
     public Optional<String> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
     /**
-     * A value indicating whether vm has encrypted os disk or not.
+     * @return A value indicating whether vm has encrypted os disk or not.
      * 
-    */
+     */
     public Optional<Boolean> isDiskEncrypted() {
         return Optional.ofNullable(this.isDiskEncrypted);
     }
     /**
-     * A value indicating whether disk key got encrypted or not.
+     * @return A value indicating whether disk key got encrypted or not.
      * 
-    */
+     */
     public Optional<Boolean> isDiskKeyEncrypted() {
         return Optional.ofNullable(this.isDiskKeyEncrypted);
     }
     /**
-     * The KeyVault resource id for key (KEK).
+     * @return The KeyVault resource id for key (KEK).
      * 
-    */
+     */
     public Optional<String> kekKeyVaultArmId() {
         return Optional.ofNullable(this.kekKeyVaultArmId);
     }
     /**
-     * The key URL / identifier (KEK).
+     * @return The key URL / identifier (KEK).
      * 
-    */
+     */
     public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
     /**
-     * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+     * @return The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
      * 
-    */
+     */
     public Optional<String> monitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
     /**
-     * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+     * @return The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
      * 
-    */
+     */
     public Optional<Integer> monitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
     /**
-     * The primary disk storage account.
+     * @return The primary disk storage account.
      * 
-    */
+     */
     public Optional<String> primaryDiskAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryDiskAzureStorageAccountId);
     }
     /**
-     * The primary staging storage account.
+     * @return The primary staging storage account.
      * 
-    */
+     */
     public Optional<String> primaryStagingAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
     /**
-     * The recovery disk storage account.
+     * @return The recovery disk storage account.
      * 
-    */
+     */
     public Optional<String> recoveryAzureStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
     /**
-     * Recovery disk uri.
+     * @return Recovery disk uri.
      * 
-    */
+     */
     public Optional<String> recoveryDiskUri() {
         return Optional.ofNullable(this.recoveryDiskUri);
     }
     /**
-     * A value indicating whether resync is required for this disk.
+     * @return A value indicating whether resync is required for this disk.
      * 
-    */
+     */
     public Optional<Boolean> resyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
     /**
-     * The secret URL / identifier (BEK).
+     * @return The secret URL / identifier (BEK).
      * 
-    */
+     */
     public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }

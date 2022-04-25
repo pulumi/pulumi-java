@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetConsoleResult {
-    /**
-     * Cloud shell console properties.
-     * 
-     */
+        /**
+         * @return Cloud shell console properties.
+         * 
+         */
     private final ConsolePropertiesResponse properties;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetConsoleResult {
     }
 
     /**
-     * Cloud shell console properties.
+     * @return Cloud shell console properties.
      * 
-    */
+     */
     public ConsolePropertiesResponse properties() {
         return this.properties;
     }

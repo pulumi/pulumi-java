@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterSkuResponse {
-    /**
-     * Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
-     * 
-     */
+        /**
+         * @return Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
-     * 
-     */
+        /**
+         * @return Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClusterSkuResponse {
     }
 
     /**
-     * Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
+     * @return Denotes the number of streaming units the cluster can support. Valid values for this property are multiples of 36 with a minimum value of 36 and maximum value of 216. Required on PUT (CreateOrUpdate) requests.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
+     * @return Specifies the SKU name of the cluster. Required on PUT (CreateOrUpdate) requests.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

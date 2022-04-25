@@ -23,6 +23,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="factoryName", required=true)
     private Output<String> factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public Output<String> factoryName() {
         return this.factoryName;
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return The private endpoint connection name.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -45,6 +53,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties")
     private @Nullable Output<PrivateLinkConnectionApprovalRequestArgs> properties;
 
+    /**
+     * @return Core resource properties
+     * 
+     */
     public Optional<Output<PrivateLinkConnectionApprovalRequestArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(Output<String> factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             return factoryName(Output.of(factoryName));
         }
 
+        /**
+         * @param privateEndpointConnectionName The private endpoint connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName The private endpoint connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param properties Core resource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<PrivateLinkConnectionApprovalRequestArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Core resource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateLinkConnectionApprovalRequestArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

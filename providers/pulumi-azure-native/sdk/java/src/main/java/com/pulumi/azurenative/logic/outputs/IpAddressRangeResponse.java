@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IpAddressRangeResponse {
-    /**
-     * The IP address range.
-     * 
-     */
+        /**
+         * @return The IP address range.
+         * 
+         */
     private final @Nullable String addressRange;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class IpAddressRangeResponse {
     }
 
     /**
-     * The IP address range.
+     * @return The IP address range.
      * 
-    */
+     */
     public Optional<String> addressRange() {
         return Optional.ofNullable(this.addressRange);
     }

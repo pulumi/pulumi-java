@@ -31,6 +31,10 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
     @Import(name="allocatedOutboundPorts")
     private @Nullable Integer allocatedOutboundPorts;
 
+    /**
+     * @return Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
+     * 
+     */
     public Optional<Integer> allocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
@@ -42,6 +46,10 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
     @Import(name="effectiveOutboundIPs")
     private @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs;
 
+    /**
+     * @return The effective outbound IP resources of the cluster load balancer.
+     * 
+     */
     public Optional<List<ResourceReferenceResponse>> effectiveOutboundIPs() {
         return Optional.ofNullable(this.effectiveOutboundIPs);
     }
@@ -53,6 +61,10 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Integer idleTimeoutInMinutes;
 
+    /**
+     * @return Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
+     * 
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -64,6 +76,10 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
     @Import(name="managedOutboundIPs")
     private @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs;
 
+    /**
+     * @return Desired managed outbound IPs for the cluster load balancer.
+     * 
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs> managedOutboundIPs() {
         return Optional.ofNullable(this.managedOutboundIPs);
     }
@@ -75,6 +91,10 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
     @Import(name="outboundIPPrefixes")
     private @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes;
 
+    /**
+     * @return Desired outbound IP Prefix resources for the cluster load balancer.
+     * 
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes> outboundIPPrefixes() {
         return Optional.ofNullable(this.outboundIPPrefixes);
     }
@@ -86,6 +106,10 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
     @Import(name="outboundIPs")
     private @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 
+    /**
+     * @return Desired outbound IP resources for the cluster load balancer.
+     * 
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPs> outboundIPs() {
         return Optional.ofNullable(this.outboundIPs);
     }
@@ -119,35 +143,77 @@ public final class ManagedClusterLoadBalancerProfileResponse extends com.pulumi.
             $ = new ManagedClusterLoadBalancerProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocatedOutboundPorts Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
             $.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
 
+        /**
+         * @param effectiveOutboundIPs The effective outbound IP resources of the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveOutboundIPs(@Nullable List<ResourceReferenceResponse> effectiveOutboundIPs) {
             $.effectiveOutboundIPs = effectiveOutboundIPs;
             return this;
         }
 
+        /**
+         * @param effectiveOutboundIPs The effective outbound IP resources of the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveOutboundIPs(ResourceReferenceResponse... effectiveOutboundIPs) {
             return effectiveOutboundIPs(List.of(effectiveOutboundIPs));
         }
 
+        /**
+         * @param idleTimeoutInMinutes Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param managedOutboundIPs Desired managed outbound IPs for the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs) {
             $.managedOutboundIPs = managedOutboundIPs;
             return this;
         }
 
+        /**
+         * @param outboundIPPrefixes Desired outbound IP Prefix resources for the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundIPPrefixes(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes) {
             $.outboundIPPrefixes = outboundIPPrefixes;
             return this;
         }
 
+        /**
+         * @param outboundIPs Desired outbound IP resources for the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
             $.outboundIPs = outboundIPs;
             return this;

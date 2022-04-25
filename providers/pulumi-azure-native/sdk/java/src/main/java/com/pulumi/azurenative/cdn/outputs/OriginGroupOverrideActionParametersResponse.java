@@ -11,10 +11,10 @@ import java.util.Objects;
 @CustomType
 public final class OriginGroupOverrideActionParametersResponse {
     private final String odataType;
-    /**
-     * defines the OriginGroup that would override the DefaultOriginGroup.
-     * 
-     */
+        /**
+         * @return defines the OriginGroup that would override the DefaultOriginGroup.
+         * 
+         */
     private final ResourceReferenceResponse originGroup;
 
     @CustomType.Constructor
@@ -29,9 +29,9 @@ public final class OriginGroupOverrideActionParametersResponse {
         return this.odataType;
     }
     /**
-     * defines the OriginGroup that would override the DefaultOriginGroup.
+     * @return defines the OriginGroup that would override the DefaultOriginGroup.
      * 
-    */
+     */
     public ResourceReferenceResponse originGroup() {
         return this.originGroup;
     }

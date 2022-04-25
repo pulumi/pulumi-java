@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkProfileResponse {
-    /**
-     * The ID of the virtual network.
-     * 
-     */
+        /**
+         * @return The ID of the virtual network.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the subnet.
-     * 
-     */
+        /**
+         * @return The name of the subnet.
+         * 
+         */
     private final @Nullable String subnet;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class VirtualNetworkProfileResponse {
     }
 
     /**
-     * The ID of the virtual network.
+     * @return The ID of the virtual network.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the subnet.
+     * @return The name of the subnet.
      * 
-    */
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }

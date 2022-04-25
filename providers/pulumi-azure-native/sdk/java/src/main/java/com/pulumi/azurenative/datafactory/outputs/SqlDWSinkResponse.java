@@ -15,86 +15,86 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SqlDWSinkResponse {
-    /**
-     * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object allowCopyCommand;
-    /**
-     * Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object allowPolyBase;
-    /**
-     * Specifies Copy Command related settings when allowCopyCommand is true.
-     * 
-     */
+        /**
+         * @return Specifies Copy Command related settings when allowCopyCommand is true.
+         * 
+         */
     private final @Nullable DWCopyCommandSettingsResponse copyCommandSettings;
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object disableMetricsCollection;
-    /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object maxConcurrentConnections;
-    /**
-     * Specifies PolyBase-related settings when allowPolyBase is true.
-     * 
-     */
+        /**
+         * @return Specifies PolyBase-related settings when allowPolyBase is true.
+         * 
+         */
     private final @Nullable PolybaseSettingsResponse polyBaseSettings;
-    /**
-     * SQL pre-copy script. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return SQL pre-copy script. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object preCopyScript;
-    /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object sinkRetryCount;
-    /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object sinkRetryWait;
-    /**
-     * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object sqlWriterUseTableLock;
-    /**
-     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object tableOption;
-    /**
-     * Copy sink type.
-     * Expected value is &#39;SqlDWSink&#39;.
-     * 
-     */
+        /**
+         * @return Copy sink type.
+         * Expected value is &#39;SqlDWSink&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * SQL DW upsert settings.
-     * 
-     */
+        /**
+         * @return SQL DW upsert settings.
+         * 
+         */
     private final @Nullable SqlDWUpsertSettingsResponse upsertSettings;
-    /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object writeBatchSize;
-    /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object writeBatchTimeout;
-    /**
-     * Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
-     * 
-     */
+        /**
+         * @return Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+         * 
+         */
     private final @Nullable Object writeBehavior;
 
     @CustomType.Constructor
@@ -134,115 +134,115 @@ public final class SqlDWSinkResponse {
     }
 
     /**
-     * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> allowCopyCommand() {
         return Optional.ofNullable(this.allowCopyCommand);
     }
     /**
-     * Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> allowPolyBase() {
         return Optional.ofNullable(this.allowPolyBase);
     }
     /**
-     * Specifies Copy Command related settings when allowCopyCommand is true.
+     * @return Specifies Copy Command related settings when allowCopyCommand is true.
      * 
-    */
+     */
     public Optional<DWCopyCommandSettingsResponse> copyCommandSettings() {
         return Optional.ofNullable(this.copyCommandSettings);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Specifies PolyBase-related settings when allowPolyBase is true.
+     * @return Specifies PolyBase-related settings when allowPolyBase is true.
      * 
-    */
+     */
     public Optional<PolybaseSettingsResponse> polyBaseSettings() {
         return Optional.ofNullable(this.polyBaseSettings);
     }
     /**
-     * SQL pre-copy script. Type: string (or Expression with resultType string).
+     * @return SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> preCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
-     * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> sqlWriterUseTableLock() {
         return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
     /**
-     * The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
+     * @return The option to handle sink table, such as autoCreate. For now only &#39;autoCreate&#39; value is supported. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> tableOption() {
         return Optional.ofNullable(this.tableOption);
     }
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;SqlDWSink&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * SQL DW upsert settings.
+     * @return SQL DW upsert settings.
      * 
-    */
+     */
     public Optional<SqlDWUpsertSettingsResponse> upsertSettings() {
         return Optional.ofNullable(this.upsertSettings);
     }
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
-     * Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+     * @return Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
      * 
-    */
+     */
     public Optional<Object> writeBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }

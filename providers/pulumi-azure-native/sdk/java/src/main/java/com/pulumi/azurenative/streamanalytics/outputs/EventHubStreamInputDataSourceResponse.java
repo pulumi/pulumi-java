@@ -11,36 +11,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventHubStreamInputDataSourceResponse {
-    /**
-     * The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
-     * 
-     */
+        /**
+         * @return The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
+         * 
+         */
     private final @Nullable String consumerGroupName;
-    /**
-     * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String eventHubName;
-    /**
-     * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String serviceBusNamespace;
-    /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String sharedAccessPolicyKey;
-    /**
-     * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String sharedAccessPolicyName;
-    /**
-     * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,45 +60,45 @@ public final class EventHubStreamInputDataSourceResponse {
     }
 
     /**
-     * The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
+     * @return The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
      * 
-    */
+     */
     public Optional<String> consumerGroupName() {
         return Optional.ofNullable(this.consumerGroupName);
     }
     /**
-     * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
-     * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
-     * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
     /**
-     * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

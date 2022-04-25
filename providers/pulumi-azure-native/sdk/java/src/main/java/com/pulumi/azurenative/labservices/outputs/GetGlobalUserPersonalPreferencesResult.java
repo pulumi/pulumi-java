@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGlobalUserPersonalPreferencesResult {
-    /**
-     * Array of favorite lab resource ids
-     * 
-     */
+        /**
+         * @return Array of favorite lab resource ids
+         * 
+         */
     private final @Nullable List<String> favoriteLabResourceIds;
-    /**
-     * Id to be used by the cache orchestrator
-     * 
-     */
+        /**
+         * @return Id to be used by the cache orchestrator
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetGlobalUserPersonalPreferencesResult {
     }
 
     /**
-     * Array of favorite lab resource ids
+     * @return Array of favorite lab resource ids
      * 
-    */
+     */
     public List<String> favoriteLabResourceIds() {
         return this.favoriteLabResourceIds == null ? List.of() : this.favoriteLabResourceIds;
     }
     /**
-     * Id to be used by the cache orchestrator
+     * @return Id to be used by the cache orchestrator
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

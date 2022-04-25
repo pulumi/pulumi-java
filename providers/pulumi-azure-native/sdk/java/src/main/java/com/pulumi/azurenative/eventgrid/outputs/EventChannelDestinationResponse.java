@@ -11,22 +11,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventChannelDestinationResponse {
-    /**
-     * Azure subscription ID of the customer creating the event channel. The partner topic
-     * associated with the event channel will be created under this Azure subscription.
-     * 
-     */
+        /**
+         * @return Azure subscription ID of the customer creating the event channel. The partner topic
+         * associated with the event channel will be created under this Azure subscription.
+         * 
+         */
     private final @Nullable String azureSubscriptionId;
-    /**
-     * Name of the partner topic associated with the event channel.
-     * 
-     */
+        /**
+         * @return Name of the partner topic associated with the event channel.
+         * 
+         */
     private final @Nullable String partnerTopicName;
-    /**
-     * Azure Resource Group of the customer creating the event channel. The partner topic
-     * associated with the event channel will be created under this resource group.
-     * 
-     */
+        /**
+         * @return Azure Resource Group of the customer creating the event channel. The partner topic
+         * associated with the event channel will be created under this resource group.
+         * 
+         */
     private final @Nullable String resourceGroup;
 
     @CustomType.Constructor
@@ -40,25 +40,25 @@ public final class EventChannelDestinationResponse {
     }
 
     /**
-     * Azure subscription ID of the customer creating the event channel. The partner topic
+     * @return Azure subscription ID of the customer creating the event channel. The partner topic
      * associated with the event channel will be created under this Azure subscription.
      * 
-    */
+     */
     public Optional<String> azureSubscriptionId() {
         return Optional.ofNullable(this.azureSubscriptionId);
     }
     /**
-     * Name of the partner topic associated with the event channel.
+     * @return Name of the partner topic associated with the event channel.
      * 
-    */
+     */
     public Optional<String> partnerTopicName() {
         return Optional.ofNullable(this.partnerTopicName);
     }
     /**
-     * Azure Resource Group of the customer creating the event channel. The partner topic
+     * @return Azure Resource Group of the customer creating the event channel. The partner topic
      * associated with the event channel will be created under this resource group.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }

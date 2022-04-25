@@ -29,6 +29,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="bandwidthInGbps")
     private @Nullable Output<Integer> bandwidthInGbps;
 
+    /**
+     * @return Bandwidth of procured ports in Gbps.
+     * 
+     */
     public Optional<Output<Integer>> bandwidthInGbps() {
         return Optional.ofNullable(this.bandwidthInGbps);
     }
@@ -40,6 +44,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encapsulation")
     private @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
+    /**
+     * @return Encapsulation method on physical ports.
+     * 
+     */
     public Optional<Output<Either<String,ExpressRoutePortsEncapsulation>>> encapsulation() {
         return Optional.ofNullable(this.encapsulation);
     }
@@ -51,6 +59,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expressRoutePortName")
     private @Nullable Output<String> expressRoutePortName;
 
+    /**
+     * @return The name of the ExpressRoutePort resource.
+     * 
+     */
     public Optional<Output<String>> expressRoutePortName() {
         return Optional.ofNullable(this.expressRoutePortName);
     }
@@ -62,6 +74,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -73,6 +89,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return The identity of ExpressRoutePort, if configured.
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -84,6 +104,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="links")
     private @Nullable Output<List<ExpressRouteLinkArgs>> links;
 
+    /**
+     * @return The set of physical links of the ExpressRoutePort resource.
+     * 
+     */
     public Optional<Output<List<ExpressRouteLinkArgs>>> links() {
         return Optional.ofNullable(this.links);
     }
@@ -95,6 +119,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -106,6 +134,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="peeringLocation")
     private @Nullable Output<String> peeringLocation;
 
+    /**
+     * @return The name of the peering location that the ExpressRoutePort is mapped to physically.
+     * 
+     */
     public Optional<Output<String>> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
@@ -117,6 +149,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -128,6 +164,10 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -165,104 +205,242 @@ public final class ExpressRoutePortArgs extends com.pulumi.resources.ResourceArg
             $ = new ExpressRoutePortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bandwidthInGbps Bandwidth of procured ports in Gbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInGbps(@Nullable Output<Integer> bandwidthInGbps) {
             $.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
+        /**
+         * @param bandwidthInGbps Bandwidth of procured ports in Gbps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bandwidthInGbps(Integer bandwidthInGbps) {
             return bandwidthInGbps(Output.of(bandwidthInGbps));
         }
 
+        /**
+         * @param encapsulation Encapsulation method on physical ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encapsulation(@Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
             $.encapsulation = encapsulation;
             return this;
         }
 
+        /**
+         * @param encapsulation Encapsulation method on physical ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encapsulation(Either<String,ExpressRoutePortsEncapsulation> encapsulation) {
             return encapsulation(Output.of(encapsulation));
         }
 
+        /**
+         * @param encapsulation Encapsulation method on physical ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encapsulation(String encapsulation) {
             return encapsulation(Either.ofLeft(encapsulation));
         }
 
+        /**
+         * @param encapsulation Encapsulation method on physical ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encapsulation(ExpressRoutePortsEncapsulation encapsulation) {
             return encapsulation(Either.ofRight(encapsulation));
         }
 
+        /**
+         * @param expressRoutePortName The name of the ExpressRoutePort resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRoutePortName(@Nullable Output<String> expressRoutePortName) {
             $.expressRoutePortName = expressRoutePortName;
             return this;
         }
 
+        /**
+         * @param expressRoutePortName The name of the ExpressRoutePort resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRoutePortName(String expressRoutePortName) {
             return expressRoutePortName(Output.of(expressRoutePortName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param identity The identity of ExpressRoutePort, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of ExpressRoutePort, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param links The set of physical links of the ExpressRoutePort resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(@Nullable Output<List<ExpressRouteLinkArgs>> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links The set of physical links of the ExpressRoutePort resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(List<ExpressRouteLinkArgs> links) {
             return links(Output.of(links));
         }
 
+        /**
+         * @param links The set of physical links of the ExpressRoutePort resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(ExpressRouteLinkArgs... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param peeringLocation The name of the peering location that the ExpressRoutePort is mapped to physically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
             $.peeringLocation = peeringLocation;
             return this;
         }
 
+        /**
+         * @param peeringLocation The name of the peering location that the ExpressRoutePort is mapped to physically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringLocation(String peeringLocation) {
             return peeringLocation(Output.of(peeringLocation));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

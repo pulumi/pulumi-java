@@ -15,85 +15,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEndpointResult {
-    /**
-     * List of custom headers.
-     * 
-     */
+        /**
+         * @return List of custom headers.
+         * 
+         */
     private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
-    /**
-     * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
-     * 
-     */
+        /**
+         * @return Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
+         * 
+         */
     private final @Nullable String endpointLocation;
-    /**
-     * The monitoring status of the endpoint.
-     * 
-     */
+        /**
+         * @return The monitoring status of the endpoint.
+         * 
+         */
     private final @Nullable String endpointMonitorStatus;
-    /**
-     * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
-     * 
-     */
+        /**
+         * @return The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
+         * 
+         */
     private final @Nullable String endpointStatus;
-    /**
-     * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
-     * 
-     */
+        /**
+         * @return The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+         * 
+         */
     private final @Nullable List<String> geoMapping;
-    /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
-     * 
-     */
+        /**
+         * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+         * 
+         */
     private final @Nullable Double minChildEndpoints;
-    /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
-     * 
-     */
+        /**
+         * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+         * 
+         */
     private final @Nullable Double minChildEndpointsIPv4;
-    /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
-     * 
-     */
+        /**
+         * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+         * 
+         */
     private final @Nullable Double minChildEndpointsIPv6;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
-     * 
-     */
+        /**
+         * @return The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+         * 
+         */
     private final @Nullable Double priority;
-    /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
-     * 
-     */
+        /**
+         * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
+         * 
+         */
     private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
-    /**
-     * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
-     * 
-     */
+        /**
+         * @return The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
+         * 
+         */
     private final @Nullable String target;
-    /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
-     * 
-     */
+        /**
+         * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
+         * 
+         */
     private final @Nullable String targetResourceId;
-    /**
-     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
-     * 
-     */
+        /**
+         * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
-     * 
-     */
+        /**
+         * @return The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
+         * 
+         */
     private final @Nullable Double weight;
 
     @CustomType.Constructor
@@ -133,114 +133,114 @@ public final class GetEndpointResult {
     }
 
     /**
-     * List of custom headers.
+     * @return List of custom headers.
      * 
-    */
+     */
     public List<EndpointPropertiesResponseCustomHeaders> customHeaders() {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
     /**
-     * Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
+     * @return Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
      * 
-    */
+     */
     public Optional<String> endpointLocation() {
         return Optional.ofNullable(this.endpointLocation);
     }
     /**
-     * The monitoring status of the endpoint.
+     * @return The monitoring status of the endpoint.
      * 
-    */
+     */
     public Optional<String> endpointMonitorStatus() {
         return Optional.ofNullable(this.endpointMonitorStatus);
     }
     /**
-     * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
+     * @return The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
      * 
-    */
+     */
     public Optional<String> endpointStatus() {
         return Optional.ofNullable(this.endpointStatus);
     }
     /**
-     * The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * @return The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
-    */
+     */
     public List<String> geoMapping() {
         return this.geoMapping == null ? List.of() : this.geoMapping;
     }
     /**
-     * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+     * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
-    */
+     */
     public Optional<Double> minChildEndpoints() {
         return Optional.ofNullable(this.minChildEndpoints);
     }
     /**
-     * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+     * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
-    */
+     */
     public Optional<Double> minChildEndpointsIPv4() {
         return Optional.ofNullable(this.minChildEndpointsIPv4);
     }
     /**
-     * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+     * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
      * 
-    */
+     */
     public Optional<Double> minChildEndpointsIPv6() {
         return Optional.ofNullable(this.minChildEndpointsIPv6);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * @return The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
-    */
+     */
     public Optional<Double> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
-    */
+     */
     public List<EndpointPropertiesResponseSubnets> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
-     * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
+     * @return The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
+     * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
      * 
-    */
+     */
     public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
     /**
-     * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
+     * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
+     * @return The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
      * 
-    */
+     */
     public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }

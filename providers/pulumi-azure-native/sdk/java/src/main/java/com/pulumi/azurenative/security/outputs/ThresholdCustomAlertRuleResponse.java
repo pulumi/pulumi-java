@@ -11,36 +11,36 @@ import java.util.Objects;
 
 @CustomType
 public final class ThresholdCustomAlertRuleResponse {
-    /**
-     * The description of the custom alert.
-     * 
-     */
+        /**
+         * @return The description of the custom alert.
+         * 
+         */
     private final String description;
-    /**
-     * The display name of the custom alert.
-     * 
-     */
+        /**
+         * @return The display name of the custom alert.
+         * 
+         */
     private final String displayName;
-    /**
-     * Status of the custom alert.
-     * 
-     */
+        /**
+         * @return Status of the custom alert.
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * The maximum threshold.
-     * 
-     */
+        /**
+         * @return The maximum threshold.
+         * 
+         */
     private final Integer maxThreshold;
-    /**
-     * The minimum threshold.
-     * 
-     */
+        /**
+         * @return The minimum threshold.
+         * 
+         */
     private final Integer minThreshold;
-    /**
-     * The type of the custom alert rule.
-     * Expected value is &#39;ThresholdCustomAlertRule&#39;.
-     * 
-     */
+        /**
+         * @return The type of the custom alert rule.
+         * Expected value is &#39;ThresholdCustomAlertRule&#39;.
+         * 
+         */
     private final String ruleType;
 
     @CustomType.Constructor
@@ -60,45 +60,45 @@ public final class ThresholdCustomAlertRuleResponse {
     }
 
     /**
-     * The description of the custom alert.
+     * @return The description of the custom alert.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the custom alert.
+     * @return The display name of the custom alert.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Status of the custom alert.
+     * @return Status of the custom alert.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The maximum threshold.
+     * @return The maximum threshold.
      * 
-    */
+     */
     public Integer maxThreshold() {
         return this.maxThreshold;
     }
     /**
-     * The minimum threshold.
+     * @return The minimum threshold.
      * 
-    */
+     */
     public Integer minThreshold() {
         return this.minThreshold;
     }
     /**
-     * The type of the custom alert rule.
+     * @return The type of the custom alert rule.
      * Expected value is &#39;ThresholdCustomAlertRule&#39;.
      * 
-    */
+     */
     public String ruleType() {
         return this.ruleType;
     }

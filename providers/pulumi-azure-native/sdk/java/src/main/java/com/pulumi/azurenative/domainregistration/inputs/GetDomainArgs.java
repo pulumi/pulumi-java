@@ -19,6 +19,10 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -30,6 +34,10 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

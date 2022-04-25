@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IndexesResponse {
-    /**
-     * The datatype for which the indexing behavior is applied to.
-     * 
-     */
+        /**
+         * @return The datatype for which the indexing behavior is applied to.
+         * 
+         */
     private final @Nullable String dataType;
-    /**
-     * Indicates the type of index.
-     * 
-     */
+        /**
+         * @return Indicates the type of index.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The precision of the index. -1 is maximum precision.
-     * 
-     */
+        /**
+         * @return The precision of the index. -1 is maximum precision.
+         * 
+         */
     private final @Nullable Integer precision;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class IndexesResponse {
     }
 
     /**
-     * The datatype for which the indexing behavior is applied to.
+     * @return The datatype for which the indexing behavior is applied to.
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * Indicates the type of index.
+     * @return Indicates the type of index.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The precision of the index. -1 is maximum precision.
+     * @return The precision of the index. -1 is maximum precision.
      * 
-    */
+     */
     public Optional<Integer> precision() {
         return Optional.ofNullable(this.precision);
     }

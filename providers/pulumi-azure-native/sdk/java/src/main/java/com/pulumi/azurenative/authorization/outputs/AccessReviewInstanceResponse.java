@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessReviewInstanceResponse {
-    /**
-     * The DateTime when the review instance is scheduled to end.
-     * 
-     */
+        /**
+         * @return The DateTime when the review instance is scheduled to end.
+         * 
+         */
     private final @Nullable String endDateTime;
-    /**
-     * The access review instance id.
-     * 
-     */
+        /**
+         * @return The access review instance id.
+         * 
+         */
     private final String id;
-    /**
-     * The access review instance name.
-     * 
-     */
+        /**
+         * @return The access review instance name.
+         * 
+         */
     private final String name;
-    /**
-     * The DateTime when the review instance is scheduled to be start.
-     * 
-     */
+        /**
+         * @return The DateTime when the review instance is scheduled to be start.
+         * 
+         */
     private final @Nullable String startDateTime;
-    /**
-     * This read-only field specifies the status of an access review instance.
-     * 
-     */
+        /**
+         * @return This read-only field specifies the status of an access review instance.
+         * 
+         */
     private final String status;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class AccessReviewInstanceResponse {
     }
 
     /**
-     * The DateTime when the review instance is scheduled to end.
+     * @return The DateTime when the review instance is scheduled to end.
      * 
-    */
+     */
     public Optional<String> endDateTime() {
         return Optional.ofNullable(this.endDateTime);
     }
     /**
-     * The access review instance id.
+     * @return The access review instance id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The access review instance name.
+     * @return The access review instance name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The DateTime when the review instance is scheduled to be start.
+     * @return The DateTime when the review instance is scheduled to be start.
      * 
-    */
+     */
     public Optional<String> startDateTime() {
         return Optional.ofNullable(this.startDateTime);
     }
     /**
-     * This read-only field specifies the status of an access review instance.
+     * @return This read-only field specifies the status of an access review instance.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

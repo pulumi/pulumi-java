@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventRequestMessageResponse {
-    /**
-     * The content of the event request message.
-     * 
-     */
+        /**
+         * @return The content of the event request message.
+         * 
+         */
     private final @Nullable EventContentResponse content;
-    /**
-     * The headers of the event request message.
-     * 
-     */
+        /**
+         * @return The headers of the event request message.
+         * 
+         */
     private final @Nullable Map<String,String> headers;
-    /**
-     * The HTTP method used to send the event request message.
-     * 
-     */
+        /**
+         * @return The HTTP method used to send the event request message.
+         * 
+         */
     private final @Nullable String method;
-    /**
-     * The URI used to send the event request message.
-     * 
-     */
+        /**
+         * @return The URI used to send the event request message.
+         * 
+         */
     private final @Nullable String requestUri;
-    /**
-     * The HTTP message version.
-     * 
-     */
+        /**
+         * @return The HTTP message version.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class EventRequestMessageResponse {
     }
 
     /**
-     * The content of the event request message.
+     * @return The content of the event request message.
      * 
-    */
+     */
     public Optional<EventContentResponse> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The headers of the event request message.
+     * @return The headers of the event request message.
      * 
-    */
+     */
     public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
-     * The HTTP method used to send the event request message.
+     * @return The HTTP method used to send the event request message.
      * 
-    */
+     */
     public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
-     * The URI used to send the event request message.
+     * @return The URI used to send the event request message.
      * 
-    */
+     */
     public Optional<String> requestUri() {
         return Optional.ofNullable(this.requestUri);
     }
     /**
-     * The HTTP message version.
+     * @return The HTTP message version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

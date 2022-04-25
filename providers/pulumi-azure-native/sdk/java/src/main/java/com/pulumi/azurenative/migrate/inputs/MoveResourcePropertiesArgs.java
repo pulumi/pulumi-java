@@ -42,6 +42,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="dependsOnOverrides")
     private @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
+    /**
+     * @return Gets or sets the move resource dependencies overrides.
+     * 
+     */
     public Optional<Output<List<MoveResourceDependencyOverrideArgs>>> dependsOnOverrides() {
         return Optional.ofNullable(this.dependsOnOverrides);
     }
@@ -53,6 +57,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="existingTargetId")
     private @Nullable Output<String> existingTargetId;
 
+    /**
+     * @return Gets or sets the existing target ARM Id of the resource.
+     * 
+     */
     public Optional<Output<String>> existingTargetId() {
         return Optional.ofNullable(this.existingTargetId);
     }
@@ -64,6 +72,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="resourceSettings")
     private @Nullable Output<Object> resourceSettings;
 
+    /**
+     * @return Gets or sets the resource settings.
+     * 
+     */
     public Optional<Output<Object>> resourceSettings() {
         return Optional.ofNullable(this.resourceSettings);
     }
@@ -75,6 +87,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="sourceId", required=true)
     private Output<String> sourceId;
 
+    /**
+     * @return Gets or sets the Source ARM Id of the resource.
+     * 
+     */
     public Output<String> sourceId() {
         return this.sourceId;
     }
@@ -106,42 +122,96 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
             $ = new MoveResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOnOverrides Gets or sets the move resource dependencies overrides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnOverrides(@Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides) {
             $.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
 
+        /**
+         * @param dependsOnOverrides Gets or sets the move resource dependencies overrides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnOverrides(List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
             return dependsOnOverrides(Output.of(dependsOnOverrides));
         }
 
+        /**
+         * @param dependsOnOverrides Gets or sets the move resource dependencies overrides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnOverrides(MoveResourceDependencyOverrideArgs... dependsOnOverrides) {
             return dependsOnOverrides(List.of(dependsOnOverrides));
         }
 
+        /**
+         * @param existingTargetId Gets or sets the existing target ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingTargetId(@Nullable Output<String> existingTargetId) {
             $.existingTargetId = existingTargetId;
             return this;
         }
 
+        /**
+         * @param existingTargetId Gets or sets the existing target ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingTargetId(String existingTargetId) {
             return existingTargetId(Output.of(existingTargetId));
         }
 
+        /**
+         * @param resourceSettings Gets or sets the resource settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettings(@Nullable Output<Object> resourceSettings) {
             $.resourceSettings = resourceSettings;
             return this;
         }
 
+        /**
+         * @param resourceSettings Gets or sets the resource settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettings(Object resourceSettings) {
             return resourceSettings(Output.of(resourceSettings));
         }
 
+        /**
+         * @param sourceId Gets or sets the Source ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(Output<String> sourceId) {
             $.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * @param sourceId Gets or sets the Source ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(String sourceId) {
             return sourceId(Output.of(sourceId));
         }

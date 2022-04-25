@@ -24,6 +24,10 @@ public final class NodeInputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nodeName", required=true)
     private Output<String> nodeName;
 
+    /**
+     * @return The name of the upstream node in the pipeline which output is used as input of the current node.
+     * 
+     */
     public Output<String> nodeName() {
         return this.nodeName;
     }
@@ -52,11 +56,23 @@ public final class NodeInputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeName The name of the upstream node in the pipeline which output is used as input of the current node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(Output<String> nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param nodeName The name of the upstream node in the pipeline which output is used as input of the current node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(String nodeName) {
             return nodeName(Output.of(nodeName));
         }

@@ -21,75 +21,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetJobResult {
-    /**
-     * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
-     * 
-     */
+        /**
+         * @return Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+         * 
+         */
     private final @Nullable Map<String,String> correlationData;
-    /**
-     * The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
-     * 
-     */
+        /**
+         * @return The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+         * 
+         */
     private final String created;
-    /**
-     * Optional customer supplied description of the Job.
-     * 
-     */
+        /**
+         * @return Optional customer supplied description of the Job.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The UTC date and time at which this Job finished processing.
-     * 
-     */
+        /**
+         * @return The UTC date and time at which this Job finished processing.
+         * 
+         */
     private final String endTime;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The inputs for the Job.
-     * 
-     */
+        /**
+         * @return The inputs for the Job.
+         * 
+         */
     private final Object input;
-    /**
-     * The UTC date and time when the customer has last updated the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
-     * 
-     */
+        /**
+         * @return The UTC date and time when the customer has last updated the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+         * 
+         */
     private final String lastModified;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The outputs for the Job.
-     * 
-     */
+        /**
+         * @return The outputs for the Job.
+         * 
+         */
     private final List<JobOutputAssetResponse> outputs;
-    /**
-     * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
-     * 
-     */
+        /**
+         * @return Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+         * 
+         */
     private final @Nullable String priority;
-    /**
-     * The UTC date and time at which this Job began processing.
-     * 
-     */
+        /**
+         * @return The UTC date and time at which this Job began processing.
+         * 
+         */
     private final String startTime;
-    /**
-     * The current state of the job.
-     * 
-     */
+        /**
+         * @return The current state of the job.
+         * 
+         */
     private final String state;
-    /**
-     * The system metadata relating to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -125,100 +125,100 @@ public final class GetJobResult {
     }
 
     /**
-     * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
+     * @return Customer provided key, value pairs that will be returned in Job and JobOutput state events.
      * 
-    */
+     */
     public Map<String,String> correlationData() {
         return this.correlationData == null ? Map.of() : this.correlationData;
     }
     /**
-     * The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+     * @return The UTC date and time when the customer has created the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Optional customer supplied description of the Job.
+     * @return Optional customer supplied description of the Job.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The UTC date and time at which this Job finished processing.
+     * @return The UTC date and time at which this Job finished processing.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The inputs for the Job.
+     * @return The inputs for the Job.
      * 
-    */
+     */
     public Object input() {
         return this.input;
     }
     /**
-     * The UTC date and time when the customer has last updated the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+     * @return The UTC date and time when the customer has last updated the Job, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The outputs for the Job.
+     * @return The outputs for the Job.
      * 
-    */
+     */
     public List<JobOutputAssetResponse> outputs() {
         return this.outputs;
     }
     /**
-     * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
+     * @return Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
      * 
-    */
+     */
     public Optional<String> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The UTC date and time at which this Job began processing.
+     * @return The UTC date and time at which this Job began processing.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The current state of the job.
+     * @return The current state of the job.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

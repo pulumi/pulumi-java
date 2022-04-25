@@ -15,75 +15,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIntegrationAccountAgreementResult {
-    /**
-     * The agreement type.
-     * 
-     */
+        /**
+         * @return The agreement type.
+         * 
+         */
     private final String agreementType;
-    /**
-     * The changed time.
-     * 
-     */
+        /**
+         * @return The changed time.
+         * 
+         */
     private final String changedTime;
-    /**
-     * The agreement content.
-     * 
-     */
+        /**
+         * @return The agreement content.
+         * 
+         */
     private final AgreementContentResponse content;
-    /**
-     * The created time.
-     * 
-     */
+        /**
+         * @return The created time.
+         * 
+         */
     private final String createdTime;
-    /**
-     * The business identity of the guest partner.
-     * 
-     */
+        /**
+         * @return The business identity of the guest partner.
+         * 
+         */
     private final BusinessIdentityResponse guestIdentity;
-    /**
-     * The integration account partner that is set as guest partner for this agreement.
-     * 
-     */
+        /**
+         * @return The integration account partner that is set as guest partner for this agreement.
+         * 
+         */
     private final String guestPartner;
-    /**
-     * The business identity of the host partner.
-     * 
-     */
+        /**
+         * @return The business identity of the host partner.
+         * 
+         */
     private final BusinessIdentityResponse hostIdentity;
-    /**
-     * The integration account partner that is set as host partner for this agreement.
-     * 
-     */
+        /**
+         * @return The integration account partner that is set as host partner for this agreement.
+         * 
+         */
     private final String hostPartner;
-    /**
-     * The resource id.
-     * 
-     */
+        /**
+         * @return The resource id.
+         * 
+         */
     private final String id;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The metadata.
-     * 
-     */
+        /**
+         * @return The metadata.
+         * 
+         */
     private final @Nullable Object metadata;
-    /**
-     * Gets the resource name.
-     * 
-     */
+        /**
+         * @return Gets the resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Gets the resource type.
-     * 
-     */
+        /**
+         * @return Gets the resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -119,100 +119,100 @@ public final class GetIntegrationAccountAgreementResult {
     }
 
     /**
-     * The agreement type.
+     * @return The agreement type.
      * 
-    */
+     */
     public String agreementType() {
         return this.agreementType;
     }
     /**
-     * The changed time.
+     * @return The changed time.
      * 
-    */
+     */
     public String changedTime() {
         return this.changedTime;
     }
     /**
-     * The agreement content.
+     * @return The agreement content.
      * 
-    */
+     */
     public AgreementContentResponse content() {
         return this.content;
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The business identity of the guest partner.
+     * @return The business identity of the guest partner.
      * 
-    */
+     */
     public BusinessIdentityResponse guestIdentity() {
         return this.guestIdentity;
     }
     /**
-     * The integration account partner that is set as guest partner for this agreement.
+     * @return The integration account partner that is set as guest partner for this agreement.
      * 
-    */
+     */
     public String guestPartner() {
         return this.guestPartner;
     }
     /**
-     * The business identity of the host partner.
+     * @return The business identity of the host partner.
      * 
-    */
+     */
     public BusinessIdentityResponse hostIdentity() {
         return this.hostIdentity;
     }
     /**
-     * The integration account partner that is set as host partner for this agreement.
+     * @return The integration account partner that is set as host partner for this agreement.
      * 
-    */
+     */
     public String hostPartner() {
         return this.hostPartner;
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metadata.
+     * @return The metadata.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

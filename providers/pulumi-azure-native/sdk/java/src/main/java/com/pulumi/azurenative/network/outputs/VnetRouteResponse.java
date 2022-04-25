@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VnetRouteResponse {
-    /**
-     * List of all Static Routes.
-     * 
-     */
+        /**
+         * @return List of all Static Routes.
+         * 
+         */
     private final @Nullable List<StaticRouteResponse> staticRoutes;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VnetRouteResponse {
     }
 
     /**
-     * List of all Static Routes.
+     * @return List of all Static Routes.
      * 
-    */
+     */
     public List<StaticRouteResponse> staticRoutes() {
         return this.staticRoutes == null ? List.of() : this.staticRoutes;
     }

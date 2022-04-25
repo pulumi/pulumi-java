@@ -16,20 +16,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetricsTagRulesPropertiesResponse {
     private final @Nullable List<MetricRulesResponse> metricRules;
-    /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
-     * 
-     */
+        /**
+         * @return Flag specifying if the resource provisioning state as tracked by ARM.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
-     * 
-     */
+        /**
+         * @return Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+         * 
+         */
     private final @Nullable Boolean sendMetrics;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
 
     @CustomType.Constructor
@@ -48,23 +48,23 @@ public final class MetricsTagRulesPropertiesResponse {
         return this.metricRules == null ? List.of() : this.metricRules;
     }
     /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
+     * @return Flag specifying if the resource provisioning state as tracked by ARM.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+     * @return Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
      * 
-    */
+     */
     public Optional<Boolean> sendMetrics() {
         return Optional.ofNullable(this.sendMetrics);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }

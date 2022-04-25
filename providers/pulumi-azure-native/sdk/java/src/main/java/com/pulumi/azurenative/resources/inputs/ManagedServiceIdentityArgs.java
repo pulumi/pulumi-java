@@ -30,6 +30,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="type")
     private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
+    /**
+     * @return Type of the managed identity.
+     * 
+     */
     public Optional<Output<Either<String,ManagedServiceIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -41,6 +45,10 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
+    /**
+     * @return The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -70,28 +78,64 @@ public final class ManagedServiceIdentityArgs extends com.pulumi.resources.Resou
             $ = new ManagedServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedServiceIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedServiceIdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

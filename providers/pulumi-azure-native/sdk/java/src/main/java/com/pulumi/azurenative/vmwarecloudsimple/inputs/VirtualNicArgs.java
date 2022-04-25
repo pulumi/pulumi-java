@@ -31,6 +31,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customization")
     private @Nullable Output<GuestOSNICCustomizationArgs> customization;
 
+    /**
+     * @return guest OS customization for nic
+     * 
+     */
     public Optional<Output<GuestOSNICCustomizationArgs>> customization() {
         return Optional.ofNullable(this.customization);
     }
@@ -42,6 +46,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return NIC ip address
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -53,6 +61,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="macAddress")
     private @Nullable Output<String> macAddress;
 
+    /**
+     * @return NIC MAC address
+     * 
+     */
     public Optional<Output<String>> macAddress() {
         return Optional.ofNullable(this.macAddress);
     }
@@ -64,6 +76,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="network", required=true)
     private Output<VirtualNetworkArgs> network;
 
+    /**
+     * @return Virtual Network
+     * 
+     */
     public Output<VirtualNetworkArgs> network() {
         return this.network;
     }
@@ -75,6 +91,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nicType", required=true)
     private Output<NICType> nicType;
 
+    /**
+     * @return NIC type
+     * 
+     */
     public Output<NICType> nicType() {
         return this.nicType;
     }
@@ -86,6 +106,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="powerOnBoot")
     private @Nullable Output<Boolean> powerOnBoot;
 
+    /**
+     * @return Is NIC powered on/off on boot
+     * 
+     */
     public Optional<Output<Boolean>> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
@@ -97,6 +121,10 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNicId")
     private @Nullable Output<String> virtualNicId;
 
+    /**
+     * @return NIC id
+     * 
+     */
     public Optional<Output<String>> virtualNicId() {
         return Optional.ofNullable(this.virtualNicId);
     }
@@ -131,69 +159,159 @@ public final class VirtualNicArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VirtualNicArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customization guest OS customization for nic
+         * 
+         * @return builder
+         * 
+         */
         public Builder customization(@Nullable Output<GuestOSNICCustomizationArgs> customization) {
             $.customization = customization;
             return this;
         }
 
+        /**
+         * @param customization guest OS customization for nic
+         * 
+         * @return builder
+         * 
+         */
         public Builder customization(GuestOSNICCustomizationArgs customization) {
             return customization(Output.of(customization));
         }
 
+        /**
+         * @param ipAddresses NIC ip address
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses NIC ip address
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses NIC ip address
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param macAddress NIC MAC address
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(@Nullable Output<String> macAddress) {
             $.macAddress = macAddress;
             return this;
         }
 
+        /**
+         * @param macAddress NIC MAC address
+         * 
+         * @return builder
+         * 
+         */
         public Builder macAddress(String macAddress) {
             return macAddress(Output.of(macAddress));
         }
 
+        /**
+         * @param network Virtual Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(Output<VirtualNetworkArgs> network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param network Virtual Network
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(VirtualNetworkArgs network) {
             return network(Output.of(network));
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(Output<NICType> nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param nicType NIC type
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(NICType nicType) {
             return nicType(Output.of(nicType));
         }
 
+        /**
+         * @param powerOnBoot Is NIC powered on/off on boot
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(@Nullable Output<Boolean> powerOnBoot) {
             $.powerOnBoot = powerOnBoot;
             return this;
         }
 
+        /**
+         * @param powerOnBoot Is NIC powered on/off on boot
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerOnBoot(Boolean powerOnBoot) {
             return powerOnBoot(Output.of(powerOnBoot));
         }
 
+        /**
+         * @param virtualNicId NIC id
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNicId(@Nullable Output<String> virtualNicId) {
             $.virtualNicId = virtualNicId;
             return this;
         }
 
+        /**
+         * @param virtualNicId NIC id
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNicId(String virtualNicId) {
             return virtualNicId(Output.of(virtualNicId));
         }

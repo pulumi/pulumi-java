@@ -29,6 +29,10 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends com.pulumi
     @Import(name="failoverPolicy", required=true)
     private Output<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy;
 
+    /**
+     * @return Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+     * 
+     */
     public Output<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy() {
         return this.failoverPolicy;
     }
@@ -40,6 +44,10 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends com.pulumi
     @Import(name="failoverWithDataLossGracePeriodMinutes")
     private @Nullable Output<Integer> failoverWithDataLossGracePeriodMinutes;
 
+    /**
+     * @return Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+     * 
+     */
     public Optional<Output<Integer>> failoverWithDataLossGracePeriodMinutes() {
         return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }
@@ -69,28 +77,64 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends com.pulumi
             $ = new InstanceFailoverGroupReadWriteEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(Output<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy) {
             $.failoverPolicy = failoverPolicy;
             return this;
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(Either<String,ReadWriteEndpointFailoverPolicy> failoverPolicy) {
             return failoverPolicy(Output.of(failoverPolicy));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(String failoverPolicy) {
             return failoverPolicy(Either.ofLeft(failoverPolicy));
         }
 
+        /**
+         * @param failoverPolicy Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverPolicy(ReadWriteEndpointFailoverPolicy failoverPolicy) {
             return failoverPolicy(Either.ofRight(failoverPolicy));
         }
 
+        /**
+         * @param failoverWithDataLossGracePeriodMinutes Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Output<Integer> failoverWithDataLossGracePeriodMinutes) {
             $.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
         }
 
+        /**
+         * @param failoverWithDataLossGracePeriodMinutes Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverWithDataLossGracePeriodMinutes(Integer failoverWithDataLossGracePeriodMinutes) {
             return failoverWithDataLossGracePeriodMinutes(Output.of(failoverWithDataLossGracePeriodMinutes));
         }

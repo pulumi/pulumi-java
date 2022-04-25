@@ -14,31 +14,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MediaGraphTlsEndpointResponse {
-    /**
-     * Polymorphic credentials to present to the endpoint.
-     * 
-     */
+        /**
+         * @return Polymorphic credentials to present to the endpoint.
+         * 
+         */
     private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
-     * 
-     */
+        /**
+         * @return What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+         * 
+         */
     private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
-    /**
-     * Url for the endpoint.
-     * 
-     */
+        /**
+         * @return Url for the endpoint.
+         * 
+         */
     private final String url;
-    /**
-     * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
-     * 
-     */
+        /**
+         * @return Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+         * 
+         */
     private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
     @CustomType.Constructor
@@ -56,38 +56,38 @@ public final class MediaGraphTlsEndpointResponse {
     }
 
     /**
-     * Polymorphic credentials to present to the endpoint.
+     * @return Polymorphic credentials to present to the endpoint.
      * 
-    */
+     */
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphTlsEndpoint&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
+     * @return What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media&#39;s source of trust should be used.
      * 
-    */
+     */
     public Optional<MediaGraphPemCertificateListResponse> trustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
     /**
-     * Url for the endpoint.
+     * @return Url for the endpoint.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }
     /**
-     * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+     * @return Validation options to use when authenticating a TLS connection. By default, strict validation is used.
      * 
-    */
+     */
     public Optional<MediaGraphTlsValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }

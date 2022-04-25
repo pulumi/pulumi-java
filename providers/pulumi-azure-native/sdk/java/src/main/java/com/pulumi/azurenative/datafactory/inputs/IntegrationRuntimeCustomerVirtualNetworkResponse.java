@@ -25,6 +25,10 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse extends com.
     @Import(name="subnetId")
     private @Nullable String subnetId;
 
+    /**
+     * @return The ID of subnet to which Azure-SSIS integration runtime will join.
+     * 
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -53,6 +57,12 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse extends com.
             $ = new IntegrationRuntimeCustomerVirtualNetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetId The ID of subnet to which Azure-SSIS integration runtime will join.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable String subnetId) {
             $.subnetId = subnetId;
             return this;

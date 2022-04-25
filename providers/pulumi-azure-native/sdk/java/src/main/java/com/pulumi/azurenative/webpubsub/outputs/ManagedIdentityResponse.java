@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedIdentityResponse {
-    /**
-     * Get the principal id for the system assigned identity.
-     * Only be used in response.
-     * 
-     */
+        /**
+         * @return Get the principal id for the system assigned identity.
+         * Only be used in response.
+         * 
+         */
     private final String principalId;
-    /**
-     * Get the tenant id for the system assigned identity.
-     * Only be used in response
-     * 
-     */
+        /**
+         * @return Get the tenant id for the system assigned identity.
+         * Only be used in response
+         * 
+         */
     private final String tenantId;
-    /**
-     * Represent the identity type: systemAssigned, userAssigned, None
-     * 
-     */
+        /**
+         * @return Represent the identity type: systemAssigned, userAssigned, None
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * Get or set the user assigned identities
-     * 
-     */
+        /**
+         * @return Get or set the user assigned identities
+         * 
+         */
     private final @Nullable Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -49,32 +49,32 @@ public final class ManagedIdentityResponse {
     }
 
     /**
-     * Get the principal id for the system assigned identity.
+     * @return Get the principal id for the system assigned identity.
      * Only be used in response.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * Get the tenant id for the system assigned identity.
+     * @return Get the tenant id for the system assigned identity.
      * Only be used in response
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Represent the identity type: systemAssigned, userAssigned, None
+     * @return Represent the identity type: systemAssigned, userAssigned, None
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Get or set the user assigned identities
+     * @return Get or set the user assigned identities
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityPropertyResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

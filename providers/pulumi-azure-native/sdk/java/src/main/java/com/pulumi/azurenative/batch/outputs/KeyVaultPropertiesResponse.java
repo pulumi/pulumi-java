@@ -11,14 +11,14 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultPropertiesResponse {
-    /**
-     * Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
-     * 
-     *  The Batch Account has a System Assigned identity
-     *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
-     *  The KeyVault has soft-delete and purge protection enabled
-     * 
-     */
+        /**
+         * @return Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
+         * 
+         *  The Batch Account has a System Assigned identity
+         *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
+         *  The KeyVault has soft-delete and purge protection enabled
+         * 
+         */
     private final @Nullable String keyIdentifier;
 
     @CustomType.Constructor
@@ -27,13 +27,13 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
+     * @return Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
      * 
      *  The Batch Account has a System Assigned identity
      *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
      *  The KeyVault has soft-delete and purge protection enabled
      * 
-    */
+     */
     public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }

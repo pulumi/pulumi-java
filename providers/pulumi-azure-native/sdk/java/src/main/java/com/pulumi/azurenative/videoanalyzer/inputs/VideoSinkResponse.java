@@ -30,6 +30,10 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputs", required=true)
     private List<NodeInputResponse> inputs;
 
+    /**
+     * @return An array of upstream node references within the topology to be used as inputs for this node.
+     * 
+     */
     public List<NodeInputResponse> inputs() {
         return this.inputs;
     }
@@ -41,6 +45,10 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -53,6 +61,11 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -64,6 +77,10 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoCreationProperties")
     private @Nullable VideoCreationPropertiesResponse videoCreationProperties;
 
+    /**
+     * @return Optional video properties to be used in case a new video resource needs to be created on the service.
+     * 
+     */
     public Optional<VideoCreationPropertiesResponse> videoCreationProperties() {
         return Optional.ofNullable(this.videoCreationProperties);
     }
@@ -75,6 +92,10 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoName", required=true)
     private String videoName;
 
+    /**
+     * @return Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
+     * 
+     */
     public String videoName() {
         return this.videoName;
     }
@@ -86,6 +107,10 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="videoPublishingOptions")
     private @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
+    /**
+     * @return Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+     * 
+     */
     public Optional<VideoPublishingOptionsResponse> videoPublishingOptions() {
         return Optional.ofNullable(this.videoPublishingOptions);
     }
@@ -119,35 +144,78 @@ public final class VideoSinkResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VideoSinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(List<NodeInputResponse> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(NodeInputResponse... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param videoCreationProperties Optional video properties to be used in case a new video resource needs to be created on the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoCreationProperties(@Nullable VideoCreationPropertiesResponse videoCreationProperties) {
             $.videoCreationProperties = videoCreationProperties;
             return this;
         }
 
+        /**
+         * @param videoName Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoName(String videoName) {
             $.videoName = videoName;
             return this;
         }
 
+        /**
+         * @param videoPublishingOptions Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
             $.videoPublishingOptions = videoPublishingOptions;
             return this;

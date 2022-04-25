@@ -25,6 +25,10 @@ public final class ControllerDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return controller arm resource id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class ControllerDetailsResponse extends com.pulumi.resources.Invoke
             $ = new ControllerDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id controller arm resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

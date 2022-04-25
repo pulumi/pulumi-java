@@ -25,6 +25,10 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="containerImageNames")
     private @Nullable Output<List<String>> containerImageNames;
 
+    /**
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+     * 
+     */
     public Optional<Output<List<String>>> containerImageNames() {
         return Optional.ofNullable(this.containerImageNames);
     }
@@ -36,6 +40,10 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="containerRegistries")
     private @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
 
+    /**
+     * @return If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+     * 
+     */
     public Optional<Output<List<ContainerRegistryArgs>>> containerRegistries() {
         return Optional.ofNullable(this.containerRegistries);
     }
@@ -73,28 +81,64 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
             $ = new ContainerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerImageNames This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageNames(@Nullable Output<List<String>> containerImageNames) {
             $.containerImageNames = containerImageNames;
             return this;
         }
 
+        /**
+         * @param containerImageNames This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageNames(List<String> containerImageNames) {
             return containerImageNames(Output.of(containerImageNames));
         }
 
+        /**
+         * @param containerImageNames This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerImageNames(String... containerImageNames) {
             return containerImageNames(List.of(containerImageNames));
         }
 
+        /**
+         * @param containerRegistries If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistries(@Nullable Output<List<ContainerRegistryArgs>> containerRegistries) {
             $.containerRegistries = containerRegistries;
             return this;
         }
 
+        /**
+         * @param containerRegistries If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistries(List<ContainerRegistryArgs> containerRegistries) {
             return containerRegistries(Output.of(containerRegistries));
         }
 
+        /**
+         * @param containerRegistries If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRegistries(ContainerRegistryArgs... containerRegistries) {
             return containerRegistries(List.of(containerRegistries));
         }

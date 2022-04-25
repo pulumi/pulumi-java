@@ -12,70 +12,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProjectResult {
-    /**
-     * The immutable id of the team account which contains this project.
-     * 
-     */
+        /**
+         * @return The immutable id of the team account which contains this project.
+         * 
+         */
     private final String accountId;
-    /**
-     * The creation date of the project in ISO8601 format.
-     * 
-     */
+        /**
+         * @return The creation date of the project in ISO8601 format.
+         * 
+         */
     private final String creationDate;
-    /**
-     * The description of this project.
-     * 
-     */
+        /**
+         * @return The description of this project.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The friendly name for this project.
-     * 
-     */
+        /**
+         * @return The friendly name for this project.
+         * 
+         */
     private final String friendlyName;
-    /**
-     * The reference to git repo for this project.
-     * 
-     */
+        /**
+         * @return The reference to git repo for this project.
+         * 
+         */
     private final @Nullable String gitrepo;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     * 
-     */
+        /**
+         * @return The location of the resource. This cannot be changed after the resource is created.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The immutable id of this project.
-     * 
-     */
+        /**
+         * @return The immutable id of this project.
+         * 
+         */
     private final String projectId;
-    /**
-     * The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
-     * 
-     */
+        /**
+         * @return The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The immutable id of the workspace which contains this project.
-     * 
-     */
+        /**
+         * @return The immutable id of the workspace which contains this project.
+         * 
+         */
     private final String workspaceId;
 
     @CustomType.Constructor
@@ -109,93 +109,93 @@ public final class GetProjectResult {
     }
 
     /**
-     * The immutable id of the team account which contains this project.
+     * @return The immutable id of the team account which contains this project.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * The creation date of the project in ISO8601 format.
+     * @return The creation date of the project in ISO8601 format.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The description of this project.
+     * @return The description of this project.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The friendly name for this project.
+     * @return The friendly name for this project.
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * The reference to git repo for this project.
+     * @return The reference to git repo for this project.
      * 
-    */
+     */
     public Optional<String> gitrepo() {
         return Optional.ofNullable(this.gitrepo);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The immutable id of this project.
+     * @return The immutable id of this project.
      * 
-    */
+     */
     public String projectId() {
         return this.projectId;
     }
     /**
-     * The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The immutable id of the workspace which contains this project.
+     * @return The immutable id of the workspace which contains this project.
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }

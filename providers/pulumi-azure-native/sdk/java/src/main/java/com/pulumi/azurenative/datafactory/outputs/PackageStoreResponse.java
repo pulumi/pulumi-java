@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageStoreResponse {
-    /**
-     * The name of the package store
-     * 
-     */
+        /**
+         * @return The name of the package store
+         * 
+         */
     private final String name;
-    /**
-     * The package store linked service reference.
-     * 
-     */
+        /**
+         * @return The package store linked service reference.
+         * 
+         */
     private final EntityReferenceResponse packageStoreLinkedService;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class PackageStoreResponse {
     }
 
     /**
-     * The name of the package store
+     * @return The name of the package store
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The package store linked service reference.
+     * @return The package store linked service reference.
      * 
-    */
+     */
     public EntityReferenceResponse packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }

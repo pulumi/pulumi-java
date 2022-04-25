@@ -22,6 +22,10 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends com.pulumi.
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenant id of user assigned identity.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -50,11 +54,23 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends com.pulumi.
             $ = new ClusterIdentityUserAssignedIdentitiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param tenantId The tenant id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

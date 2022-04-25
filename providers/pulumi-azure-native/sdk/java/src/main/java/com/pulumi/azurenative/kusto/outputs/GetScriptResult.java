@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetScriptResult {
-    /**
-     * Flag that indicates whether to continue if one of the command fails.
-     * 
-     */
+        /**
+         * @return Flag that indicates whether to continue if one of the command fails.
+         * 
+         */
     private final @Nullable Boolean continueOnErrors;
-    /**
-     * A unique string. If changed the script will be applied again.
-     * 
-     */
+        /**
+         * @return A unique string. If changed the script will be applied again.
+         * 
+         */
     private final @Nullable String forceUpdateTag;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The url to the KQL script blob file.
-     * 
-     */
+        /**
+         * @return The url to the KQL script blob file.
+         * 
+         */
     private final String scriptUrl;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetScriptResult {
     }
 
     /**
-     * Flag that indicates whether to continue if one of the command fails.
+     * @return Flag that indicates whether to continue if one of the command fails.
      * 
-    */
+     */
     public Optional<Boolean> continueOnErrors() {
         return Optional.ofNullable(this.continueOnErrors);
     }
     /**
-     * A unique string. If changed the script will be applied again.
+     * @return A unique string. If changed the script will be applied again.
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The url to the KQL script blob file.
+     * @return The url to the KQL script blob file.
      * 
-    */
+     */
     public String scriptUrl() {
         return this.scriptUrl;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

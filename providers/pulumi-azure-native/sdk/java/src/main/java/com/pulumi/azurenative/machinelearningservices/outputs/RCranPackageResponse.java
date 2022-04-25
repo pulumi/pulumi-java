@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RCranPackageResponse {
-    /**
-     * The package name.
-     * 
-     */
+        /**
+         * @return The package name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The repository name.
-     * 
-     */
+        /**
+         * @return The repository name.
+         * 
+         */
     private final @Nullable String repository;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class RCranPackageResponse {
     }
 
     /**
-     * The package name.
+     * @return The package name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The repository name.
+     * @return The repository name.
      * 
-    */
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }

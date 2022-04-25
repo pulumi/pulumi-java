@@ -29,6 +29,10 @@ public final class OutputPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,OutputPortType>> type;
 
+    /**
+     * @return Port data type.
+     * 
+     */
     public Optional<Output<Either<String,OutputPortType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -57,19 +61,43 @@ public final class OutputPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutputPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Port data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,OutputPortType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Port data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,OutputPortType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Port data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Port data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(OutputPortType type) {
             return type(Either.ofRight(type));
         }

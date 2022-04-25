@@ -25,6 +25,10 @@ public final class WorkloadNetworkSegmentPortVifResponse extends com.pulumi.reso
     @Import(name="portName")
     private @Nullable String portName;
 
+    /**
+     * @return Name of port or VIF attached to segment.
+     * 
+     */
     public Optional<String> portName() {
         return Optional.ofNullable(this.portName);
     }
@@ -53,6 +57,12 @@ public final class WorkloadNetworkSegmentPortVifResponse extends com.pulumi.reso
             $ = new WorkloadNetworkSegmentPortVifResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param portName Name of port or VIF attached to segment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder portName(@Nullable String portName) {
             $.portName = portName;
             return this;

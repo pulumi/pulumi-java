@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ZoneMappingResponse {
-    /**
-     * The location of the zone mapping.
-     * 
-     */
+        /**
+         * @return The location of the zone mapping.
+         * 
+         */
     private final @Nullable String location;
     private final @Nullable List<String> zones;
 
@@ -28,9 +28,9 @@ public final class ZoneMappingResponse {
     }
 
     /**
-     * The location of the zone mapping.
+     * @return The location of the zone mapping.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }

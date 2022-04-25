@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzNsActionGroupResponse {
-    /**
-     * Azure Action Group reference.
-     * 
-     */
+        /**
+         * @return Azure Action Group reference.
+         * 
+         */
     private final @Nullable List<String> actionGroup;
-    /**
-     * Custom payload to be sent for all webhook URI in Azure action group
-     * 
-     */
+        /**
+         * @return Custom payload to be sent for all webhook URI in Azure action group
+         * 
+         */
     private final @Nullable String customWebhookPayload;
-    /**
-     * Custom subject override for all email ids in Azure action group
-     * 
-     */
+        /**
+         * @return Custom subject override for all email ids in Azure action group
+         * 
+         */
     private final @Nullable String emailSubject;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class AzNsActionGroupResponse {
     }
 
     /**
-     * Azure Action Group reference.
+     * @return Azure Action Group reference.
      * 
-    */
+     */
     public List<String> actionGroup() {
         return this.actionGroup == null ? List.of() : this.actionGroup;
     }
     /**
-     * Custom payload to be sent for all webhook URI in Azure action group
+     * @return Custom payload to be sent for all webhook URI in Azure action group
      * 
-    */
+     */
     public Optional<String> customWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
     /**
-     * Custom subject override for all email ids in Azure action group
+     * @return Custom subject override for all email ids in Azure action group
      * 
-    */
+     */
     public Optional<String> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }

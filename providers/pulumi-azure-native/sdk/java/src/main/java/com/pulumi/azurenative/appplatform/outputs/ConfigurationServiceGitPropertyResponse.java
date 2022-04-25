@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationServiceGitPropertyResponse {
-    /**
-     * Repositories of Application Configuration Service git property.
-     * 
-     */
+        /**
+         * @return Repositories of Application Configuration Service git property.
+         * 
+         */
     private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ConfigurationServiceGitPropertyResponse {
     }
 
     /**
-     * Repositories of Application Configuration Service git property.
+     * @return Repositories of Application Configuration Service git property.
      * 
-    */
+     */
     public List<ConfigurationServiceGitRepositoryResponse> repositories() {
         return this.repositories == null ? List.of() : this.repositories;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementEventAggregationConditionResponse {
-    /**
-     * the condition operator.
-     * 
-     */
+        /**
+         * @return the condition operator.
+         * 
+         */
     private final @Nullable String operator;
-    /**
-     * The threshold value that activates the alert.
-     * 
-     */
+        /**
+         * @return The threshold value that activates the alert.
+         * 
+         */
     private final @Nullable Double threshold;
-    /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     * 
-     */
+        /**
+         * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         */
     private final @Nullable String windowSize;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ManagementEventAggregationConditionResponse {
     }
 
     /**
-     * the condition operator.
+     * @return the condition operator.
      * 
-    */
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
-     * The threshold value that activates the alert.
+     * @return The threshold value that activates the alert.
      * 
-    */
+     */
     public Optional<Double> threshold() {
         return Optional.ofNullable(this.threshold);
     }
     /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
-    */
+     */
     public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }

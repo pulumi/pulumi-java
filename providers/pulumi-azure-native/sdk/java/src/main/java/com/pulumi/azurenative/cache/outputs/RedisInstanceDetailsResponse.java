@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class RedisInstanceDetailsResponse {
-    /**
-     * Specifies whether the instance is a master node.
-     * 
-     */
+        /**
+         * @return Specifies whether the instance is a master node.
+         * 
+         */
     private final Boolean isMaster;
-    /**
-     * If enableNonSslPort is true, provides Redis instance Non-SSL port.
-     * 
-     */
+        /**
+         * @return If enableNonSslPort is true, provides Redis instance Non-SSL port.
+         * 
+         */
     private final Integer nonSslPort;
-    /**
-     * If clustering is enabled, the Shard ID of Redis Instance
-     * 
-     */
+        /**
+         * @return If clustering is enabled, the Shard ID of Redis Instance
+         * 
+         */
     private final Integer shardId;
-    /**
-     * Redis instance SSL port.
-     * 
-     */
+        /**
+         * @return Redis instance SSL port.
+         * 
+         */
     private final Integer sslPort;
-    /**
-     * If the Cache uses availability zones, specifies availability zone where this instance is located.
-     * 
-     */
+        /**
+         * @return If the Cache uses availability zones, specifies availability zone where this instance is located.
+         * 
+         */
     private final String zone;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class RedisInstanceDetailsResponse {
     }
 
     /**
-     * Specifies whether the instance is a master node.
+     * @return Specifies whether the instance is a master node.
      * 
-    */
+     */
     public Boolean isMaster() {
         return this.isMaster;
     }
     /**
-     * If enableNonSslPort is true, provides Redis instance Non-SSL port.
+     * @return If enableNonSslPort is true, provides Redis instance Non-SSL port.
      * 
-    */
+     */
     public Integer nonSslPort() {
         return this.nonSslPort;
     }
     /**
-     * If clustering is enabled, the Shard ID of Redis Instance
+     * @return If clustering is enabled, the Shard ID of Redis Instance
      * 
-    */
+     */
     public Integer shardId() {
         return this.shardId;
     }
     /**
-     * Redis instance SSL port.
+     * @return Redis instance SSL port.
      * 
-    */
+     */
     public Integer sslPort() {
         return this.sslPort;
     }
     /**
-     * If the Cache uses availability zones, specifies availability zone where this instance is located.
+     * @return If the Cache uses availability zones, specifies availability zone where this instance is located.
      * 
-    */
+     */
     public String zone() {
         return this.zone;
     }

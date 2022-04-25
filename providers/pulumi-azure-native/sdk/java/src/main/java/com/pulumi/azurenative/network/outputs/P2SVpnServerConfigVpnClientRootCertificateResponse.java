@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the VPN client root certificate resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the VPN client root certificate resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The certificate public data.
-     * 
-     */
+        /**
+         * @return The certificate public data.
+         * 
+         */
     private final String publicCertData;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the VPN client root certificate resource.
+     * @return The provisioning state of the VPN client root certificate resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The certificate public data.
+     * @return The certificate public data.
      * 
-    */
+     */
     public String publicCertData() {
         return this.publicCertData;
     }

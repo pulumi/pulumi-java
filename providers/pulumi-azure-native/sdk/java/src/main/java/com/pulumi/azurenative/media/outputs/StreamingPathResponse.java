@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StreamingPathResponse {
-    /**
-     * Encryption scheme
-     * 
-     */
+        /**
+         * @return Encryption scheme
+         * 
+         */
     private final String encryptionScheme;
-    /**
-     * Streaming paths for each protocol and encryptionScheme pair
-     * 
-     */
+        /**
+         * @return Streaming paths for each protocol and encryptionScheme pair
+         * 
+         */
     private final @Nullable List<String> paths;
-    /**
-     * Streaming protocol
-     * 
-     */
+        /**
+         * @return Streaming protocol
+         * 
+         */
     private final String streamingProtocol;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class StreamingPathResponse {
     }
 
     /**
-     * Encryption scheme
+     * @return Encryption scheme
      * 
-    */
+     */
     public String encryptionScheme() {
         return this.encryptionScheme;
     }
     /**
-     * Streaming paths for each protocol and encryptionScheme pair
+     * @return Streaming paths for each protocol and encryptionScheme pair
      * 
-    */
+     */
     public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
-     * Streaming protocol
+     * @return Streaming protocol
      * 
-    */
+     */
     public String streamingProtocol() {
         return this.streamingProtocol;
     }

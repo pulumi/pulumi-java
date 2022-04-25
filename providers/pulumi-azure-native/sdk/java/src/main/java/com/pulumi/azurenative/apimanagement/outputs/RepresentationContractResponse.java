@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RepresentationContractResponse {
-    /**
-     * Specifies a registered or custom content type for this representation, e.g. application/xml.
-     * 
-     */
+        /**
+         * @return Specifies a registered or custom content type for this representation, e.g. application/xml.
+         * 
+         */
     private final String contentType;
-    /**
-     * Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
-     * 
-     */
+        /**
+         * @return Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
+         * 
+         */
     private final @Nullable List<ParameterContractResponse> formParameters;
-    /**
-     * An example of the representation.
-     * 
-     */
+        /**
+         * @return An example of the representation.
+         * 
+         */
     private final @Nullable String sample;
-    /**
-     * Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
-     * 
-     */
+        /**
+         * @return Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+         * 
+         */
     private final @Nullable String schemaId;
-    /**
-     * Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
-     * 
-     */
+        /**
+         * @return Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+         * 
+         */
     private final @Nullable String typeName;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class RepresentationContractResponse {
     }
 
     /**
-     * Specifies a registered or custom content type for this representation, e.g. application/xml.
+     * @return Specifies a registered or custom content type for this representation, e.g. application/xml.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
+     * @return Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
      * 
-    */
+     */
     public List<ParameterContractResponse> formParameters() {
         return this.formParameters == null ? List.of() : this.formParameters;
     }
     /**
-     * An example of the representation.
+     * @return An example of the representation.
      * 
-    */
+     */
     public Optional<String> sample() {
         return Optional.ofNullable(this.sample);
     }
     /**
-     * Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+     * @return Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
-    */
+     */
     public Optional<String> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
     /**
-     * Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+     * @return Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
      * 
-    */
+     */
     public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumePropertiesResponseExportPolicy {
-    /**
-     * Export policy rule
-     * 
-     */
+        /**
+         * @return Export policy rule
+         * 
+         */
     private final @Nullable List<ExportPolicyRuleResponse> rules;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VolumePropertiesResponseExportPolicy {
     }
 
     /**
-     * Export policy rule
+     * @return Export policy rule
      * 
-    */
+     */
     public List<ExportPolicyRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class AbsoluteClipTimeResponse {
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.AbsoluteClipTime&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AbsoluteClipTime&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
-     * 
-     */
+        /**
+         * @return The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
+         * 
+         */
     private final String time;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class AbsoluteClipTimeResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.AbsoluteClipTime&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
+     * @return The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
      * 
-    */
+     */
     public String time() {
         return this.time;
     }

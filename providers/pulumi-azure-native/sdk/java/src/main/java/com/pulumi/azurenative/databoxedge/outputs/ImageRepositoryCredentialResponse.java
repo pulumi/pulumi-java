@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageRepositoryCredentialResponse {
-    /**
-     * Image repository url (e.g.: mcr.microsoft.com).
-     * 
-     */
+        /**
+         * @return Image repository url (e.g.: mcr.microsoft.com).
+         * 
+         */
     private final String imageRepositoryUrl;
-    /**
-     * Repository user password.
-     * 
-     */
+        /**
+         * @return Repository user password.
+         * 
+         */
     private final @Nullable AsymmetricEncryptedSecretResponse password;
-    /**
-     * Repository user name.
-     * 
-     */
+        /**
+         * @return Repository user name.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ImageRepositoryCredentialResponse {
     }
 
     /**
-     * Image repository url (e.g.: mcr.microsoft.com).
+     * @return Image repository url (e.g.: mcr.microsoft.com).
      * 
-    */
+     */
     public String imageRepositoryUrl() {
         return this.imageRepositoryUrl;
     }
     /**
-     * Repository user password.
+     * @return Repository user password.
      * 
-    */
+     */
     public Optional<AsymmetricEncryptedSecretResponse> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Repository user name.
+     * @return Repository user name.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

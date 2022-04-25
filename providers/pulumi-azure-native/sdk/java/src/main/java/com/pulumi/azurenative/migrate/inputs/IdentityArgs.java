@@ -28,6 +28,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return Gets or sets the principal id.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -39,6 +43,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Gets or sets the tenant id.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -50,6 +58,10 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,ResourceIdentityType>> type;
 
+    /**
+     * @return The type of identity used for the resource mover service.
+     * 
+     */
     public Optional<Output<Either<String,ResourceIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -80,37 +92,85 @@ public final class IdentityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Gets or sets the principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Gets or sets the principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param tenantId Gets or sets the tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Gets or sets the tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param type The type of identity used for the resource mover service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ResourceIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the resource mover service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ResourceIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of identity used for the resource mover service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of identity used for the resource mover service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Either.ofRight(type));
         }

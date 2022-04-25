@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageReferenceResponse {
-    /**
-     * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
-     * 
-     */
+        /**
+         * @return Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
+         * 
+         */
     private final String exactVersion;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Specifies the offer of the platform image or marketplace image used to create the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the offer of the platform image or marketplace image used to create the virtual machine.
+         * 
+         */
     private final @Nullable String offer;
-    /**
-     * The image publisher.
-     * 
-     */
+        /**
+         * @return The image publisher.
+         * 
+         */
     private final @Nullable String publisher;
-    /**
-     * The image SKU.
-     * 
-     */
+        /**
+         * @return The image SKU.
+         * 
+         */
     private final @Nullable String sku;
-    /**
-     * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
-     * 
-     */
+        /**
+         * @return Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ImageReferenceResponse {
     }
 
     /**
-     * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
+     * @return Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
      * 
-    */
+     */
     public String exactVersion() {
         return this.exactVersion;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Specifies the offer of the platform image or marketplace image used to create the virtual machine.
+     * @return Specifies the offer of the platform image or marketplace image used to create the virtual machine.
      * 
-    */
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
-     * The image publisher.
+     * @return The image publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * The image SKU.
+     * @return The image SKU.
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+     * @return Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

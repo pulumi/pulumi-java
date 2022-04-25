@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebChatChannelPropertiesResponse {
-    /**
-     * The list of Web Chat sites
-     * 
-     */
+        /**
+         * @return The list of Web Chat sites
+         * 
+         */
     private final @Nullable List<WebChatSiteResponse> sites;
-    /**
-     * Web chat control embed code
-     * 
-     */
+        /**
+         * @return Web chat control embed code
+         * 
+         */
     private final String webChatEmbedCode;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class WebChatChannelPropertiesResponse {
     }
 
     /**
-     * The list of Web Chat sites
+     * @return The list of Web Chat sites
      * 
-    */
+     */
     public List<WebChatSiteResponse> sites() {
         return this.sites == null ? List.of() : this.sites;
     }
     /**
-     * Web chat control embed code
+     * @return Web chat control embed code
      * 
-    */
+     */
     public String webChatEmbedCode() {
         return this.webChatEmbedCode;
     }

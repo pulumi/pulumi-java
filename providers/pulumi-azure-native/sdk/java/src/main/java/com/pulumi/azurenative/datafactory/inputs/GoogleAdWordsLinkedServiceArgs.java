@@ -36,6 +36,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -47,6 +51,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="authenticationType")
     private @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
 
+    /**
+     * @return The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Output<Either<String,GoogleAdWordsAuthenticationType>>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -58,6 +66,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="clientCustomerID")
     private @Nullable Output<Object> clientCustomerID;
 
+    /**
+     * @return The Client customer ID of the AdWords account that you want to fetch report data for.
+     * 
+     */
     public Optional<Output<Object>> clientCustomerID() {
         return Optional.ofNullable(this.clientCustomerID);
     }
@@ -69,6 +81,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="clientId")
     private @Nullable Output<Object> clientId;
 
+    /**
+     * @return The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -80,6 +96,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="clientSecret")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
+    /**
+     * @return The client secret of the google application used to acquire the refresh token.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -91,6 +111,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -102,6 +126,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="connectionProperties")
     private @Nullable Output<Object> connectionProperties;
 
+    /**
+     * @return Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     public Optional<Output<Object>> connectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
@@ -113,6 +141,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -124,6 +156,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="developerToken")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
 
+    /**
+     * @return The developer token associated with the manager account that you use to grant access to the AdWords API.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> developerToken() {
         return Optional.ofNullable(this.developerToken);
     }
@@ -135,6 +171,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="email")
     private @Nullable Output<Object> email;
 
+    /**
+     * @return The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Output<Object>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -146,6 +186,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -157,6 +201,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="keyFilePath")
     private @Nullable Output<Object> keyFilePath;
 
+    /**
+     * @return The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Output<Object>> keyFilePath() {
         return Optional.ofNullable(this.keyFilePath);
     }
@@ -168,6 +216,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -179,6 +231,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="refreshToken")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
 
+    /**
+     * @return The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -190,6 +246,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="trustedCertPath")
     private @Nullable Output<Object> trustedCertPath;
 
+    /**
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * 
+     */
     public Optional<Output<Object>> trustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
@@ -202,6 +262,11 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;GoogleAdWords&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -213,6 +278,10 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
     @Import(name="useSystemTrustStore")
     private @Nullable Output<Object> useSystemTrustStore;
 
+    /**
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * 
+     */
     public Optional<Output<Object>> useSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }
@@ -257,191 +326,451 @@ public final class GoogleAdWordsLinkedServiceArgs extends com.pulumi.resources.R
             $ = new GoogleAdWordsLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,GoogleAdWordsAuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(GoogleAdWordsAuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param clientCustomerID The Client customer ID of the AdWords account that you want to fetch report data for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCustomerID(@Nullable Output<Object> clientCustomerID) {
             $.clientCustomerID = clientCustomerID;
             return this;
         }
 
+        /**
+         * @param clientCustomerID The Client customer ID of the AdWords account that you want to fetch report data for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCustomerID(Object clientCustomerID) {
             return clientCustomerID(Output.of(clientCustomerID));
         }
 
+        /**
+         * @param clientId The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<Object> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Object clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(AzureKeyVaultSecretReferenceArgs clientSecret) {
             return clientSecret(Either.ofLeft(clientSecret));
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(SecureStringArgs clientSecret) {
             return clientSecret(Either.ofRight(clientSecret));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
             $.connectionProperties = connectionProperties;
             return this;
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(Object connectionProperties) {
             return connectionProperties(Output.of(connectionProperties));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken) {
             $.developerToken = developerToken;
             return this;
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> developerToken) {
             return developerToken(Output.of(developerToken));
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(AzureKeyVaultSecretReferenceArgs developerToken) {
             return developerToken(Either.ofLeft(developerToken));
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(SecureStringArgs developerToken) {
             return developerToken(Either.ofRight(developerToken));
         }
 
+        /**
+         * @param email The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<Object> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(Object email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param keyFilePath The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFilePath(@Nullable Output<Object> keyFilePath) {
             $.keyFilePath = keyFilePath;
             return this;
         }
 
+        /**
+         * @param keyFilePath The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFilePath(Object keyFilePath) {
             return keyFilePath(Output.of(keyFilePath));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
             return refreshToken(Output.of(refreshToken));
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(AzureKeyVaultSecretReferenceArgs refreshToken) {
             return refreshToken(Either.ofLeft(refreshToken));
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(SecureStringArgs refreshToken) {
             return refreshToken(Either.ofRight(refreshToken));
         }
 
+        /**
+         * @param trustedCertPath The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
             $.trustedCertPath = trustedCertPath;
             return this;
         }
 
+        /**
+         * @param trustedCertPath The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertPath(Object trustedCertPath) {
             return trustedCertPath(Output.of(trustedCertPath));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;GoogleAdWords&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;GoogleAdWords&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useSystemTrustStore Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
             $.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
+        /**
+         * @param useSystemTrustStore Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemTrustStore(Object useSystemTrustStore) {
             return useSystemTrustStore(Output.of(useSystemTrustStore));
         }

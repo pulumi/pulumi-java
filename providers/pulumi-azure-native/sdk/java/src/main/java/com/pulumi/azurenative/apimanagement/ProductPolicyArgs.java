@@ -25,6 +25,10 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="format")
     private @Nullable Output<Either<String,PolicyContentFormat>> format;
 
+    /**
+     * @return Format of the policyContent.
+     * 
+     */
     public Optional<Output<Either<String,PolicyContentFormat>>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -36,6 +40,10 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return The identifier of the Policy.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -47,6 +55,10 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productId", required=true)
     private Output<String> productId;
 
+    /**
+     * @return Product identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Output<String> productId() {
         return this.productId;
     }
@@ -58,6 +70,10 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -80,6 +100,10 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Contents of the Policy as defined by the format.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -113,64 +137,148 @@ public final class ProductPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProductPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format Format of the policyContent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<Either<String,PolicyContentFormat>> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format Format of the policyContent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(Either<String,PolicyContentFormat> format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param format Format of the policyContent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Either.ofLeft(format));
         }
 
+        /**
+         * @param format Format of the policyContent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(PolicyContentFormat format) {
             return format(Either.ofRight(format));
         }
 
+        /**
+         * @param policyId The identifier of the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The identifier of the Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param value Contents of the Policy as defined by the format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Contents of the Policy as defined by the format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

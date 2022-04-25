@@ -19,6 +19,10 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="organizationName", required=true)
     private String organizationName;
 
+    /**
+     * @return Organization resource name
+     * 
+     */
     public String organizationName() {
         return this.organizationName;
     }
@@ -30,6 +34,10 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetOrganizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param organizationName Organization resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationName(String organizationName) {
             $.organizationName = organizationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

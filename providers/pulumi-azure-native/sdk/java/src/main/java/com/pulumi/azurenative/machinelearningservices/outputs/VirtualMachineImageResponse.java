@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualMachineImageResponse {
-    /**
-     * Virtual Machine image path
-     * 
-     */
+        /**
+         * @return Virtual Machine image path
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualMachineImageResponse {
     }
 
     /**
-     * Virtual Machine image path
+     * @return Virtual Machine image path
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

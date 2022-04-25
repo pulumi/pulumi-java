@@ -26,6 +26,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineType")
     private @Nullable Output<Either<String,EngineType>> engineType;
 
+    /**
+     * @return The engine type
+     * 
+     */
     public Optional<Output<Either<String,EngineType>>> engineType() {
         return Optional.ofNullable(this.engineType);
     }
@@ -37,6 +41,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kustoPoolName")
     private @Nullable Output<String> kustoPoolName;
 
+    /**
+     * @return The name of the Kusto pool.
+     * 
+     */
     public Optional<Output<String>> kustoPoolName() {
         return Optional.ofNullable(this.kustoPoolName);
     }
@@ -48,6 +56,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -59,6 +71,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +86,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<AzureSkuArgs> sku;
 
+    /**
+     * @return The SKU of the kusto pool.
+     * 
+     */
     public Output<AzureSkuArgs> sku() {
         return this.sku;
     }
@@ -81,6 +101,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,6 +116,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -103,6 +131,10 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceUid")
     private @Nullable Output<String> workspaceUid;
 
+    /**
+     * @return The workspace unique identifier.
+     * 
+     */
     public Optional<Output<String>> workspaceUid() {
         return Optional.ofNullable(this.workspaceUid);
     }
@@ -138,82 +170,190 @@ public final class KustoPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KustoPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(@Nullable Output<Either<String,EngineType>> engineType) {
             $.engineType = engineType;
             return this;
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(Either<String,EngineType> engineType) {
             return engineType(Output.of(engineType));
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(String engineType) {
             return engineType(Either.ofLeft(engineType));
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(EngineType engineType) {
             return engineType(Either.ofRight(engineType));
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(@Nullable Output<String> kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(String kustoPoolName) {
             return kustoPoolName(Output.of(kustoPoolName));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU of the kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<AzureSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(AzureSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }
 
+        /**
+         * @param workspaceUid The workspace unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceUid(@Nullable Output<String> workspaceUid) {
             $.workspaceUid = workspaceUid;
             return this;
         }
 
+        /**
+         * @param workspaceUid The workspace unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceUid(String workspaceUid) {
             return workspaceUid(Output.of(workspaceUid));
         }

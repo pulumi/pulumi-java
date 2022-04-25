@@ -23,6 +23,10 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="publicIpAddress", required=true)
     private String publicIpAddress;
 
+    /**
+     * @return The public IP address of the system service
+     * 
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
@@ -34,6 +38,10 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="systemServiceType", required=true)
     private String systemServiceType;
 
+    /**
+     * @return The system service type
+     * 
+     */
     public String systemServiceType() {
         return this.systemServiceType;
     }
@@ -45,6 +53,10 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The state of the system service
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -75,16 +87,34 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
             $ = new SystemServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicIpAddress The public IP address of the system service
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddress(String publicIpAddress) {
             $.publicIpAddress = publicIpAddress;
             return this;
         }
 
+        /**
+         * @param systemServiceType The system service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServiceType(String systemServiceType) {
             $.systemServiceType = systemServiceType;
             return this;
         }
 
+        /**
+         * @param version The state of the system service
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

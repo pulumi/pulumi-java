@@ -22,6 +22,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="context")
     private @Nullable Output<String> context;
 
+    /**
+     * @return The workload classifier context.
+     * 
+     */
     public Optional<Output<String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -33,6 +37,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The workload classifier end time for classification.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -44,6 +52,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="importance")
     private @Nullable Output<String> importance;
 
+    /**
+     * @return The workload classifier importance.
+     * 
+     */
     public Optional<Output<String>> importance() {
         return Optional.ofNullable(this.importance);
     }
@@ -55,6 +67,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return The workload classifier label.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -66,6 +82,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="memberName", required=true)
     private Output<String> memberName;
 
+    /**
+     * @return The workload classifier member name.
+     * 
+     */
     public Output<String> memberName() {
         return this.memberName;
     }
@@ -77,6 +97,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="sqlPoolName", required=true)
     private Output<String> sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -99,6 +127,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The workload classifier start time for classification.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -110,6 +142,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="workloadClassifierName")
     private @Nullable Output<String> workloadClassifierName;
 
+    /**
+     * @return The name of the workload classifier.
+     * 
+     */
     public Optional<Output<String>> workloadClassifierName() {
         return Optional.ofNullable(this.workloadClassifierName);
     }
@@ -121,6 +157,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="workloadGroupName", required=true)
     private Output<String> workloadGroupName;
 
+    /**
+     * @return The name of the workload group.
+     * 
+     */
     public Output<String> workloadGroupName() {
         return this.workloadGroupName;
     }
@@ -132,6 +172,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -170,101 +214,233 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
             $ = new SqlPoolWorkloadClassifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context The workload classifier context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context The workload classifier context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(String context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param endTime The workload classifier end time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The workload classifier end time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param importance The workload classifier importance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(@Nullable Output<String> importance) {
             $.importance = importance;
             return this;
         }
 
+        /**
+         * @param importance The workload classifier importance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(String importance) {
             return importance(Output.of(importance));
         }
 
+        /**
+         * @param label The workload classifier label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label The workload classifier label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param memberName The workload classifier member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberName(Output<String> memberName) {
             $.memberName = memberName;
             return this;
         }
 
+        /**
+         * @param memberName The workload classifier member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberName(String memberName) {
             return memberName(Output.of(memberName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             return sqlPoolName(Output.of(sqlPoolName));
         }
 
+        /**
+         * @param startTime The workload classifier start time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The workload classifier start time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param workloadClassifierName The name of the workload classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadClassifierName(@Nullable Output<String> workloadClassifierName) {
             $.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
+        /**
+         * @param workloadClassifierName The name of the workload classifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadClassifierName(String workloadClassifierName) {
             return workloadClassifierName(Output.of(workloadClassifierName));
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(Output<String> workloadGroupName) {
             $.workloadGroupName = workloadGroupName;
             return this;
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(String workloadGroupName) {
             return workloadGroupName(Output.of(workloadGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

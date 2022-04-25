@@ -19,6 +19,10 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="datastoreName", required=true)
     private String datastoreName;
 
+    /**
+     * @return Name of the datastore.
+     * 
+     */
     public String datastoreName() {
         return this.datastoreName;
     }
@@ -30,6 +34,10 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDatastoreArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreName Name of the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(String datastoreName) {
             $.datastoreName = datastoreName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

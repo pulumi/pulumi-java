@@ -23,6 +23,10 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="configurationName", required=true)
     private Output<String> configurationName;
 
+    /**
+     * @return The name of the network manager security Configuration.
+     * 
+     */
     public Output<String> configurationName() {
         return this.configurationName;
     }
@@ -34,6 +38,10 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="flag")
     private @Nullable Output<String> flag;
 
+    /**
+     * @return Default rule flag.
+     * 
+     */
     public Optional<Output<String>> flag() {
         return Optional.ofNullable(this.flag);
     }
@@ -46,6 +54,11 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Whether the rule is custom or default.
+     * Expected value is &#39;Default&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -57,6 +70,10 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="networkManagerName", required=true)
     private Output<String> networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
@@ -68,6 +85,10 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +100,10 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ruleCollectionName", required=true)
     private Output<String> ruleCollectionName;
 
+    /**
+     * @return The name of the network manager security Configuration rule collection.
+     * 
+     */
     public Output<String> ruleCollectionName() {
         return this.ruleCollectionName;
     }
@@ -90,6 +115,10 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The name of the rule.
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -124,65 +153,151 @@ public final class DefaultUserRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new DefaultUserRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationName The name of the network manager security Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(Output<String> configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param configurationName The name of the network manager security Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             return configurationName(Output.of(configurationName));
         }
 
+        /**
+         * @param flag Default rule flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(@Nullable Output<String> flag) {
             $.flag = flag;
             return this;
         }
 
+        /**
+         * @param flag Default rule flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(String flag) {
             return flag(Output.of(flag));
         }
 
+        /**
+         * @param kind Whether the rule is custom or default.
+         * Expected value is &#39;Default&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Whether the rule is custom or default.
+         * Expected value is &#39;Default&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             return networkManagerName(Output.of(networkManagerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleCollectionName The name of the network manager security Configuration rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionName(Output<String> ruleCollectionName) {
             $.ruleCollectionName = ruleCollectionName;
             return this;
         }
 
+        /**
+         * @param ruleCollectionName The name of the network manager security Configuration rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionName(String ruleCollectionName) {
             return ruleCollectionName(Output.of(ruleCollectionName));
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The name of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }

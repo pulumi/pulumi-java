@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MABContainerHealthDetailsResponse {
-    /**
-     * Health Code
-     * 
-     */
+        /**
+         * @return Health Code
+         * 
+         */
     private final @Nullable Integer code;
-    /**
-     * Health Message
-     * 
-     */
+        /**
+         * @return Health Message
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Health Recommended Actions
-     * 
-     */
+        /**
+         * @return Health Recommended Actions
+         * 
+         */
     private final @Nullable List<String> recommendations;
-    /**
-     * Health Title
-     * 
-     */
+        /**
+         * @return Health Title
+         * 
+         */
     private final @Nullable String title;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class MABContainerHealthDetailsResponse {
     }
 
     /**
-     * Health Code
+     * @return Health Code
      * 
-    */
+     */
     public Optional<Integer> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Health Message
+     * @return Health Message
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Health Recommended Actions
+     * @return Health Recommended Actions
      * 
-    */
+     */
     public List<String> recommendations() {
         return this.recommendations == null ? List.of() : this.recommendations;
     }
     /**
-     * Health Title
+     * @return Health Title
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

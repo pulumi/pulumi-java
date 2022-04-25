@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CloudServiceOsProfileResponse {
-    /**
-     * Specifies set of certificates that should be installed onto the role instances.
-     * 
-     */
+        /**
+         * @return Specifies set of certificates that should be installed onto the role instances.
+         * 
+         */
     private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CloudServiceOsProfileResponse {
     }
 
     /**
-     * Specifies set of certificates that should be installed onto the role instances.
+     * @return Specifies set of certificates that should be installed onto the role instances.
      * 
-    */
+     */
     public List<CloudServiceVaultSecretGroupResponse> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }

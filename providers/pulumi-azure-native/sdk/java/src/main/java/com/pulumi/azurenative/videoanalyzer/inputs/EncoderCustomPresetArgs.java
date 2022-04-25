@@ -29,6 +29,10 @@ public final class EncoderCustomPresetArgs extends com.pulumi.resources.Resource
     @Import(name="audioEncoder")
     private @Nullable Output<AudioEncoderAacArgs> audioEncoder;
 
+    /**
+     * @return Describes a custom preset for encoding audio.
+     * 
+     */
     public Optional<Output<AudioEncoderAacArgs>> audioEncoder() {
         return Optional.ofNullable(this.audioEncoder);
     }
@@ -41,6 +45,11 @@ public final class EncoderCustomPresetArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -52,6 +61,10 @@ public final class EncoderCustomPresetArgs extends com.pulumi.resources.Resource
     @Import(name="videoEncoder")
     private @Nullable Output<VideoEncoderH264Args> videoEncoder;
 
+    /**
+     * @return Describes a custom preset for encoding video.
+     * 
+     */
     public Optional<Output<VideoEncoderH264Args>> videoEncoder() {
         return Optional.ofNullable(this.videoEncoder);
     }
@@ -82,29 +95,67 @@ public final class EncoderCustomPresetArgs extends com.pulumi.resources.Resource
             $ = new EncoderCustomPresetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audioEncoder Describes a custom preset for encoding audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioEncoder(@Nullable Output<AudioEncoderAacArgs> audioEncoder) {
             $.audioEncoder = audioEncoder;
             return this;
         }
 
+        /**
+         * @param audioEncoder Describes a custom preset for encoding audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audioEncoder(AudioEncoderAacArgs audioEncoder) {
             return audioEncoder(Output.of(audioEncoder));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param videoEncoder Describes a custom preset for encoding video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoEncoder(@Nullable Output<VideoEncoderH264Args> videoEncoder) {
             $.videoEncoder = videoEncoder;
             return this;
         }
 
+        /**
+         * @param videoEncoder Describes a custom preset for encoding video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoEncoder(VideoEncoderH264Args videoEncoder) {
             return videoEncoder(Output.of(videoEncoder));
         }

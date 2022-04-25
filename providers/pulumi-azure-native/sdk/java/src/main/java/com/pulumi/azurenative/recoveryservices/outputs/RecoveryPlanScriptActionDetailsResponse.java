@@ -11,26 +11,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecoveryPlanScriptActionDetailsResponse {
-    /**
-     * The fabric location.
-     * 
-     */
+        /**
+         * @return The fabric location.
+         * 
+         */
     private final String fabricLocation;
-    /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is &#39;ScriptActionDetails&#39;.
-     * 
-     */
+        /**
+         * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+         * Expected value is &#39;ScriptActionDetails&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The script path.
-     * 
-     */
+        /**
+         * @return The script path.
+         * 
+         */
     private final String path;
-    /**
-     * The script timeout.
-     * 
-     */
+        /**
+         * @return The script timeout.
+         * 
+         */
     private final @Nullable String timeout;
 
     @CustomType.Constructor
@@ -46,31 +46,31 @@ public final class RecoveryPlanScriptActionDetailsResponse {
     }
 
     /**
-     * The fabric location.
+     * @return The fabric location.
      * 
-    */
+     */
     public String fabricLocation() {
         return this.fabricLocation;
     }
     /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is &#39;ScriptActionDetails&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The script path.
+     * @return The script path.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The script timeout.
+     * @return The script timeout.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

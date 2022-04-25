@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ColumnResponse {
-    /**
-     * Column data type logical hint.
-     * 
-     */
+        /**
+         * @return Column data type logical hint.
+         * 
+         */
     private final @Nullable String dataTypeHint;
-    /**
-     * Column description.
-     * 
-     */
+        /**
+         * @return Column description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Column display name.
-     * 
-     */
+        /**
+         * @return Column display name.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Is displayed by default.
-     * 
-     */
+        /**
+         * @return Is displayed by default.
+         * 
+         */
     private final Boolean isDefaultDisplay;
-    /**
-     * Is column hidden.
-     * 
-     */
+        /**
+         * @return Is column hidden.
+         * 
+         */
     private final Boolean isHidden;
-    /**
-     * Column name.
-     * 
-     */
+        /**
+         * @return Column name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Column data type.
-     * 
-     */
+        /**
+         * @return Column data type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class ColumnResponse {
     }
 
     /**
-     * Column data type logical hint.
+     * @return Column data type logical hint.
      * 
-    */
+     */
     public Optional<String> dataTypeHint() {
         return Optional.ofNullable(this.dataTypeHint);
     }
     /**
-     * Column description.
+     * @return Column description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Column display name.
+     * @return Column display name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Is displayed by default.
+     * @return Is displayed by default.
      * 
-    */
+     */
     public Boolean isDefaultDisplay() {
         return this.isDefaultDisplay;
     }
     /**
-     * Is column hidden.
+     * @return Is column hidden.
      * 
-    */
+     */
     public Boolean isHidden() {
         return this.isHidden;
     }
     /**
-     * Column name.
+     * @return Column name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Column data type.
+     * @return Column data type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

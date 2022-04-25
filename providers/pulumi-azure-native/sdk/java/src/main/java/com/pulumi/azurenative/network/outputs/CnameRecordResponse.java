@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CnameRecordResponse {
-    /**
-     * The canonical name for this CNAME record.
-     * 
-     */
+        /**
+         * @return The canonical name for this CNAME record.
+         * 
+         */
     private final @Nullable String cname;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CnameRecordResponse {
     }
 
     /**
-     * The canonical name for this CNAME record.
+     * @return The canonical name for this CNAME record.
      * 
-    */
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }

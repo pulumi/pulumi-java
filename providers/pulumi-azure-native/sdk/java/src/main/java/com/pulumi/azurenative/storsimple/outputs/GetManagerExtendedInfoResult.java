@@ -11,60 +11,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetManagerExtendedInfoResult {
-    /**
-     * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
-     * 
-     */
+        /**
+         * @return Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
+         * 
+         */
     private final String algorithm;
-    /**
-     * Represents the CEK of the resource.
-     * 
-     */
+        /**
+         * @return Represents the CEK of the resource.
+         * 
+         */
     private final @Nullable String encryptionKey;
-    /**
-     * Represents the Cert thumbprint that was used to encrypt the CEK.
-     * 
-     */
+        /**
+         * @return Represents the Cert thumbprint that was used to encrypt the CEK.
+         * 
+         */
     private final @Nullable String encryptionKeyThumbprint;
-    /**
-     * The etag of the resource.
-     * 
-     */
+        /**
+         * @return The etag of the resource.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * Represents the CIK of the resource.
-     * 
-     */
+        /**
+         * @return Represents the CIK of the resource.
+         * 
+         */
     private final String integrityKey;
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     * 
-     */
+        /**
+         * @return The Kind of the object. Currently only Series8000 is supported
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The name of the object.
-     * 
-     */
+        /**
+         * @return The name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
-     * 
-     */
+        /**
+         * @return Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
+         * 
+         */
     private final @Nullable String portalCertificateThumbprint;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * The version of the extended info being persisted.
-     * 
-     */
+        /**
+         * @return The version of the extended info being persisted.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -94,79 +94,79 @@ public final class GetManagerExtendedInfoResult {
     }
 
     /**
-     * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
+     * @return Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * Represents the CEK of the resource.
+     * @return Represents the CEK of the resource.
      * 
-    */
+     */
     public Optional<String> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
-     * Represents the Cert thumbprint that was used to encrypt the CEK.
+     * @return Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
-    */
+     */
     public Optional<String> encryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
     /**
-     * The etag of the resource.
+     * @return The etag of the resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Represents the CIK of the resource.
+     * @return Represents the CIK of the resource.
      * 
-    */
+     */
     public String integrityKey() {
         return this.integrityKey;
     }
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
+     * @return Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
-    */
+     */
     public Optional<String> portalCertificateThumbprint() {
         return Optional.ofNullable(this.portalCertificateThumbprint);
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The version of the extended info being persisted.
+     * @return The version of the extended info being persisted.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

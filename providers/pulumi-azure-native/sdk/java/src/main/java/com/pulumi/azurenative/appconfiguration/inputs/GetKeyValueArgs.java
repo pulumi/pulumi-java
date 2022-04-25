@@ -19,6 +19,10 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="configStoreName", required=true)
     private String configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public String configStoreName() {
         return this.configStoreName;
     }
@@ -30,6 +34,10 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyValueName", required=true)
     private String keyValueName;
 
+    /**
+     * @return Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+     * 
+     */
     public String keyValueName() {
         return this.keyValueName;
     }
@@ -41,6 +49,10 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeyValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param keyValueName Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValueName(String keyValueName) {
             $.keyValueName = keyValueName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

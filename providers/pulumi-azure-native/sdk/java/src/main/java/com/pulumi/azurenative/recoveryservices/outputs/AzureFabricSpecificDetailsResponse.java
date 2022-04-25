@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFabricSpecificDetailsResponse {
-    /**
-     * The container Ids for the Azure fabric.
-     * 
-     */
+        /**
+         * @return The container Ids for the Azure fabric.
+         * 
+         */
     private final @Nullable List<String> containerIds;
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;Azure&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;Azure&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The Location for the Azure fabric.
-     * 
-     */
+        /**
+         * @return The Location for the Azure fabric.
+         * 
+         */
     private final @Nullable String location;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class AzureFabricSpecificDetailsResponse {
     }
 
     /**
-     * The container Ids for the Azure fabric.
+     * @return The container Ids for the Azure fabric.
      * 
-    */
+     */
     public List<String> containerIds() {
         return this.containerIds == null ? List.of() : this.containerIds;
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;Azure&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The Location for the Azure fabric.
+     * @return The Location for the Azure fabric.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }

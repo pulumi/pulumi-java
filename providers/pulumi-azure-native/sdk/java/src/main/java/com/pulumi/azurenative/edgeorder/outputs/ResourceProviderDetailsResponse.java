@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceProviderDetailsResponse {
-    /**
-     * Resource provider namespace
-     * 
-     */
+        /**
+         * @return Resource provider namespace
+         * 
+         */
     private final String resourceProviderNamespace;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ResourceProviderDetailsResponse {
     }
 
     /**
-     * Resource provider namespace
+     * @return Resource provider namespace
      * 
-    */
+     */
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }

@@ -25,6 +25,10 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="phrase")
     private @Nullable String phrase;
 
+    /**
+     * @return The alias pattern phrase.
+     * 
+     */
     public Optional<String> phrase() {
         return Optional.ofNullable(this.phrase);
     }
@@ -36,6 +40,10 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of alias pattern
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -47,6 +55,10 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="variable")
     private @Nullable String variable;
 
+    /**
+     * @return The alias pattern variable.
+     * 
+     */
     public Optional<String> variable() {
         return Optional.ofNullable(this.variable);
     }
@@ -77,16 +89,34 @@ public final class AliasPatternResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AliasPatternResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param phrase The alias pattern phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phrase(@Nullable String phrase) {
             $.phrase = phrase;
             return this;
         }
 
+        /**
+         * @param type The type of alias pattern
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param variable The alias pattern variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variable(@Nullable String variable) {
             $.variable = variable;
             return this;

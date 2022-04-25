@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AzureSkuResponse {
-    /**
-     * SKU name
-     * 
-     */
+        /**
+         * @return SKU name
+         * 
+         */
     private final String name;
-    /**
-     * SKU tier
-     * 
-     */
+        /**
+         * @return SKU tier
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AzureSkuResponse {
     }
 
     /**
-     * SKU name
+     * @return SKU name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * SKU tier
+     * @return SKU tier
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuDescriptionResponse {
-    /**
-     * Capabilities of the SKU, e.g., is traffic manager enabled?
-     * 
-     */
+        /**
+         * @return Capabilities of the SKU, e.g., is traffic manager enabled?
+         * 
+         */
     private final @Nullable List<CapabilityResponse> capabilities;
-    /**
-     * Current number of instances assigned to the resource.
-     * 
-     */
+        /**
+         * @return Current number of instances assigned to the resource.
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * Family code of the resource SKU.
-     * 
-     */
+        /**
+         * @return Family code of the resource SKU.
+         * 
+         */
     private final @Nullable String family;
-    /**
-     * Locations of the SKU.
-     * 
-     */
+        /**
+         * @return Locations of the SKU.
+         * 
+         */
     private final @Nullable List<String> locations;
-    /**
-     * Name of the resource SKU.
-     * 
-     */
+        /**
+         * @return Name of the resource SKU.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Size specifier of the resource SKU.
-     * 
-     */
+        /**
+         * @return Size specifier of the resource SKU.
+         * 
+         */
     private final @Nullable String size;
-    /**
-     * Min, max, and default scale values of the SKU.
-     * 
-     */
+        /**
+         * @return Min, max, and default scale values of the SKU.
+         * 
+         */
     private final @Nullable SkuCapacityResponse skuCapacity;
-    /**
-     * Service tier of the resource SKU.
-     * 
-     */
+        /**
+         * @return Service tier of the resource SKU.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class SkuDescriptionResponse {
     }
 
     /**
-     * Capabilities of the SKU, e.g., is traffic manager enabled?
+     * @return Capabilities of the SKU, e.g., is traffic manager enabled?
      * 
-    */
+     */
     public List<CapabilityResponse> capabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
-     * Current number of instances assigned to the resource.
+     * @return Current number of instances assigned to the resource.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Family code of the resource SKU.
+     * @return Family code of the resource SKU.
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * Locations of the SKU.
+     * @return Locations of the SKU.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * Name of the resource SKU.
+     * @return Name of the resource SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Size specifier of the resource SKU.
+     * @return Size specifier of the resource SKU.
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * Min, max, and default scale values of the SKU.
+     * @return Min, max, and default scale values of the SKU.
      * 
-    */
+     */
     public Optional<SkuCapacityResponse> skuCapacity() {
         return Optional.ofNullable(this.skuCapacity);
     }
     /**
-     * Service tier of the resource SKU.
+     * @return Service tier of the resource SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

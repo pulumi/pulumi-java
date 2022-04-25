@@ -25,6 +25,10 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -37,6 +41,11 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -48,6 +57,10 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username to be presented as part of the credentials.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -78,29 +91,67 @@ public final class UsernamePasswordCredentialsArgs extends com.pulumi.resources.
             $ = new UsernamePasswordCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param username Username to be presented as part of the credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username to be presented as part of the credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateEndpointConnectionProxyResult {
-    /**
-     * ETag from NRP.
-     * 
-     */
+        /**
+         * @return ETag from NRP.
+         * 
+         */
     private final String eTag;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the private endpoint connection proxy resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the private endpoint connection proxy resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Remote private endpoint details.
-     * 
-     */
+        /**
+         * @return Remote private endpoint details.
+         * 
+         */
     private final @Nullable RemotePrivateEndpointResponse remotePrivateEndpoint;
-    /**
-     * Operation status.
-     * 
-     */
+        /**
+         * @return Operation status.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetPrivateEndpointConnectionProxyResult {
     }
 
     /**
-     * ETag from NRP.
+     * @return ETag from NRP.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the private endpoint connection proxy resource.
+     * @return The provisioning state of the private endpoint connection proxy resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Remote private endpoint details.
+     * @return Remote private endpoint details.
      * 
-    */
+     */
     public Optional<RemotePrivateEndpointResponse> remotePrivateEndpoint() {
         return Optional.ofNullable(this.remotePrivateEndpoint);
     }
     /**
-     * Operation status.
+     * @return Operation status.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

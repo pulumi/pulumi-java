@@ -21,6 +21,10 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
     @Import(name="dataId")
     private @Nullable String dataId;
 
+    /**
+     * @return ARM resource ID of the registered dataVersion.
+     * 
+     */
     public Optional<String> dataId() {
         return Optional.ofNullable(this.dataId);
     }
@@ -32,6 +36,10 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Mechanism for accessing the data artifact.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -43,6 +51,10 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
     @Import(name="pathOnCompute")
     private @Nullable String pathOnCompute;
 
+    /**
+     * @return Location of data inside the container process.
+     * 
+     */
     public Optional<String> pathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
@@ -73,16 +85,34 @@ public final class InputDataBindingResponse extends com.pulumi.resources.InvokeA
             $ = new InputDataBindingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataId ARM resource ID of the registered dataVersion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataId(@Nullable String dataId) {
             $.dataId = dataId;
             return this;
         }
 
+        /**
+         * @param mode Mechanism for accessing the data artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param pathOnCompute Location of data inside the container process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
             $.pathOnCompute = pathOnCompute;
             return this;

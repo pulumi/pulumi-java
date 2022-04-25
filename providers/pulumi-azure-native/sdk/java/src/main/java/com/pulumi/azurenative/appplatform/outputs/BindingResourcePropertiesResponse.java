@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BindingResourcePropertiesResponse {
-    /**
-     * Binding parameters of the Binding resource
-     * 
-     */
+        /**
+         * @return Binding parameters of the Binding resource
+         * 
+         */
     private final @Nullable Map<String,Object> bindingParameters;
-    /**
-     * Creation time of the Binding resource
-     * 
-     */
+        /**
+         * @return Creation time of the Binding resource
+         * 
+         */
     private final String createdAt;
-    /**
-     * The generated Spring Boot property file for this binding. The secret will be deducted.
-     * 
-     */
+        /**
+         * @return The generated Spring Boot property file for this binding. The secret will be deducted.
+         * 
+         */
     private final String generatedProperties;
-    /**
-     * The key of the bound resource
-     * 
-     */
+        /**
+         * @return The key of the bound resource
+         * 
+         */
     private final @Nullable String key;
-    /**
-     * The Azure resource id of the bound resource
-     * 
-     */
+        /**
+         * @return The Azure resource id of the bound resource
+         * 
+         */
     private final @Nullable String resourceId;
-    /**
-     * The name of the bound resource
-     * 
-     */
+        /**
+         * @return The name of the bound resource
+         * 
+         */
     private final String resourceName;
-    /**
-     * The standard Azure resource type of the bound resource
-     * 
-     */
+        /**
+         * @return The standard Azure resource type of the bound resource
+         * 
+         */
     private final String resourceType;
-    /**
-     * Update time of the Binding resource
-     * 
-     */
+        /**
+         * @return Update time of the Binding resource
+         * 
+         */
     private final String updatedAt;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class BindingResourcePropertiesResponse {
     }
 
     /**
-     * Binding parameters of the Binding resource
+     * @return Binding parameters of the Binding resource
      * 
-    */
+     */
     public Map<String,Object> bindingParameters() {
         return this.bindingParameters == null ? Map.of() : this.bindingParameters;
     }
     /**
-     * Creation time of the Binding resource
+     * @return Creation time of the Binding resource
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The generated Spring Boot property file for this binding. The secret will be deducted.
+     * @return The generated Spring Boot property file for this binding. The secret will be deducted.
      * 
-    */
+     */
     public String generatedProperties() {
         return this.generatedProperties;
     }
     /**
-     * The key of the bound resource
+     * @return The key of the bound resource
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The Azure resource id of the bound resource
+     * @return The Azure resource id of the bound resource
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * The name of the bound resource
+     * @return The name of the bound resource
      * 
-    */
+     */
     public String resourceName() {
         return this.resourceName;
     }
     /**
-     * The standard Azure resource type of the bound resource
+     * @return The standard Azure resource type of the bound resource
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Update time of the Binding resource
+     * @return Update time of the Binding resource
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

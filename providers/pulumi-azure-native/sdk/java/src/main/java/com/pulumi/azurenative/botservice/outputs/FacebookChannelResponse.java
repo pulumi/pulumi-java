@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FacebookChannelResponse {
-    /**
-     * The channel name
-     * Expected value is &#39;FacebookChannel&#39;.
-     * 
-     */
+        /**
+         * @return The channel name
+         * Expected value is &#39;FacebookChannel&#39;.
+         * 
+         */
     private final String channelName;
-    /**
-     * Entity Tag of the resource
-     * 
-     */
+        /**
+         * @return Entity Tag of the resource
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The set of properties specific to bot facebook channel
-     * 
-     */
+        /**
+         * @return The set of properties specific to bot facebook channel
+         * 
+         */
     private final @Nullable FacebookChannelPropertiesResponse properties;
-    /**
-     * Provisioning state of the resource
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class FacebookChannelResponse {
     }
 
     /**
-     * The channel name
+     * @return The channel name
      * Expected value is &#39;FacebookChannel&#39;.
      * 
-    */
+     */
     public String channelName() {
         return this.channelName;
     }
     /**
-     * Entity Tag of the resource
+     * @return Entity Tag of the resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The set of properties specific to bot facebook channel
+     * @return The set of properties specific to bot facebook channel
      * 
-    */
+     */
     public Optional<FacebookChannelPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

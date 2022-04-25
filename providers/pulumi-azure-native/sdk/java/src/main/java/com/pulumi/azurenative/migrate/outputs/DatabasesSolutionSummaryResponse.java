@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabasesSolutionSummaryResponse {
-    /**
-     * Gets or sets the count of database instances assessed.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of database instances assessed.
+         * 
+         */
     private final @Nullable Integer databaseInstancesAssessedCount;
-    /**
-     * Gets or sets the count of databases assessed.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of databases assessed.
+         * 
+         */
     private final @Nullable Integer databasesAssessedCount;
-    /**
-     * Gets the Instance type.
-     * Expected value is &#39;Databases&#39;.
-     * 
-     */
+        /**
+         * @return Gets the Instance type.
+         * Expected value is &#39;Databases&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * Gets or sets the count of databases ready for migration.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of databases ready for migration.
+         * 
+         */
     private final @Nullable Integer migrationReadyCount;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class DatabasesSolutionSummaryResponse {
     }
 
     /**
-     * Gets or sets the count of database instances assessed.
+     * @return Gets or sets the count of database instances assessed.
      * 
-    */
+     */
     public Optional<Integer> databaseInstancesAssessedCount() {
         return Optional.ofNullable(this.databaseInstancesAssessedCount);
     }
     /**
-     * Gets or sets the count of databases assessed.
+     * @return Gets or sets the count of databases assessed.
      * 
-    */
+     */
     public Optional<Integer> databasesAssessedCount() {
         return Optional.ofNullable(this.databasesAssessedCount);
     }
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Databases&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * Gets or sets the count of databases ready for migration.
+     * @return Gets or sets the count of databases ready for migration.
      * 
-    */
+     */
     public Optional<Integer> migrationReadyCount() {
         return Optional.ofNullable(this.migrationReadyCount);
     }

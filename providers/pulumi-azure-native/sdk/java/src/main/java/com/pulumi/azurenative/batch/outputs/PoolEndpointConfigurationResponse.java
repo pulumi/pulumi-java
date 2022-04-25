@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PoolEndpointConfigurationResponse {
-    /**
-     * The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
-     * 
-     */
+        /**
+         * @return The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+         * 
+         */
     private final List<InboundNatPoolResponse> inboundNatPools;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class PoolEndpointConfigurationResponse {
     }
 
     /**
-     * The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
+     * @return The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
      * 
-    */
+     */
     public List<InboundNatPoolResponse> inboundNatPools() {
         return this.inboundNatPools;
     }

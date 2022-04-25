@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SlowRequestsBasedTriggerResponse {
-    /**
-     * Request Count.
-     * 
-     */
+        /**
+         * @return Request Count.
+         * 
+         */
     private final @Nullable Integer count;
-    /**
-     * Request Path.
-     * 
-     */
+        /**
+         * @return Request Path.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * Time interval.
-     * 
-     */
+        /**
+         * @return Time interval.
+         * 
+         */
     private final @Nullable String timeInterval;
-    /**
-     * Time taken.
-     * 
-     */
+        /**
+         * @return Time taken.
+         * 
+         */
     private final @Nullable String timeTaken;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SlowRequestsBasedTriggerResponse {
     }
 
     /**
-     * Request Count.
+     * @return Request Count.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Request Path.
+     * @return Request Path.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Time interval.
+     * @return Time interval.
      * 
-    */
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
-     * Time taken.
+     * @return Time taken.
      * 
-    */
+     */
     public Optional<String> timeTaken() {
         return Optional.ofNullable(this.timeTaken);
     }

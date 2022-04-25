@@ -24,120 +24,120 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSubnetResult {
-    /**
-     * The address prefix for the subnet.
-     * 
-     */
+        /**
+         * @return The address prefix for the subnet.
+         * 
+         */
     private final @Nullable String addressPrefix;
-    /**
-     * List of address prefixes for the subnet.
-     * 
-     */
+        /**
+         * @return List of address prefixes for the subnet.
+         * 
+         */
     private final @Nullable List<String> addressPrefixes;
-    /**
-     * Application gateway IP configurations of virtual network resource.
-     * 
-     */
+        /**
+         * @return Application gateway IP configurations of virtual network resource.
+         * 
+         */
     private final @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations;
-    /**
-     * An array of references to the delegations on the subnet.
-     * 
-     */
+        /**
+         * @return An array of references to the delegations on the subnet.
+         * 
+         */
     private final @Nullable List<DelegationResponse> delegations;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Array of IpAllocation which reference this subnet.
-     * 
-     */
+        /**
+         * @return Array of IpAllocation which reference this subnet.
+         * 
+         */
     private final @Nullable List<SubResourceResponse> ipAllocations;
-    /**
-     * Array of IP configuration profiles which reference this subnet.
-     * 
-     */
+        /**
+         * @return Array of IP configuration profiles which reference this subnet.
+         * 
+         */
     private final List<IPConfigurationProfileResponse> ipConfigurationProfiles;
-    /**
-     * An array of references to the network interface IP configurations using subnet.
-     * 
-     */
+        /**
+         * @return An array of references to the network interface IP configurations using subnet.
+         * 
+         */
     private final List<IPConfigurationResponse> ipConfigurations;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Nat gateway associated with this subnet.
-     * 
-     */
+        /**
+         * @return Nat gateway associated with this subnet.
+         * 
+         */
     private final @Nullable SubResourceResponse natGateway;
-    /**
-     * The reference to the NetworkSecurityGroup resource.
-     * 
-     */
+        /**
+         * @return The reference to the NetworkSecurityGroup resource.
+         * 
+         */
     private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
-    /**
-     * Enable or Disable apply network policies on private end point in the subnet.
-     * 
-     */
+        /**
+         * @return Enable or Disable apply network policies on private end point in the subnet.
+         * 
+         */
     private final @Nullable String privateEndpointNetworkPolicies;
-    /**
-     * An array of references to private endpoints.
-     * 
-     */
+        /**
+         * @return An array of references to private endpoints.
+         * 
+         */
     private final List<PrivateEndpointResponse> privateEndpoints;
-    /**
-     * Enable or Disable apply network policies on private link service in the subnet.
-     * 
-     */
+        /**
+         * @return Enable or Disable apply network policies on private link service in the subnet.
+         * 
+         */
     private final @Nullable String privateLinkServiceNetworkPolicies;
-    /**
-     * The provisioning state of the subnet resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the subnet resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
-     * 
-     */
+        /**
+         * @return A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
+         * 
+         */
     private final String purpose;
-    /**
-     * An array of references to the external resources using subnet.
-     * 
-     */
+        /**
+         * @return An array of references to the external resources using subnet.
+         * 
+         */
     private final List<ResourceNavigationLinkResponse> resourceNavigationLinks;
-    /**
-     * The reference to the RouteTable resource.
-     * 
-     */
+        /**
+         * @return The reference to the RouteTable resource.
+         * 
+         */
     private final @Nullable RouteTableResponse routeTable;
-    /**
-     * An array of references to services injecting into this subnet.
-     * 
-     */
+        /**
+         * @return An array of references to services injecting into this subnet.
+         * 
+         */
     private final List<ServiceAssociationLinkResponse> serviceAssociationLinks;
-    /**
-     * An array of service endpoint policies.
-     * 
-     */
+        /**
+         * @return An array of service endpoint policies.
+         * 
+         */
     private final @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies;
-    /**
-     * An array of service endpoints.
-     * 
-     */
+        /**
+         * @return An array of service endpoints.
+         * 
+         */
     private final @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -191,163 +191,163 @@ public final class GetSubnetResult {
     }
 
     /**
-     * The address prefix for the subnet.
+     * @return The address prefix for the subnet.
      * 
-    */
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
-     * List of address prefixes for the subnet.
+     * @return List of address prefixes for the subnet.
      * 
-    */
+     */
     public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
-     * Application gateway IP configurations of virtual network resource.
+     * @return Application gateway IP configurations of virtual network resource.
      * 
-    */
+     */
     public List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations == null ? List.of() : this.applicationGatewayIpConfigurations;
     }
     /**
-     * An array of references to the delegations on the subnet.
+     * @return An array of references to the delegations on the subnet.
      * 
-    */
+     */
     public List<DelegationResponse> delegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Array of IpAllocation which reference this subnet.
+     * @return Array of IpAllocation which reference this subnet.
      * 
-    */
+     */
     public List<SubResourceResponse> ipAllocations() {
         return this.ipAllocations == null ? List.of() : this.ipAllocations;
     }
     /**
-     * Array of IP configuration profiles which reference this subnet.
+     * @return Array of IP configuration profiles which reference this subnet.
      * 
-    */
+     */
     public List<IPConfigurationProfileResponse> ipConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
     /**
-     * An array of references to the network interface IP configurations using subnet.
+     * @return An array of references to the network interface IP configurations using subnet.
      * 
-    */
+     */
     public List<IPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations;
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Nat gateway associated with this subnet.
+     * @return Nat gateway associated with this subnet.
      * 
-    */
+     */
     public Optional<SubResourceResponse> natGateway() {
         return Optional.ofNullable(this.natGateway);
     }
     /**
-     * The reference to the NetworkSecurityGroup resource.
+     * @return The reference to the NetworkSecurityGroup resource.
      * 
-    */
+     */
     public Optional<NetworkSecurityGroupResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
     /**
-     * Enable or Disable apply network policies on private end point in the subnet.
+     * @return Enable or Disable apply network policies on private end point in the subnet.
      * 
-    */
+     */
     public Optional<String> privateEndpointNetworkPolicies() {
         return Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
     /**
-     * An array of references to private endpoints.
+     * @return An array of references to private endpoints.
      * 
-    */
+     */
     public List<PrivateEndpointResponse> privateEndpoints() {
         return this.privateEndpoints;
     }
     /**
-     * Enable or Disable apply network policies on private link service in the subnet.
+     * @return Enable or Disable apply network policies on private link service in the subnet.
      * 
-    */
+     */
     public Optional<String> privateLinkServiceNetworkPolicies() {
         return Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
     /**
-     * The provisioning state of the subnet resource.
+     * @return The provisioning state of the subnet resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
+     * @return A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
      * 
-    */
+     */
     public String purpose() {
         return this.purpose;
     }
     /**
-     * An array of references to the external resources using subnet.
+     * @return An array of references to the external resources using subnet.
      * 
-    */
+     */
     public List<ResourceNavigationLinkResponse> resourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
     /**
-     * The reference to the RouteTable resource.
+     * @return The reference to the RouteTable resource.
      * 
-    */
+     */
     public Optional<RouteTableResponse> routeTable() {
         return Optional.ofNullable(this.routeTable);
     }
     /**
-     * An array of references to services injecting into this subnet.
+     * @return An array of references to services injecting into this subnet.
      * 
-    */
+     */
     public List<ServiceAssociationLinkResponse> serviceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
     /**
-     * An array of service endpoint policies.
+     * @return An array of service endpoint policies.
      * 
-    */
+     */
     public List<ServiceEndpointPolicyResponse> serviceEndpointPolicies() {
         return this.serviceEndpointPolicies == null ? List.of() : this.serviceEndpointPolicies;
     }
     /**
-     * An array of service endpoints.
+     * @return An array of service endpoints.
      * 
-    */
+     */
     public List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints() {
         return this.serviceEndpoints == null ? List.of() : this.serviceEndpoints;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

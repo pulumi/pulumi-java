@@ -25,6 +25,10 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
     @Import(name="deviceId", required=true)
     private Output<String> deviceId;
 
+    /**
+     * @return The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+     * 
+     */
     public Output<String> deviceId() {
         return this.deviceId;
     }
@@ -36,6 +40,10 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
     @Import(name="iotHubName", required=true)
     private Output<String> iotHubName;
 
+    /**
+     * @return Name of the IoT Hub.
+     * 
+     */
     public Output<String> iotHubName() {
         return this.iotHubName;
     }
@@ -48,6 +56,11 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -78,29 +91,67 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
             $ = new SecureIotDeviceRemoteTunnelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceId The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(Output<String> deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param deviceId The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(String deviceId) {
             return deviceId(Output.of(deviceId));
         }
 
+        /**
+         * @param iotHubName Name of the IoT Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubName(Output<String> iotHubName) {
             $.iotHubName = iotHubName;
             return this;
         }
 
+        /**
+         * @param iotHubName Name of the IoT Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubName(String iotHubName) {
             return iotHubName(Output.of(iotHubName));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

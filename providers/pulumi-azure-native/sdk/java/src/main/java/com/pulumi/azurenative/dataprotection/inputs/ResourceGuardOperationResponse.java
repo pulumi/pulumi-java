@@ -23,6 +23,10 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
     @Import(name="requestResourceType", required=true)
     private String requestResourceType;
 
+    /**
+     * @return Type of resource request.
+     * 
+     */
     public String requestResourceType() {
         return this.requestResourceType;
     }
@@ -34,6 +38,10 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
     @Import(name="vaultCriticalOperation", required=true)
     private String vaultCriticalOperation;
 
+    /**
+     * @return Name of the critical operation.
+     * 
+     */
     public String vaultCriticalOperation() {
         return this.vaultCriticalOperation;
     }
@@ -63,11 +71,23 @@ public final class ResourceGuardOperationResponse extends com.pulumi.resources.I
             $ = new ResourceGuardOperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param requestResourceType Type of resource request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestResourceType(String requestResourceType) {
             $.requestResourceType = requestResourceType;
             return this;
         }
 
+        /**
+         * @param vaultCriticalOperation Name of the critical operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultCriticalOperation(String vaultCriticalOperation) {
             $.vaultCriticalOperation = vaultCriticalOperation;
             return this;

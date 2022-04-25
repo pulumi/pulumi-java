@@ -25,6 +25,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="createdOn", required=true)
     private String createdOn;
 
+    /**
+     * @return The date and time on which the function app was registered with the static site.
+     * 
+     */
     public String createdOn() {
         return this.createdOn;
     }
@@ -36,6 +40,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="functionAppRegion")
     private @Nullable String functionAppRegion;
 
+    /**
+     * @return The region of the function app registered with the static site
+     * 
+     */
     public Optional<String> functionAppRegion() {
         return Optional.ofNullable(this.functionAppRegion);
     }
@@ -47,6 +55,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="functionAppResourceId")
     private @Nullable String functionAppResourceId;
 
+    /**
+     * @return The resource id of the function app registered with the static site
+     * 
+     */
     public Optional<String> functionAppResourceId() {
         return Optional.ofNullable(this.functionAppResourceId);
     }
@@ -58,6 +70,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -69,6 +85,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -80,6 +100,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource Name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -91,6 +115,10 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -125,36 +153,78 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends com.pulumi.
             $ = new StaticSiteUserProvidedFunctionAppResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdOn The date and time on which the function app was registered with the static site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdOn(String createdOn) {
             $.createdOn = createdOn;
             return this;
         }
 
+        /**
+         * @param functionAppRegion The region of the function app registered with the static site
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppRegion(@Nullable String functionAppRegion) {
             $.functionAppRegion = functionAppRegion;
             return this;
         }
 
+        /**
+         * @param functionAppResourceId The resource id of the function app registered with the static site
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
             $.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
+        /**
+         * @param id Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IngestionConnectionStringResponse {
-    /**
-     * The region where ingested logs and data resides
-     * 
-     */
+        /**
+         * @return The region where ingested logs and data resides
+         * 
+         */
     private final String location;
-    /**
-     * Connection string value
-     * 
-     */
+        /**
+         * @return Connection string value
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class IngestionConnectionStringResponse {
     }
 
     /**
-     * The region where ingested logs and data resides
+     * @return The region where ingested logs and data resides
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Connection string value
+     * @return Connection string value
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

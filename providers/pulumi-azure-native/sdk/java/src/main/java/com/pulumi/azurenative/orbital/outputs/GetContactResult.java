@@ -12,105 +12,105 @@ import java.util.Objects;
 
 @CustomType
 public final class GetContactResult {
-    /**
-     * The reference to the contact profile resource.
-     * 
-     */
+        /**
+         * @return The reference to the contact profile resource.
+         * 
+         */
     private final ResourceReferenceResponse contactProfile;
-    /**
-     * Azimuth of the antenna at the end of the contact in decimal degrees.
-     * 
-     */
+        /**
+         * @return Azimuth of the antenna at the end of the contact in decimal degrees.
+         * 
+         */
     private final Double endAzimuthDegrees;
-    /**
-     * Spacecraft elevation above the horizon at contact end.
-     * 
-     */
+        /**
+         * @return Spacecraft elevation above the horizon at contact end.
+         * 
+         */
     private final Double endElevationDegrees;
-    /**
-     * Any error message while scheduling a contact.
-     * 
-     */
+        /**
+         * @return Any error message while scheduling a contact.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Azure Ground Station name.
-     * 
-     */
+        /**
+         * @return Azure Ground Station name.
+         * 
+         */
     private final String groundStationName;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Maximum elevation of the antenna during the contact in decimal degrees.
-     * 
-     */
+        /**
+         * @return Maximum elevation of the antenna during the contact in decimal degrees.
+         * 
+         */
     private final Double maximumElevationDegrees;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Reservation end time of a contact.
-     * 
-     */
+        /**
+         * @return Reservation end time of a contact.
+         * 
+         */
     private final String reservationEndTime;
-    /**
-     * Reservation start time of a contact.
-     * 
-     */
+        /**
+         * @return Reservation start time of a contact.
+         * 
+         */
     private final String reservationStartTime;
-    /**
-     * Receive end time of a contact.
-     * 
-     */
+        /**
+         * @return Receive end time of a contact.
+         * 
+         */
     private final String rxEndTime;
-    /**
-     * Receive start time of a contact.
-     * 
-     */
+        /**
+         * @return Receive start time of a contact.
+         * 
+         */
     private final String rxStartTime;
-    /**
-     * Azimuth of the antenna at the start of the contact in decimal degrees.
-     * 
-     */
+        /**
+         * @return Azimuth of the antenna at the start of the contact in decimal degrees.
+         * 
+         */
     private final Double startAzimuthDegrees;
-    /**
-     * Spacecraft elevation above the horizon at contact start.
-     * 
-     */
+        /**
+         * @return Spacecraft elevation above the horizon at contact start.
+         * 
+         */
     private final Double startElevationDegrees;
-    /**
-     * Status of a contact.
-     * 
-     */
+        /**
+         * @return Status of a contact.
+         * 
+         */
     private final String status;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Transmit end time of a contact.
-     * 
-     */
+        /**
+         * @return Transmit end time of a contact.
+         * 
+         */
     private final String txEndTime;
-    /**
-     * Transmit start time of a contact.
-     * 
-     */
+        /**
+         * @return Transmit start time of a contact.
+         * 
+         */
     private final String txStartTime;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -158,142 +158,142 @@ public final class GetContactResult {
     }
 
     /**
-     * The reference to the contact profile resource.
+     * @return The reference to the contact profile resource.
      * 
-    */
+     */
     public ResourceReferenceResponse contactProfile() {
         return this.contactProfile;
     }
     /**
-     * Azimuth of the antenna at the end of the contact in decimal degrees.
+     * @return Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
-    */
+     */
     public Double endAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
     /**
-     * Spacecraft elevation above the horizon at contact end.
+     * @return Spacecraft elevation above the horizon at contact end.
      * 
-    */
+     */
     public Double endElevationDegrees() {
         return this.endElevationDegrees;
     }
     /**
-     * Any error message while scheduling a contact.
+     * @return Any error message while scheduling a contact.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Azure Ground Station name.
+     * @return Azure Ground Station name.
      * 
-    */
+     */
     public String groundStationName() {
         return this.groundStationName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Maximum elevation of the antenna during the contact in decimal degrees.
+     * @return Maximum elevation of the antenna during the contact in decimal degrees.
      * 
-    */
+     */
     public Double maximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Reservation end time of a contact.
+     * @return Reservation end time of a contact.
      * 
-    */
+     */
     public String reservationEndTime() {
         return this.reservationEndTime;
     }
     /**
-     * Reservation start time of a contact.
+     * @return Reservation start time of a contact.
      * 
-    */
+     */
     public String reservationStartTime() {
         return this.reservationStartTime;
     }
     /**
-     * Receive end time of a contact.
+     * @return Receive end time of a contact.
      * 
-    */
+     */
     public String rxEndTime() {
         return this.rxEndTime;
     }
     /**
-     * Receive start time of a contact.
+     * @return Receive start time of a contact.
      * 
-    */
+     */
     public String rxStartTime() {
         return this.rxStartTime;
     }
     /**
-     * Azimuth of the antenna at the start of the contact in decimal degrees.
+     * @return Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
-    */
+     */
     public Double startAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
     /**
-     * Spacecraft elevation above the horizon at contact start.
+     * @return Spacecraft elevation above the horizon at contact start.
      * 
-    */
+     */
     public Double startElevationDegrees() {
         return this.startElevationDegrees;
     }
     /**
-     * Status of a contact.
+     * @return Status of a contact.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Transmit end time of a contact.
+     * @return Transmit end time of a contact.
      * 
-    */
+     */
     public String txEndTime() {
         return this.txEndTime;
     }
     /**
-     * Transmit start time of a contact.
+     * @return Transmit start time of a contact.
      * 
-    */
+     */
     public String txStartTime() {
         return this.txStartTime;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

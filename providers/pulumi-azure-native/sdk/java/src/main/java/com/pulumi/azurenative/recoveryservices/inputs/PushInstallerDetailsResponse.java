@@ -25,6 +25,10 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return The health of the push installer.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -36,6 +40,10 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="healthErrors", required=true)
     private List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return The health errors.
+     * 
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
@@ -47,6 +55,10 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The push installer Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -58,6 +70,10 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="lastHeartbeatUtc", required=true)
     private String lastHeartbeatUtc;
 
+    /**
+     * @return The last heartbeat received from the push installer.
+     * 
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
@@ -69,6 +85,10 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The push installer name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The push installer version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -113,35 +137,77 @@ public final class PushInstallerDetailsResponse extends com.pulumi.resources.Inv
             $ = new PushInstallerDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param health The health of the push installer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param id The push installer Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastHeartbeatUtc The last heartbeat received from the push installer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
 
+        /**
+         * @param name The push installer name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The push installer version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

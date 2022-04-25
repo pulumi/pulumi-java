@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoggingPropertiesResponse {
-    /**
-     * Indicates whether audit logs are enabled on the connected registry.
-     * 
-     */
+        /**
+         * @return Indicates whether audit logs are enabled on the connected registry.
+         * 
+         */
     private final @Nullable String auditLogStatus;
-    /**
-     * The verbosity of logs persisted on the connected registry.
-     * 
-     */
+        /**
+         * @return The verbosity of logs persisted on the connected registry.
+         * 
+         */
     private final @Nullable String logLevel;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LoggingPropertiesResponse {
     }
 
     /**
-     * Indicates whether audit logs are enabled on the connected registry.
+     * @return Indicates whether audit logs are enabled on the connected registry.
      * 
-    */
+     */
     public Optional<String> auditLogStatus() {
         return Optional.ofNullable(this.auditLogStatus);
     }
     /**
-     * The verbosity of logs persisted on the connected registry.
+     * @return The verbosity of logs persisted on the connected registry.
      * 
-    */
+     */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }

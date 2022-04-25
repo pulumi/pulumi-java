@@ -19,49 +19,49 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachineConfigurationResponse {
-    /**
-     * If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
-     * 
-     */
+        /**
+         * @return If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
+         * 
+         */
     private final @Nullable ContainerConfigurationResponse containerConfiguration;
-    /**
-     * This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
-     * 
-     */
+        /**
+         * @return This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+         * 
+         */
     private final @Nullable List<DataDiskResponse> dataDisks;
-    /**
-     * If specified, encryption is performed on each node in the pool during node provisioning.
-     * 
-     */
+        /**
+         * @return If specified, encryption is performed on each node in the pool during node provisioning.
+         * 
+         */
     private final @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration;
-    /**
-     * If specified, the extensions mentioned in this configuration will be installed on each node.
-     * 
-     */
+        /**
+         * @return If specified, the extensions mentioned in this configuration will be installed on each node.
+         * 
+         */
     private final @Nullable List<VMExtensionResponse> extensions;
     private final ImageReferenceResponse imageReference;
-    /**
-     * This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
-     * 
-     *  Windows_Server - The on-premises license is for Windows Server.
-     *  Windows_Client - The on-premises license is for Windows Client.
-     * 
-     */
+        /**
+         * @return This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
+         * 
+         *  Windows_Server - The on-premises license is for Windows Server.
+         *  Windows_Client - The on-premises license is for Windows Client.
+         * 
+         */
     private final @Nullable String licenseType;
-    /**
-     * The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the &#39;List supported node agent SKUs&#39; operation.
-     * 
-     */
+        /**
+         * @return The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the &#39;List supported node agent SKUs&#39; operation.
+         * 
+         */
     private final String nodeAgentSkuId;
-    /**
-     * This configuration will specify rules on how nodes in the pool will be physically allocated.
-     * 
-     */
+        /**
+         * @return This configuration will specify rules on how nodes in the pool will be physically allocated.
+         * 
+         */
     private final @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration;
-    /**
-     * This property must not be specified if the imageReference specifies a Linux OS image.
-     * 
-     */
+        /**
+         * @return This property must not be specified if the imageReference specifies a Linux OS image.
+         * 
+         */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
     @CustomType.Constructor
@@ -87,30 +87,30 @@ public final class VirtualMachineConfigurationResponse {
     }
 
     /**
-     * If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
+     * @return If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
      * 
-    */
+     */
     public Optional<ContainerConfigurationResponse> containerConfiguration() {
         return Optional.ofNullable(this.containerConfiguration);
     }
     /**
-     * This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
+     * @return This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
      * 
-    */
+     */
     public List<DataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
-     * If specified, encryption is performed on each node in the pool during node provisioning.
+     * @return If specified, encryption is performed on each node in the pool during node provisioning.
      * 
-    */
+     */
     public Optional<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration() {
         return Optional.ofNullable(this.diskEncryptionConfiguration);
     }
     /**
-     * If specified, the extensions mentioned in this configuration will be installed on each node.
+     * @return If specified, the extensions mentioned in this configuration will be installed on each node.
      * 
-    */
+     */
     public List<VMExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
@@ -118,33 +118,33 @@ public final class VirtualMachineConfigurationResponse {
         return this.imageReference;
     }
     /**
-     * This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
+     * @return This only applies to images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the nodes which will be deployed. If omitted, no on-premises licensing discount is applied. Values are:
      * 
      *  Windows_Server - The on-premises license is for Windows Server.
      *  Windows_Client - The on-premises license is for Windows Client.
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the &#39;List supported node agent SKUs&#39; operation.
+     * @return The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the &#39;List supported node agent SKUs&#39; operation.
      * 
-    */
+     */
     public String nodeAgentSkuId() {
         return this.nodeAgentSkuId;
     }
     /**
-     * This configuration will specify rules on how nodes in the pool will be physically allocated.
+     * @return This configuration will specify rules on how nodes in the pool will be physically allocated.
      * 
-    */
+     */
     public Optional<NodePlacementConfigurationResponse> nodePlacementConfiguration() {
         return Optional.ofNullable(this.nodePlacementConfiguration);
     }
     /**
-     * This property must not be specified if the imageReference specifies a Linux OS image.
+     * @return This property must not be specified if the imageReference specifies a Linux OS image.
      * 
-    */
+     */
     public Optional<WindowsConfigurationResponse> windowsConfiguration() {
         return Optional.ofNullable(this.windowsConfiguration);
     }

@@ -27,6 +27,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationGroupName", required=true)
     private Output<String> applicationGroupName;
 
+    /**
+     * @return The name of the application group
+     * 
+     */
     public Output<String> applicationGroupName() {
         return this.applicationGroupName;
     }
@@ -38,6 +42,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
     private @Nullable Output<String> applicationName;
 
+    /**
+     * @return The name of the application within the specified application group
+     * 
+     */
     public Optional<Output<String>> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
@@ -49,6 +57,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationType")
     private @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
 
+    /**
+     * @return Resource Type of Application.
+     * 
+     */
     public Optional<Output<Either<String,RemoteApplicationType>>> applicationType() {
         return Optional.ofNullable(this.applicationType);
     }
@@ -60,6 +72,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commandLineArguments")
     private @Nullable Output<String> commandLineArguments;
 
+    /**
+     * @return Command Line Arguments for Application.
+     * 
+     */
     public Optional<Output<String>> commandLineArguments() {
         return Optional.ofNullable(this.commandLineArguments);
     }
@@ -71,6 +87,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="commandLineSetting", required=true)
     private Output<Either<String,CommandLineSetting>> commandLineSetting;
 
+    /**
+     * @return Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+     * 
+     */
     public Output<Either<String,CommandLineSetting>> commandLineSetting() {
         return this.commandLineSetting;
     }
@@ -82,6 +102,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of Application.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -93,6 +117,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filePath")
     private @Nullable Output<String> filePath;
 
+    /**
+     * @return Specifies a path for the executable file for the application.
+     * 
+     */
     public Optional<Output<String>> filePath() {
         return Optional.ofNullable(this.filePath);
     }
@@ -104,6 +132,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of Application.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -115,6 +147,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iconIndex")
     private @Nullable Output<Integer> iconIndex;
 
+    /**
+     * @return Index of the icon.
+     * 
+     */
     public Optional<Output<Integer>> iconIndex() {
         return Optional.ofNullable(this.iconIndex);
     }
@@ -126,6 +162,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iconPath")
     private @Nullable Output<String> iconPath;
 
+    /**
+     * @return Path to icon.
+     * 
+     */
     public Optional<Output<String>> iconPath() {
         return Optional.ofNullable(this.iconPath);
     }
@@ -137,6 +177,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msixPackageApplicationId")
     private @Nullable Output<String> msixPackageApplicationId;
 
+    /**
+     * @return Specifies the package application Id for MSIX applications
+     * 
+     */
     public Optional<Output<String>> msixPackageApplicationId() {
         return Optional.ofNullable(this.msixPackageApplicationId);
     }
@@ -148,6 +192,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="msixPackageFamilyName")
     private @Nullable Output<String> msixPackageFamilyName;
 
+    /**
+     * @return Specifies the package family name for MSIX applications
+     * 
+     */
     public Optional<Output<String>> msixPackageFamilyName() {
         return Optional.ofNullable(this.msixPackageFamilyName);
     }
@@ -159,6 +207,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -170,6 +222,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="showInPortal")
     private @Nullable Output<Boolean> showInPortal;
 
+    /**
+     * @return Specifies whether to show the RemoteApp program in the RD Web Access server.
+     * 
+     */
     public Optional<Output<Boolean>> showInPortal() {
         return Optional.ofNullable(this.showInPortal);
     }
@@ -211,144 +267,336 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationGroupName The name of the application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupName(Output<String> applicationGroupName) {
             $.applicationGroupName = applicationGroupName;
             return this;
         }
 
+        /**
+         * @param applicationGroupName The name of the application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationGroupName(String applicationGroupName) {
             return applicationGroupName(Output.of(applicationGroupName));
         }
 
+        /**
+         * @param applicationName The name of the application within the specified application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(@Nullable Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the application within the specified application group
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param applicationType Resource Type of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(@Nullable Output<Either<String,RemoteApplicationType>> applicationType) {
             $.applicationType = applicationType;
             return this;
         }
 
+        /**
+         * @param applicationType Resource Type of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(Either<String,RemoteApplicationType> applicationType) {
             return applicationType(Output.of(applicationType));
         }
 
+        /**
+         * @param applicationType Resource Type of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(String applicationType) {
             return applicationType(Either.ofLeft(applicationType));
         }
 
+        /**
+         * @param applicationType Resource Type of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationType(RemoteApplicationType applicationType) {
             return applicationType(Either.ofRight(applicationType));
         }
 
+        /**
+         * @param commandLineArguments Command Line Arguments for Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineArguments(@Nullable Output<String> commandLineArguments) {
             $.commandLineArguments = commandLineArguments;
             return this;
         }
 
+        /**
+         * @param commandLineArguments Command Line Arguments for Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineArguments(String commandLineArguments) {
             return commandLineArguments(Output.of(commandLineArguments));
         }
 
+        /**
+         * @param commandLineSetting Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineSetting(Output<Either<String,CommandLineSetting>> commandLineSetting) {
             $.commandLineSetting = commandLineSetting;
             return this;
         }
 
+        /**
+         * @param commandLineSetting Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
             return commandLineSetting(Output.of(commandLineSetting));
         }
 
+        /**
+         * @param commandLineSetting Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineSetting(String commandLineSetting) {
             return commandLineSetting(Either.ofLeft(commandLineSetting));
         }
 
+        /**
+         * @param commandLineSetting Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandLineSetting(CommandLineSetting commandLineSetting) {
             return commandLineSetting(Either.ofRight(commandLineSetting));
         }
 
+        /**
+         * @param description Description of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param filePath Specifies a path for the executable file for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(@Nullable Output<String> filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param filePath Specifies a path for the executable file for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(String filePath) {
             return filePath(Output.of(filePath));
         }
 
+        /**
+         * @param friendlyName Friendly name of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of Application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param iconIndex Index of the icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconIndex(@Nullable Output<Integer> iconIndex) {
             $.iconIndex = iconIndex;
             return this;
         }
 
+        /**
+         * @param iconIndex Index of the icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconIndex(Integer iconIndex) {
             return iconIndex(Output.of(iconIndex));
         }
 
+        /**
+         * @param iconPath Path to icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconPath(@Nullable Output<String> iconPath) {
             $.iconPath = iconPath;
             return this;
         }
 
+        /**
+         * @param iconPath Path to icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconPath(String iconPath) {
             return iconPath(Output.of(iconPath));
         }
 
+        /**
+         * @param msixPackageApplicationId Specifies the package application Id for MSIX applications
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageApplicationId(@Nullable Output<String> msixPackageApplicationId) {
             $.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
 
+        /**
+         * @param msixPackageApplicationId Specifies the package application Id for MSIX applications
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageApplicationId(String msixPackageApplicationId) {
             return msixPackageApplicationId(Output.of(msixPackageApplicationId));
         }
 
+        /**
+         * @param msixPackageFamilyName Specifies the package family name for MSIX applications
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageFamilyName(@Nullable Output<String> msixPackageFamilyName) {
             $.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
 
+        /**
+         * @param msixPackageFamilyName Specifies the package family name for MSIX applications
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageFamilyName(String msixPackageFamilyName) {
             return msixPackageFamilyName(Output.of(msixPackageFamilyName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param showInPortal Specifies whether to show the RemoteApp program in the RD Web Access server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder showInPortal(@Nullable Output<Boolean> showInPortal) {
             $.showInPortal = showInPortal;
             return this;
         }
 
+        /**
+         * @param showInPortal Specifies whether to show the RemoteApp program in the RD Web Access server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder showInPortal(Boolean showInPortal) {
             return showInPortal(Output.of(showInPortal));
         }

@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class TagPropertyResponse {
-    /**
-     * Returns the Object ID of the user who added the tag.
-     * 
-     */
+        /**
+         * @return Returns the Object ID of the user who added the tag.
+         * 
+         */
     private final String objectIdentifier;
-    /**
-     * The tag value.
-     * 
-     */
+        /**
+         * @return The tag value.
+         * 
+         */
     private final String tag;
-    /**
-     * Returns the Tenant ID that issued the token for the user who added the tag.
-     * 
-     */
+        /**
+         * @return Returns the Tenant ID that issued the token for the user who added the tag.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Returns the date and time the tag was added.
-     * 
-     */
+        /**
+         * @return Returns the date and time the tag was added.
+         * 
+         */
     private final String timestamp;
-    /**
-     * Returns the User Principal Name of the user who added the tag.
-     * 
-     */
+        /**
+         * @return Returns the User Principal Name of the user who added the tag.
+         * 
+         */
     private final String upn;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class TagPropertyResponse {
     }
 
     /**
-     * Returns the Object ID of the user who added the tag.
+     * @return Returns the Object ID of the user who added the tag.
      * 
-    */
+     */
     public String objectIdentifier() {
         return this.objectIdentifier;
     }
     /**
-     * The tag value.
+     * @return The tag value.
      * 
-    */
+     */
     public String tag() {
         return this.tag;
     }
     /**
-     * Returns the Tenant ID that issued the token for the user who added the tag.
+     * @return Returns the Tenant ID that issued the token for the user who added the tag.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Returns the date and time the tag was added.
+     * @return Returns the date and time the tag was added.
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }
     /**
-     * Returns the User Principal Name of the user who added the tag.
+     * @return Returns the User Principal Name of the user who added the tag.
      * 
-    */
+     */
     public String upn() {
         return this.upn;
     }

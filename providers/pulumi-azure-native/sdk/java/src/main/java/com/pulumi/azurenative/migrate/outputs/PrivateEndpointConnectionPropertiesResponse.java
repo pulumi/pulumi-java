@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
-    /**
-     * ARM id for the private endpoint resource corresponding to the connection.
-     * 
-     */
+        /**
+         * @return ARM id for the private endpoint resource corresponding to the connection.
+         * 
+         */
     private final ResourceIdResponse privateEndpoint;
-    /**
-     * State of the private endpoint connection.
-     * 
-     */
+        /**
+         * @return State of the private endpoint connection.
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * Indicates whether there is an ongoing operation on the private endpoint.
-     * 
-     */
+        /**
+         * @return Indicates whether there is an ongoing operation on the private endpoint.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     }
 
     /**
-     * ARM id for the private endpoint resource corresponding to the connection.
+     * @return ARM id for the private endpoint resource corresponding to the connection.
      * 
-    */
+     */
     public ResourceIdResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * State of the private endpoint connection.
+     * @return State of the private endpoint connection.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Indicates whether there is an ongoing operation on the private endpoint.
+     * @return Indicates whether there is an ongoing operation on the private endpoint.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

@@ -14,80 +14,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRosettaNetProcessConfigurationResult {
-    /**
-     * The RosettaNet process configuration activity settings.
-     * 
-     */
+        /**
+         * @return The RosettaNet process configuration activity settings.
+         * 
+         */
     private final RosettaNetPipActivitySettingsResponse activitySettings;
-    /**
-     * The changed time.
-     * 
-     */
+        /**
+         * @return The changed time.
+         * 
+         */
     private final String changedTime;
-    /**
-     * The created time.
-     * 
-     */
+        /**
+         * @return The created time.
+         * 
+         */
     private final String createdTime;
-    /**
-     * The integration account RosettaNet ProcessConfiguration properties.
-     * 
-     */
+        /**
+         * @return The integration account RosettaNet ProcessConfiguration properties.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The resource id.
-     * 
-     */
+        /**
+         * @return The resource id.
+         * 
+         */
     private final String id;
-    /**
-     * The RosettaNet initiator role settings.
-     * 
-     */
+        /**
+         * @return The RosettaNet initiator role settings.
+         * 
+         */
     private final RosettaNetPipRoleSettingsResponse initiatorRoleSettings;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The metadata.
-     * 
-     */
+        /**
+         * @return The metadata.
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
-    /**
-     * Gets the resource name.
-     * 
-     */
+        /**
+         * @return Gets the resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The integration account RosettaNet process code.
-     * 
-     */
+        /**
+         * @return The integration account RosettaNet process code.
+         * 
+         */
     private final String processCode;
-    /**
-     * The integration account RosettaNet process name.
-     * 
-     */
+        /**
+         * @return The integration account RosettaNet process name.
+         * 
+         */
     private final String processName;
-    /**
-     * The integration account RosettaNet process version.
-     * 
-     */
+        /**
+         * @return The integration account RosettaNet process version.
+         * 
+         */
     private final String processVersion;
-    /**
-     * The RosettaNet responder role settings.
-     * 
-     */
+        /**
+         * @return The RosettaNet responder role settings.
+         * 
+         */
     private final RosettaNetPipRoleSettingsResponse responderRoleSettings;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Gets the resource type.
-     * 
-     */
+        /**
+         * @return Gets the resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -125,107 +125,107 @@ public final class GetRosettaNetProcessConfigurationResult {
     }
 
     /**
-     * The RosettaNet process configuration activity settings.
+     * @return The RosettaNet process configuration activity settings.
      * 
-    */
+     */
     public RosettaNetPipActivitySettingsResponse activitySettings() {
         return this.activitySettings;
     }
     /**
-     * The changed time.
+     * @return The changed time.
      * 
-    */
+     */
     public String changedTime() {
         return this.changedTime;
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The integration account RosettaNet ProcessConfiguration properties.
+     * @return The integration account RosettaNet ProcessConfiguration properties.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The RosettaNet initiator role settings.
+     * @return The RosettaNet initiator role settings.
      * 
-    */
+     */
     public RosettaNetPipRoleSettingsResponse initiatorRoleSettings() {
         return this.initiatorRoleSettings;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metadata.
+     * @return The metadata.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The integration account RosettaNet process code.
+     * @return The integration account RosettaNet process code.
      * 
-    */
+     */
     public String processCode() {
         return this.processCode;
     }
     /**
-     * The integration account RosettaNet process name.
+     * @return The integration account RosettaNet process name.
      * 
-    */
+     */
     public String processName() {
         return this.processName;
     }
     /**
-     * The integration account RosettaNet process version.
+     * @return The integration account RosettaNet process version.
      * 
-    */
+     */
     public String processVersion() {
         return this.processVersion;
     }
     /**
-     * The RosettaNet responder role settings.
+     * @return The RosettaNet responder role settings.
      * 
-    */
+     */
     public RosettaNetPipRoleSettingsResponse responderRoleSettings() {
         return this.responderRoleSettings;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

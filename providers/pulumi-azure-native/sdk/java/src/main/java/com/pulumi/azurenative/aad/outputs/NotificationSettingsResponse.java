@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NotificationSettingsResponse {
-    /**
-     * The list of additional recipients
-     * 
-     */
+        /**
+         * @return The list of additional recipients
+         * 
+         */
     private final @Nullable List<String> additionalRecipients;
-    /**
-     * Should domain controller admins be notified
-     * 
-     */
+        /**
+         * @return Should domain controller admins be notified
+         * 
+         */
     private final @Nullable String notifyDcAdmins;
-    /**
-     * Should global admins be notified
-     * 
-     */
+        /**
+         * @return Should global admins be notified
+         * 
+         */
     private final @Nullable String notifyGlobalAdmins;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class NotificationSettingsResponse {
     }
 
     /**
-     * The list of additional recipients
+     * @return The list of additional recipients
      * 
-    */
+     */
     public List<String> additionalRecipients() {
         return this.additionalRecipients == null ? List.of() : this.additionalRecipients;
     }
     /**
-     * Should domain controller admins be notified
+     * @return Should domain controller admins be notified
      * 
-    */
+     */
     public Optional<String> notifyDcAdmins() {
         return Optional.ofNullable(this.notifyDcAdmins);
     }
     /**
-     * Should global admins be notified
+     * @return Should global admins be notified
      * 
-    */
+     */
     public Optional<String> notifyGlobalAdmins() {
         return Optional.ofNullable(this.notifyGlobalAdmins);
     }

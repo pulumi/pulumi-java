@@ -24,6 +24,10 @@ public final class DatabaseInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabaseName", required=true)
     private Output<String> sourceDatabaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Output<String> sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
@@ -52,11 +56,23 @@ public final class DatabaseInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceDatabaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseName(Output<String> sourceDatabaseName) {
             $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
 
+        /**
+         * @param sourceDatabaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDatabaseName(String sourceDatabaseName) {
             return sourceDatabaseName(Output.of(sourceDatabaseName));
         }

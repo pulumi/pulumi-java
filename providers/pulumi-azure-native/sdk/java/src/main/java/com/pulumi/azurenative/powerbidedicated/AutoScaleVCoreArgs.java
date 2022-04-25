@@ -26,6 +26,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capacityLimit")
     private @Nullable Output<Integer> capacityLimit;
 
+    /**
+     * @return The maximum capacity of an auto scale v-core resource.
+     * 
+     */
     public Optional<Output<Integer>> capacityLimit() {
         return Optional.ofNullable(this.capacityLimit);
     }
@@ -37,6 +41,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="capacityObjectId")
     private @Nullable Output<String> capacityObjectId;
 
+    /**
+     * @return The object ID of the capacity resource associated with the auto scale v-core resource.
+     * 
+     */
     public Optional<Output<String>> capacityObjectId() {
         return Optional.ofNullable(this.capacityObjectId);
     }
@@ -48,6 +56,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the PowerBI Dedicated resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -59,6 +71,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +86,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
     private Output<AutoScaleVCoreSkuArgs> sku;
 
+    /**
+     * @return The SKU of the auto scale v-core resource.
+     * 
+     */
     public Output<AutoScaleVCoreSkuArgs> sku() {
         return this.sku;
     }
@@ -81,6 +101,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="systemData")
     private @Nullable Output<SystemDataArgs> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     * 
+     */
     public Optional<Output<SystemDataArgs>> systemData() {
         return Optional.ofNullable(this.systemData);
     }
@@ -92,6 +116,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional resource provisioning properties.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +131,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="vcoreName")
     private @Nullable Output<String> vcoreName;
 
+    /**
+     * @return The name of the auto scale v-core. It must be a minimum of 3 characters, and a maximum of 63.
+     * 
+     */
     public Optional<Output<String>> vcoreName() {
         return Optional.ofNullable(this.vcoreName);
     }
@@ -138,74 +170,170 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AutoScaleVCoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityLimit The maximum capacity of an auto scale v-core resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityLimit(@Nullable Output<Integer> capacityLimit) {
             $.capacityLimit = capacityLimit;
             return this;
         }
 
+        /**
+         * @param capacityLimit The maximum capacity of an auto scale v-core resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityLimit(Integer capacityLimit) {
             return capacityLimit(Output.of(capacityLimit));
         }
 
+        /**
+         * @param capacityObjectId The object ID of the capacity resource associated with the auto scale v-core resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityObjectId(@Nullable Output<String> capacityObjectId) {
             $.capacityObjectId = capacityObjectId;
             return this;
         }
 
+        /**
+         * @param capacityObjectId The object ID of the capacity resource associated with the auto scale v-core resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityObjectId(String capacityObjectId) {
             return capacityObjectId(Output.of(capacityObjectId));
         }
 
+        /**
+         * @param location Location of the PowerBI Dedicated resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the PowerBI Dedicated resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU of the auto scale v-core resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<AutoScaleVCoreSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the auto scale v-core resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(AutoScaleVCoreSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param systemData Metadata pertaining to creation and last modification of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemData(@Nullable Output<SystemDataArgs> systemData) {
             $.systemData = systemData;
             return this;
         }
 
+        /**
+         * @param systemData Metadata pertaining to creation and last modification of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemData(SystemDataArgs systemData) {
             return systemData(Output.of(systemData));
         }
 
+        /**
+         * @param tags Key-value pairs of additional resource provisioning properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional resource provisioning properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vcoreName The name of the auto scale v-core. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcoreName(@Nullable Output<String> vcoreName) {
             $.vcoreName = vcoreName;
             return this;
         }
 
+        /**
+         * @param vcoreName The name of the auto scale v-core. It must be a minimum of 3 characters, and a maximum of 63.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vcoreName(String vcoreName) {
             return vcoreName(Output.of(vcoreName));
         }

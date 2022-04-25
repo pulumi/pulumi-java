@@ -28,6 +28,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="args")
     private @Nullable List<String> args;
 
+    /**
+     * @return Container start command arguments.
+     * 
+     */
     public Optional<List<String>> args() {
         return Optional.ofNullable(this.args);
     }
@@ -39,6 +43,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="command")
     private @Nullable List<String> command;
 
+    /**
+     * @return Container start command.
+     * 
+     */
     public Optional<List<String>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -50,6 +58,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="env")
     private @Nullable List<EnvironmentVarResponse> env;
 
+    /**
+     * @return Container environment variables.
+     * 
+     */
     public Optional<List<EnvironmentVarResponse>> env() {
         return Optional.ofNullable(this.env);
     }
@@ -61,6 +73,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="image")
     private @Nullable String image;
 
+    /**
+     * @return Container image tag.
+     * 
+     */
     public Optional<String> image() {
         return Optional.ofNullable(this.image);
     }
@@ -72,6 +88,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Custom container name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resources")
     private @Nullable ContainerResourcesResponse resources;
 
+    /**
+     * @return Container resource requirements.
+     * 
+     */
     public Optional<ContainerResourcesResponse> resources() {
         return Optional.ofNullable(this.resources);
     }
@@ -116,43 +140,97 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Container start command arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable List<String> args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param args Container start command arguments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(String... args) {
             return args(List.of(args));
         }
 
+        /**
+         * @param command Container start command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Container start command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param env Container environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(@Nullable List<EnvironmentVarResponse> env) {
             $.env = env;
             return this;
         }
 
+        /**
+         * @param env Container environment variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder env(EnvironmentVarResponse... env) {
             return env(List.of(env));
         }
 
+        /**
+         * @param image Container image tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable String image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param name Custom container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resources Container resource requirements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resources(@Nullable ContainerResourcesResponse resources) {
             $.resources = resources;
             return this;

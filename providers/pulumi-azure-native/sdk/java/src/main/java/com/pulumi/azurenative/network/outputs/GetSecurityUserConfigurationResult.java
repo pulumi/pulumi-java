@@ -12,55 +12,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSecurityUserConfigurationResult {
-    /**
-     * Flag if need to delete existing network security groups.
-     * 
-     */
+        /**
+         * @return Flag if need to delete existing network security groups.
+         * 
+         */
     private final @Nullable String deleteExistingNSGs;
-    /**
-     * A description of the security configuration.
-     * 
-     */
+        /**
+         * @return A description of the security configuration.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A display name of the security configuration.
-     * 
-     */
+        /**
+         * @return A display name of the security configuration.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Security Type.
-     * 
-     */
+        /**
+         * @return Security Type.
+         * 
+         */
     private final @Nullable String securityType;
-    /**
-     * The system metadata related to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata related to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -88,72 +88,72 @@ public final class GetSecurityUserConfigurationResult {
     }
 
     /**
-     * Flag if need to delete existing network security groups.
+     * @return Flag if need to delete existing network security groups.
      * 
-    */
+     */
     public Optional<String> deleteExistingNSGs() {
         return Optional.ofNullable(this.deleteExistingNSGs);
     }
     /**
-     * A description of the security configuration.
+     * @return A description of the security configuration.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A display name of the security configuration.
+     * @return A display name of the security configuration.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Security Type.
+     * @return Security Type.
      * 
-    */
+     */
     public Optional<String> securityType() {
         return Optional.ofNullable(this.securityType);
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

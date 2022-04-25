@@ -21,6 +21,10 @@ public final class InsightsTableResultResponseColumns extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return the name of the colum
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -32,6 +36,10 @@ public final class InsightsTableResultResponseColumns extends com.pulumi.resourc
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return the type of the colum
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -61,11 +69,23 @@ public final class InsightsTableResultResponseColumns extends com.pulumi.resourc
             $ = new InsightsTableResultResponseColumns(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name the name of the colum
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type the type of the colum
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

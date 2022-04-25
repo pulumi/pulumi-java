@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListWorkspaceCollectionAccessKeysResult {
-    /**
-     * Access key 1
-     * 
-     */
+        /**
+         * @return Access key 1
+         * 
+         */
     private final @Nullable String key1;
-    /**
-     * Access key 2
-     * 
-     */
+        /**
+         * @return Access key 2
+         * 
+         */
     private final @Nullable String key2;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListWorkspaceCollectionAccessKeysResult {
     }
 
     /**
-     * Access key 1
+     * @return Access key 1
      * 
-    */
+     */
     public Optional<String> key1() {
         return Optional.ofNullable(this.key1);
     }
     /**
-     * Access key 2
+     * @return Access key 2
      * 
-    */
+     */
     public Optional<String> key2() {
         return Optional.ofNullable(this.key2);
     }

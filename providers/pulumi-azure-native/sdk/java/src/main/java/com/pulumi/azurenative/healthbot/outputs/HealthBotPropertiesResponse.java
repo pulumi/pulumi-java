@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class HealthBotPropertiesResponse {
-    /**
-     * The link.
-     * 
-     */
+        /**
+         * @return The link.
+         * 
+         */
     private final String botManagementPortalLink;
-    /**
-     * The provisioning state of the Healthbot resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the Healthbot resource.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class HealthBotPropertiesResponse {
     }
 
     /**
-     * The link.
+     * @return The link.
      * 
-    */
+     */
     public String botManagementPortalLink() {
         return this.botManagementPortalLink;
     }
     /**
-     * The provisioning state of the Healthbot resource.
+     * @return The provisioning state of the Healthbot resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

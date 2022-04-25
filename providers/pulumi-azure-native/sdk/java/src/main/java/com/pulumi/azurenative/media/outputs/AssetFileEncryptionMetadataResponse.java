@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssetFileEncryptionMetadataResponse {
-    /**
-     * The Asset File Id.
-     * 
-     */
+        /**
+         * @return The Asset File Id.
+         * 
+         */
     private final String assetFileId;
-    /**
-     * The Asset File name.
-     * 
-     */
+        /**
+         * @return The Asset File name.
+         * 
+         */
     private final @Nullable String assetFileName;
-    /**
-     * The Asset File initialization vector.
-     * 
-     */
+        /**
+         * @return The Asset File initialization vector.
+         * 
+         */
     private final @Nullable String initializationVector;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AssetFileEncryptionMetadataResponse {
     }
 
     /**
-     * The Asset File Id.
+     * @return The Asset File Id.
      * 
-    */
+     */
     public String assetFileId() {
         return this.assetFileId;
     }
     /**
-     * The Asset File name.
+     * @return The Asset File name.
      * 
-    */
+     */
     public Optional<String> assetFileName() {
         return Optional.ofNullable(this.assetFileName);
     }
     /**
-     * The Asset File initialization vector.
+     * @return The Asset File initialization vector.
      * 
-    */
+     */
     public Optional<String> initializationVector() {
         return Optional.ofNullable(this.initializationVector);
     }

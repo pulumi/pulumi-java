@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRegisteredAsnResult {
-    /**
-     * The customer&#39;s ASN from which traffic originates.
-     * 
-     */
+        /**
+         * @return The customer&#39;s ASN from which traffic originates.
+         * 
+         */
     private final @Nullable Integer asn;
-    /**
-     * The ID of the resource.
-     * 
-     */
+        /**
+         * @return The ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The peering service prefix key that is to be shared with the customer.
-     * 
-     */
+        /**
+         * @return The peering service prefix key that is to be shared with the customer.
+         * 
+         */
     private final String peeringServicePrefixKey;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetRegisteredAsnResult {
     }
 
     /**
-     * The customer&#39;s ASN from which traffic originates.
+     * @return The customer&#39;s ASN from which traffic originates.
      * 
-    */
+     */
     public Optional<Integer> asn() {
         return Optional.ofNullable(this.asn);
     }
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The peering service prefix key that is to be shared with the customer.
+     * @return The peering service prefix key that is to be shared with the customer.
      * 
-    */
+     */
     public String peeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

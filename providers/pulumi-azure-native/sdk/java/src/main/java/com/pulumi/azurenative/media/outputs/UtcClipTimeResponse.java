@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class UtcClipTimeResponse {
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * The time position on the timeline of the input media based on Utc time.
-     * 
-     */
+        /**
+         * @return The time position on the timeline of the input media based on Utc time.
+         * 
+         */
     private final String time;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class UtcClipTimeResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The time position on the timeline of the input media based on Utc time.
+     * @return The time position on the timeline of the input media based on Utc time.
      * 
-    */
+     */
     public String time() {
         return this.time;
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TerminateNotificationProfileResponse {
-    /**
-     * Specifies whether the Terminate Scheduled event is enabled or disabled.
-     * 
-     */
+        /**
+         * @return Specifies whether the Terminate Scheduled event is enabled or disabled.
+         * 
+         */
     private final @Nullable Boolean enable;
-    /**
-     * Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
-     * 
-     */
+        /**
+         * @return Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+         * 
+         */
     private final @Nullable String notBeforeTimeout;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class TerminateNotificationProfileResponse {
     }
 
     /**
-     * Specifies whether the Terminate Scheduled event is enabled or disabled.
+     * @return Specifies whether the Terminate Scheduled event is enabled or disabled.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
+     * @return Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
      * 
-    */
+     */
     public Optional<String> notBeforeTimeout() {
         return Optional.ofNullable(this.notBeforeTimeout);
     }

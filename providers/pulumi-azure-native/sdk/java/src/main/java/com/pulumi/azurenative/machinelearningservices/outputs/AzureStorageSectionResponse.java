@@ -14,76 +14,76 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureStorageSectionResponse {
-    /**
-     *  Storage Account Key (Deprecated).
-     * 
-     */
+        /**
+         * @return  Storage Account Key (Deprecated).
+         * 
+         */
     private final @Nullable String accountKey;
-    /**
-     * Storage Account Name.
-     * 
-     */
+        /**
+         * @return Storage Account Name.
+         * 
+         */
     private final @Nullable String accountName;
-    /**
-     * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
-     * 
-     */
+        /**
+         * @return Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
+         * 
+         */
     private final @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
-    /**
-     *  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
-     * 
-     */
+        /**
+         * @return  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+         * 
+         */
     private final @Nullable Integer blobCacheTimeout;
     private final @Nullable ClientCredentialsResponse clientCredentials;
-    /**
-     * The storage container name.
-     * 
-     */
+        /**
+         * @return The storage container name.
+         * 
+         */
     private final @Nullable String containerName;
-    /**
-     * The credential.
-     * 
-     */
+        /**
+         * @return The credential.
+         * 
+         */
     private final @Nullable String credential;
-    /**
-     *  The credential type.
-     * 
-     */
+        /**
+         * @return  The credential type.
+         * 
+         */
     private final @Nullable String credentialType;
-    /**
-     * The host of the container.
-     * 
-     */
+        /**
+         * @return The host of the container.
+         * 
+         */
     private final @Nullable String endpoint;
-    /**
-     * Indicate if we are using SAS token or Account Key (Deprecated).
-     * 
-     */
+        /**
+         * @return Indicate if we are using SAS token or Account Key (Deprecated).
+         * 
+         */
     private final @Nullable Boolean isSas;
-    /**
-     * The protocol to use. Defaults to https.
-     * 
-     */
+        /**
+         * @return The protocol to use. Defaults to https.
+         * 
+         */
     private final @Nullable String protocol;
-    /**
-     * Resource Group.
-     * 
-     */
+        /**
+         * @return Resource Group.
+         * 
+         */
     private final @Nullable String resourceGroup;
-    /**
-     *  SAS Token for the container (Deprecated).
-     * 
-     */
+        /**
+         * @return  SAS Token for the container (Deprecated).
+         * 
+         */
     private final @Nullable String sasToken;
-    /**
-     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
-     * 
-     */
+        /**
+         * @return Indicates which identity to use to authenticate service data access to customer&#39;s storage.
+         * 
+         */
     private final @Nullable String serviceDataAccessAuthIdentity;
-    /**
-     * Subscription ID.
-     * 
-     */
+        /**
+         * @return Subscription ID.
+         * 
+         */
     private final @Nullable String subscriptionId;
 
     @CustomType.Constructor
@@ -121,30 +121,30 @@ public final class AzureStorageSectionResponse {
     }
 
     /**
-     *  Storage Account Key (Deprecated).
+     * @return  Storage Account Key (Deprecated).
      * 
-    */
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
-     * Storage Account Name.
+     * @return Storage Account Name.
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
+     * @return Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
      * 
-    */
+     */
     public Optional<Boolean> areWorkspaceManagedIdentitiesAllowed() {
         return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
     /**
-     *  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+     * @return  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
      * 
-    */
+     */
     public Optional<Integer> blobCacheTimeout() {
         return Optional.ofNullable(this.blobCacheTimeout);
     }
@@ -152,72 +152,72 @@ public final class AzureStorageSectionResponse {
         return Optional.ofNullable(this.clientCredentials);
     }
     /**
-     * The storage container name.
+     * @return The storage container name.
      * 
-    */
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
     /**
-     * The credential.
+     * @return The credential.
      * 
-    */
+     */
     public Optional<String> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     *  The credential type.
+     * @return  The credential type.
      * 
-    */
+     */
     public Optional<String> credentialType() {
         return Optional.ofNullable(this.credentialType);
     }
     /**
-     * The host of the container.
+     * @return The host of the container.
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * Indicate if we are using SAS token or Account Key (Deprecated).
+     * @return Indicate if we are using SAS token or Account Key (Deprecated).
      * 
-    */
+     */
     public Optional<Boolean> isSas() {
         return Optional.ofNullable(this.isSas);
     }
     /**
-     * The protocol to use. Defaults to https.
+     * @return The protocol to use. Defaults to https.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Resource Group.
+     * @return Resource Group.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     *  SAS Token for the container (Deprecated).
+     * @return  SAS Token for the container (Deprecated).
      * 
-    */
+     */
     public Optional<String> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
-     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
+     * @return Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
-    */
+     */
     public Optional<String> serviceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
-     * Subscription ID.
+     * @return Subscription ID.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }

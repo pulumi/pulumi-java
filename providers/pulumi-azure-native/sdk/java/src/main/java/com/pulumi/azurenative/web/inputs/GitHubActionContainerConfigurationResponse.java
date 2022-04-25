@@ -25,6 +25,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
     @Import(name="imageName")
     private @Nullable String imageName;
 
+    /**
+     * @return The image name for the build.
+     * 
+     */
     public Optional<String> imageName() {
         return Optional.ofNullable(this.imageName);
     }
@@ -36,6 +40,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password used to upload the image to the container registry.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -47,6 +55,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
     @Import(name="serverUrl")
     private @Nullable String serverUrl;
 
+    /**
+     * @return The server URL for the container registry where the build will be hosted.
+     * 
+     */
     public Optional<String> serverUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
@@ -58,6 +70,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return The username used to upload the image to the container registry.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -89,21 +105,45 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
             $ = new GitHubActionContainerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageName The image name for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(@Nullable String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param password The password used to upload the image to the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param serverUrl The server URL for the container registry where the build will be hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverUrl(@Nullable String serverUrl) {
             $.serverUrl = serverUrl;
             return this;
         }
 
+        /**
+         * @param username The username used to upload the image to the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

@@ -19,6 +19,10 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataManagerName", required=true)
     private String dataManagerName;
 
+    /**
+     * @return The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public String dataManagerName() {
         return this.dataManagerName;
     }
@@ -30,6 +34,10 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataStoreName", required=true)
     private String dataStoreName;
 
+    /**
+     * @return The data store/repository name queried.
+     * 
+     */
     public String dataStoreName() {
         return this.dataStoreName;
     }
@@ -41,6 +49,10 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDataStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(String dataManagerName) {
             $.dataManagerName = dataManagerName;
             return this;
         }
 
+        /**
+         * @param dataStoreName The data store/repository name queried.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStoreName(String dataStoreName) {
             $.dataStoreName = dataStoreName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

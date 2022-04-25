@@ -14,75 +14,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SUCSchedulePropertiesResponse {
-    /**
-     * Gets or sets the advanced schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the advanced schedule.
+         * 
+         */
     private final @Nullable AdvancedScheduleResponse advancedSchedule;
-    /**
-     * Gets or sets the creation time.
-     * 
-     */
+        /**
+         * @return Gets or sets the creation time.
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * Gets or sets the description.
-     * 
-     */
+        /**
+         * @return Gets or sets the description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Gets or sets the end time of the schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the end time of the schedule.
+         * 
+         */
     private final @Nullable String expiryTime;
-    /**
-     * Gets or sets the expiry time&#39;s offset in minutes.
-     * 
-     */
+        /**
+         * @return Gets or sets the expiry time&#39;s offset in minutes.
+         * 
+         */
     private final @Nullable Double expiryTimeOffsetMinutes;
-    /**
-     * Gets or sets the frequency of the schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the frequency of the schedule.
+         * 
+         */
     private final @Nullable String frequency;
-    /**
-     * Gets or sets the interval of the schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the interval of the schedule.
+         * 
+         */
     private final @Nullable Double interval;
-    /**
-     * Gets or sets a value indicating whether this schedule is enabled.
-     * 
-     */
+        /**
+         * @return Gets or sets a value indicating whether this schedule is enabled.
+         * 
+         */
     private final @Nullable Boolean isEnabled;
-    /**
-     * Gets or sets the last modified time.
-     * 
-     */
+        /**
+         * @return Gets or sets the last modified time.
+         * 
+         */
     private final @Nullable String lastModifiedTime;
-    /**
-     * Gets or sets the next run time of the schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the next run time of the schedule.
+         * 
+         */
     private final @Nullable String nextRun;
-    /**
-     * Gets or sets the next run time&#39;s offset in minutes.
-     * 
-     */
+        /**
+         * @return Gets or sets the next run time&#39;s offset in minutes.
+         * 
+         */
     private final @Nullable Double nextRunOffsetMinutes;
-    /**
-     * Gets or sets the start time of the schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the start time of the schedule.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * Gets the start time&#39;s offset in minutes.
-     * 
-     */
+        /**
+         * @return Gets the start time&#39;s offset in minutes.
+         * 
+         */
     private final Double startTimeOffsetMinutes;
-    /**
-     * Gets or sets the time zone of the schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the time zone of the schedule.
+         * 
+         */
     private final @Nullable String timeZone;
 
     @CustomType.Constructor
@@ -118,100 +118,100 @@ public final class SUCSchedulePropertiesResponse {
     }
 
     /**
-     * Gets or sets the advanced schedule.
+     * @return Gets or sets the advanced schedule.
      * 
-    */
+     */
     public Optional<AdvancedScheduleResponse> advancedSchedule() {
         return Optional.ofNullable(this.advancedSchedule);
     }
     /**
-     * Gets or sets the creation time.
+     * @return Gets or sets the creation time.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Gets or sets the end time of the schedule.
+     * @return Gets or sets the end time of the schedule.
      * 
-    */
+     */
     public Optional<String> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
     /**
-     * Gets or sets the expiry time&#39;s offset in minutes.
+     * @return Gets or sets the expiry time&#39;s offset in minutes.
      * 
-    */
+     */
     public Optional<Double> expiryTimeOffsetMinutes() {
         return Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
     /**
-     * Gets or sets the frequency of the schedule.
+     * @return Gets or sets the frequency of the schedule.
      * 
-    */
+     */
     public Optional<String> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
-     * Gets or sets the interval of the schedule.
+     * @return Gets or sets the interval of the schedule.
      * 
-    */
+     */
     public Optional<Double> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * Gets or sets a value indicating whether this schedule is enabled.
+     * @return Gets or sets a value indicating whether this schedule is enabled.
      * 
-    */
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
-     * Gets or sets the last modified time.
+     * @return Gets or sets the last modified time.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * Gets or sets the next run time of the schedule.
+     * @return Gets or sets the next run time of the schedule.
      * 
-    */
+     */
     public Optional<String> nextRun() {
         return Optional.ofNullable(this.nextRun);
     }
     /**
-     * Gets or sets the next run time&#39;s offset in minutes.
+     * @return Gets or sets the next run time&#39;s offset in minutes.
      * 
-    */
+     */
     public Optional<Double> nextRunOffsetMinutes() {
         return Optional.ofNullable(this.nextRunOffsetMinutes);
     }
     /**
-     * Gets or sets the start time of the schedule.
+     * @return Gets or sets the start time of the schedule.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Gets the start time&#39;s offset in minutes.
+     * @return Gets the start time&#39;s offset in minutes.
      * 
-    */
+     */
     public Double startTimeOffsetMinutes() {
         return this.startTimeOffsetMinutes;
     }
     /**
-     * Gets or sets the time zone of the schedule.
+     * @return Gets or sets the time zone of the schedule.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

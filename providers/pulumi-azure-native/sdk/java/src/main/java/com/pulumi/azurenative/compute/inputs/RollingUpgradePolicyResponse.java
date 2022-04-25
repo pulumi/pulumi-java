@@ -27,6 +27,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="enableCrossZoneUpgrade")
     private @Nullable Boolean enableCrossZoneUpgrade;
 
+    /**
+     * @return Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.
+     * 
+     */
     public Optional<Boolean> enableCrossZoneUpgrade() {
         return Optional.ofNullable(this.enableCrossZoneUpgrade);
     }
@@ -38,6 +42,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="maxBatchInstancePercent")
     private @Nullable Integer maxBatchInstancePercent;
 
+    /**
+     * @return The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. The default value for this parameter is 20%.
+     * 
+     */
     public Optional<Integer> maxBatchInstancePercent() {
         return Optional.ofNullable(this.maxBatchInstancePercent);
     }
@@ -49,6 +57,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="maxUnhealthyInstancePercent")
     private @Nullable Integer maxUnhealthyInstancePercent;
 
+    /**
+     * @return The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. The default value for this parameter is 20%.
+     * 
+     */
     public Optional<Integer> maxUnhealthyInstancePercent() {
         return Optional.ofNullable(this.maxUnhealthyInstancePercent);
     }
@@ -60,6 +72,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="maxUnhealthyUpgradedInstancePercent")
     private @Nullable Integer maxUnhealthyUpgradedInstancePercent;
 
+    /**
+     * @return The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. The default value for this parameter is 20%.
+     * 
+     */
     public Optional<Integer> maxUnhealthyUpgradedInstancePercent() {
         return Optional.ofNullable(this.maxUnhealthyUpgradedInstancePercent);
     }
@@ -71,6 +87,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="pauseTimeBetweenBatches")
     private @Nullable String pauseTimeBetweenBatches;
 
+    /**
+     * @return The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).
+     * 
+     */
     public Optional<String> pauseTimeBetweenBatches() {
         return Optional.ofNullable(this.pauseTimeBetweenBatches);
     }
@@ -82,6 +102,10 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
     @Import(name="prioritizeUnhealthyInstances")
     private @Nullable Boolean prioritizeUnhealthyInstances;
 
+    /**
+     * @return Upgrade all unhealthy instances in a scale set before any healthy instances.
+     * 
+     */
     public Optional<Boolean> prioritizeUnhealthyInstances() {
         return Optional.ofNullable(this.prioritizeUnhealthyInstances);
     }
@@ -115,31 +139,67 @@ public final class RollingUpgradePolicyResponse extends com.pulumi.resources.Inv
             $ = new RollingUpgradePolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableCrossZoneUpgrade Allow VMSS to ignore AZ boundaries when constructing upgrade batches. Take into consideration the Update Domain and maxBatchInstancePercent to determine the batch size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCrossZoneUpgrade(@Nullable Boolean enableCrossZoneUpgrade) {
             $.enableCrossZoneUpgrade = enableCrossZoneUpgrade;
             return this;
         }
 
+        /**
+         * @param maxBatchInstancePercent The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. The default value for this parameter is 20%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxBatchInstancePercent(@Nullable Integer maxBatchInstancePercent) {
             $.maxBatchInstancePercent = maxBatchInstancePercent;
             return this;
         }
 
+        /**
+         * @param maxUnhealthyInstancePercent The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. The default value for this parameter is 20%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnhealthyInstancePercent(@Nullable Integer maxUnhealthyInstancePercent) {
             $.maxUnhealthyInstancePercent = maxUnhealthyInstancePercent;
             return this;
         }
 
+        /**
+         * @param maxUnhealthyUpgradedInstancePercent The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. The default value for this parameter is 20%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnhealthyUpgradedInstancePercent(@Nullable Integer maxUnhealthyUpgradedInstancePercent) {
             $.maxUnhealthyUpgradedInstancePercent = maxUnhealthyUpgradedInstancePercent;
             return this;
         }
 
+        /**
+         * @param pauseTimeBetweenBatches The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. The default value is 0 seconds (PT0S).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pauseTimeBetweenBatches(@Nullable String pauseTimeBetweenBatches) {
             $.pauseTimeBetweenBatches = pauseTimeBetweenBatches;
             return this;
         }
 
+        /**
+         * @param prioritizeUnhealthyInstances Upgrade all unhealthy instances in a scale set before any healthy instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prioritizeUnhealthyInstances(@Nullable Boolean prioritizeUnhealthyInstances) {
             $.prioritizeUnhealthyInstances = prioritizeUnhealthyInstances;
             return this;

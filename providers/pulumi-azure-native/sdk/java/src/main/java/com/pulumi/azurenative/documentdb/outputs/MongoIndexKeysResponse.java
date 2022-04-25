@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MongoIndexKeysResponse {
-    /**
-     * List of keys for each MongoDB collection in the Azure Cosmos DB service
-     * 
-     */
+        /**
+         * @return List of keys for each MongoDB collection in the Azure Cosmos DB service
+         * 
+         */
     private final @Nullable List<String> keys;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class MongoIndexKeysResponse {
     }
 
     /**
-     * List of keys for each MongoDB collection in the Azure Cosmos DB service
+     * @return List of keys for each MongoDB collection in the Azure Cosmos DB service
      * 
-    */
+     */
     public List<String> keys() {
         return this.keys == null ? List.of() : this.keys;
     }

@@ -23,6 +23,10 @@ public final class AutoStoragePropertiesResponse extends com.pulumi.resources.In
     @Import(name="lastKeySync", required=true)
     private String lastKeySync;
 
+    /**
+     * @return The UTC time at which storage keys were last synchronized with the Batch account.
+     * 
+     */
     public String lastKeySync() {
         return this.lastKeySync;
     }
@@ -34,6 +38,10 @@ public final class AutoStoragePropertiesResponse extends com.pulumi.resources.In
     @Import(name="storageAccountId", required=true)
     private String storageAccountId;
 
+    /**
+     * @return The resource ID of the storage account to be used for auto-storage account.
+     * 
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }
@@ -63,11 +71,23 @@ public final class AutoStoragePropertiesResponse extends com.pulumi.resources.In
             $ = new AutoStoragePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastKeySync The UTC time at which storage keys were last synchronized with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastKeySync(String lastKeySync) {
             $.lastKeySync = lastKeySync;
             return this;
         }
 
+        /**
+         * @param storageAccountId The resource ID of the storage account to be used for auto-storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;

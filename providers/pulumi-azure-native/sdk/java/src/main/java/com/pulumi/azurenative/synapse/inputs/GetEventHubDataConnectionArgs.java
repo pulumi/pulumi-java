@@ -19,6 +19,10 @@ public final class GetEventHubDataConnectionArgs extends com.pulumi.resources.In
     @Import(name="dataConnectionName", required=true)
     private String dataConnectionName;
 
+    /**
+     * @return The name of the data connection.
+     * 
+     */
     public String dataConnectionName() {
         return this.dataConnectionName;
     }
@@ -30,6 +34,10 @@ public final class GetEventHubDataConnectionArgs extends com.pulumi.resources.In
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The name of the database in the Kusto pool.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -41,6 +49,10 @@ public final class GetEventHubDataConnectionArgs extends com.pulumi.resources.In
     @Import(name="kustoPoolName", required=true)
     private String kustoPoolName;
 
+    /**
+     * @return The name of the Kusto pool.
+     * 
+     */
     public String kustoPoolName() {
         return this.kustoPoolName;
     }
@@ -52,6 +64,10 @@ public final class GetEventHubDataConnectionArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetEventHubDataConnectionArgs extends com.pulumi.resources.In
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -95,26 +115,56 @@ public final class GetEventHubDataConnectionArgs extends com.pulumi.resources.In
             $ = new GetEventHubDataConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataConnectionName The name of the data connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectionName(String dataConnectionName) {
             $.dataConnectionName = dataConnectionName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(String kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

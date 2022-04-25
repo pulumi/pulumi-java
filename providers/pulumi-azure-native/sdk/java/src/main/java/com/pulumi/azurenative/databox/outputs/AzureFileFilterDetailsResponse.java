@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFileFilterDetailsResponse {
-    /**
-     * List of full path of the files to be transferred.
-     * 
-     */
+        /**
+         * @return List of full path of the files to be transferred.
+         * 
+         */
     private final @Nullable List<String> filePathList;
-    /**
-     * Prefix list of the Azure files to be transferred.
-     * 
-     */
+        /**
+         * @return Prefix list of the Azure files to be transferred.
+         * 
+         */
     private final @Nullable List<String> filePrefixList;
-    /**
-     * List of file shares to be transferred.
-     * 
-     */
+        /**
+         * @return List of file shares to be transferred.
+         * 
+         */
     private final @Nullable List<String> fileShareList;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AzureFileFilterDetailsResponse {
     }
 
     /**
-     * List of full path of the files to be transferred.
+     * @return List of full path of the files to be transferred.
      * 
-    */
+     */
     public List<String> filePathList() {
         return this.filePathList == null ? List.of() : this.filePathList;
     }
     /**
-     * Prefix list of the Azure files to be transferred.
+     * @return Prefix list of the Azure files to be transferred.
      * 
-    */
+     */
     public List<String> filePrefixList() {
         return this.filePrefixList == null ? List.of() : this.filePrefixList;
     }
     /**
-     * List of file shares to be transferred.
+     * @return List of file shares to be transferred.
      * 
-    */
+     */
     public List<String> fileShareList() {
         return this.fileShareList == null ? List.of() : this.fileShareList;
     }

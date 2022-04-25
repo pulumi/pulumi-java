@@ -25,6 +25,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="attachedDatabaseConfigurationName")
     private @Nullable Output<String> attachedDatabaseConfigurationName;
 
+    /**
+     * @return The name of the attached database configuration.
+     * 
+     */
     public Optional<Output<String>> attachedDatabaseConfigurationName() {
         return Optional.ofNullable(this.attachedDatabaseConfigurationName);
     }
@@ -36,6 +40,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -47,6 +55,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="defaultPrincipalsModificationKind", required=true)
     private Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
+    /**
+     * @return The default principals modification kind
+     * 
+     */
     public Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
@@ -58,6 +70,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="kustoPoolName", required=true)
     private Output<String> kustoPoolName;
 
+    /**
+     * @return The name of the Kusto pool.
+     * 
+     */
     public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
@@ -69,6 +85,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="kustoPoolResourceId", required=true)
     private Output<String> kustoPoolResourceId;
 
+    /**
+     * @return The resource id of the kusto pool where the databases you would like to attach reside.
+     * 
+     */
     public Output<String> kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
@@ -80,6 +100,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -91,6 +115,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="tableLevelSharingProperties")
     private @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
+    /**
+     * @return Table level sharing specifications
+     * 
+     */
     public Optional<Output<TableLevelSharingPropertiesArgs>> tableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
@@ -113,6 +145,10 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -149,91 +185,211 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends com.pulumi
             $ = new KustoPoolAttachedDatabaseConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedDatabaseConfigurationName The name of the attached database configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDatabaseConfigurationName(@Nullable Output<String> attachedDatabaseConfigurationName) {
             $.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
+        /**
+         * @param attachedDatabaseConfigurationName The name of the attached database configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             return attachedDatabaseConfigurationName(Output.of(attachedDatabaseConfigurationName));
         }
 
+        /**
+         * @param databaseName The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param defaultPrincipalsModificationKind The default principals modification kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPrincipalsModificationKind(Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
             $.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;
             return this;
         }
 
+        /**
+         * @param defaultPrincipalsModificationKind The default principals modification kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
             return defaultPrincipalsModificationKind(Output.of(defaultPrincipalsModificationKind));
         }
 
+        /**
+         * @param defaultPrincipalsModificationKind The default principals modification kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPrincipalsModificationKind(String defaultPrincipalsModificationKind) {
             return defaultPrincipalsModificationKind(Either.ofLeft(defaultPrincipalsModificationKind));
         }
 
+        /**
+         * @param defaultPrincipalsModificationKind The default principals modification kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultPrincipalsModificationKind(DefaultPrincipalsModificationKind defaultPrincipalsModificationKind) {
             return defaultPrincipalsModificationKind(Either.ofRight(defaultPrincipalsModificationKind));
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(Output<String> kustoPoolName) {
             $.kustoPoolName = kustoPoolName;
             return this;
         }
 
+        /**
+         * @param kustoPoolName The name of the Kusto pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolName(String kustoPoolName) {
             return kustoPoolName(Output.of(kustoPoolName));
         }
 
+        /**
+         * @param kustoPoolResourceId The resource id of the kusto pool where the databases you would like to attach reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolResourceId(Output<String> kustoPoolResourceId) {
             $.kustoPoolResourceId = kustoPoolResourceId;
             return this;
         }
 
+        /**
+         * @param kustoPoolResourceId The resource id of the kusto pool where the databases you would like to attach reside.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kustoPoolResourceId(String kustoPoolResourceId) {
             return kustoPoolResourceId(Output.of(kustoPoolResourceId));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tableLevelSharingProperties Table level sharing specifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableLevelSharingProperties(@Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
             $.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
 
+        /**
+         * @param tableLevelSharingProperties Table level sharing specifications
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableLevelSharingProperties(TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
             return tableLevelSharingProperties(Output.of(tableLevelSharingProperties));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

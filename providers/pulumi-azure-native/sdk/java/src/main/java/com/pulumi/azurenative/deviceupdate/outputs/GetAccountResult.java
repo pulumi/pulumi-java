@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccountResult {
-    /**
-     * API host name.
-     * 
-     */
+        /**
+         * @return API host name.
+         * 
+         */
     private final String hostName;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The type of identity used for the resource.
-     * 
-     */
+        /**
+         * @return The type of identity used for the resource.
+         * 
+         */
     private final @Nullable ManagedServiceIdentityResponse identity;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * List of private endpoint connections associated with the account.
-     * 
-     */
+        /**
+         * @return List of private endpoint connections associated with the account.
+         * 
+         */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Whether or not public network access is allowed for the account.
-     * 
-     */
+        /**
+         * @return Whether or not public network access is allowed for the account.
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class GetAccountResult {
     }
 
     /**
-     * API host name.
+     * @return API host name.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The type of identity used for the resource.
+     * @return The type of identity used for the resource.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of private endpoint connections associated with the account.
+     * @return List of private endpoint connections associated with the account.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Whether or not public network access is allowed for the account.
+     * @return Whether or not public network access is allowed for the account.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

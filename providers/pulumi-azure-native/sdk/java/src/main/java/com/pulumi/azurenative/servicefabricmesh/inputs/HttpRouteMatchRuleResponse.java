@@ -27,6 +27,10 @@ public final class HttpRouteMatchRuleResponse extends com.pulumi.resources.Invok
     @Import(name="headers")
     private @Nullable List<HttpRouteMatchHeaderResponse> headers;
 
+    /**
+     * @return headers and their values to match in request.
+     * 
+     */
     public Optional<List<HttpRouteMatchHeaderResponse>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -38,6 +42,10 @@ public final class HttpRouteMatchRuleResponse extends com.pulumi.resources.Invok
     @Import(name="path", required=true)
     private HttpRouteMatchPathResponse path;
 
+    /**
+     * @return Path to match for routing.
+     * 
+     */
     public HttpRouteMatchPathResponse path() {
         return this.path;
     }
@@ -67,15 +75,33 @@ public final class HttpRouteMatchRuleResponse extends com.pulumi.resources.Invok
             $ = new HttpRouteMatchRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headers headers and their values to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable List<HttpRouteMatchHeaderResponse> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers headers and their values to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(HttpRouteMatchHeaderResponse... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param path Path to match for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(HttpRouteMatchPathResponse path) {
             $.path = path;
             return this;

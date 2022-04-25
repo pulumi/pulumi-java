@@ -10,31 +10,31 @@ import java.util.Objects;
 
 @CustomType
 public final class InMageRcmPolicyDetailsResponse {
-    /**
-     * The app consistent snapshot frequency in minutes.
-     * 
-     */
+        /**
+         * @return The app consistent snapshot frequency in minutes.
+         * 
+         */
     private final Integer appConsistentFrequencyInMinutes;
-    /**
-     * The crash consistent snapshot frequency in minutes.
-     * 
-     */
+        /**
+         * @return The crash consistent snapshot frequency in minutes.
+         * 
+         */
     private final Integer crashConsistentFrequencyInMinutes;
-    /**
-     * A value indicating whether multi-VM sync has to be enabled.
-     * 
-     */
+        /**
+         * @return A value indicating whether multi-VM sync has to be enabled.
+         * 
+         */
     private final String enableMultiVmSync;
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;InMageRcm&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     * 
-     */
+        /**
+         * @return The duration in minutes until which the recovery points need to be stored.
+         * 
+         */
     private final Integer recoveryPointHistoryInMinutes;
 
     @CustomType.Constructor
@@ -52,38 +52,38 @@ public final class InMageRcmPolicyDetailsResponse {
     }
 
     /**
-     * The app consistent snapshot frequency in minutes.
+     * @return The app consistent snapshot frequency in minutes.
      * 
-    */
+     */
     public Integer appConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes;
     }
     /**
-     * The crash consistent snapshot frequency in minutes.
+     * @return The crash consistent snapshot frequency in minutes.
      * 
-    */
+     */
     public Integer crashConsistentFrequencyInMinutes() {
         return this.crashConsistentFrequencyInMinutes;
     }
     /**
-     * A value indicating whether multi-VM sync has to be enabled.
+     * @return A value indicating whether multi-VM sync has to be enabled.
      * 
-    */
+     */
     public String enableMultiVmSync() {
         return this.enableMultiVmSync;
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;InMageRcm&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The duration in minutes until which the recovery points need to be stored.
+     * @return The duration in minutes until which the recovery points need to be stored.
      * 
-    */
+     */
     public Integer recoveryPointHistoryInMinutes() {
         return this.recoveryPointHistoryInMinutes;
     }

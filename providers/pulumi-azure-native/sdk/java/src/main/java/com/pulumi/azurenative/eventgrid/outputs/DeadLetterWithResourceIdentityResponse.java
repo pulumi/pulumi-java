@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeadLetterWithResourceIdentityResponse {
-    /**
-     * Information about the destination where events have to be delivered for the event subscription.
-     * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
-     * 
-     */
+        /**
+         * @return Information about the destination where events have to be delivered for the event subscription.
+         * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
+         * 
+         */
     private final @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
-    /**
-     * The identity to use when dead-lettering events.
-     * 
-     */
+        /**
+         * @return The identity to use when dead-lettering events.
+         * 
+         */
     private final @Nullable EventSubscriptionIdentityResponse identity;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class DeadLetterWithResourceIdentityResponse {
     }
 
     /**
-     * Information about the destination where events have to be delivered for the event subscription.
+     * @return Information about the destination where events have to be delivered for the event subscription.
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
-    */
+     */
     public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
     /**
-     * The identity to use when dead-lettering events.
+     * @return The identity to use when dead-lettering events.
      * 
-    */
+     */
     public Optional<EventSubscriptionIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }

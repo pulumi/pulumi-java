@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTimeSeriesDatabaseConnectionResult {
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * Extension resource name.
-     * 
-     */
+        /**
+         * @return Extension resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of a specific time series database connection.
-     * 
-     */
+        /**
+         * @return Properties of a specific time series database connection.
+         * 
+         */
     private final AzureDataExplorerConnectionPropertiesResponse properties;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetTimeSeriesDatabaseConnectionResult {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Extension resource name.
+     * @return Extension resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of a specific time series database connection.
+     * @return Properties of a specific time series database connection.
      * 
-    */
+     */
     public AzureDataExplorerConnectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

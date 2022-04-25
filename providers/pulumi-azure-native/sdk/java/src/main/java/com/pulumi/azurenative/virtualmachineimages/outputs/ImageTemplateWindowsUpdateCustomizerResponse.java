@@ -13,31 +13,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageTemplateWindowsUpdateCustomizerResponse {
-    /**
-     * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
-     * 
-     */
+        /**
+         * @return Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+         * 
+         */
     private final @Nullable List<String> filters;
-    /**
-     * Friendly Name to provide context on what this customization step does
-     * 
-     */
+        /**
+         * @return Friendly Name to provide context on what this customization step does
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
-     * 
-     */
+        /**
+         * @return Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+         * 
+         */
     private final @Nullable String searchCriteria;
-    /**
-     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
-     * Expected value is &#39;WindowsUpdate&#39;.
-     * 
-     */
+        /**
+         * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+         * Expected value is &#39;WindowsUpdate&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
-     * 
-     */
+        /**
+         * @return Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+         * 
+         */
     private final @Nullable Integer updateLimit;
 
     @CustomType.Constructor
@@ -55,38 +55,38 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
     }
 
     /**
-     * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+     * @return Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
      * 
-    */
+     */
     public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * Friendly Name to provide context on what this customization step does
+     * @return Friendly Name to provide context on what this customization step does
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+     * @return Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
      * 
-    */
+     */
     public Optional<String> searchCriteria() {
         return Optional.ofNullable(this.searchCriteria);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
      * Expected value is &#39;WindowsUpdate&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+     * @return Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
      * 
-    */
+     */
     public Optional<Integer> updateLimit() {
         return Optional.ofNullable(this.updateLimit);
     }

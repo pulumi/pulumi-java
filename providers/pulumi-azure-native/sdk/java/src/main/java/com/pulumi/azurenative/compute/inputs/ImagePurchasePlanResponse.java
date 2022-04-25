@@ -25,6 +25,10 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The plan ID.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
     @Import(name="product")
     private @Nullable String product;
 
+    /**
+     * @return The product ID.
+     * 
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
@@ -47,6 +55,10 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return The publisher ID.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -77,16 +89,34 @@ public final class ImagePurchasePlanResponse extends com.pulumi.resources.Invoke
             $ = new ImagePurchasePlanResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The plan ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param product The product ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable String product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param publisher The publisher ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;

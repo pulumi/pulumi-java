@@ -13,75 +13,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateZoneResult {
-    /**
-     * The ETag of the zone.
-     * 
-     */
+        /**
+         * @return The ETag of the zone.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
+         * 
+         */
     private final String id;
-    /**
-     * Private zone internal Id
-     * 
-     */
+        /**
+         * @return Private zone internal Id
+         * 
+         */
     private final String internalId;
-    /**
-     * The Azure Region where the resource lives
-     * 
-     */
+        /**
+         * @return The Azure Region where the resource lives
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final Double maxNumberOfRecordSets;
-    /**
-     * The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final Double maxNumberOfVirtualNetworkLinks;
-    /**
-     * The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final Double maxNumberOfVirtualNetworkLinksWithRegistration;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final Double numberOfRecordSets;
-    /**
-     * The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final Double numberOfVirtualNetworkLinks;
-    /**
-     * The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final Double numberOfVirtualNetworkLinksWithRegistration;
-    /**
-     * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
-     * 
-     */
+        /**
+         * @return The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -117,100 +117,100 @@ public final class GetPrivateZoneResult {
     }
 
     /**
-     * The ETag of the zone.
+     * @return The ETag of the zone.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
+     * @return Fully qualified resource Id for the resource. Example - &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}&#39;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Private zone internal Id
+     * @return Private zone internal Id
      * 
-    */
+     */
     public String internalId() {
         return this.internalId;
     }
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double maxNumberOfRecordSets() {
         return this.maxNumberOfRecordSets;
     }
     /**
-     * The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double maxNumberOfVirtualNetworkLinks() {
         return this.maxNumberOfVirtualNetworkLinks;
     }
     /**
-     * The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double maxNumberOfVirtualNetworkLinksWithRegistration() {
         return this.maxNumberOfVirtualNetworkLinksWithRegistration;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double numberOfRecordSets() {
         return this.numberOfRecordSets;
     }
     /**
-     * The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double numberOfVirtualNetworkLinks() {
         return this.numberOfVirtualNetworkLinks;
     }
     /**
-     * The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public Double numberOfVirtualNetworkLinksWithRegistration() {
         return this.numberOfVirtualNetworkLinksWithRegistration;
     }
     /**
-     * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
+     * @return The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
+     * @return The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -31,6 +31,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="announcement")
     private @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
 
+    /**
+     * @return The properties of any lab announcement associated with this lab
+     * 
+     */
     public Optional<Output<LabAnnouncementPropertiesArgs>> announcement() {
         return Optional.ofNullable(this.announcement);
     }
@@ -42,6 +46,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environmentPermission")
     private @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
 
+    /**
+     * @return The access rights to be granted to the user when provisioning an environment
+     * 
+     */
     public Optional<Output<Either<String,EnvironmentPermission>>> environmentPermission() {
         return Optional.ofNullable(this.environmentPermission);
     }
@@ -53,6 +61,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extendedProperties")
     private @Nullable Output<Map<String,String>> extendedProperties;
 
+    /**
+     * @return Extended properties of the lab used for experimental features
+     * 
+     */
     public Optional<Output<Map<String,String>>> extendedProperties() {
         return Optional.ofNullable(this.extendedProperties);
     }
@@ -64,6 +76,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labStorageType")
     private @Nullable Output<Either<String,StorageType>> labStorageType;
 
+    /**
+     * @return Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+     * 
+     */
     public Optional<Output<Either<String,StorageType>>> labStorageType() {
         return Optional.ofNullable(this.labStorageType);
     }
@@ -75,6 +91,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -86,6 +106,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mandatoryArtifactsResourceIdsLinux")
     private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
 
+    /**
+     * @return The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+     * 
+     */
     public Optional<Output<List<String>>> mandatoryArtifactsResourceIdsLinux() {
         return Optional.ofNullable(this.mandatoryArtifactsResourceIdsLinux);
     }
@@ -97,6 +121,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mandatoryArtifactsResourceIdsWindows")
     private @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
 
+    /**
+     * @return The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+     * 
+     */
     public Optional<Output<List<String>>> mandatoryArtifactsResourceIdsWindows() {
         return Optional.ofNullable(this.mandatoryArtifactsResourceIdsWindows);
     }
@@ -108,6 +136,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -121,6 +153,12 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="premiumDataDisks")
     private @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
 
+    /**
+     * @return The setting to enable usage of premium data disks.
+     * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+     * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
+     * 
+     */
     public Optional<Output<Either<String,PremiumDataDisk>>> premiumDataDisks() {
         return Optional.ofNullable(this.premiumDataDisks);
     }
@@ -132,6 +170,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -143,6 +185,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="support")
     private @Nullable Output<LabSupportPropertiesArgs> support;
 
+    /**
+     * @return The properties of any lab support message associated with this lab
+     * 
+     */
     public Optional<Output<LabSupportPropertiesArgs>> support() {
         return Optional.ofNullable(this.support);
     }
@@ -154,6 +200,10 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -193,142 +243,342 @@ public final class LabArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param announcement The properties of any lab announcement associated with this lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder announcement(@Nullable Output<LabAnnouncementPropertiesArgs> announcement) {
             $.announcement = announcement;
             return this;
         }
 
+        /**
+         * @param announcement The properties of any lab announcement associated with this lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder announcement(LabAnnouncementPropertiesArgs announcement) {
             return announcement(Output.of(announcement));
         }
 
+        /**
+         * @param environmentPermission The access rights to be granted to the user when provisioning an environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentPermission(@Nullable Output<Either<String,EnvironmentPermission>> environmentPermission) {
             $.environmentPermission = environmentPermission;
             return this;
         }
 
+        /**
+         * @param environmentPermission The access rights to be granted to the user when provisioning an environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentPermission(Either<String,EnvironmentPermission> environmentPermission) {
             return environmentPermission(Output.of(environmentPermission));
         }
 
+        /**
+         * @param environmentPermission The access rights to be granted to the user when provisioning an environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentPermission(String environmentPermission) {
             return environmentPermission(Either.ofLeft(environmentPermission));
         }
 
+        /**
+         * @param environmentPermission The access rights to be granted to the user when provisioning an environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentPermission(EnvironmentPermission environmentPermission) {
             return environmentPermission(Either.ofRight(environmentPermission));
         }
 
+        /**
+         * @param extendedProperties Extended properties of the lab used for experimental features
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(@Nullable Output<Map<String,String>> extendedProperties) {
             $.extendedProperties = extendedProperties;
             return this;
         }
 
+        /**
+         * @param extendedProperties Extended properties of the lab used for experimental features
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedProperties(Map<String,String> extendedProperties) {
             return extendedProperties(Output.of(extendedProperties));
         }
 
+        /**
+         * @param labStorageType Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labStorageType(@Nullable Output<Either<String,StorageType>> labStorageType) {
             $.labStorageType = labStorageType;
             return this;
         }
 
+        /**
+         * @param labStorageType Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labStorageType(Either<String,StorageType> labStorageType) {
             return labStorageType(Output.of(labStorageType));
         }
 
+        /**
+         * @param labStorageType Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labStorageType(String labStorageType) {
             return labStorageType(Either.ofLeft(labStorageType));
         }
 
+        /**
+         * @param labStorageType Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labStorageType(StorageType labStorageType) {
             return labStorageType(Either.ofRight(labStorageType));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param mandatoryArtifactsResourceIdsLinux The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux) {
             $.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
 
+        /**
+         * @param mandatoryArtifactsResourceIdsLinux The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatoryArtifactsResourceIdsLinux(List<String> mandatoryArtifactsResourceIdsLinux) {
             return mandatoryArtifactsResourceIdsLinux(Output.of(mandatoryArtifactsResourceIdsLinux));
         }
 
+        /**
+         * @param mandatoryArtifactsResourceIdsLinux The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatoryArtifactsResourceIdsLinux(String... mandatoryArtifactsResourceIdsLinux) {
             return mandatoryArtifactsResourceIdsLinux(List.of(mandatoryArtifactsResourceIdsLinux));
         }
 
+        /**
+         * @param mandatoryArtifactsResourceIdsWindows The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatoryArtifactsResourceIdsWindows(@Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows) {
             $.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
 
+        /**
+         * @param mandatoryArtifactsResourceIdsWindows The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatoryArtifactsResourceIdsWindows(List<String> mandatoryArtifactsResourceIdsWindows) {
             return mandatoryArtifactsResourceIdsWindows(Output.of(mandatoryArtifactsResourceIdsWindows));
         }
 
+        /**
+         * @param mandatoryArtifactsResourceIdsWindows The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mandatoryArtifactsResourceIdsWindows(String... mandatoryArtifactsResourceIdsWindows) {
             return mandatoryArtifactsResourceIdsWindows(List.of(mandatoryArtifactsResourceIdsWindows));
         }
 
+        /**
+         * @param name The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param premiumDataDisks The setting to enable usage of premium data disks.
+         * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+         * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premiumDataDisks(@Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks) {
             $.premiumDataDisks = premiumDataDisks;
             return this;
         }
 
+        /**
+         * @param premiumDataDisks The setting to enable usage of premium data disks.
+         * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+         * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premiumDataDisks(Either<String,PremiumDataDisk> premiumDataDisks) {
             return premiumDataDisks(Output.of(premiumDataDisks));
         }
 
+        /**
+         * @param premiumDataDisks The setting to enable usage of premium data disks.
+         * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+         * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premiumDataDisks(String premiumDataDisks) {
             return premiumDataDisks(Either.ofLeft(premiumDataDisks));
         }
 
+        /**
+         * @param premiumDataDisks The setting to enable usage of premium data disks.
+         * When its value is &#39;Enabled&#39;, creation of standard or premium data disks is allowed.
+         * When its value is &#39;Disabled&#39;, only creation of standard data disks is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premiumDataDisks(PremiumDataDisk premiumDataDisks) {
             return premiumDataDisks(Either.ofRight(premiumDataDisks));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param support The properties of any lab support message associated with this lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder support(@Nullable Output<LabSupportPropertiesArgs> support) {
             $.support = support;
             return this;
         }
 
+        /**
+         * @param support The properties of any lab support message associated with this lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder support(LabSupportPropertiesArgs support) {
             return support(Output.of(support));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

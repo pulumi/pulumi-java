@@ -28,6 +28,10 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
     @Import(name="addresses")
     private @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
 
+    /**
+     * @return The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+     * 
+     */
     public Optional<Output<List<AzureFirewallPublicIPAddressArgs>>> addresses() {
         return Optional.ofNullable(this.addresses);
     }
@@ -39,6 +43,10 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return The number of Public IP addresses associated with azure firewall.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -68,24 +76,54 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
             $ = new HubPublicIPAddressesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addresses The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(@Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses) {
             $.addresses = addresses;
             return this;
         }
 
+        /**
+         * @param addresses The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(List<AzureFirewallPublicIPAddressArgs> addresses) {
             return addresses(Output.of(addresses));
         }
 
+        /**
+         * @param addresses The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addresses(AzureFirewallPublicIPAddressArgs... addresses) {
             return addresses(List.of(addresses));
         }
 
+        /**
+         * @param count The number of Public IP addresses associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count The number of Public IP addresses associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }

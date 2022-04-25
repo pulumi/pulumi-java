@@ -25,6 +25,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
     @Import(name="privateIpAddress")
     private @Nullable String privateIpAddress;
 
+    /**
+     * @return Private Ip address of the interface
+     * 
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
@@ -65,11 +73,23 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
             $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param privateIpAddress Private Ip address of the interface
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;

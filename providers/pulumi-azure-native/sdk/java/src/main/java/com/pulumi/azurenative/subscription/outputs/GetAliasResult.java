@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAliasResult {
-    /**
-     * Fully qualified ID for the alias resource.
-     * 
-     */
+        /**
+         * @return Fully qualified ID for the alias resource.
+         * 
+         */
     private final String id;
-    /**
-     * Alias ID.
-     * 
-     */
+        /**
+         * @return Alias ID.
+         * 
+         */
     private final String name;
-    /**
-     * Put Alias response properties.
-     * 
-     */
+        /**
+         * @return Put Alias response properties.
+         * 
+         */
     private final PutAliasResponsePropertiesResponse properties;
-    /**
-     * Resource type, Microsoft.Subscription/aliases.
-     * 
-     */
+        /**
+         * @return Resource type, Microsoft.Subscription/aliases.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetAliasResult {
     }
 
     /**
-     * Fully qualified ID for the alias resource.
+     * @return Fully qualified ID for the alias resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Alias ID.
+     * @return Alias ID.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Put Alias response properties.
+     * @return Put Alias response properties.
      * 
-    */
+     */
     public PutAliasResponsePropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource type, Microsoft.Subscription/aliases.
+     * @return Resource type, Microsoft.Subscription/aliases.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

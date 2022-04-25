@@ -27,6 +27,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="allocationWeight")
     private @Nullable Integer allocationWeight;
 
+    /**
+     * @return weight to apply for a given iot h.
+     * 
+     */
     public Optional<Integer> allocationWeight() {
         return Optional.ofNullable(this.allocationWeight);
     }
@@ -38,6 +42,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="applyAllocationPolicy")
     private @Nullable Boolean applyAllocationPolicy;
 
+    /**
+     * @return flag for applying allocationPolicy or not for a given iot hub.
+     * 
+     */
     public Optional<Boolean> applyAllocationPolicy() {
         return Optional.ofNullable(this.applyAllocationPolicy);
     }
@@ -49,6 +57,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="connectionString", required=true)
     private String connectionString;
 
+    /**
+     * @return Connection string of the IoT hub.
+     * 
+     */
     public String connectionString() {
         return this.connectionString;
     }
@@ -60,6 +72,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return ARM region of the IoT hub.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -71,6 +87,10 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Host name of the IoT hub.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -103,26 +123,56 @@ public final class IotHubDefinitionDescriptionResponse extends com.pulumi.resour
             $ = new IotHubDefinitionDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationWeight weight to apply for a given iot h.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationWeight(@Nullable Integer allocationWeight) {
             $.allocationWeight = allocationWeight;
             return this;
         }
 
+        /**
+         * @param applyAllocationPolicy flag for applying allocationPolicy or not for a given iot hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
             $.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
 
+        /**
+         * @param connectionString Connection string of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param location ARM region of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name Host name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

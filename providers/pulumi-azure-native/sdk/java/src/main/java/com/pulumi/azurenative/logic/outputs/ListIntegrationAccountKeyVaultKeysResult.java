@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListIntegrationAccountKeyVaultKeysResult {
-    /**
-     * The skip token.
-     * 
-     */
+        /**
+         * @return The skip token.
+         * 
+         */
     private final @Nullable String skipToken;
-    /**
-     * The key vault keys.
-     * 
-     */
+        /**
+         * @return The key vault keys.
+         * 
+         */
     private final @Nullable List<KeyVaultKeyResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
     }
 
     /**
-     * The skip token.
+     * @return The skip token.
      * 
-    */
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
-     * The key vault keys.
+     * @return The key vault keys.
      * 
-    */
+     */
     public List<KeyVaultKeyResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

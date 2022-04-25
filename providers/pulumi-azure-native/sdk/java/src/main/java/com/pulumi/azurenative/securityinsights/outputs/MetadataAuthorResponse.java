@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MetadataAuthorResponse {
-    /**
-     * Email of author contact
-     * 
-     */
+        /**
+         * @return Email of author contact
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * Link for author/vendor page
-     * 
-     */
+        /**
+         * @return Link for author/vendor page
+         * 
+         */
     private final @Nullable String link;
-    /**
-     * Name of the author. Company or person.
-     * 
-     */
+        /**
+         * @return Name of the author. Company or person.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class MetadataAuthorResponse {
     }
 
     /**
-     * Email of author contact
+     * @return Email of author contact
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * Link for author/vendor page
+     * @return Link for author/vendor page
      * 
-    */
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
     /**
-     * Name of the author. Company or person.
+     * @return Name of the author. Company or person.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

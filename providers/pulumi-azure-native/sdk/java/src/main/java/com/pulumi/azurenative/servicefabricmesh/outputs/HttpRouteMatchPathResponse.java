@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HttpRouteMatchPathResponse {
-    /**
-     * replacement string for matched part of the Uri.
-     * 
-     */
+        /**
+         * @return replacement string for matched part of the Uri.
+         * 
+         */
     private final @Nullable String rewrite;
-    /**
-     * how to match value in the Uri
-     * 
-     */
+        /**
+         * @return how to match value in the Uri
+         * 
+         */
     private final String type;
-    /**
-     * Uri path to match for request.
-     * 
-     */
+        /**
+         * @return Uri path to match for request.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class HttpRouteMatchPathResponse {
     }
 
     /**
-     * replacement string for matched part of the Uri.
+     * @return replacement string for matched part of the Uri.
      * 
-    */
+     */
     public Optional<String> rewrite() {
         return Optional.ofNullable(this.rewrite);
     }
     /**
-     * how to match value in the Uri
+     * @return how to match value in the Uri
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Uri path to match for request.
+     * @return Uri path to match for request.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

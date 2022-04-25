@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FacebookResponse {
-    /**
-     * &lt;code&gt;false&lt;/code&gt; if the Facebook provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;false&lt;/code&gt; if the Facebook provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The version of the Facebook api to be used while logging in.
-     * 
-     */
+        /**
+         * @return The version of the Facebook api to be used while logging in.
+         * 
+         */
     private final @Nullable String graphApiVersion;
-    /**
-     * The configuration settings of the login flow.
-     * 
-     */
+        /**
+         * @return The configuration settings of the login flow.
+         * 
+         */
     private final @Nullable LoginScopesResponse login;
-    /**
-     * The configuration settings of the app registration for the Facebook provider.
-     * 
-     */
+        /**
+         * @return The configuration settings of the app registration for the Facebook provider.
+         * 
+         */
     private final @Nullable AppRegistrationResponse registration;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class FacebookResponse {
     }
 
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the Facebook provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the Facebook provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The version of the Facebook api to be used while logging in.
+     * @return The version of the Facebook api to be used while logging in.
      * 
-    */
+     */
     public Optional<String> graphApiVersion() {
         return Optional.ofNullable(this.graphApiVersion);
     }
     /**
-     * The configuration settings of the login flow.
+     * @return The configuration settings of the login flow.
      * 
-    */
+     */
     public Optional<LoginScopesResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * The configuration settings of the app registration for the Facebook provider.
+     * @return The configuration settings of the app registration for the Facebook provider.
      * 
-    */
+     */
     public Optional<AppRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }

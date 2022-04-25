@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FluidRelayEndpointsResponse {
-    /**
-     * The Fluid Relay Orderer endpoints.
-     * 
-     */
+        /**
+         * @return The Fluid Relay Orderer endpoints.
+         * 
+         */
     private final List<String> ordererEndpoints;
-    /**
-     * The Fluid Relay storage endpoints.
-     * 
-     */
+        /**
+         * @return The Fluid Relay storage endpoints.
+         * 
+         */
     private final List<String> storageEndpoints;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FluidRelayEndpointsResponse {
     }
 
     /**
-     * The Fluid Relay Orderer endpoints.
+     * @return The Fluid Relay Orderer endpoints.
      * 
-    */
+     */
     public List<String> ordererEndpoints() {
         return this.ordererEndpoints;
     }
     /**
-     * The Fluid Relay storage endpoints.
+     * @return The Fluid Relay storage endpoints.
      * 
-    */
+     */
     public List<String> storageEndpoints() {
         return this.storageEndpoints;
     }

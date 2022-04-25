@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNamespaceVirtualNetworkRuleResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Resource ID of Virtual Network Subnet
-     * 
-     */
+        /**
+         * @return Resource ID of Virtual Network Subnet
+         * 
+         */
     private final @Nullable String virtualNetworkSubnetId;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GetNamespaceVirtualNetworkRuleResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Resource ID of Virtual Network Subnet
+     * @return Resource ID of Virtual Network Subnet
      * 
-    */
+     */
     public Optional<String> virtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }

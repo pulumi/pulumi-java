@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DashboardPartsResponse {
-    /**
-     * The dashboard part&#39;s metadata.
-     * 
-     */
+        /**
+         * @return The dashboard part&#39;s metadata.
+         * 
+         */
     private final @Nullable MarkdownPartMetadataResponse metadata;
-    /**
-     * The dashboard&#39;s part position.
-     * 
-     */
+        /**
+         * @return The dashboard&#39;s part position.
+         * 
+         */
     private final DashboardPartsResponsePosition position;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class DashboardPartsResponse {
     }
 
     /**
-     * The dashboard part&#39;s metadata.
+     * @return The dashboard part&#39;s metadata.
      * 
-    */
+     */
     public Optional<MarkdownPartMetadataResponse> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The dashboard&#39;s part position.
+     * @return The dashboard&#39;s part position.
      * 
-    */
+     */
     public DashboardPartsResponsePosition position() {
         return this.position;
     }

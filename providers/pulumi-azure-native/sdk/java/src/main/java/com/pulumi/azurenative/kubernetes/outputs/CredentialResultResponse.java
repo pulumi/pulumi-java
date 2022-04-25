@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CredentialResultResponse {
-    /**
-     * The name of the credential.
-     * 
-     */
+        /**
+         * @return The name of the credential.
+         * 
+         */
     private final String name;
-    /**
-     * Base64-encoded Kubernetes configuration file.
-     * 
-     */
+        /**
+         * @return Base64-encoded Kubernetes configuration file.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class CredentialResultResponse {
     }
 
     /**
-     * The name of the credential.
+     * @return The name of the credential.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Base64-encoded Kubernetes configuration file.
+     * @return Base64-encoded Kubernetes configuration file.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

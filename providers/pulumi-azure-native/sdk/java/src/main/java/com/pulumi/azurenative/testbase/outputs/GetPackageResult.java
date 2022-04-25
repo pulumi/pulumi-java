@@ -17,100 +17,100 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPackageResult {
-    /**
-     * Application name
-     * 
-     */
+        /**
+         * @return Application name
+         * 
+         */
     private final String applicationName;
-    /**
-     * The file path of the package.
-     * 
-     */
+        /**
+         * @return The file path of the package.
+         * 
+         */
     private final String blobPath;
-    /**
-     * Resource Etag.
-     * 
-     */
+        /**
+         * @return Resource Etag.
+         * 
+         */
     private final String etag;
-    /**
-     * The flighting ring for feature update.
-     * 
-     */
+        /**
+         * @return The flighting ring for feature update.
+         * 
+         */
     private final String flightingRing;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
-     * 
-     */
+        /**
+         * @return Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * The UTC timestamp when the package was last modified.
-     * 
-     */
+        /**
+         * @return The UTC timestamp when the package was last modified.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The status of the package.
-     * 
-     */
+        /**
+         * @return The status of the package.
+         * 
+         */
     private final String packageStatus;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The system metadata relating to this resource
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Specifies the target OSs of specific OS Update types.
-     * 
-     */
+        /**
+         * @return Specifies the target OSs of specific OS Update types.
+         * 
+         */
     private final List<TargetOSInfoResponse> targetOSList;
-    /**
-     * OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
-     * 
-     */
+        /**
+         * @return OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
+         * 
+         */
     private final List<String> testTypes;
-    /**
-     * The detailed test information.
-     * 
-     */
+        /**
+         * @return The detailed test information.
+         * 
+         */
     private final List<TestResponse> tests;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The validation results. There&#39;s validation on package when it&#39;s created or updated.
-     * 
-     */
+        /**
+         * @return The validation results. There&#39;s validation on package when it&#39;s created or updated.
+         * 
+         */
     private final List<PackageValidationResultResponse> validationResults;
-    /**
-     * Application version
-     * 
-     */
+        /**
+         * @return Application version
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -156,135 +156,135 @@ public final class GetPackageResult {
     }
 
     /**
-     * Application name
+     * @return Application name
      * 
-    */
+     */
     public String applicationName() {
         return this.applicationName;
     }
     /**
-     * The file path of the package.
+     * @return The file path of the package.
      * 
-    */
+     */
     public String blobPath() {
         return this.blobPath;
     }
     /**
-     * Resource Etag.
+     * @return Resource Etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The flighting ring for feature update.
+     * @return The flighting ring for feature update.
      * 
-    */
+     */
     public String flightingRing() {
         return this.flightingRing;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
+     * @return Flag showing that whether the package is enabled. It doesn&#39;t schedule test for package which is not enabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The UTC timestamp when the package was last modified.
+     * @return The UTC timestamp when the package was last modified.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The status of the package.
+     * @return The status of the package.
      * 
-    */
+     */
     public String packageStatus() {
         return this.packageStatus;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the target OSs of specific OS Update types.
+     * @return Specifies the target OSs of specific OS Update types.
      * 
-    */
+     */
     public List<TargetOSInfoResponse> targetOSList() {
         return this.targetOSList;
     }
     /**
-     * OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
+     * @return OOB, functional or both. Mapped to the data in &#39;tests&#39; property.
      * 
-    */
+     */
     public List<String> testTypes() {
         return this.testTypes;
     }
     /**
-     * The detailed test information.
+     * @return The detailed test information.
      * 
-    */
+     */
     public List<TestResponse> tests() {
         return this.tests;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The validation results. There&#39;s validation on package when it&#39;s created or updated.
+     * @return The validation results. There&#39;s validation on package when it&#39;s created or updated.
      * 
-    */
+     */
     public List<PackageValidationResultResponse> validationResults() {
         return this.validationResults;
     }
     /**
-     * Application version
+     * @return Application version
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

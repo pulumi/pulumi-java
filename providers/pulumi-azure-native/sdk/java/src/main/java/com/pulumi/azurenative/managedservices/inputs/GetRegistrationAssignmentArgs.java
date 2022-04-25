@@ -22,6 +22,10 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
     @Import(name="expandRegistrationDefinition")
     private @Nullable Boolean expandRegistrationDefinition;
 
+    /**
+     * @return Tells whether to return registration definition details also along with registration assignment details.
+     * 
+     */
     public Optional<Boolean> expandRegistrationDefinition() {
         return Optional.ofNullable(this.expandRegistrationDefinition);
     }
@@ -33,6 +37,10 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
     @Import(name="registrationAssignmentId", required=true)
     private String registrationAssignmentId;
 
+    /**
+     * @return Guid of the registration assignment.
+     * 
+     */
     public String registrationAssignmentId() {
         return this.registrationAssignmentId;
     }
@@ -44,6 +52,10 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return Scope of the resource.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -74,16 +86,34 @@ public final class GetRegistrationAssignmentArgs extends com.pulumi.resources.In
             $ = new GetRegistrationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expandRegistrationDefinition Tells whether to return registration definition details also along with registration assignment details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
             $.expandRegistrationDefinition = expandRegistrationDefinition;
             return this;
         }
 
+        /**
+         * @param registrationAssignmentId Guid of the registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationAssignmentId(String registrationAssignmentId) {
             $.registrationAssignmentId = registrationAssignmentId;
             return this;
         }
 
+        /**
+         * @param scope Scope of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

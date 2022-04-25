@@ -31,6 +31,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="deleteOption")
     private @Nullable String deleteOption;
 
+    /**
+     * @return Specify what happens to the public IP when the VM is deleted
+     * 
+     */
     public Optional<String> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
@@ -42,6 +46,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="dnsSettings")
     private @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings;
 
+    /**
+     * @return The dns settings to be applied on the publicIP addresses .
+     * 
+     */
     public Optional<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -53,6 +61,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="idleTimeoutInMinutes")
     private @Nullable Integer idleTimeoutInMinutes;
 
+    /**
+     * @return The idle timeout of the public IP address.
+     * 
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
@@ -64,6 +76,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="ipTags")
     private @Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags;
 
+    /**
+     * @return The list of IP tags associated with the public IP address.
+     * 
+     */
     public Optional<List<VirtualMachineScaleSetIpTagResponse>> ipTags() {
         return Optional.ofNullable(this.ipTags);
     }
@@ -75,6 +91,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The publicIP address configuration name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -86,6 +106,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="publicIPAddressVersion")
     private @Nullable String publicIPAddressVersion;
 
+    /**
+     * @return Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+     * 
+     */
     public Optional<String> publicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
@@ -97,6 +121,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="publicIPPrefix")
     private @Nullable SubResourceResponse publicIPPrefix;
 
+    /**
+     * @return The PublicIPPrefix from which to allocate publicIP addresses.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
@@ -108,6 +136,10 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
     @Import(name="sku")
     private @Nullable PublicIPAddressSkuResponse sku;
 
+    /**
+     * @return Describes the public IP Sku
+     * 
+     */
     public Optional<PublicIPAddressSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -143,45 +175,99 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse ex
             $ = new VirtualMachineScaleSetPublicIPAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleteOption Specify what happens to the public IP when the VM is deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(@Nullable String deleteOption) {
             $.deleteOption = deleteOption;
             return this;
         }
 
+        /**
+         * @param dnsSettings The dns settings to be applied on the publicIP addresses .
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param idleTimeoutInMinutes The idle timeout of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
+        /**
+         * @param ipTags The list of IP tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(@Nullable List<VirtualMachineScaleSetIpTagResponse> ipTags) {
             $.ipTags = ipTags;
             return this;
         }
 
+        /**
+         * @param ipTags The list of IP tags associated with the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipTags(VirtualMachineScaleSetIpTagResponse... ipTags) {
             return ipTags(List.of(ipTags));
         }
 
+        /**
+         * @param name The publicIP address configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param publicIPAddressVersion Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param publicIPPrefix The PublicIPPrefix from which to allocate publicIP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             $.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
+        /**
+         * @param sku Describes the public IP Sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
             $.sku = sku;
             return this;

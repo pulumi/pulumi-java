@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetManagerResult {
-    /**
-     * Represents the type of StorSimple Manager.
-     * 
-     */
+        /**
+         * @return Represents the type of StorSimple Manager.
+         * 
+         */
     private final @Nullable ManagerIntrinsicSettingsResponse cisIntrinsicSettings;
-    /**
-     * The etag of the manager.
-     * 
-     */
+        /**
+         * @return The etag of the manager.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The geo location of the resource.
-     * 
-     */
+        /**
+         * @return The geo location of the resource.
+         * 
+         */
     private final String location;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
-     * 
-     */
+        /**
+         * @return Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Specifies the Sku.
-     * 
-     */
+        /**
+         * @return Specifies the Sku.
+         * 
+         */
     private final @Nullable ManagerSkuResponse sku;
-    /**
-     * The tags attached to the resource.
-     * 
-     */
+        /**
+         * @return The tags attached to the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetManagerResult {
     }
 
     /**
-     * Represents the type of StorSimple Manager.
+     * @return Represents the type of StorSimple Manager.
      * 
-    */
+     */
     public Optional<ManagerIntrinsicSettingsResponse> cisIntrinsicSettings() {
         return Optional.ofNullable(this.cisIntrinsicSettings);
     }
     /**
-     * The etag of the manager.
+     * @return The etag of the manager.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo location of the resource.
+     * @return The geo location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
+     * @return Specifies the state of the resource as it is getting provisioned. Value of &#34;Succeeded&#34; means the Manager was successfully created.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Specifies the Sku.
+     * @return Specifies the Sku.
      * 
-    */
+     */
     public Optional<ManagerSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The tags attached to the resource.
+     * @return The tags attached to the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

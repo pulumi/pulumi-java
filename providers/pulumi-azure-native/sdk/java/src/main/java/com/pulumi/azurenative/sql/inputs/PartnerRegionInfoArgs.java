@@ -26,6 +26,10 @@ public final class PartnerRegionInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Geo location of the partner managed instances.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -54,11 +58,23 @@ public final class PartnerRegionInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new PartnerRegionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Geo location of the partner managed instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Geo location of the partner managed instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

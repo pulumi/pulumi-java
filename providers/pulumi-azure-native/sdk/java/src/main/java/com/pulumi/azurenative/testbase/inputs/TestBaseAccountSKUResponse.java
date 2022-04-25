@@ -27,6 +27,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
     @Import(name="capabilities", required=true)
     private List<TestBaseAccountSKUCapabilityResponse> capabilities;
 
+    /**
+     * @return The capabilities of a SKU.
+     * 
+     */
     public List<TestBaseAccountSKUCapabilityResponse> capabilities() {
         return this.capabilities;
     }
@@ -38,6 +42,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return The locations that the SKU is available.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -49,6 +57,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return The type of resource the SKU applies to.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -71,6 +87,10 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return The tier of this particular SKU.
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -103,34 +123,76 @@ public final class TestBaseAccountSKUResponse extends com.pulumi.resources.Invok
             $ = new TestBaseAccountSKUResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capabilities The capabilities of a SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<TestBaseAccountSKUCapabilityResponse> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities The capabilities of a SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(TestBaseAccountSKUCapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param locations The locations that the SKU is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The locations that the SKU is available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param name The name of the SKU. This is typically a letter + number code, such as B0 or S0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceType The type of resource the SKU applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param tier The tier of this particular SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

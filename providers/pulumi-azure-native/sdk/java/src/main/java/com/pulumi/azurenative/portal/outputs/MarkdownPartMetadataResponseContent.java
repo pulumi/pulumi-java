@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MarkdownPartMetadataResponseContent {
-    /**
-     * The setting of the content of markdown part.
-     * 
-     */
+        /**
+         * @return The setting of the content of markdown part.
+         * 
+         */
     private final @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class MarkdownPartMetadataResponseContent {
     }
 
     /**
-     * The setting of the content of markdown part.
+     * @return The setting of the content of markdown part.
      * 
-    */
+     */
     public Optional<MarkdownPartMetadataResponseSettingsSettings> settings() {
         return Optional.ofNullable(this.settings);
     }

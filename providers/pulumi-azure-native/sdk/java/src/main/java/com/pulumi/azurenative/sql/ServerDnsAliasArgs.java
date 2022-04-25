@@ -22,6 +22,10 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnsAliasName")
     private @Nullable Output<String> dnsAliasName;
 
+    /**
+     * @return The name of the server dns alias.
+     * 
+     */
     public Optional<Output<String>> dnsAliasName() {
         return Optional.ofNullable(this.dnsAliasName);
     }
@@ -33,6 +37,10 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server that the alias is pointing to.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -74,29 +86,65 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ServerDnsAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsAliasName The name of the server dns alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsAliasName(@Nullable Output<String> dnsAliasName) {
             $.dnsAliasName = dnsAliasName;
             return this;
         }
 
+        /**
+         * @param dnsAliasName The name of the server dns alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsAliasName(String dnsAliasName) {
             return dnsAliasName(Output.of(dnsAliasName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server that the alias is pointing to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server that the alias is pointing to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

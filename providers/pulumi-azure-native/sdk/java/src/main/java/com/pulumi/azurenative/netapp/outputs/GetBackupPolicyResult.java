@@ -16,70 +16,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBackupPolicyResult {
-    /**
-     * Daily backups count to keep
-     * 
-     */
+        /**
+         * @return Daily backups count to keep
+         * 
+         */
     private final @Nullable Integer dailyBackupsToKeep;
-    /**
-     * The property to decide policy is enabled or not
-     * 
-     */
+        /**
+         * @return The property to decide policy is enabled or not
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Monthly backups count to keep
-     * 
-     */
+        /**
+         * @return Monthly backups count to keep
+         * 
+         */
     private final @Nullable Integer monthlyBackupsToKeep;
-    /**
-     * Name of backup policy
-     * 
-     */
+        /**
+         * @return Name of backup policy
+         * 
+         */
     private final String name;
-    /**
-     * Azure lifecycle management
-     * 
-     */
+        /**
+         * @return Azure lifecycle management
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * A list of volumes assigned to this policy
-     * 
-     */
+        /**
+         * @return A list of volumes assigned to this policy
+         * 
+         */
     private final @Nullable List<VolumeBackupsResponse> volumeBackups;
-    /**
-     * Volumes using current backup policy
-     * 
-     */
+        /**
+         * @return Volumes using current backup policy
+         * 
+         */
     private final @Nullable Integer volumesAssigned;
-    /**
-     * Weekly backups count to keep
-     * 
-     */
+        /**
+         * @return Weekly backups count to keep
+         * 
+         */
     private final @Nullable Integer weeklyBackupsToKeep;
-    /**
-     * Yearly backups count to keep
-     * 
-     */
+        /**
+         * @return Yearly backups count to keep
+         * 
+         */
     private final @Nullable Integer yearlyBackupsToKeep;
 
     @CustomType.Constructor
@@ -113,93 +113,93 @@ public final class GetBackupPolicyResult {
     }
 
     /**
-     * Daily backups count to keep
+     * @return Daily backups count to keep
      * 
-    */
+     */
     public Optional<Integer> dailyBackupsToKeep() {
         return Optional.ofNullable(this.dailyBackupsToKeep);
     }
     /**
-     * The property to decide policy is enabled or not
+     * @return The property to decide policy is enabled or not
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Monthly backups count to keep
+     * @return Monthly backups count to keep
      * 
-    */
+     */
     public Optional<Integer> monthlyBackupsToKeep() {
         return Optional.ofNullable(this.monthlyBackupsToKeep);
     }
     /**
-     * Name of backup policy
+     * @return Name of backup policy
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of volumes assigned to this policy
+     * @return A list of volumes assigned to this policy
      * 
-    */
+     */
     public List<VolumeBackupsResponse> volumeBackups() {
         return this.volumeBackups == null ? List.of() : this.volumeBackups;
     }
     /**
-     * Volumes using current backup policy
+     * @return Volumes using current backup policy
      * 
-    */
+     */
     public Optional<Integer> volumesAssigned() {
         return Optional.ofNullable(this.volumesAssigned);
     }
     /**
-     * Weekly backups count to keep
+     * @return Weekly backups count to keep
      * 
-    */
+     */
     public Optional<Integer> weeklyBackupsToKeep() {
         return Optional.ofNullable(this.weeklyBackupsToKeep);
     }
     /**
-     * Yearly backups count to keep
+     * @return Yearly backups count to keep
      * 
-    */
+     */
     public Optional<Integer> yearlyBackupsToKeep() {
         return Optional.ofNullable(this.yearlyBackupsToKeep);
     }

@@ -21,6 +21,10 @@ public final class LoadBalancerConfigurationPropertiesArgs extends com.pulumi.re
     @Import(name="frontendIPConfigurations", required=true)
     private Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations;
 
+    /**
+     * @return Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+     * 
+     */
     public Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
@@ -49,15 +53,33 @@ public final class LoadBalancerConfigurationPropertiesArgs extends com.pulumi.re
             $ = new LoadBalancerConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frontendIPConfigurations Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(Output<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationArgs> frontendIPConfigurations) {
             return frontendIPConfigurations(Output.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param frontendIPConfigurations Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(LoadBalancerFrontendIPConfigurationArgs... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }

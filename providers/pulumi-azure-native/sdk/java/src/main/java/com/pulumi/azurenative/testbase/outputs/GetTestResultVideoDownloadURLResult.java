@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTestResultVideoDownloadURLResult {
-    /**
-     * The download URL.
-     * 
-     */
+        /**
+         * @return The download URL.
+         * 
+         */
     private final String downloadUrl;
-    /**
-     * Expiry date of the download URL.
-     * 
-     */
+        /**
+         * @return Expiry date of the download URL.
+         * 
+         */
     private final String expirationTime;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GetTestResultVideoDownloadURLResult {
     }
 
     /**
-     * The download URL.
+     * @return The download URL.
      * 
-    */
+     */
     public String downloadUrl() {
         return this.downloadUrl;
     }
     /**
-     * Expiry date of the download URL.
+     * @return Expiry date of the download URL.
      * 
-    */
+     */
     public String expirationTime() {
         return this.expirationTime;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedServiceIdentityResponseUserAssignedIdentities {
-    /**
-     * Client Id of user assigned identity
-     * 
-     */
+        /**
+         * @return Client Id of user assigned identity
+         * 
+         */
     private final String clientId;
-    /**
-     * Principal Id of user assigned identity
-     * 
-     */
+        /**
+         * @return Principal Id of user assigned identity
+         * 
+         */
     private final String principalId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities {
     }
 
     /**
-     * Client Id of user assigned identity
+     * @return Client Id of user assigned identity
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Principal Id of user assigned identity
+     * @return Principal Id of user assigned identity
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PersistenceResponse {
-    /**
-     * Sets whether AOF is enabled.
-     * 
-     */
+        /**
+         * @return Sets whether AOF is enabled.
+         * 
+         */
     private final @Nullable Boolean aofEnabled;
-    /**
-     * Sets the frequency at which data is written to disk.
-     * 
-     */
+        /**
+         * @return Sets the frequency at which data is written to disk.
+         * 
+         */
     private final @Nullable String aofFrequency;
-    /**
-     * Sets whether RDB is enabled.
-     * 
-     */
+        /**
+         * @return Sets whether RDB is enabled.
+         * 
+         */
     private final @Nullable Boolean rdbEnabled;
-    /**
-     * Sets the frequency at which a snapshot of the database is created.
-     * 
-     */
+        /**
+         * @return Sets the frequency at which a snapshot of the database is created.
+         * 
+         */
     private final @Nullable String rdbFrequency;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class PersistenceResponse {
     }
 
     /**
-     * Sets whether AOF is enabled.
+     * @return Sets whether AOF is enabled.
      * 
-    */
+     */
     public Optional<Boolean> aofEnabled() {
         return Optional.ofNullable(this.aofEnabled);
     }
     /**
-     * Sets the frequency at which data is written to disk.
+     * @return Sets the frequency at which data is written to disk.
      * 
-    */
+     */
     public Optional<String> aofFrequency() {
         return Optional.ofNullable(this.aofFrequency);
     }
     /**
-     * Sets whether RDB is enabled.
+     * @return Sets whether RDB is enabled.
      * 
-    */
+     */
     public Optional<Boolean> rdbEnabled() {
         return Optional.ofNullable(this.rdbEnabled);
     }
     /**
-     * Sets the frequency at which a snapshot of the database is created.
+     * @return Sets the frequency at which a snapshot of the database is created.
      * 
-    */
+     */
     public Optional<String> rdbFrequency() {
         return Optional.ofNullable(this.rdbFrequency);
     }

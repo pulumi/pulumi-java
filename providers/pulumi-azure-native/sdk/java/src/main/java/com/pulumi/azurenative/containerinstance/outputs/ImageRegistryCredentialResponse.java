@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageRegistryCredentialResponse {
-    /**
-     * The password for the private registry.
-     * 
-     */
+        /**
+         * @return The password for the private registry.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
-     * 
-     */
+        /**
+         * @return The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
+         * 
+         */
     private final String server;
-    /**
-     * The username for the private registry.
-     * 
-     */
+        /**
+         * @return The username for the private registry.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ImageRegistryCredentialResponse {
     }
 
     /**
-     * The password for the private registry.
+     * @return The password for the private registry.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
+     * @return The Docker image registry server without a protocol such as &#34;http&#34; and &#34;https&#34;.
      * 
-    */
+     */
     public String server() {
         return this.server;
     }
     /**
-     * The username for the private registry.
+     * @return The username for the private registry.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

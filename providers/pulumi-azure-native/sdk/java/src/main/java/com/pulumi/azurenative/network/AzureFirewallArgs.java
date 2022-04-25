@@ -33,6 +33,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalProperties")
     private @Nullable Output<Map<String,String>> additionalProperties;
 
+    /**
+     * @return The additional properties used to further config this azure firewall.
+     * 
+     */
     public Optional<Output<Map<String,String>>> additionalProperties() {
         return Optional.ofNullable(this.additionalProperties);
     }
@@ -44,6 +48,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationRuleCollections")
     private @Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections;
 
+    /**
+     * @return Collection of application rule collections used by Azure Firewall.
+     * 
+     */
     public Optional<Output<List<AzureFirewallApplicationRuleCollectionArgs>>> applicationRuleCollections() {
         return Optional.ofNullable(this.applicationRuleCollections);
     }
@@ -55,6 +63,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureFirewallName")
     private @Nullable Output<String> azureFirewallName;
 
+    /**
+     * @return The name of the Azure Firewall.
+     * 
+     */
     public Optional<Output<String>> azureFirewallName() {
         return Optional.ofNullable(this.azureFirewallName);
     }
@@ -66,6 +78,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firewallPolicy")
     private @Nullable Output<SubResourceArgs> firewallPolicy;
 
+    /**
+     * @return The firewallPolicy associated with this azure firewall.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
@@ -77,6 +93,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubIPAddresses")
     private @Nullable Output<HubIPAddressesArgs> hubIPAddresses;
 
+    /**
+     * @return IP addresses associated with AzureFirewall.
+     * 
+     */
     public Optional<Output<HubIPAddressesArgs>> hubIPAddresses() {
         return Optional.ofNullable(this.hubIPAddresses);
     }
@@ -88,6 +108,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -99,6 +123,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipConfigurations")
     private @Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations;
 
+    /**
+     * @return IP configuration of the Azure Firewall resource.
+     * 
+     */
     public Optional<Output<List<AzureFirewallIPConfigurationArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -110,6 +138,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -121,6 +153,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managementIpConfiguration")
     private @Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration;
 
+    /**
+     * @return IP configuration of the Azure Firewall used for management traffic.
+     * 
+     */
     public Optional<Output<AzureFirewallIPConfigurationArgs>> managementIpConfiguration() {
         return Optional.ofNullable(this.managementIpConfiguration);
     }
@@ -132,6 +168,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="natRuleCollections")
     private @Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections;
 
+    /**
+     * @return Collection of NAT rule collections used by Azure Firewall.
+     * 
+     */
     public Optional<Output<List<AzureFirewallNatRuleCollectionArgs>>> natRuleCollections() {
         return Optional.ofNullable(this.natRuleCollections);
     }
@@ -143,6 +183,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleCollections")
     private @Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections;
 
+    /**
+     * @return Collection of network rule collections used by Azure Firewall.
+     * 
+     */
     public Optional<Output<List<AzureFirewallNetworkRuleCollectionArgs>>> networkRuleCollections() {
         return Optional.ofNullable(this.networkRuleCollections);
     }
@@ -154,6 +198,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -165,6 +213,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<AzureFirewallSkuArgs> sku;
 
+    /**
+     * @return The Azure Firewall Resource SKU.
+     * 
+     */
     public Optional<Output<AzureFirewallSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -176,6 +228,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -187,6 +243,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="threatIntelMode")
     private @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
+    /**
+     * @return The operation mode for Threat Intelligence.
+     * 
+     */
     public Optional<Output<Either<String,AzureFirewallThreatIntelMode>>> threatIntelMode() {
         return Optional.ofNullable(this.threatIntelMode);
     }
@@ -198,6 +258,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualHub")
     private @Nullable Output<SubResourceArgs> virtualHub;
 
+    /**
+     * @return The virtualHub to which the firewall belongs.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
@@ -209,6 +273,10 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting where the resource needs to come from.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -253,183 +321,429 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AzureFirewallArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalProperties The additional properties used to further config this azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalProperties(@Nullable Output<Map<String,String>> additionalProperties) {
             $.additionalProperties = additionalProperties;
             return this;
         }
 
+        /**
+         * @param additionalProperties The additional properties used to further config this azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalProperties(Map<String,String> additionalProperties) {
             return additionalProperties(Output.of(additionalProperties));
         }
 
+        /**
+         * @param applicationRuleCollections Collection of application rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationRuleCollections(@Nullable Output<List<AzureFirewallApplicationRuleCollectionArgs>> applicationRuleCollections) {
             $.applicationRuleCollections = applicationRuleCollections;
             return this;
         }
 
+        /**
+         * @param applicationRuleCollections Collection of application rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationRuleCollections(List<AzureFirewallApplicationRuleCollectionArgs> applicationRuleCollections) {
             return applicationRuleCollections(Output.of(applicationRuleCollections));
         }
 
+        /**
+         * @param applicationRuleCollections Collection of application rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationRuleCollections(AzureFirewallApplicationRuleCollectionArgs... applicationRuleCollections) {
             return applicationRuleCollections(List.of(applicationRuleCollections));
         }
 
+        /**
+         * @param azureFirewallName The name of the Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFirewallName(@Nullable Output<String> azureFirewallName) {
             $.azureFirewallName = azureFirewallName;
             return this;
         }
 
+        /**
+         * @param azureFirewallName The name of the Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFirewallName(String azureFirewallName) {
             return azureFirewallName(Output.of(azureFirewallName));
         }
 
+        /**
+         * @param firewallPolicy The firewallPolicy associated with this azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
 
+        /**
+         * @param firewallPolicy The firewallPolicy associated with this azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicy(SubResourceArgs firewallPolicy) {
             return firewallPolicy(Output.of(firewallPolicy));
         }
 
+        /**
+         * @param hubIPAddresses IP addresses associated with AzureFirewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubIPAddresses(@Nullable Output<HubIPAddressesArgs> hubIPAddresses) {
             $.hubIPAddresses = hubIPAddresses;
             return this;
         }
 
+        /**
+         * @param hubIPAddresses IP addresses associated with AzureFirewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubIPAddresses(HubIPAddressesArgs hubIPAddresses) {
             return hubIPAddresses(Output.of(hubIPAddresses));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipConfigurations IP configuration of the Azure Firewall resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<AzureFirewallIPConfigurationArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations IP configuration of the Azure Firewall resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<AzureFirewallIPConfigurationArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations IP configuration of the Azure Firewall resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(AzureFirewallIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managementIpConfiguration IP configuration of the Azure Firewall used for management traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementIpConfiguration(@Nullable Output<AzureFirewallIPConfigurationArgs> managementIpConfiguration) {
             $.managementIpConfiguration = managementIpConfiguration;
             return this;
         }
 
+        /**
+         * @param managementIpConfiguration IP configuration of the Azure Firewall used for management traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementIpConfiguration(AzureFirewallIPConfigurationArgs managementIpConfiguration) {
             return managementIpConfiguration(Output.of(managementIpConfiguration));
         }
 
+        /**
+         * @param natRuleCollections Collection of NAT rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRuleCollections(@Nullable Output<List<AzureFirewallNatRuleCollectionArgs>> natRuleCollections) {
             $.natRuleCollections = natRuleCollections;
             return this;
         }
 
+        /**
+         * @param natRuleCollections Collection of NAT rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRuleCollections(List<AzureFirewallNatRuleCollectionArgs> natRuleCollections) {
             return natRuleCollections(Output.of(natRuleCollections));
         }
 
+        /**
+         * @param natRuleCollections Collection of NAT rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder natRuleCollections(AzureFirewallNatRuleCollectionArgs... natRuleCollections) {
             return natRuleCollections(List.of(natRuleCollections));
         }
 
+        /**
+         * @param networkRuleCollections Collection of network rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleCollections(@Nullable Output<List<AzureFirewallNetworkRuleCollectionArgs>> networkRuleCollections) {
             $.networkRuleCollections = networkRuleCollections;
             return this;
         }
 
+        /**
+         * @param networkRuleCollections Collection of network rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleCollections(List<AzureFirewallNetworkRuleCollectionArgs> networkRuleCollections) {
             return networkRuleCollections(Output.of(networkRuleCollections));
         }
 
+        /**
+         * @param networkRuleCollections Collection of network rule collections used by Azure Firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleCollections(AzureFirewallNetworkRuleCollectionArgs... networkRuleCollections) {
             return networkRuleCollections(List.of(networkRuleCollections));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The Azure Firewall Resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<AzureFirewallSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The Azure Firewall Resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(AzureFirewallSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(@Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
             $.threatIntelMode = threatIntelMode;
             return this;
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
             return threatIntelMode(Output.of(threatIntelMode));
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(String threatIntelMode) {
             return threatIntelMode(Either.ofLeft(threatIntelMode));
         }
 
+        /**
+         * @param threatIntelMode The operation mode for Threat Intelligence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder threatIntelMode(AzureFirewallThreatIntelMode threatIntelMode) {
             return threatIntelMode(Either.ofRight(threatIntelMode));
         }
 
+        /**
+         * @param virtualHub The virtualHub to which the firewall belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             $.virtualHub = virtualHub;
             return this;
         }
 
+        /**
+         * @param virtualHub The virtualHub to which the firewall belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHub(SubResourceArgs virtualHub) {
             return virtualHub(Output.of(virtualHub));
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones A list of availability zones denoting where the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

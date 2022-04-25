@@ -12,65 +12,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdifactDelimiterOverrideResponse {
-    /**
-     * The component separator.
-     * 
-     */
+        /**
+         * @return The component separator.
+         * 
+         */
     private final Integer componentSeparator;
-    /**
-     * The data element separator.
-     * 
-     */
+        /**
+         * @return The data element separator.
+         * 
+         */
     private final Integer dataElementSeparator;
-    /**
-     * The decimal point indicator.
-     * 
-     */
+        /**
+         * @return The decimal point indicator.
+         * 
+         */
     private final String decimalPointIndicator;
-    /**
-     * The message association assigned code.
-     * 
-     */
+        /**
+         * @return The message association assigned code.
+         * 
+         */
     private final @Nullable String messageAssociationAssignedCode;
-    /**
-     * The message id.
-     * 
-     */
+        /**
+         * @return The message id.
+         * 
+         */
     private final @Nullable String messageId;
-    /**
-     * The message release.
-     * 
-     */
+        /**
+         * @return The message release.
+         * 
+         */
     private final @Nullable String messageRelease;
-    /**
-     * The message version.
-     * 
-     */
+        /**
+         * @return The message version.
+         * 
+         */
     private final @Nullable String messageVersion;
-    /**
-     * The release indicator.
-     * 
-     */
+        /**
+         * @return The release indicator.
+         * 
+         */
     private final Integer releaseIndicator;
-    /**
-     * The repetition separator.
-     * 
-     */
+        /**
+         * @return The repetition separator.
+         * 
+         */
     private final Integer repetitionSeparator;
-    /**
-     * The segment terminator.
-     * 
-     */
+        /**
+         * @return The segment terminator.
+         * 
+         */
     private final Integer segmentTerminator;
-    /**
-     * The segment terminator suffix.
-     * 
-     */
+        /**
+         * @return The segment terminator suffix.
+         * 
+         */
     private final String segmentTerminatorSuffix;
-    /**
-     * The target namespace on which this delimiter settings has to be applied.
-     * 
-     */
+        /**
+         * @return The target namespace on which this delimiter settings has to be applied.
+         * 
+         */
     private final @Nullable String targetNamespace;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class EdifactDelimiterOverrideResponse {
     }
 
     /**
-     * The component separator.
+     * @return The component separator.
      * 
-    */
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
-     * The data element separator.
+     * @return The data element separator.
      * 
-    */
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
-     * The decimal point indicator.
+     * @return The decimal point indicator.
      * 
-    */
+     */
     public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
     /**
-     * The message association assigned code.
+     * @return The message association assigned code.
      * 
-    */
+     */
     public Optional<String> messageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
     /**
-     * The message id.
+     * @return The message id.
      * 
-    */
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
-     * The message release.
+     * @return The message release.
      * 
-    */
+     */
     public Optional<String> messageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
     /**
-     * The message version.
+     * @return The message version.
      * 
-    */
+     */
     public Optional<String> messageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
     /**
-     * The release indicator.
+     * @return The release indicator.
      * 
-    */
+     */
     public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
     /**
-     * The repetition separator.
+     * @return The repetition separator.
      * 
-    */
+     */
     public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
     /**
-     * The segment terminator.
+     * @return The segment terminator.
      * 
-    */
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
-     * The segment terminator suffix.
+     * @return The segment terminator suffix.
      * 
-    */
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
-     * The target namespace on which this delimiter settings has to be applied.
+     * @return The target namespace on which this delimiter settings has to be applied.
      * 
-    */
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }

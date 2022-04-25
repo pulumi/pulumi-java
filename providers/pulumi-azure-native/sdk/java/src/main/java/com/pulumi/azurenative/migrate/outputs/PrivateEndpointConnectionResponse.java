@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
-    /**
-     * For optimistic concurrency control.
-     * 
-     */
+        /**
+         * @return For optimistic concurrency control.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
-     * 
-     */
+        /**
+         * @return Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
+         * 
+         */
     private final String id;
-    /**
-     * Name of the private endpoint endpoint connection.
-     * 
-     */
+        /**
+         * @return Name of the private endpoint endpoint connection.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the private endpoint endpoint connection.
-     * 
-     */
+        /**
+         * @return Properties of the private endpoint endpoint connection.
+         * 
+         */
     private final PrivateEndpointConnectionPropertiesResponse properties;
-    /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
-     * 
-     */
+        /**
+         * @return Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * For optimistic concurrency control.
+     * @return For optimistic concurrency control.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
+     * @return Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the private endpoint endpoint connection.
+     * @return Name of the private endpoint endpoint connection.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the private endpoint endpoint connection.
+     * @return Properties of the private endpoint endpoint connection.
      * 
-    */
+     */
     public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

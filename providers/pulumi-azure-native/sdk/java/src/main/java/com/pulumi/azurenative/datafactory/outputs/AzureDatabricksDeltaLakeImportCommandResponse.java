@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureDatabricksDeltaLakeImportCommandResponse {
-    /**
-     * Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object dateFormat;
-    /**
-     * Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object timestampFormat;
-    /**
-     * The import setting type.
-     * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
-     * 
-     */
+        /**
+         * @return The import setting type.
+         * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse {
     }
 
     /**
-     * Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * @return Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> dateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
-     * Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     * @return Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> timestampFormat() {
         return Optional.ofNullable(this.timestampFormat);
     }
     /**
-     * The import setting type.
+     * @return The import setting type.
      * Expected value is &#39;AzureDatabricksDeltaLakeImportCommand&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

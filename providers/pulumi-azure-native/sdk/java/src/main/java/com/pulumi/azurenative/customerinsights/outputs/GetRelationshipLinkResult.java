@@ -14,75 +14,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRelationshipLinkResult {
-    /**
-     * Localized descriptions for the Relationship Link.
-     * 
-     */
+        /**
+         * @return Localized descriptions for the Relationship Link.
+         * 
+         */
     private final @Nullable Map<String,String> description;
-    /**
-     * Localized display name for the Relationship Link.
-     * 
-     */
+        /**
+         * @return Localized display name for the Relationship Link.
+         * 
+         */
     private final @Nullable Map<String,String> displayName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The InteractionType associated with the Relationship Link.
-     * 
-     */
+        /**
+         * @return The InteractionType associated with the Relationship Link.
+         * 
+         */
     private final String interactionType;
-    /**
-     * The name of the Relationship Link.
-     * 
-     */
+        /**
+         * @return The name of the Relationship Link.
+         * 
+         */
     private final String linkName;
-    /**
-     * The mappings between Interaction and Relationship fields.
-     * 
-     */
+        /**
+         * @return The mappings between Interaction and Relationship fields.
+         * 
+         */
     private final @Nullable List<RelationshipLinkFieldMappingResponse> mappings;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The property references for the Profile of the Relationship.
-     * 
-     */
+        /**
+         * @return The property references for the Profile of the Relationship.
+         * 
+         */
     private final List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The property references for the Related Profile of the Relationship.
-     * 
-     */
+        /**
+         * @return The property references for the Related Profile of the Relationship.
+         * 
+         */
     private final List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences;
-    /**
-     * The relationship guid id.
-     * 
-     */
+        /**
+         * @return The relationship guid id.
+         * 
+         */
     private final String relationshipGuidId;
-    /**
-     * The Relationship associated with the Link.
-     * 
-     */
+        /**
+         * @return The Relationship associated with the Link.
+         * 
+         */
     private final String relationshipName;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -118,100 +118,100 @@ public final class GetRelationshipLinkResult {
     }
 
     /**
-     * Localized descriptions for the Relationship Link.
+     * @return Localized descriptions for the Relationship Link.
      * 
-    */
+     */
     public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
-     * Localized display name for the Relationship Link.
+     * @return Localized display name for the Relationship Link.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The InteractionType associated with the Relationship Link.
+     * @return The InteractionType associated with the Relationship Link.
      * 
-    */
+     */
     public String interactionType() {
         return this.interactionType;
     }
     /**
-     * The name of the Relationship Link.
+     * @return The name of the Relationship Link.
      * 
-    */
+     */
     public String linkName() {
         return this.linkName;
     }
     /**
-     * The mappings between Interaction and Relationship fields.
+     * @return The mappings between Interaction and Relationship fields.
      * 
-    */
+     */
     public List<RelationshipLinkFieldMappingResponse> mappings() {
         return this.mappings == null ? List.of() : this.mappings;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The property references for the Profile of the Relationship.
+     * @return The property references for the Profile of the Relationship.
      * 
-    */
+     */
     public List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences() {
         return this.profilePropertyReferences;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The property references for the Related Profile of the Relationship.
+     * @return The property references for the Related Profile of the Relationship.
      * 
-    */
+     */
     public List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
     /**
-     * The relationship guid id.
+     * @return The relationship guid id.
      * 
-    */
+     */
     public String relationshipGuidId() {
         return this.relationshipGuidId;
     }
     /**
-     * The Relationship associated with the Link.
+     * @return The Relationship associated with the Link.
      * 
-    */
+     */
     public String relationshipName() {
         return this.relationshipName;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

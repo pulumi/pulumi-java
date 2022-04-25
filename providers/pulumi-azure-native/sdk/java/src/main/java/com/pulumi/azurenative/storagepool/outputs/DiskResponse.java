@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DiskResponse {
-    /**
-     * Unique Azure Resource ID of the Managed Disk.
-     * 
-     */
+        /**
+         * @return Unique Azure Resource ID of the Managed Disk.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DiskResponse {
     }
 
     /**
-     * Unique Azure Resource ID of the Managed Disk.
+     * @return Unique Azure Resource ID of the Managed Disk.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpnClientRevokedCertificateResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the VPN client revoked certificate resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the VPN client revoked certificate resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The revoked VPN client certificate thumbprint.
-     * 
-     */
+        /**
+         * @return The revoked VPN client certificate thumbprint.
+         * 
+         */
     private final @Nullable String thumbprint;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class VpnClientRevokedCertificateResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the VPN client revoked certificate resource.
+     * @return The provisioning state of the VPN client revoked certificate resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The revoked VPN client certificate thumbprint.
+     * @return The revoked VPN client certificate thumbprint.
      * 
-    */
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

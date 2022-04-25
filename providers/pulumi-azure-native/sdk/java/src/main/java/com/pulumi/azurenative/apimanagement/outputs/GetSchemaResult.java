@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSchemaResult {
-    /**
-     * Free-form schema entity description.
-     * 
-     */
+        /**
+         * @return Free-form schema entity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Schema Type. Immutable.
-     * 
-     */
+        /**
+         * @return Schema Type. Immutable.
+         * 
+         */
     private final String schemaType;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Json-encoded string for non json-based schema.
-     * 
-     */
+        /**
+         * @return Json-encoded string for non json-based schema.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetSchemaResult {
     }
 
     /**
-     * Free-form schema entity description.
+     * @return Free-form schema entity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Schema Type. Immutable.
+     * @return Schema Type. Immutable.
      * 
-    */
+     */
     public String schemaType() {
         return this.schemaType;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Json-encoded string for non json-based schema.
+     * @return Json-encoded string for non json-based schema.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

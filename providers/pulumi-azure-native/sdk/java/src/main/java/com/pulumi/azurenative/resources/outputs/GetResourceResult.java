@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceResult {
-    /**
-     * Resource ID
-     * 
-     */
+        /**
+         * @return Resource ID
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the resource.
-     * 
-     */
+        /**
+         * @return The identity of the resource.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * The kind of the resource.
-     * 
-     */
+        /**
+         * @return The kind of the resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * ID of the resource that manages this resource.
-     * 
-     */
+        /**
+         * @return ID of the resource that manages this resource.
+         * 
+         */
     private final @Nullable String managedBy;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The plan of the resource.
-     * 
-     */
+        /**
+         * @return The plan of the resource.
+         * 
+         */
     private final @Nullable PlanResponse plan;
-    /**
-     * The resource properties.
-     * 
-     */
+        /**
+         * @return The resource properties.
+         * 
+         */
     private final Object properties;
-    /**
-     * The SKU of the resource.
-     * 
-     */
+        /**
+         * @return The SKU of the resource.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class GetResourceResult {
     }
 
     /**
-     * Resource ID
+     * @return Resource ID
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The kind of the resource.
+     * @return The kind of the resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * ID of the resource that manages this resource.
+     * @return ID of the resource that manages this resource.
      * 
-    */
+     */
     public Optional<String> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The plan of the resource.
+     * @return The plan of the resource.
      * 
-    */
+     */
     public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * The resource properties.
+     * @return The resource properties.
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * The SKU of the resource.
+     * @return The SKU of the resource.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

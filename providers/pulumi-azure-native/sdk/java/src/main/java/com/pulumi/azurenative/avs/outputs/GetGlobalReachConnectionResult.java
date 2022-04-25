@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGlobalReachConnectionResult {
-    /**
-     * The network used for global reach carved out from the original network block provided for the private cloud
-     * 
-     */
+        /**
+         * @return The network used for global reach carved out from the original network block provided for the private cloud
+         * 
+         */
     private final String addressPrefix;
-    /**
-     * Authorization key from the peer express route used for the global reach connection
-     * 
-     */
+        /**
+         * @return Authorization key from the peer express route used for the global reach connection
+         * 
+         */
     private final @Nullable String authorizationKey;
-    /**
-     * The connection status of the global reach connection
-     * 
-     */
+        /**
+         * @return The connection status of the global reach connection
+         * 
+         */
     private final String circuitConnectionStatus;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
-     * 
-     */
+        /**
+         * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+         * 
+         */
     private final @Nullable String peerExpressRouteCircuit;
-    /**
-     * The state of the  ExpressRoute Circuit Authorization provisioning
-     * 
-     */
+        /**
+         * @return The state of the  ExpressRoute Circuit Authorization provisioning
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetGlobalReachConnectionResult {
     }
 
     /**
-     * The network used for global reach carved out from the original network block provided for the private cloud
+     * @return The network used for global reach carved out from the original network block provided for the private cloud
      * 
-    */
+     */
     public String addressPrefix() {
         return this.addressPrefix;
     }
     /**
-     * Authorization key from the peer express route used for the global reach connection
+     * @return Authorization key from the peer express route used for the global reach connection
      * 
-    */
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
     /**
-     * The connection status of the global reach connection
+     * @return The connection status of the global reach connection
      * 
-    */
+     */
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
      * 
-    */
+     */
     public Optional<String> peerExpressRouteCircuit() {
         return Optional.ofNullable(this.peerExpressRouteCircuit);
     }
     /**
-     * The state of the  ExpressRoute Circuit Authorization provisioning
+     * @return The state of the  ExpressRoute Circuit Authorization provisioning
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FailoverSetResponse {
-    /**
-     * The eligibility result of the failover set, for failover.
-     * 
-     */
+        /**
+         * @return The eligibility result of the failover set, for failover.
+         * 
+         */
     private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
-    /**
-     * The list of meta data of volume containers, which are part of the failover set.
-     * 
-     */
+        /**
+         * @return The list of meta data of volume containers, which are part of the failover set.
+         * 
+         */
     private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class FailoverSetResponse {
     }
 
     /**
-     * The eligibility result of the failover set, for failover.
+     * @return The eligibility result of the failover set, for failover.
      * 
-    */
+     */
     public Optional<FailoverSetEligibilityResultResponse> eligibilityResult() {
         return Optional.ofNullable(this.eligibilityResult);
     }
     /**
-     * The list of meta data of volume containers, which are part of the failover set.
+     * @return The list of meta data of volume containers, which are part of the failover set.
      * 
-    */
+     */
     public List<VolumeContainerFailoverMetadataResponse> volumeContainers() {
         return this.volumeContainers == null ? List.of() : this.volumeContainers;
     }

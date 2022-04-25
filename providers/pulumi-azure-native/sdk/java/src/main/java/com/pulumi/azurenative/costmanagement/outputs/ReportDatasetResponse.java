@@ -17,30 +17,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportDatasetResponse {
-    /**
-     * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     * 
-     */
+        /**
+         * @return Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+         * 
+         */
     private final @Nullable Map<String,ReportAggregationResponse> aggregation;
-    /**
-     * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     * 
-     */
+        /**
+         * @return Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+         * 
+         */
     private final @Nullable ReportDatasetConfigurationResponse configuration;
-    /**
-     * Has filter expression to use in the report.
-     * 
-     */
+        /**
+         * @return Has filter expression to use in the report.
+         * 
+         */
     private final @Nullable ReportFilterResponse filter;
-    /**
-     * The granularity of rows in the report.
-     * 
-     */
+        /**
+         * @return The granularity of rows in the report.
+         * 
+         */
     private final @Nullable String granularity;
-    /**
-     * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     * 
-     */
+        /**
+         * @return Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+         * 
+         */
     private final @Nullable List<ReportGroupingResponse> grouping;
 
     @CustomType.Constructor
@@ -58,37 +58,37 @@ public final class ReportDatasetResponse {
     }
 
     /**
-     * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+     * @return Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
      * 
-    */
+     */
     public Map<String,ReportAggregationResponse> aggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
     /**
-     * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+     * @return Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
      * 
-    */
+     */
     public Optional<ReportDatasetConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * Has filter expression to use in the report.
+     * @return Has filter expression to use in the report.
      * 
-    */
+     */
     public Optional<ReportFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The granularity of rows in the report.
+     * @return The granularity of rows in the report.
      * 
-    */
+     */
     public Optional<String> granularity() {
         return Optional.ofNullable(this.granularity);
     }
     /**
-     * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+     * @return Array of group by expression to use in the report. Report can have up to 2 group by clauses.
      * 
-    */
+     */
     public List<ReportGroupingResponse> grouping() {
         return this.grouping == null ? List.of() : this.grouping;
     }

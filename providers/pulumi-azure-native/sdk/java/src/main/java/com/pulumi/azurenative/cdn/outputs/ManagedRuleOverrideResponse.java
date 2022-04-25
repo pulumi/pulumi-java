@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedRuleOverrideResponse {
-    /**
-     * Describes the override action to be applied when rule matches.
-     * 
-     */
+        /**
+         * @return Describes the override action to be applied when rule matches.
+         * 
+         */
     private final @Nullable String action;
-    /**
-     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
-     * 
-     */
+        /**
+         * @return Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+         * 
+         */
     private final @Nullable String enabledState;
-    /**
-     * Identifier for the managed rule.
-     * 
-     */
+        /**
+         * @return Identifier for the managed rule.
+         * 
+         */
     private final String ruleId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ManagedRuleOverrideResponse {
     }
 
     /**
-     * Describes the override action to be applied when rule matches.
+     * @return Describes the override action to be applied when rule matches.
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
+     * @return Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * Identifier for the managed rule.
+     * @return Identifier for the managed rule.
      * 
-    */
+     */
     public String ruleId() {
         return this.ruleId;
     }

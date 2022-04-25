@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTestBaseAccountResult {
-    /**
-     * The access level of the Test Base Account.
-     * 
-     */
+        /**
+         * @return The access level of the Test Base Account.
+         * 
+         */
     private final String accessLevel;
-    /**
-     * Resource Etag.
-     * 
-     */
+        /**
+         * @return Resource Etag.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The SKU of the Test Base Account.
-     * 
-     */
+        /**
+         * @return The SKU of the Test Base Account.
+         * 
+         */
     private final TestBaseAccountSKUResponse sku;
-    /**
-     * The system metadata relating to this resource
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetTestBaseAccountResult {
     }
 
     /**
-     * The access level of the Test Base Account.
+     * @return The access level of the Test Base Account.
      * 
-    */
+     */
     public String accessLevel() {
         return this.accessLevel;
     }
     /**
-     * Resource Etag.
+     * @return Resource Etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the Test Base Account.
+     * @return The SKU of the Test Base Account.
      * 
-    */
+     */
     public TestBaseAccountSKUResponse sku() {
         return this.sku;
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

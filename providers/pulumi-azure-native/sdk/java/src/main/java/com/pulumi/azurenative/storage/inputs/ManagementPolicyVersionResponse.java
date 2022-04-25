@@ -25,6 +25,10 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
     @Import(name="delete")
     private @Nullable DateAfterCreationResponse delete;
 
+    /**
+     * @return The function to delete the blob version
+     * 
+     */
     public Optional<DateAfterCreationResponse> delete() {
         return Optional.ofNullable(this.delete);
     }
@@ -36,6 +40,10 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
     @Import(name="tierToArchive")
     private @Nullable DateAfterCreationResponse tierToArchive;
 
+    /**
+     * @return The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
+     * 
+     */
     public Optional<DateAfterCreationResponse> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
@@ -47,6 +55,10 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
     @Import(name="tierToCool")
     private @Nullable DateAfterCreationResponse tierToCool;
 
+    /**
+     * @return The function to tier blob version to cool storage. Support blob version currently at Hot tier
+     * 
+     */
     public Optional<DateAfterCreationResponse> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }
@@ -77,16 +89,34 @@ public final class ManagementPolicyVersionResponse extends com.pulumi.resources.
             $ = new ManagementPolicyVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delete The function to delete the blob version
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(@Nullable DateAfterCreationResponse delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param tierToArchive The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
             $.tierToArchive = tierToArchive;
             return this;
         }
 
+        /**
+         * @param tierToCool The function to tier blob version to cool storage. Support blob version currently at Hot tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToCool(@Nullable DateAfterCreationResponse tierToCool) {
             $.tierToCool = tierToCool;
             return this;

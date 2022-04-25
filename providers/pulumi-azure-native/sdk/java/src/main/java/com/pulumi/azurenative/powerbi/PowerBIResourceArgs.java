@@ -25,6 +25,10 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="azureResourceName")
     private @Nullable Output<String> azureResourceName;
 
+    /**
+     * @return The name of the Azure resource.
+     * 
+     */
     public Optional<Output<String>> azureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
@@ -36,6 +40,10 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateEndpointConnections")
     private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
+    /**
+     * @return Specifies the private endpoint connections of the resource.
+     * 
+     */
     public Optional<Output<List<PrivateEndpointConnectionArgs>>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -58,6 +70,10 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Specifies the tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Specifies the tenant id of the resource.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -113,60 +137,138 @@ public final class PowerBIResourceArgs extends com.pulumi.resources.ResourceArgs
             $ = new PowerBIResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureResourceName The name of the Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceName(@Nullable Output<String> azureResourceName) {
             $.azureResourceName = azureResourceName;
             return this;
         }
 
+        /**
+         * @param azureResourceName The name of the Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureResourceName(String azureResourceName) {
             return azureResourceName(Output.of(azureResourceName));
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param privateEndpointConnections Specifies the private endpoint connections of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections Specifies the private endpoint connections of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             return privateEndpointConnections(Output.of(privateEndpointConnections));
         }
 
+        /**
+         * @param privateEndpointConnections Specifies the private endpoint connections of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Specifies the tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Specifies the tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tenantId Specifies the tenant id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Specifies the tenant id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

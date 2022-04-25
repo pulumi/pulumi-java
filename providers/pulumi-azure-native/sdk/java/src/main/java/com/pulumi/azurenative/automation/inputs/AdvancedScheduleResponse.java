@@ -28,6 +28,10 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
     @Import(name="monthDays")
     private @Nullable List<Integer> monthDays;
 
+    /**
+     * @return Days of the month that the job should execute on. Must be between 1 and 31.
+     * 
+     */
     public Optional<List<Integer>> monthDays() {
         return Optional.ofNullable(this.monthDays);
     }
@@ -39,6 +43,10 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
     @Import(name="monthlyOccurrences")
     private @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
+    /**
+     * @return Occurrences of days within a month.
+     * 
+     */
     public Optional<List<AdvancedScheduleMonthlyOccurrenceResponse>> monthlyOccurrences() {
         return Optional.ofNullable(this.monthlyOccurrences);
     }
@@ -50,6 +58,10 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
     @Import(name="weekDays")
     private @Nullable List<String> weekDays;
 
+    /**
+     * @return Days of the week that the job should execute on.
+     * 
+     */
     public Optional<List<String>> weekDays() {
         return Optional.ofNullable(this.weekDays);
     }
@@ -80,29 +92,65 @@ public final class AdvancedScheduleResponse extends com.pulumi.resources.InvokeA
             $ = new AdvancedScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monthDays Days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(@Nullable List<Integer> monthDays) {
             $.monthDays = monthDays;
             return this;
         }
 
+        /**
+         * @param monthDays Days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
 
+        /**
+         * @param monthlyOccurrences Occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
             $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
+        /**
+         * @param monthlyOccurrences Occurrences of days within a month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceResponse... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
 
+        /**
+         * @param weekDays Days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(@Nullable List<String> weekDays) {
             $.weekDays = weekDays;
             return this;
         }
 
+        /**
+         * @param weekDays Days of the week that the job should execute on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
         }

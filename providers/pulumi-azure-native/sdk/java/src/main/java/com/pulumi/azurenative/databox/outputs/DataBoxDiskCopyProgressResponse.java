@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class DataBoxDiskCopyProgressResponse {
-    /**
-     * Bytes copied during the copy of disk.
-     * 
-     */
+        /**
+         * @return Bytes copied during the copy of disk.
+         * 
+         */
     private final Double bytesCopied;
-    /**
-     * Indicates the percentage completed for the copy of the disk.
-     * 
-     */
+        /**
+         * @return Indicates the percentage completed for the copy of the disk.
+         * 
+         */
     private final Integer percentComplete;
-    /**
-     * The serial number of the disk
-     * 
-     */
+        /**
+         * @return The serial number of the disk
+         * 
+         */
     private final String serialNumber;
-    /**
-     * The Status of the copy
-     * 
-     */
+        /**
+         * @return The Status of the copy
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class DataBoxDiskCopyProgressResponse {
     }
 
     /**
-     * Bytes copied during the copy of disk.
+     * @return Bytes copied during the copy of disk.
      * 
-    */
+     */
     public Double bytesCopied() {
         return this.bytesCopied;
     }
     /**
-     * Indicates the percentage completed for the copy of the disk.
+     * @return Indicates the percentage completed for the copy of the disk.
      * 
-    */
+     */
     public Integer percentComplete() {
         return this.percentComplete;
     }
     /**
-     * The serial number of the disk
+     * @return The serial number of the disk
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * The Status of the copy
+     * @return The Status of the copy
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

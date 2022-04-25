@@ -23,81 +23,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureBlobDatasetResponse {
-    /**
-     * List of tags that can be used for describing the Dataset.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the Dataset.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The data compression method used for the blob storage.
-     * 
-     */
+        /**
+         * @return The data compression method used for the blob storage.
+         * 
+         */
     private final @Nullable DatasetCompressionResponse compression;
-    /**
-     * Dataset description.
-     * 
-     */
+        /**
+         * @return Dataset description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The name of the Azure Blob. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the Azure Blob. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object fileName;
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
-     */
+        /**
+         * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         */
     private final @Nullable DatasetResponseFolder folder;
-    /**
-     * The path of the Azure Blob storage. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The path of the Azure Blob storage. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object folderPath;
-    /**
-     * The format of the Azure Blob storage.
-     * 
-     */
+        /**
+         * @return The format of the Azure Blob storage.
+         * 
+         */
     private final @Nullable Object format;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object modifiedDatetimeEnd;
-    /**
-     * The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object modifiedDatetimeStart;
-    /**
-     * Parameters for dataset.
-     * 
-     */
+        /**
+         * @return Parameters for dataset.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
-     */
+        /**
+         * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         */
     private final @Nullable Object schema;
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
-     */
+        /**
+         * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         */
     private final @Nullable Object structure;
-    /**
-     * The root of blob path. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The root of blob path. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object tableRootLocation;
-    /**
-     * Type of dataset.
-     * Expected value is &#39;AzureBlob&#39;.
-     * 
-     */
+        /**
+         * @return Type of dataset.
+         * Expected value is &#39;AzureBlob&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -135,108 +135,108 @@ public final class AzureBlobDatasetResponse {
     }
 
     /**
-     * List of tags that can be used for describing the Dataset.
+     * @return List of tags that can be used for describing the Dataset.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The data compression method used for the blob storage.
+     * @return The data compression method used for the blob storage.
      * 
-    */
+     */
     public Optional<DatasetCompressionResponse> compression() {
         return Optional.ofNullable(this.compression);
     }
     /**
-     * Dataset description.
+     * @return Dataset description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the Azure Blob. Type: string (or Expression with resultType string).
+     * @return The name of the Azure Blob. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-    */
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * The path of the Azure Blob storage. Type: string (or Expression with resultType string).
+     * @return The path of the Azure Blob storage. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
-     * The format of the Azure Blob storage.
+     * @return The format of the Azure Blob storage.
      * 
-    */
+     */
     public Optional<Object> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * @return The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
     /**
-     * The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * @return The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
     /**
-     * Parameters for dataset.
+     * @return Parameters for dataset.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-    */
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-    */
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
-     * The root of blob path. Type: string (or Expression with resultType string).
+     * @return The root of blob path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> tableRootLocation() {
         return Optional.ofNullable(this.tableRootLocation);
     }
     /**
-     * Type of dataset.
+     * @return Type of dataset.
      * Expected value is &#39;AzureBlob&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

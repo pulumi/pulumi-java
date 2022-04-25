@@ -25,175 +25,175 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The list of add-on features to enable in the cluster.
-     * 
-     */
+        /**
+         * @return The list of add-on features to enable in the cluster.
+         * 
+         */
     private final @Nullable List<String> addOnFeatures;
-    /**
-     * The policy used to clean up unused versions.
-     * 
-     */
+        /**
+         * @return The policy used to clean up unused versions.
+         * 
+         */
     private final @Nullable ApplicationTypeVersionsCleanupPolicyResponse applicationTypeVersionsCleanupPolicy;
-    /**
-     * The Service Fabric runtime versions available for this cluster.
-     * 
-     */
+        /**
+         * @return The Service Fabric runtime versions available for this cluster.
+         * 
+         */
     private final List<ClusterVersionDetailsResponse> availableClusterVersions;
-    /**
-     * The AAD authentication settings of the cluster.
-     * 
-     */
+        /**
+         * @return The AAD authentication settings of the cluster.
+         * 
+         */
     private final @Nullable AzureActiveDirectoryResponse azureActiveDirectory;
-    /**
-     * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
-     * 
-     */
+        /**
+         * @return The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
+         * 
+         */
     private final @Nullable CertificateDescriptionResponse certificate;
-    /**
-     * Describes a list of server certificates referenced by common name that are used to secure the cluster.
-     * 
-     */
+        /**
+         * @return Describes a list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         */
     private final @Nullable ServerCertificateCommonNamesResponse certificateCommonNames;
-    /**
-     * The list of client certificates referenced by common name that are allowed to manage the cluster.
-     * 
-     */
+        /**
+         * @return The list of client certificates referenced by common name that are allowed to manage the cluster.
+         * 
+         */
     private final @Nullable List<ClientCertificateCommonNameResponse> clientCertificateCommonNames;
-    /**
-     * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
-     * 
-     */
+        /**
+         * @return The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
+         * 
+         */
     private final @Nullable List<ClientCertificateThumbprintResponse> clientCertificateThumbprints;
-    /**
-     * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     * 
-     */
+        /**
+         * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
+         * 
+         */
     private final @Nullable String clusterCodeVersion;
-    /**
-     * The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
-     * 
-     */
+        /**
+         * @return The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
+         * 
+         */
     private final String clusterEndpoint;
-    /**
-     * A service generated unique identifier for the cluster resource.
-     * 
-     */
+        /**
+         * @return A service generated unique identifier for the cluster resource.
+         * 
+         */
     private final String clusterId;
-    /**
-     * The current state of the cluster.
-     * 
-     *   - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
-     *   - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
-     *   - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
-     *   - UpdatingUserConfiguration - Indicates that the cluster is being upgraded with the user provided configuration.
-     *   - UpdatingUserCertificate - Indicates that the cluster is being upgraded with the user provided certificate.
-     *   - UpdatingInfrastructure - Indicates that the cluster is being upgraded with the latest Service Fabric runtime version. This happens only when the **upgradeMode** is set to &#39;Automatic&#39;.
-     *   - EnforcingClusterVersion - Indicates that cluster is on a different version than expected and the cluster is being upgraded to the expected version.
-     *   - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
-     *   - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
-     *   - Ready - Indicates that the cluster is in a stable state.
-     * 
-     */
+        /**
+         * @return The current state of the cluster.
+         * 
+         *   - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
+         *   - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
+         *   - BaselineUpgrade - Indicates that the cluster is upgrading to establishes the cluster version. This upgrade is automatically initiated when the cluster boots up for the first time.
+         *   - UpdatingUserConfiguration - Indicates that the cluster is being upgraded with the user provided configuration.
+         *   - UpdatingUserCertificate - Indicates that the cluster is being upgraded with the user provided certificate.
+         *   - UpdatingInfrastructure - Indicates that the cluster is being upgraded with the latest Service Fabric runtime version. This happens only when the **upgradeMode** is set to &#39;Automatic&#39;.
+         *   - EnforcingClusterVersion - Indicates that cluster is on a different version than expected and the cluster is being upgraded to the expected version.
+         *   - UpgradeServiceUnreachable - Indicates that the system service in the cluster is no longer polling the Resource Provider. Clusters in this state cannot be managed by the Resource Provider.
+         *   - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
+         *   - Ready - Indicates that the cluster is in a stable state.
+         * 
+         */
     private final String clusterState;
-    /**
-     * The storage account information for storing Service Fabric diagnostic logs.
-     * 
-     */
+        /**
+         * @return The storage account information for storing Service Fabric diagnostic logs.
+         * 
+         */
     private final @Nullable DiagnosticsStorageAccountConfigResponse diagnosticsStorageAccountConfig;
-    /**
-     * Azure resource etag.
-     * 
-     */
+        /**
+         * @return Azure resource etag.
+         * 
+         */
     private final String etag;
-    /**
-     * Indicates if the event store service is enabled.
-     * 
-     */
+        /**
+         * @return Indicates if the event store service is enabled.
+         * 
+         */
     private final @Nullable Boolean eventStoreServiceEnabled;
-    /**
-     * The list of custom fabric settings to configure the cluster.
-     * 
-     */
+        /**
+         * @return The list of custom fabric settings to configure the cluster.
+         * 
+         */
     private final @Nullable List<SettingsSectionDescriptionResponse> fabricSettings;
-    /**
-     * Azure resource identifier.
-     * 
-     */
+        /**
+         * @return Azure resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * Azure resource location.
-     * 
-     */
+        /**
+         * @return Azure resource location.
+         * 
+         */
     private final String location;
-    /**
-     * The http management endpoint of the cluster.
-     * 
-     */
+        /**
+         * @return The http management endpoint of the cluster.
+         * 
+         */
     private final String managementEndpoint;
-    /**
-     * Azure resource name.
-     * 
-     */
+        /**
+         * @return Azure resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The list of node types in the cluster.
-     * 
-     */
+        /**
+         * @return The list of node types in the cluster.
+         * 
+         */
     private final List<NodeTypeDescriptionResponse> nodeTypes;
-    /**
-     * The provisioning state of the cluster resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the cluster resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
-     * 
-     *   - None - Run the System services with a target replica set count of 1. This should only be used for test clusters.
-     *   - Bronze - Run the System services with a target replica set count of 3. This should only be used for test clusters.
-     *   - Silver - Run the System services with a target replica set count of 5.
-     *   - Gold - Run the System services with a target replica set count of 7.
-     *   - Platinum - Run the System services with a target replica set count of 9.
-     * 
-     */
+        /**
+         * @return The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+         * 
+         *   - None - Run the System services with a target replica set count of 1. This should only be used for test clusters.
+         *   - Bronze - Run the System services with a target replica set count of 3. This should only be used for test clusters.
+         *   - Silver - Run the System services with a target replica set count of 5.
+         *   - Gold - Run the System services with a target replica set count of 7.
+         *   - Platinum - Run the System services with a target replica set count of 9.
+         * 
+         */
     private final @Nullable String reliabilityLevel;
-    /**
-     * The server certificate used by reverse proxy.
-     * 
-     */
+        /**
+         * @return The server certificate used by reverse proxy.
+         * 
+         */
     private final @Nullable CertificateDescriptionResponse reverseProxyCertificate;
-    /**
-     * Describes a list of server certificates referenced by common name that are used to secure the cluster.
-     * 
-     */
+        /**
+         * @return Describes a list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         */
     private final @Nullable ServerCertificateCommonNamesResponse reverseProxyCertificateCommonNames;
-    /**
-     * Azure resource tags.
-     * 
-     */
+        /**
+         * @return Azure resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure resource type.
-     * 
-     */
+        /**
+         * @return Azure resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The policy to use when upgrading the cluster.
-     * 
-     */
+        /**
+         * @return The policy to use when upgrading the cluster.
+         * 
+         */
     private final @Nullable ClusterUpgradePolicyResponse upgradeDescription;
-    /**
-     * The upgrade mode of the cluster when new Service Fabric runtime version is available.
-     * 
-     *   - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
-     *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
-     * 
-     */
+        /**
+         * @return The upgrade mode of the cluster when new Service Fabric runtime version is available.
+         * 
+         *   - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
+         *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
+         * 
+         */
     private final @Nullable String upgradeMode;
-    /**
-     * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
-     * 
-     */
+        /**
+         * @return The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
+         * 
+         */
     private final @Nullable String vmImage;
 
     @CustomType.Constructor
@@ -261,84 +261,84 @@ public final class GetClusterResult {
     }
 
     /**
-     * The list of add-on features to enable in the cluster.
+     * @return The list of add-on features to enable in the cluster.
      * 
-    */
+     */
     public List<String> addOnFeatures() {
         return this.addOnFeatures == null ? List.of() : this.addOnFeatures;
     }
     /**
-     * The policy used to clean up unused versions.
+     * @return The policy used to clean up unused versions.
      * 
-    */
+     */
     public Optional<ApplicationTypeVersionsCleanupPolicyResponse> applicationTypeVersionsCleanupPolicy() {
         return Optional.ofNullable(this.applicationTypeVersionsCleanupPolicy);
     }
     /**
-     * The Service Fabric runtime versions available for this cluster.
+     * @return The Service Fabric runtime versions available for this cluster.
      * 
-    */
+     */
     public List<ClusterVersionDetailsResponse> availableClusterVersions() {
         return this.availableClusterVersions;
     }
     /**
-     * The AAD authentication settings of the cluster.
+     * @return The AAD authentication settings of the cluster.
      * 
-    */
+     */
     public Optional<AzureActiveDirectoryResponse> azureActiveDirectory() {
         return Optional.ofNullable(this.azureActiveDirectory);
     }
     /**
-     * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
+     * @return The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
      * 
-    */
+     */
     public Optional<CertificateDescriptionResponse> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
-     * Describes a list of server certificates referenced by common name that are used to secure the cluster.
+     * @return Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
-    */
+     */
     public Optional<ServerCertificateCommonNamesResponse> certificateCommonNames() {
         return Optional.ofNullable(this.certificateCommonNames);
     }
     /**
-     * The list of client certificates referenced by common name that are allowed to manage the cluster.
+     * @return The list of client certificates referenced by common name that are allowed to manage the cluster.
      * 
-    */
+     */
     public List<ClientCertificateCommonNameResponse> clientCertificateCommonNames() {
         return this.clientCertificateCommonNames == null ? List.of() : this.clientCertificateCommonNames;
     }
     /**
-     * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
+     * @return The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
      * 
-    */
+     */
     public List<ClientCertificateThumbprintResponse> clientCertificateThumbprints() {
         return this.clientCertificateThumbprints == null ? List.of() : this.clientCertificateThumbprints;
     }
     /**
-     * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
+     * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
-    */
+     */
     public Optional<String> clusterCodeVersion() {
         return Optional.ofNullable(this.clusterCodeVersion);
     }
     /**
-     * The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
+     * @return The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
      * 
-    */
+     */
     public String clusterEndpoint() {
         return this.clusterEndpoint;
     }
     /**
-     * A service generated unique identifier for the cluster resource.
+     * @return A service generated unique identifier for the cluster resource.
      * 
-    */
+     */
     public String clusterId() {
         return this.clusterId;
     }
     /**
-     * The current state of the cluster.
+     * @return The current state of the cluster.
      * 
      *   - WaitingForNodes - Indicates that the cluster resource is created and the resource provider is waiting for Service Fabric VM extension to boot up and report to it.
      *   - Deploying - Indicates that the Service Fabric runtime is being installed on the VMs. Cluster resource will be in this state until the cluster boots up and system services are up.
@@ -351,82 +351,82 @@ public final class GetClusterResult {
      *   - AutoScale - Indicates that the ReliabilityLevel of the cluster is being adjusted.
      *   - Ready - Indicates that the cluster is in a stable state.
      * 
-    */
+     */
     public String clusterState() {
         return this.clusterState;
     }
     /**
-     * The storage account information for storing Service Fabric diagnostic logs.
+     * @return The storage account information for storing Service Fabric diagnostic logs.
      * 
-    */
+     */
     public Optional<DiagnosticsStorageAccountConfigResponse> diagnosticsStorageAccountConfig() {
         return Optional.ofNullable(this.diagnosticsStorageAccountConfig);
     }
     /**
-     * Azure resource etag.
+     * @return Azure resource etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Indicates if the event store service is enabled.
+     * @return Indicates if the event store service is enabled.
      * 
-    */
+     */
     public Optional<Boolean> eventStoreServiceEnabled() {
         return Optional.ofNullable(this.eventStoreServiceEnabled);
     }
     /**
-     * The list of custom fabric settings to configure the cluster.
+     * @return The list of custom fabric settings to configure the cluster.
      * 
-    */
+     */
     public List<SettingsSectionDescriptionResponse> fabricSettings() {
         return this.fabricSettings == null ? List.of() : this.fabricSettings;
     }
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure resource location.
+     * @return Azure resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The http management endpoint of the cluster.
+     * @return The http management endpoint of the cluster.
      * 
-    */
+     */
     public String managementEndpoint() {
         return this.managementEndpoint;
     }
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of node types in the cluster.
+     * @return The list of node types in the cluster.
      * 
-    */
+     */
     public List<NodeTypeDescriptionResponse> nodeTypes() {
         return this.nodeTypes;
     }
     /**
-     * The provisioning state of the cluster resource.
+     * @return The provisioning state of the cluster resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+     * @return The reliability level sets the replica set size of system services. Learn about [ReliabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
      * 
      *   - None - Run the System services with a target replica set count of 1. This should only be used for test clusters.
      *   - Bronze - Run the System services with a target replica set count of 3. This should only be used for test clusters.
@@ -434,59 +434,59 @@ public final class GetClusterResult {
      *   - Gold - Run the System services with a target replica set count of 7.
      *   - Platinum - Run the System services with a target replica set count of 9.
      * 
-    */
+     */
     public Optional<String> reliabilityLevel() {
         return Optional.ofNullable(this.reliabilityLevel);
     }
     /**
-     * The server certificate used by reverse proxy.
+     * @return The server certificate used by reverse proxy.
      * 
-    */
+     */
     public Optional<CertificateDescriptionResponse> reverseProxyCertificate() {
         return Optional.ofNullable(this.reverseProxyCertificate);
     }
     /**
-     * Describes a list of server certificates referenced by common name that are used to secure the cluster.
+     * @return Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
-    */
+     */
     public Optional<ServerCertificateCommonNamesResponse> reverseProxyCertificateCommonNames() {
         return Optional.ofNullable(this.reverseProxyCertificateCommonNames);
     }
     /**
-     * Azure resource tags.
+     * @return Azure resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The policy to use when upgrading the cluster.
+     * @return The policy to use when upgrading the cluster.
      * 
-    */
+     */
     public Optional<ClusterUpgradePolicyResponse> upgradeDescription() {
         return Optional.ofNullable(this.upgradeDescription);
     }
     /**
-     * The upgrade mode of the cluster when new Service Fabric runtime version is available.
+     * @return The upgrade mode of the cluster when new Service Fabric runtime version is available.
      * 
      *   - Automatic - The cluster will be automatically upgraded to the latest Service Fabric runtime version as soon as it is available.
      *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
      * 
-    */
+     */
     public Optional<String> upgradeMode() {
         return Optional.ofNullable(this.upgradeMode);
     }
     /**
-     * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
+     * @return The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
      * 
-    */
+     */
     public Optional<String> vmImage() {
         return Optional.ofNullable(this.vmImage);
     }

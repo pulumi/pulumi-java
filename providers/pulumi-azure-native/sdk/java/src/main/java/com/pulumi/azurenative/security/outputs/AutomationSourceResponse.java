@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutomationSourceResponse {
-    /**
-     * A valid event source type.
-     * 
-     */
+        /**
+         * @return A valid event source type.
+         * 
+         */
     private final @Nullable String eventSource;
-    /**
-     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
-     * 
-     */
+        /**
+         * @return A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+         * 
+         */
     private final @Nullable List<AutomationRuleSetResponse> ruleSets;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class AutomationSourceResponse {
     }
 
     /**
-     * A valid event source type.
+     * @return A valid event source type.
      * 
-    */
+     */
     public Optional<String> eventSource() {
         return Optional.ofNullable(this.eventSource);
     }
     /**
-     * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
+     * @return A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical &#39;or&#39;).
      * 
-    */
+     */
     public List<AutomationRuleSetResponse> ruleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
     }

@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NicIPSettingsResponse {
-    /**
-     * Gets or sets the nic allocation method.
-     * 
-     */
+        /**
+         * @return Gets or sets the nic allocation method.
+         * 
+         */
     private final @Nullable String allocationMethod;
-    /**
-     * Gets or sets the dns servers.
-     * 
-     */
+        /**
+         * @return Gets or sets the dns servers.
+         * 
+         */
     private final @Nullable List<String> dnsServers;
-    /**
-     * Gets or sets the gateway.
-     * 
-     */
+        /**
+         * @return Gets or sets the gateway.
+         * 
+         */
     private final @Nullable List<String> gateway;
-    /**
-     * Gets or sets the ip address for the nic.
-     * 
-     */
+        /**
+         * @return Gets or sets the ip address for the nic.
+         * 
+         */
     private final @Nullable String ipAddress;
-    /**
-     * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
-     * 
-     */
+        /**
+         * @return Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
+         * 
+         */
     private final List<NicIPAddressSettingsResponse> ipAddressInfo;
-    /**
-     * Gets or sets the primary server.
-     * 
-     */
+        /**
+         * @return Gets or sets the primary server.
+         * 
+         */
     private final String primaryWinsServer;
-    /**
-     * Gets or sets the secondary server.
-     * 
-     */
+        /**
+         * @return Gets or sets the secondary server.
+         * 
+         */
     private final String secondaryWinsServer;
-    /**
-     * Gets or sets the mask.
-     * 
-     */
+        /**
+         * @return Gets or sets the mask.
+         * 
+         */
     private final @Nullable String subnetMask;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class NicIPSettingsResponse {
     }
 
     /**
-     * Gets or sets the nic allocation method.
+     * @return Gets or sets the nic allocation method.
      * 
-    */
+     */
     public Optional<String> allocationMethod() {
         return Optional.ofNullable(this.allocationMethod);
     }
     /**
-     * Gets or sets the dns servers.
+     * @return Gets or sets the dns servers.
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
-     * Gets or sets the gateway.
+     * @return Gets or sets the gateway.
      * 
-    */
+     */
     public List<String> gateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
     /**
-     * Gets or sets the ip address for the nic.
+     * @return Gets or sets the ip address for the nic.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
+     * @return Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
      * 
-    */
+     */
     public List<NicIPAddressSettingsResponse> ipAddressInfo() {
         return this.ipAddressInfo;
     }
     /**
-     * Gets or sets the primary server.
+     * @return Gets or sets the primary server.
      * 
-    */
+     */
     public String primaryWinsServer() {
         return this.primaryWinsServer;
     }
     /**
-     * Gets or sets the secondary server.
+     * @return Gets or sets the secondary server.
      * 
-    */
+     */
     public String secondaryWinsServer() {
         return this.secondaryWinsServer;
     }
     /**
-     * Gets or sets the mask.
+     * @return Gets or sets the mask.
      * 
-    */
+     */
     public Optional<String> subnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }

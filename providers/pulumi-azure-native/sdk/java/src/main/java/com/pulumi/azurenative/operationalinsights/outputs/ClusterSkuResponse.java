@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClusterSkuResponse {
-    /**
-     * The capacity value
-     * 
-     */
+        /**
+         * @return The capacity value
+         * 
+         */
     private final @Nullable Double capacity;
-    /**
-     * The name of the SKU.
-     * 
-     */
+        /**
+         * @return The name of the SKU.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ClusterSkuResponse {
     }
 
     /**
-     * The capacity value
+     * @return The capacity value
      * 
-    */
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The name of the SKU.
+     * @return The name of the SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

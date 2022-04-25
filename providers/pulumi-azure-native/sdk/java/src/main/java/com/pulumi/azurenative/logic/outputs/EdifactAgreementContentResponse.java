@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class EdifactAgreementContentResponse {
-    /**
-     * The EDIFACT one-way receive agreement.
-     * 
-     */
+        /**
+         * @return The EDIFACT one-way receive agreement.
+         * 
+         */
     private final EdifactOneWayAgreementResponse receiveAgreement;
-    /**
-     * The EDIFACT one-way send agreement.
-     * 
-     */
+        /**
+         * @return The EDIFACT one-way send agreement.
+         * 
+         */
     private final EdifactOneWayAgreementResponse sendAgreement;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class EdifactAgreementContentResponse {
     }
 
     /**
-     * The EDIFACT one-way receive agreement.
+     * @return The EDIFACT one-way receive agreement.
      * 
-    */
+     */
     public EdifactOneWayAgreementResponse receiveAgreement() {
         return this.receiveAgreement;
     }
     /**
-     * The EDIFACT one-way send agreement.
+     * @return The EDIFACT one-way send agreement.
      * 
-    */
+     */
     public EdifactOneWayAgreementResponse sendAgreement() {
         return this.sendAgreement;
     }

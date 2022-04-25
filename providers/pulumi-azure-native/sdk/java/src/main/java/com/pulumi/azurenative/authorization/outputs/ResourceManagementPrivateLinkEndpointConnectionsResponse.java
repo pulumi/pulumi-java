@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
-    /**
-     * The private endpoint connections.
-     * 
-     */
+        /**
+         * @return The private endpoint connections.
+         * 
+         */
     private final @Nullable List<String> privateEndpointConnections;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
     }
 
     /**
-     * The private endpoint connections.
+     * @return The private endpoint connections.
      * 
-    */
+     */
     public List<String> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }

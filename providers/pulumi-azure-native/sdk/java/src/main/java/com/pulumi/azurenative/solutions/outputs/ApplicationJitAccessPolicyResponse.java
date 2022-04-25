@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationJitAccessPolicyResponse {
-    /**
-     * Whether the JIT access is enabled.
-     * 
-     */
+        /**
+         * @return Whether the JIT access is enabled.
+         * 
+         */
     private final Boolean jitAccessEnabled;
-    /**
-     * JIT approval mode.
-     * 
-     */
+        /**
+         * @return JIT approval mode.
+         * 
+         */
     private final @Nullable String jitApprovalMode;
-    /**
-     * The JIT approvers
-     * 
-     */
+        /**
+         * @return The JIT approvers
+         * 
+         */
     private final @Nullable List<JitApproverDefinitionResponse> jitApprovers;
-    /**
-     * The maximum duration JIT access is granted. This is an ISO8601 time period value.
-     * 
-     */
+        /**
+         * @return The maximum duration JIT access is granted. This is an ISO8601 time period value.
+         * 
+         */
     private final @Nullable String maximumJitAccessDuration;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class ApplicationJitAccessPolicyResponse {
     }
 
     /**
-     * Whether the JIT access is enabled.
+     * @return Whether the JIT access is enabled.
      * 
-    */
+     */
     public Boolean jitAccessEnabled() {
         return this.jitAccessEnabled;
     }
     /**
-     * JIT approval mode.
+     * @return JIT approval mode.
      * 
-    */
+     */
     public Optional<String> jitApprovalMode() {
         return Optional.ofNullable(this.jitApprovalMode);
     }
     /**
-     * The JIT approvers
+     * @return The JIT approvers
      * 
-    */
+     */
     public List<JitApproverDefinitionResponse> jitApprovers() {
         return this.jitApprovers == null ? List.of() : this.jitApprovers;
     }
     /**
-     * The maximum duration JIT access is granted. This is an ISO8601 time period value.
+     * @return The maximum duration JIT access is granted. This is an ISO8601 time period value.
      * 
-    */
+     */
     public Optional<String> maximumJitAccessDuration() {
         return Optional.ofNullable(this.maximumJitAccessDuration);
     }

@@ -13,80 +13,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InMageProtectedDiskDetailsResponse {
-    /**
-     * The disk capacity in bytes.
-     * 
-     */
+        /**
+         * @return The disk capacity in bytes.
+         * 
+         */
     private final @Nullable Double diskCapacityInBytes;
-    /**
-     * The disk id.
-     * 
-     */
+        /**
+         * @return The disk id.
+         * 
+         */
     private final @Nullable String diskId;
-    /**
-     * The disk name.
-     * 
-     */
+        /**
+         * @return The disk name.
+         * 
+         */
     private final @Nullable String diskName;
-    /**
-     * A value indicating whether disk is resized.
-     * 
-     */
+        /**
+         * @return A value indicating whether disk is resized.
+         * 
+         */
     private final @Nullable String diskResized;
-    /**
-     * The file system capacity in bytes.
-     * 
-     */
+        /**
+         * @return The file system capacity in bytes.
+         * 
+         */
     private final @Nullable Double fileSystemCapacityInBytes;
-    /**
-     * The health error code for the disk.
-     * 
-     */
+        /**
+         * @return The health error code for the disk.
+         * 
+         */
     private final @Nullable String healthErrorCode;
-    /**
-     * The last RPO calculated time.
-     * 
-     */
+        /**
+         * @return The last RPO calculated time.
+         * 
+         */
     private final @Nullable String lastRpoCalculatedTime;
-    /**
-     * The protection stage.
-     * 
-     */
+        /**
+         * @return The protection stage.
+         * 
+         */
     private final @Nullable String protectionStage;
-    /**
-     * The PS data transit in MB.
-     * 
-     */
+        /**
+         * @return The PS data transit in MB.
+         * 
+         */
     private final @Nullable Double psDataInMB;
-    /**
-     * The resync duration in seconds.
-     * 
-     */
+        /**
+         * @return The resync duration in seconds.
+         * 
+         */
     private final @Nullable Double resyncDurationInSeconds;
-    /**
-     * The resync progress percentage.
-     * 
-     */
+        /**
+         * @return The resync progress percentage.
+         * 
+         */
     private final @Nullable Integer resyncProgressPercentage;
-    /**
-     * A value indicating whether resync is required for this disk.
-     * 
-     */
+        /**
+         * @return A value indicating whether resync is required for this disk.
+         * 
+         */
     private final @Nullable String resyncRequired;
-    /**
-     * The RPO in seconds.
-     * 
-     */
+        /**
+         * @return The RPO in seconds.
+         * 
+         */
     private final @Nullable Double rpoInSeconds;
-    /**
-     * The source data transit in MB.
-     * 
-     */
+        /**
+         * @return The source data transit in MB.
+         * 
+         */
     private final @Nullable Double sourceDataInMB;
-    /**
-     * The target data transit in MB.
-     * 
-     */
+        /**
+         * @return The target data transit in MB.
+         * 
+         */
     private final @Nullable Double targetDataInMB;
 
     @CustomType.Constructor
@@ -124,107 +124,107 @@ public final class InMageProtectedDiskDetailsResponse {
     }
 
     /**
-     * The disk capacity in bytes.
+     * @return The disk capacity in bytes.
      * 
-    */
+     */
     public Optional<Double> diskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
     /**
-     * The disk id.
+     * @return The disk id.
      * 
-    */
+     */
     public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
-     * A value indicating whether disk is resized.
+     * @return A value indicating whether disk is resized.
      * 
-    */
+     */
     public Optional<String> diskResized() {
         return Optional.ofNullable(this.diskResized);
     }
     /**
-     * The file system capacity in bytes.
+     * @return The file system capacity in bytes.
      * 
-    */
+     */
     public Optional<Double> fileSystemCapacityInBytes() {
         return Optional.ofNullable(this.fileSystemCapacityInBytes);
     }
     /**
-     * The health error code for the disk.
+     * @return The health error code for the disk.
      * 
-    */
+     */
     public Optional<String> healthErrorCode() {
         return Optional.ofNullable(this.healthErrorCode);
     }
     /**
-     * The last RPO calculated time.
+     * @return The last RPO calculated time.
      * 
-    */
+     */
     public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
     /**
-     * The protection stage.
+     * @return The protection stage.
      * 
-    */
+     */
     public Optional<String> protectionStage() {
         return Optional.ofNullable(this.protectionStage);
     }
     /**
-     * The PS data transit in MB.
+     * @return The PS data transit in MB.
      * 
-    */
+     */
     public Optional<Double> psDataInMB() {
         return Optional.ofNullable(this.psDataInMB);
     }
     /**
-     * The resync duration in seconds.
+     * @return The resync duration in seconds.
      * 
-    */
+     */
     public Optional<Double> resyncDurationInSeconds() {
         return Optional.ofNullable(this.resyncDurationInSeconds);
     }
     /**
-     * The resync progress percentage.
+     * @return The resync progress percentage.
      * 
-    */
+     */
     public Optional<Integer> resyncProgressPercentage() {
         return Optional.ofNullable(this.resyncProgressPercentage);
     }
     /**
-     * A value indicating whether resync is required for this disk.
+     * @return A value indicating whether resync is required for this disk.
      * 
-    */
+     */
     public Optional<String> resyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
     /**
-     * The RPO in seconds.
+     * @return The RPO in seconds.
      * 
-    */
+     */
     public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
     /**
-     * The source data transit in MB.
+     * @return The source data transit in MB.
      * 
-    */
+     */
     public Optional<Double> sourceDataInMB() {
         return Optional.ofNullable(this.sourceDataInMB);
     }
     /**
-     * The target data transit in MB.
+     * @return The target data transit in MB.
      * 
-    */
+     */
     public Optional<Double> targetDataInMB() {
         return Optional.ofNullable(this.targetDataInMB);
     }

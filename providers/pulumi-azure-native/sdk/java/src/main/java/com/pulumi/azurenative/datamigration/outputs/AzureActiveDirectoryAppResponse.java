@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AzureActiveDirectoryAppResponse {
-    /**
-     * Key used to authenticate to the Azure Active Directory Application
-     * 
-     */
+        /**
+         * @return Key used to authenticate to the Azure Active Directory Application
+         * 
+         */
     private final String appKey;
-    /**
-     * Application ID of the Azure Active Directory Application
-     * 
-     */
+        /**
+         * @return Application ID of the Azure Active Directory Application
+         * 
+         */
     private final String applicationId;
-    /**
-     * Tenant id of the customer
-     * 
-     */
+        /**
+         * @return Tenant id of the customer
+         * 
+         */
     private final String tenantId;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class AzureActiveDirectoryAppResponse {
     }
 
     /**
-     * Key used to authenticate to the Azure Active Directory Application
+     * @return Key used to authenticate to the Azure Active Directory Application
      * 
-    */
+     */
     public String appKey() {
         return this.appKey;
     }
     /**
-     * Application ID of the Azure Active Directory Application
+     * @return Application ID of the Azure Active Directory Application
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * Tenant id of the customer
+     * @return Tenant id of the customer
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

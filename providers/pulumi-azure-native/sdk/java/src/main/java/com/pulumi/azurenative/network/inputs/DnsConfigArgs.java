@@ -27,6 +27,10 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relativeName")
     private @Nullable Output<String> relativeName;
 
+    /**
+     * @return The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+     * 
+     */
     public Optional<Output<String>> relativeName() {
         return Optional.ofNullable(this.relativeName);
     }
@@ -38,6 +42,10 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<Double> ttl;
 
+    /**
+     * @return The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+     * 
+     */
     public Optional<Output<Double>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -67,20 +75,44 @@ public final class DnsConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DnsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param relativeName The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeName(@Nullable Output<String> relativeName) {
             $.relativeName = relativeName;
             return this;
         }
 
+        /**
+         * @param relativeName The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeName(String relativeName) {
             return relativeName(Output.of(relativeName));
         }
 
+        /**
+         * @param ttl The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<Double> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(Double ttl) {
             return ttl(Output.of(ttl));
         }

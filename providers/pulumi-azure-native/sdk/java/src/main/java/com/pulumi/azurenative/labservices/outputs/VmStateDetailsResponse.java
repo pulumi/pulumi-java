@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class VmStateDetailsResponse {
-    /**
-     * Last known compute power state captured in DTL
-     * 
-     */
+        /**
+         * @return Last known compute power state captured in DTL
+         * 
+         */
     private final String lastKnownPowerState;
-    /**
-     * The power state of the reference virtual machine.
-     * 
-     */
+        /**
+         * @return The power state of the reference virtual machine.
+         * 
+         */
     private final String powerState;
-    /**
-     * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
-     * 
-     */
+        /**
+         * @return The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+         * 
+         */
     private final String rdpAuthority;
-    /**
-     * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
-     * 
-     */
+        /**
+         * @return The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+         * 
+         */
     private final String sshAuthority;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class VmStateDetailsResponse {
     }
 
     /**
-     * Last known compute power state captured in DTL
+     * @return Last known compute power state captured in DTL
      * 
-    */
+     */
     public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
-     * The power state of the reference virtual machine.
+     * @return The power state of the reference virtual machine.
      * 
-    */
+     */
     public String powerState() {
         return this.powerState;
     }
     /**
-     * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+     * @return The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
-    */
+     */
     public String rdpAuthority() {
         return this.rdpAuthority;
     }
     /**
-     * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+     * @return The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
-    */
+     */
     public String sshAuthority() {
         return this.sshAuthority;
     }

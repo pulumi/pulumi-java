@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListIntegrationAccountAssemblyContentCallbackUrlResult {
-    /**
-     * Gets the workflow trigger callback URL base path.
-     * 
-     */
+        /**
+         * @return Gets the workflow trigger callback URL base path.
+         * 
+         */
     private final String basePath;
-    /**
-     * Gets the workflow trigger callback URL HTTP method.
-     * 
-     */
+        /**
+         * @return Gets the workflow trigger callback URL HTTP method.
+         * 
+         */
     private final String method;
-    /**
-     * Gets the workflow trigger callback URL query parameters.
-     * 
-     */
+        /**
+         * @return Gets the workflow trigger callback URL query parameters.
+         * 
+         */
     private final @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries;
-    /**
-     * Gets the workflow trigger callback URL relative path.
-     * 
-     */
+        /**
+         * @return Gets the workflow trigger callback URL relative path.
+         * 
+         */
     private final String relativePath;
-    /**
-     * Gets the workflow trigger callback URL relative path parameters.
-     * 
-     */
+        /**
+         * @return Gets the workflow trigger callback URL relative path parameters.
+         * 
+         */
     private final @Nullable List<String> relativePathParameters;
-    /**
-     * Gets the workflow trigger callback URL.
-     * 
-     */
+        /**
+         * @return Gets the workflow trigger callback URL.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class ListIntegrationAccountAssemblyContentCallbackUrlResult {
     }
 
     /**
-     * Gets the workflow trigger callback URL base path.
+     * @return Gets the workflow trigger callback URL base path.
      * 
-    */
+     */
     public String basePath() {
         return this.basePath;
     }
     /**
-     * Gets the workflow trigger callback URL HTTP method.
+     * @return Gets the workflow trigger callback URL HTTP method.
      * 
-    */
+     */
     public String method() {
         return this.method;
     }
     /**
-     * Gets the workflow trigger callback URL query parameters.
+     * @return Gets the workflow trigger callback URL query parameters.
      * 
-    */
+     */
     public Optional<WorkflowTriggerListCallbackUrlQueriesResponse> queries() {
         return Optional.ofNullable(this.queries);
     }
     /**
-     * Gets the workflow trigger callback URL relative path.
+     * @return Gets the workflow trigger callback URL relative path.
      * 
-    */
+     */
     public String relativePath() {
         return this.relativePath;
     }
     /**
-     * Gets the workflow trigger callback URL relative path parameters.
+     * @return Gets the workflow trigger callback URL relative path parameters.
      * 
-    */
+     */
     public List<String> relativePathParameters() {
         return this.relativePathParameters == null ? List.of() : this.relativePathParameters;
     }
     /**
-     * Gets the workflow trigger callback URL.
+     * @return Gets the workflow trigger callback URL.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

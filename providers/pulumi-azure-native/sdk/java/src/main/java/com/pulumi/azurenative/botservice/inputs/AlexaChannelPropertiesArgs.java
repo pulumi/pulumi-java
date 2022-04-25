@@ -25,6 +25,10 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="alexaSkillId", required=true)
     private Output<String> alexaSkillId;
 
+    /**
+     * @return The Alexa skill Id
+     * 
+     */
     public Output<String> alexaSkillId() {
         return this.alexaSkillId;
     }
@@ -36,6 +40,10 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -65,20 +73,44 @@ public final class AlexaChannelPropertiesArgs extends com.pulumi.resources.Resou
             $ = new AlexaChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alexaSkillId The Alexa skill Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder alexaSkillId(Output<String> alexaSkillId) {
             $.alexaSkillId = alexaSkillId;
             return this;
         }
 
+        /**
+         * @param alexaSkillId The Alexa skill Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder alexaSkillId(String alexaSkillId) {
             return alexaSkillId(Output.of(alexaSkillId));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }

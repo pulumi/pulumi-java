@@ -22,6 +22,10 @@ public final class ManagementGroupSubscriptionArgs extends com.pulumi.resources.
     @Import(name="groupId", required=true)
     private Output<String> groupId;
 
+    /**
+     * @return Management Group ID.
+     * 
+     */
     public Output<String> groupId() {
         return this.groupId;
     }
@@ -33,6 +37,10 @@ public final class ManagementGroupSubscriptionArgs extends com.pulumi.resources.
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return Subscription ID.
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -62,20 +70,44 @@ public final class ManagementGroupSubscriptionArgs extends com.pulumi.resources.
             $ = new ManagementGroupSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId Management Group ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param subscriptionId Subscription ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

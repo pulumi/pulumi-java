@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AttributesResponse {
-    /**
-     * Indicates whether or not authentication is enabled on the ACL.
-     * 
-     */
+        /**
+         * @return Indicates whether or not authentication is enabled on the ACL.
+         * 
+         */
     private final Boolean authentication;
-    /**
-     * Indicates whether or not write protect is enabled on the LUNs.
-     * 
-     */
+        /**
+         * @return Indicates whether or not write protect is enabled on the LUNs.
+         * 
+         */
     private final Boolean prodModeWriteProtect;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AttributesResponse {
     }
 
     /**
-     * Indicates whether or not authentication is enabled on the ACL.
+     * @return Indicates whether or not authentication is enabled on the ACL.
      * 
-    */
+     */
     public Boolean authentication() {
         return this.authentication;
     }
     /**
-     * Indicates whether or not write protect is enabled on the LUNs.
+     * @return Indicates whether or not write protect is enabled on the LUNs.
      * 
-    */
+     */
     public Boolean prodModeWriteProtect() {
         return this.prodModeWriteProtect;
     }

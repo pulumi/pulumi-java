@@ -26,6 +26,10 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="attachNewDataDiskOptions")
     private @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions;
 
+    /**
+     * @return Specifies options to attach a new disk to the virtual machine.
+     * 
+     */
     public Optional<AttachNewDataDiskOptionsResponse> attachNewDataDiskOptions() {
         return Optional.ofNullable(this.attachNewDataDiskOptions);
     }
@@ -37,6 +41,10 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="existingLabDiskId")
     private @Nullable String existingLabDiskId;
 
+    /**
+     * @return Specifies the existing lab disk id to attach to virtual machine.
+     * 
+     */
     public Optional<String> existingLabDiskId() {
         return Optional.ofNullable(this.existingLabDiskId);
     }
@@ -48,6 +56,10 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="hostCaching")
     private @Nullable String hostCaching;
 
+    /**
+     * @return Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+     * 
+     */
     public Optional<String> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
@@ -78,16 +90,34 @@ public final class DataDiskPropertiesResponse extends com.pulumi.resources.Invok
             $ = new DataDiskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachNewDataDiskOptions Specifies options to attach a new disk to the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions) {
             $.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
 
+        /**
+         * @param existingLabDiskId Specifies the existing lab disk id to attach to virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
             $.existingLabDiskId = existingLabDiskId;
             return this;
         }
 
+        /**
+         * @param hostCaching Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostCaching(@Nullable String hostCaching) {
             $.hostCaching = hostCaching;
             return this;

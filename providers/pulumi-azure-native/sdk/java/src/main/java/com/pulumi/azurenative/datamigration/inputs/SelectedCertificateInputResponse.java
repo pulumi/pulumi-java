@@ -23,6 +23,10 @@ public final class SelectedCertificateInputResponse extends com.pulumi.resources
     @Import(name="certificateName", required=true)
     private String certificateName;
 
+    /**
+     * @return Name of certificate to be exported.
+     * 
+     */
     public String certificateName() {
         return this.certificateName;
     }
@@ -34,6 +38,10 @@ public final class SelectedCertificateInputResponse extends com.pulumi.resources
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Password to use for encrypting the exported certificate.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -63,11 +71,23 @@ public final class SelectedCertificateInputResponse extends com.pulumi.resources
             $ = new SelectedCertificateInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateName Name of certificate to be exported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateName(String certificateName) {
             $.certificateName = certificateName;
             return this;
         }
 
+        /**
+         * @param password Password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;

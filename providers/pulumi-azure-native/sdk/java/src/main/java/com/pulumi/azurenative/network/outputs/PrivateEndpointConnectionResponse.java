@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The consumer link id.
-     * 
-     */
+        /**
+         * @return The consumer link id.
+         * 
+         */
     private final String linkIdentifier;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The resource of private end point.
-     * 
-     */
+        /**
+         * @return The resource of private end point.
+         * 
+         */
     private final PrivateEndpointResponse privateEndpoint;
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     * 
-     */
+        /**
+         * @return A collection of information about the state of the connection between service consumer and provider.
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * The provisioning state of the private endpoint connection resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the private endpoint connection resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The consumer link id.
+     * @return The consumer link id.
      * 
-    */
+     */
     public String linkIdentifier() {
         return this.linkIdentifier;
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
-    */
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * The provisioning state of the private endpoint connection resource.
+     * @return The provisioning state of the private endpoint connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

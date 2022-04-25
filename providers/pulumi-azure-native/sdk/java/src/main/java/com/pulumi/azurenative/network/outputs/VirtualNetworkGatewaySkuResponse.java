@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkGatewaySkuResponse {
-    /**
-     * The capacity.
-     * 
-     */
+        /**
+         * @return The capacity.
+         * 
+         */
     private final Integer capacity;
-    /**
-     * Gateway SKU name.
-     * 
-     */
+        /**
+         * @return Gateway SKU name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Gateway SKU tier.
-     * 
-     */
+        /**
+         * @return Gateway SKU tier.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class VirtualNetworkGatewaySkuResponse {
     }
 
     /**
-     * The capacity.
+     * @return The capacity.
      * 
-    */
+     */
     public Integer capacity() {
         return this.capacity;
     }
     /**
-     * Gateway SKU name.
+     * @return Gateway SKU name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gateway SKU tier.
+     * @return Gateway SKU tier.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

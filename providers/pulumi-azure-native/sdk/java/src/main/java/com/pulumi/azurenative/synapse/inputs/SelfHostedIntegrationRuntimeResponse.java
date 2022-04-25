@@ -29,6 +29,10 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Integration runtime description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
     @Import(name="linkedInfo")
     private @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
 
+    /**
+     * @return Linked integration runtime type from data factory
+     * 
+     */
     public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> linkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
@@ -52,6 +60,11 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of integration runtime.
+     * Expected value is &#39;SelfHosted&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -82,24 +95,55 @@ public final class SelfHostedIntegrationRuntimeResponse extends com.pulumi.resou
             $ = new SelfHostedIntegrationRuntimeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Integration runtime description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param linkedInfo Linked integration runtime type from data factory
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(@Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo) {
             $.linkedInfo = linkedInfo;
             return this;
         }
 
+        /**
+         * @param linkedInfo Linked integration runtime type from data factory
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(LinkedIntegrationRuntimeKeyAuthorizationResponse linkedInfo) {
             return linkedInfo(Either.ofLeft(linkedInfo));
         }
 
+        /**
+         * @param linkedInfo Linked integration runtime type from data factory
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(LinkedIntegrationRuntimeRbacAuthorizationResponse linkedInfo) {
             return linkedInfo(Either.ofRight(linkedInfo));
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;SelfHosted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

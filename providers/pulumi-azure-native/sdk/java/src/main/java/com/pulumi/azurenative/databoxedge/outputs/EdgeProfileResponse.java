@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdgeProfileResponse {
-    /**
-     * Edge Profile Subscription
-     * 
-     */
+        /**
+         * @return Edge Profile Subscription
+         * 
+         */
     private final @Nullable EdgeProfileSubscriptionResponse subscription;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class EdgeProfileResponse {
     }
 
     /**
-     * Edge Profile Subscription
+     * @return Edge Profile Subscription
      * 
-    */
+     */
     public Optional<EdgeProfileSubscriptionResponse> subscription() {
         return Optional.ofNullable(this.subscription);
     }

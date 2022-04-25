@@ -12,55 +12,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificatePropertiesResponse {
-    /**
-     * The activate date of certificate.
-     * 
-     */
+        /**
+         * @return The activate date of certificate.
+         * 
+         */
     private final String activateDate;
-    /**
-     * The certificate version of key vault.
-     * 
-     */
+        /**
+         * @return The certificate version of key vault.
+         * 
+         */
     private final @Nullable String certVersion;
-    /**
-     * The domain list of certificate.
-     * 
-     */
+        /**
+         * @return The domain list of certificate.
+         * 
+         */
     private final List<String> dnsNames;
-    /**
-     * The expiration date of certificate.
-     * 
-     */
+        /**
+         * @return The expiration date of certificate.
+         * 
+         */
     private final String expirationDate;
-    /**
-     * The issue date of certificate.
-     * 
-     */
+        /**
+         * @return The issue date of certificate.
+         * 
+         */
     private final String issuedDate;
-    /**
-     * The issuer of certificate.
-     * 
-     */
+        /**
+         * @return The issuer of certificate.
+         * 
+         */
     private final String issuer;
-    /**
-     * The certificate name of key vault.
-     * 
-     */
+        /**
+         * @return The certificate name of key vault.
+         * 
+         */
     private final String keyVaultCertName;
-    /**
-     * The subject name of certificate.
-     * 
-     */
+        /**
+         * @return The subject name of certificate.
+         * 
+         */
     private final String subjectName;
-    /**
-     * The thumbprint of certificate.
-     * 
-     */
+        /**
+         * @return The thumbprint of certificate.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * The vault uri of user key vault.
-     * 
-     */
+        /**
+         * @return The vault uri of user key vault.
+         * 
+         */
     private final String vaultUri;
 
     @CustomType.Constructor
@@ -88,72 +88,72 @@ public final class CertificatePropertiesResponse {
     }
 
     /**
-     * The activate date of certificate.
+     * @return The activate date of certificate.
      * 
-    */
+     */
     public String activateDate() {
         return this.activateDate;
     }
     /**
-     * The certificate version of key vault.
+     * @return The certificate version of key vault.
      * 
-    */
+     */
     public Optional<String> certVersion() {
         return Optional.ofNullable(this.certVersion);
     }
     /**
-     * The domain list of certificate.
+     * @return The domain list of certificate.
      * 
-    */
+     */
     public List<String> dnsNames() {
         return this.dnsNames;
     }
     /**
-     * The expiration date of certificate.
+     * @return The expiration date of certificate.
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * The issue date of certificate.
+     * @return The issue date of certificate.
      * 
-    */
+     */
     public String issuedDate() {
         return this.issuedDate;
     }
     /**
-     * The issuer of certificate.
+     * @return The issuer of certificate.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * The certificate name of key vault.
+     * @return The certificate name of key vault.
      * 
-    */
+     */
     public String keyVaultCertName() {
         return this.keyVaultCertName;
     }
     /**
-     * The subject name of certificate.
+     * @return The subject name of certificate.
      * 
-    */
+     */
     public String subjectName() {
         return this.subjectName;
     }
     /**
-     * The thumbprint of certificate.
+     * @return The thumbprint of certificate.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * The vault uri of user key vault.
+     * @return The vault uri of user key vault.
      * 
-    */
+     */
     public String vaultUri() {
         return this.vaultUri;
     }

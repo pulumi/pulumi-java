@@ -27,6 +27,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Client ID that is used when authenticating.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -38,6 +42,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return AAD Tenant where this identity lives.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -49,6 +57,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Defines values for a ResourceIdentity&#39;s type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -60,6 +72,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities;
 
+    /**
+     * @return Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+     * 
+     */
     public Optional<Map<String,UserAssignedIdentityMetaResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -91,21 +107,45 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId Client ID that is used when authenticating.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId AAD Tenant where this identity lives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Defines values for a ResourceIdentity&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

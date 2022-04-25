@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ComputeIsolationPropertiesResponse {
-    /**
-     * The flag indicates whether enable compute isolation or not.
-     * 
-     */
+        /**
+         * @return The flag indicates whether enable compute isolation or not.
+         * 
+         */
     private final @Nullable Boolean enableComputeIsolation;
-    /**
-     * The host sku.
-     * 
-     */
+        /**
+         * @return The host sku.
+         * 
+         */
     private final @Nullable String hostSku;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ComputeIsolationPropertiesResponse {
     }
 
     /**
-     * The flag indicates whether enable compute isolation or not.
+     * @return The flag indicates whether enable compute isolation or not.
      * 
-    */
+     */
     public Optional<Boolean> enableComputeIsolation() {
         return Optional.ofNullable(this.enableComputeIsolation);
     }
     /**
-     * The host sku.
+     * @return The host sku.
      * 
-    */
+     */
     public Optional<String> hostSku() {
         return Optional.ofNullable(this.hostSku);
     }

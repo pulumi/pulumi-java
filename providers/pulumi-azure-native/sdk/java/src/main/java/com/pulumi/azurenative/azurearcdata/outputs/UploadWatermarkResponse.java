@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UploadWatermarkResponse {
-    /**
-     * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
-     * 
-     */
+        /**
+         * @return Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+         * 
+         */
     private final @Nullable String logs;
-    /**
-     * Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
-     * 
-     */
+        /**
+         * @return Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+         * 
+         */
     private final @Nullable String metrics;
-    /**
-     * Last uploaded date for usages from kubernetes cluster. Defaults to current date time
-     * 
-     */
+        /**
+         * @return Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+         * 
+         */
     private final @Nullable String usages;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class UploadWatermarkResponse {
     }
 
     /**
-     * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date for logs from kubernetes cluster. Defaults to current date time
      * 
-    */
+     */
     public Optional<String> logs() {
         return Optional.ofNullable(this.logs);
     }
     /**
-     * Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
      * 
-    */
+     */
     public Optional<String> metrics() {
         return Optional.ofNullable(this.metrics);
     }
     /**
-     * Last uploaded date for usages from kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date for usages from kubernetes cluster. Defaults to current date time
      * 
-    */
+     */
     public Optional<String> usages() {
         return Optional.ofNullable(this.usages);
     }

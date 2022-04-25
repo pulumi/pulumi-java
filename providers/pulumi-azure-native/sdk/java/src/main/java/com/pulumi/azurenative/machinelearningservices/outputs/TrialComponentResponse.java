@@ -18,46 +18,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TrialComponentResponse {
-    /**
-     * ARM resource ID of the code asset.
-     * 
-     */
+        /**
+         * @return ARM resource ID of the code asset.
+         * 
+         */
     private final @Nullable String codeId;
-    /**
-     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
-     * 
-     */
+        /**
+         * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * 
+         */
     private final String command;
-    /**
-     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-     * 
-     */
+        /**
+         * @return Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+         * 
+         */
     private final @Nullable Object distribution;
-    /**
-     * The ARM resource ID of the Environment specification for the job.
-     * 
-     */
+        /**
+         * @return The ARM resource ID of the Environment specification for the job.
+         * 
+         */
     private final @Nullable String environmentId;
-    /**
-     * Environment variables included in the job.
-     * 
-     */
+        /**
+         * @return Environment variables included in the job.
+         * 
+         */
     private final @Nullable Map<String,String> environmentVariables;
-    /**
-     * Mapping of input data bindings used in the job.
-     * 
-     */
+        /**
+         * @return Mapping of input data bindings used in the job.
+         * 
+         */
     private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
-    /**
-     * Mapping of output data bindings used in the job.
-     * 
-     */
+        /**
+         * @return Mapping of output data bindings used in the job.
+         * 
+         */
     private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
-    /**
-     * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
-     * Only supports duration with precision as low as Seconds.
-     * 
-     */
+        /**
+         * @return The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+         * Only supports duration with precision as low as Seconds.
+         * 
+         */
     private final @Nullable String timeout;
 
     @CustomType.Constructor
@@ -81,59 +81,59 @@ public final class TrialComponentResponse {
     }
 
     /**
-     * ARM resource ID of the code asset.
+     * @return ARM resource ID of the code asset.
      * 
-    */
+     */
     public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
-    */
+     */
     public String command() {
         return this.command;
     }
     /**
-     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     * @return Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
-    */
+     */
     public Optional<Object> distribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
-     * The ARM resource ID of the Environment specification for the job.
+     * @return The ARM resource ID of the Environment specification for the job.
      * 
-    */
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
-     * Environment variables included in the job.
+     * @return Environment variables included in the job.
      * 
-    */
+     */
     public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
-     * Mapping of input data bindings used in the job.
+     * @return Mapping of input data bindings used in the job.
      * 
-    */
+     */
     public Map<String,InputDataBindingResponse> inputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
     /**
-     * Mapping of output data bindings used in the job.
+     * @return Mapping of output data bindings used in the job.
      * 
-    */
+     */
     public Map<String,OutputDataBindingResponse> outputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
     /**
-     * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+     * @return The max run duration in ISO 8601 format, after which the trial component will be cancelled.
      * Only supports duration with precision as low as Seconds.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

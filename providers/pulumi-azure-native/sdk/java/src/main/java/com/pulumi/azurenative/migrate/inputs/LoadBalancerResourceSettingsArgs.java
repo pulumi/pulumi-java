@@ -30,6 +30,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="backendAddressPools")
     private @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
+    /**
+     * @return Gets or sets the backend address pools of the load balancer.
+     * 
+     */
     public Optional<Output<List<LBBackendAddressPoolResourceSettingsArgs>>> backendAddressPools() {
         return Optional.ofNullable(this.backendAddressPools);
     }
@@ -41,6 +45,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="frontendIPConfigurations")
     private @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
+    /**
+     * @return Gets or sets the frontend IP configurations of the load balancer.
+     * 
+     */
     public Optional<Output<List<LBFrontendIPConfigurationResourceSettingsArgs>>> frontendIPConfigurations() {
         return Optional.ofNullable(this.frontendIPConfigurations);
     }
@@ -53,6 +61,11 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -64,6 +77,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return Gets or sets load balancer sku (Basic/Standard).
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -75,6 +92,10 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -87,6 +108,11 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
     @Import(name="zones")
     private @Nullable Output<String> zones;
 
+    /**
+     * @return Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+     *  precedence only if frontend IP configurations settings are not present.
+     * 
+     */
     public Optional<Output<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -120,64 +146,152 @@ public final class LoadBalancerResourceSettingsArgs extends com.pulumi.resources
             $ = new LoadBalancerResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddressPools Gets or sets the backend address pools of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(@Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools) {
             $.backendAddressPools = backendAddressPools;
             return this;
         }
 
+        /**
+         * @param backendAddressPools Gets or sets the backend address pools of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(List<LBBackendAddressPoolResourceSettingsArgs> backendAddressPools) {
             return backendAddressPools(Output.of(backendAddressPools));
         }
 
+        /**
+         * @param backendAddressPools Gets or sets the backend address pools of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsArgs... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
 
+        /**
+         * @param frontendIPConfigurations Gets or sets the frontend IP configurations of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(@Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Gets or sets the frontend IP configurations of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(List<LBFrontendIPConfigurationResourceSettingsArgs> frontendIPConfigurations) {
             return frontendIPConfigurations(Output.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param frontendIPConfigurations Gets or sets the frontend IP configurations of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsArgs... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param sku Gets or sets load balancer sku (Basic/Standard).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets load balancer sku (Basic/Standard).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }
 
+        /**
+         * @param zones Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+         *  precedence only if frontend IP configurations settings are not present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+         *  precedence only if frontend IP configurations settings are not present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String zones) {
             return zones(Output.of(zones));
         }

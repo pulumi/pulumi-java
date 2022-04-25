@@ -19,71 +19,71 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConcurLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * Application client_id supplied by Concur App Management.
-     * 
-     */
+        /**
+         * @return Application client_id supplied by Concur App Management.
+         * 
+         */
     private final Object clientId;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
-     * 
-     */
+        /**
+         * @return Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         */
     private final @Nullable Object connectionProperties;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password corresponding to the user name that you provided in the username field.
-     * 
-     */
+        /**
+         * @return The password corresponding to the user name that you provided in the username field.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;Concur&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;Concur&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
-     * 
-     */
+        /**
+         * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+         * 
+         */
     private final @Nullable Object useEncryptedEndpoints;
-    /**
-     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
-     * 
-     */
+        /**
+         * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+         * 
+         */
     private final @Nullable Object useHostVerification;
-    /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
-     * 
-     */
+        /**
+         * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+         * 
+         */
     private final @Nullable Object usePeerVerification;
-    /**
-     * The user name that you use to access Concur Service.
-     * 
-     */
+        /**
+         * @return The user name that you use to access Concur Service.
+         * 
+         */
     private final Object username;
 
     @CustomType.Constructor
@@ -117,94 +117,94 @@ public final class ConcurLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Application client_id supplied by Concur App Management.
+     * @return Application client_id supplied by Concur App Management.
      * 
-    */
+     */
     public Object clientId() {
         return this.clientId;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * @return Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
-    */
+     */
     public Optional<Object> connectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password corresponding to the user name that you provided in the username field.
+     * @return The password corresponding to the user name that you provided in the username field.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Concur&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
-    */
+     */
     public Optional<Object> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
-     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
+     * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
-    */
+     */
     public Optional<Object> useHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
-    */
+     */
     public Optional<Object> usePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
     /**
-     * The user name that you use to access Concur Service.
+     * @return The user name that you use to access Concur Service.
      * 
-    */
+     */
     public Object username() {
         return this.username;
     }

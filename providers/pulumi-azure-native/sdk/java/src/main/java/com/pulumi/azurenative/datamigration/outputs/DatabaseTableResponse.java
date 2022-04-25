@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class DatabaseTableResponse {
-    /**
-     * Indicates whether table is empty or not
-     * 
-     */
+        /**
+         * @return Indicates whether table is empty or not
+         * 
+         */
     private final Boolean hasRows;
-    /**
-     * Schema-qualified name of the table
-     * 
-     */
+        /**
+         * @return Schema-qualified name of the table
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class DatabaseTableResponse {
     }
 
     /**
-     * Indicates whether table is empty or not
+     * @return Indicates whether table is empty or not
      * 
-    */
+     */
     public Boolean hasRows() {
         return this.hasRows;
     }
     /**
-     * Schema-qualified name of the table
+     * @return Schema-qualified name of the table
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

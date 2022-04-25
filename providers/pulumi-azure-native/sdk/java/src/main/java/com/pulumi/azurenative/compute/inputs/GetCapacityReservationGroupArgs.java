@@ -21,6 +21,10 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
     @Import(name="capacityReservationGroupName", required=true)
     private String capacityReservationGroupName;
 
+    /**
+     * @return The name of the capacity reservation group.
+     * 
+     */
     public String capacityReservationGroupName() {
         return this.capacityReservationGroupName;
     }
@@ -32,6 +36,10 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -43,6 +51,10 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetCapacityReservationGroupArgs extends com.pulumi.resources.
             $ = new GetCapacityReservationGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationGroupName The name of the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationGroupName(String capacityReservationGroupName) {
             $.capacityReservationGroupName = capacityReservationGroupName;
             return this;
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;InstanceView&#39; will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KubernetesRoleComputeResponse {
-    /**
-     * Memory in bytes
-     * 
-     */
+        /**
+         * @return Memory in bytes
+         * 
+         */
     private final Double memoryInBytes;
-    /**
-     * Processor count
-     * 
-     */
+        /**
+         * @return Processor count
+         * 
+         */
     private final Integer processorCount;
-    /**
-     * VM profile
-     * 
-     */
+        /**
+         * @return VM profile
+         * 
+         */
     private final String vmProfile;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class KubernetesRoleComputeResponse {
     }
 
     /**
-     * Memory in bytes
+     * @return Memory in bytes
      * 
-    */
+     */
     public Double memoryInBytes() {
         return this.memoryInBytes;
     }
     /**
-     * Processor count
+     * @return Processor count
      * 
-    */
+     */
     public Integer processorCount() {
         return this.processorCount;
     }
     /**
-     * VM profile
+     * @return VM profile
      * 
-    */
+     */
     public String vmProfile() {
         return this.vmProfile;
     }

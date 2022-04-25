@@ -26,6 +26,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for.
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -37,6 +41,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="privateLink")
     private @Nullable ResourceReferenceResponse privateLink;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for.
+     * 
+     */
     public Optional<ResourceReferenceResponse> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
@@ -48,6 +56,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="privateLinkLocation")
     private @Nullable String privateLinkLocation;
 
+    /**
+     * @return The location of the shared private link resource
+     * 
+     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
@@ -59,6 +71,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="requestMessage")
     private @Nullable String requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource.
+     * 
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -70,6 +86,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -102,26 +122,56 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
             $ = new SharedPrivateLinkResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param privateLink The resource id of the resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(@Nullable ResourceReferenceResponse privateLink) {
             $.privateLink = privateLink;
             return this;
         }
 
+        /**
+         * @param privateLinkLocation The location of the shared private link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             $.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable String requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param status Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

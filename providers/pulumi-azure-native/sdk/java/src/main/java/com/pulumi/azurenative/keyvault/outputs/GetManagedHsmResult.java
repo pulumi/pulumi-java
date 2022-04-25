@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetManagedHsmResult {
-    /**
-     * The Azure Resource Manager resource ID for the managed HSM Pool.
-     * 
-     */
+        /**
+         * @return The Azure Resource Manager resource ID for the managed HSM Pool.
+         * 
+         */
     private final String id;
-    /**
-     * The supported Azure location where the managed HSM Pool should be created.
-     * 
-     */
+        /**
+         * @return The supported Azure location where the managed HSM Pool should be created.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the managed HSM Pool.
-     * 
-     */
+        /**
+         * @return The name of the managed HSM Pool.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the managed HSM
-     * 
-     */
+        /**
+         * @return Properties of the managed HSM
+         * 
+         */
     private final ManagedHsmPropertiesResponse properties;
-    /**
-     * SKU details
-     * 
-     */
+        /**
+         * @return SKU details
+         * 
+         */
     private final @Nullable ManagedHsmSkuResponse sku;
-    /**
-     * Metadata pertaining to creation and last modification of the key vault resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the key vault resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The resource type of the managed HSM Pool.
-     * 
-     */
+        /**
+         * @return The resource type of the managed HSM Pool.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class GetManagedHsmResult {
     }
 
     /**
-     * The Azure Resource Manager resource ID for the managed HSM Pool.
+     * @return The Azure Resource Manager resource ID for the managed HSM Pool.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The supported Azure location where the managed HSM Pool should be created.
+     * @return The supported Azure location where the managed HSM Pool should be created.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the managed HSM Pool.
+     * @return The name of the managed HSM Pool.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the managed HSM
+     * @return Properties of the managed HSM
      * 
-    */
+     */
     public ManagedHsmPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * SKU details
+     * @return SKU details
      * 
-    */
+     */
     public Optional<ManagedHsmSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Metadata pertaining to creation and last modification of the key vault resource.
+     * @return Metadata pertaining to creation and last modification of the key vault resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type of the managed HSM Pool.
+     * @return The resource type of the managed HSM Pool.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

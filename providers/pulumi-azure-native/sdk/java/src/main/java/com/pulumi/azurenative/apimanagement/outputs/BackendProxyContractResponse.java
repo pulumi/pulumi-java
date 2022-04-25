@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackendProxyContractResponse {
-    /**
-     * Password to connect to the WebProxy Server
-     * 
-     */
+        /**
+         * @return Password to connect to the WebProxy Server
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
-     * 
-     */
+        /**
+         * @return WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+         * 
+         */
     private final String url;
-    /**
-     * Username to connect to the WebProxy server
-     * 
-     */
+        /**
+         * @return Username to connect to the WebProxy server
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class BackendProxyContractResponse {
     }
 
     /**
-     * Password to connect to the WebProxy Server
+     * @return Password to connect to the WebProxy Server
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
+     * @return WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }
     /**
-     * Username to connect to the WebProxy server
+     * @return Username to connect to the WebProxy server
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FileSystemTokenStoreResponse {
-    /**
-     * The directory in which the tokens will be stored.
-     * 
-     */
+        /**
+         * @return The directory in which the tokens will be stored.
+         * 
+         */
     private final @Nullable String directory;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FileSystemTokenStoreResponse {
     }
 
     /**
-     * The directory in which the tokens will be stored.
+     * @return The directory in which the tokens will be stored.
      * 
-    */
+     */
     public Optional<String> directory() {
         return Optional.ofNullable(this.directory);
     }

@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApplicationResult {
-    /**
-     * A value indicating whether packages within the application may be overwritten using the same version string.
-     * 
-     */
+        /**
+         * @return A value indicating whether packages within the application may be overwritten using the same version string.
+         * 
+         */
     private final @Nullable Boolean allowUpdates;
-    /**
-     * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
-     * 
-     */
+        /**
+         * @return The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+         * 
+         */
     private final @Nullable String defaultVersion;
-    /**
-     * The display name for the application.
-     * 
-     */
+        /**
+         * @return The display name for the application.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The ETag of the resource, used for concurrency statements.
-     * 
-     */
+        /**
+         * @return The ETag of the resource, used for concurrency statements.
+         * 
+         */
     private final String etag;
-    /**
-     * The ID of the resource.
-     * 
-     */
+        /**
+         * @return The ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetApplicationResult {
     }
 
     /**
-     * A value indicating whether packages within the application may be overwritten using the same version string.
+     * @return A value indicating whether packages within the application may be overwritten using the same version string.
      * 
-    */
+     */
     public Optional<Boolean> allowUpdates() {
         return Optional.ofNullable(this.allowUpdates);
     }
     /**
-     * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
+     * @return The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
      * 
-    */
+     */
     public Optional<String> defaultVersion() {
         return Optional.ofNullable(this.defaultVersion);
     }
     /**
-     * The display name for the application.
+     * @return The display name for the application.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The ETag of the resource, used for concurrency statements.
+     * @return The ETag of the resource, used for concurrency statements.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

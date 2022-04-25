@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFirewallApplicationRuleResponse {
-    /**
-     * Description of the rule.
-     * 
-     */
+        /**
+         * @return Description of the rule.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * List of FQDN Tags for this rule.
-     * 
-     */
+        /**
+         * @return List of FQDN Tags for this rule.
+         * 
+         */
     private final @Nullable List<String> fqdnTags;
-    /**
-     * Name of the application rule.
-     * 
-     */
+        /**
+         * @return Name of the application rule.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Array of ApplicationRuleProtocols.
-     * 
-     */
+        /**
+         * @return Array of ApplicationRuleProtocols.
+         * 
+         */
     private final @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols;
-    /**
-     * List of source IP addresses for this rule.
-     * 
-     */
+        /**
+         * @return List of source IP addresses for this rule.
+         * 
+         */
     private final @Nullable List<String> sourceAddresses;
-    /**
-     * List of source IpGroups for this rule.
-     * 
-     */
+        /**
+         * @return List of source IpGroups for this rule.
+         * 
+         */
     private final @Nullable List<String> sourceIpGroups;
-    /**
-     * List of FQDNs for this rule.
-     * 
-     */
+        /**
+         * @return List of FQDNs for this rule.
+         * 
+         */
     private final @Nullable List<String> targetFqdns;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class AzureFirewallApplicationRuleResponse {
     }
 
     /**
-     * Description of the rule.
+     * @return Description of the rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of FQDN Tags for this rule.
+     * @return List of FQDN Tags for this rule.
      * 
-    */
+     */
     public List<String> fqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
     /**
-     * Name of the application rule.
+     * @return Name of the application rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Array of ApplicationRuleProtocols.
+     * @return Array of ApplicationRuleProtocols.
      * 
-    */
+     */
     public List<AzureFirewallApplicationRuleProtocolResponse> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
-     * List of source IP addresses for this rule.
+     * @return List of source IP addresses for this rule.
      * 
-    */
+     */
     public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
-    */
+     */
     public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
-     * List of FQDNs for this rule.
+     * @return List of FQDNs for this rule.
      * 
-    */
+     */
     public List<String> targetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }

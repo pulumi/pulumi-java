@@ -30,75 +30,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualMachineImageTemplateResult {
-    /**
-     * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
-     * 
-     */
+        /**
+         * @return Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+         * 
+         */
     private final @Nullable Integer buildTimeoutInMinutes;
-    /**
-     * Specifies the properties used to describe the customization steps of the image, like Image source etc
-     * 
-     */
+        /**
+         * @return Specifies the properties used to describe the customization steps of the image, like Image source etc
+         * 
+         */
     private final @Nullable List<Object> customize;
-    /**
-     * The distribution targets where the image output needs to go to.
-     * 
-     */
+        /**
+         * @return The distribution targets where the image output needs to go to.
+         * 
+         */
     private final List<Object> distribute;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the image template, if configured.
-     * 
-     */
+        /**
+         * @return The identity of the image template, if configured.
+         * 
+         */
     private final ImageTemplateIdentityResponse identity;
-    /**
-     * State of &#39;run&#39; that is currently executing or was last executed.
-     * 
-     */
+        /**
+         * @return State of &#39;run&#39; that is currently executing or was last executed.
+         * 
+         */
     private final ImageTemplateLastRunStatusResponse lastRunStatus;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning error, if any
-     * 
-     */
+        /**
+         * @return Provisioning error, if any
+         * 
+         */
     private final ProvisioningErrorResponse provisioningError;
-    /**
-     * Provisioning state of the resource
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Specifies the properties used to describe the source image.
-     * 
-     */
+        /**
+         * @return Specifies the properties used to describe the source image.
+         * 
+         */
     private final Object source;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Describes how virtual machine is set up to build images
-     * 
-     */
+        /**
+         * @return Describes how virtual machine is set up to build images
+         * 
+         */
     private final @Nullable ImageTemplateVmProfileResponse vmProfile;
 
     @CustomType.Constructor
@@ -134,100 +134,100 @@ public final class GetVirtualMachineImageTemplateResult {
     }
 
     /**
-     * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
+     * @return Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
      * 
-    */
+     */
     public Optional<Integer> buildTimeoutInMinutes() {
         return Optional.ofNullable(this.buildTimeoutInMinutes);
     }
     /**
-     * Specifies the properties used to describe the customization steps of the image, like Image source etc
+     * @return Specifies the properties used to describe the customization steps of the image, like Image source etc
      * 
-    */
+     */
     public List<Object> customize() {
         return this.customize == null ? List.of() : this.customize;
     }
     /**
-     * The distribution targets where the image output needs to go to.
+     * @return The distribution targets where the image output needs to go to.
      * 
-    */
+     */
     public List<Object> distribute() {
         return this.distribute;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the image template, if configured.
+     * @return The identity of the image template, if configured.
      * 
-    */
+     */
     public ImageTemplateIdentityResponse identity() {
         return this.identity;
     }
     /**
-     * State of &#39;run&#39; that is currently executing or was last executed.
+     * @return State of &#39;run&#39; that is currently executing or was last executed.
      * 
-    */
+     */
     public ImageTemplateLastRunStatusResponse lastRunStatus() {
         return this.lastRunStatus;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning error, if any
+     * @return Provisioning error, if any
      * 
-    */
+     */
     public ProvisioningErrorResponse provisioningError() {
         return this.provisioningError;
     }
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Specifies the properties used to describe the source image.
+     * @return Specifies the properties used to describe the source image.
      * 
-    */
+     */
     public Object source() {
         return this.source;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Describes how virtual machine is set up to build images
+     * @return Describes how virtual machine is set up to build images
      * 
-    */
+     */
     public Optional<ImageTemplateVmProfileResponse> vmProfile() {
         return Optional.ofNullable(this.vmProfile);
     }

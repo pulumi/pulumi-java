@@ -21,6 +21,10 @@ public final class UserIdentityPropertiesResponse extends com.pulumi.resources.I
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The client id of user assigned identity.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -32,6 +36,10 @@ public final class UserIdentityPropertiesResponse extends com.pulumi.resources.I
     @Import(name="principalId")
     private @Nullable String principalId;
 
+    /**
+     * @return The principal id of user assigned identity.
+     * 
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -61,11 +69,23 @@ public final class UserIdentityPropertiesResponse extends com.pulumi.resources.I
             $ = new UserIdentityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable String principalId) {
             $.principalId = principalId;
             return this;

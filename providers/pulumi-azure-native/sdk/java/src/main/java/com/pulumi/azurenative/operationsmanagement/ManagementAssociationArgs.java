@@ -23,6 +23,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="managementAssociationName")
     private @Nullable Output<String> managementAssociationName;
 
+    /**
+     * @return User ManagementAssociation Name.
+     * 
+     */
     public Optional<Output<String>> managementAssociationName() {
         return Optional.ofNullable(this.managementAssociationName);
     }
@@ -45,6 +53,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="properties")
     private @Nullable Output<ManagementAssociationPropertiesArgs> properties;
 
+    /**
+     * @return Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
+     * 
+     */
     public Optional<Output<ManagementAssociationPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="providerName", required=true)
     private Output<String> providerName;
 
+    /**
+     * @return Provider name for the parent resource.
+     * 
+     */
     public Output<String> providerName() {
         return this.providerName;
     }
@@ -67,6 +83,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to get. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return Parent resource name.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -89,6 +113,10 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return Resource type for the parent resource
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -123,65 +151,149 @@ public final class ManagementAssociationArgs extends com.pulumi.resources.Resour
             $ = new ManagementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managementAssociationName User ManagementAssociation Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementAssociationName(@Nullable Output<String> managementAssociationName) {
             $.managementAssociationName = managementAssociationName;
             return this;
         }
 
+        /**
+         * @param managementAssociationName User ManagementAssociation Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementAssociationName(String managementAssociationName) {
             return managementAssociationName(Output.of(managementAssociationName));
         }
 
+        /**
+         * @param properties Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ManagementAssociationPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties for ManagementAssociation object supported by the OperationsManagement resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagementAssociationPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerName Provider name for the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName Provider name for the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName Parent resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName Parent resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param resourceType Resource type for the parent resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType Resource type for the parent resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }

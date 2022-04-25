@@ -27,6 +27,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
     @Import(name="defaultValue")
     private @Nullable String defaultValue;
 
+    /**
+     * @return Default parameter value.
+     * 
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -38,6 +42,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Parameter description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Parameter name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
     @Import(name="required")
     private @Nullable Boolean required;
 
+    /**
+     * @return Specifies whether parameter is required or not.
+     * 
+     */
     public Optional<Boolean> required() {
         return Optional.ofNullable(this.required);
     }
@@ -71,6 +87,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Parameter type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -82,6 +102,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
     @Import(name="values")
     private @Nullable List<String> values;
 
+    /**
+     * @return Parameter values.
+     * 
+     */
     public Optional<List<String>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -115,36 +139,78 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
             $ = new ParameterContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Default parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable String defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param description Parameter description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name Parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param required Specifies whether parameter is required or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder required(@Nullable Boolean required) {
             $.required = required;
             return this;
         }
 
+        /**
+         * @param type Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param values Parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

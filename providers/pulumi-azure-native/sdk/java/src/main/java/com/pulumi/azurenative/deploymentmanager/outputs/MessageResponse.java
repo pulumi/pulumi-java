@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MessageResponse {
-    /**
-     * The actual message text.
-     * 
-     */
+        /**
+         * @return The actual message text.
+         * 
+         */
     private final String message;
-    /**
-     * Time in UTC this message was provided.
-     * 
-     */
+        /**
+         * @return Time in UTC this message was provided.
+         * 
+         */
     private final String timeStamp;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class MessageResponse {
     }
 
     /**
-     * The actual message text.
+     * @return The actual message text.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Time in UTC this message was provided.
+     * @return Time in UTC this message was provided.
      * 
-    */
+     */
     public String timeStamp() {
         return this.timeStamp;
     }

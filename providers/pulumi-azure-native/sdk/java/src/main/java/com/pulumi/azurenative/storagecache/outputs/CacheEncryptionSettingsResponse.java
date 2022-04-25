@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CacheEncryptionSettingsResponse {
-    /**
-     * Specifies the location of the key encryption key in Key Vault.
-     * 
-     */
+        /**
+         * @return Specifies the location of the key encryption key in Key Vault.
+         * 
+         */
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CacheEncryptionSettingsResponse {
     }
 
     /**
-     * Specifies the location of the key encryption key in Key Vault.
+     * @return Specifies the location of the key encryption key in Key Vault.
      * 
-    */
+     */
     public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }

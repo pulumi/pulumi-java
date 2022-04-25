@@ -9,41 +9,41 @@ import java.util.Objects;
 
 @CustomType
 public final class OnPremiseSqlResourceDetailsResponse {
-    /**
-     * The Sql database name installed on the machine
-     * 
-     */
+        /**
+         * @return The Sql database name installed on the machine
+         * 
+         */
     private final String databaseName;
-    /**
-     * The name of the machine
-     * 
-     */
+        /**
+         * @return The name of the machine
+         * 
+         */
     private final String machineName;
-    /**
-     * The Sql server name installed on the machine
-     * 
-     */
+        /**
+         * @return The Sql server name installed on the machine
+         * 
+         */
     private final String serverName;
-    /**
-     * The platform where the assessed resource resides
-     * Expected value is &#39;OnPremiseSql&#39;.
-     * 
-     */
+        /**
+         * @return The platform where the assessed resource resides
+         * Expected value is &#39;OnPremiseSql&#39;.
+         * 
+         */
     private final String source;
-    /**
-     * The oms agent Id installed on the machine
-     * 
-     */
+        /**
+         * @return The oms agent Id installed on the machine
+         * 
+         */
     private final String sourceComputerId;
-    /**
-     * The unique Id of the machine
-     * 
-     */
+        /**
+         * @return The unique Id of the machine
+         * 
+         */
     private final String vmuuid;
-    /**
-     * Azure resource Id of the workspace the machine is attached to
-     * 
-     */
+        /**
+         * @return Azure resource Id of the workspace the machine is attached to
+         * 
+         */
     private final String workspaceId;
 
     @CustomType.Constructor
@@ -65,52 +65,52 @@ public final class OnPremiseSqlResourceDetailsResponse {
     }
 
     /**
-     * The Sql database name installed on the machine
+     * @return The Sql database name installed on the machine
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * The name of the machine
+     * @return The name of the machine
      * 
-    */
+     */
     public String machineName() {
         return this.machineName;
     }
     /**
-     * The Sql server name installed on the machine
+     * @return The Sql server name installed on the machine
      * 
-    */
+     */
     public String serverName() {
         return this.serverName;
     }
     /**
-     * The platform where the assessed resource resides
+     * @return The platform where the assessed resource resides
      * Expected value is &#39;OnPremiseSql&#39;.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * The oms agent Id installed on the machine
+     * @return The oms agent Id installed on the machine
      * 
-    */
+     */
     public String sourceComputerId() {
         return this.sourceComputerId;
     }
     /**
-     * The unique Id of the machine
+     * @return The unique Id of the machine
      * 
-    */
+     */
     public String vmuuid() {
         return this.vmuuid;
     }
     /**
-     * Azure resource Id of the workspace the machine is attached to
+     * @return Azure resource Id of the workspace the machine is attached to
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }

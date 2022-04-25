@@ -26,6 +26,10 @@ public final class ContainerResourcesResponse extends com.pulumi.resources.Invok
     @Import(name="cpu")
     private @Nullable Double cpu;
 
+    /**
+     * @return Required CPU in cores, e.g. 0.5
+     * 
+     */
     public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -37,6 +41,10 @@ public final class ContainerResourcesResponse extends com.pulumi.resources.Invok
     @Import(name="memory")
     private @Nullable String memory;
 
+    /**
+     * @return Required memory, e.g. &#34;250Mb&#34;
+     * 
+     */
     public Optional<String> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -66,11 +74,23 @@ public final class ContainerResourcesResponse extends com.pulumi.resources.Invok
             $ = new ContainerResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Required CPU in cores, e.g. 0.5
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memory Required memory, e.g. &#34;250Mb&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable String memory) {
             $.memory = memory;
             return this;

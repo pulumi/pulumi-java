@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureStaticWebAppsRegistrationResponse {
-    /**
-     * The Client ID of the app used for login.
-     * 
-     */
+        /**
+         * @return The Client ID of the app used for login.
+         * 
+         */
     private final @Nullable String clientId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AzureStaticWebAppsRegistrationResponse {
     }
 
     /**
-     * The Client ID of the app used for login.
+     * @return The Client ID of the app used for login.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }

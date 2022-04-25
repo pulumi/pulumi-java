@@ -19,6 +19,10 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -30,6 +34,10 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="subscriptionName", required=true)
     private String subscriptionName;
 
+    /**
+     * @return The subscription name.
+     * 
+     */
     public String subscriptionName() {
         return this.subscriptionName;
     }
@@ -52,6 +64,10 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="topicName", required=true)
     private String topicName;
 
+    /**
+     * @return The topic name.
+     * 
+     */
     public String topicName() {
         return this.topicName;
     }
@@ -83,21 +99,45 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param subscriptionName The subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(String subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;
         }
 
+        /**
+         * @param topicName The topic name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topicName(String topicName) {
             $.topicName = topicName;
             return this;

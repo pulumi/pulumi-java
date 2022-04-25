@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAssessmentResult {
-    /**
-     * For optimistic concurrency control.
-     * 
-     */
+        /**
+         * @return For optimistic concurrency control.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
-     * 
-     */
+        /**
+         * @return Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
+         * 
+         */
     private final String id;
-    /**
-     * Unique name of an assessment.
-     * 
-     */
+        /**
+         * @return Unique name of an assessment.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the assessment.
-     * 
-     */
+        /**
+         * @return Properties of the assessment.
+         * 
+         */
     private final AssessmentPropertiesResponse properties;
-    /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
-     * 
-     */
+        /**
+         * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GetAssessmentResult {
     }
 
     /**
-     * For optimistic concurrency control.
+     * @return For optimistic concurrency control.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
+     * @return Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Unique name of an assessment.
+     * @return Unique name of an assessment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the assessment.
+     * @return Properties of the assessment.
      * 
-    */
+     */
     public AssessmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

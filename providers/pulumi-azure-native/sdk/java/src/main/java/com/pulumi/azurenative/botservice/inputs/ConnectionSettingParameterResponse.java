@@ -25,6 +25,10 @@ public final class ConnectionSettingParameterResponse extends com.pulumi.resourc
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return Key for the Connection Setting Parameter.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -36,6 +40,10 @@ public final class ConnectionSettingParameterResponse extends com.pulumi.resourc
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value associated with the Connection Setting Parameter.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ConnectionSettingParameterResponse extends com.pulumi.resourc
             $ = new ConnectionSettingParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Key for the Connection Setting Parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Value associated with the Connection Setting Parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

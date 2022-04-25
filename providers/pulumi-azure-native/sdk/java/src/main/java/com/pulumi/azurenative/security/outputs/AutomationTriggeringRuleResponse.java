@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutomationTriggeringRuleResponse {
-    /**
-     * The expected value.
-     * 
-     */
+        /**
+         * @return The expected value.
+         * 
+         */
     private final @Nullable String expectedValue;
-    /**
-     * A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
-     * 
-     */
+        /**
+         * @return A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+         * 
+         */
     private final @Nullable String operator;
-    /**
-     * The JPath of the entity model property that should be checked.
-     * 
-     */
+        /**
+         * @return The JPath of the entity model property that should be checked.
+         * 
+         */
     private final @Nullable String propertyJPath;
-    /**
-     * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
-     * 
-     */
+        /**
+         * @return The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+         * 
+         */
     private final @Nullable String propertyType;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class AutomationTriggeringRuleResponse {
     }
 
     /**
-     * The expected value.
+     * @return The expected value.
      * 
-    */
+     */
     public Optional<String> expectedValue() {
         return Optional.ofNullable(this.expectedValue);
     }
     /**
-     * A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+     * @return A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
      * 
-    */
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
-     * The JPath of the entity model property that should be checked.
+     * @return The JPath of the entity model property that should be checked.
      * 
-    */
+     */
     public Optional<String> propertyJPath() {
         return Optional.ofNullable(this.propertyJPath);
     }
     /**
-     * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+     * @return The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
      * 
-    */
+     */
     public Optional<String> propertyType() {
         return Optional.ofNullable(this.propertyType);
     }

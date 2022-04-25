@@ -13,81 +13,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEventGridDataConnectionResult {
-    /**
-     * The name of blob storage event type to process.
-     * 
-     */
+        /**
+         * @return The name of blob storage event type to process.
+         * 
+         */
     private final @Nullable String blobStorageEventType;
-    /**
-     * The event hub consumer group.
-     * 
-     */
+        /**
+         * @return The event hub consumer group.
+         * 
+         */
     private final String consumerGroup;
-    /**
-     * The data format of the message. Optionally the data format can be added to each message.
-     * 
-     */
+        /**
+         * @return The data format of the message. Optionally the data format can be added to each message.
+         * 
+         */
     private final @Nullable String dataFormat;
-    /**
-     * The resource ID where the event grid is configured to send events.
-     * 
-     */
+        /**
+         * @return The resource ID where the event grid is configured to send events.
+         * 
+         */
     private final String eventHubResourceId;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
-     * 
-     */
+        /**
+         * @return A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
+         * 
+         */
     private final @Nullable Boolean ignoreFirstRecord;
-    /**
-     * Kind of the endpoint for the data connection
-     * Expected value is &#39;EventGrid&#39;.
-     * 
-     */
+        /**
+         * @return Kind of the endpoint for the data connection
+         * Expected value is &#39;EventGrid&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
-     */
+        /**
+         * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+         * 
+         */
     private final @Nullable String mappingRuleName;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource ID of the storage account where the data resides.
-     * 
-     */
+        /**
+         * @return The resource ID of the storage account where the data resides.
+         * 
+         */
     private final String storageAccountResourceId;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
-     */
+        /**
+         * @return The table where the data should be ingested. Optionally the table information can be added to each message.
+         * 
+         */
     private final @Nullable String tableName;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -125,108 +125,108 @@ public final class GetEventGridDataConnectionResult {
     }
 
     /**
-     * The name of blob storage event type to process.
+     * @return The name of blob storage event type to process.
      * 
-    */
+     */
     public Optional<String> blobStorageEventType() {
         return Optional.ofNullable(this.blobStorageEventType);
     }
     /**
-     * The event hub consumer group.
+     * @return The event hub consumer group.
      * 
-    */
+     */
     public String consumerGroup() {
         return this.consumerGroup;
     }
     /**
-     * The data format of the message. Optionally the data format can be added to each message.
+     * @return The data format of the message. Optionally the data format can be added to each message.
      * 
-    */
+     */
     public Optional<String> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
-     * The resource ID where the event grid is configured to send events.
+     * @return The resource ID where the event grid is configured to send events.
      * 
-    */
+     */
     public String eventHubResourceId() {
         return this.eventHubResourceId;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
+     * @return A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
      * 
-    */
+     */
     public Optional<Boolean> ignoreFirstRecord() {
         return Optional.ofNullable(this.ignoreFirstRecord);
     }
     /**
-     * Kind of the endpoint for the data connection
+     * @return Kind of the endpoint for the data connection
      * Expected value is &#39;EventGrid&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
-    */
+     */
     public Optional<String> mappingRuleName() {
         return Optional.ofNullable(this.mappingRuleName);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource ID of the storage account where the data resides.
+     * @return The resource ID of the storage account where the data resides.
      * 
-    */
+     */
     public String storageAccountResourceId() {
         return this.storageAccountResourceId;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
-    */
+     */
     public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

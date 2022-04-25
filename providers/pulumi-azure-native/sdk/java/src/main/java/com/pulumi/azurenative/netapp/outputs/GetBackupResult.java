@@ -12,65 +12,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBackupResult {
-    /**
-     * UUID v4 used to identify the Backup
-     * 
-     */
+        /**
+         * @return UUID v4 used to identify the Backup
+         * 
+         */
     private final String backupId;
-    /**
-     * Type of backup Manual or Scheduled
-     * 
-     */
+        /**
+         * @return Type of backup Manual or Scheduled
+         * 
+         */
     private final String backupType;
-    /**
-     * The creation date of the backup
-     * 
-     */
+        /**
+         * @return The creation date of the backup
+         * 
+         */
     private final String creationDate;
-    /**
-     * Failure reason
-     * 
-     */
+        /**
+         * @return Failure reason
+         * 
+         */
     private final String failureReason;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Label for backup
-     * 
-     */
+        /**
+         * @return Label for backup
+         * 
+         */
     private final @Nullable String label;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Azure lifecycle management
-     * 
-     */
+        /**
+         * @return Azure lifecycle management
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Size of backup
-     * 
-     */
+        /**
+         * @return Size of backup
+         * 
+         */
     private final Double size;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Volume name
-     * 
-     */
+        /**
+         * @return Volume name
+         * 
+         */
     private final String volumeName;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class GetBackupResult {
     }
 
     /**
-     * UUID v4 used to identify the Backup
+     * @return UUID v4 used to identify the Backup
      * 
-    */
+     */
     public String backupId() {
         return this.backupId;
     }
     /**
-     * Type of backup Manual or Scheduled
+     * @return Type of backup Manual or Scheduled
      * 
-    */
+     */
     public String backupType() {
         return this.backupType;
     }
     /**
-     * The creation date of the backup
+     * @return The creation date of the backup
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * Failure reason
+     * @return Failure reason
      * 
-    */
+     */
     public String failureReason() {
         return this.failureReason;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Label for backup
+     * @return Label for backup
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Size of backup
+     * @return Size of backup
      * 
-    */
+     */
     public Double size() {
         return this.size;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Volume name
+     * @return Volume name
      * 
-    */
+     */
     public String volumeName() {
         return this.volumeName;
     }

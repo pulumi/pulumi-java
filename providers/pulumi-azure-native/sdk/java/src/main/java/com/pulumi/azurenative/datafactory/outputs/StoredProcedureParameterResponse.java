@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StoredProcedureParameterResponse {
-    /**
-     * Stored procedure parameter type.
-     * 
-     */
+        /**
+         * @return Stored procedure parameter type.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * Stored procedure parameter value. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Stored procedure parameter value. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object value;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class StoredProcedureParameterResponse {
     }
 
     /**
-     * Stored procedure parameter type.
+     * @return Stored procedure parameter type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Stored procedure parameter value. Type: string (or Expression with resultType string).
+     * @return Stored procedure parameter value. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }

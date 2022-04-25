@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoScalePropertiesResponse {
-    /**
-     * Whether automatic scaling is enabled for the Big Data pool.
-     * 
-     */
+        /**
+         * @return Whether automatic scaling is enabled for the Big Data pool.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The maximum number of nodes the Big Data pool can support.
-     * 
-     */
+        /**
+         * @return The maximum number of nodes the Big Data pool can support.
+         * 
+         */
     private final @Nullable Integer maxNodeCount;
-    /**
-     * The minimum number of nodes the Big Data pool can support.
-     * 
-     */
+        /**
+         * @return The minimum number of nodes the Big Data pool can support.
+         * 
+         */
     private final @Nullable Integer minNodeCount;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class AutoScalePropertiesResponse {
     }
 
     /**
-     * Whether automatic scaling is enabled for the Big Data pool.
+     * @return Whether automatic scaling is enabled for the Big Data pool.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The maximum number of nodes the Big Data pool can support.
+     * @return The maximum number of nodes the Big Data pool can support.
      * 
-    */
+     */
     public Optional<Integer> maxNodeCount() {
         return Optional.ofNullable(this.maxNodeCount);
     }
     /**
-     * The minimum number of nodes the Big Data pool can support.
+     * @return The minimum number of nodes the Big Data pool can support.
      * 
-    */
+     */
     public Optional<Integer> minNodeCount() {
         return Optional.ofNullable(this.minNodeCount);
     }

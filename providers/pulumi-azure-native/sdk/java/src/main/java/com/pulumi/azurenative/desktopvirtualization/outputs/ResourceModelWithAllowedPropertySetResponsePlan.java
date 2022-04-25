@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceModelWithAllowedPropertySetResponsePlan {
-    /**
-     * A user defined name of the 3rd Party Artifact that is being procured.
-     * 
-     */
+        /**
+         * @return A user defined name of the 3rd Party Artifact that is being procured.
+         * 
+         */
     private final String name;
-    /**
-     * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
-     * 
-     */
+        /**
+         * @return The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+         * 
+         */
     private final String product;
-    /**
-     * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
-     * 
-     */
+        /**
+         * @return A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+         * 
+         */
     private final @Nullable String promotionCode;
-    /**
-     * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
-     * 
-     */
+        /**
+         * @return The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+         * 
+         */
     private final String publisher;
-    /**
-     * The version of the desired product/artifact.
-     * 
-     */
+        /**
+         * @return The version of the desired product/artifact.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
     }
 
     /**
-     * A user defined name of the 3rd Party Artifact that is being procured.
+     * @return A user defined name of the 3rd Party Artifact that is being procured.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+     * @return The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
      * 
-    */
+     */
     public String product() {
         return this.product;
     }
     /**
-     * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+     * @return A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+     * @return The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
      * 
-    */
+     */
     public String publisher() {
         return this.publisher;
     }
     /**
-     * The version of the desired product/artifact.
+     * @return The version of the desired product/artifact.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -17,95 +17,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MasterTargetServerResponse {
-    /**
-     * Agent expiry date.
-     * 
-     */
+        /**
+         * @return Agent expiry date.
+         * 
+         */
     private final @Nullable String agentExpiryDate;
-    /**
-     * The version of the scout component on the server.
-     * 
-     */
+        /**
+         * @return The version of the scout component on the server.
+         * 
+         */
     private final @Nullable String agentVersion;
-    /**
-     * Agent version details.
-     * 
-     */
+        /**
+         * @return Agent version details.
+         * 
+         */
     private final @Nullable VersionDetailsResponse agentVersionDetails;
-    /**
-     * The list of data stores in the fabric.
-     * 
-     */
+        /**
+         * @return The list of data stores in the fabric.
+         * 
+         */
     private final @Nullable List<DataStoreResponse> dataStores;
-    /**
-     * Disk count of the master target.
-     * 
-     */
+        /**
+         * @return Disk count of the master target.
+         * 
+         */
     private final @Nullable Integer diskCount;
-    /**
-     * Health errors.
-     * 
-     */
+        /**
+         * @return Health errors.
+         * 
+         */
     private final @Nullable List<HealthErrorResponse> healthErrors;
-    /**
-     * The server Id.
-     * 
-     */
+        /**
+         * @return The server Id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The IP address of the server.
-     * 
-     */
+        /**
+         * @return The IP address of the server.
+         * 
+         */
     private final @Nullable String ipAddress;
-    /**
-     * The last heartbeat received from the server.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the server.
+         * 
+         */
     private final @Nullable String lastHeartbeat;
-    /**
-     * MARS agent expiry date.
-     * 
-     */
+        /**
+         * @return MARS agent expiry date.
+         * 
+         */
     private final @Nullable String marsAgentExpiryDate;
-    /**
-     * MARS agent version.
-     * 
-     */
+        /**
+         * @return MARS agent version.
+         * 
+         */
     private final @Nullable String marsAgentVersion;
-    /**
-     * Mars agent version details.
-     * 
-     */
+        /**
+         * @return Mars agent version details.
+         * 
+         */
     private final @Nullable VersionDetailsResponse marsAgentVersionDetails;
-    /**
-     * The server name.
-     * 
-     */
+        /**
+         * @return The server name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The OS type of the server.
-     * 
-     */
+        /**
+         * @return The OS type of the server.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * OS Version of the master target.
-     * 
-     */
+        /**
+         * @return OS Version of the master target.
+         * 
+         */
     private final @Nullable String osVersion;
-    /**
-     * The retention volumes of Master target Server.
-     * 
-     */
+        /**
+         * @return The retention volumes of Master target Server.
+         * 
+         */
     private final @Nullable List<RetentionVolumeResponse> retentionVolumes;
-    /**
-     * Validation errors.
-     * 
-     */
+        /**
+         * @return Validation errors.
+         * 
+         */
     private final @Nullable List<HealthErrorResponse> validationErrors;
-    /**
-     * Version status
-     * 
-     */
+        /**
+         * @return Version status
+         * 
+         */
     private final @Nullable String versionStatus;
 
     @CustomType.Constructor
@@ -149,128 +149,128 @@ public final class MasterTargetServerResponse {
     }
 
     /**
-     * Agent expiry date.
+     * @return Agent expiry date.
      * 
-    */
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
-     * The version of the scout component on the server.
+     * @return The version of the scout component on the server.
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
-     * Agent version details.
+     * @return Agent version details.
      * 
-    */
+     */
     public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
     /**
-     * The list of data stores in the fabric.
+     * @return The list of data stores in the fabric.
      * 
-    */
+     */
     public List<DataStoreResponse> dataStores() {
         return this.dataStores == null ? List.of() : this.dataStores;
     }
     /**
-     * Disk count of the master target.
+     * @return Disk count of the master target.
      * 
-    */
+     */
     public Optional<Integer> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
     /**
-     * Health errors.
+     * @return Health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
-     * The server Id.
+     * @return The server Id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The IP address of the server.
+     * @return The IP address of the server.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The last heartbeat received from the server.
+     * @return The last heartbeat received from the server.
      * 
-    */
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
-     * MARS agent expiry date.
+     * @return MARS agent expiry date.
      * 
-    */
+     */
     public Optional<String> marsAgentExpiryDate() {
         return Optional.ofNullable(this.marsAgentExpiryDate);
     }
     /**
-     * MARS agent version.
+     * @return MARS agent version.
      * 
-    */
+     */
     public Optional<String> marsAgentVersion() {
         return Optional.ofNullable(this.marsAgentVersion);
     }
     /**
-     * Mars agent version details.
+     * @return Mars agent version details.
      * 
-    */
+     */
     public Optional<VersionDetailsResponse> marsAgentVersionDetails() {
         return Optional.ofNullable(this.marsAgentVersionDetails);
     }
     /**
-     * The server name.
+     * @return The server name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The OS type of the server.
+     * @return The OS type of the server.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * OS Version of the master target.
+     * @return OS Version of the master target.
      * 
-    */
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
-     * The retention volumes of Master target Server.
+     * @return The retention volumes of Master target Server.
      * 
-    */
+     */
     public List<RetentionVolumeResponse> retentionVolumes() {
         return this.retentionVolumes == null ? List.of() : this.retentionVolumes;
     }
     /**
-     * Validation errors.
+     * @return Validation errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> validationErrors() {
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
     /**
-     * Version status
+     * @return Version status
      * 
-    */
+     */
     public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }

@@ -29,6 +29,10 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="action")
     private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
+    /**
+     * @return The IP Filter Action
+     * 
+     */
     public Optional<Output<Either<String,NetworkRuleIPAction>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipMask")
     private @Nullable Output<String> ipMask;
 
+    /**
+     * @return IP Mask
+     * 
+     */
     public Optional<Output<String>> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }
@@ -69,28 +77,64 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
             $ = new NWRuleSetIpRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,NetworkRuleIPAction>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,NetworkRuleIPAction> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action The IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(NetworkRuleIPAction action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param ipMask IP Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(@Nullable Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;
         }
 
+        /**
+         * @param ipMask IP Mask
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(String ipMask) {
             return ipMask(Output.of(ipMask));
         }

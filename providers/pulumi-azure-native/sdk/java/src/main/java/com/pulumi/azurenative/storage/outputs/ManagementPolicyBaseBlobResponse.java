@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementPolicyBaseBlobResponse {
-    /**
-     * The function to delete the blob
-     * 
-     */
+        /**
+         * @return The function to delete the blob
+         * 
+         */
     private final @Nullable DateAfterModificationResponse delete;
-    /**
-     * This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
-     * 
-     */
+        /**
+         * @return This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
+         * 
+         */
     private final @Nullable Boolean enableAutoTierToHotFromCool;
-    /**
-     * The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
-     * 
-     */
+        /**
+         * @return The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
+         * 
+         */
     private final @Nullable DateAfterModificationResponse tierToArchive;
-    /**
-     * The function to tier blobs to cool storage. Support blobs currently at Hot tier
-     * 
-     */
+        /**
+         * @return The function to tier blobs to cool storage. Support blobs currently at Hot tier
+         * 
+         */
     private final @Nullable DateAfterModificationResponse tierToCool;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ManagementPolicyBaseBlobResponse {
     }
 
     /**
-     * The function to delete the blob
+     * @return The function to delete the blob
      * 
-    */
+     */
     public Optional<DateAfterModificationResponse> delete() {
         return Optional.ofNullable(this.delete);
     }
     /**
-     * This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
+     * @return This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
      * 
-    */
+     */
     public Optional<Boolean> enableAutoTierToHotFromCool() {
         return Optional.ofNullable(this.enableAutoTierToHotFromCool);
     }
     /**
-     * The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
+     * @return The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
      * 
-    */
+     */
     public Optional<DateAfterModificationResponse> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
     /**
-     * The function to tier blobs to cool storage. Support blobs currently at Hot tier
+     * @return The function to tier blobs to cool storage. Support blobs currently at Hot tier
      * 
-    */
+     */
     public Optional<DateAfterModificationResponse> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }

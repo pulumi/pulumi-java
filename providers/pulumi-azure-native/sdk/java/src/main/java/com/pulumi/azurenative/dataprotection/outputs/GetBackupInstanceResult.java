@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetBackupInstanceResult {
-    /**
-     * Resource Id represents the complete path to the resource.
-     * 
-     */
+        /**
+         * @return Resource Id represents the complete path to the resource.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name associated with the resource.
-     * 
-     */
+        /**
+         * @return Resource name associated with the resource.
+         * 
+         */
     private final String name;
-    /**
-     * BackupInstanceResource properties
-     * 
-     */
+        /**
+         * @return BackupInstanceResource properties
+         * 
+         */
     private final BackupInstanceResponse properties;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
-     */
+        /**
+         * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetBackupInstanceResult {
     }
 
     /**
-     * Resource Id represents the complete path to the resource.
+     * @return Resource Id represents the complete path to the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name associated with the resource.
+     * @return Resource name associated with the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * BackupInstanceResource properties
+     * @return BackupInstanceResource properties
      * 
-    */
+     */
     public BackupInstanceResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

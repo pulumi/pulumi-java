@@ -13,41 +13,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JsonInputSchemaMappingResponse {
-    /**
-     * The mapping information for the DataVersion property of the Event Grid Event.
-     * 
-     */
+        /**
+         * @return The mapping information for the DataVersion property of the Event Grid Event.
+         * 
+         */
     private final @Nullable JsonFieldWithDefaultResponse dataVersion;
-    /**
-     * The mapping information for the EventTime property of the Event Grid Event.
-     * 
-     */
+        /**
+         * @return The mapping information for the EventTime property of the Event Grid Event.
+         * 
+         */
     private final @Nullable JsonFieldResponse eventTime;
-    /**
-     * The mapping information for the EventType property of the Event Grid Event.
-     * 
-     */
+        /**
+         * @return The mapping information for the EventType property of the Event Grid Event.
+         * 
+         */
     private final @Nullable JsonFieldWithDefaultResponse eventType;
-    /**
-     * The mapping information for the Id property of the Event Grid Event.
-     * 
-     */
+        /**
+         * @return The mapping information for the Id property of the Event Grid Event.
+         * 
+         */
     private final @Nullable JsonFieldResponse id;
-    /**
-     * Type of the custom mapping
-     * Expected value is &#39;Json&#39;.
-     * 
-     */
+        /**
+         * @return Type of the custom mapping
+         * Expected value is &#39;Json&#39;.
+         * 
+         */
     private final String inputSchemaMappingType;
-    /**
-     * The mapping information for the Subject property of the Event Grid Event.
-     * 
-     */
+        /**
+         * @return The mapping information for the Subject property of the Event Grid Event.
+         * 
+         */
     private final @Nullable JsonFieldWithDefaultResponse subject;
-    /**
-     * The mapping information for the Topic property of the Event Grid Event.
-     * 
-     */
+        /**
+         * @return The mapping information for the Topic property of the Event Grid Event.
+         * 
+         */
     private final @Nullable JsonFieldResponse topic;
 
     @CustomType.Constructor
@@ -69,52 +69,52 @@ public final class JsonInputSchemaMappingResponse {
     }
 
     /**
-     * The mapping information for the DataVersion property of the Event Grid Event.
+     * @return The mapping information for the DataVersion property of the Event Grid Event.
      * 
-    */
+     */
     public Optional<JsonFieldWithDefaultResponse> dataVersion() {
         return Optional.ofNullable(this.dataVersion);
     }
     /**
-     * The mapping information for the EventTime property of the Event Grid Event.
+     * @return The mapping information for the EventTime property of the Event Grid Event.
      * 
-    */
+     */
     public Optional<JsonFieldResponse> eventTime() {
         return Optional.ofNullable(this.eventTime);
     }
     /**
-     * The mapping information for the EventType property of the Event Grid Event.
+     * @return The mapping information for the EventType property of the Event Grid Event.
      * 
-    */
+     */
     public Optional<JsonFieldWithDefaultResponse> eventType() {
         return Optional.ofNullable(this.eventType);
     }
     /**
-     * The mapping information for the Id property of the Event Grid Event.
+     * @return The mapping information for the Id property of the Event Grid Event.
      * 
-    */
+     */
     public Optional<JsonFieldResponse> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Type of the custom mapping
+     * @return Type of the custom mapping
      * Expected value is &#39;Json&#39;.
      * 
-    */
+     */
     public String inputSchemaMappingType() {
         return this.inputSchemaMappingType;
     }
     /**
-     * The mapping information for the Subject property of the Event Grid Event.
+     * @return The mapping information for the Subject property of the Event Grid Event.
      * 
-    */
+     */
     public Optional<JsonFieldWithDefaultResponse> subject() {
         return Optional.ofNullable(this.subject);
     }
     /**
-     * The mapping information for the Topic property of the Event Grid Event.
+     * @return The mapping information for the Topic property of the Event Grid Event.
      * 
-    */
+     */
     public Optional<JsonFieldResponse> topic() {
         return Optional.ofNullable(this.topic);
     }

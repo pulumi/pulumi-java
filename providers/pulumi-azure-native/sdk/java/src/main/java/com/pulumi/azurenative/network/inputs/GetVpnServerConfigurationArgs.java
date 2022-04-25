@@ -19,6 +19,10 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VpnServerConfiguration.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
     @Import(name="vpnServerConfigurationName", required=true)
     private String vpnServerConfigurationName;
 
+    /**
+     * @return The name of the VpnServerConfiguration being retrieved.
+     * 
+     */
     public String vpnServerConfigurationName() {
         return this.vpnServerConfigurationName;
     }
@@ -59,11 +67,23 @@ public final class GetVpnServerConfigurationArgs extends com.pulumi.resources.In
             $ = new GetVpnServerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnServerConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vpnServerConfigurationName The name of the VpnServerConfiguration being retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnServerConfigurationName(String vpnServerConfigurationName) {
             $.vpnServerConfigurationName = vpnServerConfigurationName;
             return this;

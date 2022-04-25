@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionItemResponse {
-    /**
-     * Modified whenever there is a change in the state of private endpoint connection.
-     * 
-     */
+        /**
+         * @return Modified whenever there is a change in the state of private endpoint connection.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Id of private endpoint connection.
-     * 
-     */
+        /**
+         * @return Id of private endpoint connection.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Properties of the private endpoint object.
-     * 
-     */
+        /**
+         * @return Properties of the private endpoint object.
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * Approval state of the private link connection.
-     * 
-     */
+        /**
+         * @return Approval state of the private link connection.
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * Provisioning state of the private endpoint connection.
-     * 
-     */
+        /**
+         * @return Provisioning state of the private endpoint connection.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class PrivateEndpointConnectionItemResponse {
     }
 
     /**
-     * Modified whenever there is a change in the state of private endpoint connection.
+     * @return Modified whenever there is a change in the state of private endpoint connection.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Id of private endpoint connection.
+     * @return Id of private endpoint connection.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Properties of the private endpoint object.
+     * @return Properties of the private endpoint object.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Approval state of the private link connection.
+     * @return Approval state of the private link connection.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Provisioning state of the private endpoint connection.
+     * @return Provisioning state of the private endpoint connection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

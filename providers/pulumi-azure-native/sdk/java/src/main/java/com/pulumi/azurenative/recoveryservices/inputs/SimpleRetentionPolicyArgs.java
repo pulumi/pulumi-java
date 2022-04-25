@@ -28,6 +28,10 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="retentionDuration")
     private @Nullable Output<RetentionDurationArgs> retentionDuration;
 
+    /**
+     * @return Retention duration of the protection policy.
+     * 
+     */
     public Optional<Output<RetentionDurationArgs>> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
@@ -40,6 +44,11 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="retentionPolicyType", required=true)
     private Output<String> retentionPolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;SimpleRetentionPolicy&#39;.
+     * 
+     */
     public Output<String> retentionPolicyType() {
         return this.retentionPolicyType;
     }
@@ -69,20 +78,46 @@ public final class SimpleRetentionPolicyArgs extends com.pulumi.resources.Resour
             $ = new SimpleRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retentionDuration Retention duration of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
             $.retentionDuration = retentionDuration;
             return this;
         }
 
+        /**
+         * @param retentionDuration Retention duration of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(RetentionDurationArgs retentionDuration) {
             return retentionDuration(Output.of(retentionDuration));
         }
 
+        /**
+         * @param retentionPolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;SimpleRetentionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicyType(Output<String> retentionPolicyType) {
             $.retentionPolicyType = retentionPolicyType;
             return this;
         }
 
+        /**
+         * @param retentionPolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;SimpleRetentionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicyType(String retentionPolicyType) {
             return retentionPolicyType(Output.of(retentionPolicyType));
         }

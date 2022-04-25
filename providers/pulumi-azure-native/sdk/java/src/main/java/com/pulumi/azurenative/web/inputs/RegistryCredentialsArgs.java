@@ -26,6 +26,10 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
     @Import(name="passwordSecretRef")
     private @Nullable Output<String> passwordSecretRef;
 
+    /**
+     * @return The name of the Secret that contains the registry login password
+     * 
+     */
     public Optional<Output<String>> passwordSecretRef() {
         return Optional.ofNullable(this.passwordSecretRef);
     }
@@ -37,6 +41,10 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
     @Import(name="server")
     private @Nullable Output<String> server;
 
+    /**
+     * @return Container Registry Server
+     * 
+     */
     public Optional<Output<String>> server() {
         return Optional.ofNullable(this.server);
     }
@@ -48,6 +56,10 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Container Registry Username
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -78,29 +90,65 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
             $ = new RegistryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param passwordSecretRef The name of the Secret that contains the registry login password
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordSecretRef(@Nullable Output<String> passwordSecretRef) {
             $.passwordSecretRef = passwordSecretRef;
             return this;
         }
 
+        /**
+         * @param passwordSecretRef The name of the Secret that contains the registry login password
+         * 
+         * @return builder
+         * 
+         */
         public Builder passwordSecretRef(String passwordSecretRef) {
             return passwordSecretRef(Output.of(passwordSecretRef));
         }
 
+        /**
+         * @param server Container Registry Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(@Nullable Output<String> server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param server Container Registry Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(String server) {
             return server(Output.of(server));
         }
 
+        /**
+         * @param username Container Registry Username
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Container Registry Username
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

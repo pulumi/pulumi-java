@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ExportExecutionListResultResponse {
-    /**
-     * A list of export executions.
-     * 
-     */
+        /**
+         * @return A list of export executions.
+         * 
+         */
     private final List<ExportExecutionResponse> value;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ExportExecutionListResultResponse {
     }
 
     /**
-     * A list of export executions.
+     * @return A list of export executions.
      * 
-    */
+     */
     public List<ExportExecutionResponse> value() {
         return this.value;
     }

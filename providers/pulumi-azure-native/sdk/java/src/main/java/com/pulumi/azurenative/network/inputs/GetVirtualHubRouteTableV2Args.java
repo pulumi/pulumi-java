@@ -19,6 +19,10 @@ public final class GetVirtualHubRouteTableV2Args extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualHubRouteTableV2.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualHubRouteTableV2Args extends com.pulumi.resources.In
     @Import(name="routeTableName", required=true)
     private String routeTableName;
 
+    /**
+     * @return The name of the VirtualHubRouteTableV2.
+     * 
+     */
     public String routeTableName() {
         return this.routeTableName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualHubRouteTableV2Args extends com.pulumi.resources.In
     @Import(name="virtualHubName", required=true)
     private String virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public String virtualHubName() {
         return this.virtualHubName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualHubRouteTableV2Args extends com.pulumi.resources.In
             $ = new GetVirtualHubRouteTableV2Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHubRouteTableV2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param routeTableName The name of the VirtualHubRouteTableV2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(String routeTableName) {
             $.routeTableName = routeTableName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InsightsTableResultResponseColumns {
-    /**
-     * the name of the colum
-     * 
-     */
+        /**
+         * @return the name of the colum
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * the type of the colum
-     * 
-     */
+        /**
+         * @return the type of the colum
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class InsightsTableResultResponseColumns {
     }
 
     /**
-     * the name of the colum
+     * @return the name of the colum
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * the type of the colum
+     * @return the type of the colum
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

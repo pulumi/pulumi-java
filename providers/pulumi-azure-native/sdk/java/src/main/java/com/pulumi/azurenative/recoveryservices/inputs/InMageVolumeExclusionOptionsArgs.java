@@ -26,6 +26,10 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
     @Import(name="onlyExcludeIfSingleVolume")
     private @Nullable Output<String> onlyExcludeIfSingleVolume;
 
+    /**
+     * @return The value indicating whether to exclude multi volume disk or not. If a disk has multiple volumes and one of the volume has label matching with VolumeLabel this disk will be excluded from replication if OnlyExcludeIfSingleVolume is false.
+     * 
+     */
     public Optional<Output<String>> onlyExcludeIfSingleVolume() {
         return Optional.ofNullable(this.onlyExcludeIfSingleVolume);
     }
@@ -37,6 +41,10 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
     @Import(name="volumeLabel")
     private @Nullable Output<String> volumeLabel;
 
+    /**
+     * @return The volume label. The disk having any volume with this label will be excluded from replication.
+     * 
+     */
     public Optional<Output<String>> volumeLabel() {
         return Optional.ofNullable(this.volumeLabel);
     }
@@ -66,20 +74,44 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
             $ = new InMageVolumeExclusionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param onlyExcludeIfSingleVolume The value indicating whether to exclude multi volume disk or not. If a disk has multiple volumes and one of the volume has label matching with VolumeLabel this disk will be excluded from replication if OnlyExcludeIfSingleVolume is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyExcludeIfSingleVolume(@Nullable Output<String> onlyExcludeIfSingleVolume) {
             $.onlyExcludeIfSingleVolume = onlyExcludeIfSingleVolume;
             return this;
         }
 
+        /**
+         * @param onlyExcludeIfSingleVolume The value indicating whether to exclude multi volume disk or not. If a disk has multiple volumes and one of the volume has label matching with VolumeLabel this disk will be excluded from replication if OnlyExcludeIfSingleVolume is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlyExcludeIfSingleVolume(String onlyExcludeIfSingleVolume) {
             return onlyExcludeIfSingleVolume(Output.of(onlyExcludeIfSingleVolume));
         }
 
+        /**
+         * @param volumeLabel The volume label. The disk having any volume with this label will be excluded from replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeLabel(@Nullable Output<String> volumeLabel) {
             $.volumeLabel = volumeLabel;
             return this;
         }
 
+        /**
+         * @param volumeLabel The volume label. The disk having any volume with this label will be excluded from replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeLabel(String volumeLabel) {
             return volumeLabel(Output.of(volumeLabel));
         }

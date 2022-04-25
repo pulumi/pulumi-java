@@ -28,6 +28,10 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     @Import(name="contentType", required=true)
     private Output<String> contentType;
 
+    /**
+     * @return Specifies a registered or custom content type for this representation, e.g. application/xml.
+     * 
+     */
     public Output<String> contentType() {
         return this.contentType;
     }
@@ -39,6 +43,10 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     @Import(name="formParameters")
     private @Nullable Output<List<ParameterContractArgs>> formParameters;
 
+    /**
+     * @return Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
+     * 
+     */
     public Optional<Output<List<ParameterContractArgs>>> formParameters() {
         return Optional.ofNullable(this.formParameters);
     }
@@ -50,6 +58,10 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     @Import(name="sample")
     private @Nullable Output<String> sample;
 
+    /**
+     * @return An example of the representation.
+     * 
+     */
     public Optional<Output<String>> sample() {
         return Optional.ofNullable(this.sample);
     }
@@ -61,6 +73,10 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     @Import(name="schemaId")
     private @Nullable Output<String> schemaId;
 
+    /**
+     * @return Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+     * 
+     */
     public Optional<Output<String>> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
@@ -72,6 +88,10 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
     @Import(name="typeName")
     private @Nullable Output<String> typeName;
 
+    /**
+     * @return Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+     * 
+     */
     public Optional<Output<String>> typeName() {
         return Optional.ofNullable(this.typeName);
     }
@@ -104,51 +124,117 @@ public final class RepresentationContractArgs extends com.pulumi.resources.Resou
             $ = new RepresentationContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentType Specifies a registered or custom content type for this representation, e.g. application/xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType Specifies a registered or custom content type for this representation, e.g. application/xml.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param formParameters Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
+         * 
+         * @return builder
+         * 
+         */
         public Builder formParameters(@Nullable Output<List<ParameterContractArgs>> formParameters) {
             $.formParameters = formParameters;
             return this;
         }
 
+        /**
+         * @param formParameters Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
+         * 
+         * @return builder
+         * 
+         */
         public Builder formParameters(List<ParameterContractArgs> formParameters) {
             return formParameters(Output.of(formParameters));
         }
 
+        /**
+         * @param formParameters Collection of form parameters. Required if &#39;contentType&#39; value is either &#39;application/x-www-form-urlencoded&#39; or &#39;multipart/form-data&#39;..
+         * 
+         * @return builder
+         * 
+         */
         public Builder formParameters(ParameterContractArgs... formParameters) {
             return formParameters(List.of(formParameters));
         }
 
+        /**
+         * @param sample An example of the representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sample(@Nullable Output<String> sample) {
             $.sample = sample;
             return this;
         }
 
+        /**
+         * @param sample An example of the representation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sample(String sample) {
             return sample(Output.of(sample));
         }
 
+        /**
+         * @param schemaId Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(@Nullable Output<String> schemaId) {
             $.schemaId = schemaId;
             return this;
         }
 
+        /**
+         * @param schemaId Schema identifier. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(String schemaId) {
             return schemaId(Output.of(schemaId));
         }
 
+        /**
+         * @param typeName Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(@Nullable Output<String> typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeName Type name defined by the schema. Applicable only if &#39;contentType&#39; value is neither &#39;application/x-www-form-urlencoded&#39; nor &#39;multipart/form-data&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             return typeName(Output.of(typeName));
         }

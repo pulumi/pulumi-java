@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIntegrationAccountCertificateResult {
-    /**
-     * The changed time.
-     * 
-     */
+        /**
+         * @return The changed time.
+         * 
+         */
     private final String changedTime;
-    /**
-     * The created time.
-     * 
-     */
+        /**
+         * @return The created time.
+         * 
+         */
     private final String createdTime;
-    /**
-     * The resource id.
-     * 
-     */
+        /**
+         * @return The resource id.
+         * 
+         */
     private final String id;
-    /**
-     * The key details in the key vault.
-     * 
-     */
+        /**
+         * @return The key details in the key vault.
+         * 
+         */
     private final @Nullable KeyVaultKeyReferenceResponse key;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The metadata.
-     * 
-     */
+        /**
+         * @return The metadata.
+         * 
+         */
     private final @Nullable Object metadata;
-    /**
-     * Gets the resource name.
-     * 
-     */
+        /**
+         * @return Gets the resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The public certificate.
-     * 
-     */
+        /**
+         * @return The public certificate.
+         * 
+         */
     private final @Nullable String publicCertificate;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Gets the resource type.
-     * 
-     */
+        /**
+         * @return Gets the resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetIntegrationAccountCertificateResult {
     }
 
     /**
-     * The changed time.
+     * @return The changed time.
      * 
-    */
+     */
     public String changedTime() {
         return this.changedTime;
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The key details in the key vault.
+     * @return The key details in the key vault.
      * 
-    */
+     */
     public Optional<KeyVaultKeyReferenceResponse> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metadata.
+     * @return The metadata.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The public certificate.
+     * @return The public certificate.
      * 
-    */
+     */
     public Optional<String> publicCertificate() {
         return Optional.ofNullable(this.publicCertificate);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

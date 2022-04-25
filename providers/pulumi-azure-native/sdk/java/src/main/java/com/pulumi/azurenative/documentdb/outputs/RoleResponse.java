@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RoleResponse {
-    /**
-     * The database name the role is applied.
-     * 
-     */
+        /**
+         * @return The database name the role is applied.
+         * 
+         */
     private final @Nullable String db;
-    /**
-     * The role name.
-     * 
-     */
+        /**
+         * @return The role name.
+         * 
+         */
     private final @Nullable String role;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class RoleResponse {
     }
 
     /**
-     * The database name the role is applied.
+     * @return The database name the role is applied.
      * 
-    */
+     */
     public Optional<String> db() {
         return Optional.ofNullable(this.db);
     }
     /**
-     * The role name.
+     * @return The role name.
      * 
-    */
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }

@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLinkedServiceResult {
-    /**
-     * ResourceId of the link of the linked service.
-     * 
-     */
+        /**
+         * @return ResourceId of the link of the linked service.
+         * 
+         */
     private final String id;
-    /**
-     * Identity for the resource.
-     * 
-     */
+        /**
+         * @return Identity for the resource.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * location of the linked service.
-     * 
-     */
+        /**
+         * @return location of the linked service.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Friendly name of the linked service.
-     * 
-     */
+        /**
+         * @return Friendly name of the linked service.
+         * 
+         */
     private final String name;
-    /**
-     * LinkedService specific properties.
-     * 
-     */
+        /**
+         * @return LinkedService specific properties.
+         * 
+         */
     private final LinkedServicePropsResponse properties;
-    /**
-     * Resource type of linked service.
-     * 
-     */
+        /**
+         * @return Resource type of linked service.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetLinkedServiceResult {
     }
 
     /**
-     * ResourceId of the link of the linked service.
+     * @return ResourceId of the link of the linked service.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * location of the linked service.
+     * @return location of the linked service.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Friendly name of the linked service.
+     * @return Friendly name of the linked service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * LinkedService specific properties.
+     * @return LinkedService specific properties.
      * 
-    */
+     */
     public LinkedServicePropsResponse properties() {
         return this.properties;
     }
     /**
-     * Resource type of linked service.
+     * @return Resource type of linked service.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

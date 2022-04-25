@@ -13,30 +13,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ForwardingConfigurationResponse {
-    /**
-     * A reference to the BackendPool which this rule routes to.
-     * 
-     */
+        /**
+         * @return A reference to the BackendPool which this rule routes to.
+         * 
+         */
     private final @Nullable SubResourceResponse backendPool;
-    /**
-     * The caching configuration associated with this rule.
-     * 
-     */
+        /**
+         * @return The caching configuration associated with this rule.
+         * 
+         */
     private final @Nullable CacheConfigurationResponse cacheConfiguration;
-    /**
-     * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
-     * 
-     */
+        /**
+         * @return A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+         * 
+         */
     private final @Nullable String customForwardingPath;
-    /**
-     * Protocol this rule will use when forwarding traffic to backends.
-     * 
-     */
+        /**
+         * @return Protocol this rule will use when forwarding traffic to backends.
+         * 
+         */
     private final @Nullable String forwardingProtocol;
-    /**
-     * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
-     * 
-     */
+        /**
+         * @return
+         * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -54,37 +55,38 @@ public final class ForwardingConfigurationResponse {
     }
 
     /**
-     * A reference to the BackendPool which this rule routes to.
+     * @return A reference to the BackendPool which this rule routes to.
      * 
-    */
+     */
     public Optional<SubResourceResponse> backendPool() {
         return Optional.ofNullable(this.backendPool);
     }
     /**
-     * The caching configuration associated with this rule.
+     * @return The caching configuration associated with this rule.
      * 
-    */
+     */
     public Optional<CacheConfigurationResponse> cacheConfiguration() {
         return Optional.ofNullable(this.cacheConfiguration);
     }
     /**
-     * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+     * @return A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
      * 
-    */
+     */
     public Optional<String> customForwardingPath() {
         return Optional.ofNullable(this.customForwardingPath);
     }
     /**
-     * Protocol this rule will use when forwarding traffic to backends.
+     * @return Protocol this rule will use when forwarding traffic to backends.
      * 
-    */
+     */
     public Optional<String> forwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
     /**
+     * @return
      * Expected value is &#39;#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

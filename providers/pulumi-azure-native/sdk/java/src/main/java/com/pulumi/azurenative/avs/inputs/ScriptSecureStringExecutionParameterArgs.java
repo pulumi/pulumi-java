@@ -27,6 +27,10 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The parameter name
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
     @Import(name="secureValue")
     private @Nullable Output<String> secureValue;
 
+    /**
+     * @return A secure value for the passed parameter, not to be stored in logs
+     * 
+     */
     public Optional<Output<String>> secureValue() {
         return Optional.ofNullable(this.secureValue);
     }
@@ -50,6 +58,11 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of execution parameter
+     * Expected value is &#39;SecureValue&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -80,29 +93,67 @@ public final class ScriptSecureStringExecutionParameterArgs extends com.pulumi.r
             $ = new ScriptSecureStringExecutionParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param secureValue A secure value for the passed parameter, not to be stored in logs
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureValue(@Nullable Output<String> secureValue) {
             $.secureValue = secureValue;
             return this;
         }
 
+        /**
+         * @param secureValue A secure value for the passed parameter, not to be stored in logs
+         * 
+         * @return builder
+         * 
+         */
         public Builder secureValue(String secureValue) {
             return secureValue(Output.of(secureValue));
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;SecureValue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;SecureValue&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

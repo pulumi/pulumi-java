@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ErrorResponseWrapperResponse {
-    /**
-     * The error response.
-     * 
-     */
+        /**
+         * @return The error response.
+         * 
+         */
     private final @Nullable ErrorResponseResponse error;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ErrorResponseWrapperResponse {
     }
 
     /**
-     * The error response.
+     * @return The error response.
      * 
-    */
+     */
     public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }

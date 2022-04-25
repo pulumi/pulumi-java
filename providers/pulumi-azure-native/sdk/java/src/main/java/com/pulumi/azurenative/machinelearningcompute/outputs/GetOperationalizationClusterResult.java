@@ -19,85 +19,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOperationalizationClusterResult {
-    /**
-     * AppInsights configuration.
-     * 
-     */
+        /**
+         * @return AppInsights configuration.
+         * 
+         */
     private final @Nullable AppInsightsPropertiesResponse appInsights;
-    /**
-     * The cluster type.
-     * 
-     */
+        /**
+         * @return The cluster type.
+         * 
+         */
     private final String clusterType;
-    /**
-     * Container Registry properties.
-     * 
-     */
+        /**
+         * @return Container Registry properties.
+         * 
+         */
     private final @Nullable ContainerRegistryPropertiesResponse containerRegistry;
-    /**
-     * Parameters for the Azure Container Service cluster.
-     * 
-     */
+        /**
+         * @return Parameters for the Azure Container Service cluster.
+         * 
+         */
     private final @Nullable AcsClusterPropertiesResponse containerService;
-    /**
-     * The date and time when the cluster was created.
-     * 
-     */
+        /**
+         * @return The date and time when the cluster was created.
+         * 
+         */
     private final String createdOn;
-    /**
-     * The description of the cluster.
-     * 
-     */
+        /**
+         * @return The description of the cluster.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Contains global configuration for the web services in the cluster.
-     * 
-     */
+        /**
+         * @return Contains global configuration for the web services in the cluster.
+         * 
+         */
     private final @Nullable GlobalServiceConfigurationResponse globalServiceConfiguration;
-    /**
-     * Specifies the resource ID.
-     * 
-     */
+        /**
+         * @return Specifies the resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final String location;
-    /**
-     * The date and time when the cluster was last modified.
-     * 
-     */
+        /**
+         * @return The date and time when the cluster was last modified.
+         * 
+         */
     private final String modifiedOn;
-    /**
-     * Specifies the name of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * List of provisioning errors reported by the resource provider.
-     * 
-     */
+        /**
+         * @return List of provisioning errors reported by the resource provider.
+         * 
+         */
     private final List<ErrorResponseWrapperResponse> provisioningErrors;
-    /**
-     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
-     * 
-     */
+        /**
+         * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Storage Account properties.
-     * 
-     */
+        /**
+         * @return Storage Account properties.
+         * 
+         */
     private final @Nullable StorageAccountPropertiesResponse storageAccount;
-    /**
-     * Contains resource tags defined as key/value pairs.
-     * 
-     */
+        /**
+         * @return Contains resource tags defined as key/value pairs.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Specifies the type of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -137,114 +137,114 @@ public final class GetOperationalizationClusterResult {
     }
 
     /**
-     * AppInsights configuration.
+     * @return AppInsights configuration.
      * 
-    */
+     */
     public Optional<AppInsightsPropertiesResponse> appInsights() {
         return Optional.ofNullable(this.appInsights);
     }
     /**
-     * The cluster type.
+     * @return The cluster type.
      * 
-    */
+     */
     public String clusterType() {
         return this.clusterType;
     }
     /**
-     * Container Registry properties.
+     * @return Container Registry properties.
      * 
-    */
+     */
     public Optional<ContainerRegistryPropertiesResponse> containerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
-     * Parameters for the Azure Container Service cluster.
+     * @return Parameters for the Azure Container Service cluster.
      * 
-    */
+     */
     public Optional<AcsClusterPropertiesResponse> containerService() {
         return Optional.ofNullable(this.containerService);
     }
     /**
-     * The date and time when the cluster was created.
+     * @return The date and time when the cluster was created.
      * 
-    */
+     */
     public String createdOn() {
         return this.createdOn;
     }
     /**
-     * The description of the cluster.
+     * @return The description of the cluster.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Contains global configuration for the web services in the cluster.
+     * @return Contains global configuration for the web services in the cluster.
      * 
-    */
+     */
     public Optional<GlobalServiceConfigurationResponse> globalServiceConfiguration() {
         return Optional.ofNullable(this.globalServiceConfiguration);
     }
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The date and time when the cluster was last modified.
+     * @return The date and time when the cluster was last modified.
      * 
-    */
+     */
     public String modifiedOn() {
         return this.modifiedOn;
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of provisioning errors reported by the resource provider.
+     * @return List of provisioning errors reported by the resource provider.
      * 
-    */
+     */
     public List<ErrorResponseWrapperResponse> provisioningErrors() {
         return this.provisioningErrors;
     }
     /**
-     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Storage Account properties.
+     * @return Storage Account properties.
      * 
-    */
+     */
     public Optional<StorageAccountPropertiesResponse> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -22,201 +22,201 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HDInsightOnDemandLinkedServiceResponse {
-    /**
-     * Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
-     * 
-     */
+        /**
+         * @return Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+         * 
+         */
     private final @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object clusterNamePrefix;
-    /**
-     * The password to access the cluster.
-     * 
-     */
+        /**
+         * @return The password to access the cluster.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword;
-    /**
-     * The resource group where the cluster belongs. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object clusterResourceGroup;
-    /**
-     * Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object clusterSize;
-    /**
-     * The password to SSH remotely connect cluster’s node (for Linux).
-     * 
-     */
+        /**
+         * @return The password to SSH remotely connect cluster’s node (for Linux).
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword;
-    /**
-     * The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object clusterSshUserName;
-    /**
-     * The cluster type. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The cluster type. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object clusterType;
-    /**
-     * The username to access the cluster. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The username to access the cluster. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object clusterUserName;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
-     * 
-     */
+        /**
+         * @return Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+         * 
+         */
     private final @Nullable Object coreConfiguration;
-    /**
-     * The credential reference containing authentication information.
-     * 
-     */
+        /**
+         * @return The credential reference containing authentication information.
+         * 
+         */
     private final @Nullable CredentialReferenceResponse credential;
-    /**
-     * Specifies the size of the data node for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the size of the data node for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object dataNodeSize;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object hBaseConfiguration;
-    /**
-     * The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
-     * 
-     */
+        /**
+         * @return The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
-    /**
-     * Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object hdfsConfiguration;
-    /**
-     * Specifies the size of the head node for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the size of the head node for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object headNodeSize;
-    /**
-     * Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object hiveConfiguration;
-    /**
-     * The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object hostSubscriptionId;
-    /**
-     * Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
-     * 
-     */
+        /**
+         * @return Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object mapReduceConfiguration;
-    /**
-     * Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object oozieConfiguration;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
-     * 
-     */
+        /**
+         * @return Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+         * 
+         */
     private final @Nullable List<ScriptActionResponse> scriptActions;
-    /**
-     * The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object servicePrincipalId;
-    /**
-     * The key for the service principal id.
-     * 
-     */
+        /**
+         * @return The key for the service principal id.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-    /**
-     * The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object sparkVersion;
-    /**
-     * Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object stormConfiguration;
-    /**
-     * The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object subnetName;
-    /**
-     * The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object tenant;
-    /**
-     * The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object timeToLive;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;HDInsightOnDemand&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;HDInsightOnDemand&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object version;
-    /**
-     * The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object virtualNetworkId;
-    /**
-     * Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object yarnConfiguration;
-    /**
-     * Specifies the size of the Zoo Keeper node for the HDInsight cluster.
-     * 
-     */
+        /**
+         * @return Specifies the size of the Zoo Keeper node for the HDInsight cluster.
+         * 
+         */
     private final @Nullable Object zookeeperNodeSize;
 
     @CustomType.Constructor
@@ -302,276 +302,276 @@ public final class HDInsightOnDemandLinkedServiceResponse {
     }
 
     /**
-     * Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+     * @return Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
      * 
-    */
+     */
     public List<LinkedServiceReferenceResponse> additionalLinkedServiceNames() {
         return this.additionalLinkedServiceNames == null ? List.of() : this.additionalLinkedServiceNames;
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+     * @return The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> clusterNamePrefix() {
         return Optional.ofNullable(this.clusterNamePrefix);
     }
     /**
-     * The password to access the cluster.
+     * @return The password to access the cluster.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clusterPassword() {
         return Optional.ofNullable(this.clusterPassword);
     }
     /**
-     * The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+     * @return The resource group where the cluster belongs. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object clusterResourceGroup() {
         return this.clusterResourceGroup;
     }
     /**
-     * Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+     * @return Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object clusterSize() {
         return this.clusterSize;
     }
     /**
-     * The password to SSH remotely connect cluster’s node (for Linux).
+     * @return The password to SSH remotely connect cluster’s node (for Linux).
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clusterSshPassword() {
         return Optional.ofNullable(this.clusterSshPassword);
     }
     /**
-     * The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+     * @return The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> clusterSshUserName() {
         return Optional.ofNullable(this.clusterSshUserName);
     }
     /**
-     * The cluster type. Type: string (or Expression with resultType string).
+     * @return The cluster type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> clusterType() {
         return Optional.ofNullable(this.clusterType);
     }
     /**
-     * The username to access the cluster. Type: string (or Expression with resultType string).
+     * @return The username to access the cluster. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> clusterUserName() {
         return Optional.ofNullable(this.clusterUserName);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+     * @return Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
      * 
-    */
+     */
     public Optional<Object> coreConfiguration() {
         return Optional.ofNullable(this.coreConfiguration);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Specifies the size of the data node for the HDInsight cluster.
+     * @return Specifies the size of the data node for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> dataNodeSize() {
         return Optional.ofNullable(this.dataNodeSize);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+     * @return Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> hBaseConfiguration() {
         return Optional.ofNullable(this.hBaseConfiguration);
     }
     /**
-     * The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+     * @return The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> hcatalogLinkedServiceName() {
         return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
     /**
-     * Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+     * @return Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> hdfsConfiguration() {
         return Optional.ofNullable(this.hdfsConfiguration);
     }
     /**
-     * Specifies the size of the head node for the HDInsight cluster.
+     * @return Specifies the size of the head node for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> headNodeSize() {
         return Optional.ofNullable(this.headNodeSize);
     }
     /**
-     * Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+     * @return Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> hiveConfiguration() {
         return Optional.ofNullable(this.hiveConfiguration);
     }
     /**
-     * The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+     * @return The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object hostSubscriptionId() {
         return this.hostSubscriptionId;
     }
     /**
-     * Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+     * @return Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+     * @return Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> mapReduceConfiguration() {
         return Optional.ofNullable(this.mapReduceConfiguration);
     }
     /**
-     * Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
+     * @return Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> oozieConfiguration() {
         return Optional.ofNullable(this.oozieConfiguration);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+     * @return Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
      * 
-    */
+     */
     public List<ScriptActionResponse> scriptActions() {
         return this.scriptActions == null ? List.of() : this.scriptActions;
     }
     /**
-     * The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+     * @return The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The key for the service principal id.
+     * @return The key for the service principal id.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
-     * The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
+     * @return The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> sparkVersion() {
         return Optional.ofNullable(this.sparkVersion);
     }
     /**
-     * Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+     * @return Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> stormConfiguration() {
         return Optional.ofNullable(this.stormConfiguration);
     }
     /**
-     * The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+     * @return The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> subnetName() {
         return Optional.ofNullable(this.subnetName);
     }
     /**
-     * The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+     * @return The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object tenant() {
         return this.tenant;
     }
     /**
-     * The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+     * @return The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object timeToLive() {
         return this.timeToLive;
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;HDInsightOnDemand&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+     * @return Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object version() {
         return this.version;
     }
     /**
-     * The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+     * @return The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> virtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);
     }
     /**
-     * Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+     * @return Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> yarnConfiguration() {
         return Optional.ofNullable(this.yarnConfiguration);
     }
     /**
-     * Specifies the size of the Zoo Keeper node for the HDInsight cluster.
+     * @return Specifies the size of the Zoo Keeper node for the HDInsight cluster.
      * 
-    */
+     */
     public Optional<Object> zookeeperNodeSize() {
         return Optional.ofNullable(this.zookeeperNodeSize);
     }

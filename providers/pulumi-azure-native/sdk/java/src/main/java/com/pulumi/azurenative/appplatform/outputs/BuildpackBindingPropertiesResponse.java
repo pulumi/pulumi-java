@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BuildpackBindingPropertiesResponse {
-    /**
-     * Buildpack Binding Type
-     * 
-     */
+        /**
+         * @return Buildpack Binding Type
+         * 
+         */
     private final @Nullable String bindingType;
-    /**
-     * The object describes the buildpack binding launch properties
-     * 
-     */
+        /**
+         * @return The object describes the buildpack binding launch properties
+         * 
+         */
     private final @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties;
-    /**
-     * State of the Buildpack Binding.
-     * 
-     */
+        /**
+         * @return State of the Buildpack Binding.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class BuildpackBindingPropertiesResponse {
     }
 
     /**
-     * Buildpack Binding Type
+     * @return Buildpack Binding Type
      * 
-    */
+     */
     public Optional<String> bindingType() {
         return Optional.ofNullable(this.bindingType);
     }
     /**
-     * The object describes the buildpack binding launch properties
+     * @return The object describes the buildpack binding launch properties
      * 
-    */
+     */
     public Optional<BuildpackBindingLaunchPropertiesResponse> launchProperties() {
         return Optional.ofNullable(this.launchProperties);
     }
     /**
-     * State of the Buildpack Binding.
+     * @return State of the Buildpack Binding.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

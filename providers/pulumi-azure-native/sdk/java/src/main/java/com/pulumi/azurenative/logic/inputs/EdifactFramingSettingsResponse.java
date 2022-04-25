@@ -26,6 +26,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="characterEncoding")
     private @Nullable String characterEncoding;
 
+    /**
+     * @return The character encoding.
+     * 
+     */
     public Optional<String> characterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
@@ -37,6 +41,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="characterSet", required=true)
     private String characterSet;
 
+    /**
+     * @return The EDIFACT frame setting characterSet.
+     * 
+     */
     public String characterSet() {
         return this.characterSet;
     }
@@ -48,6 +56,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="componentSeparator", required=true)
     private Integer componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
@@ -59,6 +71,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="dataElementSeparator", required=true)
     private Integer dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -70,6 +86,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="decimalPointIndicator", required=true)
     private String decimalPointIndicator;
 
+    /**
+     * @return The EDIFACT frame setting decimal indicator.
+     * 
+     */
     public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
@@ -81,6 +101,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="protocolVersion", required=true)
     private Integer protocolVersion;
 
+    /**
+     * @return The protocol version.
+     * 
+     */
     public Integer protocolVersion() {
         return this.protocolVersion;
     }
@@ -92,6 +116,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="releaseIndicator", required=true)
     private Integer releaseIndicator;
 
+    /**
+     * @return The release indicator.
+     * 
+     */
     public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
@@ -103,6 +131,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="repetitionSeparator", required=true)
     private Integer repetitionSeparator;
 
+    /**
+     * @return The repetition separator.
+     * 
+     */
     public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
@@ -114,6 +146,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="segmentTerminator", required=true)
     private Integer segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -125,6 +161,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="segmentTerminatorSuffix", required=true)
     private String segmentTerminatorSuffix;
 
+    /**
+     * @return The EDIFACT frame setting segment terminator suffix.
+     * 
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -136,6 +176,10 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
     @Import(name="serviceCodeListDirectoryVersion")
     private @Nullable String serviceCodeListDirectoryVersion;
 
+    /**
+     * @return The service code list directory version.
+     * 
+     */
     public Optional<String> serviceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }
@@ -174,56 +218,122 @@ public final class EdifactFramingSettingsResponse extends com.pulumi.resources.I
             $ = new EdifactFramingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param characterEncoding The character encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterEncoding(@Nullable String characterEncoding) {
             $.characterEncoding = characterEncoding;
             return this;
         }
 
+        /**
+         * @param characterSet The EDIFACT frame setting characterSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(String characterSet) {
             $.characterSet = characterSet;
             return this;
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param decimalPointIndicator The EDIFACT frame setting decimal indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalPointIndicator(String decimalPointIndicator) {
             $.decimalPointIndicator = decimalPointIndicator;
             return this;
         }
 
+        /**
+         * @param protocolVersion The protocol version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(Integer protocolVersion) {
             $.protocolVersion = protocolVersion;
             return this;
         }
 
+        /**
+         * @param releaseIndicator The release indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseIndicator(Integer releaseIndicator) {
             $.releaseIndicator = releaseIndicator;
             return this;
         }
 
+        /**
+         * @param repetitionSeparator The repetition separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             $.repetitionSeparator = repetitionSeparator;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The EDIFACT frame setting segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
 
+        /**
+         * @param serviceCodeListDirectoryVersion The service code list directory version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
             $.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;

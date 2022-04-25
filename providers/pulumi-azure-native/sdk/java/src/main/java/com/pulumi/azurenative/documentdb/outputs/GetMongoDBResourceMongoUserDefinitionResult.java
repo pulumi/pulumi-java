@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMongoDBResourceMongoUserDefinitionResult {
-    /**
-     * A custom definition for the USer Definition.
-     * 
-     */
+        /**
+         * @return A custom definition for the USer Definition.
+         * 
+         */
     private final @Nullable String customData;
-    /**
-     * The database name for which access is being granted for this User Definition.
-     * 
-     */
+        /**
+         * @return The database name for which access is being granted for this User Definition.
+         * 
+         */
     private final @Nullable String databaseName;
-    /**
-     * The unique resource identifier of the database account.
-     * 
-     */
+        /**
+         * @return The unique resource identifier of the database account.
+         * 
+         */
     private final String id;
-    /**
-     * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
-     * 
-     */
+        /**
+         * @return The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
+         * 
+         */
     private final @Nullable String mechanisms;
-    /**
-     * The name of the database account.
-     * 
-     */
+        /**
+         * @return The name of the database account.
+         * 
+         */
     private final String name;
-    /**
-     * The password for User Definition. Response does not contain user password.
-     * 
-     */
+        /**
+         * @return The password for User Definition. Response does not contain user password.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The set of roles inherited by the User Definition.
-     * 
-     */
+        /**
+         * @return The set of roles inherited by the User Definition.
+         * 
+         */
     private final @Nullable List<RoleResponse> roles;
-    /**
-     * The type of Azure resource.
-     * 
-     */
+        /**
+         * @return The type of Azure resource.
+         * 
+         */
     private final String type;
-    /**
-     * The user name for User Definition.
-     * 
-     */
+        /**
+         * @return The user name for User Definition.
+         * 
+         */
     private final @Nullable String userName;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
     }
 
     /**
-     * A custom definition for the USer Definition.
+     * @return A custom definition for the USer Definition.
      * 
-    */
+     */
     public Optional<String> customData() {
         return Optional.ofNullable(this.customData);
     }
     /**
-     * The database name for which access is being granted for this User Definition.
+     * @return The database name for which access is being granted for this User Definition.
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
+     * @return The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
-    */
+     */
     public Optional<String> mechanisms() {
         return Optional.ofNullable(this.mechanisms);
     }
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The password for User Definition. Response does not contain user password.
+     * @return The password for User Definition. Response does not contain user password.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The set of roles inherited by the User Definition.
+     * @return The set of roles inherited by the User Definition.
      * 
-    */
+     */
     public List<RoleResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The user name for User Definition.
+     * @return The user name for User Definition.
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

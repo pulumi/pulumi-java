@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class QueryAnalysisValidationResultResponse {
-    /**
-     * List of queries executed and it&#39;s execution results in source and target
-     * 
-     */
+        /**
+         * @return List of queries executed and it&#39;s execution results in source and target
+         * 
+         */
     private final QueryExecutionResultResponse queryResults;
-    /**
-     * Errors that are part of the execution
-     * 
-     */
+        /**
+         * @return Errors that are part of the execution
+         * 
+         */
     private final ValidationErrorResponse validationErrors;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class QueryAnalysisValidationResultResponse {
     }
 
     /**
-     * List of queries executed and it&#39;s execution results in source and target
+     * @return List of queries executed and it&#39;s execution results in source and target
      * 
-    */
+     */
     public QueryExecutionResultResponse queryResults() {
         return this.queryResults;
     }
     /**
-     * Errors that are part of the execution
+     * @return Errors that are part of the execution
      * 
-    */
+     */
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }

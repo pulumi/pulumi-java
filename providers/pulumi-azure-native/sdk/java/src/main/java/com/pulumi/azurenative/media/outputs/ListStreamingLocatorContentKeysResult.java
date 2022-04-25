@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListStreamingLocatorContentKeysResult {
-    /**
-     * ContentKeys used by current Streaming Locator
-     * 
-     */
+        /**
+         * @return ContentKeys used by current Streaming Locator
+         * 
+         */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListStreamingLocatorContentKeysResult {
     }
 
     /**
-     * ContentKeys used by current Streaming Locator
+     * @return ContentKeys used by current Streaming Locator
      * 
-    */
+     */
     public List<StreamingLocatorContentKeyResponse> contentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;
     }

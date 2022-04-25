@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IntegrationServiceEnvironmentSkuResponse {
-    /**
-     * The sku capacity.
-     * 
-     */
+        /**
+         * @return The sku capacity.
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * The sku name.
-     * 
-     */
+        /**
+         * @return The sku name.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class IntegrationServiceEnvironmentSkuResponse {
     }
 
     /**
-     * The sku capacity.
+     * @return The sku capacity.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The sku name.
+     * @return The sku name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

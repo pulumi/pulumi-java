@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultPropertiesResponse {
-    /**
-     * The client id of the identity which will be used to access key vault.
-     * 
-     */
+        /**
+         * @return The client id of the identity which will be used to access key vault.
+         * 
+         */
     private final @Nullable String identityClientId;
-    /**
-     * The URI of the key vault key used to encrypt data.
-     * 
-     */
+        /**
+         * @return The URI of the key vault key used to encrypt data.
+         * 
+         */
     private final @Nullable String keyIdentifier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * The client id of the identity which will be used to access key vault.
+     * @return The client id of the identity which will be used to access key vault.
      * 
-    */
+     */
     public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
     /**
-     * The URI of the key vault key used to encrypt data.
+     * @return The URI of the key vault key used to encrypt data.
      * 
-    */
+     */
     public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }

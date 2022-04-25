@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerRegistryResponse {
     private final String password;
-    /**
-     * If omitted, the default is &#34;docker.io&#34;.
-     * 
-     */
+        /**
+         * @return If omitted, the default is &#34;docker.io&#34;.
+         * 
+         */
     private final @Nullable String registryServer;
     private final String userName;
 
@@ -33,9 +33,9 @@ public final class ContainerRegistryResponse {
         return this.password;
     }
     /**
-     * If omitted, the default is &#34;docker.io&#34;.
+     * @return If omitted, the default is &#34;docker.io&#34;.
      * 
-    */
+     */
     public Optional<String> registryServer() {
         return Optional.ofNullable(this.registryServer);
     }

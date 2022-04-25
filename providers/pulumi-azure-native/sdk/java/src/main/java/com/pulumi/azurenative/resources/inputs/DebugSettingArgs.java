@@ -26,6 +26,10 @@ public final class DebugSettingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detailLevel")
     private @Nullable Output<String> detailLevel;
 
+    /**
+     * @return Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+     * 
+     */
     public Optional<Output<String>> detailLevel() {
         return Optional.ofNullable(this.detailLevel);
     }
@@ -54,11 +58,23 @@ public final class DebugSettingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DebugSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detailLevel Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailLevel(@Nullable Output<String> detailLevel) {
             $.detailLevel = detailLevel;
             return this;
         }
 
+        /**
+         * @param detailLevel Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailLevel(String detailLevel) {
             return detailLevel(Output.of(detailLevel));
         }

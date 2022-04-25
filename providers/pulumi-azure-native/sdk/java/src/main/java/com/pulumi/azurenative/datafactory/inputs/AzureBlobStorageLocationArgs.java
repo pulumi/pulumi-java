@@ -28,6 +28,10 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
     @Import(name="container")
     private @Nullable Output<Object> container;
 
+    /**
+     * @return Specify the container of azure blob. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -39,6 +43,10 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
     @Import(name="fileName")
     private @Nullable Output<Object> fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -50,6 +58,10 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
     @Import(name="folderPath")
     private @Nullable Output<Object> folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -62,6 +74,11 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;AzureBlobStorageLocation&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +110,88 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
             $ = new AzureBlobStorageLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container Specify the container of azure blob. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<Object> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container Specify the container of azure blob. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(Object container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<Object> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(Object fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Object folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AzureBlobStorageLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AzureBlobStorageLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

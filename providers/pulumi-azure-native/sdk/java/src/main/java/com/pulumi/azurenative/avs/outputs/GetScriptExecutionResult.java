@@ -17,95 +17,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetScriptExecutionResult {
-    /**
-     * Standard error output stream from the powershell execution
-     * 
-     */
+        /**
+         * @return Standard error output stream from the powershell execution
+         * 
+         */
     private final List<String> errors;
-    /**
-     * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
-     * 
-     */
+        /**
+         * @return Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+         * 
+         */
     private final @Nullable String failureReason;
-    /**
-     * Time the script execution was finished
-     * 
-     */
+        /**
+         * @return Time the script execution was finished
+         * 
+         */
     private final String finishedAt;
-    /**
-     * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
-     * 
-     */
+        /**
+         * @return Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+         * 
+         */
     private final @Nullable List<Object> hiddenParameters;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Standard information out stream from the powershell execution
-     * 
-     */
+        /**
+         * @return Standard information out stream from the powershell execution
+         * 
+         */
     private final List<String> information;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * User-defined dictionary.
-     * 
-     */
+        /**
+         * @return User-defined dictionary.
+         * 
+         */
     private final @Nullable Map<String,Object> namedOutputs;
-    /**
-     * Standard output stream from the powershell execution
-     * 
-     */
+        /**
+         * @return Standard output stream from the powershell execution
+         * 
+         */
     private final @Nullable List<String> output;
-    /**
-     * Parameters the script will accept
-     * 
-     */
+        /**
+         * @return Parameters the script will accept
+         * 
+         */
     private final @Nullable List<Object> parameters;
-    /**
-     * The state of the script execution resource
-     * 
-     */
+        /**
+         * @return The state of the script execution resource
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Time to live for the resource. If not provided, will be available for 60 days
-     * 
-     */
+        /**
+         * @return Time to live for the resource. If not provided, will be available for 60 days
+         * 
+         */
     private final @Nullable String retention;
-    /**
-     * A reference to the script cmdlet resource if user is running a AVS script
-     * 
-     */
+        /**
+         * @return A reference to the script cmdlet resource if user is running a AVS script
+         * 
+         */
     private final @Nullable String scriptCmdletId;
-    /**
-     * Time the script execution was started
-     * 
-     */
+        /**
+         * @return Time the script execution was started
+         * 
+         */
     private final String startedAt;
-    /**
-     * Time the script execution was submitted
-     * 
-     */
+        /**
+         * @return Time the script execution was submitted
+         * 
+         */
     private final String submittedAt;
-    /**
-     * Time limit for execution
-     * 
-     */
+        /**
+         * @return Time limit for execution
+         * 
+         */
     private final String timeout;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Standard warning out stream from the powershell execution
-     * 
-     */
+        /**
+         * @return Standard warning out stream from the powershell execution
+         * 
+         */
     private final List<String> warnings;
 
     @CustomType.Constructor
@@ -149,128 +149,128 @@ public final class GetScriptExecutionResult {
     }
 
     /**
-     * Standard error output stream from the powershell execution
+     * @return Standard error output stream from the powershell execution
      * 
-    */
+     */
     public List<String> errors() {
         return this.errors;
     }
     /**
-     * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+     * @return Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
      * 
-    */
+     */
     public Optional<String> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
-     * Time the script execution was finished
+     * @return Time the script execution was finished
      * 
-    */
+     */
     public String finishedAt() {
         return this.finishedAt;
     }
     /**
-     * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+     * @return Parameters that will be hidden/not visible to ARM, such as passwords and credentials
      * 
-    */
+     */
     public List<Object> hiddenParameters() {
         return this.hiddenParameters == null ? List.of() : this.hiddenParameters;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Standard information out stream from the powershell execution
+     * @return Standard information out stream from the powershell execution
      * 
-    */
+     */
     public List<String> information() {
         return this.information;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * User-defined dictionary.
+     * @return User-defined dictionary.
      * 
-    */
+     */
     public Map<String,Object> namedOutputs() {
         return this.namedOutputs == null ? Map.of() : this.namedOutputs;
     }
     /**
-     * Standard output stream from the powershell execution
+     * @return Standard output stream from the powershell execution
      * 
-    */
+     */
     public List<String> output() {
         return this.output == null ? List.of() : this.output;
     }
     /**
-     * Parameters the script will accept
+     * @return Parameters the script will accept
      * 
-    */
+     */
     public List<Object> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * The state of the script execution resource
+     * @return The state of the script execution resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Time to live for the resource. If not provided, will be available for 60 days
+     * @return Time to live for the resource. If not provided, will be available for 60 days
      * 
-    */
+     */
     public Optional<String> retention() {
         return Optional.ofNullable(this.retention);
     }
     /**
-     * A reference to the script cmdlet resource if user is running a AVS script
+     * @return A reference to the script cmdlet resource if user is running a AVS script
      * 
-    */
+     */
     public Optional<String> scriptCmdletId() {
         return Optional.ofNullable(this.scriptCmdletId);
     }
     /**
-     * Time the script execution was started
+     * @return Time the script execution was started
      * 
-    */
+     */
     public String startedAt() {
         return this.startedAt;
     }
     /**
-     * Time the script execution was submitted
+     * @return Time the script execution was submitted
      * 
-    */
+     */
     public String submittedAt() {
         return this.submittedAt;
     }
     /**
-     * Time limit for execution
+     * @return Time limit for execution
      * 
-    */
+     */
     public String timeout() {
         return this.timeout;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Standard warning out stream from the powershell execution
+     * @return Standard warning out stream from the powershell execution
      * 
-    */
+     */
     public List<String> warnings() {
         return this.warnings;
     }

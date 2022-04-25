@@ -27,6 +27,10 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
     @Import(name="preserveZipFileNameAsFolder")
     private @Nullable Object preserveZipFileNameAsFolder;
 
+    /**
+     * @return Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> preserveZipFileNameAsFolder() {
         return Optional.ofNullable(this.preserveZipFileNameAsFolder);
     }
@@ -39,6 +43,11 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The Compression setting type.
+     * Expected value is &#39;ZipDeflateReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -68,11 +77,24 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
             $ = new ZipDeflateReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param preserveZipFileNameAsFolder Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
             $.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
 
+        /**
+         * @param type The Compression setting type.
+         * Expected value is &#39;ZipDeflateReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

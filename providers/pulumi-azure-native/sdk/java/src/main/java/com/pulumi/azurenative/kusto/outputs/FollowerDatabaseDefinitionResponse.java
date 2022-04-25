@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class FollowerDatabaseDefinitionResponse {
-    /**
-     * Resource name of the attached database configuration in the follower cluster.
-     * 
-     */
+        /**
+         * @return Resource name of the attached database configuration in the follower cluster.
+         * 
+         */
     private final String attachedDatabaseConfigurationName;
-    /**
-     * Resource id of the cluster that follows a database owned by this cluster.
-     * 
-     */
+        /**
+         * @return Resource id of the cluster that follows a database owned by this cluster.
+         * 
+         */
     private final String clusterResourceId;
-    /**
-     * The database name owned by this cluster that was followed. * in case following all databases.
-     * 
-     */
+        /**
+         * @return The database name owned by this cluster that was followed. * in case following all databases.
+         * 
+         */
     private final String databaseName;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class FollowerDatabaseDefinitionResponse {
     }
 
     /**
-     * Resource name of the attached database configuration in the follower cluster.
+     * @return Resource name of the attached database configuration in the follower cluster.
      * 
-    */
+     */
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
-     * Resource id of the cluster that follows a database owned by this cluster.
+     * @return Resource id of the cluster that follows a database owned by this cluster.
      * 
-    */
+     */
     public String clusterResourceId() {
         return this.clusterResourceId;
     }
     /**
-     * The database name owned by this cluster that was followed. * in case following all databases.
+     * @return The database name owned by this cluster that was followed. * in case following all databases.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }

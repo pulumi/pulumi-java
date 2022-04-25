@@ -30,6 +30,10 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Integration runtime description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -41,6 +45,10 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
     @Import(name="linkedInfo")
     private @Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo;
 
+    /**
+     * @return The base definition of a linked integration runtime.
+     * 
+     */
     public Optional<Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>>> linkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
@@ -53,6 +61,11 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of integration runtime.
+     * Expected value is &#39;SelfHosted&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -83,37 +96,87 @@ public final class SelfHostedIntegrationRuntimeArgs extends com.pulumi.resources
             $ = new SelfHostedIntegrationRuntimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Integration runtime description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Integration runtime description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param linkedInfo The base definition of a linked integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(@Nullable Output<Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs>> linkedInfo) {
             $.linkedInfo = linkedInfo;
             return this;
         }
 
+        /**
+         * @param linkedInfo The base definition of a linked integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(Either<LinkedIntegrationRuntimeKeyAuthorizationArgs,LinkedIntegrationRuntimeRbacAuthorizationArgs> linkedInfo) {
             return linkedInfo(Output.of(linkedInfo));
         }
 
+        /**
+         * @param linkedInfo The base definition of a linked integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(LinkedIntegrationRuntimeKeyAuthorizationArgs linkedInfo) {
             return linkedInfo(Either.ofLeft(linkedInfo));
         }
 
+        /**
+         * @param linkedInfo The base definition of a linked integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedInfo(LinkedIntegrationRuntimeRbacAuthorizationArgs linkedInfo) {
             return linkedInfo(Either.ofRight(linkedInfo));
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;SelfHosted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;SelfHosted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

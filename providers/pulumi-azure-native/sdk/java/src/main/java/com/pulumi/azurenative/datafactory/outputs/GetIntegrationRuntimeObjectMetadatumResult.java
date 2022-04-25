@@ -17,15 +17,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIntegrationRuntimeObjectMetadatumResult {
-    /**
-     * The link to the next page of results, if any remaining results exist.
-     * 
-     */
+        /**
+         * @return The link to the next page of results, if any remaining results exist.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * List of SSIS object metadata.
-     * 
-     */
+        /**
+         * @return List of SSIS object metadata.
+         * 
+         */
     private final @Nullable List<Object> value;
 
     @CustomType.Constructor
@@ -37,16 +37,16 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
     }
 
     /**
-     * The link to the next page of results, if any remaining results exist.
+     * @return The link to the next page of results, if any remaining results exist.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * List of SSIS object metadata.
+     * @return List of SSIS object metadata.
      * 
-    */
+     */
     public List<Object> value() {
         return this.value == null ? List.of() : this.value;
     }

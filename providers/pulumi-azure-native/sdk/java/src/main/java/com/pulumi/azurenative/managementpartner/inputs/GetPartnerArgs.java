@@ -19,6 +19,10 @@ public final class GetPartnerArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="partnerId", required=true)
     private String partnerId;
 
+    /**
+     * @return Id of the Partner
+     * 
+     */
     public String partnerId() {
         return this.partnerId;
     }
@@ -47,6 +51,12 @@ public final class GetPartnerArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPartnerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerId Id of the Partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerId(String partnerId) {
             $.partnerId = partnerId;
             return this;

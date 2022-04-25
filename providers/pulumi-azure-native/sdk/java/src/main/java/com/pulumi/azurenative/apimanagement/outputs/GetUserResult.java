@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetUserResult {
-    /**
-     * Email address.
-     * 
-     */
+        /**
+         * @return Email address.
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * First name.
-     * 
-     */
+        /**
+         * @return First name.
+         * 
+         */
     private final @Nullable String firstName;
-    /**
-     * Collection of groups user is part of.
-     * 
-     */
+        /**
+         * @return Collection of groups user is part of.
+         * 
+         */
     private final List<GroupContractPropertiesResponse> groups;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Collection of user identities.
-     * 
-     */
+        /**
+         * @return Collection of user identities.
+         * 
+         */
     private final @Nullable List<UserIdentityContractResponse> identities;
-    /**
-     * Last name.
-     * 
-     */
+        /**
+         * @return Last name.
+         * 
+         */
     private final @Nullable String lastName;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Optional note about a user set by the administrator.
-     * 
-     */
+        /**
+         * @return Optional note about a user set by the administrator.
+         * 
+         */
     private final @Nullable String note;
-    /**
-     * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final @Nullable String registrationDate;
-    /**
-     * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
-     * 
-     */
+        /**
+         * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetUserResult {
     }
 
     /**
-     * Email address.
+     * @return Email address.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * First name.
+     * @return First name.
      * 
-    */
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
-     * Collection of groups user is part of.
+     * @return Collection of groups user is part of.
      * 
-    */
+     */
     public List<GroupContractPropertiesResponse> groups() {
         return this.groups;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Collection of user identities.
+     * @return Collection of user identities.
      * 
-    */
+     */
     public List<UserIdentityContractResponse> identities() {
         return this.identities == null ? List.of() : this.identities;
     }
     /**
-     * Last name.
+     * @return Last name.
      * 
-    */
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optional note about a user set by the administrator.
+     * @return Optional note about a user set by the administrator.
      * 
-    */
+     */
     public Optional<String> note() {
         return Optional.ofNullable(this.note);
     }
     /**
-     * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public Optional<String> registrationDate() {
         return Optional.ofNullable(this.registrationDate);
     }
     /**
-     * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+     * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

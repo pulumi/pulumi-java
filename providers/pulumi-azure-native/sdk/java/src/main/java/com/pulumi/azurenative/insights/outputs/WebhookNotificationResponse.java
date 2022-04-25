@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebhookNotificationResponse {
-    /**
-     * a property bag of settings. This value can be empty.
-     * 
-     */
+        /**
+         * @return a property bag of settings. This value can be empty.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * the service address to receive the notification.
-     * 
-     */
+        /**
+         * @return the service address to receive the notification.
+         * 
+         */
     private final @Nullable String serviceUri;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class WebhookNotificationResponse {
     }
 
     /**
-     * a property bag of settings. This value can be empty.
+     * @return a property bag of settings. This value can be empty.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * the service address to receive the notification.
+     * @return the service address to receive the notification.
      * 
-    */
+     */
     public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }

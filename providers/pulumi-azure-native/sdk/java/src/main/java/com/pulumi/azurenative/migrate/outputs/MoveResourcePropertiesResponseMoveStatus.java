@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MoveResourcePropertiesResponseMoveStatus {
-    /**
-     * An error response from the azure resource mover service.
-     * 
-     */
+        /**
+         * @return An error response from the azure resource mover service.
+         * 
+         */
     private final @Nullable MoveResourceErrorResponse errors;
-    /**
-     * Defines the job status.
-     * 
-     */
+        /**
+         * @return Defines the job status.
+         * 
+         */
     private final @Nullable JobStatusResponse jobStatus;
-    /**
-     * Defines the MoveResource states.
-     * 
-     */
+        /**
+         * @return Defines the MoveResource states.
+         * 
+         */
     private final String moveState;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class MoveResourcePropertiesResponseMoveStatus {
     }
 
     /**
-     * An error response from the azure resource mover service.
+     * @return An error response from the azure resource mover service.
      * 
-    */
+     */
     public Optional<MoveResourceErrorResponse> errors() {
         return Optional.ofNullable(this.errors);
     }
     /**
-     * Defines the job status.
+     * @return Defines the job status.
      * 
-    */
+     */
     public Optional<JobStatusResponse> jobStatus() {
         return Optional.ofNullable(this.jobStatus);
     }
     /**
-     * Defines the MoveResource states.
+     * @return Defines the MoveResource states.
      * 
-    */
+     */
     public String moveState() {
         return this.moveState;
     }

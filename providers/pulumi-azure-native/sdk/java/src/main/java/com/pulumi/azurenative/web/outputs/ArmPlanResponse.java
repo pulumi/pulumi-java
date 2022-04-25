@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ArmPlanResponse {
-    /**
-     * The name.
-     * 
-     */
+        /**
+         * @return The name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The product.
-     * 
-     */
+        /**
+         * @return The product.
+         * 
+         */
     private final @Nullable String product;
-    /**
-     * The promotion code.
-     * 
-     */
+        /**
+         * @return The promotion code.
+         * 
+         */
     private final @Nullable String promotionCode;
-    /**
-     * The publisher.
-     * 
-     */
+        /**
+         * @return The publisher.
+         * 
+         */
     private final @Nullable String publisher;
-    /**
-     * Version of product.
-     * 
-     */
+        /**
+         * @return Version of product.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ArmPlanResponse {
     }
 
     /**
-     * The name.
+     * @return The name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The product.
+     * @return The product.
      * 
-    */
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
-     * The promotion code.
+     * @return The promotion code.
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * The publisher.
+     * @return The publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * Version of product.
+     * @return Version of product.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

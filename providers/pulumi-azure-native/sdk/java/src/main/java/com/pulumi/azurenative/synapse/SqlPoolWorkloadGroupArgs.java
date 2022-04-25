@@ -24,6 +24,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="importance")
     private @Nullable Output<String> importance;
 
+    /**
+     * @return The workload group importance level.
+     * 
+     */
     public Optional<Output<String>> importance() {
         return Optional.ofNullable(this.importance);
     }
@@ -35,6 +39,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="maxResourcePercent", required=true)
     private Output<Integer> maxResourcePercent;
 
+    /**
+     * @return The workload group cap percentage resource.
+     * 
+     */
     public Output<Integer> maxResourcePercent() {
         return this.maxResourcePercent;
     }
@@ -46,6 +54,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="maxResourcePercentPerRequest")
     private @Nullable Output<Double> maxResourcePercentPerRequest;
 
+    /**
+     * @return The workload group request maximum grant percentage.
+     * 
+     */
     public Optional<Output<Double>> maxResourcePercentPerRequest() {
         return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
@@ -57,6 +69,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="minResourcePercent", required=true)
     private Output<Integer> minResourcePercent;
 
+    /**
+     * @return The workload group minimum percentage resource.
+     * 
+     */
     public Output<Integer> minResourcePercent() {
         return this.minResourcePercent;
     }
@@ -68,6 +84,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="minResourcePercentPerRequest", required=true)
     private Output<Double> minResourcePercentPerRequest;
 
+    /**
+     * @return The workload group request minimum grant percentage.
+     * 
+     */
     public Output<Double> minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
@@ -79,6 +99,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="queryExecutionTimeout")
     private @Nullable Output<Integer> queryExecutionTimeout;
 
+    /**
+     * @return The workload group query execution timeout.
+     * 
+     */
     public Optional<Output<Integer>> queryExecutionTimeout() {
         return Optional.ofNullable(this.queryExecutionTimeout);
     }
@@ -90,6 +114,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="sqlPoolName", required=true)
     private Output<String> sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -112,6 +144,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="workloadGroupName")
     private @Nullable Output<String> workloadGroupName;
 
+    /**
+     * @return The name of the workload group.
+     * 
+     */
     public Optional<Output<String>> workloadGroupName() {
         return Optional.ofNullable(this.workloadGroupName);
     }
@@ -123,6 +159,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -160,92 +200,212 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
             $ = new SqlPoolWorkloadGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param importance The workload group importance level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(@Nullable Output<String> importance) {
             $.importance = importance;
             return this;
         }
 
+        /**
+         * @param importance The workload group importance level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(String importance) {
             return importance(Output.of(importance));
         }
 
+        /**
+         * @param maxResourcePercent The workload group cap percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercent(Output<Integer> maxResourcePercent) {
             $.maxResourcePercent = maxResourcePercent;
             return this;
         }
 
+        /**
+         * @param maxResourcePercent The workload group cap percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercent(Integer maxResourcePercent) {
             return maxResourcePercent(Output.of(maxResourcePercent));
         }
 
+        /**
+         * @param maxResourcePercentPerRequest The workload group request maximum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercentPerRequest(@Nullable Output<Double> maxResourcePercentPerRequest) {
             $.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
 
+        /**
+         * @param maxResourcePercentPerRequest The workload group request maximum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxResourcePercentPerRequest(Double maxResourcePercentPerRequest) {
             return maxResourcePercentPerRequest(Output.of(maxResourcePercentPerRequest));
         }
 
+        /**
+         * @param minResourcePercent The workload group minimum percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercent(Output<Integer> minResourcePercent) {
             $.minResourcePercent = minResourcePercent;
             return this;
         }
 
+        /**
+         * @param minResourcePercent The workload group minimum percentage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercent(Integer minResourcePercent) {
             return minResourcePercent(Output.of(minResourcePercent));
         }
 
+        /**
+         * @param minResourcePercentPerRequest The workload group request minimum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercentPerRequest(Output<Double> minResourcePercentPerRequest) {
             $.minResourcePercentPerRequest = minResourcePercentPerRequest;
             return this;
         }
 
+        /**
+         * @param minResourcePercentPerRequest The workload group request minimum grant percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
             return minResourcePercentPerRequest(Output.of(minResourcePercentPerRequest));
         }
 
+        /**
+         * @param queryExecutionTimeout The workload group query execution timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryExecutionTimeout(@Nullable Output<Integer> queryExecutionTimeout) {
             $.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
 
+        /**
+         * @param queryExecutionTimeout The workload group query execution timeout.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryExecutionTimeout(Integer queryExecutionTimeout) {
             return queryExecutionTimeout(Output.of(queryExecutionTimeout));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             return sqlPoolName(Output.of(sqlPoolName));
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(@Nullable Output<String> workloadGroupName) {
             $.workloadGroupName = workloadGroupName;
             return this;
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(String workloadGroupName) {
             return workloadGroupName(Output.of(workloadGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

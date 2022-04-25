@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CaaRecordResponse {
-    /**
-     * The flags for this CAA record as an integer between 0 and 255.
-     * 
-     */
+        /**
+         * @return The flags for this CAA record as an integer between 0 and 255.
+         * 
+         */
     private final @Nullable Integer flags;
-    /**
-     * The tag for this CAA record.
-     * 
-     */
+        /**
+         * @return The tag for this CAA record.
+         * 
+         */
     private final @Nullable String tag;
-    /**
-     * The value for this CAA record.
-     * 
-     */
+        /**
+         * @return The value for this CAA record.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class CaaRecordResponse {
     }
 
     /**
-     * The flags for this CAA record as an integer between 0 and 255.
+     * @return The flags for this CAA record as an integer between 0 and 255.
      * 
-    */
+     */
     public Optional<Integer> flags() {
         return Optional.ofNullable(this.flags);
     }
     /**
-     * The tag for this CAA record.
+     * @return The tag for this CAA record.
      * 
-    */
+     */
     public Optional<String> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
-     * The value for this CAA record.
+     * @return The value for this CAA record.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

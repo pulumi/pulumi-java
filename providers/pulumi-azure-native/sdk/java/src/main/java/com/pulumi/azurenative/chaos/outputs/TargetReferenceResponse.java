@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TargetReferenceResponse {
-    /**
-     * String of the resource ID of a Target resource.
-     * 
-     */
+        /**
+         * @return String of the resource ID of a Target resource.
+         * 
+         */
     private final String id;
-    /**
-     * Enum of the Target reference type.
-     * 
-     */
+        /**
+         * @return Enum of the Target reference type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TargetReferenceResponse {
     }
 
     /**
-     * String of the resource ID of a Target resource.
+     * @return String of the resource ID of a Target resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Enum of the Target reference type.
+     * @return Enum of the Target reference type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExcludedPathResponse {
-    /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
-     */
+        /**
+         * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         */
     private final @Nullable String path;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ExcludedPathResponse {
     }
 
     /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }

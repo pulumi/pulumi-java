@@ -17,60 +17,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAvailabilitySetResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Fault Domain count.
-     * 
-     */
+        /**
+         * @return Fault Domain count.
+         * 
+         */
     private final @Nullable Integer platformFaultDomainCount;
-    /**
-     * Update Domain count.
-     * 
-     */
+        /**
+         * @return Update Domain count.
+         * 
+         */
     private final @Nullable Integer platformUpdateDomainCount;
-    /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
-     * 
-     */
+        /**
+         * @return Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+         * 
+         */
     private final @Nullable SubResourceResponse proximityPlacementGroup;
-    /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
-     * 
-     */
+        /**
+         * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * The resource status information.
-     * 
-     */
+        /**
+         * @return The resource status information.
+         * 
+         */
     private final List<InstanceViewStatusResponse> statuses;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * A list of references to all virtual machines in the availability set.
-     * 
-     */
+        /**
+         * @return A list of references to all virtual machines in the availability set.
+         * 
+         */
     private final @Nullable List<SubResourceResponse> virtualMachines;
 
     @CustomType.Constructor
@@ -100,79 +100,79 @@ public final class GetAvailabilitySetResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Fault Domain count.
+     * @return Fault Domain count.
      * 
-    */
+     */
     public Optional<Integer> platformFaultDomainCount() {
         return Optional.ofNullable(this.platformFaultDomainCount);
     }
     /**
-     * Update Domain count.
+     * @return Update Domain count.
      * 
-    */
+     */
     public Optional<Integer> platformUpdateDomainCount() {
         return Optional.ofNullable(this.platformUpdateDomainCount);
     }
     /**
-     * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+     * @return Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
-    */
+     */
     public Optional<SubResourceResponse> proximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
     /**
-     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
+     * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of references to all virtual machines in the availability set.
+     * @return A list of references to all virtual machines in the availability set.
      * 
-    */
+     */
     public List<SubResourceResponse> virtualMachines() {
         return this.virtualMachines == null ? List.of() : this.virtualMachines;
     }

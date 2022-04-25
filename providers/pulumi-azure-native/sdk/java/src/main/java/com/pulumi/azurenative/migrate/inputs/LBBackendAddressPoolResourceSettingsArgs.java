@@ -26,6 +26,10 @@ public final class LBBackendAddressPoolResourceSettingsArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the backend address pool name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,11 +58,23 @@ public final class LBBackendAddressPoolResourceSettingsArgs extends com.pulumi.r
             $ = new LBBackendAddressPoolResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the backend address pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the backend address pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

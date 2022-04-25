@@ -29,6 +29,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="acknowledgementConnectionSettings", required=true)
     private AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings;
 
+    /**
+     * @return The acknowledgement connection settings.
+     * 
+     */
     public AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
     }
@@ -40,6 +44,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="envelopeSettings", required=true)
     private AS2EnvelopeSettingsResponse envelopeSettings;
 
+    /**
+     * @return The envelope settings.
+     * 
+     */
     public AS2EnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
@@ -51,6 +59,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="errorSettings", required=true)
     private AS2ErrorSettingsResponse errorSettings;
 
+    /**
+     * @return The error settings.
+     * 
+     */
     public AS2ErrorSettingsResponse errorSettings() {
         return this.errorSettings;
     }
@@ -62,6 +74,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="mdnSettings", required=true)
     private AS2MdnSettingsResponse mdnSettings;
 
+    /**
+     * @return The MDN settings.
+     * 
+     */
     public AS2MdnSettingsResponse mdnSettings() {
         return this.mdnSettings;
     }
@@ -73,6 +89,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="messageConnectionSettings", required=true)
     private AS2MessageConnectionSettingsResponse messageConnectionSettings;
 
+    /**
+     * @return The message connection settings.
+     * 
+     */
     public AS2MessageConnectionSettingsResponse messageConnectionSettings() {
         return this.messageConnectionSettings;
     }
@@ -84,6 +104,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="securitySettings", required=true)
     private AS2SecuritySettingsResponse securitySettings;
 
+    /**
+     * @return The security settings.
+     * 
+     */
     public AS2SecuritySettingsResponse securitySettings() {
         return this.securitySettings;
     }
@@ -95,6 +119,10 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="validationSettings", required=true)
     private AS2ValidationSettingsResponse validationSettings;
 
+    /**
+     * @return The validation settings.
+     * 
+     */
     public AS2ValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
@@ -129,36 +157,78 @@ public final class AS2ProtocolSettingsResponse extends com.pulumi.resources.Invo
             $ = new AS2ProtocolSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgementConnectionSettings The acknowledgement connection settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings) {
             $.acknowledgementConnectionSettings = acknowledgementConnectionSettings;
             return this;
         }
 
+        /**
+         * @param envelopeSettings The envelope settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envelopeSettings(AS2EnvelopeSettingsResponse envelopeSettings) {
             $.envelopeSettings = envelopeSettings;
             return this;
         }
 
+        /**
+         * @param errorSettings The error settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorSettings(AS2ErrorSettingsResponse errorSettings) {
             $.errorSettings = errorSettings;
             return this;
         }
 
+        /**
+         * @param mdnSettings The MDN settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdnSettings(AS2MdnSettingsResponse mdnSettings) {
             $.mdnSettings = mdnSettings;
             return this;
         }
 
+        /**
+         * @param messageConnectionSettings The message connection settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageConnectionSettings(AS2MessageConnectionSettingsResponse messageConnectionSettings) {
             $.messageConnectionSettings = messageConnectionSettings;
             return this;
         }
 
+        /**
+         * @param securitySettings The security settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securitySettings(AS2SecuritySettingsResponse securitySettings) {
             $.securitySettings = securitySettings;
             return this;
         }
 
+        /**
+         * @param validationSettings The validation settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationSettings(AS2ValidationSettingsResponse validationSettings) {
             $.validationSettings = validationSettings;
             return this;

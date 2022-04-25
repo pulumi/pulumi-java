@@ -28,6 +28,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="assignmentType")
     private @Nullable String assignmentType;
 
+    /**
+     * @return Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+     * 
+     */
     public Optional<String> assignmentType() {
         return Optional.ofNullable(this.assignmentType);
     }
@@ -39,6 +43,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="configurationParameter")
     private @Nullable List<ConfigurationParameterResponse> configurationParameter;
 
+    /**
+     * @return The configuration parameters for the guest configuration.
+     * 
+     */
     public Optional<List<ConfigurationParameterResponse>> configurationParameter() {
         return Optional.ofNullable(this.configurationParameter);
     }
@@ -50,6 +58,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="configurationProtectedParameter")
     private @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
 
+    /**
+     * @return The protected configuration parameters for the guest configuration.
+     * 
+     */
     public Optional<List<ConfigurationParameterResponse>> configurationProtectedParameter() {
         return Optional.ofNullable(this.configurationProtectedParameter);
     }
@@ -61,6 +73,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="configurationSetting")
     private @Nullable ConfigurationSettingResponse configurationSetting;
 
+    /**
+     * @return The configuration setting for the guest configuration.
+     * 
+     */
     public Optional<ConfigurationSettingResponse> configurationSetting() {
         return Optional.ofNullable(this.configurationSetting);
     }
@@ -72,6 +88,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="contentHash")
     private @Nullable String contentHash;
 
+    /**
+     * @return Combined hash of the guest configuration package and configuration parameters.
+     * 
+     */
     public Optional<String> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
@@ -83,6 +103,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="contentType", required=true)
     private String contentType;
 
+    /**
+     * @return Specifies the content type of the configuration. Possible values could be Builtin or Custom.
+     * 
+     */
     public String contentType() {
         return this.contentType;
     }
@@ -94,6 +118,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="contentUri")
     private @Nullable String contentUri;
 
+    /**
+     * @return Uri of the storage where guest configuration package is uploaded.
+     * 
+     */
     public Optional<String> contentUri() {
         return Optional.ofNullable(this.contentUri);
     }
@@ -105,6 +133,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of the guest configuration. For example:DSC
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -116,6 +148,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the guest configuration.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -127,6 +163,10 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of the guest configuration.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -164,59 +204,131 @@ public final class GuestConfigurationNavigationResponse extends com.pulumi.resou
             $ = new GuestConfigurationNavigationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignmentType Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentType(@Nullable String assignmentType) {
             $.assignmentType = assignmentType;
             return this;
         }
 
+        /**
+         * @param configurationParameter The configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationParameter(@Nullable List<ConfigurationParameterResponse> configurationParameter) {
             $.configurationParameter = configurationParameter;
             return this;
         }
 
+        /**
+         * @param configurationParameter The configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationParameter(ConfigurationParameterResponse... configurationParameter) {
             return configurationParameter(List.of(configurationParameter));
         }
 
+        /**
+         * @param configurationProtectedParameter The protected configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterResponse> configurationProtectedParameter) {
             $.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
 
+        /**
+         * @param configurationProtectedParameter The protected configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedParameter(ConfigurationParameterResponse... configurationProtectedParameter) {
             return configurationProtectedParameter(List.of(configurationProtectedParameter));
         }
 
+        /**
+         * @param configurationSetting The configuration setting for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationSetting(@Nullable ConfigurationSettingResponse configurationSetting) {
             $.configurationSetting = configurationSetting;
             return this;
         }
 
+        /**
+         * @param contentHash Combined hash of the guest configuration package and configuration parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(@Nullable String contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param contentType Specifies the content type of the configuration. Possible values could be Builtin or Custom.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentUri Uri of the storage where guest configuration package is uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentUri(@Nullable String contentUri) {
             $.contentUri = contentUri;
             return this;
         }
 
+        /**
+         * @param kind Kind of the guest configuration. For example:DSC
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Version of the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

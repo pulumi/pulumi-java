@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceManagedIdentityResponseIdentity {
-    /**
-     * Type of identity being specified, currently SystemAssigned and None are allowed.
-     * 
-     */
+        /**
+         * @return Type of identity being specified, currently SystemAssigned and None are allowed.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ServiceManagedIdentityResponseIdentity {
     }
 
     /**
-     * Type of identity being specified, currently SystemAssigned and None are allowed.
+     * @return Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

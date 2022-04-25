@@ -27,6 +27,11 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -38,6 +43,10 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
     @Import(name="primaryZone")
     private @Nullable String primaryZone;
 
+    /**
+     * @return The primary zone.
+     * 
+     */
     public Optional<String> primaryZone() {
         return Optional.ofNullable(this.primaryZone);
     }
@@ -49,6 +58,10 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
     @Import(name="recoveryZone")
     private @Nullable String recoveryZone;
 
+    /**
+     * @return The recovery zone.
+     * 
+     */
     public Optional<String> recoveryZone() {
         return Optional.ofNullable(this.recoveryZone);
     }
@@ -79,16 +92,35 @@ public final class RecoveryPlanA2ADetailsResponse extends com.pulumi.resources.I
             $ = new RecoveryPlanA2ADetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param primaryZone The primary zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryZone(@Nullable String primaryZone) {
             $.primaryZone = primaryZone;
             return this;
         }
 
+        /**
+         * @param recoveryZone The recovery zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryZone(@Nullable String recoveryZone) {
             $.recoveryZone = recoveryZone;
             return this;

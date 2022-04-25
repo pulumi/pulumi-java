@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LinkedServicePropsResponse {
-    /**
-     * The creation time of the linked service.
-     * 
-     */
+        /**
+         * @return The creation time of the linked service.
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * Type of the link target.
-     * 
-     */
+        /**
+         * @return Type of the link target.
+         * 
+         */
     private final @Nullable String linkType;
-    /**
-     * ResourceId of the link target of the linked service.
-     * 
-     */
+        /**
+         * @return ResourceId of the link target of the linked service.
+         * 
+         */
     private final String linkedServiceResourceId;
-    /**
-     * The last modified time of the linked service.
-     * 
-     */
+        /**
+         * @return The last modified time of the linked service.
+         * 
+         */
     private final @Nullable String modifiedTime;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class LinkedServicePropsResponse {
     }
 
     /**
-     * The creation time of the linked service.
+     * @return The creation time of the linked service.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * Type of the link target.
+     * @return Type of the link target.
      * 
-    */
+     */
     public Optional<String> linkType() {
         return Optional.ofNullable(this.linkType);
     }
     /**
-     * ResourceId of the link target of the linked service.
+     * @return ResourceId of the link target of the linked service.
      * 
-    */
+     */
     public String linkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
     /**
-     * The last modified time of the linked service.
+     * @return The last modified time of the linked service.
      * 
-    */
+     */
     public Optional<String> modifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }

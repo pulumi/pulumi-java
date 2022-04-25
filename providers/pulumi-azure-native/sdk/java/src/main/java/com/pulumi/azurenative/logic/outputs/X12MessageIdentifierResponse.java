@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class X12MessageIdentifierResponse {
-    /**
-     * The message id.
-     * 
-     */
+        /**
+         * @return The message id.
+         * 
+         */
     private final String messageId;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class X12MessageIdentifierResponse {
     }
 
     /**
-     * The message id.
+     * @return The message id.
      * 
-    */
+     */
     public String messageId() {
         return this.messageId;
     }

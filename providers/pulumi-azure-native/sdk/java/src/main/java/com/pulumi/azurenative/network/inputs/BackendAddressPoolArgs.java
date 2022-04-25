@@ -28,6 +28,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -39,6 +43,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
     @Import(name="loadBalancerBackendAddresses")
     private @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
+    /**
+     * @return An array of backend addresses.
+     * 
+     */
     public Optional<Output<List<LoadBalancerBackendAddressArgs>>> loadBalancerBackendAddresses() {
         return Optional.ofNullable(this.loadBalancerBackendAddresses);
     }
@@ -50,6 +58,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the backend address pool.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +73,10 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,42 +108,96 @@ public final class BackendAddressPoolArgs extends com.pulumi.resources.ResourceA
             $ = new BackendAddressPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param loadBalancerBackendAddresses An array of backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddresses(@Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
             $.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
 
+        /**
+         * @param loadBalancerBackendAddresses An array of backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddresses(List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
             return loadBalancerBackendAddresses(Output.of(loadBalancerBackendAddresses));
         }
 
+        /**
+         * @param loadBalancerBackendAddresses An array of backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerBackendAddresses(LoadBalancerBackendAddressArgs... loadBalancerBackendAddresses) {
             return loadBalancerBackendAddresses(List.of(loadBalancerBackendAddresses));
         }
 
+        /**
+         * @param location The location of the backend address pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the backend address pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

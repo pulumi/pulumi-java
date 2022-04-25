@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityAssessmentMetadataPartnerDataResponse {
-    /**
-     * Name of the company of the partner
-     * 
-     */
+        /**
+         * @return Name of the company of the partner
+         * 
+         */
     private final String partnerName;
-    /**
-     * Name of the product of the partner that created the assessment
-     * 
-     */
+        /**
+         * @return Name of the product of the partner that created the assessment
+         * 
+         */
     private final @Nullable String productName;
-    /**
-     * Secret to authenticate the partner and verify it created the assessment - write only
-     * 
-     */
+        /**
+         * @return Secret to authenticate the partner and verify it created the assessment - write only
+         * 
+         */
     private final String secret;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
     }
 
     /**
-     * Name of the company of the partner
+     * @return Name of the company of the partner
      * 
-    */
+     */
     public String partnerName() {
         return this.partnerName;
     }
     /**
-     * Name of the product of the partner that created the assessment
+     * @return Name of the product of the partner that created the assessment
      * 
-    */
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
-     * Secret to authenticate the partner and verify it created the assessment - write only
+     * @return Secret to authenticate the partner and verify it created the assessment - write only
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }

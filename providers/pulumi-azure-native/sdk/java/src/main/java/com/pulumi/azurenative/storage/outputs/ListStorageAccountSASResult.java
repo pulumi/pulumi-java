@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ListStorageAccountSASResult {
-    /**
-     * List SAS credentials of storage account.
-     * 
-     */
+        /**
+         * @return List SAS credentials of storage account.
+         * 
+         */
     private final String accountSasToken;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ListStorageAccountSASResult {
     }
 
     /**
-     * List SAS credentials of storage account.
+     * @return List SAS credentials of storage account.
      * 
-    */
+     */
     public String accountSasToken() {
         return this.accountSasToken;
     }

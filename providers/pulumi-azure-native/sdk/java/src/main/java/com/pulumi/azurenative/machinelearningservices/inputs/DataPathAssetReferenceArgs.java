@@ -27,6 +27,10 @@ public final class DataPathAssetReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="datastoreId")
     private @Nullable Output<String> datastoreId;
 
+    /**
+     * @return ARM resource ID of the datastore where the asset is located.
+     * 
+     */
     public Optional<Output<String>> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
@@ -38,6 +42,10 @@ public final class DataPathAssetReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path of the file/directory in the datastore.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -50,6 +58,11 @@ public final class DataPathAssetReferenceArgs extends com.pulumi.resources.Resou
     @Import(name="referenceType", required=true)
     private Output<String> referenceType;
 
+    /**
+     * @return Enum to determine which reference method to use for an asset.
+     * Expected value is &#39;DataPath&#39;.
+     * 
+     */
     public Output<String> referenceType() {
         return this.referenceType;
     }
@@ -80,29 +93,67 @@ public final class DataPathAssetReferenceArgs extends com.pulumi.resources.Resou
             $ = new DataPathAssetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the asset is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
             $.datastoreId = datastoreId;
             return this;
         }
 
+        /**
+         * @param datastoreId ARM resource ID of the datastore where the asset is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreId(String datastoreId) {
             return datastoreId(Output.of(datastoreId));
         }
 
+        /**
+         * @param path The path of the file/directory in the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path of the file/directory in the datastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;DataPath&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(Output<String> referenceType) {
             $.referenceType = referenceType;
             return this;
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;DataPath&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(String referenceType) {
             return referenceType(Output.of(referenceType));
         }

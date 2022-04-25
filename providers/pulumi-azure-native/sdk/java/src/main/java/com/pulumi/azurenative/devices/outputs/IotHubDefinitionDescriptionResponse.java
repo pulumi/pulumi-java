@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IotHubDefinitionDescriptionResponse {
-    /**
-     * weight to apply for a given iot h.
-     * 
-     */
+        /**
+         * @return weight to apply for a given iot h.
+         * 
+         */
     private final @Nullable Integer allocationWeight;
-    /**
-     * flag for applying allocationPolicy or not for a given iot hub.
-     * 
-     */
+        /**
+         * @return flag for applying allocationPolicy or not for a given iot hub.
+         * 
+         */
     private final @Nullable Boolean applyAllocationPolicy;
-    /**
-     * Connection string of the IoT hub.
-     * 
-     */
+        /**
+         * @return Connection string of the IoT hub.
+         * 
+         */
     private final String connectionString;
-    /**
-     * ARM region of the IoT hub.
-     * 
-     */
+        /**
+         * @return ARM region of the IoT hub.
+         * 
+         */
     private final String location;
-    /**
-     * Host name of the IoT hub.
-     * 
-     */
+        /**
+         * @return Host name of the IoT hub.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class IotHubDefinitionDescriptionResponse {
     }
 
     /**
-     * weight to apply for a given iot h.
+     * @return weight to apply for a given iot h.
      * 
-    */
+     */
     public Optional<Integer> allocationWeight() {
         return Optional.ofNullable(this.allocationWeight);
     }
     /**
-     * flag for applying allocationPolicy or not for a given iot hub.
+     * @return flag for applying allocationPolicy or not for a given iot hub.
      * 
-    */
+     */
     public Optional<Boolean> applyAllocationPolicy() {
         return Optional.ofNullable(this.applyAllocationPolicy);
     }
     /**
-     * Connection string of the IoT hub.
+     * @return Connection string of the IoT hub.
      * 
-    */
+     */
     public String connectionString() {
         return this.connectionString;
     }
     /**
-     * ARM region of the IoT hub.
+     * @return ARM region of the IoT hub.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Host name of the IoT hub.
+     * @return Host name of the IoT hub.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

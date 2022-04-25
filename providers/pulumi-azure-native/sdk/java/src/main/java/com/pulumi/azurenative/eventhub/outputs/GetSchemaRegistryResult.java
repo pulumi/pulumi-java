@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSchemaRegistryResult {
-    /**
-     * Exact time the Schema Group was created.
-     * 
-     */
+        /**
+         * @return Exact time the Schema Group was created.
+         * 
+         */
     private final String createdAtUtc;
-    /**
-     * The ETag value.
-     * 
-     */
+        /**
+         * @return The ETag value.
+         * 
+         */
     private final String eTag;
-    /**
-     * dictionary object for SchemaGroup group properties
-     * 
-     */
+        /**
+         * @return dictionary object for SchemaGroup group properties
+         * 
+         */
     private final @Nullable Map<String,String> groupProperties;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
     private final @Nullable String schemaCompatibility;
     private final @Nullable String schemaType;
-    /**
-     * The system meta data relating to this resource.
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Exact time the Schema Group was updated
-     * 
-     */
+        /**
+         * @return Exact time the Schema Group was updated
+         * 
+         */
     private final String updatedAtUtc;
 
     @CustomType.Constructor
@@ -88,44 +88,44 @@ public final class GetSchemaRegistryResult {
     }
 
     /**
-     * Exact time the Schema Group was created.
+     * @return Exact time the Schema Group was created.
      * 
-    */
+     */
     public String createdAtUtc() {
         return this.createdAtUtc;
     }
     /**
-     * The ETag value.
+     * @return The ETag value.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * dictionary object for SchemaGroup group properties
+     * @return dictionary object for SchemaGroup group properties
      * 
-    */
+     */
     public Map<String,String> groupProperties() {
         return this.groupProperties == null ? Map.of() : this.groupProperties;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -136,23 +136,23 @@ public final class GetSchemaRegistryResult {
         return Optional.ofNullable(this.schemaType);
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.EventHub/Namespaces&#34; or &#34;Microsoft.EventHub/Namespaces/EventHubs&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Exact time the Schema Group was updated
+     * @return Exact time the Schema Group was updated
      * 
-    */
+     */
     public String updatedAtUtc() {
         return this.updatedAtUtc;
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KeyResponse {
-    /**
-     * Automation key name.
-     * 
-     */
+        /**
+         * @return Automation key name.
+         * 
+         */
     private final String keyName;
-    /**
-     * Automation key permissions.
-     * 
-     */
+        /**
+         * @return Automation key permissions.
+         * 
+         */
     private final String permissions;
-    /**
-     * Value of the Automation Key used for registration.
-     * 
-     */
+        /**
+         * @return Value of the Automation Key used for registration.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class KeyResponse {
     }
 
     /**
-     * Automation key name.
+     * @return Automation key name.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * Automation key permissions.
+     * @return Automation key permissions.
      * 
-    */
+     */
     public String permissions() {
         return this.permissions;
     }
     /**
-     * Value of the Automation Key used for registration.
+     * @return Value of the Automation Key used for registration.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

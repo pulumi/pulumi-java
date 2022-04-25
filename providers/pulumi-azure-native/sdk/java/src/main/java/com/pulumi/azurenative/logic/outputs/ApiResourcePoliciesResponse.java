@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiResourcePoliciesResponse {
-    /**
-     * The API level only policies XML as embedded content.
-     * 
-     */
+        /**
+         * @return The API level only policies XML as embedded content.
+         * 
+         */
     private final @Nullable String content;
-    /**
-     * The content link to the policies.
-     * 
-     */
+        /**
+         * @return The content link to the policies.
+         * 
+         */
     private final @Nullable String contentLink;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ApiResourcePoliciesResponse {
     }
 
     /**
-     * The API level only policies XML as embedded content.
+     * @return The API level only policies XML as embedded content.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The content link to the policies.
+     * @return The content link to the policies.
      * 
-    */
+     */
     public Optional<String> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }

@@ -29,6 +29,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="assignmentHash", required=true)
     private String assignmentHash;
 
+    /**
+     * @return Combined hash of the configuration package and parameters.
+     * 
+     */
     public String assignmentHash() {
         return this.assignmentHash;
     }
@@ -40,6 +44,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="complianceStatus", required=true)
     private String complianceStatus;
 
+    /**
+     * @return A value indicating compliance status of the machine for the assigned guest configuration.
+     * 
+     */
     public String complianceStatus() {
         return this.complianceStatus;
     }
@@ -51,6 +59,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="context")
     private @Nullable String context;
 
+    /**
+     * @return The source which initiated the guest configuration assignment. Ex: Azure Policy
+     * 
+     */
     public Optional<String> context() {
         return Optional.ofNullable(this.context);
     }
@@ -62,6 +74,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="guestConfiguration")
     private @Nullable GuestConfigurationNavigationResponse guestConfiguration;
 
+    /**
+     * @return The guest configuration to assign.
+     * 
+     */
     public Optional<GuestConfigurationNavigationResponse> guestConfiguration() {
         return Optional.ofNullable(this.guestConfiguration);
     }
@@ -73,6 +89,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="lastComplianceStatusChecked", required=true)
     private String lastComplianceStatusChecked;
 
+    /**
+     * @return Date and time when last compliance status was checked.
+     * 
+     */
     public String lastComplianceStatusChecked() {
         return this.lastComplianceStatusChecked;
     }
@@ -84,6 +104,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="latestAssignmentReport")
     private @Nullable AssignmentReportResponse latestAssignmentReport;
 
+    /**
+     * @return Last reported guest configuration assignment report.
+     * 
+     */
     public Optional<AssignmentReportResponse> latestAssignmentReport() {
         return Optional.ofNullable(this.latestAssignmentReport);
     }
@@ -95,6 +119,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="latestReportId", required=true)
     private String latestReportId;
 
+    /**
+     * @return Id of the latest report for the guest configuration assignment.
+     * 
+     */
     public String latestReportId() {
         return this.latestReportId;
     }
@@ -106,6 +134,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="parameterHash", required=true)
     private String parameterHash;
 
+    /**
+     * @return parameter hash for the guest configuration assignment.
+     * 
+     */
     public String parameterHash() {
         return this.parameterHash;
     }
@@ -117,6 +149,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -128,6 +164,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Type of the resource - VMSS / VM
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -139,6 +179,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="targetResourceId", required=true)
     private String targetResourceId;
 
+    /**
+     * @return VM resource Id.
+     * 
+     */
     public String targetResourceId() {
         return this.targetResourceId;
     }
@@ -150,6 +194,10 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
     @Import(name="vmssVMList")
     private @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
+    /**
+     * @return The list of VM Compliance data for VMSS
+     * 
+     */
     public Optional<List<VMSSVMInfoResponse>> vmssVMList() {
         return Optional.ofNullable(this.vmssVMList);
     }
@@ -189,66 +237,144 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends com.pu
             $ = new GuestConfigurationAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignmentHash Combined hash of the configuration package and parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentHash(String assignmentHash) {
             $.assignmentHash = assignmentHash;
             return this;
         }
 
+        /**
+         * @param complianceStatus A value indicating compliance status of the machine for the assigned guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceStatus(String complianceStatus) {
             $.complianceStatus = complianceStatus;
             return this;
         }
 
+        /**
+         * @param context The source which initiated the guest configuration assignment. Ex: Azure Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable String context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param guestConfiguration The guest configuration to assign.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestConfiguration(@Nullable GuestConfigurationNavigationResponse guestConfiguration) {
             $.guestConfiguration = guestConfiguration;
             return this;
         }
 
+        /**
+         * @param lastComplianceStatusChecked Date and time when last compliance status was checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastComplianceStatusChecked(String lastComplianceStatusChecked) {
             $.lastComplianceStatusChecked = lastComplianceStatusChecked;
             return this;
         }
 
+        /**
+         * @param latestAssignmentReport Last reported guest configuration assignment report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestAssignmentReport(@Nullable AssignmentReportResponse latestAssignmentReport) {
             $.latestAssignmentReport = latestAssignmentReport;
             return this;
         }
 
+        /**
+         * @param latestReportId Id of the latest report for the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestReportId(String latestReportId) {
             $.latestReportId = latestReportId;
             return this;
         }
 
+        /**
+         * @param parameterHash parameter hash for the guest configuration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterHash(String parameterHash) {
             $.parameterHash = parameterHash;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceType Type of the resource - VMSS / VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param targetResourceId VM resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(String targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param vmssVMList The list of VM Compliance data for VMSS
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmssVMList(@Nullable List<VMSSVMInfoResponse> vmssVMList) {
             $.vmssVMList = vmssVMList;
             return this;
         }
 
+        /**
+         * @param vmssVMList The list of VM Compliance data for VMSS
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmssVMList(VMSSVMInfoResponse... vmssVMList) {
             return vmssVMList(List.of(vmssVMList));
         }

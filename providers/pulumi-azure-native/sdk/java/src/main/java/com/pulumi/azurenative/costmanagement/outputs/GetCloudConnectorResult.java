@@ -13,95 +13,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCloudConnectorResult {
-    /**
-     * Connector billing model
-     * 
-     */
+        /**
+         * @return Connector billing model
+         * 
+         */
     private final @Nullable String billingModel;
-    /**
-     * Collection information
-     * 
-     */
+        /**
+         * @return Collection information
+         * 
+         */
     private final ConnectorCollectionInfoResponse collectionInfo;
-    /**
-     * Connector definition creation datetime
-     * 
-     */
+        /**
+         * @return Connector definition creation datetime
+         * 
+         */
     private final String createdOn;
-    /**
-     * Credentials authentication key (eg AWS ARN)
-     * 
-     */
+        /**
+         * @return Credentials authentication key (eg AWS ARN)
+         * 
+         */
     private final @Nullable String credentialsKey;
-    /**
-     * Number of days remaining of trial
-     * 
-     */
+        /**
+         * @return Number of days remaining of trial
+         * 
+         */
     private final Integer daysTrialRemaining;
-    /**
-     * Default ManagementGroupId
-     * 
-     */
+        /**
+         * @return Default ManagementGroupId
+         * 
+         */
     private final @Nullable String defaultManagementGroupId;
-    /**
-     * Connector DisplayName
-     * 
-     */
+        /**
+         * @return Connector DisplayName
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Associated ExternalBillingAccountId
-     * 
-     */
+        /**
+         * @return Associated ExternalBillingAccountId
+         * 
+         */
     private final String externalBillingAccountId;
-    /**
-     * Connector id
-     * 
-     */
+        /**
+         * @return Connector id
+         * 
+         */
     private final String id;
-    /**
-     * Connector kind (eg aws)
-     * 
-     */
+        /**
+         * @return Connector kind (eg aws)
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Connector last modified datetime
-     * 
-     */
+        /**
+         * @return Connector last modified datetime
+         * 
+         */
     private final String modifiedOn;
-    /**
-     * Connector name
-     * 
-     */
+        /**
+         * @return Connector name
+         * 
+         */
     private final String name;
-    /**
-     * The display name of the providerBillingAccountId as defined on the external provider
-     * 
-     */
+        /**
+         * @return The display name of the providerBillingAccountId as defined on the external provider
+         * 
+         */
     private final String providerBillingAccountDisplayName;
-    /**
-     * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
-     * 
-     */
+        /**
+         * @return Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
+         * 
+         */
     private final String providerBillingAccountId;
-    /**
-     * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
-     * 
-     */
+        /**
+         * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
+         * 
+         */
     private final @Nullable String reportId;
-    /**
-     * Connector status
-     * 
-     */
+        /**
+         * @return Connector status
+         * 
+         */
     private final String status;
-    /**
-     * Billing SubscriptionId
-     * 
-     */
+        /**
+         * @return Billing SubscriptionId
+         * 
+         */
     private final @Nullable String subscriptionId;
-    /**
-     * Connector type
-     * 
-     */
+        /**
+         * @return Connector type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -145,128 +145,128 @@ public final class GetCloudConnectorResult {
     }
 
     /**
-     * Connector billing model
+     * @return Connector billing model
      * 
-    */
+     */
     public Optional<String> billingModel() {
         return Optional.ofNullable(this.billingModel);
     }
     /**
-     * Collection information
+     * @return Collection information
      * 
-    */
+     */
     public ConnectorCollectionInfoResponse collectionInfo() {
         return this.collectionInfo;
     }
     /**
-     * Connector definition creation datetime
+     * @return Connector definition creation datetime
      * 
-    */
+     */
     public String createdOn() {
         return this.createdOn;
     }
     /**
-     * Credentials authentication key (eg AWS ARN)
+     * @return Credentials authentication key (eg AWS ARN)
      * 
-    */
+     */
     public Optional<String> credentialsKey() {
         return Optional.ofNullable(this.credentialsKey);
     }
     /**
-     * Number of days remaining of trial
+     * @return Number of days remaining of trial
      * 
-    */
+     */
     public Integer daysTrialRemaining() {
         return this.daysTrialRemaining;
     }
     /**
-     * Default ManagementGroupId
+     * @return Default ManagementGroupId
      * 
-    */
+     */
     public Optional<String> defaultManagementGroupId() {
         return Optional.ofNullable(this.defaultManagementGroupId);
     }
     /**
-     * Connector DisplayName
+     * @return Connector DisplayName
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Associated ExternalBillingAccountId
+     * @return Associated ExternalBillingAccountId
      * 
-    */
+     */
     public String externalBillingAccountId() {
         return this.externalBillingAccountId;
     }
     /**
-     * Connector id
+     * @return Connector id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Connector kind (eg aws)
+     * @return Connector kind (eg aws)
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Connector last modified datetime
+     * @return Connector last modified datetime
      * 
-    */
+     */
     public String modifiedOn() {
         return this.modifiedOn;
     }
     /**
-     * Connector name
+     * @return Connector name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The display name of the providerBillingAccountId as defined on the external provider
+     * @return The display name of the providerBillingAccountId as defined on the external provider
      * 
-    */
+     */
     public String providerBillingAccountDisplayName() {
         return this.providerBillingAccountDisplayName;
     }
     /**
-     * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
+     * @return Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
      * 
-    */
+     */
     public String providerBillingAccountId() {
         return this.providerBillingAccountId;
     }
     /**
-     * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
+     * @return Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
      * 
-    */
+     */
     public Optional<String> reportId() {
         return Optional.ofNullable(this.reportId);
     }
     /**
-     * Connector status
+     * @return Connector status
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Billing SubscriptionId
+     * @return Billing SubscriptionId
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
-     * Connector type
+     * @return Connector type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

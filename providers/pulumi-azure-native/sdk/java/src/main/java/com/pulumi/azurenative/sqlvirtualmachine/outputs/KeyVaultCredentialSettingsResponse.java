@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultCredentialSettingsResponse {
-    /**
-     * Azure Key Vault url.
-     * 
-     */
+        /**
+         * @return Azure Key Vault url.
+         * 
+         */
     private final @Nullable String azureKeyVaultUrl;
-    /**
-     * Credential name.
-     * 
-     */
+        /**
+         * @return Credential name.
+         * 
+         */
     private final @Nullable String credentialName;
-    /**
-     * Enable or disable key vault credential setting.
-     * 
-     */
+        /**
+         * @return Enable or disable key vault credential setting.
+         * 
+         */
     private final @Nullable Boolean enable;
-    /**
-     * Service principal name to access key vault.
-     * 
-     */
+        /**
+         * @return Service principal name to access key vault.
+         * 
+         */
     private final @Nullable String servicePrincipalName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class KeyVaultCredentialSettingsResponse {
     }
 
     /**
-     * Azure Key Vault url.
+     * @return Azure Key Vault url.
      * 
-    */
+     */
     public Optional<String> azureKeyVaultUrl() {
         return Optional.ofNullable(this.azureKeyVaultUrl);
     }
     /**
-     * Credential name.
+     * @return Credential name.
      * 
-    */
+     */
     public Optional<String> credentialName() {
         return Optional.ofNullable(this.credentialName);
     }
     /**
-     * Enable or disable key vault credential setting.
+     * @return Enable or disable key vault credential setting.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * Service principal name to access key vault.
+     * @return Service principal name to access key vault.
      * 
-    */
+     */
     public Optional<String> servicePrincipalName() {
         return Optional.ofNullable(this.servicePrincipalName);
     }

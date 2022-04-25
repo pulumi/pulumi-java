@@ -25,6 +25,10 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="agentId", required=true)
     private String agentId;
 
+    /**
+     * @return The Id of the agent running on the server.
+     * 
+     */
     public String agentId() {
         return this.agentId;
     }
@@ -36,6 +40,10 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="biosId", required=true)
     private String biosId;
 
+    /**
+     * @return The machine BIOS Id.
+     * 
+     */
     public String biosId() {
         return this.biosId;
     }
@@ -47,6 +55,10 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="disks", required=true)
     private List<AgentDiskDetailsResponse> disks;
 
+    /**
+     * @return The details of agent disks.
+     * 
+     */
     public List<AgentDiskDetailsResponse> disks() {
         return this.disks;
     }
@@ -58,6 +70,10 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="fqdn", required=true)
     private String fqdn;
 
+    /**
+     * @return The machine FQDN.
+     * 
+     */
     public String fqdn() {
         return this.fqdn;
     }
@@ -69,6 +85,10 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="machineId", required=true)
     private String machineId;
 
+    /**
+     * @return The Id of the machine to which the agent is registered.
+     * 
+     */
     public String machineId() {
         return this.machineId;
     }
@@ -101,30 +121,66 @@ public final class AgentDetailsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new AgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentId The Id of the agent running on the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentId(String agentId) {
             $.agentId = agentId;
             return this;
         }
 
+        /**
+         * @param biosId The machine BIOS Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder biosId(String biosId) {
             $.biosId = biosId;
             return this;
         }
 
+        /**
+         * @param disks The details of agent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(List<AgentDiskDetailsResponse> disks) {
             $.disks = disks;
             return this;
         }
 
+        /**
+         * @param disks The details of agent disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disks(AgentDiskDetailsResponse... disks) {
             return disks(List.of(disks));
         }
 
+        /**
+         * @param fqdn The machine FQDN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param machineId The Id of the machine to which the agent is registered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineId(String machineId) {
             $.machineId = machineId;
             return this;

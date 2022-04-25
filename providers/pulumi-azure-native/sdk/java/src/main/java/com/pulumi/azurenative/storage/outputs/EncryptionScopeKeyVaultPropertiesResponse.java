@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncryptionScopeKeyVaultPropertiesResponse {
-    /**
-     * The object identifier of the current versioned Key Vault Key in use.
-     * 
-     */
+        /**
+         * @return The object identifier of the current versioned Key Vault Key in use.
+         * 
+         */
     private final String currentVersionedKeyIdentifier;
-    /**
-     * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
-     * 
-     */
+        /**
+         * @return The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+         * 
+         */
     private final @Nullable String keyUri;
-    /**
-     * Timestamp of last rotation of the Key Vault Key.
-     * 
-     */
+        /**
+         * @return Timestamp of last rotation of the Key Vault Key.
+         * 
+         */
     private final String lastKeyRotationTimestamp;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
     }
 
     /**
-     * The object identifier of the current versioned Key Vault Key in use.
+     * @return The object identifier of the current versioned Key Vault Key in use.
      * 
-    */
+     */
     public String currentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
     /**
-     * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+     * @return The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
      * 
-    */
+     */
     public Optional<String> keyUri() {
         return Optional.ofNullable(this.keyUri);
     }
     /**
-     * Timestamp of last rotation of the Key Vault Key.
+     * @return Timestamp of last rotation of the Key Vault Key.
      * 
-    */
+     */
     public String lastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }

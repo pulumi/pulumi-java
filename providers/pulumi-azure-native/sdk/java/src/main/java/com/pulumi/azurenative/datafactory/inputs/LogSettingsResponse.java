@@ -27,6 +27,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="copyActivityLogSettings")
     private @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
 
+    /**
+     * @return Specifies settings for copy activity log.
+     * 
+     */
     public Optional<CopyActivityLogSettingsResponse> copyActivityLogSettings() {
         return Optional.ofNullable(this.copyActivityLogSettings);
     }
@@ -38,6 +42,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enableCopyActivityLog")
     private @Nullable Object enableCopyActivityLog;
 
+    /**
+     * @return Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableCopyActivityLog() {
         return Optional.ofNullable(this.enableCopyActivityLog);
     }
@@ -49,6 +57,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="logLocationSettings", required=true)
     private LogLocationSettingsResponse logLocationSettings;
 
+    /**
+     * @return Log location settings customer needs to provide when enabling log.
+     * 
+     */
     public LogLocationSettingsResponse logLocationSettings() {
         return this.logLocationSettings;
     }
@@ -79,16 +91,34 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyActivityLogSettings Specifies settings for copy activity log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsResponse copyActivityLogSettings) {
             $.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
 
+        /**
+         * @param enableCopyActivityLog Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
             $.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
 
+        /**
+         * @param logLocationSettings Log location settings customer needs to provide when enabling log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLocationSettings(LogLocationSettingsResponse logLocationSettings) {
             $.logLocationSettings = logLocationSettings;
             return this;

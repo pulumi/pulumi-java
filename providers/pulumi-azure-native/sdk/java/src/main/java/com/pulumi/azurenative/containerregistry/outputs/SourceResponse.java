@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SourceResponse {
-    /**
-     * The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
-     * 
-     */
+        /**
+         * @return The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+         * 
+         */
     private final @Nullable String addr;
-    /**
-     * The running instance of an application. Changes after each restart.
-     * 
-     */
+        /**
+         * @return The running instance of an application. Changes after each restart.
+         * 
+         */
     private final @Nullable String instanceID;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class SourceResponse {
     }
 
     /**
-     * The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+     * @return The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
      * 
-    */
+     */
     public Optional<String> addr() {
         return Optional.ofNullable(this.addr);
     }
     /**
-     * The running instance of an application. Changes after each restart.
+     * @return The running instance of an application. Changes after each restart.
      * 
-    */
+     */
     public Optional<String> instanceID() {
         return Optional.ofNullable(this.instanceID);
     }

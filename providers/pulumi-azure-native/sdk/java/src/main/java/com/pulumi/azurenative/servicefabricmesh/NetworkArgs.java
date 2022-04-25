@@ -24,6 +24,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkResourceName")
     private @Nullable Output<String> networkResourceName;
 
+    /**
+     * @return The identity of the network.
+     * 
+     */
     public Optional<Output<String>> networkResourceName() {
         return Optional.ofNullable(this.networkResourceName);
     }
@@ -46,6 +54,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<NetworkResourcePropertiesArgs> properties;
 
+    /**
+     * @return Describes properties of a network resource.
+     * 
+     */
     public Output<NetworkResourcePropertiesArgs> properties() {
         return this.properties;
     }
@@ -57,6 +69,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkResourceName The identity of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkResourceName(@Nullable Output<String> networkResourceName) {
             $.networkResourceName = networkResourceName;
             return this;
         }
 
+        /**
+         * @param networkResourceName The identity of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkResourceName(String networkResourceName) {
             return networkResourceName(Output.of(networkResourceName));
         }
 
+        /**
+         * @param properties Describes properties of a network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<NetworkResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Describes properties of a network resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(NetworkResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

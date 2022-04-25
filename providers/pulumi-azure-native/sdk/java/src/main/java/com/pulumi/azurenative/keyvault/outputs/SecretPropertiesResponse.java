@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecretPropertiesResponse {
-    /**
-     * The attributes of the secret.
-     * 
-     */
+        /**
+         * @return The attributes of the secret.
+         * 
+         */
     private final @Nullable SecretAttributesResponse attributes;
-    /**
-     * The content type of the secret.
-     * 
-     */
+        /**
+         * @return The content type of the secret.
+         * 
+         */
     private final @Nullable String contentType;
-    /**
-     * The URI to retrieve the current version of the secret.
-     * 
-     */
+        /**
+         * @return The URI to retrieve the current version of the secret.
+         * 
+         */
     private final String secretUri;
-    /**
-     * The URI to retrieve the specific version of the secret.
-     * 
-     */
+        /**
+         * @return The URI to retrieve the specific version of the secret.
+         * 
+         */
     private final String secretUriWithVersion;
-    /**
-     * The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
-     * 
-     */
+        /**
+         * @return The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class SecretPropertiesResponse {
     }
 
     /**
-     * The attributes of the secret.
+     * @return The attributes of the secret.
      * 
-    */
+     */
     public Optional<SecretAttributesResponse> attributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
-     * The content type of the secret.
+     * @return The content type of the secret.
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * The URI to retrieve the current version of the secret.
+     * @return The URI to retrieve the current version of the secret.
      * 
-    */
+     */
     public String secretUri() {
         return this.secretUri;
     }
     /**
-     * The URI to retrieve the specific version of the secret.
+     * @return The URI to retrieve the specific version of the secret.
      * 
-    */
+     */
     public String secretUriWithVersion() {
         return this.secretUriWithVersion;
     }
     /**
-     * The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+     * @return The value of the secret. NOTE: &#39;value&#39; will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

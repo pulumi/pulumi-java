@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContactDetailResponse {
-    /**
-     * The e-mail address of the contact.
-     * 
-     */
+        /**
+         * @return The e-mail address of the contact.
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * The phone number of the contact.
-     * 
-     */
+        /**
+         * @return The phone number of the contact.
+         * 
+         */
     private final @Nullable String phone;
-    /**
-     * The role of the contact.
-     * 
-     */
+        /**
+         * @return The role of the contact.
+         * 
+         */
     private final @Nullable String role;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ContactDetailResponse {
     }
 
     /**
-     * The e-mail address of the contact.
+     * @return The e-mail address of the contact.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The phone number of the contact.
+     * @return The phone number of the contact.
      * 
-    */
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
-     * The role of the contact.
+     * @return The role of the contact.
      * 
-    */
+     */
     public Optional<String> role() {
         return Optional.ofNullable(this.role);
     }

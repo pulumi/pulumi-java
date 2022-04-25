@@ -25,6 +25,10 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination")
     private @Nullable Output<EventChannelDestinationArgs> destination;
 
+    /**
+     * @return Represents the destination of an event channel.
+     * 
+     */
     public Optional<Output<EventChannelDestinationArgs>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -36,6 +40,10 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventChannelName")
     private @Nullable Output<String> eventChannelName;
 
+    /**
+     * @return Name of the event channel.
+     * 
+     */
     public Optional<Output<String>> eventChannelName() {
         return Optional.ofNullable(this.eventChannelName);
     }
@@ -48,6 +56,11 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expirationTimeIfNotActivatedUtc")
     private @Nullable Output<String> expirationTimeIfNotActivatedUtc;
 
+    /**
+     * @return Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+     * the event channel and corresponding partner topic are deleted.
+     * 
+     */
     public Optional<Output<String>> expirationTimeIfNotActivatedUtc() {
         return Optional.ofNullable(this.expirationTimeIfNotActivatedUtc);
     }
@@ -59,6 +72,10 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<EventChannelFilterArgs> filter;
 
+    /**
+     * @return Information about the filter for the event channel.
+     * 
+     */
     public Optional<Output<EventChannelFilterArgs>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -70,6 +87,10 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerNamespaceName", required=true)
     private Output<String> partnerNamespaceName;
 
+    /**
+     * @return Name of the partner namespace.
+     * 
+     */
     public Output<String> partnerNamespaceName() {
         return this.partnerNamespaceName;
     }
@@ -82,6 +103,11 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerTopicFriendlyDescription")
     private @Nullable Output<String> partnerTopicFriendlyDescription;
 
+    /**
+     * @return Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+     * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
+     * 
+     */
     public Optional<Output<String>> partnerTopicFriendlyDescription() {
         return Optional.ofNullable(this.partnerTopicFriendlyDescription);
     }
@@ -93,6 +119,10 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -104,6 +134,10 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<EventChannelSourceArgs> source;
 
+    /**
+     * @return Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
+     * 
+     */
     public Optional<Output<EventChannelSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -139,74 +173,174 @@ public final class EventChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EventChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Represents the destination of an event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<EventChannelDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Represents the destination of an event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(EventChannelDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param eventChannelName Name of the event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventChannelName(@Nullable Output<String> eventChannelName) {
             $.eventChannelName = eventChannelName;
             return this;
         }
 
+        /**
+         * @param eventChannelName Name of the event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventChannelName(String eventChannelName) {
             return eventChannelName(Output.of(eventChannelName));
         }
 
+        /**
+         * @param expirationTimeIfNotActivatedUtc Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+         * the event channel and corresponding partner topic are deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeIfNotActivatedUtc(@Nullable Output<String> expirationTimeIfNotActivatedUtc) {
             $.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
             return this;
         }
 
+        /**
+         * @param expirationTimeIfNotActivatedUtc Expiration time of the event channel. If this timer expires while the corresponding partner topic is never activated,
+         * the event channel and corresponding partner topic are deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTimeIfNotActivatedUtc(String expirationTimeIfNotActivatedUtc) {
             return expirationTimeIfNotActivatedUtc(Output.of(expirationTimeIfNotActivatedUtc));
         }
 
+        /**
+         * @param filter Information about the filter for the event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<EventChannelFilterArgs> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter Information about the filter for the event channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(EventChannelFilterArgs filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespaceName(Output<String> partnerNamespaceName) {
             $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespaceName(String partnerNamespaceName) {
             return partnerNamespaceName(Output.of(partnerNamespaceName));
         }
 
+        /**
+         * @param partnerTopicFriendlyDescription Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+         * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerTopicFriendlyDescription(@Nullable Output<String> partnerTopicFriendlyDescription) {
             $.partnerTopicFriendlyDescription = partnerTopicFriendlyDescription;
             return this;
         }
 
+        /**
+         * @param partnerTopicFriendlyDescription Friendly description about the topic. This can be set by the publisher/partner to show custom description for the customer partner topic.
+         * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerTopicFriendlyDescription(String partnerTopicFriendlyDescription) {
             return partnerTopicFriendlyDescription(Output.of(partnerTopicFriendlyDescription));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<EventChannelSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Source of the event channel. This represents a unique resource in the partner&#39;s resource model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(EventChannelSourceArgs source) {
             return source(Output.of(source));
         }

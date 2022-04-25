@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTenantConfigurationResult {
-    /**
-     * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
-     * 
-     */
+        /**
+         * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
+         * 
+         */
     private final @Nullable Boolean enforcePrivateMarkdownStorage;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetTenantConfigurationResult {
     }
 
     /**
-     * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
+     * @return When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
-    */
+     */
     public Optional<Boolean> enforcePrivateMarkdownStorage() {
         return Optional.ofNullable(this.enforcePrivateMarkdownStorage);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

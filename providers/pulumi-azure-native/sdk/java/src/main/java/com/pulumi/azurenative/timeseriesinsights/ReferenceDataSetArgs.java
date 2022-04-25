@@ -27,6 +27,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dataStringComparisonBehavior")
     private @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
+    /**
+     * @return The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+     * 
+     */
     public Optional<Output<Either<String,DataStringComparisonBehavior>>> dataStringComparisonBehavior() {
         return Optional.ofNullable(this.dataStringComparisonBehavior);
     }
@@ -38,6 +42,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="environmentName", required=true)
     private Output<String> environmentName;
 
+    /**
+     * @return The name of the Time Series Insights environment associated with the specified resource group.
+     * 
+     */
     public Output<String> environmentName() {
         return this.environmentName;
     }
@@ -49,6 +57,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="keyProperties", required=true)
     private Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
+    /**
+     * @return The list of key properties for the reference data set.
+     * 
+     */
     public Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties() {
         return this.keyProperties;
     }
@@ -60,6 +72,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -71,6 +87,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="referenceDataSetName")
     private @Nullable Output<String> referenceDataSetName;
 
+    /**
+     * @return Name of the reference data set.
+     * 
+     */
     public Optional<Output<String>> referenceDataSetName() {
         return Optional.ofNullable(this.referenceDataSetName);
     }
@@ -82,6 +102,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional properties for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -127,77 +155,179 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
             $ = new ReferenceDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataStringComparisonBehavior The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStringComparisonBehavior(@Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior) {
             $.dataStringComparisonBehavior = dataStringComparisonBehavior;
             return this;
         }
 
+        /**
+         * @param dataStringComparisonBehavior The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStringComparisonBehavior(Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
             return dataStringComparisonBehavior(Output.of(dataStringComparisonBehavior));
         }
 
+        /**
+         * @param dataStringComparisonBehavior The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStringComparisonBehavior(String dataStringComparisonBehavior) {
             return dataStringComparisonBehavior(Either.ofLeft(dataStringComparisonBehavior));
         }
 
+        /**
+         * @param dataStringComparisonBehavior The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStringComparisonBehavior(DataStringComparisonBehavior dataStringComparisonBehavior) {
             return dataStringComparisonBehavior(Either.ofRight(dataStringComparisonBehavior));
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(Output<String> environmentName) {
             $.environmentName = environmentName;
             return this;
         }
 
+        /**
+         * @param environmentName The name of the Time Series Insights environment associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentName(String environmentName) {
             return environmentName(Output.of(environmentName));
         }
 
+        /**
+         * @param keyProperties The list of key properties for the reference data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyProperties(Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
             $.keyProperties = keyProperties;
             return this;
         }
 
+        /**
+         * @param keyProperties The list of key properties for the reference data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyProperties(List<ReferenceDataSetKeyPropertyArgs> keyProperties) {
             return keyProperties(Output.of(keyProperties));
         }
 
+        /**
+         * @param keyProperties The list of key properties for the reference data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyProperties(ReferenceDataSetKeyPropertyArgs... keyProperties) {
             return keyProperties(List.of(keyProperties));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param referenceDataSetName Name of the reference data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSetName(@Nullable Output<String> referenceDataSetName) {
             $.referenceDataSetName = referenceDataSetName;
             return this;
         }
 
+        /**
+         * @param referenceDataSetName Name of the reference data set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceDataSetName(String referenceDataSetName) {
             return referenceDataSetName(Output.of(referenceDataSetName));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value pairs of additional properties for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

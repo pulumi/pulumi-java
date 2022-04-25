@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IdentityResponse {
-    /**
-     * The list of identities.
-     * 
-     */
+        /**
+         * @return The list of identities.
+         * 
+         */
     private final List<String> identityIds;
-    /**
-     * The identity type.
-     * 
-     */
+        /**
+         * @return The identity type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class IdentityResponse {
     }
 
     /**
-     * The list of identities.
+     * @return The list of identities.
      * 
-    */
+     */
     public List<String> identityIds() {
         return this.identityIds;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

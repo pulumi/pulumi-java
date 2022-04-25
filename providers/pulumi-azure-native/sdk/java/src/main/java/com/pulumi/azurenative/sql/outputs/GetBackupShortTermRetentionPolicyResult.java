@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBackupShortTermRetentionPolicyResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
-     * 
-     */
+        /**
+         * @return The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
+         * 
+         */
     private final @Nullable Integer retentionDays;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class GetBackupShortTermRetentionPolicyResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
+     * @return The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
-    */
+     */
     public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

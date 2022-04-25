@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AvailabilitySetResourceSettingsResponse {
-    /**
-     * Gets or sets the target fault domain.
-     * 
-     */
+        /**
+         * @return Gets or sets the target fault domain.
+         * 
+         */
     private final @Nullable Integer faultDomain;
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
-     * 
-     */
+        /**
+         * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
+         * 
+         */
     private final String resourceType;
-    /**
-     * Gets or sets the target Resource name.
-     * 
-     */
+        /**
+         * @return Gets or sets the target Resource name.
+         * 
+         */
     private final String targetResourceName;
-    /**
-     * Gets or sets the target update domain.
-     * 
-     */
+        /**
+         * @return Gets or sets the target update domain.
+         * 
+         */
     private final @Nullable Integer updateDomain;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class AvailabilitySetResourceSettingsResponse {
     }
 
     /**
-     * Gets or sets the target fault domain.
+     * @return Gets or sets the target fault domain.
      * 
-    */
+     */
     public Optional<Integer> faultDomain() {
         return Optional.ofNullable(this.faultDomain);
     }
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
-     * Gets or sets the target update domain.
+     * @return Gets or sets the target update domain.
      * 
-    */
+     */
     public Optional<Integer> updateDomain() {
         return Optional.ofNullable(this.updateDomain);
     }

@@ -13,31 +13,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RestHealthCheckStepAttributesResponse {
-    /**
-     * The list of checks that form the health check step.
-     * 
-     */
+        /**
+         * @return The list of checks that form the health check step.
+         * 
+         */
     private final List<RestHealthCheckResponse> healthChecks;
-    /**
-     * The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
-     * 
-     */
+        /**
+         * @return The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
+         * 
+         */
     private final String healthyStateDuration;
-    /**
-     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
-     * 
-     */
+        /**
+         * @return The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+         * 
+         */
     private final @Nullable String maxElasticDuration;
-    /**
-     * The type of health check.
-     * Expected value is &#39;REST&#39;.
-     * 
-     */
+        /**
+         * @return The type of health check.
+         * Expected value is &#39;REST&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The duration in ISO 8601 format for which health check waits idly without any checks.
-     * 
-     */
+        /**
+         * @return The duration in ISO 8601 format for which health check waits idly without any checks.
+         * 
+         */
     private final @Nullable String waitDuration;
 
     @CustomType.Constructor
@@ -55,38 +55,38 @@ public final class RestHealthCheckStepAttributesResponse {
     }
 
     /**
-     * The list of checks that form the health check step.
+     * @return The list of checks that form the health check step.
      * 
-    */
+     */
     public List<RestHealthCheckResponse> healthChecks() {
         return this.healthChecks;
     }
     /**
-     * The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
+     * @return The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
      * 
-    */
+     */
     public String healthyStateDuration() {
         return this.healthyStateDuration;
     }
     /**
-     * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+     * @return The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
      * 
-    */
+     */
     public Optional<String> maxElasticDuration() {
         return Optional.ofNullable(this.maxElasticDuration);
     }
     /**
-     * The type of health check.
+     * @return The type of health check.
      * Expected value is &#39;REST&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The duration in ISO 8601 format for which health check waits idly without any checks.
+     * @return The duration in ISO 8601 format for which health check waits idly without any checks.
      * 
-    */
+     */
     public Optional<String> waitDuration() {
         return Optional.ofNullable(this.waitDuration);
     }

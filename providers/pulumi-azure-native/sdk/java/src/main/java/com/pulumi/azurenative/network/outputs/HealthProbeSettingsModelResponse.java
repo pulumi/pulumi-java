@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HealthProbeSettingsModelResponse {
-    /**
-     * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
-     * 
-     */
+        /**
+         * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         */
     private final @Nullable String enabledState;
-    /**
-     * Configures which HTTP method to use to probe the backends defined under backendPools.
-     * 
-     */
+        /**
+         * @return Configures which HTTP method to use to probe the backends defined under backendPools.
+         * 
+         */
     private final @Nullable String healthProbeMethod;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The number of seconds between health probes.
-     * 
-     */
+        /**
+         * @return The number of seconds between health probes.
+         * 
+         */
     private final @Nullable Integer intervalInSeconds;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The path to use for the health probe. Default is /
-     * 
-     */
+        /**
+         * @return The path to use for the health probe. Default is /
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * Protocol scheme to use for this probe
-     * 
-     */
+        /**
+         * @return Protocol scheme to use for this probe
+         * 
+         */
     private final @Nullable String protocol;
-    /**
-     * Resource status.
-     * 
-     */
+        /**
+         * @return Resource status.
+         * 
+         */
     private final String resourceState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -81,65 +81,65 @@ public final class HealthProbeSettingsModelResponse {
     }
 
     /**
-     * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+     * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * Configures which HTTP method to use to probe the backends defined under backendPools.
+     * @return Configures which HTTP method to use to probe the backends defined under backendPools.
      * 
-    */
+     */
     public Optional<String> healthProbeMethod() {
         return Optional.ofNullable(this.healthProbeMethod);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The number of seconds between health probes.
+     * @return The number of seconds between health probes.
      * 
-    */
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The path to use for the health probe. Default is /
+     * @return The path to use for the health probe. Default is /
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Protocol scheme to use for this probe
+     * @return Protocol scheme to use for this probe
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

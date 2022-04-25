@@ -27,6 +27,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dnsNameLabel")
     private @Nullable String dnsNameLabel;
 
+    /**
+     * @return The Dns name label for the IP.
+     * 
+     */
     public Optional<String> dnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
@@ -38,6 +42,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn", required=true)
     private String fqdn;
 
+    /**
+     * @return The FQDN for the IP.
+     * 
+     */
     public String fqdn() {
         return this.fqdn;
     }
@@ -49,6 +57,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ip")
     private @Nullable String ip;
 
+    /**
+     * @return The IP exposed to the public internet.
+     * 
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -60,6 +72,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ports", required=true)
     private List<PortResponse> ports;
 
+    /**
+     * @return The list of ports exposed on the container group.
+     * 
+     */
     public List<PortResponse> ports() {
         return this.ports;
     }
@@ -71,6 +87,10 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies if the IP is exposed to the public internet or private VNET.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,30 +123,66 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IpAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsNameLabel The Dns name label for the IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
             $.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
+        /**
+         * @param fqdn The FQDN for the IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param ip The IP exposed to the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable String ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ports The list of ports exposed on the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<PortResponse> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The list of ports exposed on the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(PortResponse... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param type Specifies if the IP is exposed to the public internet or private VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -23,6 +23,10 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="azureStorageSid", required=true)
     private String azureStorageSid;
 
+    /**
+     * @return Specifies the security identifier (SID) for Azure Storage.
+     * 
+     */
     public String azureStorageSid() {
         return this.azureStorageSid;
     }
@@ -34,6 +38,10 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="domainGuid", required=true)
     private String domainGuid;
 
+    /**
+     * @return Specifies the domain GUID.
+     * 
+     */
     public String domainGuid() {
         return this.domainGuid;
     }
@@ -45,6 +53,10 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return Specifies the primary domain that the AD DNS server is authoritative for.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -56,6 +68,10 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="domainSid", required=true)
     private String domainSid;
 
+    /**
+     * @return Specifies the security identifier (SID).
+     * 
+     */
     public String domainSid() {
         return this.domainSid;
     }
@@ -67,6 +83,10 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="forestName", required=true)
     private String forestName;
 
+    /**
+     * @return Specifies the Active Directory forest to get.
+     * 
+     */
     public String forestName() {
         return this.forestName;
     }
@@ -78,6 +98,10 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
     @Import(name="netBiosDomainName", required=true)
     private String netBiosDomainName;
 
+    /**
+     * @return Specifies the NetBIOS domain name.
+     * 
+     */
     public String netBiosDomainName() {
         return this.netBiosDomainName;
     }
@@ -111,31 +135,67 @@ public final class ActiveDirectoryPropertiesResponse extends com.pulumi.resource
             $ = new ActiveDirectoryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureStorageSid Specifies the security identifier (SID) for Azure Storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageSid(String azureStorageSid) {
             $.azureStorageSid = azureStorageSid;
             return this;
         }
 
+        /**
+         * @param domainGuid Specifies the domain GUID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainGuid(String domainGuid) {
             $.domainGuid = domainGuid;
             return this;
         }
 
+        /**
+         * @param domainName Specifies the primary domain that the AD DNS server is authoritative for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainSid Specifies the security identifier (SID).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainSid(String domainSid) {
             $.domainSid = domainSid;
             return this;
         }
 
+        /**
+         * @param forestName Specifies the Active Directory forest to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forestName(String forestName) {
             $.forestName = forestName;
             return this;
         }
 
+        /**
+         * @param netBiosDomainName Specifies the NetBIOS domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder netBiosDomainName(String netBiosDomainName) {
             $.netBiosDomainName = netBiosDomainName;
             return this;

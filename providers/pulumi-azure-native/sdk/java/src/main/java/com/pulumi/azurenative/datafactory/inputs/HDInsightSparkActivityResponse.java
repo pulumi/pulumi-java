@@ -33,6 +33,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="arguments")
     private @Nullable List<Object> arguments;
 
+    /**
+     * @return The user-specified arguments to HDInsightSparkActivity.
+     * 
+     */
     public Optional<List<Object>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -44,6 +48,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="className")
     private @Nullable String className;
 
+    /**
+     * @return The application&#39;s Java/Spark main class.
+     * 
+     */
     public Optional<String> className() {
         return Optional.ofNullable(this.className);
     }
@@ -55,6 +63,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -66,6 +78,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,6 +93,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="entryFilePath", required=true)
     private Object entryFilePath;
 
+    /**
+     * @return The relative path to the root folder of the code/package to be executed. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object entryFilePath() {
         return this.entryFilePath;
     }
@@ -88,6 +108,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="getDebugInfo")
     private @Nullable String getDebugInfo;
 
+    /**
+     * @return Debug info option.
+     * 
+     */
     public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
@@ -99,6 +123,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -110,6 +138,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -121,6 +153,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -132,6 +168,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="proxyUser")
     private @Nullable Object proxyUser;
 
+    /**
+     * @return The user to impersonate that will execute the job. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> proxyUser() {
         return Optional.ofNullable(this.proxyUser);
     }
@@ -143,6 +183,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="rootPath", required=true)
     private Object rootPath;
 
+    /**
+     * @return The root path in &#39;sparkJobLinkedService&#39; for all the job’s files. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object rootPath() {
         return this.rootPath;
     }
@@ -154,6 +198,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="sparkConfig")
     private @Nullable Map<String,Object> sparkConfig;
 
+    /**
+     * @return Spark configuration property.
+     * 
+     */
     public Optional<Map<String,Object>> sparkConfig() {
         return Optional.ofNullable(this.sparkConfig);
     }
@@ -165,6 +213,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="sparkJobLinkedService")
     private @Nullable LinkedServiceReferenceResponse sparkJobLinkedService;
 
+    /**
+     * @return The storage linked service for uploading the entry file and dependencies, and for receiving logs.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> sparkJobLinkedService() {
         return Optional.ofNullable(this.sparkJobLinkedService);
     }
@@ -177,6 +229,11 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;HDInsightSpark&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -188,6 +245,10 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -230,89 +291,198 @@ public final class HDInsightSparkActivityResponse extends com.pulumi.resources.I
             $ = new HDInsightSparkActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments The user-specified arguments to HDInsightSparkActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable List<Object> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments The user-specified arguments to HDInsightSparkActivity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param className The application&#39;s Java/Spark main class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder className(@Nullable String className) {
             $.className = className;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param entryFilePath The relative path to the root folder of the code/package to be executed. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryFilePath(Object entryFilePath) {
             $.entryFilePath = entryFilePath;
             return this;
         }
 
+        /**
+         * @param getDebugInfo Debug info option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
             $.getDebugInfo = getDebugInfo;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param proxyUser The user to impersonate that will execute the job. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyUser(@Nullable Object proxyUser) {
             $.proxyUser = proxyUser;
             return this;
         }
 
+        /**
+         * @param rootPath The root path in &#39;sparkJobLinkedService&#39; for all the job’s files. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootPath(Object rootPath) {
             $.rootPath = rootPath;
             return this;
         }
 
+        /**
+         * @param sparkConfig Spark configuration property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkConfig(@Nullable Map<String,Object> sparkConfig) {
             $.sparkConfig = sparkConfig;
             return this;
         }
 
+        /**
+         * @param sparkJobLinkedService The storage linked service for uploading the entry file and dependencies, and for receiving logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkJobLinkedService(@Nullable LinkedServiceReferenceResponse sparkJobLinkedService) {
             $.sparkJobLinkedService = sparkJobLinkedService;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;HDInsightSpark&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGlobalUserEnvironmentResult {
-    /**
-     * Details of the environment
-     * 
-     */
+        /**
+         * @return Details of the environment
+         * 
+         */
     private final EnvironmentDetailsResponse environment;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetGlobalUserEnvironmentResult {
     }
 
     /**
-     * Details of the environment
+     * @return Details of the environment
      * 
-    */
+     */
     public EnvironmentDetailsResponse environment() {
         return this.environment;
     }

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CacheExpirationActionParametersResponse {
-    /**
-     * Caching behavior for the requests
-     * 
-     */
+        /**
+         * @return Caching behavior for the requests
+         * 
+         */
     private final String cacheBehavior;
-    /**
-     * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
-     * 
-     */
+        /**
+         * @return The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+         * 
+         */
     private final @Nullable String cacheDuration;
-    /**
-     * The level at which the content needs to be cached.
-     * 
-     */
+        /**
+         * @return The level at which the content needs to be cached.
+         * 
+         */
     private final String cacheType;
     private final String odataType;
 
@@ -41,23 +41,23 @@ public final class CacheExpirationActionParametersResponse {
     }
 
     /**
-     * Caching behavior for the requests
+     * @return Caching behavior for the requests
      * 
-    */
+     */
     public String cacheBehavior() {
         return this.cacheBehavior;
     }
     /**
-     * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+     * @return The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
      * 
-    */
+     */
     public Optional<String> cacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
     /**
-     * The level at which the content needs to be cached.
+     * @return The level at which the content needs to be cached.
      * 
-    */
+     */
     public String cacheType() {
         return this.cacheType;
     }

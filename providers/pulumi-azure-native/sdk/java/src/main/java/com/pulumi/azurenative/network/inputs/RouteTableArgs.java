@@ -30,6 +30,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableBgpRoutePropagation")
     private @Nullable Output<Boolean> disableBgpRoutePropagation;
 
+    /**
+     * @return Whether to disable the routes learned by BGP on that route table. True means disable.
+     * 
+     */
     public Optional<Output<Boolean>> disableBgpRoutePropagation() {
         return Optional.ofNullable(this.disableBgpRoutePropagation);
     }
@@ -41,6 +45,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -52,6 +60,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -63,6 +75,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routes")
     private @Nullable Output<List<RouteArgs>> routes;
 
+    /**
+     * @return Collection of routes contained within a route table.
+     * 
+     */
     public Optional<Output<List<RouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -74,6 +90,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -106,51 +126,117 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteTableArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableBgpRoutePropagation Whether to disable the routes learned by BGP on that route table. True means disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableBgpRoutePropagation(@Nullable Output<Boolean> disableBgpRoutePropagation) {
             $.disableBgpRoutePropagation = disableBgpRoutePropagation;
             return this;
         }
 
+        /**
+         * @param disableBgpRoutePropagation Whether to disable the routes learned by BGP on that route table. True means disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableBgpRoutePropagation(Boolean disableBgpRoutePropagation) {
             return disableBgpRoutePropagation(Output.of(disableBgpRoutePropagation));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param routes Collection of routes contained within a route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<RouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes Collection of routes contained within a route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<RouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes Collection of routes contained within a route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(RouteArgs... routes) {
             return routes(List.of(routes));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

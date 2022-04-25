@@ -16,105 +16,105 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBlobContainerResult {
-    /**
-     * Default the container to use specified encryption scope for all writes.
-     * 
-     */
+        /**
+         * @return Default the container to use specified encryption scope for all writes.
+         * 
+         */
     private final @Nullable String defaultEncryptionScope;
-    /**
-     * Indicates whether the blob container was deleted.
-     * 
-     */
+        /**
+         * @return Indicates whether the blob container was deleted.
+         * 
+         */
     private final Boolean deleted;
-    /**
-     * Blob container deletion time.
-     * 
-     */
+        /**
+         * @return Blob container deletion time.
+         * 
+         */
     private final String deletedTime;
-    /**
-     * Block override of encryption scope from the container default.
-     * 
-     */
+        /**
+         * @return Block override of encryption scope from the container default.
+         * 
+         */
     private final @Nullable Boolean denyEncryptionScopeOverride;
-    /**
-     * Resource Etag.
-     * 
-     */
+        /**
+         * @return Resource Etag.
+         * 
+         */
     private final String etag;
-    /**
-     * The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.
-     * 
-     */
+        /**
+         * @return The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.
+         * 
+         */
     private final Boolean hasImmutabilityPolicy;
-    /**
-     * The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
-     * 
-     */
+        /**
+         * @return The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
+         * 
+         */
     private final Boolean hasLegalHold;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The ImmutabilityPolicy property of the container.
-     * 
-     */
+        /**
+         * @return The ImmutabilityPolicy property of the container.
+         * 
+         */
     private final ImmutabilityPolicyPropertiesResponse immutabilityPolicy;
-    /**
-     * Returns the date and time the container was last modified.
-     * 
-     */
+        /**
+         * @return Returns the date and time the container was last modified.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
-     * 
-     */
+        /**
+         * @return Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
+         * 
+         */
     private final String leaseDuration;
-    /**
-     * Lease state of the container.
-     * 
-     */
+        /**
+         * @return Lease state of the container.
+         * 
+         */
     private final String leaseState;
-    /**
-     * The lease status of the container.
-     * 
-     */
+        /**
+         * @return The lease status of the container.
+         * 
+         */
     private final String leaseStatus;
-    /**
-     * The LegalHold property of the container.
-     * 
-     */
+        /**
+         * @return The LegalHold property of the container.
+         * 
+         */
     private final LegalHoldPropertiesResponse legalHold;
-    /**
-     * A name-value pair to associate with the container as metadata.
-     * 
-     */
+        /**
+         * @return A name-value pair to associate with the container as metadata.
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Specifies whether data in the container may be accessed publicly and the level of access.
-     * 
-     */
+        /**
+         * @return Specifies whether data in the container may be accessed publicly and the level of access.
+         * 
+         */
     private final @Nullable String publicAccess;
-    /**
-     * Remaining retention days for soft deleted blob container.
-     * 
-     */
+        /**
+         * @return Remaining retention days for soft deleted blob container.
+         * 
+         */
     private final Integer remainingRetentionDays;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The version of the deleted blob container.
-     * 
-     */
+        /**
+         * @return The version of the deleted blob container.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -162,142 +162,142 @@ public final class GetBlobContainerResult {
     }
 
     /**
-     * Default the container to use specified encryption scope for all writes.
+     * @return Default the container to use specified encryption scope for all writes.
      * 
-    */
+     */
     public Optional<String> defaultEncryptionScope() {
         return Optional.ofNullable(this.defaultEncryptionScope);
     }
     /**
-     * Indicates whether the blob container was deleted.
+     * @return Indicates whether the blob container was deleted.
      * 
-    */
+     */
     public Boolean deleted() {
         return this.deleted;
     }
     /**
-     * Blob container deletion time.
+     * @return Blob container deletion time.
      * 
-    */
+     */
     public String deletedTime() {
         return this.deletedTime;
     }
     /**
-     * Block override of encryption scope from the container default.
+     * @return Block override of encryption scope from the container default.
      * 
-    */
+     */
     public Optional<Boolean> denyEncryptionScopeOverride() {
         return Optional.ofNullable(this.denyEncryptionScopeOverride);
     }
     /**
-     * Resource Etag.
+     * @return Resource Etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.
+     * @return The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.
      * 
-    */
+     */
     public Boolean hasImmutabilityPolicy() {
         return this.hasImmutabilityPolicy;
     }
     /**
-     * The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
+     * @return The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
      * 
-    */
+     */
     public Boolean hasLegalHold() {
         return this.hasLegalHold;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The ImmutabilityPolicy property of the container.
+     * @return The ImmutabilityPolicy property of the container.
      * 
-    */
+     */
     public ImmutabilityPolicyPropertiesResponse immutabilityPolicy() {
         return this.immutabilityPolicy;
     }
     /**
-     * Returns the date and time the container was last modified.
+     * @return Returns the date and time the container was last modified.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
+     * @return Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
      * 
-    */
+     */
     public String leaseDuration() {
         return this.leaseDuration;
     }
     /**
-     * Lease state of the container.
+     * @return Lease state of the container.
      * 
-    */
+     */
     public String leaseState() {
         return this.leaseState;
     }
     /**
-     * The lease status of the container.
+     * @return The lease status of the container.
      * 
-    */
+     */
     public String leaseStatus() {
         return this.leaseStatus;
     }
     /**
-     * The LegalHold property of the container.
+     * @return The LegalHold property of the container.
      * 
-    */
+     */
     public LegalHoldPropertiesResponse legalHold() {
         return this.legalHold;
     }
     /**
-     * A name-value pair to associate with the container as metadata.
+     * @return A name-value pair to associate with the container as metadata.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies whether data in the container may be accessed publicly and the level of access.
+     * @return Specifies whether data in the container may be accessed publicly and the level of access.
      * 
-    */
+     */
     public Optional<String> publicAccess() {
         return Optional.ofNullable(this.publicAccess);
     }
     /**
-     * Remaining retention days for soft deleted blob container.
+     * @return Remaining retention days for soft deleted blob container.
      * 
-    */
+     */
     public Integer remainingRetentionDays() {
         return this.remainingRetentionDays;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The version of the deleted blob container.
+     * @return The version of the deleted blob container.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * Specifies the number of virtual machines in the scale set.
-     * 
-     */
+        /**
+         * @return Specifies the number of virtual machines in the scale set.
+         * 
+         */
     private final @Nullable Double capacity;
-    /**
-     * The sku name.
-     * 
-     */
+        /**
+         * @return The sku name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
-     * 
-     */
+        /**
+         * @return Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class SkuResponse {
     }
 
     /**
-     * Specifies the number of virtual machines in the scale set.
+     * @return Specifies the number of virtual machines in the scale set.
      * 
-    */
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The sku name.
+     * @return The sku name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
+     * @return Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

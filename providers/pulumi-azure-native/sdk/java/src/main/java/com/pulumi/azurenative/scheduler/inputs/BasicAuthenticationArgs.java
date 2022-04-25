@@ -23,6 +23,10 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Gets or sets the password, return value will always be empty.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -35,6 +39,11 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Gets or sets the HTTP authentication type.
+     * Expected value is &#39;Basic&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -46,6 +55,10 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Gets or sets the username.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -76,29 +89,67 @@ public final class BasicAuthenticationArgs extends com.pulumi.resources.Resource
             $ = new BasicAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Gets or sets the password, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Gets or sets the password, return value will always be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;Basic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the HTTP authentication type.
+         * Expected value is &#39;Basic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param username Gets or sets the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Gets or sets the username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

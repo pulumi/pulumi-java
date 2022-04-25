@@ -27,6 +27,10 @@ public final class HubIPAddressesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="privateIPAddress")
     private @Nullable Output<String> privateIPAddress;
 
+    /**
+     * @return Private IP Address associated with azure firewall.
+     * 
+     */
     public Optional<Output<String>> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -38,6 +42,10 @@ public final class HubIPAddressesArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="publicIPs")
     private @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
 
+    /**
+     * @return Public IP addresses associated with azure firewall.
+     * 
+     */
     public Optional<Output<HubPublicIPAddressesArgs>> publicIPs() {
         return Optional.ofNullable(this.publicIPs);
     }
@@ -67,20 +75,44 @@ public final class HubIPAddressesArgs extends com.pulumi.resources.ResourceArgs 
             $ = new HubIPAddressesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIPAddress Private IP Address associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddress Private IP Address associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             return privateIPAddress(Output.of(privateIPAddress));
         }
 
+        /**
+         * @param publicIPs Public IP addresses associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(@Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
             $.publicIPs = publicIPs;
             return this;
         }
 
+        /**
+         * @param publicIPs Public IP addresses associated with azure firewall.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPs(HubPublicIPAddressesArgs publicIPs) {
             return publicIPs(Output.of(publicIPs));
         }

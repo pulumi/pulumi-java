@@ -24,6 +24,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The private link resource group id.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -35,6 +39,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name of the private link.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="privateLinkResourceId")
     private @Nullable Output<String> privateLinkResourceId;
 
+    /**
+     * @return The resource id that private link links to.
+     * 
+     */
     public Optional<Output<String>> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -57,6 +69,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return Request message.
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -68,6 +84,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="status")
     private @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
+    /**
+     * @return Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+     * 
+     */
     public Optional<Output<Either<String,PrivateEndpointServiceConnectionStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -100,55 +120,127 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
             $ = new SharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The private link resource group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The private link resource group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param name Unique name of the private link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name of the private link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateLinkResourceId The resource id that private link links to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The resource id that private link links to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(String privateLinkResourceId) {
             return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
 
+        /**
+         * @param requestMessage Request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage Request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateEndpointServiceConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateEndpointServiceConnectionStatus status) {
             return status(Either.ofRight(status));
         }

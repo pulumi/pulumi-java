@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MonitorPropertiesResponse {
-    /**
-     * Datadog organization properties
-     * 
-     */
+        /**
+         * @return Datadog organization properties
+         * 
+         */
     private final @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
     private final String liftrResourceCategory;
-    /**
-     * The priority of the resource.
-     * 
-     */
+        /**
+         * @return The priority of the resource.
+         * 
+         */
     private final Integer liftrResourcePreference;
-    /**
-     * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
-     * 
-     */
+        /**
+         * @return Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+         * 
+         */
     private final String marketplaceSubscriptionStatus;
-    /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
-     * 
-     */
+        /**
+         * @return Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         */
     private final @Nullable String monitoringStatus;
     private final String provisioningState;
-    /**
-     * User info
-     * 
-     */
+        /**
+         * @return User info
+         * 
+         */
     private final @Nullable UserInfoResponse userInfo;
 
     @CustomType.Constructor
@@ -61,9 +61,9 @@ public final class MonitorPropertiesResponse {
     }
 
     /**
-     * Datadog organization properties
+     * @return Datadog organization properties
      * 
-    */
+     */
     public Optional<DatadogOrganizationPropertiesResponse> datadogOrganizationProperties() {
         return Optional.ofNullable(this.datadogOrganizationProperties);
     }
@@ -71,23 +71,23 @@ public final class MonitorPropertiesResponse {
         return this.liftrResourceCategory;
     }
     /**
-     * The priority of the resource.
+     * @return The priority of the resource.
      * 
-    */
+     */
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
     /**
-     * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+     * @return Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
-    */
+     */
     public String marketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
     }
     /**
-     * Flag specifying if the resource monitoring is enabled or disabled.
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -95,9 +95,9 @@ public final class MonitorPropertiesResponse {
         return this.provisioningState;
     }
     /**
-     * User info
+     * @return User info
      * 
-    */
+     */
     public Optional<UserInfoResponse> userInfo() {
         return Optional.ofNullable(this.userInfo);
     }

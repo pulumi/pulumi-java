@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListSqlMigrationServiceAuthKeysResult {
-    /**
-     * The first authentication key.
-     * 
-     */
+        /**
+         * @return The first authentication key.
+         * 
+         */
     private final @Nullable String authKey1;
-    /**
-     * The second authentication key.
-     * 
-     */
+        /**
+         * @return The second authentication key.
+         * 
+         */
     private final @Nullable String authKey2;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListSqlMigrationServiceAuthKeysResult {
     }
 
     /**
-     * The first authentication key.
+     * @return The first authentication key.
      * 
-    */
+     */
     public Optional<String> authKey1() {
         return Optional.ofNullable(this.authKey1);
     }
     /**
-     * The second authentication key.
+     * @return The second authentication key.
      * 
-    */
+     */
     public Optional<String> authKey2() {
         return Optional.ofNullable(this.authKey2);
     }

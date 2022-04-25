@@ -9,70 +9,70 @@ import java.util.Objects;
 
 @CustomType
 public final class InMageRcmNicDetailsResponse {
-    /**
-     * A value indicating whether this is the primary NIC.
-     * 
-     */
+        /**
+         * @return A value indicating whether this is the primary NIC.
+         * 
+         */
     private final String isPrimaryNic;
-    /**
-     * A value indicating whether this NIC is selected for failover.
-     * 
-     */
+        /**
+         * @return A value indicating whether this NIC is selected for failover.
+         * 
+         */
     private final String isSelectedForFailover;
-    /**
-     * The NIC Id.
-     * 
-     */
+        /**
+         * @return The NIC Id.
+         * 
+         */
     private final String nicId;
-    /**
-     * The source IP address.
-     * 
-     */
+        /**
+         * @return The source IP address.
+         * 
+         */
     private final String sourceIPAddress;
-    /**
-     * The source IP address type.
-     * 
-     */
+        /**
+         * @return The source IP address type.
+         * 
+         */
     private final String sourceIPAddressType;
-    /**
-     * Source network Id.
-     * 
-     */
+        /**
+         * @return Source network Id.
+         * 
+         */
     private final String sourceNetworkId;
-    /**
-     * Source subnet name.
-     * 
-     */
+        /**
+         * @return Source subnet name.
+         * 
+         */
     private final String sourceSubnetName;
-    /**
-     * The target IP address.
-     * 
-     */
+        /**
+         * @return The target IP address.
+         * 
+         */
     private final String targetIPAddress;
-    /**
-     * The target IP address type.
-     * 
-     */
+        /**
+         * @return The target IP address type.
+         * 
+         */
     private final String targetIPAddressType;
-    /**
-     * Target subnet name.
-     * 
-     */
+        /**
+         * @return Target subnet name.
+         * 
+         */
     private final String targetSubnetName;
-    /**
-     * The test IP address.
-     * 
-     */
+        /**
+         * @return The test IP address.
+         * 
+         */
     private final String testIPAddress;
-    /**
-     * The test IP address type.
-     * 
-     */
+        /**
+         * @return The test IP address type.
+         * 
+         */
     private final String testIPAddressType;
-    /**
-     * Test subnet name.
-     * 
-     */
+        /**
+         * @return Test subnet name.
+         * 
+         */
     private final String testSubnetName;
 
     @CustomType.Constructor
@@ -106,93 +106,93 @@ public final class InMageRcmNicDetailsResponse {
     }
 
     /**
-     * A value indicating whether this is the primary NIC.
+     * @return A value indicating whether this is the primary NIC.
      * 
-    */
+     */
     public String isPrimaryNic() {
         return this.isPrimaryNic;
     }
     /**
-     * A value indicating whether this NIC is selected for failover.
+     * @return A value indicating whether this NIC is selected for failover.
      * 
-    */
+     */
     public String isSelectedForFailover() {
         return this.isSelectedForFailover;
     }
     /**
-     * The NIC Id.
+     * @return The NIC Id.
      * 
-    */
+     */
     public String nicId() {
         return this.nicId;
     }
     /**
-     * The source IP address.
+     * @return The source IP address.
      * 
-    */
+     */
     public String sourceIPAddress() {
         return this.sourceIPAddress;
     }
     /**
-     * The source IP address type.
+     * @return The source IP address type.
      * 
-    */
+     */
     public String sourceIPAddressType() {
         return this.sourceIPAddressType;
     }
     /**
-     * Source network Id.
+     * @return Source network Id.
      * 
-    */
+     */
     public String sourceNetworkId() {
         return this.sourceNetworkId;
     }
     /**
-     * Source subnet name.
+     * @return Source subnet name.
      * 
-    */
+     */
     public String sourceSubnetName() {
         return this.sourceSubnetName;
     }
     /**
-     * The target IP address.
+     * @return The target IP address.
      * 
-    */
+     */
     public String targetIPAddress() {
         return this.targetIPAddress;
     }
     /**
-     * The target IP address type.
+     * @return The target IP address type.
      * 
-    */
+     */
     public String targetIPAddressType() {
         return this.targetIPAddressType;
     }
     /**
-     * Target subnet name.
+     * @return Target subnet name.
      * 
-    */
+     */
     public String targetSubnetName() {
         return this.targetSubnetName;
     }
     /**
-     * The test IP address.
+     * @return The test IP address.
      * 
-    */
+     */
     public String testIPAddress() {
         return this.testIPAddress;
     }
     /**
-     * The test IP address type.
+     * @return The test IP address type.
      * 
-    */
+     */
     public String testIPAddressType() {
         return this.testIPAddressType;
     }
     /**
-     * Test subnet name.
+     * @return Test subnet name.
      * 
-    */
+     */
     public String testSubnetName() {
         return this.testSubnetName;
     }

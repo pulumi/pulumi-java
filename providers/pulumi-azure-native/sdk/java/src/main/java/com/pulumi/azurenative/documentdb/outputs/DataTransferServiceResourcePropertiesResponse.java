@@ -14,36 +14,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataTransferServiceResourcePropertiesResponse {
-    /**
-     * Time of the last state change (ISO-8601 format).
-     * 
-     */
+        /**
+         * @return Time of the last state change (ISO-8601 format).
+         * 
+         */
     private final String creationTime;
-    /**
-     * Instance count for the service.
-     * 
-     */
+        /**
+         * @return Instance count for the service.
+         * 
+         */
     private final @Nullable Integer instanceCount;
-    /**
-     * Instance type for the service.
-     * 
-     */
+        /**
+         * @return Instance type for the service.
+         * 
+         */
     private final @Nullable String instanceSize;
-    /**
-     * An array that contains all of the locations for the service.
-     * 
-     */
+        /**
+         * @return An array that contains all of the locations for the service.
+         * 
+         */
     private final List<DataTransferRegionalServiceResourceResponse> locations;
-    /**
-     * ServiceType for the service.
-     * Expected value is &#39;DataTransfer&#39;.
-     * 
-     */
+        /**
+         * @return ServiceType for the service.
+         * Expected value is &#39;DataTransfer&#39;.
+         * 
+         */
     private final String serviceType;
-    /**
-     * Describes the status of a service.
-     * 
-     */
+        /**
+         * @return Describes the status of a service.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -63,45 +63,45 @@ public final class DataTransferServiceResourcePropertiesResponse {
     }
 
     /**
-     * Time of the last state change (ISO-8601 format).
+     * @return Time of the last state change (ISO-8601 format).
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Instance count for the service.
+     * @return Instance count for the service.
      * 
-    */
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
-     * Instance type for the service.
+     * @return Instance type for the service.
      * 
-    */
+     */
     public Optional<String> instanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
     /**
-     * An array that contains all of the locations for the service.
+     * @return An array that contains all of the locations for the service.
      * 
-    */
+     */
     public List<DataTransferRegionalServiceResourceResponse> locations() {
         return this.locations;
     }
     /**
-     * ServiceType for the service.
+     * @return ServiceType for the service.
      * Expected value is &#39;DataTransfer&#39;.
      * 
-    */
+     */
     public String serviceType() {
         return this.serviceType;
     }
     /**
-     * Describes the status of a service.
+     * @return Describes the status of a service.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

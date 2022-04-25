@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WsfcDomainProfileResponse {
-    /**
-     * Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
-     * 
-     */
+        /**
+         * @return Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+         * 
+         */
     private final @Nullable String clusterBootstrapAccount;
-    /**
-     * Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
-     * 
-     */
+        /**
+         * @return Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+         * 
+         */
     private final @Nullable String clusterOperatorAccount;
-    /**
-     * Fully qualified name of the domain.
-     * 
-     */
+        /**
+         * @return Fully qualified name of the domain.
+         * 
+         */
     private final @Nullable String domainFqdn;
-    /**
-     * Optional path for fileshare witness.
-     * 
-     */
+        /**
+         * @return Optional path for fileshare witness.
+         * 
+         */
     private final @Nullable String fileShareWitnessPath;
-    /**
-     * Organizational Unit path in which the nodes and cluster will be present.
-     * 
-     */
+        /**
+         * @return Organizational Unit path in which the nodes and cluster will be present.
+         * 
+         */
     private final @Nullable String ouPath;
-    /**
-     * Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
-     * 
-     */
+        /**
+         * @return Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+         * 
+         */
     private final @Nullable String sqlServiceAccount;
-    /**
-     * Fully qualified ARM resource id of the witness storage account.
-     * 
-     */
+        /**
+         * @return Fully qualified ARM resource id of the witness storage account.
+         * 
+         */
     private final @Nullable String storageAccountUrl;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class WsfcDomainProfileResponse {
     }
 
     /**
-     * Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
+     * @return Account name used for creating cluster (at minimum needs permissions to &#39;Create Computer Objects&#39; in domain).
      * 
-    */
+     */
     public Optional<String> clusterBootstrapAccount() {
         return Optional.ofNullable(this.clusterBootstrapAccount);
     }
     /**
-     * Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
+     * @return Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
      * 
-    */
+     */
     public Optional<String> clusterOperatorAccount() {
         return Optional.ofNullable(this.clusterOperatorAccount);
     }
     /**
-     * Fully qualified name of the domain.
+     * @return Fully qualified name of the domain.
      * 
-    */
+     */
     public Optional<String> domainFqdn() {
         return Optional.ofNullable(this.domainFqdn);
     }
     /**
-     * Optional path for fileshare witness.
+     * @return Optional path for fileshare witness.
      * 
-    */
+     */
     public Optional<String> fileShareWitnessPath() {
         return Optional.ofNullable(this.fileShareWitnessPath);
     }
     /**
-     * Organizational Unit path in which the nodes and cluster will be present.
+     * @return Organizational Unit path in which the nodes and cluster will be present.
      * 
-    */
+     */
     public Optional<String> ouPath() {
         return Optional.ofNullable(this.ouPath);
     }
     /**
-     * Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
+     * @return Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
      * 
-    */
+     */
     public Optional<String> sqlServiceAccount() {
         return Optional.ofNullable(this.sqlServiceAccount);
     }
     /**
-     * Fully qualified ARM resource id of the witness storage account.
+     * @return Fully qualified ARM resource id of the witness storage account.
      * 
-    */
+     */
     public Optional<String> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }

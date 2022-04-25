@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TelegramChannelResponse {
-    /**
-     * The channel name
-     * Expected value is &#39;TelegramChannel&#39;.
-     * 
-     */
+        /**
+         * @return The channel name
+         * Expected value is &#39;TelegramChannel&#39;.
+         * 
+         */
     private final String channelName;
-    /**
-     * Entity Tag of the resource
-     * 
-     */
+        /**
+         * @return Entity Tag of the resource
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The set of properties specific to Telegram channel resource
-     * 
-     */
+        /**
+         * @return The set of properties specific to Telegram channel resource
+         * 
+         */
     private final @Nullable TelegramChannelPropertiesResponse properties;
-    /**
-     * Provisioning state of the resource
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class TelegramChannelResponse {
     }
 
     /**
-     * The channel name
+     * @return The channel name
      * Expected value is &#39;TelegramChannel&#39;.
      * 
-    */
+     */
     public String channelName() {
         return this.channelName;
     }
     /**
-     * Entity Tag of the resource
+     * @return Entity Tag of the resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The set of properties specific to Telegram channel resource
+     * @return The set of properties specific to Telegram channel resource
      * 
-    */
+     */
     public Optional<TelegramChannelPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

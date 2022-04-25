@@ -29,6 +29,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="appliesToGroups")
     private @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups;
 
+    /**
+     * @return Groups for configuration
+     * 
+     */
     public Optional<Output<List<ConnectivityGroupItemArgs>>> appliesToGroups() {
         return Optional.ofNullable(this.appliesToGroups);
     }
@@ -40,6 +44,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="configurationName")
     private @Nullable Output<String> configurationName;
 
+    /**
+     * @return The name of the network manager connectivity configuration.
+     * 
+     */
     public Optional<Output<String>> configurationName() {
         return Optional.ofNullable(this.configurationName);
     }
@@ -51,6 +59,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="connectivityTopology", required=true)
     private Output<Either<String,ConnectivityTopology>> connectivityTopology;
 
+    /**
+     * @return Connectivity topology type.
+     * 
+     */
     public Output<Either<String,ConnectivityTopology>> connectivityTopology() {
         return this.connectivityTopology;
     }
@@ -62,6 +74,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="deleteExistingPeering")
     private @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering;
 
+    /**
+     * @return Flag if need to remove current existing peerings.
+     * 
+     */
     public Optional<Output<Either<String,DeleteExistingPeering>>> deleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
@@ -73,6 +89,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the connectivity configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +104,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return A friendly name for the resource.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -95,6 +119,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="hubs")
     private @Nullable Output<List<HubArgs>> hubs;
 
+    /**
+     * @return List of hubItems
+     * 
+     */
     public Optional<Output<List<HubArgs>>> hubs() {
         return Optional.ofNullable(this.hubs);
     }
@@ -106,6 +134,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="isGlobal")
     private @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
+    /**
+     * @return Flag if global mesh is supported.
+     * 
+     */
     public Optional<Output<Either<String,IsGlobal>>> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
@@ -117,6 +149,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="networkManagerName", required=true)
     private Output<String> networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
@@ -128,6 +164,10 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -165,124 +205,292 @@ public final class ConnectivityConfigurationArgs extends com.pulumi.resources.Re
             $ = new ConnectivityConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appliesToGroups Groups for configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliesToGroups(@Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups) {
             $.appliesToGroups = appliesToGroups;
             return this;
         }
 
+        /**
+         * @param appliesToGroups Groups for configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliesToGroups(List<ConnectivityGroupItemArgs> appliesToGroups) {
             return appliesToGroups(Output.of(appliesToGroups));
         }
 
+        /**
+         * @param appliesToGroups Groups for configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliesToGroups(ConnectivityGroupItemArgs... appliesToGroups) {
             return appliesToGroups(List.of(appliesToGroups));
         }
 
+        /**
+         * @param configurationName The name of the network manager connectivity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(@Nullable Output<String> configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param configurationName The name of the network manager connectivity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             return configurationName(Output.of(configurationName));
         }
 
+        /**
+         * @param connectivityTopology Connectivity topology type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityTopology(Output<Either<String,ConnectivityTopology>> connectivityTopology) {
             $.connectivityTopology = connectivityTopology;
             return this;
         }
 
+        /**
+         * @param connectivityTopology Connectivity topology type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityTopology(Either<String,ConnectivityTopology> connectivityTopology) {
             return connectivityTopology(Output.of(connectivityTopology));
         }
 
+        /**
+         * @param connectivityTopology Connectivity topology type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityTopology(String connectivityTopology) {
             return connectivityTopology(Either.ofLeft(connectivityTopology));
         }
 
+        /**
+         * @param connectivityTopology Connectivity topology type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityTopology(ConnectivityTopology connectivityTopology) {
             return connectivityTopology(Either.ofRight(connectivityTopology));
         }
 
+        /**
+         * @param deleteExistingPeering Flag if need to remove current existing peerings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteExistingPeering(@Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering) {
             $.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
 
+        /**
+         * @param deleteExistingPeering Flag if need to remove current existing peerings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteExistingPeering(Either<String,DeleteExistingPeering> deleteExistingPeering) {
             return deleteExistingPeering(Output.of(deleteExistingPeering));
         }
 
+        /**
+         * @param deleteExistingPeering Flag if need to remove current existing peerings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteExistingPeering(String deleteExistingPeering) {
             return deleteExistingPeering(Either.ofLeft(deleteExistingPeering));
         }
 
+        /**
+         * @param deleteExistingPeering Flag if need to remove current existing peerings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteExistingPeering(DeleteExistingPeering deleteExistingPeering) {
             return deleteExistingPeering(Either.ofRight(deleteExistingPeering));
         }
 
+        /**
+         * @param description A description of the connectivity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the connectivity configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName A friendly name for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName A friendly name for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param hubs List of hubItems
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubs(@Nullable Output<List<HubArgs>> hubs) {
             $.hubs = hubs;
             return this;
         }
 
+        /**
+         * @param hubs List of hubItems
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubs(List<HubArgs> hubs) {
             return hubs(Output.of(hubs));
         }
 
+        /**
+         * @param hubs List of hubItems
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubs(HubArgs... hubs) {
             return hubs(List.of(hubs));
         }
 
+        /**
+         * @param isGlobal Flag if global mesh is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             $.isGlobal = isGlobal;
             return this;
         }
 
+        /**
+         * @param isGlobal Flag if global mesh is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(Either<String,IsGlobal> isGlobal) {
             return isGlobal(Output.of(isGlobal));
         }
 
+        /**
+         * @param isGlobal Flag if global mesh is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(String isGlobal) {
             return isGlobal(Either.ofLeft(isGlobal));
         }
 
+        /**
+         * @param isGlobal Flag if global mesh is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(IsGlobal isGlobal) {
             return isGlobal(Either.ofRight(isGlobal));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             return networkManagerName(Output.of(networkManagerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

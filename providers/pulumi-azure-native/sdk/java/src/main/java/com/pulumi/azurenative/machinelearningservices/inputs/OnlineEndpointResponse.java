@@ -27,6 +27,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="authMode", required=true)
     private String authMode;
 
+    /**
+     * @return Inference endpoint authentication mode type
+     * 
+     */
     public String authMode() {
         return this.authMode;
     }
@@ -38,6 +42,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the inference endpoint.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -60,6 +72,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of endpoint provisioning.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -71,6 +87,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scoringUri", required=true)
     private String scoringUri;
 
+    /**
+     * @return Endpoint URI.
+     * 
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
@@ -82,6 +102,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="swaggerUri", required=true)
     private String swaggerUri;
 
+    /**
+     * @return Endpoint Swagger URI.
+     * 
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
@@ -94,6 +118,11 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return ARM resource ID of the compute if it exists.
+     * optional
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -105,6 +134,10 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
     @Import(name="traffic")
     private @Nullable Map<String,Integer> traffic;
 
+    /**
+     * @return Traffic rules on how the traffic will be routed across deployments.
+     * 
+     */
     public Optional<Map<String,Integer>> traffic() {
         return Optional.ofNullable(this.traffic);
     }
@@ -140,41 +173,90 @@ public final class OnlineEndpointResponse extends com.pulumi.resources.InvokeArg
             $ = new OnlineEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authMode Inference endpoint authentication mode type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authMode(String authMode) {
             $.authMode = authMode;
             return this;
         }
 
+        /**
+         * @param description Description of the inference endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param provisioningState State of endpoint provisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param scoringUri Endpoint URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringUri(String scoringUri) {
             $.scoringUri = scoringUri;
             return this;
         }
 
+        /**
+         * @param swaggerUri Endpoint Swagger URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder swaggerUri(String swaggerUri) {
             $.swaggerUri = swaggerUri;
             return this;
         }
 
+        /**
+         * @param target ARM resource ID of the compute if it exists.
+         * optional
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param traffic Traffic rules on how the traffic will be routed across deployments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder traffic(@Nullable Map<String,Integer> traffic) {
             $.traffic = traffic;
             return this;

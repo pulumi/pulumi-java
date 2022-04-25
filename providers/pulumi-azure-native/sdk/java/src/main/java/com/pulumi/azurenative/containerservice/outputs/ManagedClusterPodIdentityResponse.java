@@ -13,31 +13,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterPodIdentityResponse {
-    /**
-     * Binding selector to use for the AzureIdentityBinding resource.
-     * 
-     */
+        /**
+         * @return Binding selector to use for the AzureIdentityBinding resource.
+         * 
+         */
     private final @Nullable String bindingSelector;
-    /**
-     * Information of the user assigned identity.
-     * 
-     */
+        /**
+         * @return Information of the user assigned identity.
+         * 
+         */
     private final UserAssignedIdentityResponse identity;
-    /**
-     * Name of the pod identity.
-     * 
-     */
+        /**
+         * @return Name of the pod identity.
+         * 
+         */
     private final String name;
-    /**
-     * Namespace of the pod identity.
-     * 
-     */
+        /**
+         * @return Namespace of the pod identity.
+         * 
+         */
     private final String namespace;
     private final ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
-    /**
-     * The current provisioning state of the pod identity.
-     * 
-     */
+        /**
+         * @return The current provisioning state of the pod identity.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -57,30 +57,30 @@ public final class ManagedClusterPodIdentityResponse {
     }
 
     /**
-     * Binding selector to use for the AzureIdentityBinding resource.
+     * @return Binding selector to use for the AzureIdentityBinding resource.
      * 
-    */
+     */
     public Optional<String> bindingSelector() {
         return Optional.ofNullable(this.bindingSelector);
     }
     /**
-     * Information of the user assigned identity.
+     * @return Information of the user assigned identity.
      * 
-    */
+     */
     public UserAssignedIdentityResponse identity() {
         return this.identity;
     }
     /**
-     * Name of the pod identity.
+     * @return Name of the pod identity.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Namespace of the pod identity.
+     * @return Namespace of the pod identity.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -88,9 +88,9 @@ public final class ManagedClusterPodIdentityResponse {
         return this.provisioningInfo;
     }
     /**
-     * The current provisioning state of the pod identity.
+     * @return The current provisioning state of the pod identity.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

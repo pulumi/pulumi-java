@@ -19,50 +19,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAKSServiceResult {
-    /**
-     * Specifies the resource ID.
-     * 
-     */
+        /**
+         * @return Specifies the resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the resource.
-     * 
-     */
+        /**
+         * @return The identity of the resource.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Specifies the name of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Service properties
-     * 
-     */
+        /**
+         * @return Service properties
+         * 
+         */
     private final Object properties;
-    /**
-     * The sku of the workspace.
-     * 
-     */
+        /**
+         * @return The sku of the workspace.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Read only system data
-     * 
-     */
+        /**
+         * @return Read only system data
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Contains resource tags defined as key/value pairs.
-     * 
-     */
+        /**
+         * @return Contains resource tags defined as key/value pairs.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Specifies the type of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -88,65 +88,65 @@ public final class GetAKSServiceResult {
     }
 
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Service properties
+     * @return Service properties
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * The sku of the workspace.
+     * @return The sku of the workspace.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

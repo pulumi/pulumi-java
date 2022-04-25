@@ -27,6 +27,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return Address of the connection monitor endpoint (IP or domain name).
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="coverageLevel")
     private @Nullable String coverageLevel;
 
+    /**
+     * @return Test coverage for the endpoint.
+     * 
+     */
     public Optional<String> coverageLevel() {
         return Optional.ofNullable(this.coverageLevel);
     }
@@ -49,6 +57,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="filter")
     private @Nullable ConnectionMonitorEndpointFilterResponse filter;
 
+    /**
+     * @return Filter for sub-items within the endpoint.
+     * 
+     */
     public Optional<ConnectionMonitorEndpointFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -60,6 +72,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the connection monitor endpoint.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -71,6 +87,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Resource ID of the connection monitor endpoint.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -82,6 +102,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="scope")
     private @Nullable ConnectionMonitorEndpointScopeResponse scope;
 
+    /**
+     * @return Endpoint scope.
+     * 
+     */
     public Optional<ConnectionMonitorEndpointScopeResponse> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -93,6 +117,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The endpoint type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -127,36 +155,78 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
             $ = new ConnectionMonitorEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Address of the connection monitor endpoint (IP or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param coverageLevel Test coverage for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coverageLevel(@Nullable String coverageLevel) {
             $.coverageLevel = coverageLevel;
             return this;
         }
 
+        /**
+         * @param filter Filter for sub-items within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable ConnectionMonitorEndpointFilterResponse filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param name The name of the connection monitor endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceId Resource ID of the connection monitor endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param scope Endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable ConnectionMonitorEndpointScopeResponse scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param type The endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

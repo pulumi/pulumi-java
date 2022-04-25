@@ -11,49 +11,49 @@ import java.util.Objects;
 
 @CustomType
 public final class ListConfigurationStoreKeyValueResult {
-    /**
-     * The content type of the key-value&#39;s value.
-     * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
-     */
+        /**
+         * @return The content type of the key-value&#39;s value.
+         * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
+         * 
+         */
     private final String contentType;
-    /**
-     * An ETag indicating the state of a key-value within a configuration store.
-     * 
-     */
+        /**
+         * @return An ETag indicating the state of a key-value within a configuration store.
+         * 
+         */
     private final String eTag;
-    /**
-     * The primary identifier of a key-value.
-     * The key is used in unison with the label to uniquely identify a key-value.
-     * 
-     */
+        /**
+         * @return The primary identifier of a key-value.
+         * The key is used in unison with the label to uniquely identify a key-value.
+         * 
+         */
     private final String key;
-    /**
-     * A value used to group key-values.
-     * The label is used in unison with the key to uniquely identify a key-value.
-     * 
-     */
+        /**
+         * @return A value used to group key-values.
+         * The label is used in unison with the key to uniquely identify a key-value.
+         * 
+         */
     private final String label;
-    /**
-     * The last time a modifying operation was performed on the given key-value.
-     * 
-     */
+        /**
+         * @return The last time a modifying operation was performed on the given key-value.
+         * 
+         */
     private final String lastModified;
-    /**
-     * A value indicating whether the key-value is locked.
-     * A locked key-value may not be modified until it is unlocked.
-     * 
-     */
+        /**
+         * @return A value indicating whether the key-value is locked.
+         * A locked key-value may not be modified until it is unlocked.
+         * 
+         */
     private final Boolean locked;
-    /**
-     * A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
-     */
+        /**
+         * @return A dictionary of tags that can help identify what a key-value may be applicable for.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * The value of the key-value.
-     * 
-     */
+        /**
+         * @return The value of the key-value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -77,62 +77,62 @@ public final class ListConfigurationStoreKeyValueResult {
     }
 
     /**
-     * The content type of the key-value&#39;s value.
+     * @return The content type of the key-value&#39;s value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * An ETag indicating the state of a key-value within a configuration store.
+     * @return An ETag indicating the state of a key-value within a configuration store.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * The primary identifier of a key-value.
+     * @return The primary identifier of a key-value.
      * The key is used in unison with the label to uniquely identify a key-value.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * A value used to group key-values.
+     * @return A value used to group key-values.
      * The label is used in unison with the key to uniquely identify a key-value.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * The last time a modifying operation was performed on the given key-value.
+     * @return The last time a modifying operation was performed on the given key-value.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * A value indicating whether the key-value is locked.
+     * @return A value indicating whether the key-value is locked.
      * A locked key-value may not be modified until it is unlocked.
      * 
-    */
+     */
     public Boolean locked() {
         return this.locked;
     }
     /**
-     * A dictionary of tags that can help identify what a key-value may be applicable for.
+     * @return A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * The value of the key-value.
+     * @return The value of the key-value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

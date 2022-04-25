@@ -20,75 +20,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CognitiveServicesAccountPropertiesResponse {
-    /**
-     * The api properties for special APIs.
-     * 
-     */
+        /**
+         * @return The api properties for special APIs.
+         * 
+         */
     private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
-    /**
-     * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
-     * 
-     */
+        /**
+         * @return Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+         * 
+         */
     private final List<SkuCapabilityResponse> capabilities;
-    /**
-     * Optional subdomain name used for token-based authentication.
-     * 
-     */
+        /**
+         * @return Optional subdomain name used for token-based authentication.
+         * 
+         */
     private final @Nullable String customSubDomainName;
-    /**
-     * Gets the date of cognitive services account creation.
-     * 
-     */
+        /**
+         * @return Gets the date of cognitive services account creation.
+         * 
+         */
     private final String dateCreated;
-    /**
-     * The encryption properties for this resource.
-     * 
-     */
+        /**
+         * @return The encryption properties for this resource.
+         * 
+         */
     private final @Nullable EncryptionResponse encryption;
-    /**
-     * Endpoint of the created account.
-     * 
-     */
+        /**
+         * @return Endpoint of the created account.
+         * 
+         */
     private final String endpoint;
-    /**
-     * The internal identifier.
-     * 
-     */
+        /**
+         * @return The internal identifier.
+         * 
+         */
     private final String internalId;
-    /**
-     * If the resource is migrated from an existing key.
-     * 
-     */
+        /**
+         * @return If the resource is migrated from an existing key.
+         * 
+         */
     private final Boolean isMigrated;
-    /**
-     * A collection of rules governing the accessibility from specific network locations.
-     * 
-     */
+        /**
+         * @return A collection of rules governing the accessibility from specific network locations.
+         * 
+         */
     private final @Nullable NetworkRuleSetResponse networkAcls;
-    /**
-     * The private endpoint connection associated with the Cognitive Services account.
-     * 
-     */
+        /**
+         * @return The private endpoint connection associated with the Cognitive Services account.
+         * 
+         */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Gets the status of the cognitive services account at the time the operation was called.
-     * 
-     */
+        /**
+         * @return Gets the status of the cognitive services account at the time the operation was called.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
-     * 
-     */
+        /**
+         * @return Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
-    /**
-     * Sku change info of account.
-     * 
-     */
+        /**
+         * @return Sku change info of account.
+         * 
+         */
     private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
-    /**
-     * The storage accounts for this resource.
-     * 
-     */
+        /**
+         * @return The storage accounts for this resource.
+         * 
+         */
     private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
     @CustomType.Constructor
@@ -124,100 +124,100 @@ public final class CognitiveServicesAccountPropertiesResponse {
     }
 
     /**
-     * The api properties for special APIs.
+     * @return The api properties for special APIs.
      * 
-    */
+     */
     public Optional<CognitiveServicesAccountApiPropertiesResponse> apiProperties() {
         return Optional.ofNullable(this.apiProperties);
     }
     /**
-     * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+     * @return Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
      * 
-    */
+     */
     public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities;
     }
     /**
-     * Optional subdomain name used for token-based authentication.
+     * @return Optional subdomain name used for token-based authentication.
      * 
-    */
+     */
     public Optional<String> customSubDomainName() {
         return Optional.ofNullable(this.customSubDomainName);
     }
     /**
-     * Gets the date of cognitive services account creation.
+     * @return Gets the date of cognitive services account creation.
      * 
-    */
+     */
     public String dateCreated() {
         return this.dateCreated;
     }
     /**
-     * The encryption properties for this resource.
+     * @return The encryption properties for this resource.
      * 
-    */
+     */
     public Optional<EncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Endpoint of the created account.
+     * @return Endpoint of the created account.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The internal identifier.
+     * @return The internal identifier.
      * 
-    */
+     */
     public String internalId() {
         return this.internalId;
     }
     /**
-     * If the resource is migrated from an existing key.
+     * @return If the resource is migrated from an existing key.
      * 
-    */
+     */
     public Boolean isMigrated() {
         return this.isMigrated;
     }
     /**
-     * A collection of rules governing the accessibility from specific network locations.
+     * @return A collection of rules governing the accessibility from specific network locations.
      * 
-    */
+     */
     public Optional<NetworkRuleSetResponse> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
     /**
-     * The private endpoint connection associated with the Cognitive Services account.
+     * @return The private endpoint connection associated with the Cognitive Services account.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
-     * Gets the status of the cognitive services account at the time the operation was called.
+     * @return Gets the status of the cognitive services account at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Sku change info of account.
+     * @return Sku change info of account.
      * 
-    */
+     */
     public CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo() {
         return this.skuChangeInfo;
     }
     /**
-     * The storage accounts for this resource.
+     * @return The storage accounts for this resource.
      * 
-    */
+     */
     public List<UserOwnedStorageResponse> userOwnedStorage() {
         return this.userOwnedStorage == null ? List.of() : this.userOwnedStorage;
     }

@@ -14,70 +14,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContentKeyPolicyPlayReadyPlayRightResponse {
-    /**
-     * Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-     * 
-     */
+        /**
+         * @return Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
+         * 
+         */
     private final @Nullable Integer agcAndColorStripeRestriction;
-    /**
-     * Configures Unknown output handling settings of the license.
-     * 
-     */
+        /**
+         * @return Configures Unknown output handling settings of the license.
+         * 
+         */
     private final String allowPassingVideoContentToUnknownOutput;
-    /**
-     * Specifies the output protection level for compressed digital audio.
-     * 
-     */
+        /**
+         * @return Specifies the output protection level for compressed digital audio.
+         * 
+         */
     private final @Nullable Integer analogVideoOpl;
-    /**
-     * Specifies the output protection level for compressed digital audio.
-     * 
-     */
+        /**
+         * @return Specifies the output protection level for compressed digital audio.
+         * 
+         */
     private final @Nullable Integer compressedDigitalAudioOpl;
-    /**
-     * Specifies the output protection level for compressed digital video.
-     * 
-     */
+        /**
+         * @return Specifies the output protection level for compressed digital video.
+         * 
+         */
     private final @Nullable Integer compressedDigitalVideoOpl;
-    /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
-     * 
-     */
+        /**
+         * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
+         * 
+         */
     private final Boolean digitalVideoOnlyContentRestriction;
-    /**
-     * Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
-     * 
-     */
+        /**
+         * @return Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
+         * 
+         */
     private final @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction;
-    /**
-     * The amount of time that the license is valid after the license is first used to play content.
-     * 
-     */
+        /**
+         * @return The amount of time that the license is valid after the license is first used to play content.
+         * 
+         */
     private final @Nullable String firstPlayExpiration;
-    /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
-     * 
-     */
+        /**
+         * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
+         * 
+         */
     private final Boolean imageConstraintForAnalogComponentVideoRestriction;
-    /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
-     * 
-     */
+        /**
+         * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
+         * 
+         */
     private final Boolean imageConstraintForAnalogComputerMonitorRestriction;
-    /**
-     * Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
-     * 
-     */
+        /**
+         * @return Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
+         * 
+         */
     private final @Nullable Integer scmsRestriction;
-    /**
-     * Specifies the output protection level for uncompressed digital audio.
-     * 
-     */
+        /**
+         * @return Specifies the output protection level for uncompressed digital audio.
+         * 
+         */
     private final @Nullable Integer uncompressedDigitalAudioOpl;
-    /**
-     * Specifies the output protection level for uncompressed digital video.
-     * 
-     */
+        /**
+         * @return Specifies the output protection level for uncompressed digital video.
+         * 
+         */
     private final @Nullable Integer uncompressedDigitalVideoOpl;
 
     @CustomType.Constructor
@@ -111,93 +111,93 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
     }
 
     /**
-     * Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
+     * @return Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
      * 
-    */
+     */
     public Optional<Integer> agcAndColorStripeRestriction() {
         return Optional.ofNullable(this.agcAndColorStripeRestriction);
     }
     /**
-     * Configures Unknown output handling settings of the license.
+     * @return Configures Unknown output handling settings of the license.
      * 
-    */
+     */
     public String allowPassingVideoContentToUnknownOutput() {
         return this.allowPassingVideoContentToUnknownOutput;
     }
     /**
-     * Specifies the output protection level for compressed digital audio.
+     * @return Specifies the output protection level for compressed digital audio.
      * 
-    */
+     */
     public Optional<Integer> analogVideoOpl() {
         return Optional.ofNullable(this.analogVideoOpl);
     }
     /**
-     * Specifies the output protection level for compressed digital audio.
+     * @return Specifies the output protection level for compressed digital audio.
      * 
-    */
+     */
     public Optional<Integer> compressedDigitalAudioOpl() {
         return Optional.ofNullable(this.compressedDigitalAudioOpl);
     }
     /**
-     * Specifies the output protection level for compressed digital video.
+     * @return Specifies the output protection level for compressed digital video.
      * 
-    */
+     */
     public Optional<Integer> compressedDigitalVideoOpl() {
         return Optional.ofNullable(this.compressedDigitalVideoOpl);
     }
     /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
+     * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
      * 
-    */
+     */
     public Boolean digitalVideoOnlyContentRestriction() {
         return this.digitalVideoOnlyContentRestriction;
     }
     /**
-     * Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
+     * @return Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
      * 
-    */
+     */
     public Optional<ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse> explicitAnalogTelevisionOutputRestriction() {
         return Optional.ofNullable(this.explicitAnalogTelevisionOutputRestriction);
     }
     /**
-     * The amount of time that the license is valid after the license is first used to play content.
+     * @return The amount of time that the license is valid after the license is first used to play content.
      * 
-    */
+     */
     public Optional<String> firstPlayExpiration() {
         return Optional.ofNullable(this.firstPlayExpiration);
     }
     /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
+     * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
      * 
-    */
+     */
     public Boolean imageConstraintForAnalogComponentVideoRestriction() {
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
     /**
-     * Enables the Image Constraint For Analog Component Video Restriction in the license.
+     * @return Enables the Image Constraint For Analog Component Video Restriction in the license.
      * 
-    */
+     */
     public Boolean imageConstraintForAnalogComputerMonitorRestriction() {
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
     /**
-     * Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
+     * @return Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
      * 
-    */
+     */
     public Optional<Integer> scmsRestriction() {
         return Optional.ofNullable(this.scmsRestriction);
     }
     /**
-     * Specifies the output protection level for uncompressed digital audio.
+     * @return Specifies the output protection level for uncompressed digital audio.
      * 
-    */
+     */
     public Optional<Integer> uncompressedDigitalAudioOpl() {
         return Optional.ofNullable(this.uncompressedDigitalAudioOpl);
     }
     /**
-     * Specifies the output protection level for uncompressed digital video.
+     * @return Specifies the output protection level for uncompressed digital video.
      * 
-    */
+     */
     public Optional<Integer> uncompressedDigitalVideoOpl() {
         return Optional.ofNullable(this.uncompressedDigitalVideoOpl);
     }

@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionErrorResponse {
-    /**
-     * Code of the status
-     * 
-     */
+        /**
+         * @return Code of the status
+         * 
+         */
     private final @Nullable String code;
-    /**
-     * Resource ETag
-     * 
-     */
+        /**
+         * @return Resource ETag
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Resource id
-     * 
-     */
+        /**
+         * @return Resource id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Description of the status
-     * 
-     */
+        /**
+         * @return Description of the status
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class ConnectionErrorResponse {
     }
 
     /**
-     * Code of the status
+     * @return Code of the status
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Resource ETag
+     * @return Resource ETag
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource id
+     * @return Resource id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Description of the status
+     * @return Description of the status
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

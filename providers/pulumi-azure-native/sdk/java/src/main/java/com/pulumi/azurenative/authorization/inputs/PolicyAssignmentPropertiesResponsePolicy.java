@@ -26,6 +26,10 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends com.pulumi.r
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id of the policy
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends com.pulumi.r
     @Import(name="lastModifiedBy", required=true)
     private PrincipalResponse lastModifiedBy;
 
+    /**
+     * @return The name of the entity last modified it
+     * 
+     */
     public PrincipalResponse lastModifiedBy() {
         return this.lastModifiedBy;
     }
@@ -48,6 +56,10 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends com.pulumi.r
     @Import(name="lastModifiedDateTime")
     private @Nullable String lastModifiedDateTime;
 
+    /**
+     * @return The last modified date time.
+     * 
+     */
     public Optional<String> lastModifiedDateTime() {
         return Optional.ofNullable(this.lastModifiedDateTime);
     }
@@ -78,16 +90,34 @@ public final class PolicyAssignmentPropertiesResponsePolicy extends com.pulumi.r
             $ = new PolicyAssignmentPropertiesResponsePolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy The name of the entity last modified it
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(PrincipalResponse lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedDateTime The last modified date time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedDateTime(@Nullable String lastModifiedDateTime) {
             $.lastModifiedDateTime = lastModifiedDateTime;
             return this;

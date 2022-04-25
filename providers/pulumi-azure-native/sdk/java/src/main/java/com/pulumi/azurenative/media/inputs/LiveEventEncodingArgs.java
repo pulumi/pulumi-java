@@ -29,6 +29,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encodingType")
     private @Nullable Output<Either<String,LiveEventEncodingType>> encodingType;
 
+    /**
+     * @return Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
+     * 
+     */
     public Optional<Output<Either<String,LiveEventEncodingType>>> encodingType() {
         return Optional.ofNullable(this.encodingType);
     }
@@ -40,6 +44,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keyFrameInterval")
     private @Nullable Output<String> keyFrameInterval;
 
+    /**
+     * @return Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
+     * 
+     */
     public Optional<Output<String>> keyFrameInterval() {
         return Optional.ofNullable(this.keyFrameInterval);
     }
@@ -51,6 +59,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="presetName")
     private @Nullable Output<String> presetName;
 
+    /**
+     * @return The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.
+     * 
+     */
     public Optional<Output<String>> presetName() {
         return Optional.ofNullable(this.presetName);
     }
@@ -62,6 +74,10 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stretchMode")
     private @Nullable Output<Either<String,StretchMode>> stretchMode;
 
+    /**
+     * @return Specifies how the input video will be resized to fit the desired output resolution(s). Default is None
+     * 
+     */
     public Optional<Output<Either<String,StretchMode>>> stretchMode() {
         return Optional.ofNullable(this.stretchMode);
     }
@@ -93,54 +109,126 @@ public final class LiveEventEncodingArgs extends com.pulumi.resources.ResourceAr
             $ = new LiveEventEncodingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encodingType Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingType(@Nullable Output<Either<String,LiveEventEncodingType>> encodingType) {
             $.encodingType = encodingType;
             return this;
         }
 
+        /**
+         * @param encodingType Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingType(Either<String,LiveEventEncodingType> encodingType) {
             return encodingType(Output.of(encodingType));
         }
 
+        /**
+         * @param encodingType Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingType(String encodingType) {
             return encodingType(Either.ofLeft(encodingType));
         }
 
+        /**
+         * @param encodingType Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingType(LiveEventEncodingType encodingType) {
             return encodingType(Either.ofRight(encodingType));
         }
 
+        /**
+         * @param keyFrameInterval Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             $.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
+        /**
+         * @param keyFrameInterval Use an ISO 8601 time value between 0.5 to 20 seconds to specify the output fragment length for the video and audio tracks of an encoding live event. For example, use PT2S to indicate 2 seconds. For the video track it also defines the key frame interval, or the length of a GoP (group of pictures).   If this value is not set for an encoding live event, the fragment duration defaults to 2 seconds. The value cannot be set for pass-through live events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFrameInterval(String keyFrameInterval) {
             return keyFrameInterval(Output.of(keyFrameInterval));
         }
 
+        /**
+         * @param presetName The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(@Nullable Output<String> presetName) {
             $.presetName = presetName;
             return this;
         }
 
+        /**
+         * @param presetName The optional encoding preset name, used when encodingType is not None. This value is specified at creation time and cannot be updated. If the encodingType is set to Standard, then the default preset name is ‘Default720p’. Else if the encodingType is set to Premium1080p, the default preset is ‘Default1080p’.
+         * 
+         * @return builder
+         * 
+         */
         public Builder presetName(String presetName) {
             return presetName(Output.of(presetName));
         }
 
+        /**
+         * @param stretchMode Specifies how the input video will be resized to fit the desired output resolution(s). Default is None
+         * 
+         * @return builder
+         * 
+         */
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             $.stretchMode = stretchMode;
             return this;
         }
 
+        /**
+         * @param stretchMode Specifies how the input video will be resized to fit the desired output resolution(s). Default is None
+         * 
+         * @return builder
+         * 
+         */
         public Builder stretchMode(Either<String,StretchMode> stretchMode) {
             return stretchMode(Output.of(stretchMode));
         }
 
+        /**
+         * @param stretchMode Specifies how the input video will be resized to fit the desired output resolution(s). Default is None
+         * 
+         * @return builder
+         * 
+         */
         public Builder stretchMode(String stretchMode) {
             return stretchMode(Either.ofLeft(stretchMode));
         }
 
+        /**
+         * @param stretchMode Specifies how the input video will be resized to fit the desired output resolution(s). Default is None
+         * 
+         * @return builder
+         * 
+         */
         public Builder stretchMode(StretchMode stretchMode) {
             return stretchMode(Either.ofRight(stretchMode));
         }

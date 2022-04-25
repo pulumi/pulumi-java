@@ -27,6 +27,10 @@ public final class DataPoolLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encryption")
     private @Nullable Output<DataPoolEncryptionArgs> encryption;
 
+    /**
+     * @return Encryption properties of a Data Pool location
+     * 
+     */
     public Optional<Output<DataPoolEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -38,6 +42,10 @@ public final class DataPoolLocationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The location name
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -67,20 +75,44 @@ public final class DataPoolLocationArgs extends com.pulumi.resources.ResourceArg
             $ = new DataPoolLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Encryption properties of a Data Pool location
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<DataPoolEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Encryption properties of a Data Pool location
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(DataPoolEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param name The location name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The location name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

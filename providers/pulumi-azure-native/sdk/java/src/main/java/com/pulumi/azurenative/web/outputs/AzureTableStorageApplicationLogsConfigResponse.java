@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureTableStorageApplicationLogsConfigResponse {
-    /**
-     * Log level.
-     * 
-     */
+        /**
+         * @return Log level.
+         * 
+         */
     private final @Nullable String level;
-    /**
-     * SAS URL to an Azure table with add/query/delete permissions.
-     * 
-     */
+        /**
+         * @return SAS URL to an Azure table with add/query/delete permissions.
+         * 
+         */
     private final String sasUrl;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
     }
 
     /**
-     * Log level.
+     * @return Log level.
      * 
-    */
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
-     * SAS URL to an Azure table with add/query/delete permissions.
+     * @return SAS URL to an Azure table with add/query/delete permissions.
      * 
-    */
+     */
     public String sasUrl() {
         return this.sasUrl;
     }

@@ -29,6 +29,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the trigger.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -40,6 +44,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Trigger description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="parentTrigger", required=true)
     private Object parentTrigger;
 
+    /**
+     * @return The parent trigger reference.
+     * 
+     */
     public Object parentTrigger() {
         return this.parentTrigger;
     }
@@ -62,6 +74,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="requestedEndTime", required=true)
     private String requestedEndTime;
 
+    /**
+     * @return The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
+     * 
+     */
     public String requestedEndTime() {
         return this.requestedEndTime;
     }
@@ -73,6 +89,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="requestedStartTime", required=true)
     private String requestedStartTime;
 
+    /**
+     * @return The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
+     * 
+     */
     public String requestedStartTime() {
         return this.requestedStartTime;
     }
@@ -84,6 +104,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="rerunConcurrency", required=true)
     private Integer rerunConcurrency;
 
+    /**
+     * @return The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+     * 
+     */
     public Integer rerunConcurrency() {
         return this.rerunConcurrency;
     }
@@ -95,6 +119,10 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="runtimeState", required=true)
     private String runtimeState;
 
+    /**
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * 
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
@@ -107,6 +135,11 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Trigger type.
+     * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -142,45 +175,100 @@ public final class RerunTumblingWindowTriggerResponse extends com.pulumi.resourc
             $ = new RerunTumblingWindowTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param description Trigger description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param parentTrigger The parent trigger reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentTrigger(Object parentTrigger) {
             $.parentTrigger = parentTrigger;
             return this;
         }
 
+        /**
+         * @param requestedEndTime The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedEndTime(String requestedEndTime) {
             $.requestedEndTime = requestedEndTime;
             return this;
         }
 
+        /**
+         * @param requestedStartTime The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestedStartTime(String requestedStartTime) {
             $.requestedStartTime = requestedStartTime;
             return this;
         }
 
+        /**
+         * @param rerunConcurrency The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rerunConcurrency(Integer rerunConcurrency) {
             $.rerunConcurrency = rerunConcurrency;
             return this;
         }
 
+        /**
+         * @param runtimeState Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeState(String runtimeState) {
             $.runtimeState = runtimeState;
             return this;
         }
 
+        /**
+         * @param type Trigger type.
+         * Expected value is &#39;RerunTumblingWindowTrigger&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

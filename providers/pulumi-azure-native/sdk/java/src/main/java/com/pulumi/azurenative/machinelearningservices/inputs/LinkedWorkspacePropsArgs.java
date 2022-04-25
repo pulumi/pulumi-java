@@ -26,6 +26,10 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
     @Import(name="linkedWorkspaceResourceId")
     private @Nullable Output<String> linkedWorkspaceResourceId;
 
+    /**
+     * @return ResourceId of the link target of the linked workspace.
+     * 
+     */
     public Optional<Output<String>> linkedWorkspaceResourceId() {
         return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
@@ -37,6 +41,10 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
     @Import(name="userAssignedIdentityResourceId")
     private @Nullable Output<String> userAssignedIdentityResourceId;
 
+    /**
+     * @return ResourceId of the user assigned identity for the linked workspace.
+     * 
+     */
     public Optional<Output<String>> userAssignedIdentityResourceId() {
         return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
@@ -66,20 +74,44 @@ public final class LinkedWorkspacePropsArgs extends com.pulumi.resources.Resourc
             $ = new LinkedWorkspacePropsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedWorkspaceResourceId ResourceId of the link target of the linked workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedWorkspaceResourceId(@Nullable Output<String> linkedWorkspaceResourceId) {
             $.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
 
+        /**
+         * @param linkedWorkspaceResourceId ResourceId of the link target of the linked workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedWorkspaceResourceId(String linkedWorkspaceResourceId) {
             return linkedWorkspaceResourceId(Output.of(linkedWorkspaceResourceId));
         }
 
+        /**
+         * @param userAssignedIdentityResourceId ResourceId of the user assigned identity for the linked workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentityResourceId(@Nullable Output<String> userAssignedIdentityResourceId) {
             $.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentityResourceId ResourceId of the user assigned identity for the linked workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentityResourceId(String userAssignedIdentityResourceId) {
             return userAssignedIdentityResourceId(Output.of(userAssignedIdentityResourceId));
         }

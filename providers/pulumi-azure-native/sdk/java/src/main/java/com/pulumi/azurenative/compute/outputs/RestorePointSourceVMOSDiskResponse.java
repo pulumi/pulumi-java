@@ -15,40 +15,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RestorePointSourceVMOSDiskResponse {
-    /**
-     * Gets the caching type.
-     * 
-     */
+        /**
+         * @return Gets the caching type.
+         * 
+         */
     private final @Nullable String caching;
-    /**
-     * Gets the disk restore point Id.
-     * 
-     */
+        /**
+         * @return Gets the disk restore point Id.
+         * 
+         */
     private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
-    /**
-     * Gets the disk size in GB.
-     * 
-     */
+        /**
+         * @return Gets the disk size in GB.
+         * 
+         */
     private final @Nullable Integer diskSizeGB;
-    /**
-     * Gets the disk encryption settings.
-     * 
-     */
+        /**
+         * @return Gets the disk encryption settings.
+         * 
+         */
     private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
-    /**
-     * Gets the managed disk details
-     * 
-     */
+        /**
+         * @return Gets the managed disk details
+         * 
+         */
     private final @Nullable ManagedDiskParametersResponse managedDisk;
-    /**
-     * Gets the disk name.
-     * 
-     */
+        /**
+         * @return Gets the disk name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Gets the Operating System type.
-     * 
-     */
+        /**
+         * @return Gets the Operating System type.
+         * 
+         */
     private final @Nullable String osType;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class RestorePointSourceVMOSDiskResponse {
     }
 
     /**
-     * Gets the caching type.
+     * @return Gets the caching type.
      * 
-    */
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
-     * Gets the disk restore point Id.
+     * @return Gets the disk restore point Id.
      * 
-    */
+     */
     public Optional<ApiEntityReferenceResponse> diskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
     /**
-     * Gets the disk size in GB.
+     * @return Gets the disk size in GB.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * Gets the disk encryption settings.
+     * @return Gets the disk encryption settings.
      * 
-    */
+     */
     public Optional<DiskEncryptionSettingsResponse> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
     /**
-     * Gets the managed disk details
+     * @return Gets the managed disk details
      * 
-    */
+     */
     public Optional<ManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
-     * Gets the disk name.
+     * @return Gets the disk name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets the Operating System type.
+     * @return Gets the Operating System type.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }

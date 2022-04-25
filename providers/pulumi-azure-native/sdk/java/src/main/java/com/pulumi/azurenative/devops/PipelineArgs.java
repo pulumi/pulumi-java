@@ -26,6 +26,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bootstrapConfiguration", required=true)
     private Output<BootstrapConfigurationArgs> bootstrapConfiguration;
 
+    /**
+     * @return Configuration used to bootstrap the Pipeline.
+     * 
+     */
     public Output<BootstrapConfigurationArgs> bootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
@@ -37,6 +41,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineName")
     private @Nullable Output<String> pipelineName;
 
+    /**
+     * @return The name of the Pipeline resource in ARM.
+     * 
+     */
     public Optional<Output<String>> pipelineName() {
         return Optional.ofNullable(this.pipelineName);
     }
@@ -59,6 +71,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pipelineType", required=true)
     private Output<Either<String,PipelineTypeEnum>> pipelineType;
 
+    /**
+     * @return Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+     * 
+     */
     public Output<Either<String,PipelineTypeEnum>> pipelineType() {
         return this.pipelineType;
     }
@@ -70,6 +86,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource Tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,64 +138,148 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bootstrapConfiguration Configuration used to bootstrap the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapConfiguration(Output<BootstrapConfigurationArgs> bootstrapConfiguration) {
             $.bootstrapConfiguration = bootstrapConfiguration;
             return this;
         }
 
+        /**
+         * @param bootstrapConfiguration Configuration used to bootstrap the Pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bootstrapConfiguration(BootstrapConfigurationArgs bootstrapConfiguration) {
             return bootstrapConfiguration(Output.of(bootstrapConfiguration));
         }
 
+        /**
+         * @param location Resource Location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param pipelineName The name of the Pipeline resource in ARM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
             $.pipelineName = pipelineName;
             return this;
         }
 
+        /**
+         * @param pipelineName The name of the Pipeline resource in ARM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(String pipelineName) {
             return pipelineName(Output.of(pipelineName));
         }
 
+        /**
+         * @param pipelineType Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineType(Output<Either<String,PipelineTypeEnum>> pipelineType) {
             $.pipelineType = pipelineType;
             return this;
         }
 
+        /**
+         * @param pipelineType Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineType(Either<String,PipelineTypeEnum> pipelineType) {
             return pipelineType(Output.of(pipelineType));
         }
 
+        /**
+         * @param pipelineType Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineType(String pipelineType) {
             return pipelineType(Either.ofLeft(pipelineType));
         }
 
+        /**
+         * @param pipelineType Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineType(PipelineTypeEnum pipelineType) {
             return pipelineType(Either.ofRight(pipelineType));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource Tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

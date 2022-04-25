@@ -19,6 +19,10 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -30,6 +34,10 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="pipelineName", required=true)
     private String pipelineName;
 
+    /**
+     * @return The pipeline name.
+     * 
+     */
     public String pipelineName() {
         return this.pipelineName;
     }
@@ -41,6 +49,10 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param pipelineName The pipeline name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineName(String pipelineName) {
             $.pipelineName = pipelineName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

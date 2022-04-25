@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SelectorResponse {
-    /**
-     * String of the selector ID.
-     * 
-     */
+        /**
+         * @return String of the selector ID.
+         * 
+         */
     private final String id;
-    /**
-     * List of Target references.
-     * 
-     */
+        /**
+         * @return List of Target references.
+         * 
+         */
     private final List<TargetReferenceResponse> targets;
-    /**
-     * Enum of the selector type.
-     * 
-     */
+        /**
+         * @return Enum of the selector type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SelectorResponse {
     }
 
     /**
-     * String of the selector ID.
+     * @return String of the selector ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of Target references.
+     * @return List of Target references.
      * 
-    */
+     */
     public List<TargetReferenceResponse> targets() {
         return this.targets;
     }
     /**
-     * Enum of the selector type.
+     * @return Enum of the selector type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

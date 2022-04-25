@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GatewayDetailsResponse {
-    /**
-     * Uri of the DMTS cluster.
-     * 
-     */
+        /**
+         * @return Uri of the DMTS cluster.
+         * 
+         */
     private final String dmtsClusterUri;
-    /**
-     * Gateway object id from in the DMTS cluster for the gateway resource.
-     * 
-     */
+        /**
+         * @return Gateway object id from in the DMTS cluster for the gateway resource.
+         * 
+         */
     private final String gatewayObjectId;
-    /**
-     * Gateway resource to be associated with the server.
-     * 
-     */
+        /**
+         * @return Gateway resource to be associated with the server.
+         * 
+         */
     private final @Nullable String gatewayResourceId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class GatewayDetailsResponse {
     }
 
     /**
-     * Uri of the DMTS cluster.
+     * @return Uri of the DMTS cluster.
      * 
-    */
+     */
     public String dmtsClusterUri() {
         return this.dmtsClusterUri;
     }
     /**
-     * Gateway object id from in the DMTS cluster for the gateway resource.
+     * @return Gateway object id from in the DMTS cluster for the gateway resource.
      * 
-    */
+     */
     public String gatewayObjectId() {
         return this.gatewayObjectId;
     }
     /**
-     * Gateway resource to be associated with the server.
+     * @return Gateway resource to be associated with the server.
      * 
-    */
+     */
     public Optional<String> gatewayResourceId() {
         return Optional.ofNullable(this.gatewayResourceId);
     }

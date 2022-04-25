@@ -27,6 +27,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count")
     private @Nullable Output<Object> count;
 
+    /**
+     * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Output<Object>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="intervalInSeconds")
     private @Nullable Output<Integer> intervalInSeconds;
 
+    /**
+     * @return Interval between retries in seconds. Default is 30.
+     * 
+     */
     public Optional<Output<Integer>> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -67,20 +75,44 @@ public final class RetryPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Object> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Object count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param intervalInSeconds Interval between retries in seconds. Default is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds Interval between retries in seconds. Default is 30.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(Integer intervalInSeconds) {
             return intervalInSeconds(Output.of(intervalInSeconds));
         }

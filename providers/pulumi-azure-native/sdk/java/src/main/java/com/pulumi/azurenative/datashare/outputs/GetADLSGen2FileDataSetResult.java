@@ -10,61 +10,61 @@ import java.util.Objects;
 
 @CustomType
 public final class GetADLSGen2FileDataSetResult {
-    /**
-     * Unique id for identifying a data set resource
-     * 
-     */
+        /**
+         * @return Unique id for identifying a data set resource
+         * 
+         */
     private final String dataSetId;
-    /**
-     * File path within the file system.
-     * 
-     */
+        /**
+         * @return File path within the file system.
+         * 
+         */
     private final String filePath;
-    /**
-     * File system to which the file belongs.
-     * 
-     */
+        /**
+         * @return File system to which the file belongs.
+         * 
+         */
     private final String fileSystem;
-    /**
-     * The resource id of the azure resource
-     * 
-     */
+        /**
+         * @return The resource id of the azure resource
+         * 
+         */
     private final String id;
-    /**
-     * Kind of data set.
-     * Expected value is &#39;AdlsGen2File&#39;.
-     * 
-     */
+        /**
+         * @return Kind of data set.
+         * Expected value is &#39;AdlsGen2File&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the azure resource
-     * 
-     */
+        /**
+         * @return Name of the azure resource
+         * 
+         */
     private final String name;
-    /**
-     * Resource group of storage account
-     * 
-     */
+        /**
+         * @return Resource group of storage account
+         * 
+         */
     private final String resourceGroup;
-    /**
-     * Storage account name of the source data set
-     * 
-     */
+        /**
+         * @return Storage account name of the source data set
+         * 
+         */
     private final String storageAccountName;
-    /**
-     * Subscription id of storage account
-     * 
-     */
+        /**
+         * @return Subscription id of storage account
+         * 
+         */
     private final String subscriptionId;
-    /**
-     * System Data of the Azure resource.
-     * 
-     */
+        /**
+         * @return System Data of the Azure resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Type of the azure resource
-     * 
-     */
+        /**
+         * @return Type of the azure resource
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -94,80 +94,80 @@ public final class GetADLSGen2FileDataSetResult {
     }
 
     /**
-     * Unique id for identifying a data set resource
+     * @return Unique id for identifying a data set resource
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * File path within the file system.
+     * @return File path within the file system.
      * 
-    */
+     */
     public String filePath() {
         return this.filePath;
     }
     /**
-     * File system to which the file belongs.
+     * @return File system to which the file belongs.
      * 
-    */
+     */
     public String fileSystem() {
         return this.fileSystem;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of data set.
+     * @return Kind of data set.
      * Expected value is &#39;AdlsGen2File&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource group of storage account
+     * @return Resource group of storage account
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * Storage account name of the source data set
+     * @return Storage account name of the source data set
      * 
-    */
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
-     * Subscription id of storage account
+     * @return Subscription id of storage account
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

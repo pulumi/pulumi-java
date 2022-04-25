@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BatchAccountIdentityResponse {
-    /**
-     * The principal id of the Batch account. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The principal id of the Batch account. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of identity used for the Batch account.
-     * 
-     */
+        /**
+         * @return The type of identity used for the Batch account.
+         * 
+         */
     private final String type;
-    /**
-     * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
-     * 
-     */
+        /**
+         * @return The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         */
     private final @Nullable Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class BatchAccountIdentityResponse {
     }
 
     /**
-     * The principal id of the Batch account. This property will only be provided for a system assigned identity.
+     * @return The principal id of the Batch account. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
+     * @return The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the Batch account.
+     * @return The type of identity used for the Batch account.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IntegrationRuntimeReferenceResponse {
-    /**
-     * Arguments for integration runtime.
-     * 
-     */
+        /**
+         * @return Arguments for integration runtime.
+         * 
+         */
     private final @Nullable Map<String,Object> parameters;
-    /**
-     * Reference integration runtime name.
-     * 
-     */
+        /**
+         * @return Reference integration runtime name.
+         * 
+         */
     private final String referenceName;
-    /**
-     * Type of integration runtime.
-     * 
-     */
+        /**
+         * @return Type of integration runtime.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class IntegrationRuntimeReferenceResponse {
     }
 
     /**
-     * Arguments for integration runtime.
+     * @return Arguments for integration runtime.
      * 
-    */
+     */
     public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Reference integration runtime name.
+     * @return Reference integration runtime name.
      * 
-    */
+     */
     public String referenceName() {
         return this.referenceName;
     }
     /**
-     * Type of integration runtime.
+     * @return Type of integration runtime.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

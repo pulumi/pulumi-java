@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GalleryIdentifierResponse {
-    /**
-     * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
-     * 
-     */
+        /**
+         * @return The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
+         * 
+         */
     private final String uniqueName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GalleryIdentifierResponse {
     }
 
     /**
-     * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
+     * @return The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
      * 
-    */
+     */
     public String uniqueName() {
         return this.uniqueName;
     }

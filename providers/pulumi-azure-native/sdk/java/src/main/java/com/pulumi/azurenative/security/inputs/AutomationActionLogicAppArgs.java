@@ -28,6 +28,11 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
     @Import(name="actionType", required=true)
     private Output<String> actionType;
 
+    /**
+     * @return The type of the action that will be triggered by the Automation
+     * Expected value is &#39;LogicApp&#39;.
+     * 
+     */
     public Output<String> actionType() {
         return this.actionType;
     }
@@ -39,6 +44,10 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
     @Import(name="logicAppResourceId")
     private @Nullable Output<String> logicAppResourceId;
 
+    /**
+     * @return The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+     * 
+     */
     public Optional<Output<String>> logicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
@@ -50,6 +59,10 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return The Logic App trigger URI endpoint (it will not be included in any response).
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -80,29 +93,67 @@ public final class AutomationActionLogicAppArgs extends com.pulumi.resources.Res
             $ = new AutomationActionLogicAppArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The type of the action that will be triggered by the Automation
+         * Expected value is &#39;LogicApp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(Output<String> actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param actionType The type of the action that will be triggered by the Automation
+         * Expected value is &#39;LogicApp&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             return actionType(Output.of(actionType));
         }
 
+        /**
+         * @param logicAppResourceId The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicAppResourceId(@Nullable Output<String> logicAppResourceId) {
             $.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
+        /**
+         * @param logicAppResourceId The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicAppResourceId(String logicAppResourceId) {
             return logicAppResourceId(Output.of(logicAppResourceId));
         }
 
+        /**
+         * @param uri The Logic App trigger URI endpoint (it will not be included in any response).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The Logic App trigger URI endpoint (it will not be included in any response).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIpFirewallRuleResult {
-    /**
-     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
-     * 
-     */
+        /**
+         * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+         * 
+         */
     private final @Nullable String endIpAddress;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Resource provisioning state
-     * 
-     */
+        /**
+         * @return Resource provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The start IP address of the firewall rule. Must be IPv4 format
-     * 
-     */
+        /**
+         * @return The start IP address of the firewall rule. Must be IPv4 format
+         * 
+         */
     private final @Nullable String startIpAddress;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetIpFirewallRuleResult {
     }
 
     /**
-     * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+     * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
      * 
-    */
+     */
     public Optional<String> endIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource provisioning state
+     * @return Resource provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The start IP address of the firewall rule. Must be IPv4 format
+     * @return The start IP address of the firewall rule. Must be IPv4 format
      * 
-    */
+     */
     public Optional<String> startIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

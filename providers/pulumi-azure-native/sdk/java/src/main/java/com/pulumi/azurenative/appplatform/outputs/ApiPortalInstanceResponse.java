@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApiPortalInstanceResponse {
-    /**
-     * Name of the API portal instance
-     * 
-     */
+        /**
+         * @return Name of the API portal instance
+         * 
+         */
     private final String name;
-    /**
-     * Status of the API portal instance
-     * 
-     */
+        /**
+         * @return Status of the API portal instance
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApiPortalInstanceResponse {
     }
 
     /**
-     * Name of the API portal instance
+     * @return Name of the API portal instance
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the API portal instance
+     * @return Status of the API portal instance
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

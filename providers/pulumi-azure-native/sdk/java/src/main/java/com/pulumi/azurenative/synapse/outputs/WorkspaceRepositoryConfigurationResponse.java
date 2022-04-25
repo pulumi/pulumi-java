@@ -11,50 +11,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkspaceRepositoryConfigurationResponse {
-    /**
-     * Account name
-     * 
-     */
+        /**
+         * @return Account name
+         * 
+         */
     private final @Nullable String accountName;
-    /**
-     * Collaboration branch
-     * 
-     */
+        /**
+         * @return Collaboration branch
+         * 
+         */
     private final @Nullable String collaborationBranch;
-    /**
-     * GitHub Enterprise host name. For example: https://github.mydomain.com
-     * 
-     */
+        /**
+         * @return GitHub Enterprise host name. For example: https://github.mydomain.com
+         * 
+         */
     private final @Nullable String hostName;
-    /**
-     * The last commit ID
-     * 
-     */
+        /**
+         * @return The last commit ID
+         * 
+         */
     private final @Nullable String lastCommitId;
-    /**
-     * VSTS project name
-     * 
-     */
+        /**
+         * @return VSTS project name
+         * 
+         */
     private final @Nullable String projectName;
-    /**
-     * Repository name
-     * 
-     */
+        /**
+         * @return Repository name
+         * 
+         */
     private final @Nullable String repositoryName;
-    /**
-     * Root folder to use in the repository
-     * 
-     */
+        /**
+         * @return Root folder to use in the repository
+         * 
+         */
     private final @Nullable String rootFolder;
-    /**
-     * The VSTS tenant ID
-     * 
-     */
+        /**
+         * @return The VSTS tenant ID
+         * 
+         */
     private final @Nullable String tenantId;
-    /**
-     * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
-     * 
-     */
+        /**
+         * @return Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class WorkspaceRepositoryConfigurationResponse {
     }
 
     /**
-     * Account name
+     * @return Account name
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * Collaboration branch
+     * @return Collaboration branch
      * 
-    */
+     */
     public Optional<String> collaborationBranch() {
         return Optional.ofNullable(this.collaborationBranch);
     }
     /**
-     * GitHub Enterprise host name. For example: https://github.mydomain.com
+     * @return GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * The last commit ID
+     * @return The last commit ID
      * 
-    */
+     */
     public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
-     * VSTS project name
+     * @return VSTS project name
      * 
-    */
+     */
     public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
     /**
-     * Repository name
+     * @return Repository name
      * 
-    */
+     */
     public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
     /**
-     * Root folder to use in the repository
+     * @return Root folder to use in the repository
      * 
-    */
+     */
     public Optional<String> rootFolder() {
         return Optional.ofNullable(this.rootFolder);
     }
     /**
-     * The VSTS tenant ID
+     * @return The VSTS tenant ID
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
+     * @return Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

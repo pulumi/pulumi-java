@@ -23,6 +23,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="accessControlRecordName")
     private @Nullable Output<String> accessControlRecordName;
 
+    /**
+     * @return The name of the access control record.
+     * 
+     */
     public Optional<Output<String>> accessControlRecordName() {
         return Optional.ofNullable(this.accessControlRecordName);
     }
@@ -34,6 +38,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="initiatorName", required=true)
     private Output<String> initiatorName;
 
+    /**
+     * @return The iSCSI initiator name (IQN).
+     * 
+     */
     public Output<String> initiatorName() {
         return this.initiatorName;
     }
@@ -45,6 +53,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="kind")
     private @Nullable Output<Kind> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     * 
+     */
     public Optional<Output<Kind>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -56,6 +68,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="managerName", required=true)
     private Output<String> managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public Output<String> managerName() {
         return this.managerName;
     }
@@ -67,6 +83,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
             $ = new AccessControlRecordArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessControlRecordName The name of the access control record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlRecordName(@Nullable Output<String> accessControlRecordName) {
             $.accessControlRecordName = accessControlRecordName;
             return this;
         }
 
+        /**
+         * @param accessControlRecordName The name of the access control record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessControlRecordName(String accessControlRecordName) {
             return accessControlRecordName(Output.of(accessControlRecordName));
         }
 
+        /**
+         * @param initiatorName The iSCSI initiator name (IQN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorName(Output<String> initiatorName) {
             $.initiatorName = initiatorName;
             return this;
         }
 
+        /**
+         * @param initiatorName The iSCSI initiator name (IQN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder initiatorName(String initiatorName) {
             return initiatorName(Output.of(initiatorName));
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Kind> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The Kind of the object. Currently only Series8000 is supported
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(Output<String> managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             return managerName(Output.of(managerName));
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

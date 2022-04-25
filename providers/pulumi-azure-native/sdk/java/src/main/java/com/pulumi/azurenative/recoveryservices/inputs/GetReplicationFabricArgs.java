@@ -19,6 +19,10 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Fabric name.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -30,6 +34,10 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -71,16 +83,34 @@ public final class GetReplicationFabricArgs extends com.pulumi.resources.InvokeA
             $ = new GetReplicationFabricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

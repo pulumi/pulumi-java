@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResultStatisticsResponse {
-    /**
-     * The number of rows that were returned by the search job.
-     * 
-     */
+        /**
+         * @return The number of rows that were returned by the search job.
+         * 
+         */
     private final Integer ingestedRecords;
-    /**
-     * Search job completion percentage.
-     * 
-     */
+        /**
+         * @return Search job completion percentage.
+         * 
+         */
     private final Double progress;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ResultStatisticsResponse {
     }
 
     /**
-     * The number of rows that were returned by the search job.
+     * @return The number of rows that were returned by the search job.
      * 
-    */
+     */
     public Integer ingestedRecords() {
         return this.ingestedRecords;
     }
     /**
-     * Search job completion percentage.
+     * @return Search job completion percentage.
      * 
-    */
+     */
     public Double progress() {
         return this.progress;
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PacketCaptureFilterResponse {
-    /**
-     * Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     * 
-     */
+        /**
+         * @return Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         */
     private final @Nullable String localIPAddress;
-    /**
-     * Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     * 
-     */
+        /**
+         * @return Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         */
     private final @Nullable String localPort;
-    /**
-     * Protocol to be filtered on.
-     * 
-     */
+        /**
+         * @return Protocol to be filtered on.
+         * 
+         */
     private final @Nullable String protocol;
-    /**
-     * Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     * 
-     */
+        /**
+         * @return Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         */
     private final @Nullable String remoteIPAddress;
-    /**
-     * Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
-     * 
-     */
+        /**
+         * @return Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         */
     private final @Nullable String remotePort;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class PacketCaptureFilterResponse {
     }
 
     /**
-     * Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * @return Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
-    */
+     */
     public Optional<String> localIPAddress() {
         return Optional.ofNullable(this.localIPAddress);
     }
     /**
-     * Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * @return Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
-    */
+     */
     public Optional<String> localPort() {
         return Optional.ofNullable(this.localPort);
     }
     /**
-     * Protocol to be filtered on.
+     * @return Protocol to be filtered on.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * @return Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
-    */
+     */
     public Optional<String> remoteIPAddress() {
         return Optional.ofNullable(this.remoteIPAddress);
     }
     /**
-     * Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * @return Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
-    */
+     */
     public Optional<String> remotePort() {
         return Optional.ofNullable(this.remotePort);
     }

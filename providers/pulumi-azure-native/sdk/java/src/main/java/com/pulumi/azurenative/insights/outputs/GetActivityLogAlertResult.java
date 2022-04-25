@@ -16,55 +16,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetActivityLogAlertResult {
-    /**
-     * The actions that will activate when the condition is met.
-     * 
-     */
+        /**
+         * @return The actions that will activate when the condition is met.
+         * 
+         */
     private final ActionListResponse actions;
-    /**
-     * The condition that will cause this alert to activate.
-     * 
-     */
+        /**
+         * @return The condition that will cause this alert to activate.
+         * 
+         */
     private final AlertRuleAllOfConditionResponse condition;
-    /**
-     * A description of this Activity Log Alert rule.
-     * 
-     */
+        /**
+         * @return A description of this Activity Log Alert rule.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
-     * 
-     */
+        /**
+         * @return Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The resource Id.
-     * 
-     */
+        /**
+         * @return The resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
-     * 
-     */
+        /**
+         * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
-     * 
-     */
+        /**
+         * @return A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+         * 
+         */
     private final List<String> scopes;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -92,72 +92,72 @@ public final class GetActivityLogAlertResult {
     }
 
     /**
-     * The actions that will activate when the condition is met.
+     * @return The actions that will activate when the condition is met.
      * 
-    */
+     */
     public ActionListResponse actions() {
         return this.actions;
     }
     /**
-     * The condition that will cause this alert to activate.
+     * @return The condition that will cause this alert to activate.
      * 
-    */
+     */
     public AlertRuleAllOfConditionResponse condition() {
         return this.condition;
     }
     /**
-     * A description of this Activity Log Alert rule.
+     * @return A description of this Activity Log Alert rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+     * @return Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The resource Id.
+     * @return The resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
+     * @return The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be &#39;global&#39;.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+     * @return A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

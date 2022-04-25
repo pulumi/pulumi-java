@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CommonEncryptionCbcsResponse {
-    /**
-     * Representing which tracks should not be encrypted
-     * 
-     */
+        /**
+         * @return Representing which tracks should not be encrypted
+         * 
+         */
     private final @Nullable List<TrackSelectionResponse> clearTracks;
-    /**
-     * Representing default content key for each encryption scheme and separate content keys for specific tracks
-     * 
-     */
+        /**
+         * @return Representing default content key for each encryption scheme and separate content keys for specific tracks
+         * 
+         */
     private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
-    /**
-     * Configuration of DRMs for current encryption scheme
-     * 
-     */
+        /**
+         * @return Configuration of DRMs for current encryption scheme
+         * 
+         */
     private final @Nullable CbcsDrmConfigurationResponse drm;
-    /**
-     * Representing supported protocols
-     * 
-     */
+        /**
+         * @return Representing supported protocols
+         * 
+         */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     @CustomType.Constructor
@@ -49,30 +49,30 @@ public final class CommonEncryptionCbcsResponse {
     }
 
     /**
-     * Representing which tracks should not be encrypted
+     * @return Representing which tracks should not be encrypted
      * 
-    */
+     */
     public List<TrackSelectionResponse> clearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
     }
     /**
-     * Representing default content key for each encryption scheme and separate content keys for specific tracks
+     * @return Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
-    */
+     */
     public Optional<StreamingPolicyContentKeysResponse> contentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
     /**
-     * Configuration of DRMs for current encryption scheme
+     * @return Configuration of DRMs for current encryption scheme
      * 
-    */
+     */
     public Optional<CbcsDrmConfigurationResponse> drm() {
         return Optional.ofNullable(this.drm);
     }
     /**
-     * Representing supported protocols
+     * @return Representing supported protocols
      * 
-    */
+     */
     public Optional<EnabledProtocolsResponse> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }

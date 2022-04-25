@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClientGroupInfoResponse {
-    /**
-     * The AAD security group id.
-     * 
-     */
+        /**
+         * @return The AAD security group id.
+         * 
+         */
     private final @Nullable String groupId;
-    /**
-     * The AAD security group name.
-     * 
-     */
+        /**
+         * @return The AAD security group name.
+         * 
+         */
     private final @Nullable String groupName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ClientGroupInfoResponse {
     }
 
     /**
-     * The AAD security group id.
+     * @return The AAD security group id.
      * 
-    */
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * The AAD security group name.
+     * @return The AAD security group name.
      * 
-    */
+     */
     public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }

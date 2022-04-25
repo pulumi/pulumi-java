@@ -26,6 +26,10 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
     @Import(name="actions", required=true)
     private ManagementPolicyActionResponse actions;
 
+    /**
+     * @return An object that defines the action set.
+     * 
+     */
     public ManagementPolicyActionResponse actions() {
         return this.actions;
     }
@@ -37,6 +41,10 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
     @Import(name="filters")
     private @Nullable ManagementPolicyFilterResponse filters;
 
+    /**
+     * @return An object that defines the filter set.
+     * 
+     */
     public Optional<ManagementPolicyFilterResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -66,11 +74,23 @@ public final class ManagementPolicyDefinitionResponse extends com.pulumi.resourc
             $ = new ManagementPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions An object that defines the action set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(ManagementPolicyActionResponse actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param filters An object that defines the filter set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable ManagementPolicyFilterResponse filters) {
             $.filters = filters;
             return this;

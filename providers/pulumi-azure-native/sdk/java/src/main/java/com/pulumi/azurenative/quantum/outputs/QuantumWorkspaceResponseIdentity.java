@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class QuantumWorkspaceResponseIdentity {
-    /**
-     * The principal ID of resource identity.
-     * 
-     */
+        /**
+         * @return The principal ID of resource identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant ID of resource.
-     * 
-     */
+        /**
+         * @return The tenant ID of resource.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The identity type.
-     * 
-     */
+        /**
+         * @return The identity type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class QuantumWorkspaceResponseIdentity {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

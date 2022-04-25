@@ -23,6 +23,10 @@ public final class ApplicationDeploymentPolicyResponse extends com.pulumi.resour
     @Import(name="deploymentMode", required=true)
     private String deploymentMode;
 
+    /**
+     * @return The managed application deployment mode.
+     * 
+     */
     public String deploymentMode() {
         return this.deploymentMode;
     }
@@ -51,6 +55,12 @@ public final class ApplicationDeploymentPolicyResponse extends com.pulumi.resour
             $ = new ApplicationDeploymentPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentMode The managed application deployment mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentMode(String deploymentMode) {
             $.deploymentMode = deploymentMode;
             return this;

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointPropertiesResponse {
-    /**
-     * The name of the endpoint.
-     * 
-     */
+        /**
+         * @return The name of the endpoint.
+         * 
+         */
     private final String name;
-    /**
-     * Port used by the container.
-     * 
-     */
+        /**
+         * @return Port used by the container.
+         * 
+         */
     private final @Nullable Integer port;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class EndpointPropertiesResponse {
     }
 
     /**
-     * The name of the endpoint.
+     * @return The name of the endpoint.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Port used by the container.
+     * @return Port used by the container.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }

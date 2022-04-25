@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DockerImageResponse {
-    /**
-     * Image name of a custom base image.
-     * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
-     * 
-     */
+        /**
+         * @return Image name of a custom base image.
+         * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
+         * 
+         */
     private final String dockerImageUri;
-    /**
-     * Enum to determine docker specification type. Must be either Build or Image.
-     * Expected value is &#39;Image&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine docker specification type. Must be either Build or Image.
+         * Expected value is &#39;Image&#39;.
+         * 
+         */
     private final String dockerSpecificationType;
-    /**
-     * The platform information of the docker image.
-     * 
-     */
+        /**
+         * @return The platform information of the docker image.
+         * 
+         */
     private final @Nullable DockerImagePlatformResponse platform;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class DockerImageResponse {
     }
 
     /**
-     * Image name of a custom base image.
+     * @return Image name of a custom base image.
      * &lt;seealso href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image&#34; /&gt;
      * 
-    */
+     */
     public String dockerImageUri() {
         return this.dockerImageUri;
     }
     /**
-     * Enum to determine docker specification type. Must be either Build or Image.
+     * @return Enum to determine docker specification type. Must be either Build or Image.
      * Expected value is &#39;Image&#39;.
      * 
-    */
+     */
     public String dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
     /**
-     * The platform information of the docker image.
+     * @return The platform information of the docker image.
      * 
-    */
+     */
     public Optional<DockerImagePlatformResponse> platform() {
         return Optional.ofNullable(this.platform);
     }

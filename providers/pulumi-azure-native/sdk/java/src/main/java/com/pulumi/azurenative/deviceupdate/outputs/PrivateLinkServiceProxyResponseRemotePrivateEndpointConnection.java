@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection {
-    /**
-     * Remote private endpoint connection ID.
-     * 
-     */
+        /**
+         * @return Remote private endpoint connection ID.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
     }
 
     /**
-     * Remote private endpoint connection ID.
+     * @return Remote private endpoint connection ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -23,6 +23,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="columnName", required=true)
     private Output<String> columnName;
 
+    /**
+     * @return The name of the column.
+     * 
+     */
     public Output<String> columnName() {
         return this.columnName;
     }
@@ -34,6 +38,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -45,6 +53,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="informationType")
     private @Nullable Output<String> informationType;
 
+    /**
+     * @return The information type.
+     * 
+     */
     public Optional<Output<String>> informationType() {
         return Optional.ofNullable(this.informationType);
     }
@@ -56,6 +68,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="informationTypeId")
     private @Nullable Output<String> informationTypeId;
 
+    /**
+     * @return The information type ID.
+     * 
+     */
     public Optional<Output<String>> informationTypeId() {
         return Optional.ofNullable(this.informationTypeId);
     }
@@ -67,6 +83,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="labelId")
     private @Nullable Output<String> labelId;
 
+    /**
+     * @return The label ID.
+     * 
+     */
     public Optional<Output<String>> labelId() {
         return Optional.ofNullable(this.labelId);
     }
@@ -78,6 +98,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="labelName")
     private @Nullable Output<String> labelName;
 
+    /**
+     * @return The label name.
+     * 
+     */
     public Optional<Output<String>> labelName() {
         return Optional.ofNullable(this.labelName);
     }
@@ -89,6 +113,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="managedInstanceName", required=true)
     private Output<String> managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -107,6 +135,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -118,6 +150,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="schemaName", required=true)
     private Output<String> schemaName;
 
+    /**
+     * @return The name of the schema.
+     * 
+     */
     public Output<String> schemaName() {
         return this.schemaName;
     }
@@ -129,6 +165,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="sensitivityLabelSource")
     private @Nullable Output<String> sensitivityLabelSource;
 
+    /**
+     * @return The source of the sensitivity label.
+     * 
+     */
     public Optional<Output<String>> sensitivityLabelSource() {
         return Optional.ofNullable(this.sensitivityLabelSource);
     }
@@ -140,6 +180,10 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
     @Import(name="tableName", required=true)
     private Output<String> tableName;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Output<String> tableName() {
         return this.tableName;
     }
@@ -179,65 +223,149 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
             $ = new ManagedDatabaseSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(Output<String> columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             return columnName(Output.of(columnName));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param informationType The information type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationType(@Nullable Output<String> informationType) {
             $.informationType = informationType;
             return this;
         }
 
+        /**
+         * @param informationType The information type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationType(String informationType) {
             return informationType(Output.of(informationType));
         }
 
+        /**
+         * @param informationTypeId The information type ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationTypeId(@Nullable Output<String> informationTypeId) {
             $.informationTypeId = informationTypeId;
             return this;
         }
 
+        /**
+         * @param informationTypeId The information type ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationTypeId(String informationTypeId) {
             return informationTypeId(Output.of(informationTypeId));
         }
 
+        /**
+         * @param labelId The label ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelId(@Nullable Output<String> labelId) {
             $.labelId = labelId;
             return this;
         }
 
+        /**
+         * @param labelId The label ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelId(String labelId) {
             return labelId(Output.of(labelId));
         }
 
+        /**
+         * @param labelName The label name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(@Nullable Output<String> labelName) {
             $.labelName = labelName;
             return this;
         }
 
+        /**
+         * @param labelName The label name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             return labelName(Output.of(labelName));
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(Output<String> managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             return managedInstanceName(Output.of(managedInstanceName));
         }
@@ -251,38 +379,86 @@ public final class ManagedDatabaseSensitivityLabelArgs extends com.pulumi.resour
             return rank(Output.of(rank));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitivityLabelSource(@Nullable Output<String> sensitivityLabelSource) {
             $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             return sensitivityLabelSource(Output.of(sensitivityLabelSource));
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }

@@ -25,6 +25,10 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="attributes", required=true)
     private List<String> attributes;
 
+    /**
+     * @return Attributes for the product system.
+     * 
+     */
     public List<String> attributes() {
         return this.attributes;
     }
@@ -36,6 +40,10 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="descriptionType", required=true)
     private String descriptionType;
 
+    /**
+     * @return Type of description.
+     * 
+     */
     public String descriptionType() {
         return this.descriptionType;
     }
@@ -47,6 +55,10 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keywords", required=true)
     private List<String> keywords;
 
+    /**
+     * @return Keywords for the product system.
+     * 
+     */
     public List<String> keywords() {
         return this.keywords;
     }
@@ -58,6 +70,10 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="links", required=true)
     private List<LinkResponse> links;
 
+    /**
+     * @return Links for the product system.
+     * 
+     */
     public List<LinkResponse> links() {
         return this.links;
     }
@@ -69,6 +85,10 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="longDescription", required=true)
     private String longDescription;
 
+    /**
+     * @return Long description of the product system.
+     * 
+     */
     public String longDescription() {
         return this.longDescription;
     }
@@ -80,6 +100,10 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shortDescription", required=true)
     private String shortDescription;
 
+    /**
+     * @return Short description of the product system.
+     * 
+     */
     public String shortDescription() {
         return this.shortDescription;
     }
@@ -113,43 +137,97 @@ public final class DescriptionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Attributes for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(List<String> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Attributes for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(String... attributes) {
             return attributes(List.of(attributes));
         }
 
+        /**
+         * @param descriptionType Type of description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptionType(String descriptionType) {
             $.descriptionType = descriptionType;
             return this;
         }
 
+        /**
+         * @param keywords Keywords for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(List<String> keywords) {
             $.keywords = keywords;
             return this;
         }
 
+        /**
+         * @param keywords Keywords for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keywords(String... keywords) {
             return keywords(List.of(keywords));
         }
 
+        /**
+         * @param links Links for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(List<LinkResponse> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links Links for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(LinkResponse... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param longDescription Long description of the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder longDescription(String longDescription) {
             $.longDescription = longDescription;
             return this;
         }
 
+        /**
+         * @param shortDescription Short description of the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shortDescription(String shortDescription) {
             $.shortDescription = shortDescription;
             return this;

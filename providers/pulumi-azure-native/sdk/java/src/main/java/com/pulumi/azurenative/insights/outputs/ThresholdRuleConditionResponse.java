@@ -15,36 +15,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ThresholdRuleConditionResponse {
-    /**
-     * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
-     * 
-     */
+        /**
+         * @return the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+         * 
+         */
     private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
-    /**
-     * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
-     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#39;.
-     * 
-     */
+        /**
+         * @return specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * the operator used to compare the data and the threshold.
-     * 
-     */
+        /**
+         * @return the operator used to compare the data and the threshold.
+         * 
+         */
     private final String operator;
-    /**
-     * the threshold value that activates the alert.
-     * 
-     */
+        /**
+         * @return the threshold value that activates the alert.
+         * 
+         */
     private final Double threshold;
-    /**
-     * the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
-     * 
-     */
+        /**
+         * @return the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+         * 
+         */
     private final @Nullable String timeAggregation;
-    /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
-     * 
-     */
+        /**
+         * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+         * 
+         */
     private final @Nullable String windowSize;
 
     @CustomType.Constructor
@@ -64,45 +64,45 @@ public final class ThresholdRuleConditionResponse {
     }
 
     /**
-     * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
+     * @return the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
-    */
+     */
     public Optional<Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse>> dataSource() {
         return Optional.ofNullable(this.dataSource);
     }
     /**
-     * specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
+     * @return specifies the type of condition. This can be one of three types: ManagementEventRuleCondition (occurrences of management events), LocationThresholdRuleCondition (based on the number of failures of a web test), and ThresholdRuleCondition (based on the threshold of a metric).
      * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * the operator used to compare the data and the threshold.
+     * @return the operator used to compare the data and the threshold.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * the threshold value that activates the alert.
+     * @return the threshold value that activates the alert.
      * 
-    */
+     */
     public Double threshold() {
         return this.threshold;
     }
     /**
-     * the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+     * @return the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
      * 
-    */
+     */
     public Optional<String> timeAggregation() {
         return Optional.ofNullable(this.timeAggregation);
     }
     /**
-     * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
+     * @return the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
-    */
+     */
     public Optional<String> windowSize() {
         return Optional.ofNullable(this.windowSize);
     }

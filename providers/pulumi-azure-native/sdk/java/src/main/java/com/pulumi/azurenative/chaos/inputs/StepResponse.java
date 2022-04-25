@@ -25,6 +25,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="branches", required=true)
     private List<BranchResponse> branches;
 
+    /**
+     * @return List of branches.
+     * 
+     */
     public List<BranchResponse> branches() {
         return this.branches;
     }
@@ -36,6 +40,10 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return String of the step name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -65,15 +73,33 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branches List of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(List<BranchResponse> branches) {
             $.branches = branches;
             return this;
         }
 
+        /**
+         * @param branches List of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(BranchResponse... branches) {
             return branches(List.of(branches));
         }
 
+        /**
+         * @param name String of the step name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

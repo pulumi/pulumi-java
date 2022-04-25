@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkProfileResponse {
-    /**
-     * Resource id of the Virtual Network.
-     * 
-     */
+        /**
+         * @return Resource id of the Virtual Network.
+         * 
+         */
     private final String id;
-    /**
-     * Name of the Virtual Network (read-only).
-     * 
-     */
+        /**
+         * @return Name of the Virtual Network (read-only).
+         * 
+         */
     private final String name;
-    /**
-     * Subnet within the Virtual Network.
-     * 
-     */
+        /**
+         * @return Subnet within the Virtual Network.
+         * 
+         */
     private final @Nullable String subnet;
-    /**
-     * Resource type of the Virtual Network (read-only).
-     * 
-     */
+        /**
+         * @return Resource type of the Virtual Network (read-only).
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class VirtualNetworkProfileResponse {
     }
 
     /**
-     * Resource id of the Virtual Network.
+     * @return Resource id of the Virtual Network.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the Virtual Network (read-only).
+     * @return Name of the Virtual Network (read-only).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Subnet within the Virtual Network.
+     * @return Subnet within the Virtual Network.
      * 
-    */
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Resource type of the Virtual Network (read-only).
+     * @return Resource type of the Virtual Network (read-only).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

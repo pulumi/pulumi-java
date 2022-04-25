@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNetworkResponse {
-    /**
-     * can be used in vm creation/deletion
-     * 
-     */
+        /**
+         * @return can be used in vm creation/deletion
+         * 
+         */
     private final Boolean assignable;
-    /**
-     * virtual network id (privateCloudId:vsphereId)
-     * 
-     */
+        /**
+         * @return virtual network id (privateCloudId:vsphereId)
+         * 
+         */
     private final String id;
-    /**
-     * Azure region
-     * 
-     */
+        /**
+         * @return Azure region
+         * 
+         */
     private final String location;
-    /**
-     * {VirtualNetworkName}
-     * 
-     */
+        /**
+         * @return {VirtualNetworkName}
+         * 
+         */
     private final String name;
-    /**
-     * The Private Cloud id
-     * 
-     */
+        /**
+         * @return The Private Cloud id
+         * 
+         */
     private final String privateCloudId;
-    /**
-     * {resourceProviderNamespace}/{resourceType}
-     * 
-     */
+        /**
+         * @return {resourceProviderNamespace}/{resourceType}
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class VirtualNetworkResponse {
     }
 
     /**
-     * can be used in vm creation/deletion
+     * @return can be used in vm creation/deletion
      * 
-    */
+     */
     public Boolean assignable() {
         return this.assignable;
     }
     /**
-     * virtual network id (privateCloudId:vsphereId)
+     * @return virtual network id (privateCloudId:vsphereId)
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure region
+     * @return Azure region
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * {VirtualNetworkName}
+     * @return {VirtualNetworkName}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Private Cloud id
+     * @return The Private Cloud id
      * 
-    */
+     */
     public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

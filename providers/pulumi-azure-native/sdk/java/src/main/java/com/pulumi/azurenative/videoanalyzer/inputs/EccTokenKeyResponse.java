@@ -24,6 +24,10 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="alg", required=true)
     private String alg;
 
+    /**
+     * @return Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+     * 
+     */
     public String alg() {
         return this.alg;
     }
@@ -35,6 +39,10 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kid", required=true)
     private String kid;
 
+    /**
+     * @return JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+     * 
+     */
     public String kid() {
         return this.kid;
     }
@@ -47,6 +55,11 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -58,6 +71,10 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="x", required=true)
     private String x;
 
+    /**
+     * @return X coordinate.
+     * 
+     */
     public String x() {
         return this.x;
     }
@@ -69,6 +86,10 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="y", required=true)
     private String y;
 
+    /**
+     * @return Y coordinate.
+     * 
+     */
     public String y() {
         return this.y;
     }
@@ -101,26 +122,57 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EccTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alg Elliptical curve algorithm to be used: ES256, ES384 or ES512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alg(String alg) {
             $.alg = alg;
             return this;
         }
 
+        /**
+         * @param kid JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kid(String kid) {
             $.kid = kid;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EccTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param x X coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(String x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param y Y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(String y) {
             $.y = y;
             return this;

@@ -11,36 +11,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventHubOutputDataSourceResponse {
-    /**
-     * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String eventHubName;
-    /**
-     * The key/column that is used to determine to which partition to send event data.
-     * 
-     */
+        /**
+         * @return The key/column that is used to determine to which partition to send event data.
+         * 
+         */
     private final @Nullable String partitionKey;
-    /**
-     * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String serviceBusNamespace;
-    /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String sharedAccessPolicyKey;
-    /**
-     * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String sharedAccessPolicyName;
-    /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,45 +60,45 @@ public final class EventHubOutputDataSourceResponse {
     }
 
     /**
-     * The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Event Hub. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> eventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
-     * The key/column that is used to determine to which partition to send event data.
+     * @return The key/column that is used to determine to which partition to send event data.
      * 
-    */
+     */
     public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
-     * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * @return The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
-     * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     * @return The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.ServiceBus/EventHub&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -23,6 +23,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="frequencyInMinutes", required=true)
     private Integer frequencyInMinutes;
 
+    /**
+     * @return frequency (in minutes) at which rule condition should be evaluated.
+     * 
+     */
     public Integer frequencyInMinutes() {
         return this.frequencyInMinutes;
     }
@@ -34,6 +38,10 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeWindowInMinutes", required=true)
     private Integer timeWindowInMinutes;
 
+    /**
+     * @return Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+     * 
+     */
     public Integer timeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }
@@ -63,11 +71,23 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequencyInMinutes frequency (in minutes) at which rule condition should be evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInMinutes(Integer frequencyInMinutes) {
             $.frequencyInMinutes = frequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param timeWindowInMinutes Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
             $.timeWindowInMinutes = timeWindowInMinutes;
             return this;

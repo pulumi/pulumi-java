@@ -33,6 +33,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -44,6 +48,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -55,6 +63,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="connectionString")
     private @Nullable Output<Object> connectionString;
 
+    /**
+     * @return An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Output<Object>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -66,6 +78,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -77,6 +93,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -88,6 +108,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -99,6 +123,10 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="pwd")
     private @Nullable Output<AzureKeyVaultSecretReferenceArgs> pwd;
 
+    /**
+     * @return The Azure key vault secret reference of password in connection string.
+     * 
+     */
     public Optional<Output<AzureKeyVaultSecretReferenceArgs>> pwd() {
         return Optional.ofNullable(this.pwd);
     }
@@ -111,6 +139,11 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureMariaDB&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -146,78 +179,182 @@ public final class AzureMariaDBLinkedServiceArgs extends com.pulumi.resources.Re
             $ = new AzureMariaDBLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param connectionString An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<Object> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Object connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param pwd The Azure key vault secret reference of password in connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pwd(@Nullable Output<AzureKeyVaultSecretReferenceArgs> pwd) {
             $.pwd = pwd;
             return this;
         }
 
+        /**
+         * @param pwd The Azure key vault secret reference of password in connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pwd(AzureKeyVaultSecretReferenceArgs pwd) {
             return pwd(Output.of(pwd));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureMariaDB&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureMariaDB&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

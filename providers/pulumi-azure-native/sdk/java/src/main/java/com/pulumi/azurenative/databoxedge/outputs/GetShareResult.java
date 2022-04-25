@@ -18,75 +18,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetShareResult {
-    /**
-     * Access protocol to be used by the share.
-     * 
-     */
+        /**
+         * @return Access protocol to be used by the share.
+         * 
+         */
     private final String accessProtocol;
-    /**
-     * Azure container mapping for the share.
-     * 
-     */
+        /**
+         * @return Azure container mapping for the share.
+         * 
+         */
     private final @Nullable AzureContainerInfoResponse azureContainerInfo;
-    /**
-     * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
-     * 
-     */
+        /**
+         * @return List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+         * 
+         */
     private final @Nullable List<ClientAccessRightResponse> clientAccessRights;
-    /**
-     * Data policy of the share.
-     * 
-     */
+        /**
+         * @return Data policy of the share.
+         * 
+         */
     private final @Nullable String dataPolicy;
-    /**
-     * Description for the share.
-     * 
-     */
+        /**
+         * @return Description for the share.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * Current monitoring status of the share.
-     * 
-     */
+        /**
+         * @return Current monitoring status of the share.
+         * 
+         */
     private final String monitoringStatus;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * Details of the refresh job on this share.
-     * 
-     */
+        /**
+         * @return Details of the refresh job on this share.
+         * 
+         */
     private final @Nullable RefreshDetailsResponse refreshDetails;
-    /**
-     * Share mount point to the role.
-     * 
-     */
+        /**
+         * @return Share mount point to the role.
+         * 
+         */
     private final List<MountPointMapResponse> shareMappings;
-    /**
-     * Current status of the share.
-     * 
-     */
+        /**
+         * @return Current status of the share.
+         * 
+         */
     private final String shareStatus;
-    /**
-     * Share on ASE device
-     * 
-     */
+        /**
+         * @return Share on ASE device
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * Mapping of users and corresponding access rights on the share (required for SMB protocol).
-     * 
-     */
+        /**
+         * @return Mapping of users and corresponding access rights on the share (required for SMB protocol).
+         * 
+         */
     private final @Nullable List<UserAccessRightResponse> userAccessRights;
 
     @CustomType.Constructor
@@ -122,100 +122,100 @@ public final class GetShareResult {
     }
 
     /**
-     * Access protocol to be used by the share.
+     * @return Access protocol to be used by the share.
      * 
-    */
+     */
     public String accessProtocol() {
         return this.accessProtocol;
     }
     /**
-     * Azure container mapping for the share.
+     * @return Azure container mapping for the share.
      * 
-    */
+     */
     public Optional<AzureContainerInfoResponse> azureContainerInfo() {
         return Optional.ofNullable(this.azureContainerInfo);
     }
     /**
-     * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+     * @return List of IP addresses and corresponding access rights on the share(required for NFS protocol).
      * 
-    */
+     */
     public List<ClientAccessRightResponse> clientAccessRights() {
         return this.clientAccessRights == null ? List.of() : this.clientAccessRights;
     }
     /**
-     * Data policy of the share.
+     * @return Data policy of the share.
      * 
-    */
+     */
     public Optional<String> dataPolicy() {
         return Optional.ofNullable(this.dataPolicy);
     }
     /**
-     * Description for the share.
+     * @return Description for the share.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Current monitoring status of the share.
+     * @return Current monitoring status of the share.
      * 
-    */
+     */
     public String monitoringStatus() {
         return this.monitoringStatus;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Details of the refresh job on this share.
+     * @return Details of the refresh job on this share.
      * 
-    */
+     */
     public Optional<RefreshDetailsResponse> refreshDetails() {
         return Optional.ofNullable(this.refreshDetails);
     }
     /**
-     * Share mount point to the role.
+     * @return Share mount point to the role.
      * 
-    */
+     */
     public List<MountPointMapResponse> shareMappings() {
         return this.shareMappings;
     }
     /**
-     * Current status of the share.
+     * @return Current status of the share.
      * 
-    */
+     */
     public String shareStatus() {
         return this.shareStatus;
     }
     /**
-     * Share on ASE device
+     * @return Share on ASE device
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Mapping of users and corresponding access rights on the share (required for SMB protocol).
+     * @return Mapping of users and corresponding access rights on the share (required for SMB protocol).
      * 
-    */
+     */
     public List<UserAccessRightResponse> userAccessRights() {
         return this.userAccessRights == null ? List.of() : this.userAccessRights;
     }

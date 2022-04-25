@@ -27,6 +27,10 @@ public final class SyncGroupSchemaTableResponse extends com.pulumi.resources.Inv
     @Import(name="columns")
     private @Nullable List<SyncGroupSchemaTableColumnResponse> columns;
 
+    /**
+     * @return List of columns in sync group schema.
+     * 
+     */
     public Optional<List<SyncGroupSchemaTableColumnResponse>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -38,6 +42,10 @@ public final class SyncGroupSchemaTableResponse extends com.pulumi.resources.Inv
     @Import(name="quotedName")
     private @Nullable String quotedName;
 
+    /**
+     * @return Quoted name of sync group schema table.
+     * 
+     */
     public Optional<String> quotedName() {
         return Optional.ofNullable(this.quotedName);
     }
@@ -67,15 +75,33 @@ public final class SyncGroupSchemaTableResponse extends com.pulumi.resources.Inv
             $ = new SyncGroupSchemaTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns List of columns in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable List<SyncGroupSchemaTableColumnResponse> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns List of columns in sync group schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(SyncGroupSchemaTableColumnResponse... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param quotedName Quoted name of sync group schema table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotedName(@Nullable String quotedName) {
             $.quotedName = quotedName;
             return this;

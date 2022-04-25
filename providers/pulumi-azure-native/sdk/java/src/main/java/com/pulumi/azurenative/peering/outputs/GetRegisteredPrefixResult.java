@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRegisteredPrefixResult {
-    /**
-     * The error message associated with the validation state, if any.
-     * 
-     */
+        /**
+         * @return The error message associated with the validation state, if any.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * The ID of the resource.
-     * 
-     */
+        /**
+         * @return The ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The peering service prefix key that is to be shared with the customer.
-     * 
-     */
+        /**
+         * @return The peering service prefix key that is to be shared with the customer.
+         * 
+         */
     private final String peeringServicePrefixKey;
-    /**
-     * The customer&#39;s prefix from which traffic originates.
-     * 
-     */
+        /**
+         * @return The customer&#39;s prefix from which traffic originates.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * The prefix validation state.
-     * 
-     */
+        /**
+         * @return The prefix validation state.
+         * 
+         */
     private final String prefixValidationState;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetRegisteredPrefixResult {
     }
 
     /**
-     * The error message associated with the validation state, if any.
+     * @return The error message associated with the validation state, if any.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The peering service prefix key that is to be shared with the customer.
+     * @return The peering service prefix key that is to be shared with the customer.
      * 
-    */
+     */
     public String peeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
-     * The customer&#39;s prefix from which traffic originates.
+     * @return The customer&#39;s prefix from which traffic originates.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The prefix validation state.
+     * @return The prefix validation state.
      * 
-    */
+     */
     public String prefixValidationState() {
         return this.prefixValidationState;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

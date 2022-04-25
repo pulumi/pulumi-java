@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DaprResponse {
-    /**
-     * Dapr application identifier
-     * 
-     */
+        /**
+         * @return Dapr application identifier
+         * 
+         */
     private final @Nullable String appId;
-    /**
-     * Port on which the Dapr side car
-     * 
-     */
+        /**
+         * @return Port on which the Dapr side car
+         * 
+         */
     private final @Nullable Integer appPort;
-    /**
-     * Collection of Dapr components
-     * 
-     */
+        /**
+         * @return Collection of Dapr components
+         * 
+         */
     private final @Nullable List<DaprComponentResponse> components;
-    /**
-     * Boolean indicating if the Dapr side car is enabled
-     * 
-     */
+        /**
+         * @return Boolean indicating if the Dapr side car is enabled
+         * 
+         */
     private final @Nullable Boolean enabled;
 
     @CustomType.Constructor
@@ -49,30 +49,30 @@ public final class DaprResponse {
     }
 
     /**
-     * Dapr application identifier
+     * @return Dapr application identifier
      * 
-    */
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
-     * Port on which the Dapr side car
+     * @return Port on which the Dapr side car
      * 
-    */
+     */
     public Optional<Integer> appPort() {
         return Optional.ofNullable(this.appPort);
     }
     /**
-     * Collection of Dapr components
+     * @return Collection of Dapr components
      * 
-    */
+     */
     public List<DaprComponentResponse> components() {
         return this.components == null ? List.of() : this.components;
     }
     /**
-     * Boolean indicating if the Dapr side car is enabled
+     * @return Boolean indicating if the Dapr side car is enabled
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

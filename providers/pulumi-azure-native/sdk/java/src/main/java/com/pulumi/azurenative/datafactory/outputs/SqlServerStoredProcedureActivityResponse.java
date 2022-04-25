@@ -19,51 +19,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SqlServerStoredProcedureActivityResponse {
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * Stored procedure name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Stored procedure name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object storedProcedureName;
-    /**
-     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
-     * 
-     */
+        /**
+         * @return Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
+         * 
+         */
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
-    /**
-     * Type of activity.
-     * Expected value is &#39;SqlServerStoredProcedure&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;SqlServerStoredProcedure&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -89,66 +89,66 @@ public final class SqlServerStoredProcedureActivityResponse {
     }
 
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Stored procedure name. Type: string (or Expression with resultType string).
+     * @return Stored procedure name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object storedProcedureName() {
         return this.storedProcedureName;
     }
     /**
-     * Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
+     * @return Value and type setting for stored procedure parameters. Example: &#34;{Parameter1: {value: &#34;1&#34;, type: &#34;int&#34;}}&#34;.
      * 
-    */
+     */
     public Map<String,StoredProcedureParameterResponse> storedProcedureParameters() {
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;SqlServerStoredProcedure&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

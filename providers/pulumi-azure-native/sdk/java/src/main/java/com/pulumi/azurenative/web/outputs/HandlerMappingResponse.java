@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HandlerMappingResponse {
-    /**
-     * Command-line arguments to be passed to the script processor.
-     * 
-     */
+        /**
+         * @return Command-line arguments to be passed to the script processor.
+         * 
+         */
     private final @Nullable String arguments;
-    /**
-     * Requests with this extension will be handled using the specified FastCGI application.
-     * 
-     */
+        /**
+         * @return Requests with this extension will be handled using the specified FastCGI application.
+         * 
+         */
     private final @Nullable String extension;
-    /**
-     * The absolute path to the FastCGI application.
-     * 
-     */
+        /**
+         * @return The absolute path to the FastCGI application.
+         * 
+         */
     private final @Nullable String scriptProcessor;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class HandlerMappingResponse {
     }
 
     /**
-     * Command-line arguments to be passed to the script processor.
+     * @return Command-line arguments to be passed to the script processor.
      * 
-    */
+     */
     public Optional<String> arguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
-     * Requests with this extension will be handled using the specified FastCGI application.
+     * @return Requests with this extension will be handled using the specified FastCGI application.
      * 
-    */
+     */
     public Optional<String> extension() {
         return Optional.ofNullable(this.extension);
     }
     /**
-     * The absolute path to the FastCGI application.
+     * @return The absolute path to the FastCGI application.
      * 
-    */
+     */
     public Optional<String> scriptProcessor() {
         return Optional.ofNullable(this.scriptProcessor);
     }

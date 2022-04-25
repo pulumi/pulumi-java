@@ -22,6 +22,10 @@ public final class UserIdentityPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client id of user assigned identity.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -33,6 +37,10 @@ public final class UserIdentityPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return The principal id of user assigned identity.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -62,20 +70,44 @@ public final class UserIdentityPropertiesArgs extends com.pulumi.resources.Resou
             $ = new UserIdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The client id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }

@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class RolloutIdentityAuthenticationResponse {
-    /**
-     * The authentication type.
-     * Expected value is &#39;RolloutIdentity&#39;.
-     * 
-     */
+        /**
+         * @return The authentication type.
+         * Expected value is &#39;RolloutIdentity&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class RolloutIdentityAuthenticationResponse {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;RolloutIdentity&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

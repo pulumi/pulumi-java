@@ -28,6 +28,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="actionRequired")
     private @Nullable Output<String> actionRequired;
 
+    /**
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
+     * 
+     */
     public Optional<Output<String>> actionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
@@ -39,6 +43,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The reason for approval or rejection.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
     @Import(name="status")
     private @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
+    /**
+     * @return Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+     * 
+     */
     public Optional<Output<Either<String,PrivateEndpointServiceConnectionStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -80,37 +92,85 @@ public final class PrivateLinkServiceConnectionStateArgs extends com.pulumi.reso
             $ = new PrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRequired(@Nullable Output<String> actionRequired) {
             $.actionRequired = actionRequired;
             return this;
         }
 
+        /**
+         * @param actionRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionRequired(String actionRequired) {
             return actionRequired(Output.of(actionRequired));
         }
 
+        /**
+         * @param description The reason for approval or rejection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The reason for approval or rejection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateEndpointServiceConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateEndpointServiceConnectionStatus status) {
             return status(Either.ofRight(status));
         }

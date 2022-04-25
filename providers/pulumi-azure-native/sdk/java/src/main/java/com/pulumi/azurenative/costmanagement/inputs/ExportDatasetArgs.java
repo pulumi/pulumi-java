@@ -29,6 +29,10 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configuration")
     private @Nullable Output<ExportDatasetConfigurationArgs> configuration;
 
+    /**
+     * @return The export dataset configuration.
+     * 
+     */
     public Optional<Output<ExportDatasetConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -40,6 +44,10 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="granularity")
     private @Nullable Output<Either<String,GranularityType>> granularity;
 
+    /**
+     * @return The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+     * 
+     */
     public Optional<Output<Either<String,GranularityType>>> granularity() {
         return Optional.ofNullable(this.granularity);
     }
@@ -69,28 +77,64 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExportDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration The export dataset configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<ExportDatasetConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration The export dataset configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(ExportDatasetConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param granularity The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
             $.granularity = granularity;
             return this;
         }
 
+        /**
+         * @param granularity The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder granularity(Either<String,GranularityType> granularity) {
             return granularity(Output.of(granularity));
         }
 
+        /**
+         * @param granularity The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder granularity(String granularity) {
             return granularity(Either.ofLeft(granularity));
         }
 
+        /**
+         * @param granularity The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder granularity(GranularityType granularity) {
             return granularity(Either.ofRight(granularity));
         }

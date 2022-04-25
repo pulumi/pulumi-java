@@ -27,6 +27,10 @@ public final class ServiceTypeHealthPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="maxPercentUnhealthyServices")
     private @Nullable Output<Integer> maxPercentUnhealthyServices;
 
+    /**
+     * @return The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+     * 
+     */
     public Optional<Output<Integer>> maxPercentUnhealthyServices() {
         return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
@@ -55,11 +59,23 @@ public final class ServiceTypeHealthPolicyArgs extends com.pulumi.resources.Reso
             $ = new ServiceTypeHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPercentUnhealthyServices The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyServices(@Nullable Output<Integer> maxPercentUnhealthyServices) {
             $.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
 
+        /**
+         * @param maxPercentUnhealthyServices The maximum percentage of services allowed to be unhealthy before your application is considered in error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyServices(Integer maxPercentUnhealthyServices) {
             return maxPercentUnhealthyServices(Output.of(maxPercentUnhealthyServices));
         }

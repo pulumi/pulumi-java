@@ -22,6 +22,10 @@ public final class PipelineTriggerPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="sourceTrigger")
     private @Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger;
 
+    /**
+     * @return The source trigger properties of the pipeline.
+     * 
+     */
     public Optional<Output<PipelineSourceTriggerPropertiesArgs>> sourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }
@@ -50,11 +54,23 @@ public final class PipelineTriggerPropertiesArgs extends com.pulumi.resources.Re
             $ = new PipelineTriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceTrigger The source trigger properties of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTrigger(@Nullable Output<PipelineSourceTriggerPropertiesArgs> sourceTrigger) {
             $.sourceTrigger = sourceTrigger;
             return this;
         }
 
+        /**
+         * @param sourceTrigger The source trigger properties of the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceTrigger(PipelineSourceTriggerPropertiesArgs sourceTrigger) {
             return sourceTrigger(Output.of(sourceTrigger));
         }

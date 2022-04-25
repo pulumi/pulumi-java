@@ -19,65 +19,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProjectResult {
-    /**
-     * UTC Date and time when project was created
-     * 
-     */
+        /**
+         * @return UTC Date and time when project was created
+         * 
+         */
     private final String creationTime;
-    /**
-     * List of DatabaseInfo
-     * 
-     */
+        /**
+         * @return List of DatabaseInfo
+         * 
+         */
     private final @Nullable List<DatabaseInfoResponse> databasesInfo;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The project&#39;s provisioning state
-     * 
-     */
+        /**
+         * @return The project&#39;s provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Information for connecting to source
-     * 
-     */
+        /**
+         * @return Information for connecting to source
+         * 
+         */
     private final @Nullable Object sourceConnectionInfo;
-    /**
-     * Source platform for the project
-     * 
-     */
+        /**
+         * @return Source platform for the project
+         * 
+         */
     private final String sourcePlatform;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Information for connecting to target
-     * 
-     */
+        /**
+         * @return Information for connecting to target
+         * 
+         */
     private final @Nullable Object targetConnectionInfo;
-    /**
-     * Target platform for the project
-     * 
-     */
+        /**
+         * @return Target platform for the project
+         * 
+         */
     private final String targetPlatform;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -109,86 +109,86 @@ public final class GetProjectResult {
     }
 
     /**
-     * UTC Date and time when project was created
+     * @return UTC Date and time when project was created
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * List of DatabaseInfo
+     * @return List of DatabaseInfo
      * 
-    */
+     */
     public List<DatabaseInfoResponse> databasesInfo() {
         return this.databasesInfo == null ? List.of() : this.databasesInfo;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The project&#39;s provisioning state
+     * @return The project&#39;s provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Information for connecting to source
+     * @return Information for connecting to source
      * 
-    */
+     */
     public Optional<Object> sourceConnectionInfo() {
         return Optional.ofNullable(this.sourceConnectionInfo);
     }
     /**
-     * Source platform for the project
+     * @return Source platform for the project
      * 
-    */
+     */
     public String sourcePlatform() {
         return this.sourcePlatform;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Information for connecting to target
+     * @return Information for connecting to target
      * 
-    */
+     */
     public Optional<Object> targetConnectionInfo() {
         return Optional.ofNullable(this.targetConnectionInfo);
     }
     /**
-     * Target platform for the project
+     * @return Target platform for the project
      * 
-    */
+     */
     public String targetPlatform() {
         return this.targetPlatform;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

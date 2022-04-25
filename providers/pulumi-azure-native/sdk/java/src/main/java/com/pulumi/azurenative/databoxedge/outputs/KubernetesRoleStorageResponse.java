@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KubernetesRoleStorageResponse {
-    /**
-     * Mount points of shares in role(s).
-     * 
-     */
+        /**
+         * @return Mount points of shares in role(s).
+         * 
+         */
     private final @Nullable List<MountPointMapResponse> endpoints;
-    /**
-     * Kubernetes storage class info.
-     * 
-     */
+        /**
+         * @return Kubernetes storage class info.
+         * 
+         */
     private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class KubernetesRoleStorageResponse {
     }
 
     /**
-     * Mount points of shares in role(s).
+     * @return Mount points of shares in role(s).
      * 
-    */
+     */
     public List<MountPointMapResponse> endpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
     /**
-     * Kubernetes storage class info.
+     * @return Kubernetes storage class info.
      * 
-    */
+     */
     public List<KubernetesRoleStorageClassInfoResponse> storageClasses() {
         return this.storageClasses;
     }

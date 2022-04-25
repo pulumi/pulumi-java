@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultKeyResponseAttributes {
-    /**
-     * When the key was created.
-     * 
-     */
+        /**
+         * @return When the key was created.
+         * 
+         */
     private final @Nullable Double created;
-    /**
-     * Whether the key is enabled or not.
-     * 
-     */
+        /**
+         * @return Whether the key is enabled or not.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * When the key was updated.
-     * 
-     */
+        /**
+         * @return When the key was updated.
+         * 
+         */
     private final @Nullable Double updated;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class KeyVaultKeyResponseAttributes {
     }
 
     /**
-     * When the key was created.
+     * @return When the key was created.
      * 
-    */
+     */
     public Optional<Double> created() {
         return Optional.ofNullable(this.created);
     }
     /**
-     * Whether the key is enabled or not.
+     * @return Whether the key is enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * When the key was updated.
+     * @return When the key was updated.
      * 
-    */
+     */
     public Optional<Double> updated() {
         return Optional.ofNullable(this.updated);
     }

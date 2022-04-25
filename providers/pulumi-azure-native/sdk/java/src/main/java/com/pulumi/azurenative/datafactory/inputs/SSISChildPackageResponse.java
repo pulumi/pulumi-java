@@ -26,6 +26,10 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
     @Import(name="packageContent", required=true)
     private Object packageContent;
 
+    /**
+     * @return Content for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object packageContent() {
         return this.packageContent;
     }
@@ -37,6 +41,10 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
     @Import(name="packageLastModifiedDate")
     private @Nullable String packageLastModifiedDate;
 
+    /**
+     * @return Last modified date for embedded child package.
+     * 
+     */
     public Optional<String> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
@@ -48,6 +56,10 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
     @Import(name="packageName")
     private @Nullable String packageName;
 
+    /**
+     * @return Name for embedded child package.
+     * 
+     */
     public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
@@ -59,6 +71,10 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
     @Import(name="packagePath", required=true)
     private Object packagePath;
 
+    /**
+     * @return Path for embedded child package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object packagePath() {
         return this.packagePath;
     }
@@ -90,21 +106,45 @@ public final class SSISChildPackageResponse extends com.pulumi.resources.InvokeA
             $ = new SSISChildPackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageContent Content for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageContent(Object packageContent) {
             $.packageContent = packageContent;
             return this;
         }
 
+        /**
+         * @param packageLastModifiedDate Last modified date for embedded child package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             $.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
+        /**
+         * @param packageName Name for embedded child package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(@Nullable String packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packagePath Path for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packagePath(Object packagePath) {
             $.packagePath = packagePath;
             return this;

@@ -29,6 +29,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -40,6 +44,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
     @Import(name="privateIPAllocationMethod")
     private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
+    /**
+     * @return Private IP allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -62,6 +74,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
     @Import(name="publicIPAddress", required=true)
     private Output<SubResourceArgs> publicIPAddress;
 
+    /**
+     * @return Reference of the PublicIP resource.
+     * 
+     */
     public Output<SubResourceArgs> publicIPAddress() {
         return this.publicIPAddress;
     }
@@ -73,6 +89,10 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
     @Import(name="subnet", required=true)
     private Output<SubResourceArgs> subnet;
 
+    /**
+     * @return Reference of the subnet resource.
+     * 
+     */
     public Output<SubResourceArgs> subnet() {
         return this.subnet;
     }
@@ -105,55 +125,127 @@ public final class BastionHostIPConfigurationArgs extends com.pulumi.resources.R
             $ = new BastionHostIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateIPAllocationMethod Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
         }
 
+        /**
+         * @param publicIPAddress Reference of the PublicIP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(Output<SubResourceArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPAddress Reference of the PublicIP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
             return publicIPAddress(Output.of(publicIPAddress));
         }
 
+        /**
+         * @param subnet Reference of the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(Output<SubResourceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Reference of the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubResourceArgs subnet) {
             return subnet(Output.of(subnet));
         }

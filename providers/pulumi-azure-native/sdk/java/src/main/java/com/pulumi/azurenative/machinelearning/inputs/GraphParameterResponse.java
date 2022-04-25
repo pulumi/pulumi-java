@@ -27,6 +27,10 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of this graph parameter.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="links", required=true)
     private List<GraphParameterLinkResponse> links;
 
+    /**
+     * @return Association links for this parameter to nodes in the graph.
+     * 
+     */
     public List<GraphParameterLinkResponse> links() {
         return this.links;
     }
@@ -49,6 +57,10 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Graph parameter&#39;s type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -79,20 +91,44 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
             $ = new GraphParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of this graph parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param links Association links for this parameter to nodes in the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(List<GraphParameterLinkResponse> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links Association links for this parameter to nodes in the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(GraphParameterLinkResponse... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param type Graph parameter&#39;s type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

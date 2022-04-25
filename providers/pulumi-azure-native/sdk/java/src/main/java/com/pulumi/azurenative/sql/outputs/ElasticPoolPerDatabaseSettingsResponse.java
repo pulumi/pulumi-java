@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ElasticPoolPerDatabaseSettingsResponse {
-    /**
-     * The maximum capacity any one database can consume.
-     * 
-     */
+        /**
+         * @return The maximum capacity any one database can consume.
+         * 
+         */
     private final @Nullable Double maxCapacity;
-    /**
-     * The minimum capacity all databases are guaranteed.
-     * 
-     */
+        /**
+         * @return The minimum capacity all databases are guaranteed.
+         * 
+         */
     private final @Nullable Double minCapacity;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ElasticPoolPerDatabaseSettingsResponse {
     }
 
     /**
-     * The maximum capacity any one database can consume.
+     * @return The maximum capacity any one database can consume.
      * 
-    */
+     */
     public Optional<Double> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
-     * The minimum capacity all databases are guaranteed.
+     * @return The minimum capacity all databases are guaranteed.
      * 
-    */
+     */
     public Optional<Double> minCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }

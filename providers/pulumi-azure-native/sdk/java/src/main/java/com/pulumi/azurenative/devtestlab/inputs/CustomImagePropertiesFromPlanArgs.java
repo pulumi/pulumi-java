@@ -26,6 +26,10 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The id of the plan, equivalent to name of the plan
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
     @Import(name="offer")
     private @Nullable Output<String> offer;
 
+    /**
+     * @return The offer for the plan from the marketplace image the custom image is derived from
+     * 
+     */
     public Optional<Output<String>> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -48,6 +56,10 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return The publisher for the plan from the marketplace image the custom image is derived from
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -78,29 +90,65 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
             $ = new CustomImagePropertiesFromPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of the plan, equivalent to name of the plan
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id of the plan, equivalent to name of the plan
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param offer The offer for the plan from the marketplace image the custom image is derived from
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable Output<String> offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param offer The offer for the plan from the marketplace image the custom image is derived from
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(String offer) {
             return offer(Output.of(offer));
         }
 
+        /**
+         * @param publisher The publisher for the plan from the marketplace image the custom image is derived from
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher The publisher for the plan from the marketplace image the custom image is derived from
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }

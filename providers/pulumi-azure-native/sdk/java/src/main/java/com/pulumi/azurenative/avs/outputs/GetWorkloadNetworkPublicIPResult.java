@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkloadNetworkPublicIPResult {
-    /**
-     * Display name of the Public IP Block.
-     * 
-     */
+        /**
+         * @return Display name of the Public IP Block.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Number of Public IPs requested.
-     * 
-     */
+        /**
+         * @return Number of Public IPs requested.
+         * 
+         */
     private final @Nullable Double numberOfPublicIPs;
-    /**
-     * The provisioning state
-     * 
-     */
+        /**
+         * @return The provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * CIDR Block of the Public IP Block.
-     * 
-     */
+        /**
+         * @return CIDR Block of the Public IP Block.
+         * 
+         */
     private final String publicIPBlock;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetWorkloadNetworkPublicIPResult {
     }
 
     /**
-     * Display name of the Public IP Block.
+     * @return Display name of the Public IP Block.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of Public IPs requested.
+     * @return Number of Public IPs requested.
      * 
-    */
+     */
     public Optional<Double> numberOfPublicIPs() {
         return Optional.ofNullable(this.numberOfPublicIPs);
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * CIDR Block of the Public IP Block.
+     * @return CIDR Block of the Public IP Block.
      * 
-    */
+     */
     public String publicIPBlock() {
         return this.publicIPBlock;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -12,15 +12,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIntegrationRuntimeStatusResult {
-    /**
-     * The integration runtime name.
-     * 
-     */
+        /**
+         * @return The integration runtime name.
+         * 
+         */
     private final String name;
-    /**
-     * Integration runtime properties.
-     * 
-     */
+        /**
+         * @return Integration runtime properties.
+         * 
+         */
     private final Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetIntegrationRuntimeStatusResult {
     }
 
     /**
-     * The integration runtime name.
+     * @return The integration runtime name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Integration runtime properties.
+     * @return Integration runtime properties.
      * 
-    */
+     */
     public Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties() {
         return this.properties;
     }

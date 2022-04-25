@@ -26,6 +26,10 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
     @Import(name="schedule", required=true)
     private Output<String> schedule;
 
+    /**
+     * @return Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+     * 
+     */
     public Output<String> schedule() {
         return this.schedule;
     }
@@ -37,6 +41,10 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -48,6 +56,10 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
     @Import(name="topic")
     private @Nullable Output<String> topic;
 
+    /**
+     * @return Topic where periodic events are published to IoT device.
+     * 
+     */
     public Optional<Output<String>> topic() {
         return Optional.ofNullable(this.topic);
     }
@@ -78,29 +90,65 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
             $ = new PeriodicTimerSourceInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(Output<String> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(String schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param startTime The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param topic Topic where periodic events are published to IoT device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(@Nullable Output<String> topic) {
             $.topic = topic;
             return this;
         }
 
+        /**
+         * @param topic Topic where periodic events are published to IoT device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topic(String topic) {
             return topic(Output.of(topic));
         }

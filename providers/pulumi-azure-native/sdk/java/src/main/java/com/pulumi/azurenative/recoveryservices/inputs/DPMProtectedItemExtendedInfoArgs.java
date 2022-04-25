@@ -29,6 +29,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="diskStorageUsedInBytes")
     private @Nullable Output<String> diskStorageUsedInBytes;
 
+    /**
+     * @return Used Disk storage in bytes.
+     * 
+     */
     public Optional<Output<String>> diskStorageUsedInBytes() {
         return Optional.ofNullable(this.diskStorageUsedInBytes);
     }
@@ -40,6 +44,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="isCollocated")
     private @Nullable Output<Boolean> isCollocated;
 
+    /**
+     * @return To check if backup item is collocated.
+     * 
+     */
     public Optional<Output<Boolean>> isCollocated() {
         return Optional.ofNullable(this.isCollocated);
     }
@@ -51,6 +59,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="isPresentOnCloud")
     private @Nullable Output<Boolean> isPresentOnCloud;
 
+    /**
+     * @return To check if backup item is cloud protected.
+     * 
+     */
     public Optional<Output<Boolean>> isPresentOnCloud() {
         return Optional.ofNullable(this.isPresentOnCloud);
     }
@@ -62,6 +74,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="lastBackupStatus")
     private @Nullable Output<String> lastBackupStatus;
 
+    /**
+     * @return Last backup status information on backup item.
+     * 
+     */
     public Optional<Output<String>> lastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
@@ -73,6 +89,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="lastRefreshedAt")
     private @Nullable Output<String> lastRefreshedAt;
 
+    /**
+     * @return Last refresh time on backup item.
+     * 
+     */
     public Optional<Output<String>> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
@@ -84,6 +104,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="oldestRecoveryPoint")
     private @Nullable Output<String> oldestRecoveryPoint;
 
+    /**
+     * @return Oldest cloud recovery point time.
+     * 
+     */
     public Optional<Output<String>> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -95,6 +119,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="onPremiseLatestRecoveryPoint")
     private @Nullable Output<String> onPremiseLatestRecoveryPoint;
 
+    /**
+     * @return latest disk recovery point time.
+     * 
+     */
     public Optional<Output<String>> onPremiseLatestRecoveryPoint() {
         return Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
     }
@@ -106,6 +134,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="onPremiseOldestRecoveryPoint")
     private @Nullable Output<String> onPremiseOldestRecoveryPoint;
 
+    /**
+     * @return Oldest disk recovery point time.
+     * 
+     */
     public Optional<Output<String>> onPremiseOldestRecoveryPoint() {
         return Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
     }
@@ -117,6 +149,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="onPremiseRecoveryPointCount")
     private @Nullable Output<Integer> onPremiseRecoveryPointCount;
 
+    /**
+     * @return disk recovery point count.
+     * 
+     */
     public Optional<Output<Integer>> onPremiseRecoveryPointCount() {
         return Optional.ofNullable(this.onPremiseRecoveryPointCount);
     }
@@ -128,6 +164,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="protectableObjectLoadPath")
     private @Nullable Output<Map<String,String>> protectableObjectLoadPath;
 
+    /**
+     * @return Attribute to provide information on various DBs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> protectableObjectLoadPath() {
         return Optional.ofNullable(this.protectableObjectLoadPath);
     }
@@ -139,6 +179,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="protected")
     private @Nullable Output<Boolean> protected_;
 
+    /**
+     * @return To check if backup item is disk protected.
+     * 
+     */
     public Optional<Output<Boolean>> protected_() {
         return Optional.ofNullable(this.protected_);
     }
@@ -150,6 +194,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="protectionGroupName")
     private @Nullable Output<String> protectionGroupName;
 
+    /**
+     * @return Protection group name of the backup item.
+     * 
+     */
     public Optional<Output<String>> protectionGroupName() {
         return Optional.ofNullable(this.protectionGroupName);
     }
@@ -161,6 +209,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="recoveryPointCount")
     private @Nullable Output<Integer> recoveryPointCount;
 
+    /**
+     * @return cloud recovery point count.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -172,6 +224,10 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
     @Import(name="totalDiskStorageSizeInBytes")
     private @Nullable Output<String> totalDiskStorageSizeInBytes;
 
+    /**
+     * @return total Disk storage in bytes.
+     * 
+     */
     public Optional<Output<String>> totalDiskStorageSizeInBytes() {
         return Optional.ofNullable(this.totalDiskStorageSizeInBytes);
     }
@@ -213,128 +269,296 @@ public final class DPMProtectedItemExtendedInfoArgs extends com.pulumi.resources
             $ = new DPMProtectedItemExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskStorageUsedInBytes Used Disk storage in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskStorageUsedInBytes(@Nullable Output<String> diskStorageUsedInBytes) {
             $.diskStorageUsedInBytes = diskStorageUsedInBytes;
             return this;
         }
 
+        /**
+         * @param diskStorageUsedInBytes Used Disk storage in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskStorageUsedInBytes(String diskStorageUsedInBytes) {
             return diskStorageUsedInBytes(Output.of(diskStorageUsedInBytes));
         }
 
+        /**
+         * @param isCollocated To check if backup item is collocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCollocated(@Nullable Output<Boolean> isCollocated) {
             $.isCollocated = isCollocated;
             return this;
         }
 
+        /**
+         * @param isCollocated To check if backup item is collocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCollocated(Boolean isCollocated) {
             return isCollocated(Output.of(isCollocated));
         }
 
+        /**
+         * @param isPresentOnCloud To check if backup item is cloud protected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPresentOnCloud(@Nullable Output<Boolean> isPresentOnCloud) {
             $.isPresentOnCloud = isPresentOnCloud;
             return this;
         }
 
+        /**
+         * @param isPresentOnCloud To check if backup item is cloud protected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPresentOnCloud(Boolean isPresentOnCloud) {
             return isPresentOnCloud(Output.of(isPresentOnCloud));
         }
 
+        /**
+         * @param lastBackupStatus Last backup status information on backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             $.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
+        /**
+         * @param lastBackupStatus Last backup status information on backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(String lastBackupStatus) {
             return lastBackupStatus(Output.of(lastBackupStatus));
         }
 
+        /**
+         * @param lastRefreshedAt Last refresh time on backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
             $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
+        /**
+         * @param lastRefreshedAt Last refresh time on backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRefreshedAt(String lastRefreshedAt) {
             return lastRefreshedAt(Output.of(lastRefreshedAt));
         }
 
+        /**
+         * @param oldestRecoveryPoint Oldest cloud recovery point time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param oldestRecoveryPoint Oldest cloud recovery point time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(String oldestRecoveryPoint) {
             return oldestRecoveryPoint(Output.of(oldestRecoveryPoint));
         }
 
+        /**
+         * @param onPremiseLatestRecoveryPoint latest disk recovery point time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseLatestRecoveryPoint(@Nullable Output<String> onPremiseLatestRecoveryPoint) {
             $.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param onPremiseLatestRecoveryPoint latest disk recovery point time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseLatestRecoveryPoint(String onPremiseLatestRecoveryPoint) {
             return onPremiseLatestRecoveryPoint(Output.of(onPremiseLatestRecoveryPoint));
         }
 
+        /**
+         * @param onPremiseOldestRecoveryPoint Oldest disk recovery point time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseOldestRecoveryPoint(@Nullable Output<String> onPremiseOldestRecoveryPoint) {
             $.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param onPremiseOldestRecoveryPoint Oldest disk recovery point time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseOldestRecoveryPoint(String onPremiseOldestRecoveryPoint) {
             return onPremiseOldestRecoveryPoint(Output.of(onPremiseOldestRecoveryPoint));
         }
 
+        /**
+         * @param onPremiseRecoveryPointCount disk recovery point count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseRecoveryPointCount(@Nullable Output<Integer> onPremiseRecoveryPointCount) {
             $.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
             return this;
         }
 
+        /**
+         * @param onPremiseRecoveryPointCount disk recovery point count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseRecoveryPointCount(Integer onPremiseRecoveryPointCount) {
             return onPremiseRecoveryPointCount(Output.of(onPremiseRecoveryPointCount));
         }
 
+        /**
+         * @param protectableObjectLoadPath Attribute to provide information on various DBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectableObjectLoadPath(@Nullable Output<Map<String,String>> protectableObjectLoadPath) {
             $.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
 
+        /**
+         * @param protectableObjectLoadPath Attribute to provide information on various DBs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectableObjectLoadPath(Map<String,String> protectableObjectLoadPath) {
             return protectableObjectLoadPath(Output.of(protectableObjectLoadPath));
         }
 
+        /**
+         * @param protected_ To check if backup item is disk protected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protected_(@Nullable Output<Boolean> protected_) {
             $.protected_ = protected_;
             return this;
         }
 
+        /**
+         * @param protected_ To check if backup item is disk protected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protected_(Boolean protected_) {
             return protected_(Output.of(protected_));
         }
 
+        /**
+         * @param protectionGroupName Protection group name of the backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionGroupName(@Nullable Output<String> protectionGroupName) {
             $.protectionGroupName = protectionGroupName;
             return this;
         }
 
+        /**
+         * @param protectionGroupName Protection group name of the backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionGroupName(String protectionGroupName) {
             return protectionGroupName(Output.of(protectionGroupName));
         }
 
+        /**
+         * @param recoveryPointCount cloud recovery point count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount cloud recovery point count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(Integer recoveryPointCount) {
             return recoveryPointCount(Output.of(recoveryPointCount));
         }
 
+        /**
+         * @param totalDiskStorageSizeInBytes total Disk storage in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalDiskStorageSizeInBytes(@Nullable Output<String> totalDiskStorageSizeInBytes) {
             $.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }
 
+        /**
+         * @param totalDiskStorageSizeInBytes total Disk storage in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalDiskStorageSizeInBytes(String totalDiskStorageSizeInBytes) {
             return totalDiskStorageSizeInBytes(Output.of(totalDiskStorageSizeInBytes));
         }

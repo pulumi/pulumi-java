@@ -15,135 +15,135 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCertificateResult {
-    /**
-     * CNAME of the certificate to be issued via free certificate
-     * 
-     */
+        /**
+         * @return CNAME of the certificate to be issued via free certificate
+         * 
+         */
     private final @Nullable String canonicalName;
-    /**
-     * Raw bytes of .cer file
-     * 
-     */
+        /**
+         * @return Raw bytes of .cer file
+         * 
+         */
     private final String cerBlob;
-    /**
-     * Method of domain validation for free cert
-     * 
-     */
+        /**
+         * @return Method of domain validation for free cert
+         * 
+         */
     private final @Nullable String domainValidationMethod;
-    /**
-     * Certificate expiration date.
-     * 
-     */
+        /**
+         * @return Certificate expiration date.
+         * 
+         */
     private final String expirationDate;
-    /**
-     * Friendly name of the certificate.
-     * 
-     */
+        /**
+         * @return Friendly name of the certificate.
+         * 
+         */
     private final String friendlyName;
-    /**
-     * Host names the certificate applies to.
-     * 
-     */
+        /**
+         * @return Host names the certificate applies to.
+         * 
+         */
     private final @Nullable List<String> hostNames;
-    /**
-     * Specification for the App Service Environment to use for the certificate.
-     * 
-     */
+        /**
+         * @return Specification for the App Service Environment to use for the certificate.
+         * 
+         */
     private final HostingEnvironmentProfileResponse hostingEnvironmentProfile;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Certificate issue Date.
-     * 
-     */
+        /**
+         * @return Certificate issue Date.
+         * 
+         */
     private final String issueDate;
-    /**
-     * Certificate issuer.
-     * 
-     */
+        /**
+         * @return Certificate issuer.
+         * 
+         */
     private final String issuer;
-    /**
-     * Key Vault Csm resource Id.
-     * 
-     */
+        /**
+         * @return Key Vault Csm resource Id.
+         * 
+         */
     private final @Nullable String keyVaultId;
-    /**
-     * Key Vault secret name.
-     * 
-     */
+        /**
+         * @return Key Vault secret name.
+         * 
+         */
     private final @Nullable String keyVaultSecretName;
-    /**
-     * Status of the Key Vault secret.
-     * 
-     */
+        /**
+         * @return Status of the Key Vault secret.
+         * 
+         */
     private final String keyVaultSecretStatus;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Location.
-     * 
-     */
+        /**
+         * @return Resource Location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * Pfx blob.
-     * 
-     */
+        /**
+         * @return Pfx blob.
+         * 
+         */
     private final @Nullable String pfxBlob;
-    /**
-     * Public key hash.
-     * 
-     */
+        /**
+         * @return Public key hash.
+         * 
+         */
     private final String publicKeyHash;
-    /**
-     * Self link.
-     * 
-     */
+        /**
+         * @return Self link.
+         * 
+         */
     private final String selfLink;
-    /**
-     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
-     * 
-     */
+        /**
+         * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
+         * 
+         */
     private final @Nullable String serverFarmId;
-    /**
-     * App name.
-     * 
-     */
+        /**
+         * @return App name.
+         * 
+         */
     private final String siteName;
-    /**
-     * Subject name of the certificate.
-     * 
-     */
+        /**
+         * @return Subject name of the certificate.
+         * 
+         */
     private final String subjectName;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Certificate thumbprint.
-     * 
-     */
+        /**
+         * @return Certificate thumbprint.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Is the certificate valid?.
-     * 
-     */
+        /**
+         * @return Is the certificate valid?.
+         * 
+         */
     private final Boolean valid;
 
     @CustomType.Constructor
@@ -203,184 +203,184 @@ public final class GetCertificateResult {
     }
 
     /**
-     * CNAME of the certificate to be issued via free certificate
+     * @return CNAME of the certificate to be issued via free certificate
      * 
-    */
+     */
     public Optional<String> canonicalName() {
         return Optional.ofNullable(this.canonicalName);
     }
     /**
-     * Raw bytes of .cer file
+     * @return Raw bytes of .cer file
      * 
-    */
+     */
     public String cerBlob() {
         return this.cerBlob;
     }
     /**
-     * Method of domain validation for free cert
+     * @return Method of domain validation for free cert
      * 
-    */
+     */
     public Optional<String> domainValidationMethod() {
         return Optional.ofNullable(this.domainValidationMethod);
     }
     /**
-     * Certificate expiration date.
+     * @return Certificate expiration date.
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * Friendly name of the certificate.
+     * @return Friendly name of the certificate.
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * Host names the certificate applies to.
+     * @return Host names the certificate applies to.
      * 
-    */
+     */
     public List<String> hostNames() {
         return this.hostNames == null ? List.of() : this.hostNames;
     }
     /**
-     * Specification for the App Service Environment to use for the certificate.
+     * @return Specification for the App Service Environment to use for the certificate.
      * 
-    */
+     */
     public HostingEnvironmentProfileResponse hostingEnvironmentProfile() {
         return this.hostingEnvironmentProfile;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Certificate issue Date.
+     * @return Certificate issue Date.
      * 
-    */
+     */
     public String issueDate() {
         return this.issueDate;
     }
     /**
-     * Certificate issuer.
+     * @return Certificate issuer.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Key Vault Csm resource Id.
+     * @return Key Vault Csm resource Id.
      * 
-    */
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
-     * Key Vault secret name.
+     * @return Key Vault secret name.
      * 
-    */
+     */
     public Optional<String> keyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
     /**
-     * Status of the Key Vault secret.
+     * @return Status of the Key Vault secret.
      * 
-    */
+     */
     public String keyVaultSecretStatus() {
         return this.keyVaultSecretStatus;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Pfx blob.
+     * @return Pfx blob.
      * 
-    */
+     */
     public Optional<String> pfxBlob() {
         return Optional.ofNullable(this.pfxBlob);
     }
     /**
-     * Public key hash.
+     * @return Public key hash.
      * 
-    */
+     */
     public String publicKeyHash() {
         return this.publicKeyHash;
     }
     /**
-     * Self link.
+     * @return Self link.
      * 
-    */
+     */
     public String selfLink() {
         return this.selfLink;
     }
     /**
-     * Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
+     * @return Resource ID of the associated App Service plan, formatted as: &#34;/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}&#34;.
      * 
-    */
+     */
     public Optional<String> serverFarmId() {
         return Optional.ofNullable(this.serverFarmId);
     }
     /**
-     * App name.
+     * @return App name.
      * 
-    */
+     */
     public String siteName() {
         return this.siteName;
     }
     /**
-     * Subject name of the certificate.
+     * @return Subject name of the certificate.
      * 
-    */
+     */
     public String subjectName() {
         return this.subjectName;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Certificate thumbprint.
+     * @return Certificate thumbprint.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Is the certificate valid?.
+     * @return Is the certificate valid?.
      * 
-    */
+     */
     public Boolean valid() {
         return this.valid;
     }

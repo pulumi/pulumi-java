@@ -12,95 +12,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectorMappingResult {
-    /**
-     * The connector mapping name
-     * 
-     */
+        /**
+         * @return The connector mapping name
+         * 
+         */
     private final String connectorMappingName;
-    /**
-     * The connector name.
-     * 
-     */
+        /**
+         * @return The connector name.
+         * 
+         */
     private final String connectorName;
-    /**
-     * Type of connector.
-     * 
-     */
+        /**
+         * @return Type of connector.
+         * 
+         */
     private final @Nullable String connectorType;
-    /**
-     * The created time.
-     * 
-     */
+        /**
+         * @return The created time.
+         * 
+         */
     private final String created;
-    /**
-     * The DataFormat ID.
-     * 
-     */
+        /**
+         * @return The DataFormat ID.
+         * 
+         */
     private final String dataFormatId;
-    /**
-     * The description of the connector mapping.
-     * 
-     */
+        /**
+         * @return The description of the connector mapping.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Display name for the connector mapping.
-     * 
-     */
+        /**
+         * @return Display name for the connector mapping.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Defines which entity type the file should map to.
-     * 
-     */
+        /**
+         * @return Defines which entity type the file should map to.
+         * 
+         */
     private final String entityType;
-    /**
-     * The mapping entity name.
-     * 
-     */
+        /**
+         * @return The mapping entity name.
+         * 
+         */
     private final String entityTypeName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The last modified time.
-     * 
-     */
+        /**
+         * @return The last modified time.
+         * 
+         */
     private final String lastModified;
-    /**
-     * The properties of the mapping.
-     * 
-     */
+        /**
+         * @return The properties of the mapping.
+         * 
+         */
     private final ConnectorMappingPropertiesResponse mappingProperties;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The next run time based on customer&#39;s settings.
-     * 
-     */
+        /**
+         * @return The next run time based on customer&#39;s settings.
+         * 
+         */
     private final String nextRunTime;
-    /**
-     * The RunId.
-     * 
-     */
+        /**
+         * @return The RunId.
+         * 
+         */
     private final String runId;
-    /**
-     * State of connector mapping.
-     * 
-     */
+        /**
+         * @return State of connector mapping.
+         * 
+         */
     private final String state;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -144,128 +144,128 @@ public final class GetConnectorMappingResult {
     }
 
     /**
-     * The connector mapping name
+     * @return The connector mapping name
      * 
-    */
+     */
     public String connectorMappingName() {
         return this.connectorMappingName;
     }
     /**
-     * The connector name.
+     * @return The connector name.
      * 
-    */
+     */
     public String connectorName() {
         return this.connectorName;
     }
     /**
-     * Type of connector.
+     * @return Type of connector.
      * 
-    */
+     */
     public Optional<String> connectorType() {
         return Optional.ofNullable(this.connectorType);
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * The DataFormat ID.
+     * @return The DataFormat ID.
      * 
-    */
+     */
     public String dataFormatId() {
         return this.dataFormatId;
     }
     /**
-     * The description of the connector mapping.
+     * @return The description of the connector mapping.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Display name for the connector mapping.
+     * @return Display name for the connector mapping.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Defines which entity type the file should map to.
+     * @return Defines which entity type the file should map to.
      * 
-    */
+     */
     public String entityType() {
         return this.entityType;
     }
     /**
-     * The mapping entity name.
+     * @return The mapping entity name.
      * 
-    */
+     */
     public String entityTypeName() {
         return this.entityTypeName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last modified time.
+     * @return The last modified time.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The properties of the mapping.
+     * @return The properties of the mapping.
      * 
-    */
+     */
     public ConnectorMappingPropertiesResponse mappingProperties() {
         return this.mappingProperties;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The next run time based on customer&#39;s settings.
+     * @return The next run time based on customer&#39;s settings.
      * 
-    */
+     */
     public String nextRunTime() {
         return this.nextRunTime;
     }
     /**
-     * The RunId.
+     * @return The RunId.
      * 
-    */
+     */
     public String runId() {
         return this.runId;
     }
     /**
-     * State of connector mapping.
+     * @return State of connector mapping.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

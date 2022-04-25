@@ -19,6 +19,10 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="edgeModuleName", required=true)
     private String edgeModuleName;
 
+    /**
+     * @return The name of the edge module to retrieve.
+     * 
+     */
     public String edgeModuleName() {
         return this.edgeModuleName;
     }
@@ -41,6 +49,10 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetEdgeModuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetEdgeModuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param edgeModuleName The name of the edge module to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edgeModuleName(String edgeModuleName) {
             $.edgeModuleName = edgeModuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceRegistryResourceRequestsResponse {
-    /**
-     * Cpu allocated to each Service Registry instance
-     * 
-     */
+        /**
+         * @return Cpu allocated to each Service Registry instance
+         * 
+         */
     private final String cpu;
-    /**
-     * Instance count of the Service Registry
-     * 
-     */
+        /**
+         * @return Instance count of the Service Registry
+         * 
+         */
     private final Integer instanceCount;
-    /**
-     * Memory allocated to each Service Registry instance
-     * 
-     */
+        /**
+         * @return Memory allocated to each Service Registry instance
+         * 
+         */
     private final String memory;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class ServiceRegistryResourceRequestsResponse {
     }
 
     /**
-     * Cpu allocated to each Service Registry instance
+     * @return Cpu allocated to each Service Registry instance
      * 
-    */
+     */
     public String cpu() {
         return this.cpu;
     }
     /**
-     * Instance count of the Service Registry
+     * @return Instance count of the Service Registry
      * 
-    */
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
-     * Memory allocated to each Service Registry instance
+     * @return Memory allocated to each Service Registry instance
      * 
-    */
+     */
     public String memory() {
         return this.memory;
     }

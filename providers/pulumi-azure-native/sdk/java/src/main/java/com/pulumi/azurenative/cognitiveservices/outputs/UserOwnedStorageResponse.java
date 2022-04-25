@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserOwnedStorageResponse {
-    /**
-     * Full resource id of a Microsoft.Storage resource.
-     * 
-     */
+        /**
+         * @return Full resource id of a Microsoft.Storage resource.
+         * 
+         */
     private final @Nullable String resourceId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class UserOwnedStorageResponse {
     }
 
     /**
-     * Full resource id of a Microsoft.Storage resource.
+     * @return Full resource id of a Microsoft.Storage resource.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

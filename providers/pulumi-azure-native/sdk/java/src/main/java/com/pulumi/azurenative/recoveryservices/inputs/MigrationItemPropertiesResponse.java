@@ -29,6 +29,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="allowedOperations", required=true)
     private List<String> allowedOperations;
 
+    /**
+     * @return The allowed operations on the migration item, based on the current migration state of the item.
+     * 
+     */
     public List<String> allowedOperations() {
         return this.allowedOperations;
     }
@@ -40,6 +44,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="currentJob", required=true)
     private CurrentJobDetailsResponse currentJob;
 
+    /**
+     * @return The current job details.
+     * 
+     */
     public CurrentJobDetailsResponse currentJob() {
         return this.currentJob;
     }
@@ -51,6 +59,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return The consolidated health.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -62,6 +74,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="healthErrors", required=true)
     private List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return The list of health errors.
+     * 
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
@@ -73,6 +89,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="machineName", required=true)
     private String machineName;
 
+    /**
+     * @return The on-premise virtual machine name.
+     * 
+     */
     public String machineName() {
         return this.machineName;
     }
@@ -84,6 +104,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="migrationState", required=true)
     private String migrationState;
 
+    /**
+     * @return The migration status.
+     * 
+     */
     public String migrationState() {
         return this.migrationState;
     }
@@ -95,6 +119,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="migrationStateDescription", required=true)
     private String migrationStateDescription;
 
+    /**
+     * @return The migration state description.
+     * 
+     */
     public String migrationStateDescription() {
         return this.migrationStateDescription;
     }
@@ -106,6 +134,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="policyFriendlyName", required=true)
     private String policyFriendlyName;
 
+    /**
+     * @return The name of policy governing this item.
+     * 
+     */
     public String policyFriendlyName() {
         return this.policyFriendlyName;
     }
@@ -117,6 +149,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="policyId", required=true)
     private String policyId;
 
+    /**
+     * @return The ARM Id of policy governing this item.
+     * 
+     */
     public String policyId() {
         return this.policyId;
     }
@@ -128,6 +164,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="providerSpecificDetails")
     private @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
 
+    /**
+     * @return The migration provider custom settings.
+     * 
+     */
     public Optional<VMwareCbtMigrationDetailsResponse> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
@@ -139,6 +179,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="recoveryServicesProviderId", required=true)
     private String recoveryServicesProviderId;
 
+    /**
+     * @return The recovery services provider ARM Id.
+     * 
+     */
     public String recoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
     }
@@ -150,6 +194,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="testMigrateState", required=true)
     private String testMigrateState;
 
+    /**
+     * @return The test migrate state.
+     * 
+     */
     public String testMigrateState() {
         return this.testMigrateState;
     }
@@ -161,6 +209,10 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
     @Import(name="testMigrateStateDescription", required=true)
     private String testMigrateStateDescription;
 
+    /**
+     * @return The test migrate state description.
+     * 
+     */
     public String testMigrateStateDescription() {
         return this.testMigrateStateDescription;
     }
@@ -201,74 +253,164 @@ public final class MigrationItemPropertiesResponse extends com.pulumi.resources.
             $ = new MigrationItemPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedOperations The allowed operations on the migration item, based on the current migration state of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOperations(List<String> allowedOperations) {
             $.allowedOperations = allowedOperations;
             return this;
         }
 
+        /**
+         * @param allowedOperations The allowed operations on the migration item, based on the current migration state of the item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOperations(String... allowedOperations) {
             return allowedOperations(List.of(allowedOperations));
         }
 
+        /**
+         * @param currentJob The current job details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentJob(CurrentJobDetailsResponse currentJob) {
             $.currentJob = currentJob;
             return this;
         }
 
+        /**
+         * @param health The consolidated health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrors The list of health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors The list of health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param machineName The on-premise virtual machine name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(String machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param migrationState The migration status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationState(String migrationState) {
             $.migrationState = migrationState;
             return this;
         }
 
+        /**
+         * @param migrationStateDescription The migration state description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationStateDescription(String migrationStateDescription) {
             $.migrationStateDescription = migrationStateDescription;
             return this;
         }
 
+        /**
+         * @param policyFriendlyName The name of policy governing this item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyFriendlyName(String policyFriendlyName) {
             $.policyFriendlyName = policyFriendlyName;
             return this;
         }
 
+        /**
+         * @param policyId The ARM Id of policy governing this item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param providerSpecificDetails The migration provider custom settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificDetails(@Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails) {
             $.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
+        /**
+         * @param recoveryServicesProviderId The recovery services provider ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryServicesProviderId(String recoveryServicesProviderId) {
             $.recoveryServicesProviderId = recoveryServicesProviderId;
             return this;
         }
 
+        /**
+         * @param testMigrateState The test migrate state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testMigrateState(String testMigrateState) {
             $.testMigrateState = testMigrateState;
             return this;
         }
 
+        /**
+         * @param testMigrateStateDescription The test migrate state description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testMigrateStateDescription(String testMigrateStateDescription) {
             $.testMigrateStateDescription = testMigrateStateDescription;
             return this;

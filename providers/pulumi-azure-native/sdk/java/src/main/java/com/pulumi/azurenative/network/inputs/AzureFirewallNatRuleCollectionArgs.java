@@ -30,6 +30,10 @@ public final class AzureFirewallNatRuleCollectionArgs extends com.pulumi.resourc
     @Import(name="action")
     private @Nullable Output<AzureFirewallNatRCActionArgs> action;
 
+    /**
+     * @return The action type of a NAT rule collection.
+     * 
+     */
     public Optional<Output<AzureFirewallNatRCActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -41,6 +45,10 @@ public final class AzureFirewallNatRuleCollectionArgs extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -52,6 +60,10 @@ public final class AzureFirewallNatRuleCollectionArgs extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -63,6 +75,10 @@ public final class AzureFirewallNatRuleCollectionArgs extends com.pulumi.resourc
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority of the NAT rule collection resource.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -74,6 +90,10 @@ public final class AzureFirewallNatRuleCollectionArgs extends com.pulumi.resourc
     @Import(name="rules")
     private @Nullable Output<List<AzureFirewallNatRuleArgs>> rules;
 
+    /**
+     * @return Collection of rules used by a NAT rule collection.
+     * 
+     */
     public Optional<Output<List<AzureFirewallNatRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -106,51 +126,117 @@ public final class AzureFirewallNatRuleCollectionArgs extends com.pulumi.resourc
             $ = new AzureFirewallNatRuleCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<AzureFirewallNatRCActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action type of a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(AzureFirewallNatRCActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority of the NAT rule collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of the NAT rule collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param rules Collection of rules used by a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<AzureFirewallNatRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Collection of rules used by a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<AzureFirewallNatRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Collection of rules used by a NAT rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(AzureFirewallNatRuleArgs... rules) {
             return rules(List.of(rules));
         }

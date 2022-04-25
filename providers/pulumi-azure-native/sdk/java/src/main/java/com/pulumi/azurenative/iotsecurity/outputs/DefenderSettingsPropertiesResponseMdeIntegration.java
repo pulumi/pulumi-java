@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DefenderSettingsPropertiesResponseMdeIntegration {
-    /**
-     * Integration status
-     * 
-     */
+        /**
+         * @return Integration status
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
     }
 
     /**
-     * Integration status
+     * @return Integration status
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

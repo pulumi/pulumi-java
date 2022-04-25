@@ -34,6 +34,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -56,6 +64,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -67,6 +79,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -78,6 +94,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="office365TenantId", required=true)
     private Object office365TenantId;
 
+    /**
+     * @return Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object office365TenantId() {
         return this.office365TenantId;
     }
@@ -89,6 +109,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -100,6 +124,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="servicePrincipalId", required=true)
     private Object servicePrincipalId;
 
+    /**
+     * @return Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
@@ -111,6 +139,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="servicePrincipalKey", required=true)
     private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
+    /**
+     * @return Specify the application&#39;s key.
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
@@ -122,6 +154,10 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="servicePrincipalTenantId", required=true)
     private Object servicePrincipalTenantId;
 
+    /**
+     * @return Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object servicePrincipalTenantId() {
         return this.servicePrincipalTenantId;
     }
@@ -134,6 +170,11 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;Office365&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -171,63 +212,142 @@ public final class Office365LinkedServiceResponse extends com.pulumi.resources.I
             $ = new Office365LinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param office365TenantId Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder office365TenantId(Object office365TenantId) {
             $.office365TenantId = office365TenantId;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Object servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey Specify the application&#39;s key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalTenantId Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalTenantId(Object servicePrincipalTenantId) {
             $.servicePrincipalTenantId = servicePrincipalTenantId;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;Office365&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

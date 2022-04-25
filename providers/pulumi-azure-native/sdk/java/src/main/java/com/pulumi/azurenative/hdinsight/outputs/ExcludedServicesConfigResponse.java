@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExcludedServicesConfigResponse {
-    /**
-     * The config id of excluded services.
-     * 
-     */
+        /**
+         * @return The config id of excluded services.
+         * 
+         */
     private final @Nullable String excludedServicesConfigId;
-    /**
-     * The list of excluded services.
-     * 
-     */
+        /**
+         * @return The list of excluded services.
+         * 
+         */
     private final @Nullable String excludedServicesList;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ExcludedServicesConfigResponse {
     }
 
     /**
-     * The config id of excluded services.
+     * @return The config id of excluded services.
      * 
-    */
+     */
     public Optional<String> excludedServicesConfigId() {
         return Optional.ofNullable(this.excludedServicesConfigId);
     }
     /**
-     * The list of excluded services.
+     * @return The list of excluded services.
      * 
-    */
+     */
     public Optional<String> excludedServicesList() {
         return Optional.ofNullable(this.excludedServicesList);
     }

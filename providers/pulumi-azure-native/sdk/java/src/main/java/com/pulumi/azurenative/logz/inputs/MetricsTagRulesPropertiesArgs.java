@@ -35,6 +35,10 @@ public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="sendMetrics")
     private @Nullable Output<Boolean> sendMetrics;
 
+    /**
+     * @return Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+     * 
+     */
     public Optional<Output<Boolean>> sendMetrics() {
         return Optional.ofNullable(this.sendMetrics);
     }
@@ -77,11 +81,23 @@ public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.Re
             return metricRules(List.of(metricRules));
         }
 
+        /**
+         * @param sendMetrics Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendMetrics(@Nullable Output<Boolean> sendMetrics) {
             $.sendMetrics = sendMetrics;
             return this;
         }
 
+        /**
+         * @param sendMetrics Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendMetrics(Boolean sendMetrics) {
             return sendMetrics(Output.of(sendMetrics));
         }

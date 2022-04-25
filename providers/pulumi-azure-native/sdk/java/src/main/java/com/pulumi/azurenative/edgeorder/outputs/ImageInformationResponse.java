@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ImageInformationResponse {
-    /**
-     * Type of the image
-     * 
-     */
+        /**
+         * @return Type of the image
+         * 
+         */
     private final String imageType;
-    /**
-     * Url of the image
-     * 
-     */
+        /**
+         * @return Url of the image
+         * 
+         */
     private final String imageUrl;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ImageInformationResponse {
     }
 
     /**
-     * Type of the image
+     * @return Type of the image
      * 
-    */
+     */
     public String imageType() {
         return this.imageType;
     }
     /**
-     * Url of the image
+     * @return Url of the image
      * 
-    */
+     */
     public String imageUrl() {
         return this.imageUrl;
     }

@@ -26,6 +26,10 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The id of the dataset reference.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the dataset reference.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
             $ = new DatasetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of the dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id of the dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

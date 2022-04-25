@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLinkedStorageAccountResult {
-    /**
-     * Linked storage accounts type.
-     * 
-     */
+        /**
+         * @return Linked storage accounts type.
+         * 
+         */
     private final String dataSourceType;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Linked storage accounts resources ids.
-     * 
-     */
+        /**
+         * @return Linked storage accounts resources ids.
+         * 
+         */
     private final @Nullable List<String> storageAccountIds;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetLinkedStorageAccountResult {
     }
 
     /**
-     * Linked storage accounts type.
+     * @return Linked storage accounts type.
      * 
-    */
+     */
     public String dataSourceType() {
         return this.dataSourceType;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Linked storage accounts resources ids.
+     * @return Linked storage accounts resources ids.
      * 
-    */
+     */
     public List<String> storageAccountIds() {
         return this.storageAccountIds == null ? List.of() : this.storageAccountIds;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

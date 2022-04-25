@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventResponseMessageResponse {
-    /**
-     * The content of the event response message.
-     * 
-     */
+        /**
+         * @return The content of the event response message.
+         * 
+         */
     private final @Nullable String content;
-    /**
-     * The headers of the event response message.
-     * 
-     */
+        /**
+         * @return The headers of the event response message.
+         * 
+         */
     private final @Nullable Map<String,String> headers;
-    /**
-     * The reason phrase of the event response message.
-     * 
-     */
+        /**
+         * @return The reason phrase of the event response message.
+         * 
+         */
     private final @Nullable String reasonPhrase;
-    /**
-     * The status code of the event response message.
-     * 
-     */
+        /**
+         * @return The status code of the event response message.
+         * 
+         */
     private final @Nullable String statusCode;
-    /**
-     * The HTTP message version.
-     * 
-     */
+        /**
+         * @return The HTTP message version.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class EventResponseMessageResponse {
     }
 
     /**
-     * The content of the event response message.
+     * @return The content of the event response message.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The headers of the event response message.
+     * @return The headers of the event response message.
      * 
-    */
+     */
     public Map<String,String> headers() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
-     * The reason phrase of the event response message.
+     * @return The reason phrase of the event response message.
      * 
-    */
+     */
     public Optional<String> reasonPhrase() {
         return Optional.ofNullable(this.reasonPhrase);
     }
     /**
-     * The status code of the event response message.
+     * @return The status code of the event response message.
      * 
-    */
+     */
     public Optional<String> statusCode() {
         return Optional.ofNullable(this.statusCode);
     }
     /**
-     * The HTTP message version.
+     * @return The HTTP message version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

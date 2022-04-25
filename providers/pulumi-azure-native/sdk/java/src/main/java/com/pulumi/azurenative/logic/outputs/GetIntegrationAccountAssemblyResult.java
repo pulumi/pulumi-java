@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIntegrationAccountAssemblyResult {
-    /**
-     * The resource id.
-     * 
-     */
+        /**
+         * @return The resource id.
+         * 
+         */
     private final String id;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Gets the resource name.
-     * 
-     */
+        /**
+         * @return Gets the resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The assembly properties.
-     * 
-     */
+        /**
+         * @return The assembly properties.
+         * 
+         */
     private final AssemblyPropertiesResponse properties;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Gets the resource type.
-     * 
-     */
+        /**
+         * @return Gets the resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetIntegrationAccountAssemblyResult {
     }
 
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The assembly properties.
+     * @return The assembly properties.
      * 
-    */
+     */
     public AssemblyPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

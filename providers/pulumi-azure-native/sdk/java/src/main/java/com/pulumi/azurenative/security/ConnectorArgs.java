@@ -27,6 +27,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authenticationDetails")
     private @Nullable Output<Object> authenticationDetails;
 
+    /**
+     * @return Settings for authentication management, these settings are relevant only for the cloud connector.
+     * 
+     */
     public Optional<Output<Object>> authenticationDetails() {
         return Optional.ofNullable(this.authenticationDetails);
     }
@@ -38,6 +42,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
     private @Nullable Output<String> connectorName;
 
+    /**
+     * @return Name of the cloud account connector
+     * 
+     */
     public Optional<Output<String>> connectorName() {
         return Optional.ofNullable(this.connectorName);
     }
@@ -49,6 +57,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hybridComputeSettings")
     private @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
+    /**
+     * @return Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
+     * 
+     */
     public Optional<Output<HybridComputeSettingsPropertiesArgs>> hybridComputeSettings() {
         return Optional.ofNullable(this.hybridComputeSettings);
     }
@@ -79,29 +91,65 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationDetails Settings for authentication management, these settings are relevant only for the cloud connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationDetails(@Nullable Output<Object> authenticationDetails) {
             $.authenticationDetails = authenticationDetails;
             return this;
         }
 
+        /**
+         * @param authenticationDetails Settings for authentication management, these settings are relevant only for the cloud connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationDetails(Object authenticationDetails) {
             return authenticationDetails(Output.of(authenticationDetails));
         }
 
+        /**
+         * @param connectorName Name of the cloud account connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(@Nullable Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;
         }
 
+        /**
+         * @param connectorName Name of the cloud account connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             return connectorName(Output.of(connectorName));
         }
 
+        /**
+         * @param hybridComputeSettings Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridComputeSettings(@Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings) {
             $.hybridComputeSettings = hybridComputeSettings;
             return this;
         }
 
+        /**
+         * @param hybridComputeSettings Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridComputeSettings(HybridComputeSettingsPropertiesArgs hybridComputeSettings) {
             return hybridComputeSettings(Output.of(hybridComputeSettings));
         }

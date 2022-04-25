@@ -27,6 +27,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
     @Import(name="modifiedPath")
     private @Nullable Output<String> modifiedPath;
 
+    /**
+     * @return Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+     * 
+     */
     public Optional<Output<String>> modifiedPath() {
         return Optional.ofNullable(this.modifiedPath);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
     @Import(name="modifiedQueryString")
     private @Nullable Output<String> modifiedQueryString;
 
+    /**
+     * @return Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+     * 
+     */
     public Optional<Output<String>> modifiedQueryString() {
         return Optional.ofNullable(this.modifiedQueryString);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
     @Import(name="reroute")
     private @Nullable Output<Boolean> reroute;
 
+    /**
+     * @return If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> reroute() {
         return Optional.ofNullable(this.reroute);
     }
@@ -79,29 +91,65 @@ public final class ApplicationGatewayUrlConfigurationArgs extends com.pulumi.res
             $ = new ApplicationGatewayUrlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modifiedPath Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedPath(@Nullable Output<String> modifiedPath) {
             $.modifiedPath = modifiedPath;
             return this;
         }
 
+        /**
+         * @param modifiedPath Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedPath(String modifiedPath) {
             return modifiedPath(Output.of(modifiedPath));
         }
 
+        /**
+         * @param modifiedQueryString Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedQueryString(@Nullable Output<String> modifiedQueryString) {
             $.modifiedQueryString = modifiedQueryString;
             return this;
         }
 
+        /**
+         * @param modifiedQueryString Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedQueryString(String modifiedQueryString) {
             return modifiedQueryString(Output.of(modifiedQueryString));
         }
 
+        /**
+         * @param reroute If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reroute(@Nullable Output<Boolean> reroute) {
             $.reroute = reroute;
             return this;
         }
 
+        /**
+         * @param reroute If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reroute(Boolean reroute) {
             return reroute(Output.of(reroute));
         }

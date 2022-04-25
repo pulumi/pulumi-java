@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicySNATResponse {
-    /**
-     * List of private IP addresses/IP address ranges to not be SNAT.
-     * 
-     */
+        /**
+         * @return List of private IP addresses/IP address ranges to not be SNAT.
+         * 
+         */
     private final @Nullable List<String> privateRanges;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FirewallPolicySNATResponse {
     }
 
     /**
-     * List of private IP addresses/IP address ranges to not be SNAT.
+     * @return List of private IP addresses/IP address ranges to not be SNAT.
      * 
-    */
+     */
     public List<String> privateRanges() {
         return this.privateRanges == null ? List.of() : this.privateRanges;
     }

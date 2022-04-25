@@ -27,6 +27,10 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="addressPrefix")
     private @Nullable Output<String> addressPrefix;
 
+    /**
+     * @return Gets or sets address prefix for the subnet.
+     * 
+     */
     public Optional<Output<String>> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -38,6 +42,10 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the Subnet name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="networkSecurityGroup")
     private @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
 
+    /**
+     * @return Defines reference to NSG.
+     * 
+     */
     public Optional<Output<NsgReferenceArgs>> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
@@ -79,29 +91,65 @@ public final class SubnetResourceSettingsArgs extends com.pulumi.resources.Resou
             $ = new SubnetResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix Gets or sets address prefix for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param addressPrefix Gets or sets address prefix for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(String addressPrefix) {
             return addressPrefix(Output.of(addressPrefix));
         }
 
+        /**
+         * @param name Gets or sets the Subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the Subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkSecurityGroup Defines reference to NSG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(@Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
             $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroup Defines reference to NSG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(NsgReferenceArgs networkSecurityGroup) {
             return networkSecurityGroup(Output.of(networkSecurityGroup));
         }

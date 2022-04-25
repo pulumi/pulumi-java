@@ -29,6 +29,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="asn")
     private @Nullable Double asn;
 
+    /**
+     * @return The BGP speaker&#39;s ASN.
+     * 
+     */
     public Optional<Double> asn() {
         return Optional.ofNullable(this.asn);
     }
@@ -40,6 +44,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bgpPeeringAddress")
     private @Nullable String bgpPeeringAddress;
 
+    /**
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
+     * 
+     */
     public Optional<String> bgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }
@@ -51,6 +59,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="bgpPeeringAddresses")
     private @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
 
+    /**
+     * @return BGP peering address with IP configuration ID for virtual network gateway.
+     * 
+     */
     public Optional<List<IPConfigurationBgpPeeringAddressResponse>> bgpPeeringAddresses() {
         return Optional.ofNullable(this.bgpPeeringAddresses);
     }
@@ -62,6 +74,10 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="peerWeight")
     private @Nullable Integer peerWeight;
 
+    /**
+     * @return The weight added to routes learned from this BGP speaker.
+     * 
+     */
     public Optional<Integer> peerWeight() {
         return Optional.ofNullable(this.peerWeight);
     }
@@ -93,25 +109,55 @@ public final class BgpSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BgpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asn The BGP speaker&#39;s ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(@Nullable Double asn) {
             $.asn = asn;
             return this;
         }
 
+        /**
+         * @param bgpPeeringAddress The BGP peering address and BGP identifier of this BGP speaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             $.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
 
+        /**
+         * @param bgpPeeringAddresses BGP peering address with IP configuration ID for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses) {
             $.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
 
+        /**
+         * @param bgpPeeringAddresses BGP peering address with IP configuration ID for virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeeringAddresses(IPConfigurationBgpPeeringAddressResponse... bgpPeeringAddresses) {
             return bgpPeeringAddresses(List.of(bgpPeeringAddresses));
         }
 
+        /**
+         * @param peerWeight The weight added to routes learned from this BGP speaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerWeight(@Nullable Integer peerWeight) {
             $.peerWeight = peerWeight;
             return this;

@@ -19,6 +19,10 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
     @Import(name="associationName", required=true)
     private String associationName;
 
+    /**
+     * @return The name of the association. The name is case insensitive.
+     * 
+     */
     public String associationName() {
         return this.associationName;
     }
@@ -30,6 +34,10 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -59,11 +67,23 @@ public final class GetDataCollectionRuleAssociationArgs extends com.pulumi.resou
             $ = new GetDataCollectionRuleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationName The name of the association. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param resourceUri The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

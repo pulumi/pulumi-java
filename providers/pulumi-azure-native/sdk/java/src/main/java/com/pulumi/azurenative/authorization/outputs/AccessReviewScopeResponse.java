@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessReviewScopeResponse {
-    /**
-     * The role assignment state eligible/active to review
-     * 
-     */
+        /**
+         * @return The role assignment state eligible/active to review
+         * 
+         */
     private final String assignmentState;
-    /**
-     * Flag to indicate whether to expand nested memberships or not.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether to expand nested memberships or not.
+         * 
+         */
     private final @Nullable Boolean expandNestedMemberships;
-    /**
-     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
-     */
+        /**
+         * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         */
     private final @Nullable String inactiveDuration;
-    /**
-     * The identity type user/servicePrincipal to review
-     * 
-     */
+        /**
+         * @return The identity type user/servicePrincipal to review
+         * 
+         */
     private final String principalType;
-    /**
-     * ResourceId in which this review is getting created
-     * 
-     */
+        /**
+         * @return ResourceId in which this review is getting created
+         * 
+         */
     private final String resourceId;
-    /**
-     * This is used to indicate the role being reviewed
-     * 
-     */
+        /**
+         * @return This is used to indicate the role being reviewed
+         * 
+         */
     private final String roleDefinitionId;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class AccessReviewScopeResponse {
     }
 
     /**
-     * The role assignment state eligible/active to review
+     * @return The role assignment state eligible/active to review
      * 
-    */
+     */
     public String assignmentState() {
         return this.assignmentState;
     }
     /**
-     * Flag to indicate whether to expand nested memberships or not.
+     * @return Flag to indicate whether to expand nested memberships or not.
      * 
-    */
+     */
     public Optional<Boolean> expandNestedMemberships() {
         return Optional.ofNullable(this.expandNestedMemberships);
     }
     /**
-     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+     * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
-    */
+     */
     public Optional<String> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
     /**
-     * The identity type user/servicePrincipal to review
+     * @return The identity type user/servicePrincipal to review
      * 
-    */
+     */
     public String principalType() {
         return this.principalType;
     }
     /**
-     * ResourceId in which this review is getting created
+     * @return ResourceId in which this review is getting created
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * This is used to indicate the role being reviewed
+     * @return This is used to indicate the role being reviewed
      * 
-    */
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }

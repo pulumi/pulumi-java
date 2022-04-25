@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultPropertiesResponse {
-    /**
-     * The name of the key associated with the Log Analytics cluster.
-     * 
-     */
+        /**
+         * @return The name of the key associated with the Log Analytics cluster.
+         * 
+         */
     private final @Nullable String keyName;
-    /**
-     * Selected key minimum required size.
-     * 
-     */
+        /**
+         * @return Selected key minimum required size.
+         * 
+         */
     private final @Nullable Integer keyRsaSize;
-    /**
-     * The Key Vault uri which holds they key associated with the Log Analytics cluster.
-     * 
-     */
+        /**
+         * @return The Key Vault uri which holds they key associated with the Log Analytics cluster.
+         * 
+         */
     private final @Nullable String keyVaultUri;
-    /**
-     * The version of the key associated with the Log Analytics cluster.
-     * 
-     */
+        /**
+         * @return The version of the key associated with the Log Analytics cluster.
+         * 
+         */
     private final @Nullable String keyVersion;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * The name of the key associated with the Log Analytics cluster.
+     * @return The name of the key associated with the Log Analytics cluster.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * Selected key minimum required size.
+     * @return Selected key minimum required size.
      * 
-    */
+     */
     public Optional<Integer> keyRsaSize() {
         return Optional.ofNullable(this.keyRsaSize);
     }
     /**
-     * The Key Vault uri which holds they key associated with the Log Analytics cluster.
+     * @return The Key Vault uri which holds they key associated with the Log Analytics cluster.
      * 
-    */
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
-     * The version of the key associated with the Log Analytics cluster.
+     * @return The version of the key associated with the Log Analytics cluster.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }

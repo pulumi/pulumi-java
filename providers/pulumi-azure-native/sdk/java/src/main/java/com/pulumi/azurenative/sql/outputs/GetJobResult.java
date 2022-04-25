@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetJobResult {
-    /**
-     * User-defined description of the job.
-     * 
-     */
+        /**
+         * @return User-defined description of the job.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Schedule properties of the job.
-     * 
-     */
+        /**
+         * @return Schedule properties of the job.
+         * 
+         */
     private final @Nullable JobScheduleResponse schedule;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The job version number.
-     * 
-     */
+        /**
+         * @return The job version number.
+         * 
+         */
     private final Integer version;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetJobResult {
     }
 
     /**
-     * User-defined description of the job.
+     * @return User-defined description of the job.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Schedule properties of the job.
+     * @return Schedule properties of the job.
      * 
-    */
+     */
     public Optional<JobScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The job version number.
+     * @return The job version number.
      * 
-    */
+     */
     public Integer version() {
         return this.version;
     }

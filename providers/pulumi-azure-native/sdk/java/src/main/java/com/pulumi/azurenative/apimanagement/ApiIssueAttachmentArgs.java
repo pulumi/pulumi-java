@@ -22,6 +22,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return API identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="attachmentId")
     private @Nullable Output<String> attachmentId;
 
+    /**
+     * @return Attachment identifier within an Issue. Must be unique in the current Issue.
+     * 
+     */
     public Optional<Output<String>> attachmentId() {
         return Optional.ofNullable(this.attachmentId);
     }
@@ -44,6 +52,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="content", required=true)
     private Output<String> content;
 
+    /**
+     * @return An HTTP link or Base64-encoded binary data.
+     * 
+     */
     public Output<String> content() {
         return this.content;
     }
@@ -55,6 +67,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="contentFormat", required=true)
     private Output<String> contentFormat;
 
+    /**
+     * @return Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
+     * 
+     */
     public Output<String> contentFormat() {
         return this.contentFormat;
     }
@@ -66,6 +82,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="issueId", required=true)
     private Output<String> issueId;
 
+    /**
+     * @return Issue identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Output<String> issueId() {
         return this.issueId;
     }
@@ -77,6 +97,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,6 +112,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -99,6 +127,10 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return Filename by which the binary data will be saved.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -134,74 +166,170 @@ public final class ApiIssueAttachmentArgs extends com.pulumi.resources.ResourceA
             $ = new ApiIssueAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId API identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param attachmentId Attachment identifier within an Issue. Must be unique in the current Issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(@Nullable Output<String> attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
+        /**
+         * @param attachmentId Attachment identifier within an Issue. Must be unique in the current Issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(String attachmentId) {
             return attachmentId(Output.of(attachmentId));
         }
 
+        /**
+         * @param content An HTTP link or Base64-encoded binary data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content An HTTP link or Base64-encoded binary data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param contentFormat Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentFormat(Output<String> contentFormat) {
             $.contentFormat = contentFormat;
             return this;
         }
 
+        /**
+         * @param contentFormat Either &#39;link&#39; if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the &#39;content&#39; property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentFormat(String contentFormat) {
             return contentFormat(Output.of(contentFormat));
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(Output<String> issueId) {
             $.issueId = issueId;
             return this;
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(String issueId) {
             return issueId(Output.of(issueId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param title Filename by which the binary data will be saved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Filename by which the binary data will be saved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

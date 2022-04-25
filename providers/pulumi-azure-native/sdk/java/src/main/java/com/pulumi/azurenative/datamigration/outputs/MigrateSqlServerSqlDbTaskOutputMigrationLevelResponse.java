@@ -15,86 +15,86 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
-    /**
-     * Summary of database results in the migration
-     * 
-     */
+        /**
+         * @return Summary of database results in the migration
+         * 
+         */
     private final Map<String,DatabaseSummaryResultResponse> databaseSummary;
-    /**
-     * Selected databases as a map from database name to database id
-     * 
-     */
+        /**
+         * @return Selected databases as a map from database name to database id
+         * 
+         */
     private final Map<String,String> databases;
-    /**
-     * Duration of task execution in seconds.
-     * 
-     */
+        /**
+         * @return Duration of task execution in seconds.
+         * 
+         */
     private final Double durationInSeconds;
-    /**
-     * Migration end time
-     * 
-     */
+        /**
+         * @return Migration end time
+         * 
+         */
     private final String endedOn;
-    /**
-     * Migration exceptions and warnings.
-     * 
-     */
+        /**
+         * @return Migration exceptions and warnings.
+         * 
+         */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * Migration progress message
-     * 
-     */
+        /**
+         * @return Migration progress message
+         * 
+         */
     private final String message;
-    /**
-     * Migration Report Result, provides unique url for downloading your migration report.
-     * 
-     */
+        /**
+         * @return Migration Report Result, provides unique url for downloading your migration report.
+         * 
+         */
     private final MigrationReportResultResponse migrationReport;
-    /**
-     * Result type
-     * Expected value is &#39;MigrationLevelOutput&#39;.
-     * 
-     */
+        /**
+         * @return Result type
+         * Expected value is &#39;MigrationLevelOutput&#39;.
+         * 
+         */
     private final String resultType;
-    /**
-     * Source server brand version
-     * 
-     */
+        /**
+         * @return Source server brand version
+         * 
+         */
     private final String sourceServerBrandVersion;
-    /**
-     * Source server version
-     * 
-     */
+        /**
+         * @return Source server version
+         * 
+         */
     private final String sourceServerVersion;
-    /**
-     * Migration start time
-     * 
-     */
+        /**
+         * @return Migration start time
+         * 
+         */
     private final String startedOn;
-    /**
-     * Current status of migration
-     * 
-     */
+        /**
+         * @return Current status of migration
+         * 
+         */
     private final String status;
-    /**
-     * Migration status message
-     * 
-     */
+        /**
+         * @return Migration status message
+         * 
+         */
     private final String statusMessage;
-    /**
-     * Target server brand version
-     * 
-     */
+        /**
+         * @return Target server brand version
+         * 
+         */
     private final String targetServerBrandVersion;
-    /**
-     * Target server version
-     * 
-     */
+        /**
+         * @return Target server version
+         * 
+         */
     private final String targetServerVersion;
 
     @CustomType.Constructor
@@ -134,115 +134,115 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
     }
 
     /**
-     * Summary of database results in the migration
+     * @return Summary of database results in the migration
      * 
-    */
+     */
     public Map<String,DatabaseSummaryResultResponse> databaseSummary() {
         return this.databaseSummary;
     }
     /**
-     * Selected databases as a map from database name to database id
+     * @return Selected databases as a map from database name to database id
      * 
-    */
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
     /**
-     * Duration of task execution in seconds.
+     * @return Duration of task execution in seconds.
      * 
-    */
+     */
     public Double durationInSeconds() {
         return this.durationInSeconds;
     }
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Migration exceptions and warnings.
+     * @return Migration exceptions and warnings.
      * 
-    */
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Migration progress message
+     * @return Migration progress message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Migration Report Result, provides unique url for downloading your migration report.
+     * @return Migration Report Result, provides unique url for downloading your migration report.
      * 
-    */
+     */
     public MigrationReportResultResponse migrationReport() {
         return this.migrationReport;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Source server brand version
+     * @return Source server brand version
      * 
-    */
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
-     * Source server version
+     * @return Source server version
      * 
-    */
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current status of migration
+     * @return Current status of migration
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Migration status message
+     * @return Migration status message
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Target server version
+     * @return Target server version
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }

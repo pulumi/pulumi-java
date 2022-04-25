@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabasePrincipalResponse {
-    /**
-     * Application id - relevant only for application principal type.
-     * 
-     */
+        /**
+         * @return Application id - relevant only for application principal type.
+         * 
+         */
     private final @Nullable String appId;
-    /**
-     * Database principal email if exists.
-     * 
-     */
+        /**
+         * @return Database principal email if exists.
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * Database principal fully qualified name.
-     * 
-     */
+        /**
+         * @return Database principal fully qualified name.
+         * 
+         */
     private final @Nullable String fqn;
-    /**
-     * Database principal name.
-     * 
-     */
+        /**
+         * @return Database principal name.
+         * 
+         */
     private final String name;
-    /**
-     * Database principal role.
-     * 
-     */
+        /**
+         * @return Database principal role.
+         * 
+         */
     private final String role;
-    /**
-     * The tenant name of the principal
-     * 
-     */
+        /**
+         * @return The tenant name of the principal
+         * 
+         */
     private final String tenantName;
-    /**
-     * Database principal type.
-     * 
-     */
+        /**
+         * @return Database principal type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class DatabasePrincipalResponse {
     }
 
     /**
-     * Application id - relevant only for application principal type.
+     * @return Application id - relevant only for application principal type.
      * 
-    */
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
-     * Database principal email if exists.
+     * @return Database principal email if exists.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * Database principal fully qualified name.
+     * @return Database principal fully qualified name.
      * 
-    */
+     */
     public Optional<String> fqn() {
         return Optional.ofNullable(this.fqn);
     }
     /**
-     * Database principal name.
+     * @return Database principal name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Database principal role.
+     * @return Database principal role.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * The tenant name of the principal
+     * @return The tenant name of the principal
      * 
-    */
+     */
     public String tenantName() {
         return this.tenantName;
     }
     /**
-     * Database principal type.
+     * @return Database principal type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

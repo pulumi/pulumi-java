@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomImagePropertiesCustomResponse {
-    /**
-     * The image name.
-     * 
-     */
+        /**
+         * @return The image name.
+         * 
+         */
     private final @Nullable String imageName;
-    /**
-     * The OS type of the custom image (i.e. Windows, Linux)
-     * 
-     */
+        /**
+         * @return The OS type of the custom image (i.e. Windows, Linux)
+         * 
+         */
     private final String osType;
-    /**
-     * Indicates whether sysprep has been run on the VHD.
-     * 
-     */
+        /**
+         * @return Indicates whether sysprep has been run on the VHD.
+         * 
+         */
     private final @Nullable Boolean sysPrep;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class CustomImagePropertiesCustomResponse {
     }
 
     /**
-     * The image name.
+     * @return The image name.
      * 
-    */
+     */
     public Optional<String> imageName() {
         return Optional.ofNullable(this.imageName);
     }
     /**
-     * The OS type of the custom image (i.e. Windows, Linux)
+     * @return The OS type of the custom image (i.e. Windows, Linux)
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * Indicates whether sysprep has been run on the VHD.
+     * @return Indicates whether sysprep has been run on the VHD.
      * 
-    */
+     */
     public Optional<Boolean> sysPrep() {
         return Optional.ofNullable(this.sysPrep);
     }

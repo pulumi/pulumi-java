@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ParameterValueResponse {
-    /**
-     * Parameter value as reference type.
-     * 
-     */
+        /**
+         * @return Parameter value as reference type.
+         * 
+         */
     private final @Nullable SecretValueReferenceResponse reference;
-    /**
-     * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
-     * 
-     */
+        /**
+         * @return Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+         * 
+         */
     private final @Nullable Object value;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ParameterValueResponse {
     }
 
     /**
-     * Parameter value as reference type.
+     * @return Parameter value as reference type.
      * 
-    */
+     */
     public Optional<SecretValueReferenceResponse> reference() {
         return Optional.ofNullable(this.reference);
     }
     /**
-     * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+     * @return Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
      * 
-    */
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }

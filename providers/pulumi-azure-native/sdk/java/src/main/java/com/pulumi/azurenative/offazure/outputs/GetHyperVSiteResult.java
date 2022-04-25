@@ -13,36 +13,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHyperVSiteResult {
-    /**
-     * eTag for concurrency control.
-     * 
-     */
+        /**
+         * @return eTag for concurrency control.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Azure location in which Sites is created.
-     * 
-     */
+        /**
+         * @return Azure location in which Sites is created.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Name of the Hyper-V site.
-     * 
-     */
+        /**
+         * @return Name of the Hyper-V site.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Nested properties of Hyper-V site.
-     * 
-     */
+        /**
+         * @return Nested properties of Hyper-V site.
+         * 
+         */
     private final SitePropertiesResponse properties;
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of resource. Type = Microsoft.OffAzure/HyperVSites.
-     * 
-     */
+        /**
+         * @return Type of resource. Type = Microsoft.OffAzure/HyperVSites.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -64,37 +64,37 @@ public final class GetHyperVSiteResult {
     }
 
     /**
-     * eTag for concurrency control.
+     * @return eTag for concurrency control.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure location in which Sites is created.
+     * @return Azure location in which Sites is created.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Name of the Hyper-V site.
+     * @return Name of the Hyper-V site.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Nested properties of Hyper-V site.
+     * @return Nested properties of Hyper-V site.
      * 
-    */
+     */
     public SitePropertiesResponse properties() {
         return this.properties;
     }
@@ -102,9 +102,9 @@ public final class GetHyperVSiteResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of resource. Type = Microsoft.OffAzure/HyperVSites.
+     * @return Type of resource. Type = Microsoft.OffAzure/HyperVSites.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

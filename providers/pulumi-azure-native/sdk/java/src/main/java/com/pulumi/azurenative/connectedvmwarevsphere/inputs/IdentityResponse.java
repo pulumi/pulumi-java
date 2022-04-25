@@ -23,6 +23,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of managed service identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant of managed service identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -45,6 +53,10 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of managed service identity.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of managed service identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

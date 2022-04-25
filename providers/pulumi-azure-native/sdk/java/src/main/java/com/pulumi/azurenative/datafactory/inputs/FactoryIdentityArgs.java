@@ -30,6 +30,10 @@ public final class FactoryIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<Either<String,FactoryIdentityType>> type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Output<Either<String,FactoryIdentityType>> type() {
         return this.type;
     }
@@ -41,6 +45,10 @@ public final class FactoryIdentityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
+    /**
+     * @return List of user assigned identities for the factory.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -70,28 +78,64 @@ public final class FactoryIdentityArgs extends com.pulumi.resources.ResourceArgs
             $ = new FactoryIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,FactoryIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,FactoryIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(FactoryIdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities List of user assigned identities for the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,Object>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities List of user assigned identities for the factory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,Object> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

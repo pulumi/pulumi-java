@@ -25,6 +25,10 @@ public final class DiffDiskSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="option")
     private @Nullable String option;
 
+    /**
+     * @return Specifies the ephemeral disk settings for operating system disk.
+     * 
+     */
     public Optional<String> option() {
         return Optional.ofNullable(this.option);
     }
@@ -36,6 +40,10 @@ public final class DiffDiskSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="placement")
     private @Nullable String placement;
 
+    /**
+     * @return Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+     * 
+     */
     public Optional<String> placement() {
         return Optional.ofNullable(this.placement);
     }
@@ -65,11 +73,23 @@ public final class DiffDiskSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new DiffDiskSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param option Specifies the ephemeral disk settings for operating system disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder option(@Nullable String option) {
             $.option = option;
             return this;
         }
 
+        /**
+         * @param placement Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(@Nullable String placement) {
             $.placement = placement;
             return this;

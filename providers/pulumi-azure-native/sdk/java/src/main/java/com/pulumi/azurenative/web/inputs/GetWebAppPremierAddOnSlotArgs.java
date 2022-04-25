@@ -19,6 +19,10 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
     @Import(name="premierAddOnName", required=true)
     private String premierAddOnName;
 
+    /**
+     * @return Add-on name.
+     * 
+     */
     public String premierAddOnName() {
         return this.premierAddOnName;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API will get the named add-on for the production slot.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -83,21 +99,45 @@ public final class GetWebAppPremierAddOnSlotArgs extends com.pulumi.resources.In
             $ = new GetWebAppPremierAddOnSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param premierAddOnName Add-on name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premierAddOnName(String premierAddOnName) {
             $.premierAddOnName = premierAddOnName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API will get the named add-on for the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListClusterStreamingJobsResult {
-    /**
-     * The URL to fetch the next set of streaming jobs.
-     * 
-     */
+        /**
+         * @return The URL to fetch the next set of streaming jobs.
+         * 
+         */
     private final String nextLink;
-    /**
-     * A list of streaming jobs.
-     * 
-     */
+        /**
+         * @return A list of streaming jobs.
+         * 
+         */
     private final List<ClusterJobResponse> value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListClusterStreamingJobsResult {
     }
 
     /**
-     * The URL to fetch the next set of streaming jobs.
+     * @return The URL to fetch the next set of streaming jobs.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * A list of streaming jobs.
+     * @return A list of streaming jobs.
      * 
-    */
+     */
     public List<ClusterJobResponse> value() {
         return this.value;
     }

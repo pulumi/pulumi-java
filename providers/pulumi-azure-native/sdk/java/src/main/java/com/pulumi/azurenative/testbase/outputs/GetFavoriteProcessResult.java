@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetFavoriteProcessResult {
-    /**
-     * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
-     * 
-     */
+        /**
+         * @return The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
+         * 
+         */
     private final String actualProcessName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The system metadata relating to this resource
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetFavoriteProcessResult {
     }
 
     /**
-     * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
+     * @return The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
      * 
-    */
+     */
     public String actualProcessName() {
         return this.actualProcessName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OraclePartitionSettingsResponse {
-    /**
-     * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionColumnName;
-    /**
-     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionLowerBound;
-    /**
-     * Names of the physical partitions of Oracle table.
-     * 
-     */
+        /**
+         * @return Names of the physical partitions of Oracle table.
+         * 
+         */
     private final @Nullable List<Object> partitionNames;
-    /**
-     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionUpperBound;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class OraclePartitionSettingsResponse {
     }
 
     /**
-     * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * @return The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
     /**
-     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * @return The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
     /**
-     * Names of the physical partitions of Oracle table.
+     * @return Names of the physical partitions of Oracle table.
      * 
-    */
+     */
     public List<Object> partitionNames() {
         return this.partitionNames == null ? List.of() : this.partitionNames;
     }
     /**
-     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * @return The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }

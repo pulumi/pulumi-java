@@ -24,6 +24,10 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Error code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -35,6 +39,10 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Error message.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -46,6 +54,10 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="parameters", required=true)
     private List<String> parameters;
 
+    /**
+     * @return Managed integration runtime error parameters.
+     * 
+     */
     public List<String> parameters() {
         return this.parameters;
     }
@@ -57,6 +69,10 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
     @Import(name="time", required=true)
     private String time;
 
+    /**
+     * @return The time when the error occurred.
+     * 
+     */
     public String time() {
         return this.time;
     }
@@ -88,25 +104,55 @@ public final class ManagedIntegrationRuntimeErrorResponse extends com.pulumi.res
             $ = new ManagedIntegrationRuntimeErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param parameters Managed integration runtime error parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Managed integration runtime error parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param time The time when the error occurred.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             $.time = time;
             return this;

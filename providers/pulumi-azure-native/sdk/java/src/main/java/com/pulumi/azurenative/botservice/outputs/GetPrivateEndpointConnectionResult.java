@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The resource of private end point.
-     * 
-     */
+        /**
+         * @return The resource of private end point.
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     * 
-     */
+        /**
+         * @return A collection of information about the state of the connection between service consumer and provider.
+         * 
+         */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * The provisioning state of the private endpoint connection resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the private endpoint connection resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
-    */
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
-     * The provisioning state of the private endpoint connection resource.
+     * @return The provisioning state of the private endpoint connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

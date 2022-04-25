@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualApplianceSkuPropertiesResponse {
-    /**
-     * Virtual Appliance Scale Unit.
-     * 
-     */
+        /**
+         * @return Virtual Appliance Scale Unit.
+         * 
+         */
     private final @Nullable String bundledScaleUnit;
-    /**
-     * Virtual Appliance Version.
-     * 
-     */
+        /**
+         * @return Virtual Appliance Version.
+         * 
+         */
     private final @Nullable String marketPlaceVersion;
-    /**
-     * Virtual Appliance Vendor.
-     * 
-     */
+        /**
+         * @return Virtual Appliance Vendor.
+         * 
+         */
     private final @Nullable String vendor;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class VirtualApplianceSkuPropertiesResponse {
     }
 
     /**
-     * Virtual Appliance Scale Unit.
+     * @return Virtual Appliance Scale Unit.
      * 
-    */
+     */
     public Optional<String> bundledScaleUnit() {
         return Optional.ofNullable(this.bundledScaleUnit);
     }
     /**
-     * Virtual Appliance Version.
+     * @return Virtual Appliance Version.
      * 
-    */
+     */
     public Optional<String> marketPlaceVersion() {
         return Optional.ofNullable(this.marketPlaceVersion);
     }
     /**
-     * Virtual Appliance Vendor.
+     * @return Virtual Appliance Vendor.
      * 
-    */
+     */
     public Optional<String> vendor() {
         return Optional.ofNullable(this.vendor);
     }

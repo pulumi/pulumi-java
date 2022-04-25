@@ -20,135 +20,135 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RunResponse {
-    /**
-     * The machine configuration of the run agent.
-     * 
-     */
+        /**
+         * @return The machine configuration of the run agent.
+         * 
+         */
     private final @Nullable AgentPropertiesResponse agentConfiguration;
-    /**
-     * The dedicated agent pool for the run.
-     * 
-     */
+        /**
+         * @return The dedicated agent pool for the run.
+         * 
+         */
     private final @Nullable String agentPoolName;
-    /**
-     * The time the run was scheduled.
-     * 
-     */
+        /**
+         * @return The time the run was scheduled.
+         * 
+         */
     private final @Nullable String createTime;
-    /**
-     * The list of custom registries that were logged in during this run.
-     * 
-     */
+        /**
+         * @return The list of custom registries that were logged in during this run.
+         * 
+         */
     private final @Nullable List<String> customRegistries;
-    /**
-     * The time the run finished.
-     * 
-     */
+        /**
+         * @return The time the run finished.
+         * 
+         */
     private final @Nullable String finishTime;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
-     * 
-     */
+        /**
+         * @return The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
+         * 
+         */
     private final @Nullable ImageUpdateTriggerResponse imageUpdateTrigger;
-    /**
-     * The value that indicates whether archiving is enabled or not.
-     * 
-     */
+        /**
+         * @return The value that indicates whether archiving is enabled or not.
+         * 
+         */
     private final @Nullable Boolean isArchiveEnabled;
-    /**
-     * The last updated time for the run.
-     * 
-     */
+        /**
+         * @return The last updated time for the run.
+         * 
+         */
     private final @Nullable String lastUpdatedTime;
-    /**
-     * The image description for the log artifact.
-     * 
-     */
+        /**
+         * @return The image description for the log artifact.
+         * 
+         */
     private final ImageDescriptorResponse logArtifact;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
-     * 
-     */
+        /**
+         * @return The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+         * 
+         */
     private final @Nullable List<ImageDescriptorResponse> outputImages;
-    /**
-     * The platform properties against which the run will happen.
-     * 
-     */
+        /**
+         * @return The platform properties against which the run will happen.
+         * 
+         */
     private final @Nullable PlatformPropertiesResponse platform;
-    /**
-     * The provisioning state of a run.
-     * 
-     */
+        /**
+         * @return The provisioning state of a run.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * The error message received from backend systems after the run is scheduled.
-     * 
-     */
+        /**
+         * @return The error message received from backend systems after the run is scheduled.
+         * 
+         */
     private final String runErrorMessage;
-    /**
-     * The unique identifier for the run.
-     * 
-     */
+        /**
+         * @return The unique identifier for the run.
+         * 
+         */
     private final @Nullable String runId;
-    /**
-     * The type of run.
-     * 
-     */
+        /**
+         * @return The type of run.
+         * 
+         */
     private final @Nullable String runType;
-    /**
-     * The scope of the credentials that were used to login to the source registry during this run.
-     * 
-     */
+        /**
+         * @return The scope of the credentials that were used to login to the source registry during this run.
+         * 
+         */
     private final @Nullable String sourceRegistryAuth;
-    /**
-     * The source trigger that caused the run.
-     * 
-     */
+        /**
+         * @return The source trigger that caused the run.
+         * 
+         */
     private final @Nullable SourceTriggerDescriptorResponse sourceTrigger;
-    /**
-     * The time the run started.
-     * 
-     */
+        /**
+         * @return The time the run started.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * The current status of the run.
-     * 
-     */
+        /**
+         * @return The current status of the run.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The task against which run was scheduled.
-     * 
-     */
+        /**
+         * @return The task against which run was scheduled.
+         * 
+         */
     private final @Nullable String task;
-    /**
-     * The timer trigger that caused the run.
-     * 
-     */
+        /**
+         * @return The timer trigger that caused the run.
+         * 
+         */
     private final @Nullable TimerTriggerDescriptorResponse timerTrigger;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The update trigger token passed for the Run.
-     * 
-     */
+        /**
+         * @return The update trigger token passed for the Run.
+         * 
+         */
     private final @Nullable String updateTriggerToken;
 
     @CustomType.Constructor
@@ -208,184 +208,184 @@ public final class RunResponse {
     }
 
     /**
-     * The machine configuration of the run agent.
+     * @return The machine configuration of the run agent.
      * 
-    */
+     */
     public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
-     * The dedicated agent pool for the run.
+     * @return The dedicated agent pool for the run.
      * 
-    */
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
-     * The time the run was scheduled.
+     * @return The time the run was scheduled.
      * 
-    */
+     */
     public Optional<String> createTime() {
         return Optional.ofNullable(this.createTime);
     }
     /**
-     * The list of custom registries that were logged in during this run.
+     * @return The list of custom registries that were logged in during this run.
      * 
-    */
+     */
     public List<String> customRegistries() {
         return this.customRegistries == null ? List.of() : this.customRegistries;
     }
     /**
-     * The time the run finished.
+     * @return The time the run finished.
      * 
-    */
+     */
     public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
+     * @return The image update trigger that caused the run. This is applicable if the task has base image trigger configured.
      * 
-    */
+     */
     public Optional<ImageUpdateTriggerResponse> imageUpdateTrigger() {
         return Optional.ofNullable(this.imageUpdateTrigger);
     }
     /**
-     * The value that indicates whether archiving is enabled or not.
+     * @return The value that indicates whether archiving is enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
-     * The last updated time for the run.
+     * @return The last updated time for the run.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
-     * The image description for the log artifact.
+     * @return The image description for the log artifact.
      * 
-    */
+     */
     public ImageDescriptorResponse logArtifact() {
         return this.logArtifact;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
+     * @return The list of all images that were generated from the run. This is applicable if the run generates base image dependencies.
      * 
-    */
+     */
     public List<ImageDescriptorResponse> outputImages() {
         return this.outputImages == null ? List.of() : this.outputImages;
     }
     /**
-     * The platform properties against which the run will happen.
+     * @return The platform properties against which the run will happen.
      * 
-    */
+     */
     public Optional<PlatformPropertiesResponse> platform() {
         return Optional.ofNullable(this.platform);
     }
     /**
-     * The provisioning state of a run.
+     * @return The provisioning state of a run.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The error message received from backend systems after the run is scheduled.
+     * @return The error message received from backend systems after the run is scheduled.
      * 
-    */
+     */
     public String runErrorMessage() {
         return this.runErrorMessage;
     }
     /**
-     * The unique identifier for the run.
+     * @return The unique identifier for the run.
      * 
-    */
+     */
     public Optional<String> runId() {
         return Optional.ofNullable(this.runId);
     }
     /**
-     * The type of run.
+     * @return The type of run.
      * 
-    */
+     */
     public Optional<String> runType() {
         return Optional.ofNullable(this.runType);
     }
     /**
-     * The scope of the credentials that were used to login to the source registry during this run.
+     * @return The scope of the credentials that were used to login to the source registry during this run.
      * 
-    */
+     */
     public Optional<String> sourceRegistryAuth() {
         return Optional.ofNullable(this.sourceRegistryAuth);
     }
     /**
-     * The source trigger that caused the run.
+     * @return The source trigger that caused the run.
      * 
-    */
+     */
     public Optional<SourceTriggerDescriptorResponse> sourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }
     /**
-     * The time the run started.
+     * @return The time the run started.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The current status of the run.
+     * @return The current status of the run.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The task against which run was scheduled.
+     * @return The task against which run was scheduled.
      * 
-    */
+     */
     public Optional<String> task() {
         return Optional.ofNullable(this.task);
     }
     /**
-     * The timer trigger that caused the run.
+     * @return The timer trigger that caused the run.
      * 
-    */
+     */
     public Optional<TimerTriggerDescriptorResponse> timerTrigger() {
         return Optional.ofNullable(this.timerTrigger);
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The update trigger token passed for the Run.
+     * @return The update trigger token passed for the Run.
      * 
-    */
+     */
     public Optional<String> updateTriggerToken() {
         return Optional.ofNullable(this.updateTriggerToken);
     }

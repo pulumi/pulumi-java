@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PropertiesResponseLockbox {
-    /**
-     * lockbox configuration
-     * 
-     */
+        /**
+         * @return lockbox configuration
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class PropertiesResponseLockbox {
     }
 
     /**
-     * lockbox configuration
+     * @return lockbox configuration
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

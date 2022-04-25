@@ -23,6 +23,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -34,6 +38,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
     @Import(name="keyType")
     private @Nullable Either<String,KeyType> keyType;
 
+    /**
+     * @return The key type.
+     * 
+     */
     public Optional<Either<String,KeyType>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -45,6 +53,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
     @Import(name="mapName", required=true)
     private String mapName;
 
+    /**
+     * @return The integration account map name.
+     * 
+     */
     public String mapName() {
         return this.mapName;
     }
@@ -56,6 +68,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
     @Import(name="notAfter")
     private @Nullable String notAfter;
 
+    /**
+     * @return The expiry time.
+     * 
+     */
     public Optional<String> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
@@ -67,6 +83,10 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,34 +119,76 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends com.p
             $ = new ListIntegrationAccountMapContentCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Either.ofLeft(keyType));
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(KeyType keyType) {
             return keyType(Either.ofRight(keyType));
         }
 
+        /**
+         * @param mapName The integration account map name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapName(String mapName) {
             $.mapName = mapName;
             return this;
         }
 
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(@Nullable String notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

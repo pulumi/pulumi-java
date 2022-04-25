@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SuppressionConfigResponse {
-    /**
-     * Specifies when the suppression should be applied
-     * 
-     */
+        /**
+         * @return Specifies when the suppression should be applied
+         * 
+         */
     private final String recurrenceType;
-    /**
-     * suppression schedule configuration
-     * 
-     */
+        /**
+         * @return suppression schedule configuration
+         * 
+         */
     private final @Nullable SuppressionScheduleResponse schedule;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class SuppressionConfigResponse {
     }
 
     /**
-     * Specifies when the suppression should be applied
+     * @return Specifies when the suppression should be applied
      * 
-    */
+     */
     public String recurrenceType() {
         return this.recurrenceType;
     }
     /**
-     * suppression schedule configuration
+     * @return suppression schedule configuration
      * 
-    */
+     */
     public Optional<SuppressionScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }

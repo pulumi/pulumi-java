@@ -25,6 +25,10 @@ public final class LogAnalyticsWorkspaceConfigResponse extends com.pulumi.resour
     @Import(name="workspaceId")
     private @Nullable String workspaceId;
 
+    /**
+     * @return Azure Log Analytics workspace ID
+     * 
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -53,6 +57,12 @@ public final class LogAnalyticsWorkspaceConfigResponse extends com.pulumi.resour
             $ = new LogAnalyticsWorkspaceConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param workspaceId Azure Log Analytics workspace ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             $.workspaceId = workspaceId;
             return this;

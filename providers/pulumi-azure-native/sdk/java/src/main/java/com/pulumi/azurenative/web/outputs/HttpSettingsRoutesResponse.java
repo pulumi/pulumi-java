@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HttpSettingsRoutesResponse {
-    /**
-     * The prefix that should precede all the authentication/authorization paths.
-     * 
-     */
+        /**
+         * @return The prefix that should precede all the authentication/authorization paths.
+         * 
+         */
     private final @Nullable String apiPrefix;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class HttpSettingsRoutesResponse {
     }
 
     /**
-     * The prefix that should precede all the authentication/authorization paths.
+     * @return The prefix that should precede all the authentication/authorization paths.
      * 
-    */
+     */
     public Optional<String> apiPrefix() {
         return Optional.ofNullable(this.apiPrefix);
     }

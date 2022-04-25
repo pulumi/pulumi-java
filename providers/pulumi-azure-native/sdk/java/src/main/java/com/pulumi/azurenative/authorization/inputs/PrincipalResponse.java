@@ -25,6 +25,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The name of the principal made changes
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return Email of principal
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -47,6 +55,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The id of the principal made changes
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of principal such as user , group etc
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -89,21 +105,45 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrincipalResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The name of the principal made changes
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param email Email of principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param id The id of the principal made changes
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param type Type of principal such as user , group etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

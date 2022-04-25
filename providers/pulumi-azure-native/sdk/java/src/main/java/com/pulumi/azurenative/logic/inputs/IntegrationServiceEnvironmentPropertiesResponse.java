@@ -28,6 +28,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="encryptionConfiguration")
     private @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration;
 
+    /**
+     * @return The encryption configuration.
+     * 
+     */
     public Optional<IntegrationServiceEnvironmenEncryptionConfigurationResponse> encryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
@@ -39,6 +43,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="endpointsConfiguration")
     private @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration;
 
+    /**
+     * @return The endpoints configuration.
+     * 
+     */
     public Optional<FlowEndpointsConfigurationResponse> endpointsConfiguration() {
         return Optional.ofNullable(this.endpointsConfiguration);
     }
@@ -50,6 +58,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="integrationServiceEnvironmentId")
     private @Nullable String integrationServiceEnvironmentId;
 
+    /**
+     * @return Gets the tracking id.
+     * 
+     */
     public Optional<String> integrationServiceEnvironmentId() {
         return Optional.ofNullable(this.integrationServiceEnvironmentId);
     }
@@ -61,6 +73,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="networkConfiguration")
     private @Nullable NetworkConfigurationResponse networkConfiguration;
 
+    /**
+     * @return The network configuration.
+     * 
+     */
     public Optional<NetworkConfigurationResponse> networkConfiguration() {
         return Optional.ofNullable(this.networkConfiguration);
     }
@@ -72,6 +88,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -83,6 +103,10 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The integration service environment state.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -116,31 +140,67 @@ public final class IntegrationServiceEnvironmentPropertiesResponse extends com.p
             $ = new IntegrationServiceEnvironmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionConfiguration The encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration) {
             $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
+        /**
+         * @param endpointsConfiguration The endpoints configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
             $.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
+        /**
+         * @param integrationServiceEnvironmentId Gets the tracking id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
             $.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
 
+        /**
+         * @param networkConfiguration The network configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
             $.networkConfiguration = networkConfiguration;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param state The integration service environment state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

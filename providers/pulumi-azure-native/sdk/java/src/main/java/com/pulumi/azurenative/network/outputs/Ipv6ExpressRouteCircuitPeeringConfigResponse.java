@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
-    /**
-     * The Microsoft peering configuration.
-     * 
-     */
+        /**
+         * @return The Microsoft peering configuration.
+         * 
+         */
     private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
-    /**
-     * The primary address prefix.
-     * 
-     */
+        /**
+         * @return The primary address prefix.
+         * 
+         */
     private final @Nullable String primaryPeerAddressPrefix;
-    /**
-     * The reference to the RouteFilter resource.
-     * 
-     */
+        /**
+         * @return The reference to the RouteFilter resource.
+         * 
+         */
     private final @Nullable SubResourceResponse routeFilter;
-    /**
-     * The secondary address prefix.
-     * 
-     */
+        /**
+         * @return The secondary address prefix.
+         * 
+         */
     private final @Nullable String secondaryPeerAddressPrefix;
-    /**
-     * The state of peering.
-     * 
-     */
+        /**
+         * @return The state of peering.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
     }
 
     /**
-     * The Microsoft peering configuration.
+     * @return The Microsoft peering configuration.
      * 
-    */
+     */
     public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
     /**
-     * The primary address prefix.
+     * @return The primary address prefix.
      * 
-    */
+     */
     public Optional<String> primaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
     /**
-     * The reference to the RouteFilter resource.
+     * @return The reference to the RouteFilter resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> routeFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
     /**
-     * The secondary address prefix.
+     * @return The secondary address prefix.
      * 
-    */
+     */
     public Optional<String> secondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
     /**
-     * The state of peering.
+     * @return The state of peering.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

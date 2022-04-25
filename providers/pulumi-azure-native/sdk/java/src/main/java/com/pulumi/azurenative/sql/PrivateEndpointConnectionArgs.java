@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpoint")
     private @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint;
 
+    /**
+     * @return Private endpoint which the connection belongs to.
+     * 
+     */
     public Optional<Output<PrivateEndpointPropertyArgs>> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -42,6 +46,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Connection state of the private endpoint connection.
+     * 
+     */
     public Optional<Output<PrivateLinkServiceConnectionStatePropertyArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -53,6 +61,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -64,6 +76,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -96,11 +112,23 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointPropertyArgs privateEndpoint) {
             return privateEndpoint(Output.of(privateEndpoint));
         }
@@ -114,29 +142,65 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class UserPropertiesResponse {
-    /**
-     * The preferred location of the cloud shell.
-     * 
-     */
+        /**
+         * @return The preferred location of the cloud shell.
+         * 
+         */
     private final String preferredLocation;
-    /**
-     * The operating system type of the cloud shell. Deprecated, use preferredShellType.
-     * 
-     */
+        /**
+         * @return The operating system type of the cloud shell. Deprecated, use preferredShellType.
+         * 
+         */
     private final String preferredOsType;
-    /**
-     * The shell type of the cloud shell.
-     * 
-     */
+        /**
+         * @return The shell type of the cloud shell.
+         * 
+         */
     private final String preferredShellType;
-    /**
-     * The storage profile of the user settings.
-     * 
-     */
+        /**
+         * @return The storage profile of the user settings.
+         * 
+         */
     private final StorageProfileResponse storageProfile;
-    /**
-     * Settings for terminal appearance.
-     * 
-     */
+        /**
+         * @return Settings for terminal appearance.
+         * 
+         */
     private final TerminalSettingsResponse terminalSettings;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class UserPropertiesResponse {
     }
 
     /**
-     * The preferred location of the cloud shell.
+     * @return The preferred location of the cloud shell.
      * 
-    */
+     */
     public String preferredLocation() {
         return this.preferredLocation;
     }
     /**
-     * The operating system type of the cloud shell. Deprecated, use preferredShellType.
+     * @return The operating system type of the cloud shell. Deprecated, use preferredShellType.
      * 
-    */
+     */
     public String preferredOsType() {
         return this.preferredOsType;
     }
     /**
-     * The shell type of the cloud shell.
+     * @return The shell type of the cloud shell.
      * 
-    */
+     */
     public String preferredShellType() {
         return this.preferredShellType;
     }
     /**
-     * The storage profile of the user settings.
+     * @return The storage profile of the user settings.
      * 
-    */
+     */
     public StorageProfileResponse storageProfile() {
         return this.storageProfile;
     }
     /**
-     * Settings for terminal appearance.
+     * @return Settings for terminal appearance.
      * 
-    */
+     */
     public TerminalSettingsResponse terminalSettings() {
         return this.terminalSettings;
     }

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationNotificationEndpointResponse {
-    /**
-     * The managed application notification endpoint uri.
-     * 
-     */
+        /**
+         * @return The managed application notification endpoint uri.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ApplicationNotificationEndpointResponse {
     }
 
     /**
-     * The managed application notification endpoint uri.
+     * @return The managed application notification endpoint uri.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

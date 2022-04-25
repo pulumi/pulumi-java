@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
-     * 
-     */
+        /**
+         * @return The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
+         * 
+         */
     private final String name;
-    /**
-     * The SKU tier. This is based on the SKU name.
-     * 
-     */
+        /**
+         * @return The SKU tier. This is based on the SKU name.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
+     * @return The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called accountType.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The SKU tier. This is based on the SKU name.
+     * @return The SKU tier. This is based on the SKU name.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

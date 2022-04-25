@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CurrentScenarioDetailsResponse {
-    /**
-     * ARM Id of the job being executed.
-     * 
-     */
+        /**
+         * @return ARM Id of the job being executed.
+         * 
+         */
     private final @Nullable String jobId;
-    /**
-     * Scenario name.
-     * 
-     */
+        /**
+         * @return Scenario name.
+         * 
+         */
     private final @Nullable String scenarioName;
-    /**
-     * Start time of the workflow.
-     * 
-     */
+        /**
+         * @return Start time of the workflow.
+         * 
+         */
     private final @Nullable String startTime;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CurrentScenarioDetailsResponse {
     }
 
     /**
-     * ARM Id of the job being executed.
+     * @return ARM Id of the job being executed.
      * 
-    */
+     */
     public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
-     * Scenario name.
+     * @return Scenario name.
      * 
-    */
+     */
     public Optional<String> scenarioName() {
         return Optional.ofNullable(this.scenarioName);
     }
     /**
-     * Start time of the workflow.
+     * @return Start time of the workflow.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }

@@ -27,6 +27,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="acceptLanguage")
     private @Nullable Output<String> acceptLanguage;
 
+    /**
+     * @return The oData language.
+     * 
+     */
     public Optional<Output<String>> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
@@ -38,6 +42,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="arraySeparator")
     private @Nullable Output<String> arraySeparator;
 
+    /**
+     * @return Character separating array elements.
+     * 
+     */
     public Optional<Output<String>> arraySeparator() {
         return Optional.ofNullable(this.arraySeparator);
     }
@@ -49,6 +57,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="columnDelimiter")
     private @Nullable Output<String> columnDelimiter;
 
+    /**
+     * @return The character that signifies a break between columns.
+     * 
+     */
     public Optional<Output<String>> columnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
@@ -60,6 +72,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="formatType", required=true)
     private Output<FormatTypes> formatType;
 
+    /**
+     * @return The type mapping format.
+     * 
+     */
     public Output<FormatTypes> formatType() {
         return this.formatType;
     }
@@ -71,6 +87,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="quoteCharacter")
     private @Nullable Output<String> quoteCharacter;
 
+    /**
+     * @return Quote character, used to indicate enquoted fields.
+     * 
+     */
     public Optional<Output<String>> quoteCharacter() {
         return Optional.ofNullable(this.quoteCharacter);
     }
@@ -82,6 +102,10 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
     @Import(name="quoteEscapeCharacter")
     private @Nullable Output<String> quoteEscapeCharacter;
 
+    /**
+     * @return Escape character for quotes, can be the same as the quoteCharacter.
+     * 
+     */
     public Optional<Output<String>> quoteEscapeCharacter() {
         return Optional.ofNullable(this.quoteEscapeCharacter);
     }
@@ -115,56 +139,128 @@ public final class ConnectorMappingFormatArgs extends com.pulumi.resources.Resou
             $ = new ConnectorMappingFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptLanguage The oData language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
 
+        /**
+         * @param acceptLanguage The oData language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(String acceptLanguage) {
             return acceptLanguage(Output.of(acceptLanguage));
         }
 
+        /**
+         * @param arraySeparator Character separating array elements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arraySeparator(@Nullable Output<String> arraySeparator) {
             $.arraySeparator = arraySeparator;
             return this;
         }
 
+        /**
+         * @param arraySeparator Character separating array elements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arraySeparator(String arraySeparator) {
             return arraySeparator(Output.of(arraySeparator));
         }
 
+        /**
+         * @param columnDelimiter The character that signifies a break between columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnDelimiter(@Nullable Output<String> columnDelimiter) {
             $.columnDelimiter = columnDelimiter;
             return this;
         }
 
+        /**
+         * @param columnDelimiter The character that signifies a break between columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnDelimiter(String columnDelimiter) {
             return columnDelimiter(Output.of(columnDelimiter));
         }
 
+        /**
+         * @param formatType The type mapping format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatType(Output<FormatTypes> formatType) {
             $.formatType = formatType;
             return this;
         }
 
+        /**
+         * @param formatType The type mapping format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatType(FormatTypes formatType) {
             return formatType(Output.of(formatType));
         }
 
+        /**
+         * @param quoteCharacter Quote character, used to indicate enquoted fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteCharacter(@Nullable Output<String> quoteCharacter) {
             $.quoteCharacter = quoteCharacter;
             return this;
         }
 
+        /**
+         * @param quoteCharacter Quote character, used to indicate enquoted fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteCharacter(String quoteCharacter) {
             return quoteCharacter(Output.of(quoteCharacter));
         }
 
+        /**
+         * @param quoteEscapeCharacter Escape character for quotes, can be the same as the quoteCharacter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteEscapeCharacter(@Nullable Output<String> quoteEscapeCharacter) {
             $.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }
 
+        /**
+         * @param quoteEscapeCharacter Escape character for quotes, can be the same as the quoteCharacter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteEscapeCharacter(String quoteEscapeCharacter) {
             return quoteEscapeCharacter(Output.of(quoteEscapeCharacter));
         }

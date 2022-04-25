@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBlobContainerImmutabilityPolicyResult {
-    /**
-     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     * 
-     */
+        /**
+         * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+         * 
+         */
     private final @Nullable Boolean allowProtectedAppendWrites;
-    /**
-     * Resource Etag.
-     * 
-     */
+        /**
+         * @return Resource Etag.
+         * 
+         */
     private final String etag;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
-     * 
-     */
+        /**
+         * @return The immutability period for the blobs in the container since the policy creation, in days.
+         * 
+         */
     private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
-     * 
-     */
+        /**
+         * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+         * 
+         */
     private final String state;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class GetBlobContainerImmutabilityPolicyResult {
     }
 
     /**
-     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
-    */
+     */
     public Optional<Boolean> allowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
     /**
-     * Resource Etag.
+     * @return Resource Etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
      * 
-    */
+     */
     public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

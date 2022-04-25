@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScaleRuleAuthResponse {
-    /**
-     * Name of the Container App secret from which to pull the auth params.
-     * 
-     */
+        /**
+         * @return Name of the Container App secret from which to pull the auth params.
+         * 
+         */
     private final @Nullable String secretRef;
-    /**
-     * Trigger Parameter that uses the secret
-     * 
-     */
+        /**
+         * @return Trigger Parameter that uses the secret
+         * 
+         */
     private final @Nullable String triggerParameter;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ScaleRuleAuthResponse {
     }
 
     /**
-     * Name of the Container App secret from which to pull the auth params.
+     * @return Name of the Container App secret from which to pull the auth params.
      * 
-    */
+     */
     public Optional<String> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
-     * Trigger Parameter that uses the secret
+     * @return Trigger Parameter that uses the secret
      * 
-    */
+     */
     public Optional<String> triggerParameter() {
         return Optional.ofNullable(this.triggerParameter);
     }

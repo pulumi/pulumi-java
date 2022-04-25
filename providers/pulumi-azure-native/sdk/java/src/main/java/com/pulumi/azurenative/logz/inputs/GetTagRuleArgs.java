@@ -19,6 +19,10 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="monitorName", required=true)
     private String monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public String monitorName() {
         return this.monitorName;
     }
@@ -30,6 +34,10 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,11 +75,23 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

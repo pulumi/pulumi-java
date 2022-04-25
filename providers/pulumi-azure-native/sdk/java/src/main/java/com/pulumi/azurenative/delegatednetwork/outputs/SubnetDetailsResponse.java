@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SubnetDetailsResponse {
-    /**
-     * subnet arm resource id
-     * 
-     */
+        /**
+         * @return subnet arm resource id
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SubnetDetailsResponse {
     }
 
     /**
-     * subnet arm resource id
+     * @return subnet arm resource id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

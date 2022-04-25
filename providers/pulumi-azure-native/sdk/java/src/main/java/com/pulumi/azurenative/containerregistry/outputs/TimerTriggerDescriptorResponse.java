@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TimerTriggerDescriptorResponse {
-    /**
-     * The occurrence that triggered the run.
-     * 
-     */
+        /**
+         * @return The occurrence that triggered the run.
+         * 
+         */
     private final @Nullable String scheduleOccurrence;
-    /**
-     * The timer trigger name that caused the run.
-     * 
-     */
+        /**
+         * @return The timer trigger name that caused the run.
+         * 
+         */
     private final @Nullable String timerTriggerName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class TimerTriggerDescriptorResponse {
     }
 
     /**
-     * The occurrence that triggered the run.
+     * @return The occurrence that triggered the run.
      * 
-    */
+     */
     public Optional<String> scheduleOccurrence() {
         return Optional.ofNullable(this.scheduleOccurrence);
     }
     /**
-     * The timer trigger name that caused the run.
+     * @return The timer trigger name that caused the run.
      * 
-    */
+     */
     public Optional<String> timerTriggerName() {
         return Optional.ofNullable(this.timerTriggerName);
     }

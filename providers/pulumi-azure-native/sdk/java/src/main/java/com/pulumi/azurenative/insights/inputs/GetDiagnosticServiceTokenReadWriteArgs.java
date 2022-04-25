@@ -19,6 +19,10 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends com.pulumi.res
     @Import(name="resourceUri", required=true)
     private String resourceUri;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String resourceUri() {
         return this.resourceUri;
     }
@@ -47,6 +51,12 @@ public final class GetDiagnosticServiceTokenReadWriteArgs extends com.pulumi.res
             $ = new GetDiagnosticServiceTokenReadWriteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceUri The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

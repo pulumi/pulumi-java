@@ -29,6 +29,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="customHeaders")
     private @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
 
+    /**
+     * @return List of custom headers.
+     * 
+     */
     public Optional<List<MonitorConfigResponseCustomHeaders>> customHeaders() {
         return Optional.ofNullable(this.customHeaders);
     }
@@ -40,6 +44,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="expectedStatusCodeRanges")
     private @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
 
+    /**
+     * @return List of expected status code ranges.
+     * 
+     */
     public Optional<List<MonitorConfigResponseExpectedStatusCodeRanges>> expectedStatusCodeRanges() {
         return Optional.ofNullable(this.expectedStatusCodeRanges);
     }
@@ -51,6 +59,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="intervalInSeconds")
     private @Nullable Double intervalInSeconds;
 
+    /**
+     * @return The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
+     * 
+     */
     public Optional<Double> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -62,6 +74,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The path relative to the endpoint domain name used to probe for endpoint health.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -73,6 +89,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="port")
     private @Nullable Double port;
 
+    /**
+     * @return The TCP port used to probe for endpoint health.
+     * 
+     */
     public Optional<Double> port() {
         return Optional.ofNullable(this.port);
     }
@@ -84,6 +104,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="profileMonitorStatus")
     private @Nullable String profileMonitorStatus;
 
+    /**
+     * @return The profile-level monitoring status of the Traffic Manager profile.
+     * 
+     */
     public Optional<String> profileMonitorStatus() {
         return Optional.ofNullable(this.profileMonitorStatus);
     }
@@ -95,6 +119,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -106,6 +134,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="timeoutInSeconds")
     private @Nullable Double timeoutInSeconds;
 
+    /**
+     * @return The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
+     * 
+     */
     public Optional<Double> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -117,6 +149,10 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="toleratedNumberOfFailures")
     private @Nullable Double toleratedNumberOfFailures;
 
+    /**
+     * @return The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
+     * 
+     */
     public Optional<Double> toleratedNumberOfFailures() {
         return Optional.ofNullable(this.toleratedNumberOfFailures);
     }
@@ -153,54 +189,120 @@ public final class MonitorConfigResponse extends com.pulumi.resources.InvokeArgs
             $ = new MonitorConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customHeaders List of custom headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeaders(@Nullable List<MonitorConfigResponseCustomHeaders> customHeaders) {
             $.customHeaders = customHeaders;
             return this;
         }
 
+        /**
+         * @param customHeaders List of custom headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeaders(MonitorConfigResponseCustomHeaders... customHeaders) {
             return customHeaders(List.of(customHeaders));
         }
 
+        /**
+         * @param expectedStatusCodeRanges List of expected status code ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedStatusCodeRanges(@Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges) {
             $.expectedStatusCodeRanges = expectedStatusCodeRanges;
             return this;
         }
 
+        /**
+         * @param expectedStatusCodeRanges List of expected status code ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedStatusCodeRanges(MonitorConfigResponseExpectedStatusCodeRanges... expectedStatusCodeRanges) {
             return expectedStatusCodeRanges(List.of(expectedStatusCodeRanges));
         }
 
+        /**
+         * @param intervalInSeconds The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Double intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param path The path relative to the endpoint domain name used to probe for endpoint health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param port The TCP port used to probe for endpoint health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Double port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param profileMonitorStatus The profile-level monitoring status of the Traffic Manager profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileMonitorStatus(@Nullable String profileMonitorStatus) {
             $.profileMonitorStatus = profileMonitorStatus;
             return this;
         }
 
+        /**
+         * @param protocol The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param toleratedNumberOfFailures The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
             $.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;

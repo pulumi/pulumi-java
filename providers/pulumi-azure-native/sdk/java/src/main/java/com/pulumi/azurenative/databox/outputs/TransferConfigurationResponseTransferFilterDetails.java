@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TransferConfigurationResponseTransferFilterDetails {
-    /**
-     * Details of the filtering the transfer of data.
-     * 
-     */
+        /**
+         * @return Details of the filtering the transfer of data.
+         * 
+         */
     private final @Nullable TransferFilterDetailsResponse include;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class TransferConfigurationResponseTransferFilterDetails {
     }
 
     /**
-     * Details of the filtering the transfer of data.
+     * @return Details of the filtering the transfer of data.
      * 
-    */
+     */
     public Optional<TransferFilterDetailsResponse> include() {
         return Optional.ofNullable(this.include);
     }

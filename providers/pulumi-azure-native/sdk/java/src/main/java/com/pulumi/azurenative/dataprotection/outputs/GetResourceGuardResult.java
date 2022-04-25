@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceGuardResult {
-    /**
-     * Optional ETag.
-     * 
-     */
+        /**
+         * @return Optional ETag.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * Resource Id represents the complete path to the resource.
-     * 
-     */
+        /**
+         * @return Resource Id represents the complete path to the resource.
+         * 
+         */
     private final String id;
-    /**
-     * Input Managed Identity Details
-     * 
-     */
+        /**
+         * @return Input Managed Identity Details
+         * 
+         */
     private final @Nullable DppIdentityDetailsResponse identity;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name associated with the resource.
-     * 
-     */
+        /**
+         * @return Resource name associated with the resource.
+         * 
+         */
     private final String name;
-    /**
-     * ResourceGuardResource properties
-     * 
-     */
+        /**
+         * @return ResourceGuardResource properties
+         * 
+         */
     private final ResourceGuardResponse properties;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
-     */
+        /**
+         * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class GetResourceGuardResult {
     }
 
     /**
-     * Optional ETag.
+     * @return Optional ETag.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Resource Id represents the complete path to the resource.
+     * @return Resource Id represents the complete path to the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Input Managed Identity Details
+     * @return Input Managed Identity Details
      * 
-    */
+     */
     public Optional<DppIdentityDetailsResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name associated with the resource.
+     * @return Resource name associated with the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * ResourceGuardResource properties
+     * @return ResourceGuardResource properties
      * 
-    */
+     */
     public ResourceGuardResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

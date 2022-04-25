@@ -9,40 +9,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSnapshotResult {
-    /**
-     * The creation date of the snapshot
-     * 
-     */
+        /**
+         * @return The creation date of the snapshot
+         * 
+         */
     private final String created;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Azure lifecycle management
-     * 
-     */
+        /**
+         * @return Azure lifecycle management
+         * 
+         */
     private final String provisioningState;
-    /**
-     * UUID v4 used to identify the Snapshot
-     * 
-     */
+        /**
+         * @return UUID v4 used to identify the Snapshot
+         * 
+         */
     private final String snapshotId;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -64,51 +64,51 @@ public final class GetSnapshotResult {
     }
 
     /**
-     * The creation date of the snapshot
+     * @return The creation date of the snapshot
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure lifecycle management
+     * @return Azure lifecycle management
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * UUID v4 used to identify the Snapshot
+     * @return UUID v4 used to identify the Snapshot
      * 
-    */
+     */
     public String snapshotId() {
         return this.snapshotId;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

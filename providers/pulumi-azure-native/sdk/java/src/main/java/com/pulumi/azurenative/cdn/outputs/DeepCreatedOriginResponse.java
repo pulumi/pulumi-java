@@ -13,65 +13,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DeepCreatedOriginResponse {
-    /**
-     * Origin is enabled for load balancing or not. By default, origin is always enabled.
-     * 
-     */
+        /**
+         * @return Origin is enabled for load balancing or not. By default, origin is always enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
-     * 
-     */
+        /**
+         * @return The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
+         * 
+         */
     private final String hostName;
-    /**
-     * The value of the HTTP port. Must be between 1 and 65535.
-     * 
-     */
+        /**
+         * @return The value of the HTTP port. Must be between 1 and 65535.
+         * 
+         */
     private final @Nullable Integer httpPort;
-    /**
-     * The value of the HTTPS port. Must be between 1 and 65535.
-     * 
-     */
+        /**
+         * @return The value of the HTTPS port. Must be between 1 and 65535.
+         * 
+         */
     private final @Nullable Integer httpsPort;
-    /**
-     * Origin name which must be unique within the endpoint.
-     * 
-     */
+        /**
+         * @return Origin name which must be unique within the endpoint.
+         * 
+         */
     private final String name;
-    /**
-     * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
-     * 
-     */
+        /**
+         * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
+         * 
+         */
     private final @Nullable String originHostHeader;
-    /**
-     * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
-     * 
-     */
+        /**
+         * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
-     * 
-     */
+        /**
+         * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
+         * 
+         */
     private final @Nullable String privateLinkAlias;
-    /**
-     * A custom message to be included in the approval request to connect to the Private Link.
-     * 
-     */
+        /**
+         * @return A custom message to be included in the approval request to connect to the Private Link.
+         * 
+         */
     private final @Nullable String privateLinkApprovalMessage;
-    /**
-     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
-     * 
-     */
+        /**
+         * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+         * 
+         */
     private final @Nullable String privateLinkLocation;
-    /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
-     * 
-     */
+        /**
+         * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+         * 
+         */
     private final @Nullable String privateLinkResourceId;
-    /**
-     * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
-     * 
-     */
+        /**
+         * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+         * 
+         */
     private final @Nullable Integer weight;
 
     @CustomType.Constructor
@@ -103,86 +103,86 @@ public final class DeepCreatedOriginResponse {
     }
 
     /**
-     * Origin is enabled for load balancing or not. By default, origin is always enabled.
+     * @return Origin is enabled for load balancing or not. By default, origin is always enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
+     * @return The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * The value of the HTTP port. Must be between 1 and 65535.
+     * @return The value of the HTTP port. Must be between 1 and 65535.
      * 
-    */
+     */
     public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
-     * The value of the HTTPS port. Must be between 1 and 65535.
+     * @return The value of the HTTPS port. Must be between 1 and 65535.
      * 
-    */
+     */
     public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
-     * Origin name which must be unique within the endpoint.
+     * @return Origin name which must be unique within the endpoint.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
+     * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
-    */
+     */
     public Optional<String> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
     /**
-     * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
+     * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
+     * @return The Alias of the Private Link resource. Populating this optional field indicates that this origin is &#39;Private&#39;
      * 
-    */
+     */
     public Optional<String> privateLinkAlias() {
         return Optional.ofNullable(this.privateLinkAlias);
     }
     /**
-     * A custom message to be included in the approval request to connect to the Private Link.
+     * @return A custom message to be included in the approval request to connect to the Private Link.
      * 
-    */
+     */
     public Optional<String> privateLinkApprovalMessage() {
         return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
     /**
-     * The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
+     * @return The location of the Private Link resource. Required only if &#39;privateLinkResourceId&#39; is populated
      * 
-    */
+     */
     public Optional<String> privateLinkLocation() {
         return Optional.ofNullable(this.privateLinkLocation);
     }
     /**
-     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
+     * @return The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is &#39;Private&#39;
      * 
-    */
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
-     * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+     * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListWebAppHostKeysSlotResult {
-    /**
-     * Host level function keys.
-     * 
-     */
+        /**
+         * @return Host level function keys.
+         * 
+         */
     private final @Nullable Map<String,String> functionKeys;
-    /**
-     * Secret key.
-     * 
-     */
+        /**
+         * @return Secret key.
+         * 
+         */
     private final @Nullable String masterKey;
-    /**
-     * System keys.
-     * 
-     */
+        /**
+         * @return System keys.
+         * 
+         */
     private final @Nullable Map<String,String> systemKeys;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ListWebAppHostKeysSlotResult {
     }
 
     /**
-     * Host level function keys.
+     * @return Host level function keys.
      * 
-    */
+     */
     public Map<String,String> functionKeys() {
         return this.functionKeys == null ? Map.of() : this.functionKeys;
     }
     /**
-     * Secret key.
+     * @return Secret key.
      * 
-    */
+     */
     public Optional<String> masterKey() {
         return Optional.ofNullable(this.masterKey);
     }
     /**
-     * System keys.
+     * @return System keys.
      * 
-    */
+     */
     public Map<String,String> systemKeys() {
         return this.systemKeys == null ? Map.of() : this.systemKeys;
     }

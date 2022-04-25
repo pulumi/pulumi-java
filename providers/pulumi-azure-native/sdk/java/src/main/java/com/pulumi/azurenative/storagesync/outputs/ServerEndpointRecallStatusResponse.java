@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ServerEndpointRecallStatusResponse {
-    /**
-     * Last updated timestamp
-     * 
-     */
+        /**
+         * @return Last updated timestamp
+         * 
+         */
     private final String lastUpdatedTimestamp;
-    /**
-     * Array of recall errors
-     * 
-     */
+        /**
+         * @return Array of recall errors
+         * 
+         */
     private final List<ServerEndpointRecallErrorResponse> recallErrors;
-    /**
-     * Total count of recall errors.
-     * 
-     */
+        /**
+         * @return Total count of recall errors.
+         * 
+         */
     private final Double totalRecallErrorsCount;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ServerEndpointRecallStatusResponse {
     }
 
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
-     * Array of recall errors
+     * @return Array of recall errors
      * 
-    */
+     */
     public List<ServerEndpointRecallErrorResponse> recallErrors() {
         return this.recallErrors;
     }
     /**
-     * Total count of recall errors.
+     * @return Total count of recall errors.
      * 
-    */
+     */
     public Double totalRecallErrorsCount() {
         return this.totalRecallErrorsCount;
     }

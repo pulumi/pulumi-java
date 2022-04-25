@@ -46,6 +46,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Dataset.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +61,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="compression")
     private @Nullable DatasetCompressionResponse compression;
 
+    /**
+     * @return The data compression method used for the json dataset.
+     * 
+     */
     public Optional<DatasetCompressionResponse> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -68,6 +76,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Dataset description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -79,6 +91,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encodingName")
     private @Nullable Object encodingName;
 
+    /**
+     * @return The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encodingName() {
         return Optional.ofNullable(this.encodingName);
     }
@@ -90,6 +106,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="folder")
     private @Nullable DatasetResponseFolder folder;
 
+    /**
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -101,6 +121,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -112,6 +136,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private Object location;
 
+    /**
+     * @return The location of the json data storage.
+     * 
+     */
     public Object location() {
         return this.location;
     }
@@ -123,6 +151,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nullValue")
     private @Nullable Object nullValue;
 
+    /**
+     * @return The null value string. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> nullValue() {
         return Optional.ofNullable(this.nullValue);
     }
@@ -134,6 +166,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for dataset.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -145,6 +181,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="schema")
     private @Nullable Object schema;
 
+    /**
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -156,6 +196,10 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="structure")
     private @Nullable Object structure;
 
+    /**
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
@@ -168,6 +212,11 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset.
+     * Expected value is &#39;Xml&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -207,65 +256,144 @@ public final class XmlDatasetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new XmlDatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param compression The data compression method used for the json dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encodingName The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingName(@Nullable Object encodingName) {
             $.encodingName = encodingName;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param location The location of the json data storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Object location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param nullValue The null value string. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullValue(@Nullable Object nullValue) {
             $.nullValue = nullValue;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Object schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(@Nullable Object structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;Xml&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

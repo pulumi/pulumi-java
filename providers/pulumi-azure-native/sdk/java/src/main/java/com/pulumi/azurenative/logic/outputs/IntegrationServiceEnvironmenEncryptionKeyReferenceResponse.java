@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse {
-    /**
-     * Gets the key name in the Key Vault.
-     * 
-     */
+        /**
+         * @return Gets the key name in the Key Vault.
+         * 
+         */
     private final @Nullable String keyName;
-    /**
-     * The key vault reference.
-     * 
-     */
+        /**
+         * @return The key vault reference.
+         * 
+         */
     private final @Nullable ResourceReferenceResponse keyVault;
-    /**
-     * Gets the version of the key specified in the keyName property.
-     * 
-     */
+        /**
+         * @return Gets the version of the key specified in the keyName property.
+         * 
+         */
     private final @Nullable String keyVersion;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse {
     }
 
     /**
-     * Gets the key name in the Key Vault.
+     * @return Gets the key name in the Key Vault.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * The key vault reference.
+     * @return The key vault reference.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
-     * Gets the version of the key specified in the keyName property.
+     * @return Gets the version of the key specified in the keyName property.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }

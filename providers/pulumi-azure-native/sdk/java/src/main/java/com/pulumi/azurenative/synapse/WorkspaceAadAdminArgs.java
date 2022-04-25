@@ -22,6 +22,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="administratorType")
     private @Nullable Output<String> administratorType;
 
+    /**
+     * @return Workspace active directory administrator type
+     * 
+     */
     public Optional<Output<String>> administratorType() {
         return Optional.ofNullable(this.administratorType);
     }
@@ -33,6 +37,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="login")
     private @Nullable Output<String> login;
 
+    /**
+     * @return Login of the workspace active directory administrator
+     * 
+     */
     public Optional<Output<String>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -44,6 +52,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sid")
     private @Nullable Output<String> sid;
 
+    /**
+     * @return Object ID of the workspace active directory administrator
+     * 
+     */
     public Optional<Output<String>> sid() {
         return Optional.ofNullable(this.sid);
     }
@@ -66,6 +82,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant ID of the workspace active directory administrator
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -77,6 +97,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -110,56 +134,128 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
             $ = new WorkspaceAadAdminArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param administratorType Workspace active directory administrator type
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(@Nullable Output<String> administratorType) {
             $.administratorType = administratorType;
             return this;
         }
 
+        /**
+         * @param administratorType Workspace active directory administrator type
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorType(String administratorType) {
             return administratorType(Output.of(administratorType));
         }
 
+        /**
+         * @param login Login of the workspace active directory administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<String> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login Login of the workspace active directory administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(String login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sid Object ID of the workspace active directory administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(@Nullable Output<String> sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param sid Object ID of the workspace active directory administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(String sid) {
             return sid(Output.of(sid));
         }
 
+        /**
+         * @param tenantId Tenant ID of the workspace active directory administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID of the workspace active directory administrator
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

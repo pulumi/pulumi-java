@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SolutionPlanResponse {
-    /**
-     * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
-     * 
-     */
+        /**
+         * @return name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
-     * 
-     */
+        /**
+         * @return name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
+         * 
+         */
     private final @Nullable String product;
-    /**
-     * promotionCode, Not really used now, can you left as empty
-     * 
-     */
+        /**
+         * @return promotionCode, Not really used now, can you left as empty
+         * 
+         */
     private final @Nullable String promotionCode;
-    /**
-     * Publisher name. For gallery solution, it is Microsoft.
-     * 
-     */
+        /**
+         * @return Publisher name. For gallery solution, it is Microsoft.
+         * 
+         */
     private final @Nullable String publisher;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class SolutionPlanResponse {
     }
 
     /**
-     * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
+     * @return name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
+     * @return name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/&lt;solutionType&gt;. This is case sensitive
      * 
-    */
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
-     * promotionCode, Not really used now, can you left as empty
+     * @return promotionCode, Not really used now, can you left as empty
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * Publisher name. For gallery solution, it is Microsoft.
+     * @return Publisher name. For gallery solution, it is Microsoft.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }

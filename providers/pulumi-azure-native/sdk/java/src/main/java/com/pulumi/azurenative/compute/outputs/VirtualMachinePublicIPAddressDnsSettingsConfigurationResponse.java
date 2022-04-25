@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse {
-    /**
-     * The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
-     * 
-     */
+        /**
+         * @return The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
+         * 
+         */
     private final String domainNameLabel;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse
     }
 
     /**
-     * The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
+     * @return The Domain name label prefix of the PublicIPAddress resources that will be created. The generated name label is the concatenation of the domain name label and vm network profile unique ID.
      * 
-    */
+     */
     public String domainNameLabel() {
         return this.domainNameLabel;
     }

@@ -27,6 +27,10 @@ public final class AutoHealRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="actions")
     private @Nullable Output<AutoHealActionsArgs> actions;
 
+    /**
+     * @return Actions to be executed when a rule is triggered.
+     * 
+     */
     public Optional<Output<AutoHealActionsArgs>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class AutoHealRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggers")
     private @Nullable Output<AutoHealTriggersArgs> triggers;
 
+    /**
+     * @return Conditions that describe when to execute the auto-heal actions.
+     * 
+     */
     public Optional<Output<AutoHealTriggersArgs>> triggers() {
         return Optional.ofNullable(this.triggers);
     }
@@ -67,20 +75,44 @@ public final class AutoHealRulesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AutoHealRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions Actions to be executed when a rule is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable Output<AutoHealActionsArgs> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions Actions to be executed when a rule is triggered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(AutoHealActionsArgs actions) {
             return actions(Output.of(actions));
         }
 
+        /**
+         * @param triggers Conditions that describe when to execute the auto-heal actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(@Nullable Output<AutoHealTriggersArgs> triggers) {
             $.triggers = triggers;
             return this;
         }
 
+        /**
+         * @param triggers Conditions that describe when to execute the auto-heal actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggers(AutoHealTriggersArgs triggers) {
             return triggers(Output.of(triggers));
         }

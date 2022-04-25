@@ -18,82 +18,82 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DockerBuildRequestResponse {
-    /**
-     * The machine configuration of the run agent.
-     * 
-     */
+        /**
+         * @return The machine configuration of the run agent.
+         * 
+         */
     private final @Nullable AgentPropertiesResponse agentConfiguration;
-    /**
-     * The dedicated agent pool for the run.
-     * 
-     */
+        /**
+         * @return The dedicated agent pool for the run.
+         * 
+         */
     private final @Nullable String agentPoolName;
-    /**
-     * The collection of override arguments to be used when executing the run.
-     * 
-     */
+        /**
+         * @return The collection of override arguments to be used when executing the run.
+         * 
+         */
     private final @Nullable List<ArgumentResponse> arguments;
-    /**
-     * The properties that describes a set of credentials that will be used when this run is invoked.
-     * 
-     */
+        /**
+         * @return The properties that describes a set of credentials that will be used when this run is invoked.
+         * 
+         */
     private final @Nullable CredentialsResponse credentials;
-    /**
-     * The Docker file path relative to the source location.
-     * 
-     */
+        /**
+         * @return The Docker file path relative to the source location.
+         * 
+         */
     private final String dockerFilePath;
-    /**
-     * The fully qualified image names including the repository and tag.
-     * 
-     */
+        /**
+         * @return The fully qualified image names including the repository and tag.
+         * 
+         */
     private final @Nullable List<String> imageNames;
-    /**
-     * The value that indicates whether archiving is enabled for the run or not.
-     * 
-     */
+        /**
+         * @return The value that indicates whether archiving is enabled for the run or not.
+         * 
+         */
     private final @Nullable Boolean isArchiveEnabled;
-    /**
-     * The value of this property indicates whether the image built should be pushed to the registry or not.
-     * 
-     */
+        /**
+         * @return The value of this property indicates whether the image built should be pushed to the registry or not.
+         * 
+         */
     private final @Nullable Boolean isPushEnabled;
-    /**
-     * The template that describes the repository and tag information for run log artifact.
-     * 
-     */
+        /**
+         * @return The template that describes the repository and tag information for run log artifact.
+         * 
+         */
     private final @Nullable String logTemplate;
-    /**
-     * The value of this property indicates whether the image cache is enabled or not.
-     * 
-     */
+        /**
+         * @return The value of this property indicates whether the image cache is enabled or not.
+         * 
+         */
     private final @Nullable Boolean noCache;
-    /**
-     * The platform properties against which the run has to happen.
-     * 
-     */
+        /**
+         * @return The platform properties against which the run has to happen.
+         * 
+         */
     private final PlatformPropertiesResponse platform;
-    /**
-     * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
-     * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
-     * 
-     */
+        /**
+         * @return The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+         * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+         * 
+         */
     private final @Nullable String sourceLocation;
-    /**
-     * The name of the target build stage for the docker build.
-     * 
-     */
+        /**
+         * @return The name of the target build stage for the docker build.
+         * 
+         */
     private final @Nullable String target;
-    /**
-     * Run timeout in seconds.
-     * 
-     */
+        /**
+         * @return Run timeout in seconds.
+         * 
+         */
     private final @Nullable Integer timeout;
-    /**
-     * The type of the run request.
-     * Expected value is &#39;DockerBuildRequest&#39;.
-     * 
-     */
+        /**
+         * @return The type of the run request.
+         * Expected value is &#39;DockerBuildRequest&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -131,109 +131,109 @@ public final class DockerBuildRequestResponse {
     }
 
     /**
-     * The machine configuration of the run agent.
+     * @return The machine configuration of the run agent.
      * 
-    */
+     */
     public Optional<AgentPropertiesResponse> agentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
     /**
-     * The dedicated agent pool for the run.
+     * @return The dedicated agent pool for the run.
      * 
-    */
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
     /**
-     * The collection of override arguments to be used when executing the run.
+     * @return The collection of override arguments to be used when executing the run.
      * 
-    */
+     */
     public List<ArgumentResponse> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
-     * The properties that describes a set of credentials that will be used when this run is invoked.
+     * @return The properties that describes a set of credentials that will be used when this run is invoked.
      * 
-    */
+     */
     public Optional<CredentialsResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * The Docker file path relative to the source location.
+     * @return The Docker file path relative to the source location.
      * 
-    */
+     */
     public String dockerFilePath() {
         return this.dockerFilePath;
     }
     /**
-     * The fully qualified image names including the repository and tag.
+     * @return The fully qualified image names including the repository and tag.
      * 
-    */
+     */
     public List<String> imageNames() {
         return this.imageNames == null ? List.of() : this.imageNames;
     }
     /**
-     * The value that indicates whether archiving is enabled for the run or not.
+     * @return The value that indicates whether archiving is enabled for the run or not.
      * 
-    */
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
     /**
-     * The value of this property indicates whether the image built should be pushed to the registry or not.
+     * @return The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
-    */
+     */
     public Optional<Boolean> isPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
     /**
-     * The template that describes the repository and tag information for run log artifact.
+     * @return The template that describes the repository and tag information for run log artifact.
      * 
-    */
+     */
     public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
     /**
-     * The value of this property indicates whether the image cache is enabled or not.
+     * @return The value of this property indicates whether the image cache is enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
     /**
-     * The platform properties against which the run has to happen.
+     * @return The platform properties against which the run has to happen.
      * 
-    */
+     */
     public PlatformPropertiesResponse platform() {
         return this.platform;
     }
     /**
-     * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+     * @return The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
-    */
+     */
     public Optional<String> sourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
     /**
-     * The name of the target build stage for the docker build.
+     * @return The name of the target build stage for the docker build.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Run timeout in seconds.
+     * @return Run timeout in seconds.
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * The type of the run request.
+     * @return The type of the run request.
      * Expected value is &#39;DockerBuildRequest&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

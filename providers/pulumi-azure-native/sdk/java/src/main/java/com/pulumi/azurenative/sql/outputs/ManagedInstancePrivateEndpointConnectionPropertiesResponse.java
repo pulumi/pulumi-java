@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
-    /**
-     * Private endpoint which the connection belongs to.
-     * 
-     */
+        /**
+         * @return Private endpoint which the connection belongs to.
+         * 
+         */
     private final @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
-    /**
-     * Connection State of the Private Endpoint Connection.
-     * 
-     */
+        /**
+         * @return Connection State of the Private Endpoint Connection.
+         * 
+         */
     private final @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
-    /**
-     * State of the Private Endpoint Connection.
-     * 
-     */
+        /**
+         * @return State of the Private Endpoint Connection.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ManagedInstancePrivateEndpointConnectionPropertiesResponse {
     }
 
     /**
-     * Private endpoint which the connection belongs to.
+     * @return Private endpoint which the connection belongs to.
      * 
-    */
+     */
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Connection State of the Private Endpoint Connection.
+     * @return Connection State of the Private Endpoint Connection.
      * 
-    */
+     */
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * State of the Private Endpoint Connection.
+     * @return State of the Private Endpoint Connection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

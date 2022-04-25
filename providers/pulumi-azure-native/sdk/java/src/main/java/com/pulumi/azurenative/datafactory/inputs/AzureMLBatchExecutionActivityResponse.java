@@ -34,6 +34,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -45,6 +49,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -56,6 +64,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="globalParameters")
     private @Nullable Map<String,Object> globalParameters;
 
+    /**
+     * @return Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
+     * 
+     */
     public Optional<Map<String,Object>> globalParameters() {
         return Optional.ofNullable(this.globalParameters);
     }
@@ -67,6 +79,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -78,6 +94,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -89,6 +109,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -101,6 +125,11 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;AzureMLBatchExecution&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -112,6 +141,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -123,6 +156,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="webServiceInputs")
     private @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
 
+    /**
+     * @return Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+     * 
+     */
     public Optional<Map<String,AzureMLWebServiceFileResponse>> webServiceInputs() {
         return Optional.ofNullable(this.webServiceInputs);
     }
@@ -134,6 +171,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
     @Import(name="webServiceOutputs")
     private @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
 
+    /**
+     * @return Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+     * 
+     */
     public Optional<Map<String,AzureMLWebServiceFileResponse>> webServiceOutputs() {
         return Optional.ofNullable(this.webServiceOutputs);
     }
@@ -171,59 +212,132 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
             $ = new AzureMLBatchExecutionActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param globalParameters Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             $.globalParameters = globalParameters;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;AzureMLBatchExecution&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
 
+        /**
+         * @param webServiceInputs Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServiceInputs(@Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs) {
             $.webServiceInputs = webServiceInputs;
             return this;
         }
 
+        /**
+         * @param webServiceOutputs Key,Value pairs, mapping the names of Azure ML endpoint&#39;s Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs) {
             $.webServiceOutputs = webServiceOutputs;
             return this;

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ActionGroupsInformationResponse {
-    /**
-     * An optional custom email subject to use in email notifications.
-     * 
-     */
+        /**
+         * @return An optional custom email subject to use in email notifications.
+         * 
+         */
     private final @Nullable String customEmailSubject;
-    /**
-     * An optional custom web-hook payload to use in web-hook notifications.
-     * 
-     */
+        /**
+         * @return An optional custom web-hook payload to use in web-hook notifications.
+         * 
+         */
     private final @Nullable String customWebhookPayload;
-    /**
-     * The Action Group resource IDs.
-     * 
-     */
+        /**
+         * @return The Action Group resource IDs.
+         * 
+         */
     private final List<String> groupIds;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ActionGroupsInformationResponse {
     }
 
     /**
-     * An optional custom email subject to use in email notifications.
+     * @return An optional custom email subject to use in email notifications.
      * 
-    */
+     */
     public Optional<String> customEmailSubject() {
         return Optional.ofNullable(this.customEmailSubject);
     }
     /**
-     * An optional custom web-hook payload to use in web-hook notifications.
+     * @return An optional custom web-hook payload to use in web-hook notifications.
      * 
-    */
+     */
     public Optional<String> customWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
     /**
-     * The Action Group resource IDs.
+     * @return The Action Group resource IDs.
      * 
-    */
+     */
     public List<String> groupIds() {
         return this.groupIds;
     }

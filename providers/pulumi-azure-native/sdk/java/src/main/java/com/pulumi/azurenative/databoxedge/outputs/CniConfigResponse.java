@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class CniConfigResponse {
-    /**
-     * Pod Subnet
-     * 
-     */
+        /**
+         * @return Pod Subnet
+         * 
+         */
     private final String podSubnet;
-    /**
-     * Service subnet
-     * 
-     */
+        /**
+         * @return Service subnet
+         * 
+         */
     private final String serviceSubnet;
-    /**
-     * Cni type
-     * 
-     */
+        /**
+         * @return Cni type
+         * 
+         */
     private final String type;
-    /**
-     * Cni version
-     * 
-     */
+        /**
+         * @return Cni version
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class CniConfigResponse {
     }
 
     /**
-     * Pod Subnet
+     * @return Pod Subnet
      * 
-    */
+     */
     public String podSubnet() {
         return this.podSubnet;
     }
     /**
-     * Service subnet
+     * @return Service subnet
      * 
-    */
+     */
     public String serviceSubnet() {
         return this.serviceSubnet;
     }
     /**
-     * Cni type
+     * @return Cni type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Cni version
+     * @return Cni version
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

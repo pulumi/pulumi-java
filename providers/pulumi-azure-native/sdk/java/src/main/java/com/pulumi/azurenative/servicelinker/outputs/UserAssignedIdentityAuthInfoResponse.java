@@ -9,21 +9,21 @@ import java.util.Objects;
 
 @CustomType
 public final class UserAssignedIdentityAuthInfoResponse {
-    /**
-     * The authentication type.
-     * Expected value is &#39;userAssignedIdentity&#39;.
-     * 
-     */
+        /**
+         * @return The authentication type.
+         * Expected value is &#39;userAssignedIdentity&#39;.
+         * 
+         */
     private final String authType;
-    /**
-     * Client Id for userAssignedIdentity.
-     * 
-     */
+        /**
+         * @return Client Id for userAssignedIdentity.
+         * 
+         */
     private final String clientId;
-    /**
-     * Subscription id for userAssignedIdentity.
-     * 
-     */
+        /**
+         * @return Subscription id for userAssignedIdentity.
+         * 
+         */
     private final String subscriptionId;
 
     @CustomType.Constructor
@@ -37,24 +37,24 @@ public final class UserAssignedIdentityAuthInfoResponse {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;userAssignedIdentity&#39;.
      * 
-    */
+     */
     public String authType() {
         return this.authType;
     }
     /**
-     * Client Id for userAssignedIdentity.
+     * @return Client Id for userAssignedIdentity.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Subscription id for userAssignedIdentity.
+     * @return Subscription id for userAssignedIdentity.
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }

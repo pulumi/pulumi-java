@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScriptStatusResponse {
-    /**
-     * ACI resource Id.
-     * 
-     */
+        /**
+         * @return ACI resource Id.
+         * 
+         */
     private final String containerInstanceId;
-    /**
-     * End time of the script execution.
-     * 
-     */
+        /**
+         * @return End time of the script execution.
+         * 
+         */
     private final String endTime;
-    /**
-     * Error that is relayed from the script execution.
-     * 
-     */
+        /**
+         * @return Error that is relayed from the script execution.
+         * 
+         */
     private final @Nullable ErrorResponseResponse error;
-    /**
-     * Time the deployment script resource will expire.
-     * 
-     */
+        /**
+         * @return Time the deployment script resource will expire.
+         * 
+         */
     private final String expirationTime;
-    /**
-     * Start time of the script execution.
-     * 
-     */
+        /**
+         * @return Start time of the script execution.
+         * 
+         */
     private final String startTime;
-    /**
-     * Storage account resource Id.
-     * 
-     */
+        /**
+         * @return Storage account resource Id.
+         * 
+         */
     private final String storageAccountId;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ScriptStatusResponse {
     }
 
     /**
-     * ACI resource Id.
+     * @return ACI resource Id.
      * 
-    */
+     */
     public String containerInstanceId() {
         return this.containerInstanceId;
     }
     /**
-     * End time of the script execution.
+     * @return End time of the script execution.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * Error that is relayed from the script execution.
+     * @return Error that is relayed from the script execution.
      * 
-    */
+     */
     public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Time the deployment script resource will expire.
+     * @return Time the deployment script resource will expire.
      * 
-    */
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
     /**
-     * Start time of the script execution.
+     * @return Start time of the script execution.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Storage account resource Id.
+     * @return Storage account resource Id.
      * 
-    */
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }

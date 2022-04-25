@@ -11,70 +11,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBillingRoleAssignmentByEnrollmentAccountResult {
-    /**
-     * The principal Id of the user who created the role assignment.
-     * 
-     */
+        /**
+         * @return The principal Id of the user who created the role assignment.
+         * 
+         */
     private final String createdByPrincipalId;
-    /**
-     * The tenant Id of the user who created the role assignment.
-     * 
-     */
+        /**
+         * @return The tenant Id of the user who created the role assignment.
+         * 
+         */
     private final String createdByPrincipalTenantId;
-    /**
-     * The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
-     */
+        /**
+         * @return The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         */
     private final String createdByUserEmailAddress;
-    /**
-     * The date the role assignment was created.
-     * 
-     */
+        /**
+         * @return The date the role assignment was created.
+         * 
+         */
     private final String createdOn;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The principal id of the user to whom the role was assigned.
-     * 
-     */
+        /**
+         * @return The principal id of the user to whom the role was assigned.
+         * 
+         */
     private final @Nullable String principalId;
-    /**
-     * The principal tenant id of the user to whom the role was assigned.
-     * 
-     */
+        /**
+         * @return The principal tenant id of the user to whom the role was assigned.
+         * 
+         */
     private final @Nullable String principalTenantId;
-    /**
-     * The ID of the role definition.
-     * 
-     */
+        /**
+         * @return The ID of the role definition.
+         * 
+         */
     private final @Nullable String roleDefinitionId;
-    /**
-     * The scope at which the role was assigned.
-     * 
-     */
+        /**
+         * @return The scope at which the role was assigned.
+         * 
+         */
     private final String scope;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
-     */
+        /**
+         * @return The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         */
     private final @Nullable String userAuthenticationType;
-    /**
-     * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
-     * 
-     */
+        /**
+         * @return The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         */
     private final @Nullable String userEmailAddress;
 
     @CustomType.Constructor
@@ -108,93 +108,93 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountResult {
     }
 
     /**
-     * The principal Id of the user who created the role assignment.
+     * @return The principal Id of the user who created the role assignment.
      * 
-    */
+     */
     public String createdByPrincipalId() {
         return this.createdByPrincipalId;
     }
     /**
-     * The tenant Id of the user who created the role assignment.
+     * @return The tenant Id of the user who created the role assignment.
      * 
-    */
+     */
     public String createdByPrincipalTenantId() {
         return this.createdByPrincipalTenantId;
     }
     /**
-     * The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
+     * @return The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
-    */
+     */
     public String createdByUserEmailAddress() {
         return this.createdByUserEmailAddress;
     }
     /**
-     * The date the role assignment was created.
+     * @return The date the role assignment was created.
      * 
-    */
+     */
     public String createdOn() {
         return this.createdOn;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principal id of the user to whom the role was assigned.
+     * @return The principal id of the user to whom the role was assigned.
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
-     * The principal tenant id of the user to whom the role was assigned.
+     * @return The principal tenant id of the user to whom the role was assigned.
      * 
-    */
+     */
     public Optional<String> principalTenantId() {
         return Optional.ofNullable(this.principalTenantId);
     }
     /**
-     * The ID of the role definition.
+     * @return The ID of the role definition.
      * 
-    */
+     */
     public Optional<String> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
     /**
-     * The scope at which the role was assigned.
+     * @return The scope at which the role was assigned.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+     * @return The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
-    */
+     */
     public Optional<String> userAuthenticationType() {
         return Optional.ofNullable(this.userAuthenticationType);
     }
     /**
-     * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+     * @return The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
-    */
+     */
     public Optional<String> userEmailAddress() {
         return Optional.ofNullable(this.userEmailAddress);
     }

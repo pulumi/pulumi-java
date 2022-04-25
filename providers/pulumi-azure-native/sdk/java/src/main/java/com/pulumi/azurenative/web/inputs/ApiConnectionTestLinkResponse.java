@@ -25,6 +25,10 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
     @Import(name="method")
     private @Nullable String method;
 
+    /**
+     * @return HTTP Method
+     * 
+     */
     public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
@@ -36,6 +40,10 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
     @Import(name="requestUri")
     private @Nullable String requestUri;
 
+    /**
+     * @return Test link request URI
+     * 
+     */
     public Optional<String> requestUri() {
         return Optional.ofNullable(this.requestUri);
     }
@@ -65,11 +73,23 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
             $ = new ApiConnectionTestLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param method HTTP Method
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param requestUri Test link request URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestUri(@Nullable String requestUri) {
             $.requestUri = requestUri;
             return this;

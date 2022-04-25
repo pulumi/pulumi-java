@@ -28,6 +28,10 @@ public final class AzureActiveDirectoryValidationArgs extends com.pulumi.resourc
     @Import(name="allowedAudiences")
     private @Nullable Output<List<String>> allowedAudiences;
 
+    /**
+     * @return The list of audiences that can make successful authentication/authorization requests.
+     * 
+     */
     public Optional<Output<List<String>>> allowedAudiences() {
         return Optional.ofNullable(this.allowedAudiences);
     }
@@ -39,6 +43,10 @@ public final class AzureActiveDirectoryValidationArgs extends com.pulumi.resourc
     @Import(name="jwtClaimChecks")
     private @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
 
+    /**
+     * @return The configuration settings of the checks that should be made while validating the JWT Claims.
+     * 
+     */
     public Optional<Output<JwtClaimChecksArgs>> jwtClaimChecks() {
         return Optional.ofNullable(this.jwtClaimChecks);
     }
@@ -68,24 +76,54 @@ public final class AzureActiveDirectoryValidationArgs extends com.pulumi.resourc
             $ = new AzureActiveDirectoryValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedAudiences The list of audiences that can make successful authentication/authorization requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
             $.allowedAudiences = allowedAudiences;
             return this;
         }
 
+        /**
+         * @param allowedAudiences The list of audiences that can make successful authentication/authorization requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(List<String> allowedAudiences) {
             return allowedAudiences(Output.of(allowedAudiences));
         }
 
+        /**
+         * @param allowedAudiences The list of audiences that can make successful authentication/authorization requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAudiences(String... allowedAudiences) {
             return allowedAudiences(List.of(allowedAudiences));
         }
 
+        /**
+         * @param jwtClaimChecks The configuration settings of the checks that should be made while validating the JWT Claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtClaimChecks(@Nullable Output<JwtClaimChecksArgs> jwtClaimChecks) {
             $.jwtClaimChecks = jwtClaimChecks;
             return this;
         }
 
+        /**
+         * @param jwtClaimChecks The configuration settings of the checks that should be made while validating the JWT Claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jwtClaimChecks(JwtClaimChecksArgs jwtClaimChecks) {
             return jwtClaimChecks(Output.of(jwtClaimChecks));
         }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FlavorDataResponse {
-    /**
-     * Model flavor-specific data.
-     * 
-     */
+        /**
+         * @return Model flavor-specific data.
+         * 
+         */
     private final @Nullable Map<String,String> data;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FlavorDataResponse {
     }
 
     /**
-     * Model flavor-specific data.
+     * @return Model flavor-specific data.
      * 
-    */
+     */
     public Map<String,String> data() {
         return this.data == null ? Map.of() : this.data;
     }

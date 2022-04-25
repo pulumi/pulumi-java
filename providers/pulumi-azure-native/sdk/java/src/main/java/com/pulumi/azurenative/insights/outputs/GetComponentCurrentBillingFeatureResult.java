@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetComponentCurrentBillingFeatureResult {
-    /**
-     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
-     * 
-     */
+        /**
+         * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
+         * 
+         */
     private final @Nullable List<String> currentBillingFeatures;
-    /**
-     * An Application Insights component daily data volume cap
-     * 
-     */
+        /**
+         * @return An Application Insights component daily data volume cap
+         * 
+         */
     private final @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class GetComponentCurrentBillingFeatureResult {
     }
 
     /**
-     * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
+     * @return Current enabled pricing plan. When the component is in the Enterprise plan, this will list both &#39;Basic&#39; and &#39;Application Insights Enterprise&#39;.
      * 
-    */
+     */
     public List<String> currentBillingFeatures() {
         return this.currentBillingFeatures == null ? List.of() : this.currentBillingFeatures;
     }
     /**
-     * An Application Insights component daily data volume cap
+     * @return An Application Insights component daily data volume cap
      * 
-    */
+     */
     public Optional<ApplicationInsightsComponentDataVolumeCapResponse> dataVolumeCap() {
         return Optional.ofNullable(this.dataVolumeCap);
     }

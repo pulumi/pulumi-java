@@ -19,6 +19,10 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="networkResourceName", required=true)
     private String networkResourceName;
 
+    /**
+     * @return The identity of the network.
+     * 
+     */
     public String networkResourceName() {
         return this.networkResourceName;
     }
@@ -30,6 +34,10 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkResourceName The identity of the network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkResourceName(String networkResourceName) {
             $.networkResourceName = networkResourceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Azure resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

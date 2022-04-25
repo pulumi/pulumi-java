@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationAuthorizationResponse {
-    /**
-     * The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
-     * 
-     */
+        /**
+         * @return The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+         * 
+         */
     private final String principalId;
-    /**
-     * The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
-     * 
-     */
+        /**
+         * @return The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
+         * 
+         */
     private final String roleDefinitionId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApplicationAuthorizationResponse {
     }
 
     /**
-     * The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+     * @return The provider&#39;s principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
+     * @return The provider&#39;s role definition identifier. This role will define all the permissions that the provider must have on the managed application&#39;s container resource group. This role definition cannot have permission to delete the resource group.
      * 
-    */
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }

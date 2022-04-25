@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectorMappingFormatResponse {
-    /**
-     * The oData language.
-     * 
-     */
+        /**
+         * @return The oData language.
+         * 
+         */
     private final @Nullable String acceptLanguage;
-    /**
-     * Character separating array elements.
-     * 
-     */
+        /**
+         * @return Character separating array elements.
+         * 
+         */
     private final @Nullable String arraySeparator;
-    /**
-     * The character that signifies a break between columns.
-     * 
-     */
+        /**
+         * @return The character that signifies a break between columns.
+         * 
+         */
     private final @Nullable String columnDelimiter;
-    /**
-     * The type mapping format.
-     * 
-     */
+        /**
+         * @return The type mapping format.
+         * 
+         */
     private final String formatType;
-    /**
-     * Quote character, used to indicate enquoted fields.
-     * 
-     */
+        /**
+         * @return Quote character, used to indicate enquoted fields.
+         * 
+         */
     private final @Nullable String quoteCharacter;
-    /**
-     * Escape character for quotes, can be the same as the quoteCharacter.
-     * 
-     */
+        /**
+         * @return Escape character for quotes, can be the same as the quoteCharacter.
+         * 
+         */
     private final @Nullable String quoteEscapeCharacter;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ConnectorMappingFormatResponse {
     }
 
     /**
-     * The oData language.
+     * @return The oData language.
      * 
-    */
+     */
     public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
     /**
-     * Character separating array elements.
+     * @return Character separating array elements.
      * 
-    */
+     */
     public Optional<String> arraySeparator() {
         return Optional.ofNullable(this.arraySeparator);
     }
     /**
-     * The character that signifies a break between columns.
+     * @return The character that signifies a break between columns.
      * 
-    */
+     */
     public Optional<String> columnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
     /**
-     * The type mapping format.
+     * @return The type mapping format.
      * 
-    */
+     */
     public String formatType() {
         return this.formatType;
     }
     /**
-     * Quote character, used to indicate enquoted fields.
+     * @return Quote character, used to indicate enquoted fields.
      * 
-    */
+     */
     public Optional<String> quoteCharacter() {
         return Optional.ofNullable(this.quoteCharacter);
     }
     /**
-     * Escape character for quotes, can be the same as the quoteCharacter.
+     * @return Escape character for quotes, can be the same as the quoteCharacter.
      * 
-    */
+     */
     public Optional<String> quoteEscapeCharacter() {
         return Optional.ofNullable(this.quoteEscapeCharacter);
     }

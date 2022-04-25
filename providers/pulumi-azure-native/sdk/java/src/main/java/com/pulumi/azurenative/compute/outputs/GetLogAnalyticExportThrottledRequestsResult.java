@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLogAnalyticExportThrottledRequestsResult {
-    /**
-     * LogAnalyticsOutput
-     * 
-     */
+        /**
+         * @return LogAnalyticsOutput
+         * 
+         */
     private final LogAnalyticsOutputResponse properties;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
     }
 
     /**
-     * LogAnalyticsOutput
+     * @return LogAnalyticsOutput
      * 
-    */
+     */
     public LogAnalyticsOutputResponse properties() {
         return this.properties;
     }

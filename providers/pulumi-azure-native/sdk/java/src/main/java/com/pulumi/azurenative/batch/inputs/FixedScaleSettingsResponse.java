@@ -22,6 +22,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="nodeDeallocationOption")
     private @Nullable String nodeDeallocationOption;
 
+    /**
+     * @return If omitted, the default value is Requeue.
+     * 
+     */
     public Optional<String> nodeDeallocationOption() {
         return Optional.ofNullable(this.nodeDeallocationOption);
     }
@@ -33,6 +37,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="resizeTimeout")
     private @Nullable String resizeTimeout;
 
+    /**
+     * @return The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+     * 
+     */
     public Optional<String> resizeTimeout() {
         return Optional.ofNullable(this.resizeTimeout);
     }
@@ -44,6 +52,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="targetDedicatedNodes")
     private @Nullable Integer targetDedicatedNodes;
 
+    /**
+     * @return At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+     * 
+     */
     public Optional<Integer> targetDedicatedNodes() {
         return Optional.ofNullable(this.targetDedicatedNodes);
     }
@@ -55,6 +67,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="targetLowPriorityNodes")
     private @Nullable Integer targetLowPriorityNodes;
 
+    /**
+     * @return At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+     * 
+     */
     public Optional<Integer> targetLowPriorityNodes() {
         return Optional.ofNullable(this.targetLowPriorityNodes);
     }
@@ -86,21 +102,45 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
             $ = new FixedScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nodeDeallocationOption If omitted, the default value is Requeue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
             $.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
+        /**
+         * @param resizeTimeout The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
             $.resizeTimeout = resizeTimeout;
             return this;
         }
 
+        /**
+         * @param targetDedicatedNodes At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             $.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
+        /**
+         * @param targetLowPriorityNodes At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             $.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;

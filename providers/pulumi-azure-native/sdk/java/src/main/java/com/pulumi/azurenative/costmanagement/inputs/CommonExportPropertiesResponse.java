@@ -28,6 +28,10 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
     @Import(name="definition", required=true)
     private ExportDefinitionResponse definition;
 
+    /**
+     * @return Has the definition for the export.
+     * 
+     */
     public ExportDefinitionResponse definition() {
         return this.definition;
     }
@@ -39,6 +43,10 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
     @Import(name="deliveryInfo", required=true)
     private ExportDeliveryInfoResponse deliveryInfo;
 
+    /**
+     * @return Has delivery information for the export.
+     * 
+     */
     public ExportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
@@ -50,6 +58,10 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -61,6 +73,10 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
     @Import(name="nextRunTimeEstimate", required=true)
     private String nextRunTimeEstimate;
 
+    /**
+     * @return If the export has an active schedule, provides an estimate of the next execution time.
+     * 
+     */
     public String nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
@@ -72,6 +88,10 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
     @Import(name="runHistory")
     private @Nullable ExportExecutionListResultResponse runHistory;
 
+    /**
+     * @return If requested, has the most recent execution history for the export.
+     * 
+     */
     public Optional<ExportExecutionListResultResponse> runHistory() {
         return Optional.ofNullable(this.runHistory);
     }
@@ -104,26 +124,56 @@ public final class CommonExportPropertiesResponse extends com.pulumi.resources.I
             $ = new CommonExportPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition Has the definition for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(ExportDefinitionResponse definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param deliveryInfo Has delivery information for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
             $.deliveryInfo = deliveryInfo;
             return this;
         }
 
+        /**
+         * @param format The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param nextRunTimeEstimate If the export has an active schedule, provides an estimate of the next execution time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
             $.nextRunTimeEstimate = nextRunTimeEstimate;
             return this;
         }
 
+        /**
+         * @param runHistory If requested, has the most recent execution history for the export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
             $.runHistory = runHistory;
             return this;

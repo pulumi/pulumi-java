@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetVendorSkuPreviewResult {
-    /**
-     * The ARM ID of the resource.
-     * 
-     */
+        /**
+         * @return The ARM ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The preview subscription ID.
-     * 
-     */
+        /**
+         * @return The preview subscription ID.
+         * 
+         */
     private final String name;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GetVendorSkuPreviewResult {
     }
 
     /**
-     * The ARM ID of the resource.
+     * @return The ARM ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The preview subscription ID.
+     * @return The preview subscription ID.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

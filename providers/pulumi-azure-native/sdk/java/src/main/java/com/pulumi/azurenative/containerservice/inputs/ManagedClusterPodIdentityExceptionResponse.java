@@ -20,6 +20,10 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the pod identity exception.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Namespace of the pod identity exception.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -42,6 +50,10 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
     @Import(name="podLabels", required=true)
     private Map<String,String> podLabels;
 
+    /**
+     * @return Pod labels to match.
+     * 
+     */
     public Map<String,String> podLabels() {
         return this.podLabels;
     }
@@ -72,16 +84,34 @@ public final class ManagedClusterPodIdentityExceptionResponse extends com.pulumi
             $ = new ManagedClusterPodIdentityExceptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the pod identity exception.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the pod identity exception.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param podLabels Pod labels to match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podLabels(Map<String,String> podLabels) {
             $.podLabels = podLabels;
             return this;

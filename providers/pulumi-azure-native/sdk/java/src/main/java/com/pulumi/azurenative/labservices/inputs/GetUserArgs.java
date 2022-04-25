@@ -21,6 +21,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Specify the $expand query. Example: &#39;properties($select=email)&#39;
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labAccountName", required=true)
     private String labAccountName;
 
+    /**
+     * @return The name of the lab Account.
+     * 
+     */
     public String labAccountName() {
         return this.labAccountName;
     }
@@ -43,6 +51,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labName", required=true)
     private String labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public String labName() {
         return this.labName;
     }
@@ -54,6 +66,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -65,6 +81,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -97,26 +117,56 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Specify the $expand query. Example: &#39;properties($select=email)&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(String labAccountName) {
             $.labAccountName = labAccountName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

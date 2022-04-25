@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicyInsightsResponse {
-    /**
-     * A flag to indicate if the insights are enabled on the policy.
-     * 
-     */
+        /**
+         * @return A flag to indicate if the insights are enabled on the policy.
+         * 
+         */
     private final @Nullable Boolean isEnabled;
-    /**
-     * Workspaces needed to configure the Firewall Policy Insights.
-     * 
-     */
+        /**
+         * @return Workspaces needed to configure the Firewall Policy Insights.
+         * 
+         */
     private final @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources;
-    /**
-     * Number of days the insights should be enabled on the policy.
-     * 
-     */
+        /**
+         * @return Number of days the insights should be enabled on the policy.
+         * 
+         */
     private final @Nullable Integer retentionDays;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class FirewallPolicyInsightsResponse {
     }
 
     /**
-     * A flag to indicate if the insights are enabled on the policy.
+     * @return A flag to indicate if the insights are enabled on the policy.
      * 
-    */
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
-     * Workspaces needed to configure the Firewall Policy Insights.
+     * @return Workspaces needed to configure the Firewall Policy Insights.
      * 
-    */
+     */
     public Optional<FirewallPolicyLogAnalyticsResourcesResponse> logAnalyticsResources() {
         return Optional.ofNullable(this.logAnalyticsResources);
     }
     /**
-     * Number of days the insights should be enabled on the policy.
+     * @return Number of days the insights should be enabled on the policy.
      * 
-    */
+     */
     public Optional<Integer> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }

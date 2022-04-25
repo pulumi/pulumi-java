@@ -26,6 +26,10 @@ public final class ComputeBindingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="computeId")
     private @Nullable String computeId;
 
+    /**
+     * @return ID of the compute resource.
+     * 
+     */
     public Optional<String> computeId() {
         return Optional.ofNullable(this.computeId);
     }
@@ -37,6 +41,10 @@ public final class ComputeBindingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="nodeCount")
     private @Nullable Integer nodeCount;
 
+    /**
+     * @return Number of nodes.
+     * 
+     */
     public Optional<Integer> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -66,11 +74,23 @@ public final class ComputeBindingResponse extends com.pulumi.resources.InvokeArg
             $ = new ComputeBindingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeId ID of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeId(@Nullable String computeId) {
             $.computeId = computeId;
             return this;
         }
 
+        /**
+         * @param nodeCount Number of nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(@Nullable Integer nodeCount) {
             $.nodeCount = nodeCount;
             return this;

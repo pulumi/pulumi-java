@@ -26,6 +26,10 @@ public final class IpAddressRangeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="addressRange")
     private @Nullable Output<String> addressRange;
 
+    /**
+     * @return The IP address range.
+     * 
+     */
     public Optional<Output<String>> addressRange() {
         return Optional.ofNullable(this.addressRange);
     }
@@ -54,11 +58,23 @@ public final class IpAddressRangeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IpAddressRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressRange The IP address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressRange(@Nullable Output<String> addressRange) {
             $.addressRange = addressRange;
             return this;
         }
 
+        /**
+         * @param addressRange The IP address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressRange(String addressRange) {
             return addressRange(Output.of(addressRange));
         }

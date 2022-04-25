@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSubAccountTagRuleResult {
-    /**
-     * The id of the rule set.
-     * 
-     */
+        /**
+         * @return The id of the rule set.
+         * 
+         */
     private final String id;
-    /**
-     * Name of the rule set.
-     * 
-     */
+        /**
+         * @return Name of the rule set.
+         * 
+         */
     private final String name;
-    /**
-     * Definition of the properties for a TagRules resource.
-     * 
-     */
+        /**
+         * @return Definition of the properties for a TagRules resource.
+         * 
+         */
     private final MonitoringTagRulesPropertiesResponse properties;
-    /**
-     * The system metadata relating to this resource
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the rule set.
-     * 
-     */
+        /**
+         * @return The type of the rule set.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetSubAccountTagRuleResult {
     }
 
     /**
-     * The id of the rule set.
+     * @return The id of the rule set.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the rule set.
+     * @return Name of the rule set.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Definition of the properties for a TagRules resource.
+     * @return Definition of the properties for a TagRules resource.
      * 
-    */
+     */
     public MonitoringTagRulesPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the rule set.
+     * @return The type of the rule set.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

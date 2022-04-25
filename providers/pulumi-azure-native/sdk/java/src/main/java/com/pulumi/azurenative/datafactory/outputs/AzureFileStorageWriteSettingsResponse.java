@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFileStorageWriteSettingsResponse {
-    /**
-     * The type of copy behavior for copy sink.
-     * 
-     */
+        /**
+         * @return The type of copy behavior for copy sink.
+         * 
+         */
     private final @Nullable Object copyBehavior;
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object disableMetricsCollection;
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object maxConcurrentConnections;
-    /**
-     * The write setting type.
-     * Expected value is &#39;AzureFileStorageWriteSettings&#39;.
-     * 
-     */
+        /**
+         * @return The write setting type.
+         * Expected value is &#39;AzureFileStorageWriteSettings&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class AzureFileStorageWriteSettingsResponse {
     }
 
     /**
-     * The type of copy behavior for copy sink.
+     * @return The type of copy behavior for copy sink.
      * 
-    */
+     */
     public Optional<Object> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The write setting type.
+     * @return The write setting type.
      * Expected value is &#39;AzureFileStorageWriteSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

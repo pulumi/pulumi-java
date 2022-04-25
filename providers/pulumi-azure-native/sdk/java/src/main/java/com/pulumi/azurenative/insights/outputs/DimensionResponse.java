@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class DimensionResponse {
-    /**
-     * Name of the dimension
-     * 
-     */
+        /**
+         * @return Name of the dimension
+         * 
+         */
     private final String name;
-    /**
-     * Operator for dimension values
-     * 
-     */
+        /**
+         * @return Operator for dimension values
+         * 
+         */
     private final String operator;
-    /**
-     * List of dimension values
-     * 
-     */
+        /**
+         * @return List of dimension values
+         * 
+         */
     private final List<String> values;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class DimensionResponse {
     }
 
     /**
-     * Name of the dimension
+     * @return Name of the dimension
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Operator for dimension values
+     * @return Operator for dimension values
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * List of dimension values
+     * @return List of dimension values
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

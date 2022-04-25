@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AppResourcePropertiesResponse {
-    /**
-     * Name of the active deployment of the App
-     * 
-     */
+        /**
+         * @return Name of the active deployment of the App
+         * 
+         */
     private final @Nullable String activeDeploymentName;
-    /**
-     * Date time when the resource is created
-     * 
-     */
+        /**
+         * @return Date time when the resource is created
+         * 
+         */
     private final String createdTime;
-    /**
-     * Fully qualified dns Name.
-     * 
-     */
+        /**
+         * @return Fully qualified dns Name.
+         * 
+         */
     private final @Nullable String fqdn;
-    /**
-     * Indicate if only https is allowed.
-     * 
-     */
+        /**
+         * @return Indicate if only https is allowed.
+         * 
+         */
     private final @Nullable Boolean httpsOnly;
-    /**
-     * Persistent disk settings
-     * 
-     */
+        /**
+         * @return Persistent disk settings
+         * 
+         */
     private final @Nullable PersistentDiskResponse persistentDisk;
-    /**
-     * Provisioning state of the App
-     * 
-     */
+        /**
+         * @return Provisioning state of the App
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Indicates whether the App exposes public endpoint
-     * 
-     */
+        /**
+         * @return Indicates whether the App exposes public endpoint
+         * 
+         */
     private final @Nullable Boolean public_;
-    /**
-     * Temporary disk settings
-     * 
-     */
+        /**
+         * @return Temporary disk settings
+         * 
+         */
     private final @Nullable TemporaryDiskResponse temporaryDisk;
-    /**
-     * URL of the App
-     * 
-     */
+        /**
+         * @return URL of the App
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class AppResourcePropertiesResponse {
     }
 
     /**
-     * Name of the active deployment of the App
+     * @return Name of the active deployment of the App
      * 
-    */
+     */
     public Optional<String> activeDeploymentName() {
         return Optional.ofNullable(this.activeDeploymentName);
     }
     /**
-     * Date time when the resource is created
+     * @return Date time when the resource is created
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Fully qualified dns Name.
+     * @return Fully qualified dns Name.
      * 
-    */
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * Indicate if only https is allowed.
+     * @return Indicate if only https is allowed.
      * 
-    */
+     */
     public Optional<Boolean> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
-     * Persistent disk settings
+     * @return Persistent disk settings
      * 
-    */
+     */
     public Optional<PersistentDiskResponse> persistentDisk() {
         return Optional.ofNullable(this.persistentDisk);
     }
     /**
-     * Provisioning state of the App
+     * @return Provisioning state of the App
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Indicates whether the App exposes public endpoint
+     * @return Indicates whether the App exposes public endpoint
      * 
-    */
+     */
     public Optional<Boolean> public_() {
         return Optional.ofNullable(this.public_);
     }
     /**
-     * Temporary disk settings
+     * @return Temporary disk settings
      * 
-    */
+     */
     public Optional<TemporaryDiskResponse> temporaryDisk() {
         return Optional.ofNullable(this.temporaryDisk);
     }
     /**
-     * URL of the App
+     * @return URL of the App
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

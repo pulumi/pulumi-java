@@ -26,6 +26,10 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Is arc auto provisioning enabled
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -37,6 +41,10 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
     @Import(name="servicePrincipalSecretMetadata")
     private @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
+    /**
+     * @return Metadata of Service Principal secret for autoprovisioning
+     * 
+     */
     public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> servicePrincipalSecretMetadata() {
         return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }
@@ -66,11 +74,23 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
             $ = new DefenderForServersAwsOfferingResponseArcAutoProvisioning(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Is arc auto provisioning enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param servicePrincipalSecretMetadata Metadata of Service Principal secret for autoprovisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
             $.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;

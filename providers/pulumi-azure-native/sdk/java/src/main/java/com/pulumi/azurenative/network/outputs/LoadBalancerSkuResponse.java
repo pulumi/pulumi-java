@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancerSkuResponse {
-    /**
-     * Name of a load balancer SKU.
-     * 
-     */
+        /**
+         * @return Name of a load balancer SKU.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Tier of a load balancer SKU.
-     * 
-     */
+        /**
+         * @return Tier of a load balancer SKU.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LoadBalancerSkuResponse {
     }
 
     /**
-     * Name of a load balancer SKU.
+     * @return Name of a load balancer SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tier of a load balancer SKU.
+     * @return Tier of a load balancer SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

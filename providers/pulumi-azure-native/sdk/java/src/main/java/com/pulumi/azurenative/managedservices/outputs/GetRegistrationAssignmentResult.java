@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetRegistrationAssignmentResult {
-    /**
-     * The fully qualified path of the registration assignment.
-     * 
-     */
+        /**
+         * @return The fully qualified path of the registration assignment.
+         * 
+         */
     private final String id;
-    /**
-     * Name of the registration assignment.
-     * 
-     */
+        /**
+         * @return Name of the registration assignment.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of a registration assignment.
-     * 
-     */
+        /**
+         * @return Properties of a registration assignment.
+         * 
+         */
     private final RegistrationAssignmentPropertiesResponse properties;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetRegistrationAssignmentResult {
     }
 
     /**
-     * The fully qualified path of the registration assignment.
+     * @return The fully qualified path of the registration assignment.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the registration assignment.
+     * @return Name of the registration assignment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of a registration assignment.
+     * @return Properties of a registration assignment.
      * 
-    */
+     */
     public RegistrationAssignmentPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

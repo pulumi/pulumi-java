@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DetectorResponse {
-    /**
-     * The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
-     * 
-     */
+        /**
+         * @return The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The detector id.
-     * 
-     */
+        /**
+         * @return The detector id.
+         * 
+         */
     private final String id;
-    /**
-     * The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
-     * 
-     */
+        /**
+         * @return The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         */
     private final @Nullable List<String> imagePaths;
-    /**
-     * The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
-     * 
-     */
+        /**
+         * @return The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The detector&#39;s parameters.&#39;
-     * 
-     */
+        /**
+         * @return The detector&#39;s parameters.&#39;
+         * 
+         */
     private final @Nullable Map<String,Object> parameters;
-    /**
-     * The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
-     * 
-     */
+        /**
+         * @return The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
+         * 
+         */
     private final @Nullable List<String> supportedResourceTypes;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class DetectorResponse {
     }
 
     /**
-     * The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
+     * @return The Smart Detector description. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The detector id.
+     * @return The detector id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
+     * @return The Smart Detector image path. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
-    */
+     */
     public List<String> imagePaths() {
         return this.imagePaths == null ? List.of() : this.imagePaths;
     }
     /**
-     * The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
+     * @return The Smart Detector name. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The detector&#39;s parameters.&#39;
+     * @return The detector&#39;s parameters.&#39;
      * 
-    */
+     */
     public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
+     * @return The Smart Detector supported resource types. By default this is not populated, unless it&#39;s specified in expandDetector
      * 
-    */
+     */
     public List<String> supportedResourceTypes() {
         return this.supportedResourceTypes == null ? List.of() : this.supportedResourceTypes;
     }

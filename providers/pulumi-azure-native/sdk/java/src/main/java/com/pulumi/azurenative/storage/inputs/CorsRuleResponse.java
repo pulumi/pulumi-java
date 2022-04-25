@@ -25,6 +25,10 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedHeaders", required=true)
     private List<String> allowedHeaders;
 
+    /**
+     * @return Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
+     * 
+     */
     public List<String> allowedHeaders() {
         return this.allowedHeaders;
     }
@@ -36,6 +40,10 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedMethods", required=true)
     private List<String> allowedMethods;
 
+    /**
+     * @return Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
+     * 
+     */
     public List<String> allowedMethods() {
         return this.allowedMethods;
     }
@@ -47,6 +55,10 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowedOrigins", required=true)
     private List<String> allowedOrigins;
 
+    /**
+     * @return Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or &#34;*&#34; to allow all domains
+     * 
+     */
     public List<String> allowedOrigins() {
         return this.allowedOrigins;
     }
@@ -58,6 +70,10 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="exposedHeaders", required=true)
     private List<String> exposedHeaders;
 
+    /**
+     * @return Required if CorsRule element is present. A list of response headers to expose to CORS clients.
+     * 
+     */
     public List<String> exposedHeaders() {
         return this.exposedHeaders;
     }
@@ -69,6 +85,10 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxAgeInSeconds", required=true)
     private Integer maxAgeInSeconds;
 
+    /**
+     * @return Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
+     * 
+     */
     public Integer maxAgeInSeconds() {
         return this.maxAgeInSeconds;
     }
@@ -101,42 +121,96 @@ public final class CorsRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CorsRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedHeaders Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(List<String> allowedHeaders) {
             $.allowedHeaders = allowedHeaders;
             return this;
         }
 
+        /**
+         * @param allowedHeaders Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedMethods Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(List<String> allowedMethods) {
             $.allowedMethods = allowedMethods;
             return this;
         }
 
+        /**
+         * @param allowedMethods Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(String... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
 
+        /**
+         * @param allowedOrigins Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or &#34;*&#34; to allow all domains
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(List<String> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or &#34;*&#34; to allow all domains
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
 
+        /**
+         * @param exposedHeaders Required if CorsRule element is present. A list of response headers to expose to CORS clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(List<String> exposedHeaders) {
             $.exposedHeaders = exposedHeaders;
             return this;
         }
 
+        /**
+         * @param exposedHeaders Required if CorsRule element is present. A list of response headers to expose to CORS clients.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
 
+        /**
+         * @param maxAgeInSeconds Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeInSeconds(Integer maxAgeInSeconds) {
             $.maxAgeInSeconds = maxAgeInSeconds;
             return this;

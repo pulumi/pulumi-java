@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualHubRouteV2Response {
-    /**
-     * The type of destinations.
-     * 
-     */
+        /**
+         * @return The type of destinations.
+         * 
+         */
     private final @Nullable String destinationType;
-    /**
-     * List of all destinations.
-     * 
-     */
+        /**
+         * @return List of all destinations.
+         * 
+         */
     private final @Nullable List<String> destinations;
-    /**
-     * The type of next hops.
-     * 
-     */
+        /**
+         * @return The type of next hops.
+         * 
+         */
     private final @Nullable String nextHopType;
-    /**
-     * NextHops ip address.
-     * 
-     */
+        /**
+         * @return NextHops ip address.
+         * 
+         */
     private final @Nullable List<String> nextHops;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class VirtualHubRouteV2Response {
     }
 
     /**
-     * The type of destinations.
+     * @return The type of destinations.
      * 
-    */
+     */
     public Optional<String> destinationType() {
         return Optional.ofNullable(this.destinationType);
     }
     /**
-     * List of all destinations.
+     * @return List of all destinations.
      * 
-    */
+     */
     public List<String> destinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
-     * The type of next hops.
+     * @return The type of next hops.
      * 
-    */
+     */
     public Optional<String> nextHopType() {
         return Optional.ofNullable(this.nextHopType);
     }
     /**
-     * NextHops ip address.
+     * @return NextHops ip address.
      * 
-    */
+     */
     public List<String> nextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }

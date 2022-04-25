@@ -23,6 +23,10 @@ public final class ManagerIntrinsicSettingsResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of StorSimple Manager.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -51,6 +55,12 @@ public final class ManagerIntrinsicSettingsResponse extends com.pulumi.resources
             $ = new ManagerIntrinsicSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of StorSimple Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

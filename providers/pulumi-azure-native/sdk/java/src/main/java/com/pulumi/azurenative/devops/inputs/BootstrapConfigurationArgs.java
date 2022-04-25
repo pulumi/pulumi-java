@@ -27,6 +27,10 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="sourceRepository")
     private @Nullable Output<CodeRepositoryArgs> sourceRepository;
 
+    /**
+     * @return Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
+     * 
+     */
     public Optional<Output<CodeRepositoryArgs>> sourceRepository() {
         return Optional.ofNullable(this.sourceRepository);
     }
@@ -38,6 +42,10 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="template", required=true)
     private Output<PipelineTemplateArgs> template;
 
+    /**
+     * @return Template used to bootstrap the pipeline.
+     * 
+     */
     public Output<PipelineTemplateArgs> template() {
         return this.template;
     }
@@ -67,20 +75,44 @@ public final class BootstrapConfigurationArgs extends com.pulumi.resources.Resou
             $ = new BootstrapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceRepository Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRepository(@Nullable Output<CodeRepositoryArgs> sourceRepository) {
             $.sourceRepository = sourceRepository;
             return this;
         }
 
+        /**
+         * @param sourceRepository Repository containing the source code for the pipeline. Currently only &#39;azurePipeline&#39; pipeline type supports this.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRepository(CodeRepositoryArgs sourceRepository) {
             return sourceRepository(Output.of(sourceRepository));
         }
 
+        /**
+         * @param template Template used to bootstrap the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Output<PipelineTemplateArgs> template) {
             $.template = template;
             return this;
         }
 
+        /**
+         * @param template Template used to bootstrap the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(PipelineTemplateArgs template) {
             return template(Output.of(template));
         }

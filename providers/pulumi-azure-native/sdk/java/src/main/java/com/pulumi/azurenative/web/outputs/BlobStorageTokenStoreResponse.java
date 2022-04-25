@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BlobStorageTokenStoreResponse {
-    /**
-     * The name of the app setting containing the SAS URL of the blob storage containing the tokens.
-     * 
-     */
+        /**
+         * @return The name of the app setting containing the SAS URL of the blob storage containing the tokens.
+         * 
+         */
     private final @Nullable String sasUrlSettingName;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class BlobStorageTokenStoreResponse {
     }
 
     /**
-     * The name of the app setting containing the SAS URL of the blob storage containing the tokens.
+     * @return The name of the app setting containing the SAS URL of the blob storage containing the tokens.
      * 
-    */
+     */
     public Optional<String> sasUrlSettingName() {
         return Optional.ofNullable(this.sasUrlSettingName);
     }

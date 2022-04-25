@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class AS2EnvelopeSettingsResponse {
-    /**
-     * The value indicating whether to auto generate file name.
-     * 
-     */
+        /**
+         * @return The value indicating whether to auto generate file name.
+         * 
+         */
     private final Boolean autogenerateFileName;
-    /**
-     * The template for file name.
-     * 
-     */
+        /**
+         * @return The template for file name.
+         * 
+         */
     private final String fileNameTemplate;
-    /**
-     * The message content type.
-     * 
-     */
+        /**
+         * @return The message content type.
+         * 
+         */
     private final String messageContentType;
-    /**
-     * The value indicating whether to suspend message on file name generation error.
-     * 
-     */
+        /**
+         * @return The value indicating whether to suspend message on file name generation error.
+         * 
+         */
     private final Boolean suspendMessageOnFileNameGenerationError;
-    /**
-     * The value indicating whether to transmit file name in mime header.
-     * 
-     */
+        /**
+         * @return The value indicating whether to transmit file name in mime header.
+         * 
+         */
     private final Boolean transmitFileNameInMimeHeader;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class AS2EnvelopeSettingsResponse {
     }
 
     /**
-     * The value indicating whether to auto generate file name.
+     * @return The value indicating whether to auto generate file name.
      * 
-    */
+     */
     public Boolean autogenerateFileName() {
         return this.autogenerateFileName;
     }
     /**
-     * The template for file name.
+     * @return The template for file name.
      * 
-    */
+     */
     public String fileNameTemplate() {
         return this.fileNameTemplate;
     }
     /**
-     * The message content type.
+     * @return The message content type.
      * 
-    */
+     */
     public String messageContentType() {
         return this.messageContentType;
     }
     /**
-     * The value indicating whether to suspend message on file name generation error.
+     * @return The value indicating whether to suspend message on file name generation error.
      * 
-    */
+     */
     public Boolean suspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
     /**
-     * The value indicating whether to transmit file name in mime header.
+     * @return The value indicating whether to transmit file name in mime header.
      * 
-    */
+     */
     public Boolean transmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }

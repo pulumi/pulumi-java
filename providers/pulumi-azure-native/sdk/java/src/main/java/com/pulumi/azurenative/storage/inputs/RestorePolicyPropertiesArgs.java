@@ -27,6 +27,10 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
+    /**
+     * @return how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+     * 
+     */
     public Optional<Output<Integer>> days() {
         return Optional.ofNullable(this.days);
     }
@@ -38,6 +42,10 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Blob restore is enabled if set to true.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -67,20 +75,44 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
             $ = new RestorePolicyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Output<Integer> days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param days how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(Integer days) {
             return days(Output.of(days));
         }
 
+        /**
+         * @param enabled Blob restore is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Blob restore is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

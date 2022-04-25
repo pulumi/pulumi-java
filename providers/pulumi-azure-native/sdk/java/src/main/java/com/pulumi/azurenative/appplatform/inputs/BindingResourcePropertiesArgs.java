@@ -28,6 +28,10 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="bindingParameters")
     private @Nullable Output<Map<String,Object>> bindingParameters;
 
+    /**
+     * @return Binding parameters of the Binding resource
+     * 
+     */
     public Optional<Output<Map<String,Object>>> bindingParameters() {
         return Optional.ofNullable(this.bindingParameters);
     }
@@ -39,6 +43,10 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The key of the bound resource
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -50,6 +58,10 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The Azure resource id of the bound resource
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -80,29 +92,65 @@ public final class BindingResourcePropertiesArgs extends com.pulumi.resources.Re
             $ = new BindingResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindingParameters Binding parameters of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingParameters(@Nullable Output<Map<String,Object>> bindingParameters) {
             $.bindingParameters = bindingParameters;
             return this;
         }
 
+        /**
+         * @param bindingParameters Binding parameters of the Binding resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingParameters(Map<String,Object> bindingParameters) {
             return bindingParameters(Output.of(bindingParameters));
         }
 
+        /**
+         * @param key The key of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The key of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param resourceId The Azure resource id of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure resource id of the bound resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

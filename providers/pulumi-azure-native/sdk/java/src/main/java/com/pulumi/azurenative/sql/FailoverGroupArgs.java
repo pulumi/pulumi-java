@@ -27,6 +27,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databases")
     private @Nullable Output<List<String>> databases;
 
+    /**
+     * @return List of databases in the failover group.
+     * 
+     */
     public Optional<Output<List<String>>> databases() {
         return Optional.ofNullable(this.databases);
     }
@@ -38,6 +42,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="failoverGroupName")
     private @Nullable Output<String> failoverGroupName;
 
+    /**
+     * @return The name of the failover group.
+     * 
+     */
     public Optional<Output<String>> failoverGroupName() {
         return Optional.ofNullable(this.failoverGroupName);
     }
@@ -49,6 +57,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partnerServers", required=true)
     private Output<List<PartnerInfoArgs>> partnerServers;
 
+    /**
+     * @return List of partner server information for the failover group.
+     * 
+     */
     public Output<List<PartnerInfoArgs>> partnerServers() {
         return this.partnerServers;
     }
@@ -60,6 +72,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readOnlyEndpoint")
     private @Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
+    /**
+     * @return Read-only endpoint of the failover group instance.
+     * 
+     */
     public Optional<Output<FailoverGroupReadOnlyEndpointArgs>> readOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
@@ -71,6 +87,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="readWriteEndpoint", required=true)
     private Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
+    /**
+     * @return Read-write endpoint of the failover group instance.
+     * 
+     */
     public Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
@@ -82,6 +102,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server containing the failover group.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -104,6 +132,10 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -139,82 +171,190 @@ public final class FailoverGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databases List of databases in the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(@Nullable Output<List<String>> databases) {
             $.databases = databases;
             return this;
         }
 
+        /**
+         * @param databases List of databases in the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(List<String> databases) {
             return databases(Output.of(databases));
         }
 
+        /**
+         * @param databases List of databases in the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databases(String... databases) {
             return databases(List.of(databases));
         }
 
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverGroupName(@Nullable Output<String> failoverGroupName) {
             $.failoverGroupName = failoverGroupName;
             return this;
         }
 
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverGroupName(String failoverGroupName) {
             return failoverGroupName(Output.of(failoverGroupName));
         }
 
+        /**
+         * @param partnerServers List of partner server information for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerServers(Output<List<PartnerInfoArgs>> partnerServers) {
             $.partnerServers = partnerServers;
             return this;
         }
 
+        /**
+         * @param partnerServers List of partner server information for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerServers(List<PartnerInfoArgs> partnerServers) {
             return partnerServers(Output.of(partnerServers));
         }
 
+        /**
+         * @param partnerServers List of partner server information for the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerServers(PartnerInfoArgs... partnerServers) {
             return partnerServers(List.of(partnerServers));
         }
 
+        /**
+         * @param readOnlyEndpoint Read-only endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyEndpoint(@Nullable Output<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             $.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
+        /**
+         * @param readOnlyEndpoint Read-only endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnlyEndpoint(FailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
             return readOnlyEndpoint(Output.of(readOnlyEndpoint));
         }
 
+        /**
+         * @param readWriteEndpoint Read-write endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readWriteEndpoint(Output<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             $.readWriteEndpoint = readWriteEndpoint;
             return this;
         }
 
+        /**
+         * @param readWriteEndpoint Read-write endpoint of the failover group instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readWriteEndpoint(FailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
             return readWriteEndpoint(Output.of(readWriteEndpoint));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server containing the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server containing the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

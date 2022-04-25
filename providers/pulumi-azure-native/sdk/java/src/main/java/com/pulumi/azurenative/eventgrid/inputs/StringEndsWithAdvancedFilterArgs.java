@@ -28,6 +28,10 @@ public final class StringEndsWithAdvancedFilterArgs extends com.pulumi.resources
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The field/property in the event based on which you want to filter.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -40,6 +44,11 @@ public final class StringEndsWithAdvancedFilterArgs extends com.pulumi.resources
     @Import(name="operatorType", required=true)
     private Output<String> operatorType;
 
+    /**
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is &#39;StringEndsWith&#39;.
+     * 
+     */
     public Output<String> operatorType() {
         return this.operatorType;
     }
@@ -51,6 +60,10 @@ public final class StringEndsWithAdvancedFilterArgs extends com.pulumi.resources
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return The set of filter values.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -81,33 +94,77 @@ public final class StringEndsWithAdvancedFilterArgs extends com.pulumi.resources
             $ = new StringEndsWithAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;StringEndsWith&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(Output<String> operatorType) {
             $.operatorType = operatorType;
             return this;
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;StringEndsWith&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(String operatorType) {
             return operatorType(Output.of(operatorType));
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The set of filter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

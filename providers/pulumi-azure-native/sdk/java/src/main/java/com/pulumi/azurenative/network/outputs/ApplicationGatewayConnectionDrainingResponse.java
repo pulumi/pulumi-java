@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationGatewayConnectionDrainingResponse {
-    /**
-     * The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
-     * 
-     */
+        /**
+         * @return The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+         * 
+         */
     private final Integer drainTimeoutInSec;
-    /**
-     * Whether connection draining is enabled or not.
-     * 
-     */
+        /**
+         * @return Whether connection draining is enabled or not.
+         * 
+         */
     private final Boolean enabled;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ApplicationGatewayConnectionDrainingResponse {
     }
 
     /**
-     * The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+     * @return The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
      * 
-    */
+     */
     public Integer drainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
     /**
-     * Whether connection draining is enabled or not.
+     * @return Whether connection draining is enabled or not.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RestorePointResponse {
-    /**
-     * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
-     * 
-     */
+        /**
+         * @return Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
+         * 
+         */
     private final String consistencyMode;
-    /**
-     * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
-     * 
-     */
+        /**
+         * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+         * 
+         */
     private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Gets the provisioning state of the restore point.
-     * 
-     */
+        /**
+         * @return Gets the provisioning state of the restore point.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Gets the details of the VM captured at the time of the restore point creation.
-     * 
-     */
+        /**
+         * @return Gets the details of the VM captured at the time of the restore point creation.
+         * 
+         */
     private final RestorePointSourceMetadataResponse sourceMetadata;
-    /**
-     * Gets the creation time of the restore point.
-     * 
-     */
+        /**
+         * @return Gets the creation time of the restore point.
+         * 
+         */
     private final @Nullable String timeCreated;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class RestorePointResponse {
     }
 
     /**
-     * Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
+     * @return Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
      * 
-    */
+     */
     public String consistencyMode() {
         return this.consistencyMode;
     }
     /**
-     * List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+     * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
      * 
-    */
+     */
     public List<ApiEntityReferenceResponse> excludeDisks() {
         return this.excludeDisks == null ? List.of() : this.excludeDisks;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the provisioning state of the restore point.
+     * @return Gets the provisioning state of the restore point.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets the details of the VM captured at the time of the restore point creation.
+     * @return Gets the details of the VM captured at the time of the restore point creation.
      * 
-    */
+     */
     public RestorePointSourceMetadataResponse sourceMetadata() {
         return this.sourceMetadata;
     }
     /**
-     * Gets the creation time of the restore point.
+     * @return Gets the creation time of the restore point.
      * 
-    */
+     */
     public Optional<String> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

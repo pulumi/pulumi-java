@@ -15,33 +15,33 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMetricsSourceResult {
-    /**
-     * ARM id of the monitor resource.
-     * 
-     */
+        /**
+         * @return ARM id of the monitor resource.
+         * 
+         */
     private final String id;
     private final @Nullable IdentityPropertiesResponse identity;
     private final String location;
-    /**
-     * Name of the monitor resource.
-     * 
-     */
+        /**
+         * @return Name of the monitor resource.
+         * 
+         */
     private final String name;
-    /**
-     * Properties specific to the monitor resource.
-     * 
-     */
+        /**
+         * @return Properties specific to the monitor resource.
+         * 
+         */
     private final MonitorPropertiesResponse properties;
-    /**
-     * The system metadata relating to this resource
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the monitor resource.
-     * 
-     */
+        /**
+         * @return The type of the monitor resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -65,9 +65,9 @@ public final class GetMetricsSourceResult {
     }
 
     /**
-     * ARM id of the monitor resource.
+     * @return ARM id of the monitor resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -78,23 +78,23 @@ public final class GetMetricsSourceResult {
         return this.location;
     }
     /**
-     * Name of the monitor resource.
+     * @return Name of the monitor resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties specific to the monitor resource.
+     * @return Properties specific to the monitor resource.
      * 
-    */
+     */
     public MonitorPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
@@ -102,9 +102,9 @@ public final class GetMetricsSourceResult {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the monitor resource.
+     * @return The type of the monitor resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

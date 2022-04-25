@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLabAccountRegionalAvailabilityResult {
-    /**
-     * Availability information for different size categories per region
-     * 
-     */
+        /**
+         * @return Availability information for different size categories per region
+         * 
+         */
     private final @Nullable List<RegionalAvailabilityResponse> regionalAvailability;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetLabAccountRegionalAvailabilityResult {
     }
 
     /**
-     * Availability information for different size categories per region
+     * @return Availability information for different size categories per region
      * 
-    */
+     */
     public List<RegionalAvailabilityResponse> regionalAvailability() {
         return this.regionalAvailability == null ? List.of() : this.regionalAvailability;
     }

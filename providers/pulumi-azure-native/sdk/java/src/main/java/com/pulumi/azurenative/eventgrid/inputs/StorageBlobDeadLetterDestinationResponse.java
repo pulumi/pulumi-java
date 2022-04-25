@@ -26,6 +26,10 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
     @Import(name="blobContainerName")
     private @Nullable String blobContainerName;
 
+    /**
+     * @return The name of the Storage blob container that is the destination of the deadletter events
+     * 
+     */
     public Optional<String> blobContainerName() {
         return Optional.ofNullable(this.blobContainerName);
     }
@@ -38,6 +42,11 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
     @Import(name="endpointType", required=true)
     private String endpointType;
 
+    /**
+     * @return Type of the endpoint for the dead letter destination
+     * Expected value is &#39;StorageBlob&#39;.
+     * 
+     */
     public String endpointType() {
         return this.endpointType;
     }
@@ -49,6 +58,10 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The Azure Resource ID of the storage account that is the destination of the deadletter events
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -79,16 +92,35 @@ public final class StorageBlobDeadLetterDestinationResponse extends com.pulumi.r
             $ = new StorageBlobDeadLetterDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobContainerName The name of the Storage blob container that is the destination of the deadletter events
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainerName(@Nullable String blobContainerName) {
             $.blobContainerName = blobContainerName;
             return this;
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the dead letter destination
+         * Expected value is &#39;StorageBlob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of the storage account that is the destination of the deadletter events
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

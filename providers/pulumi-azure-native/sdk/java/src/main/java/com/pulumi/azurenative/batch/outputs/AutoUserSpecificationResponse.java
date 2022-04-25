@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoUserSpecificationResponse {
-    /**
-     * The default value is nonAdmin.
-     * 
-     */
+        /**
+         * @return The default value is nonAdmin.
+         * 
+         */
     private final @Nullable String elevationLevel;
-    /**
-     * The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
-     * 
-     */
+        /**
+         * @return The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+         * 
+         */
     private final @Nullable String scope;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AutoUserSpecificationResponse {
     }
 
     /**
-     * The default value is nonAdmin.
+     * @return The default value is nonAdmin.
      * 
-    */
+     */
     public Optional<String> elevationLevel() {
         return Optional.ofNullable(this.elevationLevel);
     }
     /**
-     * The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+     * @return The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }

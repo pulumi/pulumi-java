@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JitNetworkAccessPortRuleResponse {
-    /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
-     * 
-     */
+        /**
+         * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+         * 
+         */
     private final @Nullable String allowedSourceAddressPrefix;
-    /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
-     * 
-     */
+        /**
+         * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         */
     private final @Nullable List<String> allowedSourceAddressPrefixes;
-    /**
-     * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
-     * 
-     */
+        /**
+         * @return Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
+         * 
+         */
     private final String maxRequestAccessDuration;
     private final Integer number;
     private final String protocol;
@@ -46,23 +46,23 @@ public final class JitNetworkAccessPortRuleResponse {
     }
 
     /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
      * 
-    */
+     */
     public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
     /**
-     * Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
      * 
-    */
+     */
     public List<String> allowedSourceAddressPrefixes() {
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
     /**
-     * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
+     * @return Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
      * 
-    */
+     */
     public String maxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }

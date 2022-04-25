@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncryptionResponse {
-    /**
-     * The name of KeyVault key.
-     * 
-     */
+        /**
+         * @return The name of KeyVault key.
+         * 
+         */
     private final @Nullable String keyName;
-    /**
-     * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
-     * 
-     */
+        /**
+         * @return The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+         * 
+         */
     private final @Nullable String keySource;
-    /**
-     * The Uri of KeyVault.
-     * 
-     */
+        /**
+         * @return The Uri of KeyVault.
+         * 
+         */
     private final @Nullable String keyVaultUri;
-    /**
-     * The version of KeyVault key.
-     * 
-     */
+        /**
+         * @return The version of KeyVault key.
+         * 
+         */
     private final @Nullable String keyVersion;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class EncryptionResponse {
     }
 
     /**
-     * The name of KeyVault key.
+     * @return The name of KeyVault key.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+     * @return The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
      * 
-    */
+     */
     public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
-     * The Uri of KeyVault.
+     * @return The Uri of KeyVault.
      * 
-    */
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
-     * The version of KeyVault key.
+     * @return The version of KeyVault key.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }

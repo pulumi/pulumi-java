@@ -24,6 +24,10 @@ public final class DataConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataConnectorId")
     private @Nullable Output<String> dataConnectorId;
 
+    /**
+     * @return Connector ID
+     * 
+     */
     public Optional<Output<String>> dataConnectorId() {
         return Optional.ofNullable(this.dataConnectorId);
     }
@@ -35,6 +39,10 @@ public final class DataConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,DataConnectorKind>> kind;
 
+    /**
+     * @return The data connector kind
+     * 
+     */
     public Output<Either<String,DataConnectorKind>> kind() {
         return this.kind;
     }
@@ -46,6 +54,10 @@ public final class DataConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class DataConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -88,46 +104,106 @@ public final class DataConnectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(@Nullable Output<String> dataConnectorId) {
             $.dataConnectorId = dataConnectorId;
             return this;
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(String dataConnectorId) {
             return dataConnectorId(Output.of(dataConnectorId));
         }
 
+        /**
+         * @param kind The data connector kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,DataConnectorKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The data connector kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,DataConnectorKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The data connector kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The data connector kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(DataConnectorKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

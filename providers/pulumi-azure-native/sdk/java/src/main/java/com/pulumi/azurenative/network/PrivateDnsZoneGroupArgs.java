@@ -24,6 +24,10 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -35,6 +39,10 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
     @Import(name="privateDnsZoneConfigs")
     private @Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs;
 
+    /**
+     * @return A collection of private dns zone configurations of the private dns zone group.
+     * 
+     */
     public Optional<Output<List<PrivateDnsZoneConfigArgs>>> privateDnsZoneConfigs() {
         return Optional.ofNullable(this.privateDnsZoneConfigs);
     }
@@ -57,6 +69,10 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
     @Import(name="privateDnsZoneGroupName")
     private @Nullable Output<String> privateDnsZoneGroupName;
 
+    /**
+     * @return The name of the private dns zone group.
+     * 
+     */
     public Optional<Output<String>> privateDnsZoneGroupName() {
         return Optional.ofNullable(this.privateDnsZoneGroupName);
     }
@@ -68,6 +84,10 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
     @Import(name="privateEndpointName", required=true)
     private Output<String> privateEndpointName;
 
+    /**
+     * @return The name of the private endpoint.
+     * 
+     */
     public Output<String> privateEndpointName() {
         return this.privateEndpointName;
     }
@@ -79,6 +99,10 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,60 +136,138 @@ public final class PrivateDnsZoneGroupArgs extends com.pulumi.resources.Resource
             $ = new PrivateDnsZoneGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateDnsZoneConfigs A collection of private dns zone configurations of the private dns zone group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneConfigs(@Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs) {
             $.privateDnsZoneConfigs = privateDnsZoneConfigs;
             return this;
         }
 
+        /**
+         * @param privateDnsZoneConfigs A collection of private dns zone configurations of the private dns zone group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneConfigs(List<PrivateDnsZoneConfigArgs> privateDnsZoneConfigs) {
             return privateDnsZoneConfigs(Output.of(privateDnsZoneConfigs));
         }
 
+        /**
+         * @param privateDnsZoneConfigs A collection of private dns zone configurations of the private dns zone group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneConfigs(PrivateDnsZoneConfigArgs... privateDnsZoneConfigs) {
             return privateDnsZoneConfigs(List.of(privateDnsZoneConfigs));
         }
 
+        /**
+         * @param privateDnsZoneGroupName The name of the private dns zone group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneGroupName(@Nullable Output<String> privateDnsZoneGroupName) {
             $.privateDnsZoneGroupName = privateDnsZoneGroupName;
             return this;
         }
 
+        /**
+         * @param privateDnsZoneGroupName The name of the private dns zone group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateDnsZoneGroupName(String privateDnsZoneGroupName) {
             return privateDnsZoneGroupName(Output.of(privateDnsZoneGroupName));
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(Output<String> privateEndpointName) {
             $.privateEndpointName = privateEndpointName;
             return this;
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(String privateEndpointName) {
             return privateEndpointName(Output.of(privateEndpointName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

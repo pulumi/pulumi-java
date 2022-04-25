@@ -27,6 +27,10 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="asn")
     private @Nullable Output<Double> asn;
 
+    /**
+     * @return The BGP speaker&#39;s ASN.
+     * 
+     */
     public Optional<Output<Double>> asn() {
         return Optional.ofNullable(this.asn);
     }
@@ -38,6 +42,10 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="bgpPeeringAddress")
     private @Nullable Output<String> bgpPeeringAddress;
 
+    /**
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
+     * 
+     */
     public Optional<Output<String>> bgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }
@@ -67,20 +75,44 @@ public final class VpnLinkBgpSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new VpnLinkBgpSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asn The BGP speaker&#39;s ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(@Nullable Output<Double> asn) {
             $.asn = asn;
             return this;
         }
 
+        /**
+         * @param asn The BGP speaker&#39;s ASN.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asn(Double asn) {
             return asn(Output.of(asn));
         }
 
+        /**
+         * @param bgpPeeringAddress The BGP peering address and BGP identifier of this BGP speaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeeringAddress(@Nullable Output<String> bgpPeeringAddress) {
             $.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
 
+        /**
+         * @param bgpPeeringAddress The BGP peering address and BGP identifier of this BGP speaker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpPeeringAddress(String bgpPeeringAddress) {
             return bgpPeeringAddress(Output.of(bgpPeeringAddress));
         }

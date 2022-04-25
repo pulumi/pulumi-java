@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SharingProfileResponse {
-    /**
-     * A list of sharing profile groups.
-     * 
-     */
+        /**
+         * @return A list of sharing profile groups.
+         * 
+         */
     private final List<SharingProfileGroupResponse> groups;
-    /**
-     * This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
-     * 
-     */
+        /**
+         * @return This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+         * 
+         */
     private final @Nullable String permissions;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class SharingProfileResponse {
     }
 
     /**
-     * A list of sharing profile groups.
+     * @return A list of sharing profile groups.
      * 
-    */
+     */
     public List<SharingProfileGroupResponse> groups() {
         return this.groups;
     }
     /**
-     * This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
+     * @return This property allows you to specify the permission of sharing gallery. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Private** &lt;br&gt;&lt;br&gt; **Groups**
      * 
-    */
+     */
     public Optional<String> permissions() {
         return Optional.ofNullable(this.permissions);
     }

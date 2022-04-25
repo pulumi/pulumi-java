@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class TransportPreferencesResponse {
-    /**
-     * Indicates Shipment Logistics type that the customer preferred.
-     * 
-     */
+        /**
+         * @return Indicates Shipment Logistics type that the customer preferred.
+         * 
+         */
     private final String preferredShipmentType;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class TransportPreferencesResponse {
     }
 
     /**
-     * Indicates Shipment Logistics type that the customer preferred.
+     * @return Indicates Shipment Logistics type that the customer preferred.
      * 
-    */
+     */
     public String preferredShipmentType() {
         return this.preferredShipmentType;
     }

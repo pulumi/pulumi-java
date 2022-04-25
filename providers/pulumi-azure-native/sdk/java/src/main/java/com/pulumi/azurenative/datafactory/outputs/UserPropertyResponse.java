@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UserPropertyResponse {
-    /**
-     * User property name.
-     * 
-     */
+        /**
+         * @return User property name.
+         * 
+         */
     private final String name;
-    /**
-     * User property value. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return User property value. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class UserPropertyResponse {
     }
 
     /**
-     * User property name.
+     * @return User property name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * User property value. Type: string (or Expression with resultType string).
+     * @return User property value. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object value() {
         return this.value;
     }

@@ -31,6 +31,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="dailySchedule")
     private @Nullable Output<DailyRetentionScheduleArgs> dailySchedule;
 
+    /**
+     * @return Daily retention schedule of the protection policy.
+     * 
+     */
     public Optional<Output<DailyRetentionScheduleArgs>> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
@@ -42,6 +46,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="monthlySchedule")
     private @Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule;
 
+    /**
+     * @return Monthly retention schedule of the protection policy.
+     * 
+     */
     public Optional<Output<MonthlyRetentionScheduleArgs>> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
@@ -54,6 +62,11 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="retentionPolicyType", required=true)
     private Output<String> retentionPolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;LongTermRetentionPolicy&#39;.
+     * 
+     */
     public Output<String> retentionPolicyType() {
         return this.retentionPolicyType;
     }
@@ -65,6 +78,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="weeklySchedule")
     private @Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule;
 
+    /**
+     * @return Weekly retention schedule of the protection policy.
+     * 
+     */
     public Optional<Output<WeeklyRetentionScheduleArgs>> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
@@ -76,6 +93,10 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
     @Import(name="yearlySchedule")
     private @Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule;
 
+    /**
+     * @return Yearly retention schedule of the protection policy.
+     * 
+     */
     public Optional<Output<YearlyRetentionScheduleArgs>> yearlySchedule() {
         return Optional.ofNullable(this.yearlySchedule);
     }
@@ -108,47 +129,109 @@ public final class LongTermRetentionPolicyArgs extends com.pulumi.resources.Reso
             $ = new LongTermRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailySchedule Daily retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(@Nullable Output<DailyRetentionScheduleArgs> dailySchedule) {
             $.dailySchedule = dailySchedule;
             return this;
         }
 
+        /**
+         * @param dailySchedule Daily retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(DailyRetentionScheduleArgs dailySchedule) {
             return dailySchedule(Output.of(dailySchedule));
         }
 
+        /**
+         * @param monthlySchedule Monthly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlySchedule(@Nullable Output<MonthlyRetentionScheduleArgs> monthlySchedule) {
             $.monthlySchedule = monthlySchedule;
             return this;
         }
 
+        /**
+         * @param monthlySchedule Monthly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlySchedule(MonthlyRetentionScheduleArgs monthlySchedule) {
             return monthlySchedule(Output.of(monthlySchedule));
         }
 
+        /**
+         * @param retentionPolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LongTermRetentionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicyType(Output<String> retentionPolicyType) {
             $.retentionPolicyType = retentionPolicyType;
             return this;
         }
 
+        /**
+         * @param retentionPolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LongTermRetentionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicyType(String retentionPolicyType) {
             return retentionPolicyType(Output.of(retentionPolicyType));
         }
 
+        /**
+         * @param weeklySchedule Weekly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(@Nullable Output<WeeklyRetentionScheduleArgs> weeklySchedule) {
             $.weeklySchedule = weeklySchedule;
             return this;
         }
 
+        /**
+         * @param weeklySchedule Weekly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(WeeklyRetentionScheduleArgs weeklySchedule) {
             return weeklySchedule(Output.of(weeklySchedule));
         }
 
+        /**
+         * @param yearlySchedule Yearly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlySchedule(@Nullable Output<YearlyRetentionScheduleArgs> yearlySchedule) {
             $.yearlySchedule = yearlySchedule;
             return this;
         }
 
+        /**
+         * @param yearlySchedule Yearly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlySchedule(YearlyRetentionScheduleArgs yearlySchedule) {
             return yearlySchedule(Output.of(yearlySchedule));
         }

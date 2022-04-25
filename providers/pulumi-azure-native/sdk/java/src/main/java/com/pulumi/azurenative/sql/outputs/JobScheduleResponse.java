@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobScheduleResponse {
-    /**
-     * Whether or not the schedule is enabled.
-     * 
-     */
+        /**
+         * @return Whether or not the schedule is enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Schedule end time.
-     * 
-     */
+        /**
+         * @return Schedule end time.
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
-     * 
-     */
+        /**
+         * @return Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+         * 
+         */
     private final @Nullable String interval;
-    /**
-     * Schedule start time.
-     * 
-     */
+        /**
+         * @return Schedule start time.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * Schedule interval type
-     * 
-     */
+        /**
+         * @return Schedule interval type
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class JobScheduleResponse {
     }
 
     /**
-     * Whether or not the schedule is enabled.
+     * @return Whether or not the schedule is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Schedule end time.
+     * @return Schedule end time.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+     * @return Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
      * 
-    */
+     */
     public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * Schedule start time.
+     * @return Schedule start time.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Schedule interval type
+     * @return Schedule interval type
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

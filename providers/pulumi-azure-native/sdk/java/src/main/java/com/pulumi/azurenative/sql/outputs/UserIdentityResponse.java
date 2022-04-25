@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UserIdentityResponse {
-    /**
-     * The Azure Active Directory client id.
-     * 
-     */
+        /**
+         * @return The Azure Active Directory client id.
+         * 
+         */
     private final String clientId;
-    /**
-     * The Azure Active Directory principal id.
-     * 
-     */
+        /**
+         * @return The Azure Active Directory principal id.
+         * 
+         */
     private final String principalId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class UserIdentityResponse {
     }
 
     /**
-     * The Azure Active Directory client id.
+     * @return The Azure Active Directory client id.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The Azure Active Directory principal id.
+     * @return The Azure Active Directory principal id.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

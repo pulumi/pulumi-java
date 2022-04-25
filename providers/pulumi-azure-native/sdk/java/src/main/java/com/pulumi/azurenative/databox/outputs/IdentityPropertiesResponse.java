@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IdentityPropertiesResponse {
-    /**
-     * Managed service identity type.
-     * 
-     */
+        /**
+         * @return Managed service identity type.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * User assigned identity properties.
-     * 
-     */
+        /**
+         * @return User assigned identity properties.
+         * 
+         */
     private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class IdentityPropertiesResponse {
     }
 
     /**
-     * Managed service identity type.
+     * @return Managed service identity type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * User assigned identity properties.
+     * @return User assigned identity properties.
      * 
-    */
+     */
     public Optional<UserAssignedPropertiesResponse> userAssigned() {
         return Optional.ofNullable(this.userAssigned);
     }

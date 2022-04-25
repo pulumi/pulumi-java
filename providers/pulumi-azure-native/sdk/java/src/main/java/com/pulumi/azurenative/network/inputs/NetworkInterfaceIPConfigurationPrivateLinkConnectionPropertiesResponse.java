@@ -24,6 +24,10 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     @Import(name="fqdns", required=true)
     private List<String> fqdns;
 
+    /**
+     * @return List of FQDNs for current private link connection.
+     * 
+     */
     public List<String> fqdns() {
         return this.fqdns;
     }
@@ -35,6 +39,10 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     @Import(name="groupId", required=true)
     private String groupId;
 
+    /**
+     * @return The group ID for current private link connection.
+     * 
+     */
     public String groupId() {
         return this.groupId;
     }
@@ -46,6 +54,10 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     @Import(name="requiredMemberName", required=true)
     private String requiredMemberName;
 
+    /**
+     * @return The required member name for current private link connection.
+     * 
+     */
     public String requiredMemberName() {
         return this.requiredMemberName;
     }
@@ -76,20 +88,44 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
             $ = new NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdns List of FQDNs for current private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(List<String> fqdns) {
             $.fqdns = fqdns;
             return this;
         }
 
+        /**
+         * @param fqdns List of FQDNs for current private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
 
+        /**
+         * @param groupId The group ID for current private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param requiredMemberName The required member name for current private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredMemberName(String requiredMemberName) {
             $.requiredMemberName = requiredMemberName;
             return this;

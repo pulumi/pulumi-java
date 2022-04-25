@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ExpressionResponse {
-    /**
-     * Expression type.
-     * 
-     */
+        /**
+         * @return Expression type.
+         * 
+         */
     private final String type;
-    /**
-     * Expression value.
-     * 
-     */
+        /**
+         * @return Expression value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ExpressionResponse {
     }
 
     /**
-     * Expression type.
+     * @return Expression type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Expression value.
+     * @return Expression value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

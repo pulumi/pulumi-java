@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SourcePropertiesResponse {
-    /**
-     * The branch name of the source code.
-     * 
-     */
+        /**
+         * @return The branch name of the source code.
+         * 
+         */
     private final @Nullable String branch;
-    /**
-     * The full URL to the source code repository
-     * 
-     */
+        /**
+         * @return The full URL to the source code repository
+         * 
+         */
     private final String repositoryUrl;
-    /**
-     * The authorization properties for accessing the source code repository and to set up
-     * webhooks for notifications.
-     * 
-     */
+        /**
+         * @return The authorization properties for accessing the source code repository and to set up
+         * webhooks for notifications.
+         * 
+         */
     private final @Nullable AuthInfoResponse sourceControlAuthProperties;
-    /**
-     * The type of source control service.
-     * 
-     */
+        /**
+         * @return The type of source control service.
+         * 
+         */
     private final String sourceControlType;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class SourcePropertiesResponse {
     }
 
     /**
-     * The branch name of the source code.
+     * @return The branch name of the source code.
      * 
-    */
+     */
     public Optional<String> branch() {
         return Optional.ofNullable(this.branch);
     }
     /**
-     * The full URL to the source code repository
+     * @return The full URL to the source code repository
      * 
-    */
+     */
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
     /**
-     * The authorization properties for accessing the source code repository and to set up
+     * @return The authorization properties for accessing the source code repository and to set up
      * webhooks for notifications.
      * 
-    */
+     */
     public Optional<AuthInfoResponse> sourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
     /**
-     * The type of source control service.
+     * @return The type of source control service.
      * 
-    */
+     */
     public String sourceControlType() {
         return this.sourceControlType;
     }

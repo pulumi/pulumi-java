@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMachineLearningDatastoreResult {
-    /**
-     * Specifies the resource ID.
-     * 
-     */
+        /**
+         * @return Specifies the resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the resource.
-     * 
-     */
+        /**
+         * @return The identity of the resource.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Specifies the name of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Datastore properties
-     * 
-     */
+        /**
+         * @return Datastore properties
+         * 
+         */
     private final DatastoreResponse properties;
-    /**
-     * The sku of the workspace.
-     * 
-     */
+        /**
+         * @return The sku of the workspace.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Contains resource tags defined as key/value pairs.
-     * 
-     */
+        /**
+         * @return Contains resource tags defined as key/value pairs.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Specifies the type of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class GetMachineLearningDatastoreResult {
     }
 
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Datastore properties
+     * @return Datastore properties
      * 
-    */
+     */
     public DatastoreResponse properties() {
         return this.properties;
     }
     /**
-     * The sku of the workspace.
+     * @return The sku of the workspace.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CostAllocationRulePropertiesResponse {
-    /**
-     * Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
-     * 
-     */
+        /**
+         * @return Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
+         * 
+         */
     private final String createdDate;
-    /**
-     * Description of a cost allocation rule.
-     * 
-     */
+        /**
+         * @return Description of a cost allocation rule.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource information for the cost allocation rule
-     * 
-     */
+        /**
+         * @return Resource information for the cost allocation rule
+         * 
+         */
     private final CostAllocationRuleDetailsResponse details;
-    /**
-     * Status of the rule
-     * 
-     */
+        /**
+         * @return Status of the rule
+         * 
+         */
     private final String status;
-    /**
-     * Time at which the rule was last updated.
-     * 
-     */
+        /**
+         * @return Time at which the rule was last updated.
+         * 
+         */
     private final String updatedDate;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class CostAllocationRulePropertiesResponse {
     }
 
     /**
-     * Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
+     * @return Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * Description of a cost allocation rule.
+     * @return Description of a cost allocation rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource information for the cost allocation rule
+     * @return Resource information for the cost allocation rule
      * 
-    */
+     */
     public CostAllocationRuleDetailsResponse details() {
         return this.details;
     }
     /**
-     * Status of the rule
+     * @return Status of the rule
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Time at which the rule was last updated.
+     * @return Time at which the rule was last updated.
      * 
-    */
+     */
     public String updatedDate() {
         return this.updatedDate;
     }

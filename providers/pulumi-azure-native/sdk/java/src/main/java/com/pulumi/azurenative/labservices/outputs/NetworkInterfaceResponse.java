@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class NetworkInterfaceResponse {
-    /**
-     * PrivateIp address of the Compute VM
-     * 
-     */
+        /**
+         * @return PrivateIp address of the Compute VM
+         * 
+         */
     private final String privateIpAddress;
-    /**
-     * Connection information for Windows
-     * 
-     */
+        /**
+         * @return Connection information for Windows
+         * 
+         */
     private final String rdpAuthority;
-    /**
-     * Connection information for Linux
-     * 
-     */
+        /**
+         * @return Connection information for Linux
+         * 
+         */
     private final String sshAuthority;
-    /**
-     * Username of the VM
-     * 
-     */
+        /**
+         * @return Username of the VM
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class NetworkInterfaceResponse {
     }
 
     /**
-     * PrivateIp address of the Compute VM
+     * @return PrivateIp address of the Compute VM
      * 
-    */
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
-     * Connection information for Windows
+     * @return Connection information for Windows
      * 
-    */
+     */
     public String rdpAuthority() {
         return this.rdpAuthority;
     }
     /**
-     * Connection information for Linux
+     * @return Connection information for Linux
      * 
-    */
+     */
     public String sshAuthority() {
         return this.sshAuthority;
     }
     /**
-     * Username of the VM
+     * @return Username of the VM
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

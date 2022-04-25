@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DriveBitLockerKeyResponse {
-    /**
-     * BitLocker recovery key or password
-     * 
-     */
+        /**
+         * @return BitLocker recovery key or password
+         * 
+         */
     private final @Nullable String bitLockerKey;
-    /**
-     * Drive ID
-     * 
-     */
+        /**
+         * @return Drive ID
+         * 
+         */
     private final @Nullable String driveId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DriveBitLockerKeyResponse {
     }
 
     /**
-     * BitLocker recovery key or password
+     * @return BitLocker recovery key or password
      * 
-    */
+     */
     public Optional<String> bitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
     /**
-     * Drive ID
+     * @return Drive ID
      * 
-    */
+     */
     public Optional<String> driveId() {
         return Optional.ofNullable(this.driveId);
     }

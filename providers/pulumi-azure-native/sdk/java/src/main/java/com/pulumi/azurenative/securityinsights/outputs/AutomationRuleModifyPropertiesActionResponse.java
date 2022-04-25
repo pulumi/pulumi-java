@@ -11,21 +11,21 @@ import java.util.Objects;
 
 @CustomType
 public final class AutomationRuleModifyPropertiesActionResponse {
-    /**
-     * The configuration of the modify properties automation rule action
-     * 
-     */
+        /**
+         * @return The configuration of the modify properties automation rule action
+         * 
+         */
     private final AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration;
-    /**
-     * The type of the automation rule action
-     * Expected value is &#39;ModifyProperties&#39;.
-     * 
-     */
+        /**
+         * @return The type of the automation rule action
+         * Expected value is &#39;ModifyProperties&#39;.
+         * 
+         */
     private final String actionType;
-    /**
-     * The order of execution of the automation rule action
-     * 
-     */
+        /**
+         * @return The order of execution of the automation rule action
+         * 
+         */
     private final Integer order;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class AutomationRuleModifyPropertiesActionResponse {
     }
 
     /**
-     * The configuration of the modify properties automation rule action
+     * @return The configuration of the modify properties automation rule action
      * 
-    */
+     */
     public AutomationRuleModifyPropertiesActionResponseActionConfiguration actionConfiguration() {
         return this.actionConfiguration;
     }
     /**
-     * The type of the automation rule action
+     * @return The type of the automation rule action
      * Expected value is &#39;ModifyProperties&#39;.
      * 
-    */
+     */
     public String actionType() {
         return this.actionType;
     }
     /**
-     * The order of execution of the automation rule action
+     * @return The order of execution of the automation rule action
      * 
-    */
+     */
     public Integer order() {
         return this.order;
     }

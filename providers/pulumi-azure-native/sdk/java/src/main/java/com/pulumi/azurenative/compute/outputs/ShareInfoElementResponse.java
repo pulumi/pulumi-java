@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ShareInfoElementResponse {
-    /**
-     * A relative URI containing the ID of the VM that has the disk attached.
-     * 
-     */
+        /**
+         * @return A relative URI containing the ID of the VM that has the disk attached.
+         * 
+         */
     private final String vmUri;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ShareInfoElementResponse {
     }
 
     /**
-     * A relative URI containing the ID of the VM that has the disk attached.
+     * @return A relative URI containing the ID of the VM that has the disk attached.
      * 
-    */
+     */
     public String vmUri() {
         return this.vmUri;
     }

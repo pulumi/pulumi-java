@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class OsDiskImageResponse {
-    /**
-     * OS operating system type.
-     * 
-     */
+        /**
+         * @return OS operating system type.
+         * 
+         */
     private final String operatingSystem;
-    /**
-     * SAS key for source blob.
-     * 
-     */
+        /**
+         * @return SAS key for source blob.
+         * 
+         */
     private final String sourceBlobSasUri;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class OsDiskImageResponse {
     }
 
     /**
-     * OS operating system type.
+     * @return OS operating system type.
      * 
-    */
+     */
     public String operatingSystem() {
         return this.operatingSystem;
     }
     /**
-     * SAS key for source blob.
+     * @return SAS key for source blob.
      * 
-    */
+     */
     public String sourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }

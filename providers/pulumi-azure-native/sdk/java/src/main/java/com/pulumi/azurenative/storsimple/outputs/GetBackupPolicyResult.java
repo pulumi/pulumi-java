@@ -13,60 +13,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBackupPolicyResult {
-    /**
-     * The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
-     * 
-     */
+        /**
+         * @return The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
+         * 
+         */
     private final String backupPolicyCreationType;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     * 
-     */
+        /**
+         * @return The Kind of the object. Currently only Series8000 is supported
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The time of the last backup for the backup policy.
-     * 
-     */
+        /**
+         * @return The time of the last backup for the backup policy.
+         * 
+         */
     private final String lastBackupTime;
-    /**
-     * The name of the object.
-     * 
-     */
+        /**
+         * @return The name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * The time of the next backup for the backup policy.
-     * 
-     */
+        /**
+         * @return The time of the next backup for the backup policy.
+         * 
+         */
     private final String nextBackupTime;
-    /**
-     * Indicates whether at least one of the schedules in the backup policy is active or not.
-     * 
-     */
+        /**
+         * @return Indicates whether at least one of the schedules in the backup policy is active or not.
+         * 
+         */
     private final String scheduledBackupStatus;
-    /**
-     * The count of schedules the backup policy contains.
-     * 
-     */
+        /**
+         * @return The count of schedules the backup policy contains.
+         * 
+         */
     private final Double schedulesCount;
-    /**
-     * If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
-     * 
-     */
+        /**
+         * @return If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
+         * 
+         */
     private final String ssmHostName;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * The path IDs of the volumes which are part of the backup policy.
-     * 
-     */
+        /**
+         * @return The path IDs of the volumes which are part of the backup policy.
+         * 
+         */
     private final List<String> volumeIds;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class GetBackupPolicyResult {
     }
 
     /**
-     * The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
+     * @return The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
      * 
-    */
+     */
     public String backupPolicyCreationType() {
         return this.backupPolicyCreationType;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The time of the last backup for the backup policy.
+     * @return The time of the last backup for the backup policy.
      * 
-    */
+     */
     public String lastBackupTime() {
         return this.lastBackupTime;
     }
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The time of the next backup for the backup policy.
+     * @return The time of the next backup for the backup policy.
      * 
-    */
+     */
     public String nextBackupTime() {
         return this.nextBackupTime;
     }
     /**
-     * Indicates whether at least one of the schedules in the backup policy is active or not.
+     * @return Indicates whether at least one of the schedules in the backup policy is active or not.
      * 
-    */
+     */
     public String scheduledBackupStatus() {
         return this.scheduledBackupStatus;
     }
     /**
-     * The count of schedules the backup policy contains.
+     * @return The count of schedules the backup policy contains.
      * 
-    */
+     */
     public Double schedulesCount() {
         return this.schedulesCount;
     }
     /**
-     * If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
+     * @return If the backup policy was created by StorSimple Snapshot Manager, then this field indicates the hostname of the StorSimple Snapshot Manager.
      * 
-    */
+     */
     public String ssmHostName() {
         return this.ssmHostName;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The path IDs of the volumes which are part of the backup policy.
+     * @return The path IDs of the volumes which are part of the backup policy.
      * 
-    */
+     */
     public List<String> volumeIds() {
         return this.volumeIds;
     }

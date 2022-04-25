@@ -14,41 +14,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetguestDiagnosticsSettingResult {
-    /**
-     * the array of data source object which are configured to collect and send data
-     * 
-     */
+        /**
+         * @return the array of data source object which are configured to collect and send data
+         * 
+         */
     private final @Nullable List<DataSourceResponse> dataSources;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * Operating system type for the configuration
-     * 
-     */
+        /**
+         * @return Operating system type for the configuration
+         * 
+         */
     private final @Nullable String osType;
     private final @Nullable String proxySetting;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -72,37 +72,37 @@ public final class GetguestDiagnosticsSettingResult {
     }
 
     /**
-     * the array of data source object which are configured to collect and send data
+     * @return the array of data source object which are configured to collect and send data
      * 
-    */
+     */
     public List<DataSourceResponse> dataSources() {
         return this.dataSources == null ? List.of() : this.dataSources;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Operating system type for the configuration
+     * @return Operating system type for the configuration
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -110,16 +110,16 @@ public final class GetguestDiagnosticsSettingResult {
         return Optional.ofNullable(this.proxySetting);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

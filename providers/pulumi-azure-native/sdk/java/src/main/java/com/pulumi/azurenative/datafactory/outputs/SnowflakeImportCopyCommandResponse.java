@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SnowflakeImportCopyCommandResponse {
-    /**
-     * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
-     * 
-     */
+        /**
+         * @return Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
+         * 
+         */
     private final @Nullable Map<String,Object> additionalCopyOptions;
-    /**
-     * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;FORCE&#34;: &#34;TRUE&#34;, &#34;LOAD_UNCERTAIN_FILES&#34;: &#34;&#39;FALSE&#39;&#34; }
-     * 
-     */
+        /**
+         * @return Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;FORCE&#34;: &#34;TRUE&#34;, &#34;LOAD_UNCERTAIN_FILES&#34;: &#34;&#39;FALSE&#39;&#34; }
+         * 
+         */
     private final @Nullable Map<String,Object> additionalFormatOptions;
-    /**
-     * The import setting type.
-     * Expected value is &#39;SnowflakeImportCopyCommand&#39;.
-     * 
-     */
+        /**
+         * @return The import setting type.
+         * Expected value is &#39;SnowflakeImportCopyCommand&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class SnowflakeImportCopyCommandResponse {
     }
 
     /**
-     * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
+     * @return Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalCopyOptions&#34;: { &#34;DATE_FORMAT&#34;: &#34;MM/DD/YYYY&#34;, &#34;TIME_FORMAT&#34;: &#34;&#39;HH24:MI:SS.FF&#39;&#34; }
      * 
-    */
+     */
     public Map<String,Object> additionalCopyOptions() {
         return this.additionalCopyOptions == null ? Map.of() : this.additionalCopyOptions;
     }
     /**
-     * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;FORCE&#34;: &#34;TRUE&#34;, &#34;LOAD_UNCERTAIN_FILES&#34;: &#34;&#39;FALSE&#39;&#34; }
+     * @return Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalFormatOptions&#34;: { &#34;FORCE&#34;: &#34;TRUE&#34;, &#34;LOAD_UNCERTAIN_FILES&#34;: &#34;&#39;FALSE&#39;&#34; }
      * 
-    */
+     */
     public Map<String,Object> additionalFormatOptions() {
         return this.additionalFormatOptions == null ? Map.of() : this.additionalFormatOptions;
     }
     /**
-     * The import setting type.
+     * @return The import setting type.
      * Expected value is &#39;SnowflakeImportCopyCommand&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CloudServiceVaultCertificateResponse {
-    /**
-     * This is the URL of a certificate that has been uploaded to Key Vault as a secret.
-     * 
-     */
+        /**
+         * @return This is the URL of a certificate that has been uploaded to Key Vault as a secret.
+         * 
+         */
     private final @Nullable String certificateUrl;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CloudServiceVaultCertificateResponse {
     }
 
     /**
-     * This is the URL of a certificate that has been uploaded to Key Vault as a secret.
+     * @return This is the URL of a certificate that has been uploaded to Key Vault as a secret.
      * 
-    */
+     */
     public Optional<String> certificateUrl() {
         return Optional.ofNullable(this.certificateUrl);
     }

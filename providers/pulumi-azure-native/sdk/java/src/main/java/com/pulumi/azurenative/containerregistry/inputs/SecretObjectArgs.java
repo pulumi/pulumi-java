@@ -29,6 +29,11 @@ public final class SecretObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,SecretObjectType>> type;
 
+    /**
+     * @return The type of the secret object which determines how the value of the secret object has to be
+     * interpreted.
+     * 
+     */
     public Optional<Output<Either<String,SecretObjectType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -42,6 +47,12 @@ public final class SecretObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value of the secret. The format of this value will be determined
+     * based on the type of the secret object. If the type is Opaque, the value will be
+     * used as is without any modification.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -71,28 +82,72 @@ public final class SecretObjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SecretObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of the secret object which determines how the value of the secret object has to be
+         * interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,SecretObjectType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the secret object which determines how the value of the secret object has to be
+         * interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,SecretObjectType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the secret object which determines how the value of the secret object has to be
+         * interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the secret object which determines how the value of the secret object has to be
+         * interpreted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(SecretObjectType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param value The value of the secret. The format of this value will be determined
+         * based on the type of the secret object. If the type is Opaque, the value will be
+         * used as is without any modification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the secret. The format of this value will be determined
+         * based on the type of the secret object. If the type is Opaque, the value will be
+         * used as is without any modification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

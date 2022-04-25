@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListPartnerNamespaceSharedAccessKeysResult {
-    /**
-     * Shared access key1 for the partner namespace.
-     * 
-     */
+        /**
+         * @return Shared access key1 for the partner namespace.
+         * 
+         */
     private final @Nullable String key1;
-    /**
-     * Shared access key2 for the partner namespace.
-     * 
-     */
+        /**
+         * @return Shared access key2 for the partner namespace.
+         * 
+         */
     private final @Nullable String key2;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListPartnerNamespaceSharedAccessKeysResult {
     }
 
     /**
-     * Shared access key1 for the partner namespace.
+     * @return Shared access key1 for the partner namespace.
      * 
-    */
+     */
     public Optional<String> key1() {
         return Optional.ofNullable(this.key1);
     }
     /**
-     * Shared access key2 for the partner namespace.
+     * @return Shared access key2 for the partner namespace.
      * 
-    */
+     */
     public Optional<String> key2() {
         return Optional.ofNullable(this.key2);
     }

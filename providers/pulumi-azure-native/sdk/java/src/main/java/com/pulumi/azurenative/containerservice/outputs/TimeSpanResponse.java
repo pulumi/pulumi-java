@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TimeSpanResponse {
-    /**
-     * The end of a time span
-     * 
-     */
+        /**
+         * @return The end of a time span
+         * 
+         */
     private final @Nullable String end;
-    /**
-     * The start of a time span
-     * 
-     */
+        /**
+         * @return The start of a time span
+         * 
+         */
     private final @Nullable String start;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class TimeSpanResponse {
     }
 
     /**
-     * The end of a time span
+     * @return The end of a time span
      * 
-    */
+     */
     public Optional<String> end() {
         return Optional.ofNullable(this.end);
     }
     /**
-     * The start of a time span
+     * @return The start of a time span
      * 
-    */
+     */
     public Optional<String> start() {
         return Optional.ofNullable(this.start);
     }

@@ -15,41 +15,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ChainingTriggerResponse {
-    /**
-     * List of tags that can be used for describing the trigger.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the trigger.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * Upstream Pipelines.
-     * 
-     */
+        /**
+         * @return Upstream Pipelines.
+         * 
+         */
     private final List<PipelineReferenceResponse> dependsOn;
-    /**
-     * Trigger description.
-     * 
-     */
+        /**
+         * @return Trigger description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Pipeline for which runs are created when all upstream pipelines complete successfully.
-     * 
-     */
+        /**
+         * @return Pipeline for which runs are created when all upstream pipelines complete successfully.
+         * 
+         */
     private final TriggerPipelineReferenceResponse pipeline;
-    /**
-     * Run Dimension property that needs to be emitted by upstream pipelines.
-     * 
-     */
+        /**
+         * @return Run Dimension property that needs to be emitted by upstream pipelines.
+         * 
+         */
     private final String runDimension;
-    /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     * 
-     */
+        /**
+         * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+         * 
+         */
     private final String runtimeState;
-    /**
-     * Trigger type.
-     * Expected value is &#39;ChainingTrigger&#39;.
-     * 
-     */
+        /**
+         * @return Trigger type.
+         * Expected value is &#39;ChainingTrigger&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -71,52 +71,52 @@ public final class ChainingTriggerResponse {
     }
 
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Upstream Pipelines.
+     * @return Upstream Pipelines.
      * 
-    */
+     */
     public List<PipelineReferenceResponse> dependsOn() {
         return this.dependsOn;
     }
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Pipeline for which runs are created when all upstream pipelines complete successfully.
+     * @return Pipeline for which runs are created when all upstream pipelines complete successfully.
      * 
-    */
+     */
     public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
     /**
-     * Run Dimension property that needs to be emitted by upstream pipelines.
+     * @return Run Dimension property that needs to be emitted by upstream pipelines.
      * 
-    */
+     */
     public String runDimension() {
         return this.runDimension;
     }
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-    */
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;ChainingTrigger&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

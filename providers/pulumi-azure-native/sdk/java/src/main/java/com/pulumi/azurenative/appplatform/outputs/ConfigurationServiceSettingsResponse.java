@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationServiceSettingsResponse {
-    /**
-     * Property of git environment.
-     * 
-     */
+        /**
+         * @return Property of git environment.
+         * 
+         */
     private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ConfigurationServiceSettingsResponse {
     }
 
     /**
-     * Property of git environment.
+     * @return Property of git environment.
      * 
-    */
+     */
     public Optional<ConfigurationServiceGitPropertyResponse> gitProperty() {
         return Optional.ofNullable(this.gitProperty);
     }

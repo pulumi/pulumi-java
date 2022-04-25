@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TrackingInfoResponse {
-    /**
-     * Name of the carrier used in the delivery.
-     * 
-     */
+        /**
+         * @return Name of the carrier used in the delivery.
+         * 
+         */
     private final @Nullable String carrierName;
-    /**
-     * Serial number of the device being tracked.
-     * 
-     */
+        /**
+         * @return Serial number of the device being tracked.
+         * 
+         */
     private final @Nullable String serialNumber;
-    /**
-     * Tracking ID of the shipment.
-     * 
-     */
+        /**
+         * @return Tracking ID of the shipment.
+         * 
+         */
     private final @Nullable String trackingId;
-    /**
-     * Tracking URL of the shipment.
-     * 
-     */
+        /**
+         * @return Tracking URL of the shipment.
+         * 
+         */
     private final @Nullable String trackingUrl;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class TrackingInfoResponse {
     }
 
     /**
-     * Name of the carrier used in the delivery.
+     * @return Name of the carrier used in the delivery.
      * 
-    */
+     */
     public Optional<String> carrierName() {
         return Optional.ofNullable(this.carrierName);
     }
     /**
-     * Serial number of the device being tracked.
+     * @return Serial number of the device being tracked.
      * 
-    */
+     */
     public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
-     * Tracking ID of the shipment.
+     * @return Tracking ID of the shipment.
      * 
-    */
+     */
     public Optional<String> trackingId() {
         return Optional.ofNullable(this.trackingId);
     }
     /**
-     * Tracking URL of the shipment.
+     * @return Tracking URL of the shipment.
      * 
-    */
+     */
     public Optional<String> trackingUrl() {
         return Optional.ofNullable(this.trackingUrl);
     }

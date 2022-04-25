@@ -12,10 +12,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OpenAuthenticationAccessPoliciesResponse {
-    /**
-     * Open authentication policies.
-     * 
-     */
+        /**
+         * @return Open authentication policies.
+         * 
+         */
     private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
     @CustomType.Constructor
@@ -24,9 +24,9 @@ public final class OpenAuthenticationAccessPoliciesResponse {
     }
 
     /**
-     * Open authentication policies.
+     * @return Open authentication policies.
      * 
-    */
+     */
     public Map<String,OpenAuthenticationAccessPolicyResponse> policies() {
         return this.policies == null ? Map.of() : this.policies;
     }

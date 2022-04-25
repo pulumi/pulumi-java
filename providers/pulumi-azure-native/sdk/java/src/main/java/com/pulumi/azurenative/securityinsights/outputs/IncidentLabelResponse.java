@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class IncidentLabelResponse {
-    /**
-     * The name of the label
-     * 
-     */
+        /**
+         * @return The name of the label
+         * 
+         */
     private final String labelName;
-    /**
-     * The type of the label
-     * 
-     */
+        /**
+         * @return The type of the label
+         * 
+         */
     private final String labelType;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class IncidentLabelResponse {
     }
 
     /**
-     * The name of the label
+     * @return The name of the label
      * 
-    */
+     */
     public String labelName() {
         return this.labelName;
     }
     /**
-     * The type of the label
+     * @return The type of the label
      * 
-    */
+     */
     public String labelType() {
         return this.labelType;
     }

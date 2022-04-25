@@ -26,6 +26,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="backupRetentionDays")
     private @Nullable Integer backupRetentionDays;
 
+    /**
+     * @return Backup retention days for the server.
+     * 
+     */
     public Optional<Integer> backupRetentionDays() {
         return Optional.ofNullable(this.backupRetentionDays);
     }
@@ -37,6 +41,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="geoRedundantBackup")
     private @Nullable String geoRedundantBackup;
 
+    /**
+     * @return Enable Geo-redundant or not for server backup.
+     * 
+     */
     public Optional<String> geoRedundantBackup() {
         return Optional.ofNullable(this.geoRedundantBackup);
     }
@@ -48,6 +56,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageAutogrow")
     private @Nullable String storageAutogrow;
 
+    /**
+     * @return Enable Storage Auto Grow.
+     * 
+     */
     public Optional<String> storageAutogrow() {
         return Optional.ofNullable(this.storageAutogrow);
     }
@@ -59,6 +71,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageMB")
     private @Nullable Integer storageMB;
 
+    /**
+     * @return Max storage allowed for a server.
+     * 
+     */
     public Optional<Integer> storageMB() {
         return Optional.ofNullable(this.storageMB);
     }
@@ -90,21 +106,45 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupRetentionDays Backup retention days for the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
             $.backupRetentionDays = backupRetentionDays;
             return this;
         }
 
+        /**
+         * @param geoRedundantBackup Enable Geo-redundant or not for server backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoRedundantBackup(@Nullable String geoRedundantBackup) {
             $.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
 
+        /**
+         * @param storageAutogrow Enable Storage Auto Grow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAutogrow(@Nullable String storageAutogrow) {
             $.storageAutogrow = storageAutogrow;
             return this;
         }
 
+        /**
+         * @param storageMB Max storage allowed for a server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageMB(@Nullable Integer storageMB) {
             $.storageMB = storageMB;
             return this;

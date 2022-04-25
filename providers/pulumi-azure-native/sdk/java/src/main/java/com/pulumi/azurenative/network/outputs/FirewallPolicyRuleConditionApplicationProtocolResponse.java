@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicyRuleConditionApplicationProtocolResponse {
-    /**
-     * Port number for the protocol, cannot be greater than 64000.
-     * 
-     */
+        /**
+         * @return Port number for the protocol, cannot be greater than 64000.
+         * 
+         */
     private final @Nullable Integer port;
-    /**
-     * Protocol type.
-     * 
-     */
+        /**
+         * @return Protocol type.
+         * 
+         */
     private final @Nullable String protocolType;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class FirewallPolicyRuleConditionApplicationProtocolResponse {
     }
 
     /**
-     * Port number for the protocol, cannot be greater than 64000.
+     * @return Port number for the protocol, cannot be greater than 64000.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Protocol type.
+     * @return Protocol type.
      * 
-    */
+     */
     public Optional<String> protocolType() {
         return Optional.ofNullable(this.protocolType);
     }

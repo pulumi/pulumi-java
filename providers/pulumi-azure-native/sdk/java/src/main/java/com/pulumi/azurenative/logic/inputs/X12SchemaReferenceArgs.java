@@ -26,6 +26,10 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="messageId", required=true)
     private Output<String> messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public Output<String> messageId() {
         return this.messageId;
     }
@@ -37,6 +41,10 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="schemaName", required=true)
     private Output<String> schemaName;
 
+    /**
+     * @return The schema name.
+     * 
+     */
     public Output<String> schemaName() {
         return this.schemaName;
     }
@@ -48,6 +56,10 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="schemaVersion", required=true)
     private Output<String> schemaVersion;
 
+    /**
+     * @return The schema version.
+     * 
+     */
     public Output<String> schemaVersion() {
         return this.schemaVersion;
     }
@@ -59,6 +71,10 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="senderApplicationId")
     private @Nullable Output<String> senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public Optional<Output<String>> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
@@ -90,38 +106,86 @@ public final class X12SchemaReferenceArgs extends com.pulumi.resources.ResourceA
             $ = new X12SchemaReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }
 
+        /**
+         * @param schemaName The schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName The schema name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param schemaVersion The schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersion(Output<String> schemaVersion) {
             $.schemaVersion = schemaVersion;
             return this;
         }
 
+        /**
+         * @param schemaVersion The schema version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaVersion(String schemaVersion) {
             return schemaVersion(Output.of(schemaVersion));
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(@Nullable Output<String> senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(String senderApplicationId) {
             return senderApplicationId(Output.of(senderApplicationId));
         }

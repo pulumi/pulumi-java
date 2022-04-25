@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RestorePolicyPropertiesResponse {
-    /**
-     * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
-     * 
-     */
+        /**
+         * @return how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+         * 
+         */
     private final @Nullable Integer days;
-    /**
-     * Blob restore is enabled if set to true.
-     * 
-     */
+        /**
+         * @return Blob restore is enabled if set to true.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Deprecated in favor of minRestoreTime property.
-     * 
-     */
+        /**
+         * @return Deprecated in favor of minRestoreTime property.
+         * 
+         */
     private final String lastEnabledTime;
-    /**
-     * Returns the minimum date and time that the restore can be started.
-     * 
-     */
+        /**
+         * @return Returns the minimum date and time that the restore can be started.
+         * 
+         */
     private final String minRestoreTime;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class RestorePolicyPropertiesResponse {
     }
 
     /**
-     * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
+     * @return how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
      * 
-    */
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
     /**
-     * Blob restore is enabled if set to true.
+     * @return Blob restore is enabled if set to true.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Deprecated in favor of minRestoreTime property.
+     * @return Deprecated in favor of minRestoreTime property.
      * 
-    */
+     */
     public String lastEnabledTime() {
         return this.lastEnabledTime;
     }
     /**
-     * Returns the minimum date and time that the restore can be started.
+     * @return Returns the minimum date and time that the restore can be started.
      * 
-    */
+     */
     public String minRestoreTime() {
         return this.minRestoreTime;
     }

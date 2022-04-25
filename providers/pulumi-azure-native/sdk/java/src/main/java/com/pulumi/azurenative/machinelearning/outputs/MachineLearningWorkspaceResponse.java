@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class MachineLearningWorkspaceResponse {
-    /**
-     * Specifies the workspace ID of the machine learning workspace associated with the web service
-     * 
-     */
+        /**
+         * @return Specifies the workspace ID of the machine learning workspace associated with the web service
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class MachineLearningWorkspaceResponse {
     }
 
     /**
-     * Specifies the workspace ID of the machine learning workspace associated with the web service
+     * @return Specifies the workspace ID of the machine learning workspace associated with the web service
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

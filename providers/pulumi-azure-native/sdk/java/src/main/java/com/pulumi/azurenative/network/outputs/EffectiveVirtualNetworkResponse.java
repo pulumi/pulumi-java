@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EffectiveVirtualNetworkResponse {
-    /**
-     * Effective vnet Id.
-     * 
-     */
+        /**
+         * @return Effective vnet Id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Location of vnet.
-     * 
-     */
+        /**
+         * @return Location of vnet.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Membership Type.
-     * 
-     */
+        /**
+         * @return Membership Type.
+         * 
+         */
     private final @Nullable String membershipType;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class EffectiveVirtualNetworkResponse {
     }
 
     /**
-     * Effective vnet Id.
+     * @return Effective vnet Id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Location of vnet.
+     * @return Location of vnet.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Membership Type.
+     * @return Membership Type.
      * 
-    */
+     */
     public Optional<String> membershipType() {
         return Optional.ofNullable(this.membershipType);
     }

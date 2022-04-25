@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventHandlerResponse {
-    /**
-     * Upstream auth settings. If not set, no auth is used for upstream messages.
-     * 
-     */
+        /**
+         * @return Upstream auth settings. If not set, no auth is used for upstream messages.
+         * 
+         */
     private final @Nullable UpstreamAuthSettingsResponse auth;
-    /**
-     * Gets ot sets the list of system events.
-     * 
-     */
+        /**
+         * @return Gets ot sets the list of system events.
+         * 
+         */
     private final @Nullable List<String> systemEvents;
-    /**
-     * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
-     * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can&#39;t contains parameters.
-     * 
-     */
+        /**
+         * @return Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
+         * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can&#39;t contains parameters.
+         * 
+         */
     private final String urlTemplate;
-    /**
-     * Gets or sets the matching pattern for event names.
-     * There are 3 kind of patterns supported:
-     *     1. &#34;*&#34;, it to matches any event name
-     *     2. Combine multiple events with &#34;,&#34;, for example &#34;event1,event2&#34;, it matches event &#34;event1&#34; and &#34;event2&#34;
-     *     3. The single event name, for example, &#34;event1&#34;, it matches &#34;event1&#34;
-     * 
-     */
+        /**
+         * @return Gets or sets the matching pattern for event names.
+         * There are 3 kind of patterns supported:
+         *     1. &#34;*&#34;, it to matches any event name
+         *     2. Combine multiple events with &#34;,&#34;, for example &#34;event1,event2&#34;, it matches event &#34;event1&#34; and &#34;event2&#34;
+         *     3. The single event name, for example, &#34;event1&#34;, it matches &#34;event1&#34;
+         * 
+         */
     private final @Nullable String userEventPattern;
 
     @CustomType.Constructor
@@ -52,35 +52,35 @@ public final class EventHandlerResponse {
     }
 
     /**
-     * Upstream auth settings. If not set, no auth is used for upstream messages.
+     * @return Upstream auth settings. If not set, no auth is used for upstream messages.
      * 
-    */
+     */
     public Optional<UpstreamAuthSettingsResponse> auth() {
         return Optional.ofNullable(this.auth);
     }
     /**
-     * Gets ot sets the list of system events.
+     * @return Gets ot sets the list of system events.
      * 
-    */
+     */
     public List<String> systemEvents() {
         return this.systemEvents == null ? List.of() : this.systemEvents;
     }
     /**
-     * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
+     * @return Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can&#39;t contains parameters.
      * 
-    */
+     */
     public String urlTemplate() {
         return this.urlTemplate;
     }
     /**
-     * Gets or sets the matching pattern for event names.
+     * @return Gets or sets the matching pattern for event names.
      * There are 3 kind of patterns supported:
      *     1. &#34;*&#34;, it to matches any event name
      *     2. Combine multiple events with &#34;,&#34;, for example &#34;event1,event2&#34;, it matches event &#34;event1&#34; and &#34;event2&#34;
      *     3. The single event name, for example, &#34;event1&#34;, it matches &#34;event1&#34;
      * 
-    */
+     */
     public Optional<String> userEventPattern() {
         return Optional.ofNullable(this.userEventPattern);
     }

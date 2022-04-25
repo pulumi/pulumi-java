@@ -10,26 +10,26 @@ import java.util.Objects;
 
 @CustomType
 public final class AddRemoveReplicaScalingMechanismResponse {
-    /**
-     * Enumerates the mechanisms for auto scaling.
-     * Expected value is &#39;AddRemoveReplica&#39;.
-     * 
-     */
+        /**
+         * @return Enumerates the mechanisms for auto scaling.
+         * Expected value is &#39;AddRemoveReplica&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Maximum number of containers (scale up won&#39;t be performed above this number).
-     * 
-     */
+        /**
+         * @return Maximum number of containers (scale up won&#39;t be performed above this number).
+         * 
+         */
     private final Integer maxCount;
-    /**
-     * Minimum number of containers (scale down won&#39;t be performed below this number).
-     * 
-     */
+        /**
+         * @return Minimum number of containers (scale down won&#39;t be performed below this number).
+         * 
+         */
     private final Integer minCount;
-    /**
-     * Each time auto scaling is performed, this number of containers will be added or removed.
-     * 
-     */
+        /**
+         * @return Each time auto scaling is performed, this number of containers will be added or removed.
+         * 
+         */
     private final Integer scaleIncrement;
 
     @CustomType.Constructor
@@ -45,31 +45,31 @@ public final class AddRemoveReplicaScalingMechanismResponse {
     }
 
     /**
-     * Enumerates the mechanisms for auto scaling.
+     * @return Enumerates the mechanisms for auto scaling.
      * Expected value is &#39;AddRemoveReplica&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Maximum number of containers (scale up won&#39;t be performed above this number).
+     * @return Maximum number of containers (scale up won&#39;t be performed above this number).
      * 
-    */
+     */
     public Integer maxCount() {
         return this.maxCount;
     }
     /**
-     * Minimum number of containers (scale down won&#39;t be performed below this number).
+     * @return Minimum number of containers (scale down won&#39;t be performed below this number).
      * 
-    */
+     */
     public Integer minCount() {
         return this.minCount;
     }
     /**
-     * Each time auto scaling is performed, this number of containers will be added or removed.
+     * @return Each time auto scaling is performed, this number of containers will be added or removed.
      * 
-    */
+     */
     public Integer scaleIncrement() {
         return this.scaleIncrement;
     }

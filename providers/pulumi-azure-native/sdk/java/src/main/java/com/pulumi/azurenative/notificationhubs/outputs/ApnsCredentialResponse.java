@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApnsCredentialResponse {
-    /**
-     * The APNS certificate. Specify if using Certificate Authentication Mode.
-     * 
-     */
+        /**
+         * @return The APNS certificate. Specify if using Certificate Authentication Mode.
+         * 
+         */
     private final @Nullable String apnsCertificate;
-    /**
-     * The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
-     */
+        /**
+         * @return The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
+         * 
+         */
     private final @Nullable String appId;
-    /**
-     * The name of the application or BundleId. Specify if using Token Authentication Mode.
-     * 
-     */
+        /**
+         * @return The name of the application or BundleId. Specify if using Token Authentication Mode.
+         * 
+         */
     private final @Nullable String appName;
-    /**
-     * The APNS certificate password if it exists.
-     * 
-     */
+        /**
+         * @return The APNS certificate password if it exists.
+         * 
+         */
     private final @Nullable String certificateKey;
-    /**
-     * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
-     * 
-     */
+        /**
+         * @return The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
+         * 
+         */
     private final @Nullable String endpoint;
-    /**
-     * A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
-     * 
-     */
+        /**
+         * @return A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
+         * 
+         */
     private final @Nullable String keyId;
-    /**
-     * The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
-     * 
-     */
+        /**
+         * @return The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
+         * 
+         */
     private final @Nullable String thumbprint;
-    /**
-     * Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
-     * 
-     */
+        /**
+         * @return Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
+         * 
+         */
     private final @Nullable String token;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class ApnsCredentialResponse {
     }
 
     /**
-     * The APNS certificate. Specify if using Certificate Authentication Mode.
+     * @return The APNS certificate. Specify if using Certificate Authentication Mode.
      * 
-    */
+     */
     public Optional<String> apnsCertificate() {
         return Optional.ofNullable(this.apnsCertificate);
     }
     /**
-     * The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
+     * @return The issuer (iss) registered claim key. The value is a 10-character TeamId, obtained from your developer account. Specify if using Token Authentication Mode.
      * 
-    */
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
-     * The name of the application or BundleId. Specify if using Token Authentication Mode.
+     * @return The name of the application or BundleId. Specify if using Token Authentication Mode.
      * 
-    */
+     */
     public Optional<String> appName() {
         return Optional.ofNullable(this.appName);
     }
     /**
-     * The APNS certificate password if it exists.
+     * @return The APNS certificate password if it exists.
      * 
-    */
+     */
     public Optional<String> certificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
     /**
-     * The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
+     * @return The APNS endpoint of this credential. If using Certificate Authentication Mode and Sandbox specify &#39;gateway.sandbox.push.apple.com&#39;. If using Certificate Authentication Mode and Production specify &#39;gateway.push.apple.com&#39;. If using Token Authentication Mode and Sandbox specify &#39;https://api.development.push.apple.com:443/3/device&#39;. If using Token Authentication Mode and Production specify &#39;https://api.push.apple.com:443/3/device&#39;.
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
+     * @return A 10-character key identifier (kid) key, obtained from your developer account. Specify if using Token Authentication Mode.
      * 
-    */
+     */
     public Optional<String> keyId() {
         return Optional.ofNullable(this.keyId);
     }
     /**
-     * The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
+     * @return The APNS certificate thumbprint. Specify if using Certificate Authentication Mode.
      * 
-    */
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
-     * Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
+     * @return Provider Authentication Token, obtained through your developer account. Specify if using Token Authentication Mode.
      * 
-    */
+     */
     public Optional<String> token() {
         return Optional.ofNullable(this.token);
     }

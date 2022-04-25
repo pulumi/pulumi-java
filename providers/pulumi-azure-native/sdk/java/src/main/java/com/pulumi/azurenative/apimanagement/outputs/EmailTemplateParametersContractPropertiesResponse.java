@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EmailTemplateParametersContractPropertiesResponse {
-    /**
-     * Template parameter description.
-     * 
-     */
+        /**
+         * @return Template parameter description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Template parameter name.
-     * 
-     */
+        /**
+         * @return Template parameter name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Template parameter title.
-     * 
-     */
+        /**
+         * @return Template parameter title.
+         * 
+         */
     private final @Nullable String title;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class EmailTemplateParametersContractPropertiesResponse {
     }
 
     /**
-     * Template parameter description.
+     * @return Template parameter description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Template parameter name.
+     * @return Template parameter name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Template parameter title.
+     * @return Template parameter title.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

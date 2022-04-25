@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateLinkScopedResourceResult {
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The resource id of the scoped Azure monitor resource.
-     * 
-     */
+        /**
+         * @return The resource id of the scoped Azure monitor resource.
+         * 
+         */
     private final @Nullable String linkedResourceId;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * State of the private endpoint connection.
-     * 
-     */
+        /**
+         * @return State of the private endpoint connection.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetPrivateLinkScopedResourceResult {
     }
 
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource id of the scoped Azure monitor resource.
+     * @return The resource id of the scoped Azure monitor resource.
      * 
-    */
+     */
     public Optional<String> linkedResourceId() {
         return Optional.ofNullable(this.linkedResourceId);
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of the private endpoint connection.
+     * @return State of the private endpoint connection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationUserAssignedIdentityResponse {
-    /**
-     * The friendly name of user assigned identity.
-     * 
-     */
+        /**
+         * @return The friendly name of user assigned identity.
+         * 
+         */
     private final String name;
-    /**
-     * The principal id of user assigned identity.
-     * 
-     */
+        /**
+         * @return The principal id of user assigned identity.
+         * 
+         */
     private final String principalId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApplicationUserAssignedIdentityResponse {
     }
 
     /**
-     * The friendly name of user assigned identity.
+     * @return The friendly name of user assigned identity.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principal id of user assigned identity.
+     * @return The principal id of user assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

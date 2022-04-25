@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class HealthStateResponse {
-    /**
-     * Health state name
-     * 
-     */
+        /**
+         * @return Health state name
+         * 
+         */
     private final String healthStateName;
-    /**
-     * Severity of alert fired
-     * 
-     */
+        /**
+         * @return Severity of alert fired
+         * 
+         */
     private final Double severity;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class HealthStateResponse {
     }
 
     /**
-     * Health state name
+     * @return Health state name
      * 
-    */
+     */
     public String healthStateName() {
         return this.healthStateName;
     }
     /**
-     * Severity of alert fired
+     * @return Severity of alert fired
      * 
-    */
+     */
     public Double severity() {
         return this.severity;
     }

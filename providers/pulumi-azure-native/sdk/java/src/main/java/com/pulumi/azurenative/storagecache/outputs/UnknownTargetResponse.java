@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UnknownTargetResponse {
-    /**
-     * Dictionary of string-&gt;string pairs containing information about the Storage Target.
-     * 
-     */
+        /**
+         * @return Dictionary of string-&gt;string pairs containing information about the Storage Target.
+         * 
+         */
     private final @Nullable Map<String,String> attributes;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class UnknownTargetResponse {
     }
 
     /**
-     * Dictionary of string-&gt;string pairs containing information about the Storage Target.
+     * @return Dictionary of string-&gt;string pairs containing information about the Storage Target.
      * 
-    */
+     */
     public Map<String,String> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }

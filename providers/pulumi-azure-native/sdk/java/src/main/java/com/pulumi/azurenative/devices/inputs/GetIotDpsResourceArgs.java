@@ -19,6 +19,10 @@ public final class GetIotDpsResourceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="provisioningServiceName", required=true)
     private String provisioningServiceName;
 
+    /**
+     * @return Name of the provisioning service to retrieve.
+     * 
+     */
     public String provisioningServiceName() {
         return this.provisioningServiceName;
     }
@@ -30,6 +34,10 @@ public final class GetIotDpsResourceArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetIotDpsResourceArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetIotDpsResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningServiceName Name of the provisioning service to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(String provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

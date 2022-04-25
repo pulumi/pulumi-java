@@ -19,6 +19,10 @@ public final class ListOrderDCAccessCodeArgs extends com.pulumi.resources.Invoke
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class ListOrderDCAccessCodeArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListOrderDCAccessCodeArgs extends com.pulumi.resources.Invoke
             $ = new ListOrderDCAccessCodeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

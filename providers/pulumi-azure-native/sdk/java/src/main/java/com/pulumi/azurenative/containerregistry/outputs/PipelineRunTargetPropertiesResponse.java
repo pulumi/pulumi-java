@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PipelineRunTargetPropertiesResponse {
-    /**
-     * The name of the target.
-     * 
-     */
+        /**
+         * @return The name of the target.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The type of the target.
-     * 
-     */
+        /**
+         * @return The type of the target.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PipelineRunTargetPropertiesResponse {
     }
 
     /**
-     * The name of the target.
+     * @return The name of the target.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The type of the target.
+     * @return The type of the target.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

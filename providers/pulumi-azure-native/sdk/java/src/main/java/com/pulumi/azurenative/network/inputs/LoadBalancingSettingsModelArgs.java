@@ -27,6 +27,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="additionalLatencyMilliseconds")
     private @Nullable Output<Integer> additionalLatencyMilliseconds;
 
+    /**
+     * @return The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     public Optional<Output<Integer>> additionalLatencyMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
@@ -38,6 +42,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="sampleSize")
     private @Nullable Output<Integer> sampleSize;
 
+    /**
+     * @return The number of samples to consider for load balancing decisions
+     * 
+     */
     public Optional<Output<Integer>> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
@@ -71,6 +87,10 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
     @Import(name="successfulSamplesRequired")
     private @Nullable Output<Integer> successfulSamplesRequired;
 
+    /**
+     * @return The number of samples within the sample period that must succeed
+     * 
+     */
     public Optional<Output<Integer>> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
@@ -103,47 +123,107 @@ public final class LoadBalancingSettingsModelArgs extends com.pulumi.resources.R
             $ = new LoadBalancingSettingsModelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalLatencyMilliseconds The additional latency in milliseconds for probes to fall into the lowest latency bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLatencyMilliseconds(@Nullable Output<Integer> additionalLatencyMilliseconds) {
             $.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
 
+        /**
+         * @param additionalLatencyMilliseconds The additional latency in milliseconds for probes to fall into the lowest latency bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLatencyMilliseconds(Integer additionalLatencyMilliseconds) {
             return additionalLatencyMilliseconds(Output.of(additionalLatencyMilliseconds));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param sampleSize The number of samples to consider for load balancing decisions
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
             $.sampleSize = sampleSize;
             return this;
         }
 
+        /**
+         * @param sampleSize The number of samples to consider for load balancing decisions
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleSize(Integer sampleSize) {
             return sampleSize(Output.of(sampleSize));
         }
 
+        /**
+         * @param successfulSamplesRequired The number of samples within the sample period that must succeed
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
             $.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
+        /**
+         * @param successfulSamplesRequired The number of samples within the sample period that must succeed
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulSamplesRequired(Integer successfulSamplesRequired) {
             return successfulSamplesRequired(Output.of(successfulSamplesRequired));
         }

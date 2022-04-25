@@ -10,71 +10,71 @@ import java.util.Objects;
 
 @CustomType
 public final class GetArcAddonResult {
-    /**
-     * Host OS supported by the Arc addon.
-     * 
-     */
+        /**
+         * @return Host OS supported by the Arc addon.
+         * 
+         */
     private final String hostPlatform;
-    /**
-     * Platform where the runtime is hosted.
-     * 
-     */
+        /**
+         * @return Platform where the runtime is hosted.
+         * 
+         */
     private final String hostPlatformType;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * Addon type.
-     * Expected value is &#39;ArcForKubernetes&#39;.
-     * 
-     */
+        /**
+         * @return Addon type.
+         * Expected value is &#39;ArcForKubernetes&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * Addon Provisioning State
-     * 
-     */
+        /**
+         * @return Addon Provisioning State
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Arc resource group name
-     * 
-     */
+        /**
+         * @return Arc resource group name
+         * 
+         */
     private final String resourceGroupName;
-    /**
-     * Arc resource location
-     * 
-     */
+        /**
+         * @return Arc resource location
+         * 
+         */
     private final String resourceLocation;
-    /**
-     * Arc resource Name
-     * 
-     */
+        /**
+         * @return Arc resource Name
+         * 
+         */
     private final String resourceName;
-    /**
-     * Arc resource subscription Id
-     * 
-     */
+        /**
+         * @return Arc resource subscription Id
+         * 
+         */
     private final String subscriptionId;
-    /**
-     * Addon type
-     * 
-     */
+        /**
+         * @return Addon type
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * Arc resource version
-     * 
-     */
+        /**
+         * @return Arc resource version
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -108,94 +108,94 @@ public final class GetArcAddonResult {
     }
 
     /**
-     * Host OS supported by the Arc addon.
+     * @return Host OS supported by the Arc addon.
      * 
-    */
+     */
     public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
-     * Platform where the runtime is hosted.
+     * @return Platform where the runtime is hosted.
      * 
-    */
+     */
     public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Addon type.
+     * @return Addon type.
      * Expected value is &#39;ArcForKubernetes&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Addon Provisioning State
+     * @return Addon Provisioning State
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Arc resource group name
+     * @return Arc resource group name
      * 
-    */
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
-     * Arc resource location
+     * @return Arc resource location
      * 
-    */
+     */
     public String resourceLocation() {
         return this.resourceLocation;
     }
     /**
-     * Arc resource Name
+     * @return Arc resource Name
      * 
-    */
+     */
     public String resourceName() {
         return this.resourceName;
     }
     /**
-     * Arc resource subscription Id
+     * @return Arc resource subscription Id
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * Addon type
+     * @return Addon type
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Arc resource version
+     * @return Arc resource version
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

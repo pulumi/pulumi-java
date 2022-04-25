@@ -28,6 +28,10 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="batchGroupName", required=true)
     private Output<String> batchGroupName;
 
+    /**
+     * @return The name of the batch group.
+     * 
+     */
     public Output<String> batchGroupName() {
         return this.batchGroupName;
     }
@@ -39,6 +43,10 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="changedTime")
     private @Nullable Output<String> changedTime;
 
+    /**
+     * @return The artifact changed time.
+     * 
+     */
     public Optional<Output<String>> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
@@ -50,6 +58,10 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="createdTime")
     private @Nullable Output<String> createdTime;
 
+    /**
+     * @return The artifact creation time.
+     * 
+     */
     public Optional<Output<String>> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -68,6 +80,10 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
     @Import(name="releaseCriteria", required=true)
     private Output<BatchReleaseCriteriaArgs> releaseCriteria;
 
+    /**
+     * @return The batch release criteria.
+     * 
+     */
     public Output<BatchReleaseCriteriaArgs> releaseCriteria() {
         return this.releaseCriteria;
     }
@@ -100,29 +116,65 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
             $ = new BatchConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchGroupName The name of the batch group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchGroupName(Output<String> batchGroupName) {
             $.batchGroupName = batchGroupName;
             return this;
         }
 
+        /**
+         * @param batchGroupName The name of the batch group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchGroupName(String batchGroupName) {
             return batchGroupName(Output.of(batchGroupName));
         }
 
+        /**
+         * @param changedTime The artifact changed time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changedTime(@Nullable Output<String> changedTime) {
             $.changedTime = changedTime;
             return this;
         }
 
+        /**
+         * @param changedTime The artifact changed time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changedTime(String changedTime) {
             return changedTime(Output.of(changedTime));
         }
 
+        /**
+         * @param createdTime The artifact creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable Output<String> createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param createdTime The artifact creation time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             return createdTime(Output.of(createdTime));
         }
@@ -136,11 +188,23 @@ public final class BatchConfigurationPropertiesArgs extends com.pulumi.resources
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param releaseCriteria The batch release criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseCriteria(Output<BatchReleaseCriteriaArgs> releaseCriteria) {
             $.releaseCriteria = releaseCriteria;
             return this;
         }
 
+        /**
+         * @param releaseCriteria The batch release criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseCriteria(BatchReleaseCriteriaArgs releaseCriteria) {
             return releaseCriteria(Output.of(releaseCriteria));
         }

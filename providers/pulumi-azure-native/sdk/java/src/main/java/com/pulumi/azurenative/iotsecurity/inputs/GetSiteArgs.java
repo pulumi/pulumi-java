@@ -19,6 +19,10 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -47,6 +51,12 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

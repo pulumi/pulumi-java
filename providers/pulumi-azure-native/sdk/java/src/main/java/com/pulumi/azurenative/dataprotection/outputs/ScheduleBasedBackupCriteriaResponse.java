@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScheduleBasedBackupCriteriaResponse {
-    /**
-     * it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
-     * and should be part of AbsoluteMarker enum
-     * 
-     */
+        /**
+         * @return it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
+         * and should be part of AbsoluteMarker enum
+         * 
+         */
     private final @Nullable List<String> absoluteCriteria;
-    /**
-     * This is day of the month from 1 to 28 other wise last of month
-     * 
-     */
+        /**
+         * @return This is day of the month from 1 to 28 other wise last of month
+         * 
+         */
     private final @Nullable List<DayResponse> daysOfMonth;
-    /**
-     * It should be Sunday/Monday/T..../Saturday
-     * 
-     */
+        /**
+         * @return It should be Sunday/Monday/T..../Saturday
+         * 
+         */
     private final @Nullable List<String> daysOfTheWeek;
-    /**
-     * It should be January/February/....../December
-     * 
-     */
+        /**
+         * @return It should be January/February/....../December
+         * 
+         */
     private final @Nullable List<String> monthsOfYear;
-    /**
-     * Type of the specific object - used for deserializing
-     * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
-     * 
-     */
+        /**
+         * @return Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
+         * 
+         */
     private final String objectType;
-    /**
-     * List of schedule times for backup
-     * 
-     */
+        /**
+         * @return List of schedule times for backup
+         * 
+         */
     private final @Nullable List<String> scheduleTimes;
-    /**
-     * It should be First/Second/Third/Fourth/Last
-     * 
-     */
+        /**
+         * @return It should be First/Second/Third/Fourth/Last
+         * 
+         */
     private final @Nullable List<String> weeksOfTheMonth;
 
     @CustomType.Constructor
@@ -69,53 +69,53 @@ public final class ScheduleBasedBackupCriteriaResponse {
     }
 
     /**
-     * it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
+     * @return it contains absolute values like &#34;AllBackup&#34; / &#34;FirstOfDay&#34; / &#34;FirstOfWeek&#34; / &#34;FirstOfMonth&#34;
      * and should be part of AbsoluteMarker enum
      * 
-    */
+     */
     public List<String> absoluteCriteria() {
         return this.absoluteCriteria == null ? List.of() : this.absoluteCriteria;
     }
     /**
-     * This is day of the month from 1 to 28 other wise last of month
+     * @return This is day of the month from 1 to 28 other wise last of month
      * 
-    */
+     */
     public List<DayResponse> daysOfMonth() {
         return this.daysOfMonth == null ? List.of() : this.daysOfMonth;
     }
     /**
-     * It should be Sunday/Monday/T..../Saturday
+     * @return It should be Sunday/Monday/T..../Saturday
      * 
-    */
+     */
     public List<String> daysOfTheWeek() {
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
     /**
-     * It should be January/February/....../December
+     * @return It should be January/February/....../December
      * 
-    */
+     */
     public List<String> monthsOfYear() {
         return this.monthsOfYear == null ? List.of() : this.monthsOfYear;
     }
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;ScheduleBasedBackupCriteria&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * List of schedule times for backup
+     * @return List of schedule times for backup
      * 
-    */
+     */
     public List<String> scheduleTimes() {
         return this.scheduleTimes == null ? List.of() : this.scheduleTimes;
     }
     /**
-     * It should be First/Second/Third/Fourth/Last
+     * @return It should be First/Second/Third/Fourth/Last
      * 
-    */
+     */
     public List<String> weeksOfTheMonth() {
         return this.weeksOfTheMonth == null ? List.of() : this.weeksOfTheMonth;
     }

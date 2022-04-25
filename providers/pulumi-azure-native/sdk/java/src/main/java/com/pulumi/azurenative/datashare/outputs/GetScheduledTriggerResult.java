@@ -12,66 +12,66 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetScheduledTriggerResult {
-    /**
-     * Time at which the trigger was created.
-     * 
-     */
+        /**
+         * @return Time at which the trigger was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * The resource id of the azure resource
-     * 
-     */
+        /**
+         * @return The resource id of the azure resource
+         * 
+         */
     private final String id;
-    /**
-     * Kind of synchronization on trigger.
-     * Expected value is &#39;ScheduleBased&#39;.
-     * 
-     */
+        /**
+         * @return Kind of synchronization on trigger.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the azure resource
-     * 
-     */
+        /**
+         * @return Name of the azure resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets the provisioning state
-     * 
-     */
+        /**
+         * @return Gets the provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Recurrence Interval
-     * 
-     */
+        /**
+         * @return Recurrence Interval
+         * 
+         */
     private final String recurrenceInterval;
-    /**
-     * Synchronization mode
-     * 
-     */
+        /**
+         * @return Synchronization mode
+         * 
+         */
     private final @Nullable String synchronizationMode;
-    /**
-     * Synchronization time
-     * 
-     */
+        /**
+         * @return Synchronization time
+         * 
+         */
     private final String synchronizationTime;
-    /**
-     * System Data of the Azure resource.
-     * 
-     */
+        /**
+         * @return System Data of the Azure resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Gets the trigger state
-     * 
-     */
+        /**
+         * @return Gets the trigger state
+         * 
+         */
     private final String triggerStatus;
-    /**
-     * Type of the azure resource
-     * 
-     */
+        /**
+         * @return Type of the azure resource
+         * 
+         */
     private final String type;
-    /**
-     * Name of the user who created the trigger.
-     * 
-     */
+        /**
+         * @return Name of the user who created the trigger.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -103,87 +103,87 @@ public final class GetScheduledTriggerResult {
     }
 
     /**
-     * Time at which the trigger was created.
+     * @return Time at which the trigger was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of synchronization on trigger.
+     * @return Kind of synchronization on trigger.
      * Expected value is &#39;ScheduleBased&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the provisioning state
+     * @return Gets the provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Recurrence Interval
+     * @return Recurrence Interval
      * 
-    */
+     */
     public String recurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
-     * Synchronization mode
+     * @return Synchronization mode
      * 
-    */
+     */
     public Optional<String> synchronizationMode() {
         return Optional.ofNullable(this.synchronizationMode);
     }
     /**
-     * Synchronization time
+     * @return Synchronization time
      * 
-    */
+     */
     public String synchronizationTime() {
         return this.synchronizationTime;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Gets the trigger state
+     * @return Gets the trigger state
      * 
-    */
+     */
     public String triggerStatus() {
         return this.triggerStatus;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Name of the user who created the trigger.
+     * @return Name of the user who created the trigger.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

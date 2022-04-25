@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRestorePointCollectionResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the restore point collection.
-     * 
-     */
+        /**
+         * @return The provisioning state of the restore point collection.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The unique id of the restore point collection.
-     * 
-     */
+        /**
+         * @return The unique id of the restore point collection.
+         * 
+         */
     private final String restorePointCollectionId;
-    /**
-     * A list containing all restore points created under this restore point collection.
-     * 
-     */
+        /**
+         * @return A list containing all restore points created under this restore point collection.
+         * 
+         */
     private final List<RestorePointResponse> restorePoints;
-    /**
-     * The properties of the source resource that this restore point collection is created from.
-     * 
-     */
+        /**
+         * @return The properties of the source resource that this restore point collection is created from.
+         * 
+         */
     private final @Nullable RestorePointCollectionSourcePropertiesResponse source;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class GetRestorePointCollectionResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the restore point collection.
+     * @return The provisioning state of the restore point collection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The unique id of the restore point collection.
+     * @return The unique id of the restore point collection.
      * 
-    */
+     */
     public String restorePointCollectionId() {
         return this.restorePointCollectionId;
     }
     /**
-     * A list containing all restore points created under this restore point collection.
+     * @return A list containing all restore points created under this restore point collection.
      * 
-    */
+     */
     public List<RestorePointResponse> restorePoints() {
         return this.restorePoints;
     }
     /**
-     * The properties of the source resource that this restore point collection is created from.
+     * @return The properties of the source resource that this restore point collection is created from.
      * 
-    */
+     */
     public Optional<RestorePointCollectionSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

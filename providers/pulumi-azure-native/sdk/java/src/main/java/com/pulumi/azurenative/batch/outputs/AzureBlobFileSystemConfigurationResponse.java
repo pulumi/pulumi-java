@@ -11,27 +11,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureBlobFileSystemConfigurationResponse {
-    /**
-     * This property is mutually exclusive with sasKey and one must be specified.
-     * 
-     */
+        /**
+         * @return This property is mutually exclusive with sasKey and one must be specified.
+         * 
+         */
     private final @Nullable String accountKey;
     private final String accountName;
-    /**
-     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
-     * 
-     */
+        /**
+         * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+         * 
+         */
     private final @Nullable String blobfuseOptions;
     private final String containerName;
-    /**
-     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
-     * 
-     */
+        /**
+         * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+         * 
+         */
     private final String relativeMountPath;
-    /**
-     * This property is mutually exclusive with accountKey and one must be specified.
-     * 
-     */
+        /**
+         * @return This property is mutually exclusive with accountKey and one must be specified.
+         * 
+         */
     private final @Nullable String sasKey;
 
     @CustomType.Constructor
@@ -51,9 +51,9 @@ public final class AzureBlobFileSystemConfigurationResponse {
     }
 
     /**
-     * This property is mutually exclusive with sasKey and one must be specified.
+     * @return This property is mutually exclusive with sasKey and one must be specified.
      * 
-    */
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -61,9 +61,9 @@ public final class AzureBlobFileSystemConfigurationResponse {
         return this.accountName;
     }
     /**
-     * These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
+     * @return These are &#39;net use&#39; options in Windows and &#39;mount&#39; options in Linux.
      * 
-    */
+     */
     public Optional<String> blobfuseOptions() {
         return Optional.ofNullable(this.blobfuseOptions);
     }
@@ -71,16 +71,16 @@ public final class AzureBlobFileSystemConfigurationResponse {
         return this.containerName;
     }
     /**
-     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     * @return All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
-    */
+     */
     public String relativeMountPath() {
         return this.relativeMountPath;
     }
     /**
-     * This property is mutually exclusive with accountKey and one must be specified.
+     * @return This property is mutually exclusive with accountKey and one must be specified.
      * 
-    */
+     */
     public Optional<String> sasKey() {
         return Optional.ofNullable(this.sasKey);
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectReferenceDefinitionResponse {
-    /**
-     * Name of the object
-     * 
-     */
+        /**
+         * @return Name of the object
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Namespace of the object
-     * 
-     */
+        /**
+         * @return Namespace of the object
+         * 
+         */
     private final @Nullable String namespace;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ObjectReferenceDefinitionResponse {
     }
 
     /**
-     * Name of the object
+     * @return Name of the object
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Namespace of the object
+     * @return Namespace of the object
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }

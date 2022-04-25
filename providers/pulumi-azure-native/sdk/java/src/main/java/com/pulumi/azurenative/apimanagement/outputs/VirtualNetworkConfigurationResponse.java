@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkConfigurationResponse {
-    /**
-     * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
-     * 
-     */
+        /**
+         * @return The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+         * 
+         */
     private final @Nullable String subnetResourceId;
-    /**
-     * The name of the subnet.
-     * 
-     */
+        /**
+         * @return The name of the subnet.
+         * 
+         */
     private final String subnetname;
-    /**
-     * The virtual network ID. This is typically a GUID. Expect a null GUID by default.
-     * 
-     */
+        /**
+         * @return The virtual network ID. This is typically a GUID. Expect a null GUID by default.
+         * 
+         */
     private final String vnetid;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class VirtualNetworkConfigurationResponse {
     }
 
     /**
-     * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+     * @return The full resource ID of a subnet in a virtual network to deploy the API Management service in.
      * 
-    */
+     */
     public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
     /**
-     * The name of the subnet.
+     * @return The name of the subnet.
      * 
-    */
+     */
     public String subnetname() {
         return this.subnetname;
     }
     /**
-     * The virtual network ID. This is typically a GUID. Expect a null GUID by default.
+     * @return The virtual network ID. This is typically a GUID. Expect a null GUID by default.
      * 
-    */
+     */
     public String vnetid() {
         return this.vnetid;
     }

@@ -26,6 +26,10 @@ public final class ResourceGroupValueArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the resource group.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -37,6 +41,10 @@ public final class ResourceGroupValueArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class ResourceGroupValueArgs extends com.pulumi.resources.ResourceA
             $ = new ResourceGroupValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Location of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

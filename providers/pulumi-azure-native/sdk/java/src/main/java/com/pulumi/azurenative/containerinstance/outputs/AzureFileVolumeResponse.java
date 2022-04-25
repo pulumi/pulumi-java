@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFileVolumeResponse {
-    /**
-     * The flag indicating whether the Azure File shared mounted as a volume is read-only.
-     * 
-     */
+        /**
+         * @return The flag indicating whether the Azure File shared mounted as a volume is read-only.
+         * 
+         */
     private final @Nullable Boolean readOnly;
-    /**
-     * The name of the Azure File share to be mounted as a volume.
-     * 
-     */
+        /**
+         * @return The name of the Azure File share to be mounted as a volume.
+         * 
+         */
     private final String shareName;
-    /**
-     * The storage account access key used to access the Azure File share.
-     * 
-     */
+        /**
+         * @return The storage account access key used to access the Azure File share.
+         * 
+         */
     private final @Nullable String storageAccountKey;
-    /**
-     * The name of the storage account that contains the Azure File share.
-     * 
-     */
+        /**
+         * @return The name of the storage account that contains the Azure File share.
+         * 
+         */
     private final String storageAccountName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class AzureFileVolumeResponse {
     }
 
     /**
-     * The flag indicating whether the Azure File shared mounted as a volume is read-only.
+     * @return The flag indicating whether the Azure File shared mounted as a volume is read-only.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * The name of the Azure File share to be mounted as a volume.
+     * @return The name of the Azure File share to be mounted as a volume.
      * 
-    */
+     */
     public String shareName() {
         return this.shareName;
     }
     /**
-     * The storage account access key used to access the Azure File share.
+     * @return The storage account access key used to access the Azure File share.
      * 
-    */
+     */
     public Optional<String> storageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
     /**
-     * The name of the storage account that contains the Azure File share.
+     * @return The name of the storage account that contains the Azure File share.
      * 
-    */
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }

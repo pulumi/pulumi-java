@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomProfileResponse {
-    /**
-     * Path for metadata configuration.
-     * 
-     */
+        /**
+         * @return Path for metadata configuration.
+         * 
+         */
     private final @Nullable String metadataConfigurationPath;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CustomProfileResponse {
     }
 
     /**
-     * Path for metadata configuration.
+     * @return Path for metadata configuration.
      * 
-    */
+     */
     public Optional<String> metadataConfigurationPath() {
         return Optional.ofNullable(this.metadataConfigurationPath);
     }

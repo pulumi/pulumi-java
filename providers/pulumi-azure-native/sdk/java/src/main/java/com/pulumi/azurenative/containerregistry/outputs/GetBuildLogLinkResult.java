@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBuildLogLinkResult {
-    /**
-     * The link to logs for a azure container registry build.
-     * 
-     */
+        /**
+         * @return The link to logs for a azure container registry build.
+         * 
+         */
     private final @Nullable String logLink;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetBuildLogLinkResult {
     }
 
     /**
-     * The link to logs for a azure container registry build.
+     * @return The link to logs for a azure container registry build.
      * 
-    */
+     */
     public Optional<String> logLink() {
         return Optional.ofNullable(this.logLink);
     }

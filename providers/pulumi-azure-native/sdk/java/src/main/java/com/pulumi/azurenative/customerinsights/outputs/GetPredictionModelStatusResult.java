@@ -10,60 +10,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPredictionModelStatusResult {
-    /**
-     * The model status message.
-     * 
-     */
+        /**
+         * @return The model status message.
+         * 
+         */
     private final String message;
-    /**
-     * Version of the model.
-     * 
-     */
+        /**
+         * @return Version of the model.
+         * 
+         */
     private final String modelVersion;
-    /**
-     * The prediction GUID ID.
-     * 
-     */
+        /**
+         * @return The prediction GUID ID.
+         * 
+         */
     private final String predictionGuidId;
-    /**
-     * The prediction name.
-     * 
-     */
+        /**
+         * @return The prediction name.
+         * 
+         */
     private final String predictionName;
-    /**
-     * The signals used.
-     * 
-     */
+        /**
+         * @return The signals used.
+         * 
+         */
     private final Integer signalsUsed;
-    /**
-     * Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
-     * 
-     */
+        /**
+         * @return Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
+         * 
+         */
     private final String status;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Count of the test set.
-     * 
-     */
+        /**
+         * @return Count of the test set.
+         * 
+         */
     private final Integer testSetCount;
-    /**
-     * The training accuracy.
-     * 
-     */
+        /**
+         * @return The training accuracy.
+         * 
+         */
     private final Integer trainingAccuracy;
-    /**
-     * Count of the training set.
-     * 
-     */
+        /**
+         * @return Count of the training set.
+         * 
+         */
     private final Integer trainingSetCount;
-    /**
-     * Count of the validation set.
-     * 
-     */
+        /**
+         * @return Count of the validation set.
+         * 
+         */
     private final Integer validationSetCount;
 
     @CustomType.Constructor
@@ -93,79 +93,79 @@ public final class GetPredictionModelStatusResult {
     }
 
     /**
-     * The model status message.
+     * @return The model status message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Version of the model.
+     * @return Version of the model.
      * 
-    */
+     */
     public String modelVersion() {
         return this.modelVersion;
     }
     /**
-     * The prediction GUID ID.
+     * @return The prediction GUID ID.
      * 
-    */
+     */
     public String predictionGuidId() {
         return this.predictionGuidId;
     }
     /**
-     * The prediction name.
+     * @return The prediction name.
      * 
-    */
+     */
     public String predictionName() {
         return this.predictionName;
     }
     /**
-     * The signals used.
+     * @return The signals used.
      * 
-    */
+     */
     public Integer signalsUsed() {
         return this.signalsUsed;
     }
     /**
-     * Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
+     * @return Prediction model life cycle.  When prediction is in PendingModelConfirmation status, it is allowed to update the status to PendingFeaturing or Active through API.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Count of the test set.
+     * @return Count of the test set.
      * 
-    */
+     */
     public Integer testSetCount() {
         return this.testSetCount;
     }
     /**
-     * The training accuracy.
+     * @return The training accuracy.
      * 
-    */
+     */
     public Integer trainingAccuracy() {
         return this.trainingAccuracy;
     }
     /**
-     * Count of the training set.
+     * @return Count of the training set.
      * 
-    */
+     */
     public Integer trainingSetCount() {
         return this.trainingSetCount;
     }
     /**
-     * Count of the validation set.
+     * @return Count of the validation set.
      * 
-    */
+     */
     public Integer validationSetCount() {
         return this.validationSetCount;
     }

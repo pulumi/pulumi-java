@@ -22,6 +22,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customDomainName")
     private @Nullable Output<String> customDomainName;
 
+    /**
+     * @return Name of the custom domain within an endpoint.
+     * 
+     */
     public Optional<Output<String>> customDomainName() {
         return Optional.ofNullable(this.customDomainName);
     }
@@ -33,6 +37,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpointName", required=true)
     private Output<String> endpointName;
 
+    /**
+     * @return Name of the endpoint under the profile which is unique globally.
+     * 
+     */
     public Output<String> endpointName() {
         return this.endpointName;
     }
@@ -44,6 +52,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostName", required=true)
     private Output<String> hostName;
 
+    /**
+     * @return The host name of the custom domain. Must be a domain name.
+     * 
+     */
     public Output<String> hostName() {
         return this.hostName;
     }
@@ -55,6 +67,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -66,6 +82,10 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -98,47 +118,107 @@ public final class CustomDomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customDomainName Name of the custom domain within an endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomainName(@Nullable Output<String> customDomainName) {
             $.customDomainName = customDomainName;
             return this;
         }
 
+        /**
+         * @param customDomainName Name of the custom domain within an endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customDomainName(String customDomainName) {
             return customDomainName(Output.of(customDomainName));
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param hostName The host name of the custom domain. Must be a domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(Output<String> hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostName The host name of the custom domain. Must be a domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             return hostName(Output.of(hostName));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

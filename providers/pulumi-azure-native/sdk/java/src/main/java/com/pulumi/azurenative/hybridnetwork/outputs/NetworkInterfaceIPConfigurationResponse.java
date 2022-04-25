@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkInterfaceIPConfigurationResponse {
-    /**
-     * The list of DNS servers IP addresses.
-     * 
-     */
+        /**
+         * @return The list of DNS servers IP addresses.
+         * 
+         */
     private final @Nullable List<String> dnsServers;
-    /**
-     * The value of the gateway.
-     * 
-     */
+        /**
+         * @return The value of the gateway.
+         * 
+         */
     private final @Nullable String gateway;
-    /**
-     * The value of the IP address.
-     * 
-     */
+        /**
+         * @return The value of the IP address.
+         * 
+         */
     private final @Nullable String ipAddress;
-    /**
-     * IP address allocation method.
-     * 
-     */
+        /**
+         * @return IP address allocation method.
+         * 
+         */
     private final @Nullable String ipAllocationMethod;
-    /**
-     * IP address version.
-     * 
-     */
+        /**
+         * @return IP address version.
+         * 
+         */
     private final @Nullable String ipVersion;
-    /**
-     * The value of the subnet.
-     * 
-     */
+        /**
+         * @return The value of the subnet.
+         * 
+         */
     private final @Nullable String subnet;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class NetworkInterfaceIPConfigurationResponse {
     }
 
     /**
-     * The list of DNS servers IP addresses.
+     * @return The list of DNS servers IP addresses.
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
-     * The value of the gateway.
+     * @return The value of the gateway.
      * 
-    */
+     */
     public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
     }
     /**
-     * The value of the IP address.
+     * @return The value of the IP address.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * IP address allocation method.
+     * @return IP address allocation method.
      * 
-    */
+     */
     public Optional<String> ipAllocationMethod() {
         return Optional.ofNullable(this.ipAllocationMethod);
     }
     /**
-     * IP address version.
+     * @return IP address version.
      * 
-    */
+     */
     public Optional<String> ipVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
     /**
-     * The value of the subnet.
+     * @return The value of the subnet.
      * 
-    */
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }

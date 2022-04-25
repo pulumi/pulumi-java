@@ -12,41 +12,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebHookEventSubscriptionDestinationResponse {
-    /**
-     * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
-     * 
-     */
+        /**
+         * @return The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+         * 
+         */
     private final @Nullable String azureActiveDirectoryApplicationIdOrUri;
-    /**
-     * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
-     * 
-     */
+        /**
+         * @return The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+         * 
+         */
     private final @Nullable String azureActiveDirectoryTenantId;
-    /**
-     * The base URL that represents the endpoint of the destination of an event subscription.
-     * 
-     */
+        /**
+         * @return The base URL that represents the endpoint of the destination of an event subscription.
+         * 
+         */
     private final String endpointBaseUrl;
-    /**
-     * Type of the endpoint for the event subscription destination.
-     * Expected value is &#39;WebHook&#39;.
-     * 
-     */
+        /**
+         * @return Type of the endpoint for the event subscription destination.
+         * Expected value is &#39;WebHook&#39;.
+         * 
+         */
     private final String endpointType;
-    /**
-     * The URL that represents the endpoint of the destination of an event subscription.
-     * 
-     */
+        /**
+         * @return The URL that represents the endpoint of the destination of an event subscription.
+         * 
+         */
     private final @Nullable String endpointUrl;
-    /**
-     * Maximum number of events per batch.
-     * 
-     */
+        /**
+         * @return Maximum number of events per batch.
+         * 
+         */
     private final @Nullable Integer maxEventsPerBatch;
-    /**
-     * Preferred batch size in Kilobytes.
-     * 
-     */
+        /**
+         * @return Preferred batch size in Kilobytes.
+         * 
+         */
     private final @Nullable Integer preferredBatchSizeInKilobytes;
 
     @CustomType.Constructor
@@ -68,52 +68,52 @@ public final class WebHookEventSubscriptionDestinationResponse {
     }
 
     /**
-     * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+     * @return The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
      * 
-    */
+     */
     public Optional<String> azureActiveDirectoryApplicationIdOrUri() {
         return Optional.ofNullable(this.azureActiveDirectoryApplicationIdOrUri);
     }
     /**
-     * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+     * @return The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
      * 
-    */
+     */
     public Optional<String> azureActiveDirectoryTenantId() {
         return Optional.ofNullable(this.azureActiveDirectoryTenantId);
     }
     /**
-     * The base URL that represents the endpoint of the destination of an event subscription.
+     * @return The base URL that represents the endpoint of the destination of an event subscription.
      * 
-    */
+     */
     public String endpointBaseUrl() {
         return this.endpointBaseUrl;
     }
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;WebHook&#39;.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The URL that represents the endpoint of the destination of an event subscription.
+     * @return The URL that represents the endpoint of the destination of an event subscription.
      * 
-    */
+     */
     public Optional<String> endpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }
     /**
-     * Maximum number of events per batch.
+     * @return Maximum number of events per batch.
      * 
-    */
+     */
     public Optional<Integer> maxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
     /**
-     * Preferred batch size in Kilobytes.
+     * @return Preferred batch size in Kilobytes.
      * 
-    */
+     */
     public Optional<Integer> preferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }

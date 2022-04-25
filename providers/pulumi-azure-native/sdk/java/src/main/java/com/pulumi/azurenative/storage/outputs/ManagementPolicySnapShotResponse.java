@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementPolicySnapShotResponse {
-    /**
-     * The function to delete the blob snapshot
-     * 
-     */
+        /**
+         * @return The function to delete the blob snapshot
+         * 
+         */
     private final @Nullable DateAfterCreationResponse delete;
-    /**
-     * The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
-     * 
-     */
+        /**
+         * @return The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
+         * 
+         */
     private final @Nullable DateAfterCreationResponse tierToArchive;
-    /**
-     * The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
-     * 
-     */
+        /**
+         * @return The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
+         * 
+         */
     private final @Nullable DateAfterCreationResponse tierToCool;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ManagementPolicySnapShotResponse {
     }
 
     /**
-     * The function to delete the blob snapshot
+     * @return The function to delete the blob snapshot
      * 
-    */
+     */
     public Optional<DateAfterCreationResponse> delete() {
         return Optional.ofNullable(this.delete);
     }
     /**
-     * The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
+     * @return The function to tier blob snapshot to archive storage. Support blob snapshot currently at Hot or Cool tier
      * 
-    */
+     */
     public Optional<DateAfterCreationResponse> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
     /**
-     * The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
+     * @return The function to tier blob snapshot to cool storage. Support blob snapshot currently at Hot tier
      * 
-    */
+     */
     public Optional<DateAfterCreationResponse> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }

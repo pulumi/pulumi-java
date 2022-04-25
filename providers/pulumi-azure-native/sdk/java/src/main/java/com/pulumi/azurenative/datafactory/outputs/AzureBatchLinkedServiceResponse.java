@@ -21,66 +21,66 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureBatchLinkedServiceResponse {
-    /**
-     * The Azure Batch account access key.
-     * 
-     */
+        /**
+         * @return The Azure Batch account access key.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
-    /**
-     * The Azure Batch account name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The Azure Batch account name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object accountName;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The Azure Batch URI. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The Azure Batch URI. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object batchUri;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The credential reference containing authentication information.
-     * 
-     */
+        /**
+         * @return The credential reference containing authentication information.
+         * 
+         */
     private final @Nullable CredentialReferenceResponse credential;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The Azure Storage linked service reference.
-     * 
-     */
+        /**
+         * @return The Azure Storage linked service reference.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The Azure Batch pool name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The Azure Batch pool name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object poolName;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;AzureBatch&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;AzureBatch&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -112,87 +112,87 @@ public final class AzureBatchLinkedServiceResponse {
     }
 
     /**
-     * The Azure Batch account access key.
+     * @return The Azure Batch account access key.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessKey() {
         return Optional.ofNullable(this.accessKey);
     }
     /**
-     * The Azure Batch account name. Type: string (or Expression with resultType string).
+     * @return The Azure Batch account name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object accountName() {
         return this.accountName;
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The Azure Batch URI. Type: string (or Expression with resultType string).
+     * @return The Azure Batch URI. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object batchUri() {
         return this.batchUri;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The Azure Storage linked service reference.
+     * @return The Azure Storage linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The Azure Batch pool name. Type: string (or Expression with resultType string).
+     * @return The Azure Batch pool name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object poolName() {
         return this.poolName;
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AzureBatch&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

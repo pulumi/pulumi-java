@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TargetIpFilterRuleResponse {
-    /**
-     * The desired action for requests captured by this rule.
-     * 
-     */
+        /**
+         * @return The desired action for requests captured by this rule.
+         * 
+         */
     private final String action;
-    /**
-     * The name of the IP filter rule.
-     * 
-     */
+        /**
+         * @return The name of the IP filter rule.
+         * 
+         */
     private final String filterName;
-    /**
-     * A string that contains the IP address range in CIDR notation for the rule.
-     * 
-     */
+        /**
+         * @return A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         */
     private final String ipMask;
-    /**
-     * Target for requests captured by this rule.
-     * 
-     */
+        /**
+         * @return Target for requests captured by this rule.
+         * 
+         */
     private final @Nullable String target;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class TargetIpFilterRuleResponse {
     }
 
     /**
-     * The desired action for requests captured by this rule.
+     * @return The desired action for requests captured by this rule.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * The name of the IP filter rule.
+     * @return The name of the IP filter rule.
      * 
-    */
+     */
     public String filterName() {
         return this.filterName;
     }
     /**
-     * A string that contains the IP address range in CIDR notation for the rule.
+     * @return A string that contains the IP address range in CIDR notation for the rule.
      * 
-    */
+     */
     public String ipMask() {
         return this.ipMask;
     }
     /**
-     * Target for requests captured by this rule.
+     * @return Target for requests captured by this rule.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

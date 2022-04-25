@@ -21,6 +21,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="enableAutomaticUpdates")
     private @Nullable Boolean enableAutomaticUpdates;
 
+    /**
+     * @return If omitted, the default value is true.
+     * 
+     */
     public Optional<Boolean> enableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);
     }
@@ -49,6 +53,12 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
             $ = new WindowsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableAutomaticUpdates If omitted, the default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             $.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;

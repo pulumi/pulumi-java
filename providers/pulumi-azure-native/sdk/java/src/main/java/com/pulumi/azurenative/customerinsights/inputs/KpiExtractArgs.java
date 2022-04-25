@@ -24,6 +24,10 @@ public final class KpiExtractArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return The expression.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -35,6 +39,10 @@ public final class KpiExtractArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extractName", required=true)
     private Output<String> extractName;
 
+    /**
+     * @return KPI extract name.
+     * 
+     */
     public Output<String> extractName() {
         return this.extractName;
     }
@@ -64,20 +72,44 @@ public final class KpiExtractArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KpiExtractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expression The expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression The expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param extractName KPI extract name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extractName(Output<String> extractName) {
             $.extractName = extractName;
             return this;
         }
 
+        /**
+         * @param extractName KPI extract name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extractName(String extractName) {
             return extractName(Output.of(extractName));
         }

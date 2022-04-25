@@ -28,6 +28,10 @@ public final class LogSchedulePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="scheduleFrequencyInMins")
     private @Nullable Output<Integer> scheduleFrequencyInMins;
 
+    /**
+     * @return Frequency of the log schedule operation of this policy in minutes.
+     * 
+     */
     public Optional<Output<Integer>> scheduleFrequencyInMins() {
         return Optional.ofNullable(this.scheduleFrequencyInMins);
     }
@@ -40,6 +44,11 @@ public final class LogSchedulePolicyArgs extends com.pulumi.resources.ResourceAr
     @Import(name="schedulePolicyType", required=true)
     private Output<String> schedulePolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;LogSchedulePolicy&#39;.
+     * 
+     */
     public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
@@ -69,20 +78,46 @@ public final class LogSchedulePolicyArgs extends com.pulumi.resources.ResourceAr
             $ = new LogSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheduleFrequencyInMins Frequency of the log schedule operation of this policy in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequencyInMins(@Nullable Output<Integer> scheduleFrequencyInMins) {
             $.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
 
+        /**
+         * @param scheduleFrequencyInMins Frequency of the log schedule operation of this policy in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleFrequencyInMins(Integer scheduleFrequencyInMins) {
             return scheduleFrequencyInMins(Output.of(scheduleFrequencyInMins));
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LogSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(Output<String> schedulePolicyType) {
             $.schedulePolicyType = schedulePolicyType;
             return this;
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LogSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(String schedulePolicyType) {
             return schedulePolicyType(Output.of(schedulePolicyType));
         }

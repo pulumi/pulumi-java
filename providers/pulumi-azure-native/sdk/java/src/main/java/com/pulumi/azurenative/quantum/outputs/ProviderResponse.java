@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProviderResponse {
-    /**
-     * The provider&#39;s marketplace application display name.
-     * 
-     */
+        /**
+         * @return The provider&#39;s marketplace application display name.
+         * 
+         */
     private final @Nullable String applicationName;
-    /**
-     * A Uri identifying the specific instance of this provider.
-     * 
-     */
+        /**
+         * @return A Uri identifying the specific instance of this provider.
+         * 
+         */
     private final @Nullable String instanceUri;
-    /**
-     * Unique id of this provider.
-     * 
-     */
+        /**
+         * @return Unique id of this provider.
+         * 
+         */
     private final @Nullable String providerId;
-    /**
-     * The sku associated with pricing information for this provider.
-     * 
-     */
+        /**
+         * @return The sku associated with pricing information for this provider.
+         * 
+         */
     private final @Nullable String providerSku;
-    /**
-     * Provisioning status field
-     * 
-     */
+        /**
+         * @return Provisioning status field
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Id to track resource usage for the provider.
-     * 
-     */
+        /**
+         * @return Id to track resource usage for the provider.
+         * 
+         */
     private final @Nullable String resourceUsageId;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ProviderResponse {
     }
 
     /**
-     * The provider&#39;s marketplace application display name.
+     * @return The provider&#39;s marketplace application display name.
      * 
-    */
+     */
     public Optional<String> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
     /**
-     * A Uri identifying the specific instance of this provider.
+     * @return A Uri identifying the specific instance of this provider.
      * 
-    */
+     */
     public Optional<String> instanceUri() {
         return Optional.ofNullable(this.instanceUri);
     }
     /**
-     * Unique id of this provider.
+     * @return Unique id of this provider.
      * 
-    */
+     */
     public Optional<String> providerId() {
         return Optional.ofNullable(this.providerId);
     }
     /**
-     * The sku associated with pricing information for this provider.
+     * @return The sku associated with pricing information for this provider.
      * 
-    */
+     */
     public Optional<String> providerSku() {
         return Optional.ofNullable(this.providerSku);
     }
     /**
-     * Provisioning status field
+     * @return Provisioning status field
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Id to track resource usage for the provider.
+     * @return Id to track resource usage for the provider.
      * 
-    */
+     */
     public Optional<String> resourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }

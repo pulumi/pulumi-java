@@ -16,46 +16,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CosmosDbMongoDbApiLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
-     */
+        /**
+         * @return The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         */
     private final Object connectionString;
-    /**
-     * The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object database;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object isServerVersionAbove32;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;CosmosDbMongoDbApi&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;CosmosDbMongoDbApi&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -79,59 +79,59 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return The CosmosDB (MongoDB API) connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Object connectionString() {
         return this.connectionString;
     }
     /**
-     * The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
+     * @return The name of the CosmosDB (MongoDB API) database that you want to access. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object database() {
         return this.database;
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Whether the CosmosDB (MongoDB API) server version is higher than 3.2. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> isServerVersionAbove32() {
         return Optional.ofNullable(this.isServerVersionAbove32);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;CosmosDbMongoDbApi&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

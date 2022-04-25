@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetNotebookWorkspaceResult {
-    /**
-     * The unique resource identifier of the database account.
-     * 
-     */
+        /**
+         * @return The unique resource identifier of the database account.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the database account.
-     * 
-     */
+        /**
+         * @return The name of the database account.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the endpoint of Notebook server.
-     * 
-     */
+        /**
+         * @return Specifies the endpoint of Notebook server.
+         * 
+         */
     private final String notebookServerEndpoint;
-    /**
-     * Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
-     * 
-     */
+        /**
+         * @return Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
+         * 
+         */
     private final String status;
-    /**
-     * The type of Azure resource.
-     * 
-     */
+        /**
+         * @return The type of Azure resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetNotebookWorkspaceResult {
     }
 
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the endpoint of Notebook server.
+     * @return Specifies the endpoint of Notebook server.
      * 
-    */
+     */
     public String notebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
     /**
-     * Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
+     * @return Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

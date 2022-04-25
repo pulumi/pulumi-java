@@ -26,6 +26,10 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
     @Import(name="certificateThumbprint")
     private @Nullable String certificateThumbprint;
 
+    /**
+     * @return If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+     * 
+     */
     public Optional<String> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
@@ -37,6 +41,10 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
     @Import(name="value")
     private @Nullable Object value;
 
+    /**
+     * @return The parameter value
+     * 
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,11 +74,23 @@ public final class WebServiceParameterResponse extends com.pulumi.resources.Invo
             $ = new WebServiceParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateThumbprint If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param value The parameter value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Object value) {
             $.value = value;
             return this;

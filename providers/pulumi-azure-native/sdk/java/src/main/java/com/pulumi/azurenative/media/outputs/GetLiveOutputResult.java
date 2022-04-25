@@ -13,70 +13,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLiveOutputResult {
-    /**
-     * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
-     * 
-     */
+        /**
+         * @return ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
+         * 
+         */
     private final String archiveWindowLength;
-    /**
-     * The asset that the live output will write to.
-     * 
-     */
+        /**
+         * @return The asset that the live output will write to.
+         * 
+         */
     private final String assetName;
-    /**
-     * The creation time the live output.
-     * 
-     */
+        /**
+         * @return The creation time the live output.
+         * 
+         */
     private final String created;
-    /**
-     * The description of the live output.
-     * 
-     */
+        /**
+         * @return The description of the live output.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * HTTP Live Streaming (HLS) packing setting for the live output.
-     * 
-     */
+        /**
+         * @return HTTP Live Streaming (HLS) packing setting for the live output.
+         * 
+         */
     private final @Nullable HlsResponse hls;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The time the live output was last modified.
-     * 
-     */
+        /**
+         * @return The time the live output was last modified.
+         * 
+         */
     private final String lastModified;
-    /**
-     * The manifest file name. If not provided, the service will generate one automatically.
-     * 
-     */
+        /**
+         * @return The manifest file name. If not provided, the service will generate one automatically.
+         * 
+         */
     private final @Nullable String manifestName;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The initial timestamp that the live output will start at, any content before this value will not be archived.
-     * 
-     */
+        /**
+         * @return The initial timestamp that the live output will start at, any content before this value will not be archived.
+         * 
+         */
     private final @Nullable Double outputSnapTime;
-    /**
-     * The provisioning state of the live output.
-     * 
-     */
+        /**
+         * @return The provisioning state of the live output.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource state of the live output.
-     * 
-     */
+        /**
+         * @return The resource state of the live output.
+         * 
+         */
     private final String resourceState;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -110,93 +110,93 @@ public final class GetLiveOutputResult {
     }
 
     /**
-     * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
+     * @return ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
      * 
-    */
+     */
     public String archiveWindowLength() {
         return this.archiveWindowLength;
     }
     /**
-     * The asset that the live output will write to.
+     * @return The asset that the live output will write to.
      * 
-    */
+     */
     public String assetName() {
         return this.assetName;
     }
     /**
-     * The creation time the live output.
+     * @return The creation time the live output.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * The description of the live output.
+     * @return The description of the live output.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * HTTP Live Streaming (HLS) packing setting for the live output.
+     * @return HTTP Live Streaming (HLS) packing setting for the live output.
      * 
-    */
+     */
     public Optional<HlsResponse> hls() {
         return Optional.ofNullable(this.hls);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The time the live output was last modified.
+     * @return The time the live output was last modified.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The manifest file name. If not provided, the service will generate one automatically.
+     * @return The manifest file name. If not provided, the service will generate one automatically.
      * 
-    */
+     */
     public Optional<String> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The initial timestamp that the live output will start at, any content before this value will not be archived.
+     * @return The initial timestamp that the live output will start at, any content before this value will not be archived.
      * 
-    */
+     */
     public Optional<Double> outputSnapTime() {
         return Optional.ofNullable(this.outputSnapTime);
     }
     /**
-     * The provisioning state of the live output.
+     * @return The provisioning state of the live output.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource state of the live output.
+     * @return The resource state of the live output.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

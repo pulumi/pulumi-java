@@ -19,6 +19,10 @@ public final class GetLogProfileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="logProfileName", required=true)
     private String logProfileName;
 
+    /**
+     * @return The name of the log profile.
+     * 
+     */
     public String logProfileName() {
         return this.logProfileName;
     }
@@ -47,6 +51,12 @@ public final class GetLogProfileArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLogProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logProfileName The name of the log profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logProfileName(String logProfileName) {
             $.logProfileName = logProfileName;
             return this;

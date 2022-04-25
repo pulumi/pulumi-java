@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ShareCredentialDetailsResponse {
-    /**
-     * Password for the share.
-     * 
-     */
+        /**
+         * @return Password for the share.
+         * 
+         */
     private final String password;
-    /**
-     * Name of the share.
-     * 
-     */
+        /**
+         * @return Name of the share.
+         * 
+         */
     private final String shareName;
-    /**
-     * Type of the share.
-     * 
-     */
+        /**
+         * @return Type of the share.
+         * 
+         */
     private final String shareType;
-    /**
-     * Access protocols supported on the device.
-     * 
-     */
+        /**
+         * @return Access protocols supported on the device.
+         * 
+         */
     private final List<String> supportedAccessProtocols;
-    /**
-     * User name for the share.
-     * 
-     */
+        /**
+         * @return User name for the share.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class ShareCredentialDetailsResponse {
     }
 
     /**
-     * Password for the share.
+     * @return Password for the share.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Name of the share.
+     * @return Name of the share.
      * 
-    */
+     */
     public String shareName() {
         return this.shareName;
     }
     /**
-     * Type of the share.
+     * @return Type of the share.
      * 
-    */
+     */
     public String shareType() {
         return this.shareType;
     }
     /**
-     * Access protocols supported on the device.
+     * @return Access protocols supported on the device.
      * 
-    */
+     */
     public List<String> supportedAccessProtocols() {
         return this.supportedAccessProtocols;
     }
     /**
-     * User name for the share.
+     * @return User name for the share.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

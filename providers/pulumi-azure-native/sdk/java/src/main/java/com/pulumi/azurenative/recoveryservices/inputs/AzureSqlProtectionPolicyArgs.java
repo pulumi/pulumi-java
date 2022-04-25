@@ -32,6 +32,11 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="backupManagementType", required=true)
     private Output<String> backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;AzureSql&#39;.
+     * 
+     */
     public Output<String> backupManagementType() {
         return this.backupManagementType;
     }
@@ -43,6 +48,10 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="protectedItemsCount")
     private @Nullable Output<Integer> protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Output<Integer>> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -54,6 +63,10 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
     @Import(name="retentionPolicy")
     private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
+    /**
+     * @return Retention policy details.
+     * 
+     */
     public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -84,37 +97,87 @@ public final class AzureSqlProtectionPolicyArgs extends com.pulumi.resources.Res
             $ = new AzureSqlProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureSql&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Output<String> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureSql&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(Integer protectedItemsCount) {
             return protectedItemsCount(Output.of(protectedItemsCount));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }

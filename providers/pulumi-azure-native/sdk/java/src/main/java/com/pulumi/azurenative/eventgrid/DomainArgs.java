@@ -30,6 +30,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
     private @Nullable Output<String> domainName;
 
+    /**
+     * @return Name of the domain.
+     * 
+     */
     public Optional<Output<String>> domainName() {
         return Optional.ofNullable(this.domainName);
     }
@@ -41,6 +45,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inboundIpRules")
     private @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
+    /**
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * 
+     */
     public Optional<Output<List<InboundIpRuleArgs>>> inboundIpRules() {
         return Optional.ofNullable(this.inboundIpRules);
     }
@@ -52,6 +60,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputSchema")
     private @Nullable Output<Either<String,InputSchema>> inputSchema;
 
+    /**
+     * @return This determines the format that Event Grid should expect for incoming events published to the domain.
+     * 
+     */
     public Optional<Output<Either<String,InputSchema>>> inputSchema() {
         return Optional.ofNullable(this.inputSchema);
     }
@@ -63,6 +75,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputSchemaMapping")
     private @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
+    /**
+     * @return Information about the InputSchemaMapping which specified the info about mapping event payload.
+     * 
+     */
     public Optional<Output<JsonInputSchemaMappingArgs>> inputSchemaMapping() {
         return Optional.ofNullable(this.inputSchemaMapping);
     }
@@ -74,6 +90,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -86,6 +106,11 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -97,6 +122,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +137,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -143,94 +176,224 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(@Nullable Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName Name of the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
             $.inboundIpRules = inboundIpRules;
             return this;
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(List<InboundIpRuleArgs> inboundIpRules) {
             return inboundIpRules(Output.of(inboundIpRules));
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
             return inboundIpRules(List.of(inboundIpRules));
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(@Nullable Output<Either<String,InputSchema>> inputSchema) {
             $.inputSchema = inputSchema;
             return this;
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(Either<String,InputSchema> inputSchema) {
             return inputSchema(Output.of(inputSchema));
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(String inputSchema) {
             return inputSchema(Either.ofLeft(inputSchema));
         }
 
+        /**
+         * @param inputSchema This determines the format that Event Grid should expect for incoming events published to the domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchema(InputSchema inputSchema) {
             return inputSchema(Either.ofRight(inputSchema));
         }
 
+        /**
+         * @param inputSchemaMapping Information about the InputSchemaMapping which specified the info about mapping event payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
             $.inputSchemaMapping = inputSchemaMapping;
             return this;
         }
 
+        /**
+         * @param inputSchemaMapping Information about the InputSchemaMapping which specified the info about mapping event payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputSchemaMapping(JsonInputSchemaMappingArgs inputSchemaMapping) {
             return inputSchemaMapping(Output.of(inputSchemaMapping));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

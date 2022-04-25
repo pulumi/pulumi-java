@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBuildServiceResourceUploadUrlResult {
-    /**
-     * Source relative path
-     * 
-     */
+        /**
+         * @return Source relative path
+         * 
+         */
     private final @Nullable String relativePath;
-    /**
-     * Upload URL
-     * 
-     */
+        /**
+         * @return Upload URL
+         * 
+         */
     private final @Nullable String uploadUrl;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetBuildServiceResourceUploadUrlResult {
     }
 
     /**
-     * Source relative path
+     * @return Source relative path
      * 
-    */
+     */
     public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
-     * Upload URL
+     * @return Upload URL
      * 
-    */
+     */
     public Optional<String> uploadUrl() {
         return Optional.ofNullable(this.uploadUrl);
     }

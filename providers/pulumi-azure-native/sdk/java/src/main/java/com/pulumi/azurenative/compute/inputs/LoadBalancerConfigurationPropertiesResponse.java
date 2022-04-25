@@ -20,6 +20,10 @@ public final class LoadBalancerConfigurationPropertiesResponse extends com.pulum
     @Import(name="frontendIPConfigurations", required=true)
     private List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
+    /**
+     * @return Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+     * 
+     */
     public List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
@@ -48,11 +52,23 @@ public final class LoadBalancerConfigurationPropertiesResponse extends com.pulum
             $ = new LoadBalancerConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frontendIPConfigurations Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(LoadBalancerFrontendIPConfigurationResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }

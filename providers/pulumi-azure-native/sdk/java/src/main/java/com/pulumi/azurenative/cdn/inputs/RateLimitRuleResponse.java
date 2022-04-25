@@ -28,6 +28,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Describes what action to be applied when rule matches
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -39,6 +43,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="enabledState")
     private @Nullable String enabledState;
 
+    /**
+     * @return Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -50,6 +58,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="matchConditions", required=true)
     private List<MatchConditionResponse> matchConditions;
 
+    /**
+     * @return List of match conditions.
+     * 
+     */
     public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
@@ -61,6 +73,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Defines the name of the custom rule
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return Defines in what order this rule be evaluated in the overall list of custom rules
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -83,6 +103,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rateLimitDurationInMinutes", required=true)
     private Integer rateLimitDurationInMinutes;
 
+    /**
+     * @return Defines rate limit duration. Default is 1 minute.
+     * 
+     */
     public Integer rateLimitDurationInMinutes() {
         return this.rateLimitDurationInMinutes;
     }
@@ -94,6 +118,10 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rateLimitThreshold", required=true)
     private Integer rateLimitThreshold;
 
+    /**
+     * @return Defines rate limit threshold.
+     * 
+     */
     public Integer rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
@@ -128,40 +156,88 @@ public final class RateLimitRuleResponse extends com.pulumi.resources.InvokeArgs
             $ = new RateLimitRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Describes what action to be applied when rule matches
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable String enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(MatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param name Defines the name of the custom rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Defines in what order this rule be evaluated in the overall list of custom rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param rateLimitDurationInMinutes Defines rate limit duration. Default is 1 minute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
             $.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
 
+        /**
+         * @param rateLimitThreshold Defines rate limit threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rateLimitThreshold(Integer rateLimitThreshold) {
             $.rateLimitThreshold = rateLimitThreshold;
             return this;

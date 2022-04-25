@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureTableOutputDataSourceResponse {
-    /**
-     * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String accountKey;
-    /**
-     * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String accountName;
-    /**
-     * The number of rows to write to the Azure Table at a time.
-     * 
-     */
+        /**
+         * @return The number of rows to write to the Azure Table at a time.
+         * 
+         */
     private final @Nullable Integer batchSize;
-    /**
-     * If specified, each item in the array is the name of a column to remove (if present) from output event entities.
-     * 
-     */
+        /**
+         * @return If specified, each item in the array is the name of a column to remove (if present) from output event entities.
+         * 
+         */
     private final @Nullable List<String> columnsToRemove;
-    /**
-     * This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String partitionKey;
-    /**
-     * This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String rowKey;
-    /**
-     * The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String table;
-    /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;Microsoft.Storage/Table&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Storage/Table&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,59 +76,59 @@ public final class AzureTableOutputDataSourceResponse {
     }
 
     /**
-     * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * @return The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
-     * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * The number of rows to write to the Azure Table at a time.
+     * @return The number of rows to write to the Azure Table at a time.
      * 
-    */
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
-     * If specified, each item in the array is the name of a column to remove (if present) from output event entities.
+     * @return If specified, each item in the array is the name of a column to remove (if present) from output event entities.
      * 
-    */
+     */
     public List<String> columnsToRemove() {
         return this.columnsToRemove == null ? List.of() : this.columnsToRemove;
     }
     /**
-     * This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+     * @return This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
-     * This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
+     * @return This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> rowKey() {
         return Optional.ofNullable(this.rowKey);
     }
     /**
-     * The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> table() {
         return Optional.ofNullable(this.table);
     }
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.Storage/Table&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

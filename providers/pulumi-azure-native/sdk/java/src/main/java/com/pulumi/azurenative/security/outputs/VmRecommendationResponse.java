@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VmRecommendationResponse {
-    /**
-     * The configuration status of the machines group or machine or rule
-     * 
-     */
+        /**
+         * @return The configuration status of the machines group or machine or rule
+         * 
+         */
     private final @Nullable String configurationStatus;
-    /**
-     * The machine supportability of Enforce feature
-     * 
-     */
+        /**
+         * @return The machine supportability of Enforce feature
+         * 
+         */
     private final @Nullable String enforcementSupport;
-    /**
-     * The recommendation action of the machine or rule
-     * 
-     */
+        /**
+         * @return The recommendation action of the machine or rule
+         * 
+         */
     private final @Nullable String recommendationAction;
-    /**
-     * The full resource id of the machine
-     * 
-     */
+        /**
+         * @return The full resource id of the machine
+         * 
+         */
     private final @Nullable String resourceId;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class VmRecommendationResponse {
     }
 
     /**
-     * The configuration status of the machines group or machine or rule
+     * @return The configuration status of the machines group or machine or rule
      * 
-    */
+     */
     public Optional<String> configurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
     /**
-     * The machine supportability of Enforce feature
+     * @return The machine supportability of Enforce feature
      * 
-    */
+     */
     public Optional<String> enforcementSupport() {
         return Optional.ofNullable(this.enforcementSupport);
     }
     /**
-     * The recommendation action of the machine or rule
+     * @return The recommendation action of the machine or rule
      * 
-    */
+     */
     public Optional<String> recommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
     /**
-     * The full resource id of the machine
+     * @return The full resource id of the machine
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

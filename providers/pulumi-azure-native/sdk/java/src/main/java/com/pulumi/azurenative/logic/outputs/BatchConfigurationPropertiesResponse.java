@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BatchConfigurationPropertiesResponse {
-    /**
-     * The name of the batch group.
-     * 
-     */
+        /**
+         * @return The name of the batch group.
+         * 
+         */
     private final String batchGroupName;
-    /**
-     * The artifact changed time.
-     * 
-     */
+        /**
+         * @return The artifact changed time.
+         * 
+         */
     private final @Nullable String changedTime;
-    /**
-     * The artifact creation time.
-     * 
-     */
+        /**
+         * @return The artifact creation time.
+         * 
+         */
     private final @Nullable String createdTime;
     private final @Nullable Object metadata;
-    /**
-     * The batch release criteria.
-     * 
-     */
+        /**
+         * @return The batch release criteria.
+         * 
+         */
     private final BatchReleaseCriteriaResponse releaseCriteria;
 
     @CustomType.Constructor
@@ -50,23 +50,23 @@ public final class BatchConfigurationPropertiesResponse {
     }
 
     /**
-     * The name of the batch group.
+     * @return The name of the batch group.
      * 
-    */
+     */
     public String batchGroupName() {
         return this.batchGroupName;
     }
     /**
-     * The artifact changed time.
+     * @return The artifact changed time.
      * 
-    */
+     */
     public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
     /**
-     * The artifact creation time.
+     * @return The artifact creation time.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -74,9 +74,9 @@ public final class BatchConfigurationPropertiesResponse {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The batch release criteria.
+     * @return The batch release criteria.
      * 
-    */
+     */
     public BatchReleaseCriteriaResponse releaseCriteria() {
         return this.releaseCriteria;
     }

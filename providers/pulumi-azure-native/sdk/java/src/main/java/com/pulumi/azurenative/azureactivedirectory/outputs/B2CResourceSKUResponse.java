@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class B2CResourceSKUResponse {
-    /**
-     * The name of the SKU for the tenant.
-     * 
-     */
+        /**
+         * @return The name of the SKU for the tenant.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The tier of the tenant.
-     * 
-     */
+        /**
+         * @return The tier of the tenant.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class B2CResourceSKUResponse {
     }
 
     /**
-     * The name of the SKU for the tenant.
+     * @return The name of the SKU for the tenant.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The tier of the tenant.
+     * @return The tier of the tenant.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

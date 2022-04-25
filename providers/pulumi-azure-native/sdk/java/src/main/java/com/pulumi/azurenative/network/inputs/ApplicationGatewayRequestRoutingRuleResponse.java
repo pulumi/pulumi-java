@@ -27,6 +27,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="backendAddressPool")
     private @Nullable SubResourceResponse backendAddressPool;
 
+    /**
+     * @return Backend address pool resource of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="backendHttpSettings")
     private @Nullable SubResourceResponse backendHttpSettings;
 
+    /**
+     * @return Backend http settings resource of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> backendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -60,6 +72,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="httpListener")
     private @Nullable SubResourceResponse httpListener;
 
+    /**
+     * @return Http listener resource of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> httpListener() {
         return Optional.ofNullable(this.httpListener);
     }
@@ -71,6 +87,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -82,6 +102,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the request routing rule that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -93,6 +117,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Priority of the request routing rule.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -104,6 +132,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the request routing rule resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -115,6 +147,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="redirectConfiguration")
     private @Nullable SubResourceResponse redirectConfiguration;
 
+    /**
+     * @return Redirect configuration resource of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> redirectConfiguration() {
         return Optional.ofNullable(this.redirectConfiguration);
     }
@@ -126,6 +162,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="rewriteRuleSet")
     private @Nullable SubResourceResponse rewriteRuleSet;
 
+    /**
+     * @return Rewrite Rule Set resource in Basic rule of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> rewriteRuleSet() {
         return Optional.ofNullable(this.rewriteRuleSet);
     }
@@ -137,6 +177,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="ruleType")
     private @Nullable String ruleType;
 
+    /**
+     * @return Rule type.
+     * 
+     */
     public Optional<String> ruleType() {
         return Optional.ofNullable(this.ruleType);
     }
@@ -148,6 +192,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -159,6 +207,10 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
     @Import(name="urlPathMap")
     private @Nullable SubResourceResponse urlPathMap;
 
+    /**
+     * @return URL path map resource of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> urlPathMap() {
         return Optional.ofNullable(this.urlPathMap);
     }
@@ -199,66 +251,144 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends com.pulu
             $ = new ApplicationGatewayRequestRoutingRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddressPool Backend address pool resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
             $.backendAddressPool = backendAddressPool;
             return this;
         }
 
+        /**
+         * @param backendHttpSettings Backend http settings resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
             $.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param httpListener Http listener resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpListener(@Nullable SubResourceResponse httpListener) {
             $.httpListener = httpListener;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the request routing rule that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Priority of the request routing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the request routing rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param redirectConfiguration Redirect configuration resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
             $.redirectConfiguration = redirectConfiguration;
             return this;
         }
 
+        /**
+         * @param rewriteRuleSet Rewrite Rule Set resource in Basic rule of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
             $.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
 
+        /**
+         * @param ruleType Rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(@Nullable String ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param urlPathMap URL path map resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMap(@Nullable SubResourceResponse urlPathMap) {
             $.urlPathMap = urlPathMap;
             return this;

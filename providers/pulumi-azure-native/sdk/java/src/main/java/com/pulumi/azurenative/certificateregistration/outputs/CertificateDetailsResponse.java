@@ -10,50 +10,50 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateDetailsResponse {
-    /**
-     * Certificate Issuer.
-     * 
-     */
+        /**
+         * @return Certificate Issuer.
+         * 
+         */
     private final String issuer;
-    /**
-     * Date Certificate is valid to.
-     * 
-     */
+        /**
+         * @return Date Certificate is valid to.
+         * 
+         */
     private final String notAfter;
-    /**
-     * Date Certificate is valid from.
-     * 
-     */
+        /**
+         * @return Date Certificate is valid from.
+         * 
+         */
     private final String notBefore;
-    /**
-     * Raw certificate data.
-     * 
-     */
+        /**
+         * @return Raw certificate data.
+         * 
+         */
     private final String rawData;
-    /**
-     * Certificate Serial Number.
-     * 
-     */
+        /**
+         * @return Certificate Serial Number.
+         * 
+         */
     private final String serialNumber;
-    /**
-     * Certificate Signature algorithm.
-     * 
-     */
+        /**
+         * @return Certificate Signature algorithm.
+         * 
+         */
     private final String signatureAlgorithm;
-    /**
-     * Certificate Subject.
-     * 
-     */
+        /**
+         * @return Certificate Subject.
+         * 
+         */
     private final String subject;
-    /**
-     * Certificate Thumbprint.
-     * 
-     */
+        /**
+         * @return Certificate Thumbprint.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * Certificate Version.
-     * 
-     */
+        /**
+         * @return Certificate Version.
+         * 
+         */
     private final Integer version;
 
     @CustomType.Constructor
@@ -79,65 +79,65 @@ public final class CertificateDetailsResponse {
     }
 
     /**
-     * Certificate Issuer.
+     * @return Certificate Issuer.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * Date Certificate is valid to.
+     * @return Date Certificate is valid to.
      * 
-    */
+     */
     public String notAfter() {
         return this.notAfter;
     }
     /**
-     * Date Certificate is valid from.
+     * @return Date Certificate is valid from.
      * 
-    */
+     */
     public String notBefore() {
         return this.notBefore;
     }
     /**
-     * Raw certificate data.
+     * @return Raw certificate data.
      * 
-    */
+     */
     public String rawData() {
         return this.rawData;
     }
     /**
-     * Certificate Serial Number.
+     * @return Certificate Serial Number.
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
     /**
-     * Certificate Signature algorithm.
+     * @return Certificate Signature algorithm.
      * 
-    */
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
     /**
-     * Certificate Subject.
+     * @return Certificate Subject.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * Certificate Thumbprint.
+     * @return Certificate Thumbprint.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Certificate Version.
+     * @return Certificate Version.
      * 
-    */
+     */
     public Integer version() {
         return this.version;
     }

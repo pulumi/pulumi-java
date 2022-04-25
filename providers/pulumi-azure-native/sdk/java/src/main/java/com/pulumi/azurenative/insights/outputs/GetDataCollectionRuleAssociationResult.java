@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDataCollectionRuleAssociationResult {
-    /**
-     * The resource ID of the data collection rule that is to be associated.
-     * 
-     */
+        /**
+         * @return The resource ID of the data collection rule that is to be associated.
+         * 
+         */
     private final @Nullable String dataCollectionRuleId;
-    /**
-     * Description of the association.
-     * 
-     */
+        /**
+         * @return Description of the association.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource entity tag (ETag).
-     * 
-     */
+        /**
+         * @return Resource entity tag (ETag).
+         * 
+         */
     private final String etag;
-    /**
-     * Fully qualified ID of the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The resource provisioning state.
-     * 
-     */
+        /**
+         * @return The resource provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetDataCollectionRuleAssociationResult {
     }
 
     /**
-     * The resource ID of the data collection rule that is to be associated.
+     * @return The resource ID of the data collection rule that is to be associated.
      * 
-    */
+     */
     public Optional<String> dataCollectionRuleId() {
         return Optional.ofNullable(this.dataCollectionRuleId);
     }
     /**
-     * Description of the association.
+     * @return Description of the association.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource entity tag (ETag).
+     * @return Resource entity tag (ETag).
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified ID of the resource.
+     * @return Fully qualified ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource provisioning state.
+     * @return The resource provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

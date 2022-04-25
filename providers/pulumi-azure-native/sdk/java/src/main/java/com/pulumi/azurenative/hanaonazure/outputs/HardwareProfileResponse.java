@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class HardwareProfileResponse {
-    /**
-     * Specifies the HANA instance SKU.
-     * 
-     */
+        /**
+         * @return Specifies the HANA instance SKU.
+         * 
+         */
     private final String hanaInstanceSize;
-    /**
-     * Name of the hardware type (vendor and/or their product name)
-     * 
-     */
+        /**
+         * @return Name of the hardware type (vendor and/or their product name)
+         * 
+         */
     private final String hardwareType;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class HardwareProfileResponse {
     }
 
     /**
-     * Specifies the HANA instance SKU.
+     * @return Specifies the HANA instance SKU.
      * 
-    */
+     */
     public String hanaInstanceSize() {
         return this.hanaInstanceSize;
     }
     /**
-     * Name of the hardware type (vendor and/or their product name)
+     * @return Name of the hardware type (vendor and/or their product name)
      * 
-    */
+     */
     public String hardwareType() {
         return this.hardwareType;
     }

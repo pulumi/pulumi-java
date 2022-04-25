@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpnGatewayIpConfigurationResponse {
-    /**
-     * The identifier of the IP configuration for a VPN Gateway.
-     * 
-     */
+        /**
+         * @return The identifier of the IP configuration for a VPN Gateway.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The private IP address of this IP configuration.
-     * 
-     */
+        /**
+         * @return The private IP address of this IP configuration.
+         * 
+         */
     private final @Nullable String privateIpAddress;
-    /**
-     * The public IP address of this IP configuration.
-     * 
-     */
+        /**
+         * @return The public IP address of this IP configuration.
+         * 
+         */
     private final @Nullable String publicIpAddress;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class VpnGatewayIpConfigurationResponse {
     }
 
     /**
-     * The identifier of the IP configuration for a VPN Gateway.
+     * @return The identifier of the IP configuration for a VPN Gateway.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The private IP address of this IP configuration.
+     * @return The private IP address of this IP configuration.
      * 
-    */
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
-     * The public IP address of this IP configuration.
+     * @return The public IP address of this IP configuration.
      * 
-    */
+     */
     public Optional<String> publicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }

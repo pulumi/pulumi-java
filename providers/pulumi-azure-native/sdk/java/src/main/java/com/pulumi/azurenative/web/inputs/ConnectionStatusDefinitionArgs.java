@@ -27,6 +27,10 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
     @Import(name="error")
     private @Nullable Output<ConnectionErrorArgs> error;
 
+    /**
+     * @return Connection error
+     * 
+     */
     public Optional<Output<ConnectionErrorArgs>> error() {
         return Optional.ofNullable(this.error);
     }
@@ -38,6 +42,10 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
     @Import(name="status")
     private @Nullable Output<String> status;
 
+    /**
+     * @return The gateway status
+     * 
+     */
     public Optional<Output<String>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -49,6 +57,10 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Target of the error
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -79,29 +91,65 @@ public final class ConnectionStatusDefinitionArgs extends com.pulumi.resources.R
             $ = new ConnectionStatusDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Connection error
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable Output<ConnectionErrorArgs> error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param error Connection error
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ConnectionErrorArgs error) {
             return error(Output.of(error));
         }
 
+        /**
+         * @param status The gateway status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The gateway status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param target Target of the error
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Target of the error
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

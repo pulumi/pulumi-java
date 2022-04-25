@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkloadInquiryDetailsResponse {
-    /**
-     * Inquiry validation such as permissions and other backup validations.
-     * 
-     */
+        /**
+         * @return Inquiry validation such as permissions and other backup validations.
+         * 
+         */
     private final @Nullable InquiryValidationResponse inquiryValidation;
-    /**
-     * Contains the protectable item Count inside this Container.
-     * 
-     */
+        /**
+         * @return Contains the protectable item Count inside this Container.
+         * 
+         */
     private final @Nullable Double itemCount;
-    /**
-     * Type of the Workload such as SQL, Oracle etc.
-     * 
-     */
+        /**
+         * @return Type of the Workload such as SQL, Oracle etc.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class WorkloadInquiryDetailsResponse {
     }
 
     /**
-     * Inquiry validation such as permissions and other backup validations.
+     * @return Inquiry validation such as permissions and other backup validations.
      * 
-    */
+     */
     public Optional<InquiryValidationResponse> inquiryValidation() {
         return Optional.ofNullable(this.inquiryValidation);
     }
     /**
-     * Contains the protectable item Count inside this Container.
+     * @return Contains the protectable item Count inside this Container.
      * 
-    */
+     */
     public Optional<Double> itemCount() {
         return Optional.ofNullable(this.itemCount);
     }
     /**
-     * Type of the Workload such as SQL, Oracle etc.
+     * @return Type of the Workload such as SQL, Oracle etc.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

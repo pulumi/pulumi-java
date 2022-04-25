@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationGroupResponse {
-    /**
-     * Network group conditional filter.
-     * 
-     */
+        /**
+         * @return Network group conditional filter.
+         * 
+         */
     private final @Nullable String conditionalMembership;
-    /**
-     * A description of the network group.
-     * 
-     */
+        /**
+         * @return A description of the network group.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A friendly name for the network group.
-     * 
-     */
+        /**
+         * @return A friendly name for the network group.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Group members of network group.
-     * 
-     */
+        /**
+         * @return Group members of network group.
+         * 
+         */
     private final @Nullable List<GroupMembersItemResponse> groupMembers;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Group member type.
-     * 
-     */
+        /**
+         * @return Group member type.
+         * 
+         */
     private final @Nullable String memberType;
-    /**
-     * The provisioning state of the scope assignment resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the scope assignment resource.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class ConfigurationGroupResponse {
     }
 
     /**
-     * Network group conditional filter.
+     * @return Network group conditional filter.
      * 
-    */
+     */
     public Optional<String> conditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
     /**
-     * A description of the network group.
+     * @return A description of the network group.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A friendly name for the network group.
+     * @return A friendly name for the network group.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Group members of network group.
+     * @return Group members of network group.
      * 
-    */
+     */
     public List<GroupMembersItemResponse> groupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Group member type.
+     * @return Group member type.
      * 
-    */
+     */
     public Optional<String> memberType() {
         return Optional.ofNullable(this.memberType);
     }
     /**
-     * The provisioning state of the scope assignment resource.
+     * @return The provisioning state of the scope assignment resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

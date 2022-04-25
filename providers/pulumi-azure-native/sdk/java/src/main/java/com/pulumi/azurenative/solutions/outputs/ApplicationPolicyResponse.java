@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationPolicyResponse {
-    /**
-     * The policy name
-     * 
-     */
+        /**
+         * @return The policy name
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The policy parameters.
-     * 
-     */
+        /**
+         * @return The policy parameters.
+         * 
+         */
     private final @Nullable String parameters;
-    /**
-     * The policy definition Id.
-     * 
-     */
+        /**
+         * @return The policy definition Id.
+         * 
+         */
     private final @Nullable String policyDefinitionId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ApplicationPolicyResponse {
     }
 
     /**
-     * The policy name
+     * @return The policy name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The policy parameters.
+     * @return The policy parameters.
      * 
-    */
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * The policy definition Id.
+     * @return The policy definition Id.
      * 
-    */
+     */
     public Optional<String> policyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }

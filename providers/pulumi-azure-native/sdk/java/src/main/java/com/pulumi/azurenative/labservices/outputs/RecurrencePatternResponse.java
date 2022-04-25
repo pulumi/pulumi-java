@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecurrencePatternResponse {
-    /**
-     * When the recurrence will expire. This date is inclusive.
-     * 
-     */
+        /**
+         * @return When the recurrence will expire. This date is inclusive.
+         * 
+         */
     private final String expirationDate;
-    /**
-     * The frequency of the recurrence.
-     * 
-     */
+        /**
+         * @return The frequency of the recurrence.
+         * 
+         */
     private final String frequency;
-    /**
-     * The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
-     * 
-     */
+        /**
+         * @return The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
+         * 
+         */
     private final @Nullable Integer interval;
-    /**
-     * The week days the schedule runs. Used for when the Frequency is set to Weekly.
-     * 
-     */
+        /**
+         * @return The week days the schedule runs. Used for when the Frequency is set to Weekly.
+         * 
+         */
     private final @Nullable List<String> weekDays;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class RecurrencePatternResponse {
     }
 
     /**
-     * When the recurrence will expire. This date is inclusive.
+     * @return When the recurrence will expire. This date is inclusive.
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * The frequency of the recurrence.
+     * @return The frequency of the recurrence.
      * 
-    */
+     */
     public String frequency() {
         return this.frequency;
     }
     /**
-     * The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
+     * @return The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * The week days the schedule runs. Used for when the Frequency is set to Weekly.
+     * @return The week days the schedule runs. Used for when the Frequency is set to Weekly.
      * 
-    */
+     */
     public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }

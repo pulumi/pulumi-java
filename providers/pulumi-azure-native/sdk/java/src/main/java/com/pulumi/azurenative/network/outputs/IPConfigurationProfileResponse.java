@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IPConfigurationProfileResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the resource. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the IP configuration profile resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the IP configuration profile resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The reference to the subnet resource to create a container network interface ip configuration.
-     * 
-     */
+        /**
+         * @return The reference to the subnet resource to create a container network interface ip configuration.
+         * 
+         */
     private final @Nullable SubnetResponse subnet;
-    /**
-     * Sub Resource type.
-     * 
-     */
+        /**
+         * @return Sub Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class IPConfigurationProfileResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource. This name can be used to access the resource.
+     * @return The name of the resource. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the IP configuration profile resource.
+     * @return The provisioning state of the IP configuration profile resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reference to the subnet resource to create a container network interface ip configuration.
+     * @return The reference to the subnet resource to create a container network interface ip configuration.
      * 
-    */
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

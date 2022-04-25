@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessReviewReviewerResponse {
-    /**
-     * The id of the reviewer(user/servicePrincipal)
-     * 
-     */
+        /**
+         * @return The id of the reviewer(user/servicePrincipal)
+         * 
+         */
     private final @Nullable String principalId;
-    /**
-     * The identity type : user/servicePrincipal
-     * 
-     */
+        /**
+         * @return The identity type : user/servicePrincipal
+         * 
+         */
     private final String principalType;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AccessReviewReviewerResponse {
     }
 
     /**
-     * The id of the reviewer(user/servicePrincipal)
+     * @return The id of the reviewer(user/servicePrincipal)
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
-     * The identity type : user/servicePrincipal
+     * @return The identity type : user/servicePrincipal
      * 
-    */
+     */
     public String principalType() {
         return this.principalType;
     }

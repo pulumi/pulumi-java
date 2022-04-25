@@ -10,56 +10,56 @@ import java.util.Objects;
 
 @CustomType
 public final class GetScheduledSynchronizationSettingResult {
-    /**
-     * Time at which the synchronization setting was created.
-     * 
-     */
+        /**
+         * @return Time at which the synchronization setting was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * The resource id of the azure resource
-     * 
-     */
+        /**
+         * @return The resource id of the azure resource
+         * 
+         */
     private final String id;
-    /**
-     * Kind of synchronization setting.
-     * Expected value is &#39;ScheduleBased&#39;.
-     * 
-     */
+        /**
+         * @return Kind of synchronization setting.
+         * Expected value is &#39;ScheduleBased&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the azure resource
-     * 
-     */
+        /**
+         * @return Name of the azure resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets or sets the provisioning state
-     * 
-     */
+        /**
+         * @return Gets or sets the provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Recurrence Interval
-     * 
-     */
+        /**
+         * @return Recurrence Interval
+         * 
+         */
     private final String recurrenceInterval;
-    /**
-     * Synchronization time
-     * 
-     */
+        /**
+         * @return Synchronization time
+         * 
+         */
     private final String synchronizationTime;
-    /**
-     * System Data of the Azure resource.
-     * 
-     */
+        /**
+         * @return System Data of the Azure resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Type of the azure resource
-     * 
-     */
+        /**
+         * @return Type of the azure resource
+         * 
+         */
     private final String type;
-    /**
-     * Name of the user who created the synchronization setting.
-     * 
-     */
+        /**
+         * @return Name of the user who created the synchronization setting.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -87,73 +87,73 @@ public final class GetScheduledSynchronizationSettingResult {
     }
 
     /**
-     * Time at which the synchronization setting was created.
+     * @return Time at which the synchronization setting was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of synchronization setting.
+     * @return Kind of synchronization setting.
      * Expected value is &#39;ScheduleBased&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the provisioning state
+     * @return Gets or sets the provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Recurrence Interval
+     * @return Recurrence Interval
      * 
-    */
+     */
     public String recurrenceInterval() {
         return this.recurrenceInterval;
     }
     /**
-     * Synchronization time
+     * @return Synchronization time
      * 
-    */
+     */
     public String synchronizationTime() {
         return this.synchronizationTime;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Name of the user who created the synchronization setting.
+     * @return Name of the user who created the synchronization setting.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

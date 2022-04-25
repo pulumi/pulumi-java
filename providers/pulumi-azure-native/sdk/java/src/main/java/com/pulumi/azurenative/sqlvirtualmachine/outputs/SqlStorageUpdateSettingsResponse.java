@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SqlStorageUpdateSettingsResponse {
-    /**
-     * Disk configuration to apply to SQL Server.
-     * 
-     */
+        /**
+         * @return Disk configuration to apply to SQL Server.
+         * 
+         */
     private final @Nullable String diskConfigurationType;
-    /**
-     * Virtual machine disk count.
-     * 
-     */
+        /**
+         * @return Virtual machine disk count.
+         * 
+         */
     private final @Nullable Integer diskCount;
-    /**
-     * Device id of the first disk to be updated.
-     * 
-     */
+        /**
+         * @return Device id of the first disk to be updated.
+         * 
+         */
     private final @Nullable Integer startingDeviceId;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class SqlStorageUpdateSettingsResponse {
     }
 
     /**
-     * Disk configuration to apply to SQL Server.
+     * @return Disk configuration to apply to SQL Server.
      * 
-    */
+     */
     public Optional<String> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
     /**
-     * Virtual machine disk count.
+     * @return Virtual machine disk count.
      * 
-    */
+     */
     public Optional<Integer> diskCount() {
         return Optional.ofNullable(this.diskCount);
     }
     /**
-     * Device id of the first disk to be updated.
+     * @return Device id of the first disk to be updated.
      * 
-    */
+     */
     public Optional<Integer> startingDeviceId() {
         return Optional.ofNullable(this.startingDeviceId);
     }

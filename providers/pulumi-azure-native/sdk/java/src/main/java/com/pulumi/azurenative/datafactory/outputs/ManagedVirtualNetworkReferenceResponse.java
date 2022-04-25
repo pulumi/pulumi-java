@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedVirtualNetworkReferenceResponse {
-    /**
-     * Reference ManagedVirtualNetwork name.
-     * 
-     */
+        /**
+         * @return Reference ManagedVirtualNetwork name.
+         * 
+         */
     private final String referenceName;
-    /**
-     * Managed Virtual Network reference type.
-     * 
-     */
+        /**
+         * @return Managed Virtual Network reference type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ManagedVirtualNetworkReferenceResponse {
     }
 
     /**
-     * Reference ManagedVirtualNetwork name.
+     * @return Reference ManagedVirtualNetwork name.
      * 
-    */
+     */
     public String referenceName() {
         return this.referenceName;
     }
     /**
-     * Managed Virtual Network reference type.
+     * @return Managed Virtual Network reference type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

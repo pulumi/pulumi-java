@@ -24,6 +24,10 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="ignoreCertificateNameMismatch", required=true)
     private Output<Boolean> ignoreCertificateNameMismatch;
 
+    /**
+     * @return Indicates whether to ignore mismatch in certificate name.
+     * 
+     */
     public Output<Boolean> ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
@@ -35,6 +39,10 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="keepHttpConnectionAlive", required=true)
     private Output<Boolean> keepHttpConnectionAlive;
 
+    /**
+     * @return Indicates whether to keep the connection alive.
+     * 
+     */
     public Output<Boolean> keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
@@ -46,6 +54,10 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="supportHttpStatusCodeContinue", required=true)
     private Output<Boolean> supportHttpStatusCodeContinue;
 
+    /**
+     * @return Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
+     * 
+     */
     public Output<Boolean> supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
@@ -57,6 +69,10 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
     @Import(name="unfoldHttpHeaders", required=true)
     private Output<Boolean> unfoldHttpHeaders;
 
+    /**
+     * @return Indicates whether to unfold the HTTP headers.
+     * 
+     */
     public Output<Boolean> unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
@@ -88,38 +104,86 @@ public final class AS2AcknowledgementConnectionSettingsArgs extends com.pulumi.r
             $ = new AS2AcknowledgementConnectionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreCertificateNameMismatch Indicates whether to ignore mismatch in certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCertificateNameMismatch(Output<Boolean> ignoreCertificateNameMismatch) {
             $.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
             return this;
         }
 
+        /**
+         * @param ignoreCertificateNameMismatch Indicates whether to ignore mismatch in certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
             return ignoreCertificateNameMismatch(Output.of(ignoreCertificateNameMismatch));
         }
 
+        /**
+         * @param keepHttpConnectionAlive Indicates whether to keep the connection alive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepHttpConnectionAlive(Output<Boolean> keepHttpConnectionAlive) {
             $.keepHttpConnectionAlive = keepHttpConnectionAlive;
             return this;
         }
 
+        /**
+         * @param keepHttpConnectionAlive Indicates whether to keep the connection alive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
             return keepHttpConnectionAlive(Output.of(keepHttpConnectionAlive));
         }
 
+        /**
+         * @param supportHttpStatusCodeContinue Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportHttpStatusCodeContinue(Output<Boolean> supportHttpStatusCodeContinue) {
             $.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;
             return this;
         }
 
+        /**
+         * @param supportHttpStatusCodeContinue Indicates whether to support HTTP status code &#39;CONTINUE&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
             return supportHttpStatusCodeContinue(Output.of(supportHttpStatusCodeContinue));
         }
 
+        /**
+         * @param unfoldHttpHeaders Indicates whether to unfold the HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unfoldHttpHeaders(Output<Boolean> unfoldHttpHeaders) {
             $.unfoldHttpHeaders = unfoldHttpHeaders;
             return this;
         }
 
+        /**
+         * @param unfoldHttpHeaders Indicates whether to unfold the HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
             return unfoldHttpHeaders(Output.of(unfoldHttpHeaders));
         }

@@ -11,80 +11,80 @@ import java.util.Objects;
 
 @CustomType
 public final class SynchronizationDetailsResponse {
-    /**
-     * Id of data set
-     * 
-     */
+        /**
+         * @return Id of data set
+         * 
+         */
     private final String dataSetId;
-    /**
-     * Type of the data set
-     * 
-     */
+        /**
+         * @return Type of the data set
+         * 
+         */
     private final String dataSetType;
-    /**
-     * Duration of data set level copy
-     * 
-     */
+        /**
+         * @return Duration of data set level copy
+         * 
+         */
     private final Integer durationMs;
-    /**
-     * End time of data set level copy
-     * 
-     */
+        /**
+         * @return End time of data set level copy
+         * 
+         */
     private final String endTime;
-    /**
-     * The number of files read from the source data set
-     * 
-     */
+        /**
+         * @return The number of files read from the source data set
+         * 
+         */
     private final Double filesRead;
-    /**
-     * The number of files written into the sink data set
-     * 
-     */
+        /**
+         * @return The number of files written into the sink data set
+         * 
+         */
     private final Double filesWritten;
-    /**
-     * Error message if any
-     * 
-     */
+        /**
+         * @return Error message if any
+         * 
+         */
     private final String message;
-    /**
-     * Name of the data set
-     * 
-     */
+        /**
+         * @return Name of the data set
+         * 
+         */
     private final String name;
-    /**
-     * The number of files copied into the sink data set
-     * 
-     */
+        /**
+         * @return The number of files copied into the sink data set
+         * 
+         */
     private final Double rowsCopied;
-    /**
-     * The number of rows read from the source data set.
-     * 
-     */
+        /**
+         * @return The number of rows read from the source data set.
+         * 
+         */
     private final Double rowsRead;
-    /**
-     * The size of the data read from the source data set in bytes
-     * 
-     */
+        /**
+         * @return The size of the data read from the source data set in bytes
+         * 
+         */
     private final Double sizeRead;
-    /**
-     * The size of the data written into the sink data set in bytes
-     * 
-     */
+        /**
+         * @return The size of the data written into the sink data set in bytes
+         * 
+         */
     private final Double sizeWritten;
-    /**
-     * Start time of data set level copy
-     * 
-     */
+        /**
+         * @return Start time of data set level copy
+         * 
+         */
     private final String startTime;
-    /**
-     * Raw Status
-     * 
-     */
+        /**
+         * @return Raw Status
+         * 
+         */
     private final String status;
-    /**
-     * The vCore units consumed for the data set synchronization
-     * 
-     */
+        /**
+         * @return The vCore units consumed for the data set synchronization
+         * 
+         */
     private final Double vCore;
 
     @CustomType.Constructor
@@ -122,107 +122,107 @@ public final class SynchronizationDetailsResponse {
     }
 
     /**
-     * Id of data set
+     * @return Id of data set
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * Type of the data set
+     * @return Type of the data set
      * 
-    */
+     */
     public String dataSetType() {
         return this.dataSetType;
     }
     /**
-     * Duration of data set level copy
+     * @return Duration of data set level copy
      * 
-    */
+     */
     public Integer durationMs() {
         return this.durationMs;
     }
     /**
-     * End time of data set level copy
+     * @return End time of data set level copy
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The number of files read from the source data set
+     * @return The number of files read from the source data set
      * 
-    */
+     */
     public Double filesRead() {
         return this.filesRead;
     }
     /**
-     * The number of files written into the sink data set
+     * @return The number of files written into the sink data set
      * 
-    */
+     */
     public Double filesWritten() {
         return this.filesWritten;
     }
     /**
-     * Error message if any
+     * @return Error message if any
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Name of the data set
+     * @return Name of the data set
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The number of files copied into the sink data set
+     * @return The number of files copied into the sink data set
      * 
-    */
+     */
     public Double rowsCopied() {
         return this.rowsCopied;
     }
     /**
-     * The number of rows read from the source data set.
+     * @return The number of rows read from the source data set.
      * 
-    */
+     */
     public Double rowsRead() {
         return this.rowsRead;
     }
     /**
-     * The size of the data read from the source data set in bytes
+     * @return The size of the data read from the source data set in bytes
      * 
-    */
+     */
     public Double sizeRead() {
         return this.sizeRead;
     }
     /**
-     * The size of the data written into the sink data set in bytes
+     * @return The size of the data written into the sink data set in bytes
      * 
-    */
+     */
     public Double sizeWritten() {
         return this.sizeWritten;
     }
     /**
-     * Start time of data set level copy
+     * @return Start time of data set level copy
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Raw Status
+     * @return Raw Status
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The vCore units consumed for the data set synchronization
+     * @return The vCore units consumed for the data set synchronization
      * 
-    */
+     */
     public Double vCore() {
         return this.vCore;
     }

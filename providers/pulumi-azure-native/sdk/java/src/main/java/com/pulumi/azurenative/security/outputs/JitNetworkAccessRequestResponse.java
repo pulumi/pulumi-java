@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JitNetworkAccessRequestResponse {
-    /**
-     * The justification for making the initiate request
-     * 
-     */
+        /**
+         * @return The justification for making the initiate request
+         * 
+         */
     private final @Nullable String justification;
-    /**
-     * The identity of the person who made the request
-     * 
-     */
+        /**
+         * @return The identity of the person who made the request
+         * 
+         */
     private final String requestor;
-    /**
-     * The start time of the request in UTC
-     * 
-     */
+        /**
+         * @return The start time of the request in UTC
+         * 
+         */
     private final String startTimeUtc;
     private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
@@ -43,23 +43,23 @@ public final class JitNetworkAccessRequestResponse {
     }
 
     /**
-     * The justification for making the initiate request
+     * @return The justification for making the initiate request
      * 
-    */
+     */
     public Optional<String> justification() {
         return Optional.ofNullable(this.justification);
     }
     /**
-     * The identity of the person who made the request
+     * @return The identity of the person who made the request
      * 
-    */
+     */
     public String requestor() {
         return this.requestor;
     }
     /**
-     * The start time of the request in UTC
+     * @return The start time of the request in UTC
      * 
-    */
+     */
     public String startTimeUtc() {
         return this.startTimeUtc;
     }

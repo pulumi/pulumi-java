@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDscNodeConfigurationResult {
-    /**
-     * Gets or sets the configuration of the node.
-     * 
-     */
+        /**
+         * @return Gets or sets the configuration of the node.
+         * 
+         */
     private final @Nullable DscConfigurationAssociationPropertyResponse configuration;
-    /**
-     * Gets or sets creation time.
-     * 
-     */
+        /**
+         * @return Gets or sets creation time.
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * Fully qualified resource Id for the resource
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource
+         * 
+         */
     private final String id;
-    /**
-     * If a new build version of NodeConfiguration is required.
-     * 
-     */
+        /**
+         * @return If a new build version of NodeConfiguration is required.
+         * 
+         */
     private final @Nullable Boolean incrementNodeConfigurationBuild;
-    /**
-     * Gets or sets the last modified time.
-     * 
-     */
+        /**
+         * @return Gets or sets the last modified time.
+         * 
+         */
     private final @Nullable String lastModifiedTime;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Number of nodes with this node configuration assigned
-     * 
-     */
+        /**
+         * @return Number of nodes with this node configuration assigned
+         * 
+         */
     private final @Nullable Double nodeCount;
-    /**
-     * Source of node configuration.
-     * 
-     */
+        /**
+         * @return Source of node configuration.
+         * 
+         */
     private final @Nullable String source;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetDscNodeConfigurationResult {
     }
 
     /**
-     * Gets or sets the configuration of the node.
+     * @return Gets or sets the configuration of the node.
      * 
-    */
+     */
     public Optional<DscConfigurationAssociationPropertyResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * Gets or sets creation time.
+     * @return Gets or sets creation time.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * If a new build version of NodeConfiguration is required.
+     * @return If a new build version of NodeConfiguration is required.
      * 
-    */
+     */
     public Optional<Boolean> incrementNodeConfigurationBuild() {
         return Optional.ofNullable(this.incrementNodeConfigurationBuild);
     }
     /**
-     * Gets or sets the last modified time.
+     * @return Gets or sets the last modified time.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of nodes with this node configuration assigned
+     * @return Number of nodes with this node configuration assigned
      * 
-    */
+     */
     public Optional<Double> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
     /**
-     * Source of node configuration.
+     * @return Source of node configuration.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

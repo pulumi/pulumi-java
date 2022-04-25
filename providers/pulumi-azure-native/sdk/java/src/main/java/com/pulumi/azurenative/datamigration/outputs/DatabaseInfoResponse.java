@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DatabaseInfoResponse {
-    /**
-     * Name of the database
-     * 
-     */
+        /**
+         * @return Name of the database
+         * 
+         */
     private final String sourceDatabaseName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DatabaseInfoResponse {
     }
 
     /**
-     * Name of the database
+     * @return Name of the database
      * 
-    */
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }

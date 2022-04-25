@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CorrelationFilterResponse {
-    /**
-     * Content type of the message.
-     * 
-     */
+        /**
+         * @return Content type of the message.
+         * 
+         */
     private final @Nullable String contentType;
-    /**
-     * Identifier of the correlation.
-     * 
-     */
+        /**
+         * @return Identifier of the correlation.
+         * 
+         */
     private final @Nullable String correlationId;
-    /**
-     * Application specific label.
-     * 
-     */
+        /**
+         * @return Application specific label.
+         * 
+         */
     private final @Nullable String label;
-    /**
-     * Identifier of the message.
-     * 
-     */
+        /**
+         * @return Identifier of the message.
+         * 
+         */
     private final @Nullable String messageId;
-    /**
-     * dictionary object for custom filters
-     * 
-     */
+        /**
+         * @return dictionary object for custom filters
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Address of the queue to reply to.
-     * 
-     */
+        /**
+         * @return Address of the queue to reply to.
+         * 
+         */
     private final @Nullable String replyTo;
-    /**
-     * Session identifier to reply to.
-     * 
-     */
+        /**
+         * @return Session identifier to reply to.
+         * 
+         */
     private final @Nullable String replyToSessionId;
-    /**
-     * Value that indicates whether the rule action requires preprocessing.
-     * 
-     */
+        /**
+         * @return Value that indicates whether the rule action requires preprocessing.
+         * 
+         */
     private final @Nullable Boolean requiresPreprocessing;
-    /**
-     * Session identifier.
-     * 
-     */
+        /**
+         * @return Session identifier.
+         * 
+         */
     private final @Nullable String sessionId;
-    /**
-     * Address to send to.
-     * 
-     */
+        /**
+         * @return Address to send to.
+         * 
+         */
     private final @Nullable String to;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class CorrelationFilterResponse {
     }
 
     /**
-     * Content type of the message.
+     * @return Content type of the message.
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * Identifier of the correlation.
+     * @return Identifier of the correlation.
      * 
-    */
+     */
     public Optional<String> correlationId() {
         return Optional.ofNullable(this.correlationId);
     }
     /**
-     * Application specific label.
+     * @return Application specific label.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * Identifier of the message.
+     * @return Identifier of the message.
      * 
-    */
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
-     * dictionary object for custom filters
+     * @return dictionary object for custom filters
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Address of the queue to reply to.
+     * @return Address of the queue to reply to.
      * 
-    */
+     */
     public Optional<String> replyTo() {
         return Optional.ofNullable(this.replyTo);
     }
     /**
-     * Session identifier to reply to.
+     * @return Session identifier to reply to.
      * 
-    */
+     */
     public Optional<String> replyToSessionId() {
         return Optional.ofNullable(this.replyToSessionId);
     }
     /**
-     * Value that indicates whether the rule action requires preprocessing.
+     * @return Value that indicates whether the rule action requires preprocessing.
      * 
-    */
+     */
     public Optional<Boolean> requiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
     /**
-     * Session identifier.
+     * @return Session identifier.
      * 
-    */
+     */
     public Optional<String> sessionId() {
         return Optional.ofNullable(this.sessionId);
     }
     /**
-     * Address to send to.
+     * @return Address to send to.
      * 
-    */
+     */
     public Optional<String> to() {
         return Optional.ofNullable(this.to);
     }

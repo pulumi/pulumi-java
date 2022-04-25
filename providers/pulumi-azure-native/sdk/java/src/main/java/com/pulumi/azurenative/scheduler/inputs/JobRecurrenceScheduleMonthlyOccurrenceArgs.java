@@ -23,6 +23,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
     @Import(name="day")
     private @Nullable Output<JobScheduleDay> day;
 
+    /**
+     * @return Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * 
+     */
     public Optional<Output<JobScheduleDay>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -34,6 +38,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
     @Import(name="occurrence")
     private @Nullable Output<Integer> occurrence;
 
+    /**
+     * @return Gets or sets the occurrence. Must be between -5 and 5.
+     * 
+     */
     public Optional<Output<Integer>> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -63,20 +71,44 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
             $ = new JobRecurrenceScheduleMonthlyOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<JobScheduleDay> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(JobScheduleDay day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param occurrence Gets or sets the occurrence. Must be between -5 and 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
             $.occurrence = occurrence;
             return this;
         }
 
+        /**
+         * @param occurrence Gets or sets the occurrence. Must be between -5 and 5.
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(Integer occurrence) {
             return occurrence(Output.of(occurrence));
         }

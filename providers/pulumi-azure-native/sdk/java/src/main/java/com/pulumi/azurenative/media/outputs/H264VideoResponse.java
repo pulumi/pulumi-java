@@ -14,46 +14,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class H264VideoResponse {
-    /**
-     * Tells the encoder how to choose its encoding settings. The default value is Balanced.
-     * 
-     */
+        /**
+         * @return Tells the encoder how to choose its encoding settings. The default value is Balanced.
+         * 
+         */
     private final @Nullable String complexity;
-    /**
-     * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
-     * 
-     */
+        /**
+         * @return The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+         * 
+         */
     private final @Nullable String keyFrameInterval;
-    /**
-     * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
-     */
+        /**
+         * @return An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         */
     private final @Nullable String label;
-    /**
-     * The collection of output H.264 layers to be produced by the encoder.
-     * 
-     */
+        /**
+         * @return The collection of output H.264 layers to be produced by the encoder.
+         * 
+         */
     private final @Nullable List<H264LayerResponse> layers;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.H264Video&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.H264Video&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
-     * 
-     */
+        /**
+         * @return Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+         * 
+         */
     private final @Nullable Boolean sceneChangeDetection;
-    /**
-     * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
-     * 
-     */
+        /**
+         * @return The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+         * 
+         */
     private final @Nullable String stretchMode;
-    /**
-     * The Video Sync Mode
-     * 
-     */
+        /**
+         * @return The Video Sync Mode
+         * 
+         */
     private final @Nullable String syncMode;
 
     @CustomType.Constructor
@@ -77,59 +77,59 @@ public final class H264VideoResponse {
     }
 
     /**
-     * Tells the encoder how to choose its encoding settings. The default value is Balanced.
+     * @return Tells the encoder how to choose its encoding settings. The default value is Balanced.
      * 
-    */
+     */
     public Optional<String> complexity() {
         return Optional.ofNullable(this.complexity);
     }
     /**
-     * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * @return The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
-    */
+     */
     public Optional<String> keyFrameInterval() {
         return Optional.ofNullable(this.keyFrameInterval);
     }
     /**
-     * An optional label for the codec. The label can be used to control muxing behavior.
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * The collection of output H.264 layers to be produced by the encoder.
+     * @return The collection of output H.264 layers to be produced by the encoder.
      * 
-    */
+     */
     public List<H264LayerResponse> layers() {
         return this.layers == null ? List.of() : this.layers;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.H264Video&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
+     * @return Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
      * 
-    */
+     */
     public Optional<Boolean> sceneChangeDetection() {
         return Optional.ofNullable(this.sceneChangeDetection);
     }
     /**
-     * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * @return The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
-    */
+     */
     public Optional<String> stretchMode() {
         return Optional.ofNullable(this.stretchMode);
     }
     /**
-     * The Video Sync Mode
+     * @return The Video Sync Mode
      * 
-    */
+     */
     public Optional<String> syncMode() {
         return Optional.ofNullable(this.syncMode);
     }

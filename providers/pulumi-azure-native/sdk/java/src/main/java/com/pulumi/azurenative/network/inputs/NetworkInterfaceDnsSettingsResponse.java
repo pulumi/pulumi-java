@@ -26,6 +26,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="appliedDnsServers", required=true)
     private List<String> appliedDnsServers;
 
+    /**
+     * @return If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
+     * 
+     */
     public List<String> appliedDnsServers() {
         return this.appliedDnsServers;
     }
@@ -37,6 +41,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -48,6 +56,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="internalDnsNameLabel")
     private @Nullable String internalDnsNameLabel;
 
+    /**
+     * @return Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+     * 
+     */
     public Optional<String> internalDnsNameLabel() {
         return Optional.ofNullable(this.internalDnsNameLabel);
     }
@@ -59,6 +71,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="internalDomainNameSuffix", required=true)
     private String internalDomainNameSuffix;
 
+    /**
+     * @return Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
+     * 
+     */
     public String internalDomainNameSuffix() {
         return this.internalDomainNameSuffix;
     }
@@ -70,6 +86,10 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
     @Import(name="internalFqdn", required=true)
     private String internalFqdn;
 
+    /**
+     * @return Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
+     * 
+     */
     public String internalFqdn() {
         return this.internalFqdn;
     }
@@ -102,34 +122,76 @@ public final class NetworkInterfaceDnsSettingsResponse extends com.pulumi.resour
             $ = new NetworkInterfaceDnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appliedDnsServers If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedDnsServers(List<String> appliedDnsServers) {
             $.appliedDnsServers = appliedDnsServers;
             return this;
         }
 
+        /**
+         * @param appliedDnsServers If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedDnsServers(String... appliedDnsServers) {
             return appliedDnsServers(List.of(appliedDnsServers));
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param internalDnsNameLabel Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
             $.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
 
+        /**
+         * @param internalDomainNameSuffix Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalDomainNameSuffix(String internalDomainNameSuffix) {
             $.internalDomainNameSuffix = internalDomainNameSuffix;
             return this;
         }
 
+        /**
+         * @param internalFqdn Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalFqdn(String internalFqdn) {
             $.internalFqdn = internalFqdn;
             return this;

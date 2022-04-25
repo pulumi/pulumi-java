@@ -27,6 +27,10 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
     @Import(name="extensions")
     private @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
 
+    /**
+     * @return The virtual machine scale set child extension resources.
+     * 
+     */
     public Optional<List<VirtualMachineScaleSetExtensionResponse>> extensions() {
         return Optional.ofNullable(this.extensions);
     }
@@ -38,6 +42,10 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
     @Import(name="extensionsTimeBudget")
     private @Nullable String extensionsTimeBudget;
 
+    /**
+     * @return Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+     * 
+     */
     public Optional<String> extensionsTimeBudget() {
         return Optional.ofNullable(this.extensionsTimeBudget);
     }
@@ -67,15 +75,33 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends com.pu
             $ = new VirtualMachineScaleSetExtensionProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensions The virtual machine scale set child extension resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionResponse> extensions) {
             $.extensions = extensions;
             return this;
         }
 
+        /**
+         * @param extensions The virtual machine scale set child extension resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensions(VirtualMachineScaleSetExtensionResponse... extensions) {
             return extensions(List.of(extensions));
         }
 
+        /**
+         * @param extensionsTimeBudget Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             $.extensionsTimeBudget = extensionsTimeBudget;
             return this;

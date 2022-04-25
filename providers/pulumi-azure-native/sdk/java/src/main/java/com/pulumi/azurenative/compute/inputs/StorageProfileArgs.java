@@ -29,6 +29,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataDisks")
     private @Nullable Output<List<DataDiskArgs>> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     public Optional<Output<List<DataDiskArgs>>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -40,6 +44,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageReference")
     private @Nullable Output<ImageReferenceArgs> imageReference;
 
+    /**
+     * @return Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+     * 
+     */
     public Optional<Output<ImageReferenceArgs>> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -51,6 +59,10 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osDisk")
     private @Nullable Output<OSDiskArgs> osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     public Optional<Output<OSDiskArgs>> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -81,33 +93,75 @@ public final class StorageProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable Output<List<DataDiskArgs>> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(List<DataDiskArgs> dataDisks) {
             return dataDisks(Output.of(dataDisks));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(DataDiskArgs... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param imageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable Output<ImageReferenceArgs> imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param imageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(ImageReferenceArgs imageReference) {
             return imageReference(Output.of(imageReference));
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable Output<OSDiskArgs> osDisk) {
             $.osDisk = osDisk;
             return this;
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(OSDiskArgs osDisk) {
             return osDisk(Output.of(osDisk));
         }

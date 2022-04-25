@@ -28,6 +28,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="delayEvaluation")
     private @Nullable Integer delayEvaluation;
 
+    /**
+     * @return Number of intervals by which to delay the first evaluation.
+     * 
+     */
     public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
@@ -39,6 +43,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="evaluationInterval")
     private @Nullable Integer evaluationInterval;
 
+    /**
+     * @return Interval (number of runs) between policy evaluations.
+     * 
+     */
     public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
@@ -50,6 +58,11 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="policyType", required=true)
     private String policyType;
 
+    /**
+     * @return
+     * Expected value is &#39;Bandit&#39;.
+     * 
+     */
     public String policyType() {
         return this.policyType;
     }
@@ -61,6 +74,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="slackAmount")
     private @Nullable Double slackAmount;
 
+    /**
+     * @return Absolute distance allowed from the best performing run.
+     * 
+     */
     public Optional<Double> slackAmount() {
         return Optional.ofNullable(this.slackAmount);
     }
@@ -72,6 +89,10 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="slackFactor")
     private @Nullable Double slackFactor;
 
+    /**
+     * @return Ratio of the allowed distance from the best performing run.
+     * 
+     */
     public Optional<Double> slackFactor() {
         return Optional.ofNullable(this.slackFactor);
     }
@@ -104,26 +125,57 @@ public final class BanditPolicyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BanditPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delayEvaluation Number of intervals by which to delay the first evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             $.delayEvaluation = delayEvaluation;
             return this;
         }
 
+        /**
+         * @param evaluationInterval Interval (number of runs) between policy evaluations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             $.evaluationInterval = evaluationInterval;
             return this;
         }
 
+        /**
+         * @param policyType
+         * Expected value is &#39;Bandit&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param slackAmount Absolute distance allowed from the best performing run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slackAmount(@Nullable Double slackAmount) {
             $.slackAmount = slackAmount;
             return this;
         }
 
+        /**
+         * @param slackFactor Ratio of the allowed distance from the best performing run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slackFactor(@Nullable Double slackFactor) {
             $.slackFactor = slackFactor;
             return this;

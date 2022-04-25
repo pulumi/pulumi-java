@@ -25,6 +25,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
     @Import(name="maxPartitionsNumber")
     private @Nullable Object maxPartitionsNumber;
 
+    /**
+     * @return The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> maxPartitionsNumber() {
         return Optional.ofNullable(this.maxPartitionsNumber);
     }
@@ -36,6 +40,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionColumnName")
     private @Nullable Object partitionColumnName;
 
+    /**
+     * @return The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
@@ -47,6 +55,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionLowerBound")
     private @Nullable Object partitionLowerBound;
 
+    /**
+     * @return The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
@@ -58,6 +70,10 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
     @Import(name="partitionUpperBound")
     private @Nullable Object partitionUpperBound;
 
+    /**
+     * @return The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }
@@ -89,21 +105,45 @@ public final class SapTablePartitionSettingsResponse extends com.pulumi.resource
             $ = new SapTablePartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPartitionsNumber The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
             $.maxPartitionsNumber = maxPartitionsNumber;
             return this;
         }
 
+        /**
+         * @param partitionColumnName The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             $.partitionColumnName = partitionColumnName;
             return this;
         }
 
+        /**
+         * @param partitionLowerBound The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             $.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
+        /**
+         * @param partitionUpperBound The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             $.partitionUpperBound = partitionUpperBound;
             return this;

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterIdentityResponse {
-    /**
-     * The principal id of the system assigned identity which is used by master components.
-     * 
-     */
+        /**
+         * @return The principal id of the system assigned identity which is used by master components.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant id of the system assigned identity which is used by master components.
-     * 
-     */
+        /**
+         * @return The tenant id of the system assigned identity which is used by master components.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
-     * 
-     */
+        /**
+         * @return The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
-     * 
-     */
+        /**
+         * @return The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         */
     private final @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class ManagedClusterIdentityResponse {
     }
 
     /**
-     * The principal id of the system assigned identity which is used by master components.
+     * @return The principal id of the system assigned identity which is used by master components.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id of the system assigned identity which is used by master components.
+     * @return The tenant id of the system assigned identity which is used by master components.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
+     * @return The type of identity used for the managed cluster. Type &#39;SystemAssigned&#39; will use an implicitly created identity in master components and an auto-created user assigned identity in MC_ resource group in agent nodes. Type &#39;None&#39; will not use MSI for the managed cluster, service principal will be used instead.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The user identity associated with the managed cluster. This identity will be used in control plane and only one user assigned identity is allowed. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

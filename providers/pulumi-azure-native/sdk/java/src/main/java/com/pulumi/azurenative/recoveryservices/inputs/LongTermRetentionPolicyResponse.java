@@ -30,6 +30,10 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
     @Import(name="dailySchedule")
     private @Nullable DailyRetentionScheduleResponse dailySchedule;
 
+    /**
+     * @return Daily retention schedule of the protection policy.
+     * 
+     */
     public Optional<DailyRetentionScheduleResponse> dailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
@@ -41,6 +45,10 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
     @Import(name="monthlySchedule")
     private @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
 
+    /**
+     * @return Monthly retention schedule of the protection policy.
+     * 
+     */
     public Optional<MonthlyRetentionScheduleResponse> monthlySchedule() {
         return Optional.ofNullable(this.monthlySchedule);
     }
@@ -53,6 +61,11 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
     @Import(name="retentionPolicyType", required=true)
     private String retentionPolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;LongTermRetentionPolicy&#39;.
+     * 
+     */
     public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
@@ -64,6 +77,10 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
     @Import(name="weeklySchedule")
     private @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
 
+    /**
+     * @return Weekly retention schedule of the protection policy.
+     * 
+     */
     public Optional<WeeklyRetentionScheduleResponse> weeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }
@@ -75,6 +92,10 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
     @Import(name="yearlySchedule")
     private @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
+    /**
+     * @return Yearly retention schedule of the protection policy.
+     * 
+     */
     public Optional<YearlyRetentionScheduleResponse> yearlySchedule() {
         return Optional.ofNullable(this.yearlySchedule);
     }
@@ -107,26 +128,57 @@ public final class LongTermRetentionPolicyResponse extends com.pulumi.resources.
             $ = new LongTermRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailySchedule Daily retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailySchedule(@Nullable DailyRetentionScheduleResponse dailySchedule) {
             $.dailySchedule = dailySchedule;
             return this;
         }
 
+        /**
+         * @param monthlySchedule Monthly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlySchedule(@Nullable MonthlyRetentionScheduleResponse monthlySchedule) {
             $.monthlySchedule = monthlySchedule;
             return this;
         }
 
+        /**
+         * @param retentionPolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LongTermRetentionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicyType(String retentionPolicyType) {
             $.retentionPolicyType = retentionPolicyType;
             return this;
         }
 
+        /**
+         * @param weeklySchedule Weekly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklySchedule(@Nullable WeeklyRetentionScheduleResponse weeklySchedule) {
             $.weeklySchedule = weeklySchedule;
             return this;
         }
 
+        /**
+         * @param yearlySchedule Yearly retention schedule of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yearlySchedule(@Nullable YearlyRetentionScheduleResponse yearlySchedule) {
             $.yearlySchedule = yearlySchedule;
             return this;

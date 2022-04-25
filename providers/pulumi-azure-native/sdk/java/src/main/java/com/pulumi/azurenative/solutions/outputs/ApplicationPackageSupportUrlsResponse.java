@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationPackageSupportUrlsResponse {
-    /**
-     * The government cloud support URL.
-     * 
-     */
+        /**
+         * @return The government cloud support URL.
+         * 
+         */
     private final @Nullable String governmentCloud;
-    /**
-     * The public azure support URL.
-     * 
-     */
+        /**
+         * @return The public azure support URL.
+         * 
+         */
     private final @Nullable String publicAzure;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ApplicationPackageSupportUrlsResponse {
     }
 
     /**
-     * The government cloud support URL.
+     * @return The government cloud support URL.
      * 
-    */
+     */
     public Optional<String> governmentCloud() {
         return Optional.ofNullable(this.governmentCloud);
     }
     /**
-     * The public azure support URL.
+     * @return The public azure support URL.
      * 
-    */
+     */
     public Optional<String> publicAzure() {
         return Optional.ofNullable(this.publicAzure);
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ClientCertificateResponse {
-    /**
-     * Certificate Common name.
-     * 
-     */
+        /**
+         * @return Certificate Common name.
+         * 
+         */
     private final @Nullable String commonName;
-    /**
-     * Whether the certificate is admin or not.
-     * 
-     */
+        /**
+         * @return Whether the certificate is admin or not.
+         * 
+         */
     private final Boolean isAdmin;
-    /**
-     * Issuer thumbprint for the certificate. Only used together with CommonName.
-     * 
-     */
+        /**
+         * @return Issuer thumbprint for the certificate. Only used together with CommonName.
+         * 
+         */
     private final @Nullable String issuerThumbprint;
-    /**
-     * Certificate Thumbprint.
-     * 
-     */
+        /**
+         * @return Certificate Thumbprint.
+         * 
+         */
     private final @Nullable String thumbprint;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ClientCertificateResponse {
     }
 
     /**
-     * Certificate Common name.
+     * @return Certificate Common name.
      * 
-    */
+     */
     public Optional<String> commonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
-     * Whether the certificate is admin or not.
+     * @return Whether the certificate is admin or not.
      * 
-    */
+     */
     public Boolean isAdmin() {
         return this.isAdmin;
     }
     /**
-     * Issuer thumbprint for the certificate. Only used together with CommonName.
+     * @return Issuer thumbprint for the certificate. Only used together with CommonName.
      * 
-    */
+     */
     public Optional<String> issuerThumbprint() {
         return Optional.ofNullable(this.issuerThumbprint);
     }
     /**
-     * Certificate Thumbprint.
+     * @return Certificate Thumbprint.
      * 
-    */
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

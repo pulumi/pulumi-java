@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerProbeResponse {
-    /**
-     * The execution command to probe
-     * 
-     */
+        /**
+         * @return The execution command to probe
+         * 
+         */
     private final @Nullable ContainerExecResponse exec;
-    /**
-     * The failure threshold.
-     * 
-     */
+        /**
+         * @return The failure threshold.
+         * 
+         */
     private final @Nullable Integer failureThreshold;
-    /**
-     * The Http Get settings to probe
-     * 
-     */
+        /**
+         * @return The Http Get settings to probe
+         * 
+         */
     private final @Nullable ContainerHttpGetResponse httpGet;
-    /**
-     * The initial delay seconds.
-     * 
-     */
+        /**
+         * @return The initial delay seconds.
+         * 
+         */
     private final @Nullable Integer initialDelaySeconds;
-    /**
-     * The period seconds.
-     * 
-     */
+        /**
+         * @return The period seconds.
+         * 
+         */
     private final @Nullable Integer periodSeconds;
-    /**
-     * The success threshold.
-     * 
-     */
+        /**
+         * @return The success threshold.
+         * 
+         */
     private final @Nullable Integer successThreshold;
-    /**
-     * The timeout seconds.
-     * 
-     */
+        /**
+         * @return The timeout seconds.
+         * 
+         */
     private final @Nullable Integer timeoutSeconds;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class ContainerProbeResponse {
     }
 
     /**
-     * The execution command to probe
+     * @return The execution command to probe
      * 
-    */
+     */
     public Optional<ContainerExecResponse> exec() {
         return Optional.ofNullable(this.exec);
     }
     /**
-     * The failure threshold.
+     * @return The failure threshold.
      * 
-    */
+     */
     public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
-     * The Http Get settings to probe
+     * @return The Http Get settings to probe
      * 
-    */
+     */
     public Optional<ContainerHttpGetResponse> httpGet() {
         return Optional.ofNullable(this.httpGet);
     }
     /**
-     * The initial delay seconds.
+     * @return The initial delay seconds.
      * 
-    */
+     */
     public Optional<Integer> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
     /**
-     * The period seconds.
+     * @return The period seconds.
      * 
-    */
+     */
     public Optional<Integer> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
     /**
-     * The success threshold.
+     * @return The success threshold.
      * 
-    */
+     */
     public Optional<Integer> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
-     * The timeout seconds.
+     * @return The timeout seconds.
      * 
-    */
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

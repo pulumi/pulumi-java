@@ -19,6 +19,10 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
     @Import(name="resourceProviderName", required=true)
     private String resourceProviderName;
 
+    /**
+     * @return The name of the resource provider.
+     * 
+     */
     public String resourceProviderName() {
         return this.resourceProviderName;
     }
@@ -59,11 +67,23 @@ public final class GetCustomResourceProviderArgs extends com.pulumi.resources.In
             $ = new GetCustomResourceProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceProviderName The name of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderName(String resourceProviderName) {
             $.resourceProviderName = resourceProviderName;
             return this;

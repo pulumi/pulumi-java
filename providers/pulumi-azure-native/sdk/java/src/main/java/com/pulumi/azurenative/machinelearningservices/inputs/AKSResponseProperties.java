@@ -31,6 +31,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="agentCount")
     private @Nullable Integer agentCount;
 
+    /**
+     * @return Number of agents
+     * 
+     */
     public Optional<Integer> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
@@ -42,6 +46,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="agentVmSize")
     private @Nullable String agentVmSize;
 
+    /**
+     * @return Agent virtual machine size
+     * 
+     */
     public Optional<String> agentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
@@ -53,6 +61,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="aksNetworkingConfiguration")
     private @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
 
+    /**
+     * @return AKS networking configuration for vnet
+     * 
+     */
     public Optional<AksNetworkingConfigurationResponse> aksNetworkingConfiguration() {
         return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
@@ -64,6 +76,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterFqdn")
     private @Nullable String clusterFqdn;
 
+    /**
+     * @return Cluster full qualified domain name
+     * 
+     */
     public Optional<String> clusterFqdn() {
         return Optional.ofNullable(this.clusterFqdn);
     }
@@ -75,6 +91,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="clusterPurpose")
     private @Nullable String clusterPurpose;
 
+    /**
+     * @return Intended usage of the cluster
+     * 
+     */
     public Optional<String> clusterPurpose() {
         return Optional.ofNullable(this.clusterPurpose);
     }
@@ -86,6 +106,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="sslConfiguration")
     private @Nullable SslConfigurationResponse sslConfiguration;
 
+    /**
+     * @return SSL configuration
+     * 
+     */
     public Optional<SslConfigurationResponse> sslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
@@ -97,6 +121,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
     @Import(name="systemServices", required=true)
     private List<SystemServiceResponse> systemServices;
 
+    /**
+     * @return System services
+     * 
+     */
     public List<SystemServiceResponse> systemServices() {
         return this.systemServices;
     }
@@ -131,41 +159,89 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
             $ = new AKSResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentCount Number of agents
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentCount(@Nullable Integer agentCount) {
             $.agentCount = agentCount;
             return this;
         }
 
+        /**
+         * @param agentVmSize Agent virtual machine size
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVmSize(@Nullable String agentVmSize) {
             $.agentVmSize = agentVmSize;
             return this;
         }
 
+        /**
+         * @param aksNetworkingConfiguration AKS networking configuration for vnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
             $.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
 
+        /**
+         * @param clusterFqdn Cluster full qualified domain name
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterFqdn(@Nullable String clusterFqdn) {
             $.clusterFqdn = clusterFqdn;
             return this;
         }
 
+        /**
+         * @param clusterPurpose Intended usage of the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterPurpose(@Nullable String clusterPurpose) {
             $.clusterPurpose = clusterPurpose;
             return this;
         }
 
+        /**
+         * @param sslConfiguration SSL configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
             $.sslConfiguration = sslConfiguration;
             return this;
         }
 
+        /**
+         * @param systemServices System services
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(List<SystemServiceResponse> systemServices) {
             $.systemServices = systemServices;
             return this;
         }
 
+        /**
+         * @param systemServices System services
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemServices(SystemServiceResponse... systemServices) {
             return systemServices(List.of(systemServices));
         }

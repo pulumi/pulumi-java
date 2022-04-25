@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AzureContainerInfoResponse {
-    /**
-     * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
-     * 
-     */
+        /**
+         * @return Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+         * 
+         */
     private final String containerName;
-    /**
-     * Storage format used for the file represented by the share.
-     * 
-     */
+        /**
+         * @return Storage format used for the file represented by the share.
+         * 
+         */
     private final String dataFormat;
-    /**
-     * ID of the storage account credential used to access storage.
-     * 
-     */
+        /**
+         * @return ID of the storage account credential used to access storage.
+         * 
+         */
     private final String storageAccountCredentialId;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class AzureContainerInfoResponse {
     }
 
     /**
-     * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
+     * @return Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
      * 
-    */
+     */
     public String containerName() {
         return this.containerName;
     }
     /**
-     * Storage format used for the file represented by the share.
+     * @return Storage format used for the file represented by the share.
      * 
-    */
+     */
     public String dataFormat() {
         return this.dataFormat;
     }
     /**
-     * ID of the storage account credential used to access storage.
+     * @return ID of the storage account credential used to access storage.
      * 
-    */
+     */
     public String storageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }

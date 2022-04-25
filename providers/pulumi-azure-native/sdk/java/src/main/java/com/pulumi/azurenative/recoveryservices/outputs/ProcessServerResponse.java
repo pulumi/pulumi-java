@@ -17,185 +17,185 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProcessServerResponse {
-    /**
-     * Agent expiry date.
-     * 
-     */
+        /**
+         * @return Agent expiry date.
+         * 
+         */
     private final @Nullable String agentExpiryDate;
-    /**
-     * The version of the scout component on the server.
-     * 
-     */
+        /**
+         * @return The version of the scout component on the server.
+         * 
+         */
     private final @Nullable String agentVersion;
-    /**
-     * The agent version details.
-     * 
-     */
+        /**
+         * @return The agent version details.
+         * 
+         */
     private final @Nullable VersionDetailsResponse agentVersionDetails;
-    /**
-     * The available memory.
-     * 
-     */
+        /**
+         * @return The available memory.
+         * 
+         */
     private final @Nullable Double availableMemoryInBytes;
-    /**
-     * The available space.
-     * 
-     */
+        /**
+         * @return The available space.
+         * 
+         */
     private final @Nullable Double availableSpaceInBytes;
-    /**
-     * The percentage of the CPU load.
-     * 
-     */
+        /**
+         * @return The percentage of the CPU load.
+         * 
+         */
     private final @Nullable String cpuLoad;
-    /**
-     * The CPU load status.
-     * 
-     */
+        /**
+         * @return The CPU load status.
+         * 
+         */
     private final @Nullable String cpuLoadStatus;
-    /**
-     * The Process Server&#39;s friendly name.
-     * 
-     */
+        /**
+         * @return The Process Server&#39;s friendly name.
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * The health of Process Server.
-     * 
-     */
+        /**
+         * @return The health of Process Server.
+         * 
+         */
     private final String health;
-    /**
-     * Health errors.
-     * 
-     */
+        /**
+         * @return Health errors.
+         * 
+         */
     private final @Nullable List<HealthErrorResponse> healthErrors;
-    /**
-     * The agent generated Id.
-     * 
-     */
+        /**
+         * @return The agent generated Id.
+         * 
+         */
     private final @Nullable String hostId;
-    /**
-     * The Process Server Id.
-     * 
-     */
+        /**
+         * @return The Process Server Id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The IP address of the server.
-     * 
-     */
+        /**
+         * @return The IP address of the server.
+         * 
+         */
     private final @Nullable String ipAddress;
-    /**
-     * The last heartbeat received from the server.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the server.
+         * 
+         */
     private final @Nullable String lastHeartbeat;
-    /**
-     * The servers configured with this PS.
-     * 
-     */
+        /**
+         * @return The servers configured with this PS.
+         * 
+         */
     private final @Nullable String machineCount;
-    /**
-     * The MARS communication status.
-     * 
-     */
+        /**
+         * @return The MARS communication status.
+         * 
+         */
     private final String marsCommunicationStatus;
-    /**
-     * The MARS registration status.
-     * 
-     */
+        /**
+         * @return The MARS registration status.
+         * 
+         */
     private final String marsRegistrationStatus;
-    /**
-     * The memory usage status.
-     * 
-     */
+        /**
+         * @return The memory usage status.
+         * 
+         */
     private final @Nullable String memoryUsageStatus;
-    /**
-     * The list of the mobility service updates available on the Process Server.
-     * 
-     */
+        /**
+         * @return The list of the mobility service updates available on the Process Server.
+         * 
+         */
     private final @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
-    /**
-     * The OS type of the server.
-     * 
-     */
+        /**
+         * @return The OS type of the server.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
-     * 
-     */
+        /**
+         * @return OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
+         * 
+         */
     private final @Nullable String osVersion;
-    /**
-     * The PS service status.
-     * 
-     */
+        /**
+         * @return The PS service status.
+         * 
+         */
     private final @Nullable String psServiceStatus;
-    /**
-     * The process server stats refresh time.
-     * 
-     */
+        /**
+         * @return The process server stats refresh time.
+         * 
+         */
     private final String psStatsRefreshTime;
-    /**
-     * The number of replication pairs configured in this PS.
-     * 
-     */
+        /**
+         * @return The number of replication pairs configured in this PS.
+         * 
+         */
     private final @Nullable String replicationPairCount;
-    /**
-     * The space usage status.
-     * 
-     */
+        /**
+         * @return The space usage status.
+         * 
+         */
     private final @Nullable String spaceUsageStatus;
-    /**
-     * The PS SSL cert expiry date.
-     * 
-     */
+        /**
+         * @return The PS SSL cert expiry date.
+         * 
+         */
     private final @Nullable String sslCertExpiryDate;
-    /**
-     * CS SSL cert expiry date.
-     * 
-     */
+        /**
+         * @return CS SSL cert expiry date.
+         * 
+         */
     private final @Nullable Integer sslCertExpiryRemainingDays;
-    /**
-     * The percentage of the system load.
-     * 
-     */
+        /**
+         * @return The percentage of the system load.
+         * 
+         */
     private final @Nullable String systemLoad;
-    /**
-     * The system load status.
-     * 
-     */
+        /**
+         * @return The system load status.
+         * 
+         */
     private final @Nullable String systemLoadStatus;
-    /**
-     * The throughput in bytes.
-     * 
-     */
+        /**
+         * @return The throughput in bytes.
+         * 
+         */
     private final Double throughputInBytes;
-    /**
-     * The throughput in MBps.
-     * 
-     */
+        /**
+         * @return The throughput in MBps.
+         * 
+         */
     private final Double throughputInMBps;
-    /**
-     * The throughput status.
-     * 
-     */
+        /**
+         * @return The throughput status.
+         * 
+         */
     private final String throughputStatus;
-    /**
-     * The uploading pending data in bytes.
-     * 
-     */
+        /**
+         * @return The uploading pending data in bytes.
+         * 
+         */
     private final Double throughputUploadPendingDataInBytes;
-    /**
-     * The total memory.
-     * 
-     */
+        /**
+         * @return The total memory.
+         * 
+         */
     private final @Nullable Double totalMemoryInBytes;
-    /**
-     * The total space.
-     * 
-     */
+        /**
+         * @return The total space.
+         * 
+         */
     private final @Nullable Double totalSpaceInBytes;
-    /**
-     * Version status
-     * 
-     */
+        /**
+         * @return Version status
+         * 
+         */
     private final @Nullable String versionStatus;
 
     @CustomType.Constructor
@@ -275,254 +275,254 @@ public final class ProcessServerResponse {
     }
 
     /**
-     * Agent expiry date.
+     * @return Agent expiry date.
      * 
-    */
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
-     * The version of the scout component on the server.
+     * @return The version of the scout component on the server.
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
-     * The agent version details.
+     * @return The agent version details.
      * 
-    */
+     */
     public Optional<VersionDetailsResponse> agentVersionDetails() {
         return Optional.ofNullable(this.agentVersionDetails);
     }
     /**
-     * The available memory.
+     * @return The available memory.
      * 
-    */
+     */
     public Optional<Double> availableMemoryInBytes() {
         return Optional.ofNullable(this.availableMemoryInBytes);
     }
     /**
-     * The available space.
+     * @return The available space.
      * 
-    */
+     */
     public Optional<Double> availableSpaceInBytes() {
         return Optional.ofNullable(this.availableSpaceInBytes);
     }
     /**
-     * The percentage of the CPU load.
+     * @return The percentage of the CPU load.
      * 
-    */
+     */
     public Optional<String> cpuLoad() {
         return Optional.ofNullable(this.cpuLoad);
     }
     /**
-     * The CPU load status.
+     * @return The CPU load status.
      * 
-    */
+     */
     public Optional<String> cpuLoadStatus() {
         return Optional.ofNullable(this.cpuLoadStatus);
     }
     /**
-     * The Process Server&#39;s friendly name.
+     * @return The Process Server&#39;s friendly name.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * The health of Process Server.
+     * @return The health of Process Server.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * Health errors.
+     * @return Health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
-     * The agent generated Id.
+     * @return The agent generated Id.
      * 
-    */
+     */
     public Optional<String> hostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
-     * The Process Server Id.
+     * @return The Process Server Id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The IP address of the server.
+     * @return The IP address of the server.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The last heartbeat received from the server.
+     * @return The last heartbeat received from the server.
      * 
-    */
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
-     * The servers configured with this PS.
+     * @return The servers configured with this PS.
      * 
-    */
+     */
     public Optional<String> machineCount() {
         return Optional.ofNullable(this.machineCount);
     }
     /**
-     * The MARS communication status.
+     * @return The MARS communication status.
      * 
-    */
+     */
     public String marsCommunicationStatus() {
         return this.marsCommunicationStatus;
     }
     /**
-     * The MARS registration status.
+     * @return The MARS registration status.
      * 
-    */
+     */
     public String marsRegistrationStatus() {
         return this.marsRegistrationStatus;
     }
     /**
-     * The memory usage status.
+     * @return The memory usage status.
      * 
-    */
+     */
     public Optional<String> memoryUsageStatus() {
         return Optional.ofNullable(this.memoryUsageStatus);
     }
     /**
-     * The list of the mobility service updates available on the Process Server.
+     * @return The list of the mobility service updates available on the Process Server.
      * 
-    */
+     */
     public List<MobilityServiceUpdateResponse> mobilityServiceUpdates() {
         return this.mobilityServiceUpdates == null ? List.of() : this.mobilityServiceUpdates;
     }
     /**
-     * The OS type of the server.
+     * @return The OS type of the server.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
+     * @return OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
      * 
-    */
+     */
     public Optional<String> osVersion() {
         return Optional.ofNullable(this.osVersion);
     }
     /**
-     * The PS service status.
+     * @return The PS service status.
      * 
-    */
+     */
     public Optional<String> psServiceStatus() {
         return Optional.ofNullable(this.psServiceStatus);
     }
     /**
-     * The process server stats refresh time.
+     * @return The process server stats refresh time.
      * 
-    */
+     */
     public String psStatsRefreshTime() {
         return this.psStatsRefreshTime;
     }
     /**
-     * The number of replication pairs configured in this PS.
+     * @return The number of replication pairs configured in this PS.
      * 
-    */
+     */
     public Optional<String> replicationPairCount() {
         return Optional.ofNullable(this.replicationPairCount);
     }
     /**
-     * The space usage status.
+     * @return The space usage status.
      * 
-    */
+     */
     public Optional<String> spaceUsageStatus() {
         return Optional.ofNullable(this.spaceUsageStatus);
     }
     /**
-     * The PS SSL cert expiry date.
+     * @return The PS SSL cert expiry date.
      * 
-    */
+     */
     public Optional<String> sslCertExpiryDate() {
         return Optional.ofNullable(this.sslCertExpiryDate);
     }
     /**
-     * CS SSL cert expiry date.
+     * @return CS SSL cert expiry date.
      * 
-    */
+     */
     public Optional<Integer> sslCertExpiryRemainingDays() {
         return Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
     /**
-     * The percentage of the system load.
+     * @return The percentage of the system load.
      * 
-    */
+     */
     public Optional<String> systemLoad() {
         return Optional.ofNullable(this.systemLoad);
     }
     /**
-     * The system load status.
+     * @return The system load status.
      * 
-    */
+     */
     public Optional<String> systemLoadStatus() {
         return Optional.ofNullable(this.systemLoadStatus);
     }
     /**
-     * The throughput in bytes.
+     * @return The throughput in bytes.
      * 
-    */
+     */
     public Double throughputInBytes() {
         return this.throughputInBytes;
     }
     /**
-     * The throughput in MBps.
+     * @return The throughput in MBps.
      * 
-    */
+     */
     public Double throughputInMBps() {
         return this.throughputInMBps;
     }
     /**
-     * The throughput status.
+     * @return The throughput status.
      * 
-    */
+     */
     public String throughputStatus() {
         return this.throughputStatus;
     }
     /**
-     * The uploading pending data in bytes.
+     * @return The uploading pending data in bytes.
      * 
-    */
+     */
     public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
     /**
-     * The total memory.
+     * @return The total memory.
      * 
-    */
+     */
     public Optional<Double> totalMemoryInBytes() {
         return Optional.ofNullable(this.totalMemoryInBytes);
     }
     /**
-     * The total space.
+     * @return The total space.
      * 
-    */
+     */
     public Optional<Double> totalSpaceInBytes() {
         return Optional.ofNullable(this.totalSpaceInBytes);
     }
     /**
-     * Version status
+     * @return Version status
      * 
-    */
+     */
     public Optional<String> versionStatus() {
         return Optional.ofNullable(this.versionStatus);
     }

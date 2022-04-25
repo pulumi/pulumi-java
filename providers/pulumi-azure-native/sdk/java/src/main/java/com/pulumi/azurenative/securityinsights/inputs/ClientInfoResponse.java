@@ -25,6 +25,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return The email of the client.
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -36,6 +40,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the client.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return The object id of the client.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -58,6 +70,10 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userPrincipalName")
     private @Nullable String userPrincipalName;
 
+    /**
+     * @return The user principal name of the client.
+     * 
+     */
     public Optional<String> userPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }
@@ -89,21 +105,45 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClientInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param name The name of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param userPrincipalName The user principal name of the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
             $.userPrincipalName = userPrincipalName;
             return this;

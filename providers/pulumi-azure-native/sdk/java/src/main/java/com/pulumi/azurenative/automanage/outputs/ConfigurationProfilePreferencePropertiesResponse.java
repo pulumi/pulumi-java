@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationProfilePreferencePropertiesResponse {
-    /**
-     * The custom preferences for Azure Antimalware.
-     * 
-     */
+        /**
+         * @return The custom preferences for Azure Antimalware.
+         * 
+         */
     private final @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware;
-    /**
-     * The custom preferences for Azure VM Backup.
-     * 
-     */
+        /**
+         * @return The custom preferences for Azure VM Backup.
+         * 
+         */
     private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ConfigurationProfilePreferencePropertiesResponse {
     }
 
     /**
-     * The custom preferences for Azure Antimalware.
+     * @return The custom preferences for Azure Antimalware.
      * 
-    */
+     */
     public Optional<ConfigurationProfilePreferenceAntiMalwareResponse> antiMalware() {
         return Optional.ofNullable(this.antiMalware);
     }
     /**
-     * The custom preferences for Azure VM Backup.
+     * @return The custom preferences for Azure VM Backup.
      * 
-    */
+     */
     public Optional<ConfigurationProfilePreferenceVmBackupResponse> vmBackup() {
         return Optional.ofNullable(this.vmBackup);
     }

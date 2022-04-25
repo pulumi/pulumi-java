@@ -11,60 +11,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccessReviewHistoryInstanceResponse {
-    /**
-     * The display name for the parent history definition.
-     * 
-     */
+        /**
+         * @return The display name for the parent history definition.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
-     * 
-     */
+        /**
+         * @return Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
+         * 
+         */
     private final String downloadUri;
-    /**
-     * Date time when history data report expires and the associated data is deleted.
-     * 
-     */
+        /**
+         * @return Date time when history data report expires and the associated data is deleted.
+         * 
+         */
     private final @Nullable String expiration;
-    /**
-     * Date time when the history data report is scheduled to be generated.
-     * 
-     */
+        /**
+         * @return Date time when the history data report is scheduled to be generated.
+         * 
+         */
     private final @Nullable String fulfilledDateTime;
-    /**
-     * The access review history definition instance id.
-     * 
-     */
+        /**
+         * @return The access review history definition instance id.
+         * 
+         */
     private final String id;
-    /**
-     * The access review history definition instance unique id.
-     * 
-     */
+        /**
+         * @return The access review history definition instance unique id.
+         * 
+         */
     private final String name;
-    /**
-     * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-     * 
-     */
+        /**
+         * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+         * 
+         */
     private final @Nullable String reviewHistoryPeriodEndDateTime;
-    /**
-     * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-     * 
-     */
+        /**
+         * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+         * 
+         */
     private final @Nullable String reviewHistoryPeriodStartDateTime;
-    /**
-     * Date time when the history data report is scheduled to be generated.
-     * 
-     */
+        /**
+         * @return Date time when the history data report is scheduled to be generated.
+         * 
+         */
     private final @Nullable String runDateTime;
-    /**
-     * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
-     * 
-     */
+        /**
+         * @return Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
+         * 
+         */
     private final String status;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -94,79 +94,79 @@ public final class AccessReviewHistoryInstanceResponse {
     }
 
     /**
-     * The display name for the parent history definition.
+     * @return The display name for the parent history definition.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
+     * @return Uri which can be used to retrieve review history data. To generate this Uri, generateDownloadUri() must be called for a specific accessReviewHistoryDefinitionInstance. The link expires after a 24 hour period. Callers can see the expiration date time by looking at the &#39;se&#39; parameter in the generated uri.
      * 
-    */
+     */
     public String downloadUri() {
         return this.downloadUri;
     }
     /**
-     * Date time when history data report expires and the associated data is deleted.
+     * @return Date time when history data report expires and the associated data is deleted.
      * 
-    */
+     */
     public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
-     * Date time when the history data report is scheduled to be generated.
+     * @return Date time when the history data report is scheduled to be generated.
      * 
-    */
+     */
     public Optional<String> fulfilledDateTime() {
         return Optional.ofNullable(this.fulfilledDateTime);
     }
     /**
-     * The access review history definition instance id.
+     * @return The access review history definition instance id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The access review history definition instance unique id.
+     * @return The access review history definition instance unique id.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+     * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
      * 
-    */
+     */
     public Optional<String> reviewHistoryPeriodEndDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
     /**
-     * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+     * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
      * 
-    */
+     */
     public Optional<String> reviewHistoryPeriodStartDateTime() {
         return Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
     /**
-     * Date time when the history data report is scheduled to be generated.
+     * @return Date time when the history data report is scheduled to be generated.
      * 
-    */
+     */
     public Optional<String> runDateTime() {
         return Optional.ofNullable(this.runDateTime);
     }
     /**
-     * Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
+     * @return Status of the requested review history instance data. This is either requested, in-progress, done or error. The state transitions are as follows - Requested -&gt; InProgress -&gt; Done -&gt; Expired
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

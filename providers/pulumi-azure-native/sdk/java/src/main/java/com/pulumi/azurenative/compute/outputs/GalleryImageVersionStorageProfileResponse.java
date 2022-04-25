@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GalleryImageVersionStorageProfileResponse {
-    /**
-     * A list of data disk images.
-     * 
-     */
+        /**
+         * @return A list of data disk images.
+         * 
+         */
     private final @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
-    /**
-     * This is the OS disk image.
-     * 
-     */
+        /**
+         * @return This is the OS disk image.
+         * 
+         */
     private final @Nullable GalleryOSDiskImageResponse osDiskImage;
-    /**
-     * The gallery artifact version source.
-     * 
-     */
+        /**
+         * @return The gallery artifact version source.
+         * 
+         */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class GalleryImageVersionStorageProfileResponse {
     }
 
     /**
-     * A list of data disk images.
+     * @return A list of data disk images.
      * 
-    */
+     */
     public List<GalleryDataDiskImageResponse> dataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
     /**
-     * This is the OS disk image.
+     * @return This is the OS disk image.
      * 
-    */
+     */
     public Optional<GalleryOSDiskImageResponse> osDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
     /**
-     * The gallery artifact version source.
+     * @return The gallery artifact version source.
      * 
-    */
+     */
     public Optional<GalleryArtifactVersionSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }

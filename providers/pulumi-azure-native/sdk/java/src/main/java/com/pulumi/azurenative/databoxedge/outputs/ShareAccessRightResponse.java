@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ShareAccessRightResponse {
-    /**
-     * Type of access to be allowed on the share for this user.
-     * 
-     */
+        /**
+         * @return Type of access to be allowed on the share for this user.
+         * 
+         */
     private final String accessType;
-    /**
-     * The share ID.
-     * 
-     */
+        /**
+         * @return The share ID.
+         * 
+         */
     private final String shareId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ShareAccessRightResponse {
     }
 
     /**
-     * Type of access to be allowed on the share for this user.
+     * @return Type of access to be allowed on the share for this user.
      * 
-    */
+     */
     public String accessType() {
         return this.accessType;
     }
     /**
-     * The share ID.
+     * @return The share ID.
      * 
-    */
+     */
     public String shareId() {
         return this.shareId;
     }

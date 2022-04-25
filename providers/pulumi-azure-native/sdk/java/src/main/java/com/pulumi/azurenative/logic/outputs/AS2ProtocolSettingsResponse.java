@@ -15,40 +15,40 @@ import java.util.Objects;
 
 @CustomType
 public final class AS2ProtocolSettingsResponse {
-    /**
-     * The acknowledgement connection settings.
-     * 
-     */
+        /**
+         * @return The acknowledgement connection settings.
+         * 
+         */
     private final AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings;
-    /**
-     * The envelope settings.
-     * 
-     */
+        /**
+         * @return The envelope settings.
+         * 
+         */
     private final AS2EnvelopeSettingsResponse envelopeSettings;
-    /**
-     * The error settings.
-     * 
-     */
+        /**
+         * @return The error settings.
+         * 
+         */
     private final AS2ErrorSettingsResponse errorSettings;
-    /**
-     * The MDN settings.
-     * 
-     */
+        /**
+         * @return The MDN settings.
+         * 
+         */
     private final AS2MdnSettingsResponse mdnSettings;
-    /**
-     * The message connection settings.
-     * 
-     */
+        /**
+         * @return The message connection settings.
+         * 
+         */
     private final AS2MessageConnectionSettingsResponse messageConnectionSettings;
-    /**
-     * The security settings.
-     * 
-     */
+        /**
+         * @return The security settings.
+         * 
+         */
     private final AS2SecuritySettingsResponse securitySettings;
-    /**
-     * The validation settings.
-     * 
-     */
+        /**
+         * @return The validation settings.
+         * 
+         */
     private final AS2ValidationSettingsResponse validationSettings;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class AS2ProtocolSettingsResponse {
     }
 
     /**
-     * The acknowledgement connection settings.
+     * @return The acknowledgement connection settings.
      * 
-    */
+     */
     public AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
     }
     /**
-     * The envelope settings.
+     * @return The envelope settings.
      * 
-    */
+     */
     public AS2EnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
     /**
-     * The error settings.
+     * @return The error settings.
      * 
-    */
+     */
     public AS2ErrorSettingsResponse errorSettings() {
         return this.errorSettings;
     }
     /**
-     * The MDN settings.
+     * @return The MDN settings.
      * 
-    */
+     */
     public AS2MdnSettingsResponse mdnSettings() {
         return this.mdnSettings;
     }
     /**
-     * The message connection settings.
+     * @return The message connection settings.
      * 
-    */
+     */
     public AS2MessageConnectionSettingsResponse messageConnectionSettings() {
         return this.messageConnectionSettings;
     }
     /**
-     * The security settings.
+     * @return The security settings.
      * 
-    */
+     */
     public AS2SecuritySettingsResponse securitySettings() {
         return this.securitySettings;
     }
     /**
-     * The validation settings.
+     * @return The validation settings.
      * 
-    */
+     */
     public AS2ValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }

@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServerKeyResult {
-    /**
-     * The key creation date.
-     * 
-     */
+        /**
+         * @return The key creation date.
+         * 
+         */
     private final String creationDate;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Kind of encryption protector used to protect the key.
-     * 
-     */
+        /**
+         * @return Kind of encryption protector used to protect the key.
+         * 
+         */
     private final String kind;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The key type like &#39;AzureKeyVault&#39;.
-     * 
-     */
+        /**
+         * @return The key type like &#39;AzureKeyVault&#39;.
+         * 
+         */
     private final String serverKeyType;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The URI of the key.
-     * 
-     */
+        /**
+         * @return The URI of the key.
+         * 
+         */
     private final @Nullable String uri;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetServerKeyResult {
     }
 
     /**
-     * The key creation date.
+     * @return The key creation date.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of encryption protector used to protect the key.
+     * @return Kind of encryption protector used to protect the key.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The key type like &#39;AzureKeyVault&#39;.
+     * @return The key type like &#39;AzureKeyVault&#39;.
      * 
-    */
+     */
     public String serverKeyType() {
         return this.serverKeyType;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The URI of the key.
+     * @return The URI of the key.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNatRuleResult {
-    /**
-     * List of egress VpnSiteLinkConnections.
-     * 
-     */
+        /**
+         * @return List of egress VpnSiteLinkConnections.
+         * 
+         */
     private final List<SubResourceResponse> egressVpnSiteLinkConnections;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * The private IP address external mapping for NAT.
-     * 
-     */
+        /**
+         * @return The private IP address external mapping for NAT.
+         * 
+         */
     private final @Nullable List<VpnNatRuleMappingResponse> externalMappings;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * List of ingress VpnSiteLinkConnections.
-     * 
-     */
+        /**
+         * @return List of ingress VpnSiteLinkConnections.
+         * 
+         */
     private final List<SubResourceResponse> ingressVpnSiteLinkConnections;
-    /**
-     * The private IP address internal mapping for NAT.
-     * 
-     */
+        /**
+         * @return The private IP address internal mapping for NAT.
+         * 
+         */
     private final @Nullable List<VpnNatRuleMappingResponse> internalMappings;
-    /**
-     * The IP Configuration ID this NAT rule applies to.
-     * 
-     */
+        /**
+         * @return The IP Configuration ID this NAT rule applies to.
+         * 
+         */
     private final @Nullable String ipConfigurationId;
-    /**
-     * The Source NAT direction of a VPN NAT.
-     * 
-     */
+        /**
+         * @return The Source NAT direction of a VPN NAT.
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the NAT Rule resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the NAT Rule resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetNatRuleResult {
     }
 
     /**
-     * List of egress VpnSiteLinkConnections.
+     * @return List of egress VpnSiteLinkConnections.
      * 
-    */
+     */
     public List<SubResourceResponse> egressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The private IP address external mapping for NAT.
+     * @return The private IP address external mapping for NAT.
      * 
-    */
+     */
     public List<VpnNatRuleMappingResponse> externalMappings() {
         return this.externalMappings == null ? List.of() : this.externalMappings;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * List of ingress VpnSiteLinkConnections.
+     * @return List of ingress VpnSiteLinkConnections.
      * 
-    */
+     */
     public List<SubResourceResponse> ingressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
     /**
-     * The private IP address internal mapping for NAT.
+     * @return The private IP address internal mapping for NAT.
      * 
-    */
+     */
     public List<VpnNatRuleMappingResponse> internalMappings() {
         return this.internalMappings == null ? List.of() : this.internalMappings;
     }
     /**
-     * The IP Configuration ID this NAT rule applies to.
+     * @return The IP Configuration ID this NAT rule applies to.
      * 
-    */
+     */
     public Optional<String> ipConfigurationId() {
         return Optional.ofNullable(this.ipConfigurationId);
     }
     /**
-     * The Source NAT direction of a VPN NAT.
+     * @return The Source NAT direction of a VPN NAT.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the NAT Rule resource.
+     * @return The provisioning state of the NAT Rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

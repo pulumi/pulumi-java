@@ -22,6 +22,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the suppression.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -33,6 +37,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recommendationId", required=true)
     private Output<String> recommendationId;
 
+    /**
+     * @return The recommendation ID.
+     * 
+     */
     public Output<String> recommendationId() {
         return this.recommendationId;
     }
@@ -44,6 +52,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
     private Output<String> resourceUri;
 
+    /**
+     * @return The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+     * 
+     */
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
@@ -55,6 +67,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="suppressionId")
     private @Nullable Output<String> suppressionId;
 
+    /**
+     * @return The GUID of the suppression.
+     * 
+     */
     public Optional<Output<String>> suppressionId() {
         return Optional.ofNullable(this.suppressionId);
     }
@@ -66,6 +82,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
     private @Nullable Output<String> ttl;
 
+    /**
+     * @return The duration for which the suppression is valid.
+     * 
+     */
     public Optional<Output<String>> ttl() {
         return Optional.ofNullable(this.ttl);
     }
@@ -98,47 +118,107 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SuppressionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the suppression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the suppression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param recommendationId The recommendation ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationId(Output<String> recommendationId) {
             $.recommendationId = recommendationId;
             return this;
         }
 
+        /**
+         * @param recommendationId The recommendation ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationId(String recommendationId) {
             return recommendationId(Output.of(recommendationId));
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param suppressionId The GUID of the suppression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionId(@Nullable Output<String> suppressionId) {
             $.suppressionId = suppressionId;
             return this;
         }
 
+        /**
+         * @param suppressionId The GUID of the suppression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressionId(String suppressionId) {
             return suppressionId(Output.of(suppressionId));
         }
 
+        /**
+         * @param ttl The duration for which the suppression is valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(@Nullable Output<String> ttl) {
             $.ttl = ttl;
             return this;
         }
 
+        /**
+         * @param ttl The duration for which the suppression is valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttl(String ttl) {
             return ttl(Output.of(ttl));
         }

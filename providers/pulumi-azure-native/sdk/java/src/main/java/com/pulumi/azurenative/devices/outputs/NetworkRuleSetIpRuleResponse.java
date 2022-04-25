@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkRuleSetIpRuleResponse {
-    /**
-     * IP Filter Action
-     * 
-     */
+        /**
+         * @return IP Filter Action
+         * 
+         */
     private final @Nullable String action;
-    /**
-     * Name of the IP filter rule.
-     * 
-     */
+        /**
+         * @return Name of the IP filter rule.
+         * 
+         */
     private final String filterName;
-    /**
-     * A string that contains the IP address range in CIDR notation for the rule.
-     * 
-     */
+        /**
+         * @return A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         */
     private final String ipMask;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class NetworkRuleSetIpRuleResponse {
     }
 
     /**
-     * IP Filter Action
+     * @return IP Filter Action
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * Name of the IP filter rule.
+     * @return Name of the IP filter rule.
      * 
-    */
+     */
     public String filterName() {
         return this.filterName;
     }
     /**
-     * A string that contains the IP address range in CIDR notation for the rule.
+     * @return A string that contains the IP address range in CIDR notation for the rule.
      * 
-    */
+     */
     public String ipMask() {
         return this.ipMask;
     }

@@ -27,6 +27,11 @@ public final class DeliveryRuleQueryStringConditionArgs extends com.pulumi.resou
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the condition for the delivery rule.
+     * Expected value is &#39;QueryString&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class DeliveryRuleQueryStringConditionArgs extends com.pulumi.resou
     @Import(name="parameters", required=true)
     private Output<QueryStringMatchConditionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the condition.
+     * 
+     */
     public Output<QueryStringMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class DeliveryRuleQueryStringConditionArgs extends com.pulumi.resou
             $ = new DeliveryRuleQueryStringConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;QueryString&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the condition for the delivery rule.
+         * Expected value is &#39;QueryString&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<QueryStringMatchConditionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(QueryStringMatchConditionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

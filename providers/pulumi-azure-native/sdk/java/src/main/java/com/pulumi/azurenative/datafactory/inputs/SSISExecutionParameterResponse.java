@@ -23,6 +23,10 @@ public final class SSISExecutionParameterResponse extends com.pulumi.resources.I
     @Import(name="value", required=true)
     private Object value;
 
+    /**
+     * @return SSIS package execution parameter value. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object value() {
         return this.value;
     }
@@ -51,6 +55,12 @@ public final class SSISExecutionParameterResponse extends com.pulumi.resources.I
             $ = new SSISExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value SSIS package execution parameter value. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             $.value = value;
             return this;

@@ -13,41 +13,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SqlManagedInstancePropertiesResponse {
-    /**
-     * The instance admin user
-     * 
-     */
+        /**
+         * @return The instance admin user
+         * 
+         */
     private final @Nullable String admin;
-    /**
-     * Username and password for basic authentication.
-     * 
-     */
+        /**
+         * @return Username and password for basic authentication.
+         * 
+         */
     private final @Nullable BasicLoginInformationResponse basicLoginInformation;
-    /**
-     * null
-     * 
-     */
+        /**
+         * @return null
+         * 
+         */
     private final @Nullable String dataControllerId;
-    /**
-     * The instance end time
-     * 
-     */
+        /**
+         * @return The instance end time
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * The raw kubernetes information
-     * 
-     */
+        /**
+         * @return The raw kubernetes information
+         * 
+         */
     private final @Nullable Object k8sRaw;
-    /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
-     */
+        /**
+         * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
+         * 
+         */
     private final @Nullable String lastUploadedDate;
     private final String provisioningState;
-    /**
-     * The instance start time
-     * 
-     */
+        /**
+         * @return The instance start time
+         * 
+         */
     private final @Nullable String startTime;
 
     @CustomType.Constructor
@@ -71,44 +71,44 @@ public final class SqlManagedInstancePropertiesResponse {
     }
 
     /**
-     * The instance admin user
+     * @return The instance admin user
      * 
-    */
+     */
     public Optional<String> admin() {
         return Optional.ofNullable(this.admin);
     }
     /**
-     * Username and password for basic authentication.
+     * @return Username and password for basic authentication.
      * 
-    */
+     */
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
-     * null
+     * @return null
      * 
-    */
+     */
     public Optional<String> dataControllerId() {
         return Optional.ofNullable(this.dataControllerId);
     }
     /**
-     * The instance end time
+     * @return The instance end time
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * The raw kubernetes information
+     * @return The raw kubernetes information
      * 
-    */
+     */
     public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
-    */
+     */
     public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
@@ -116,9 +116,9 @@ public final class SqlManagedInstancePropertiesResponse {
         return this.provisioningState;
     }
     /**
-     * The instance start time
+     * @return The instance start time
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }

@@ -26,6 +26,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the policy exemption.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the policy exemption.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="exemptionCategory", required=true)
     private Output<Either<String,ExemptionCategory>> exemptionCategory;
 
+    /**
+     * @return The policy exemption category. Possible values are Waiver and Mitigated.
+     * 
+     */
     public Output<Either<String,ExemptionCategory>> exemptionCategory() {
         return this.exemptionCategory;
     }
@@ -59,6 +71,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="expiresOn")
     private @Nullable Output<String> expiresOn;
 
+    /**
+     * @return The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
+     * 
+     */
     public Optional<Output<String>> expiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
@@ -70,6 +86,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -81,6 +101,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policyAssignmentId", required=true)
     private Output<String> policyAssignmentId;
 
+    /**
+     * @return The ID of the policy assignment that is being exempted.
+     * 
+     */
     public Output<String> policyAssignmentId() {
         return this.policyAssignmentId;
     }
@@ -92,6 +116,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policyDefinitionReferenceIds")
     private @Nullable Output<List<String>> policyDefinitionReferenceIds;
 
+    /**
+     * @return The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
+     * 
+     */
     public Optional<Output<List<String>>> policyDefinitionReferenceIds() {
         return Optional.ofNullable(this.policyDefinitionReferenceIds);
     }
@@ -103,6 +131,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="policyExemptionName")
     private @Nullable Output<String> policyExemptionName;
 
+    /**
+     * @return The name of the policy exemption to delete.
+     * 
+     */
     public Optional<Output<String>> policyExemptionName() {
         return Optional.ofNullable(this.policyExemptionName);
     }
@@ -114,6 +146,10 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope of the policy exemption. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -150,95 +186,221 @@ public final class PolicyExemptionArgs extends com.pulumi.resources.ResourceArgs
             $ = new PolicyExemptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the policy exemption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the policy exemption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name of the policy exemption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the policy exemption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param exemptionCategory The policy exemption category. Possible values are Waiver and Mitigated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptionCategory(Output<Either<String,ExemptionCategory>> exemptionCategory) {
             $.exemptionCategory = exemptionCategory;
             return this;
         }
 
+        /**
+         * @param exemptionCategory The policy exemption category. Possible values are Waiver and Mitigated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptionCategory(Either<String,ExemptionCategory> exemptionCategory) {
             return exemptionCategory(Output.of(exemptionCategory));
         }
 
+        /**
+         * @param exemptionCategory The policy exemption category. Possible values are Waiver and Mitigated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptionCategory(String exemptionCategory) {
             return exemptionCategory(Either.ofLeft(exemptionCategory));
         }
 
+        /**
+         * @param exemptionCategory The policy exemption category. Possible values are Waiver and Mitigated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exemptionCategory(ExemptionCategory exemptionCategory) {
             return exemptionCategory(Either.ofRight(exemptionCategory));
         }
 
+        /**
+         * @param expiresOn The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
             $.expiresOn = expiresOn;
             return this;
         }
 
+        /**
+         * @param expiresOn The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiresOn(String expiresOn) {
             return expiresOn(Output.of(expiresOn));
         }
 
+        /**
+         * @param metadata The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param policyAssignmentId The ID of the policy assignment that is being exempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
             $.policyAssignmentId = policyAssignmentId;
             return this;
         }
 
+        /**
+         * @param policyAssignmentId The ID of the policy assignment that is being exempted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyAssignmentId(String policyAssignmentId) {
             return policyAssignmentId(Output.of(policyAssignmentId));
         }
 
+        /**
+         * @param policyDefinitionReferenceIds The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceIds(@Nullable Output<List<String>> policyDefinitionReferenceIds) {
             $.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
             return this;
         }
 
+        /**
+         * @param policyDefinitionReferenceIds The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceIds(List<String> policyDefinitionReferenceIds) {
             return policyDefinitionReferenceIds(Output.of(policyDefinitionReferenceIds));
         }
 
+        /**
+         * @param policyDefinitionReferenceIds The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionReferenceIds(String... policyDefinitionReferenceIds) {
             return policyDefinitionReferenceIds(List.of(policyDefinitionReferenceIds));
         }
 
+        /**
+         * @param policyExemptionName The name of the policy exemption to delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyExemptionName(@Nullable Output<String> policyExemptionName) {
             $.policyExemptionName = policyExemptionName;
             return this;
         }
 
+        /**
+         * @param policyExemptionName The name of the policy exemption to delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyExemptionName(String policyExemptionName) {
             return policyExemptionName(Output.of(policyExemptionName));
         }
 
+        /**
+         * @param scope The scope of the policy exemption. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope of the policy exemption. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;), resource group (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}&#39;, or resource (format: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }

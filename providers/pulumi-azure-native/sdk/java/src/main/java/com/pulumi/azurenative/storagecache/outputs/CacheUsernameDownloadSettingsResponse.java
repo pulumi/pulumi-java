@@ -13,65 +13,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CacheUsernameDownloadSettingsResponse {
-    /**
-     * Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
-     * 
-     */
+        /**
+         * @return Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+         * 
+         */
     private final @Nullable Boolean autoDownloadCertificate;
-    /**
-     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
-     * 
-     */
+        /**
+         * @return The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+         * 
+         */
     private final @Nullable String caCertificateURI;
-    /**
-     * When present, these are the credentials for the secure LDAP connection.
-     * 
-     */
+        /**
+         * @return When present, these are the credentials for the secure LDAP connection.
+         * 
+         */
     private final @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials;
-    /**
-     * Whether or not the LDAP connection should be encrypted.
-     * 
-     */
+        /**
+         * @return Whether or not the LDAP connection should be encrypted.
+         * 
+         */
     private final @Nullable Boolean encryptLdapConnection;
-    /**
-     * Whether or not Extended Groups is enabled.
-     * 
-     */
+        /**
+         * @return Whether or not Extended Groups is enabled.
+         * 
+         */
     private final @Nullable Boolean extendedGroups;
-    /**
-     * The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
-     * 
-     */
+        /**
+         * @return The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         */
     private final @Nullable String groupFileURI;
-    /**
-     * The base distinguished name for the LDAP domain.
-     * 
-     */
+        /**
+         * @return The base distinguished name for the LDAP domain.
+         * 
+         */
     private final @Nullable String ldapBaseDN;
-    /**
-     * The fully qualified domain name or IP address of the LDAP server to use.
-     * 
-     */
+        /**
+         * @return The fully qualified domain name or IP address of the LDAP server to use.
+         * 
+         */
     private final @Nullable String ldapServer;
-    /**
-     * Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
-     * 
-     */
+        /**
+         * @return Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+         * 
+         */
     private final @Nullable Boolean requireValidCertificate;
-    /**
-     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
-     * 
-     */
+        /**
+         * @return The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+         * 
+         */
     private final @Nullable String userFileURI;
-    /**
-     * Indicates whether or not the HPC Cache has performed the username download successfully.
-     * 
-     */
+        /**
+         * @return Indicates whether or not the HPC Cache has performed the username download successfully.
+         * 
+         */
     private final String usernameDownloaded;
-    /**
-     * This setting determines how the cache gets username and group names for clients.
-     * 
-     */
+        /**
+         * @return This setting determines how the cache gets username and group names for clients.
+         * 
+         */
     private final @Nullable String usernameSource;
 
     @CustomType.Constructor
@@ -103,86 +103,86 @@ public final class CacheUsernameDownloadSettingsResponse {
     }
 
     /**
-     * Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
+     * @return Determines if the certificate should be automatically downloaded. This applies to &#39;caCertificateURI&#39; only if &#39;requireValidCertificate&#39; is true.
      * 
-    */
+     */
     public Optional<Boolean> autoDownloadCertificate() {
         return Optional.ofNullable(this.autoDownloadCertificate);
     }
     /**
-     * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
+     * @return The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when &#39;requireValidCertificate&#39; is set to true.
      * 
-    */
+     */
     public Optional<String> caCertificateURI() {
         return Optional.ofNullable(this.caCertificateURI);
     }
     /**
-     * When present, these are the credentials for the secure LDAP connection.
+     * @return When present, these are the credentials for the secure LDAP connection.
      * 
-    */
+     */
     public Optional<CacheUsernameDownloadSettingsResponseCredentials> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * Whether or not the LDAP connection should be encrypted.
+     * @return Whether or not the LDAP connection should be encrypted.
      * 
-    */
+     */
     public Optional<Boolean> encryptLdapConnection() {
         return Optional.ofNullable(this.encryptLdapConnection);
     }
     /**
-     * Whether or not Extended Groups is enabled.
+     * @return Whether or not Extended Groups is enabled.
      * 
-    */
+     */
     public Optional<Boolean> extendedGroups() {
         return Optional.ofNullable(this.extendedGroups);
     }
     /**
-     * The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+     * @return The URI of the file containing group information (in /etc/group file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
-    */
+     */
     public Optional<String> groupFileURI() {
         return Optional.ofNullable(this.groupFileURI);
     }
     /**
-     * The base distinguished name for the LDAP domain.
+     * @return The base distinguished name for the LDAP domain.
      * 
-    */
+     */
     public Optional<String> ldapBaseDN() {
         return Optional.ofNullable(this.ldapBaseDN);
     }
     /**
-     * The fully qualified domain name or IP address of the LDAP server to use.
+     * @return The fully qualified domain name or IP address of the LDAP server to use.
      * 
-    */
+     */
     public Optional<String> ldapServer() {
         return Optional.ofNullable(this.ldapServer);
     }
     /**
-     * Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
+     * @return Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
      * 
-    */
+     */
     public Optional<Boolean> requireValidCertificate() {
         return Optional.ofNullable(this.requireValidCertificate);
     }
     /**
-     * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
+     * @return The URI of the file containing user information (in /etc/passwd file format). This field must be populated when &#39;usernameSource&#39; is set to &#39;File&#39;.
      * 
-    */
+     */
     public Optional<String> userFileURI() {
         return Optional.ofNullable(this.userFileURI);
     }
     /**
-     * Indicates whether or not the HPC Cache has performed the username download successfully.
+     * @return Indicates whether or not the HPC Cache has performed the username download successfully.
      * 
-    */
+     */
     public String usernameDownloaded() {
         return this.usernameDownloaded;
     }
     /**
-     * This setting determines how the cache gets username and group names for clients.
+     * @return This setting determines how the cache gets username and group names for clients.
      * 
-    */
+     */
     public Optional<String> usernameSource() {
         return Optional.ofNullable(this.usernameSource);
     }

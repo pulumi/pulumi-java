@@ -29,6 +29,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return The recommendation action of the machine or rule
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="common")
     private @Nullable Boolean common;
 
+    /**
+     * @return Whether the application is commonly run on the machine
+     * 
+     */
     public Optional<Boolean> common() {
         return Optional.ofNullable(this.common);
     }
@@ -51,6 +59,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="configurationStatus")
     private @Nullable String configurationStatus;
 
+    /**
+     * @return The configuration status of the machines group or machine or rule
+     * 
+     */
     public Optional<String> configurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
@@ -62,6 +74,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="fileType")
     private @Nullable String fileType;
 
+    /**
+     * @return The type of the file (for Linux files - Executable is used)
+     * 
+     */
     public Optional<String> fileType() {
         return Optional.ofNullable(this.fileType);
     }
@@ -73,6 +89,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return The full path of the file, or an identifier of the application
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -84,6 +104,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="publisherInfo")
     private @Nullable PublisherInfoResponse publisherInfo;
 
+    /**
+     * @return Represents the publisher information of a process/rule
+     * 
+     */
     public Optional<PublisherInfoResponse> publisherInfo() {
         return Optional.ofNullable(this.publisherInfo);
     }
@@ -95,6 +119,10 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the rule to be allowed
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -145,36 +173,78 @@ public final class PathRecommendationResponse extends com.pulumi.resources.Invok
             $ = new PathRecommendationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param common Whether the application is commonly run on the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder common(@Nullable Boolean common) {
             $.common = common;
             return this;
         }
 
+        /**
+         * @param configurationStatus The configuration status of the machines group or machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatus(@Nullable String configurationStatus) {
             $.configurationStatus = configurationStatus;
             return this;
         }
 
+        /**
+         * @param fileType The type of the file (for Linux files - Executable is used)
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(@Nullable String fileType) {
             $.fileType = fileType;
             return this;
         }
 
+        /**
+         * @param path The full path of the file, or an identifier of the application
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param publisherInfo Represents the publisher information of a process/rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherInfo(@Nullable PublisherInfoResponse publisherInfo) {
             $.publisherInfo = publisherInfo;
             return this;
         }
 
+        /**
+         * @param type The type of the rule to be allowed
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

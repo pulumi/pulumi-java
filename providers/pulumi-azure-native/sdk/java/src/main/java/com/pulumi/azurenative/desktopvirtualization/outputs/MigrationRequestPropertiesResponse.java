@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MigrationRequestPropertiesResponse {
-    /**
-     * The path to the legacy object to migrate.
-     * 
-     */
+        /**
+         * @return The path to the legacy object to migrate.
+         * 
+         */
     private final @Nullable String migrationPath;
-    /**
-     * The type of operation for migration.
-     * 
-     */
+        /**
+         * @return The type of operation for migration.
+         * 
+         */
     private final @Nullable String operation;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MigrationRequestPropertiesResponse {
     }
 
     /**
-     * The path to the legacy object to migrate.
+     * @return The path to the legacy object to migrate.
      * 
-    */
+     */
     public Optional<String> migrationPath() {
         return Optional.ofNullable(this.migrationPath);
     }
     /**
-     * The type of operation for migration.
+     * @return The type of operation for migration.
      * 
-    */
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListKustoPoolFollowerDatabasesResult {
-    /**
-     * The list of follower database result.
-     * 
-     */
+        /**
+         * @return The list of follower database result.
+         * 
+         */
     private final @Nullable List<FollowerDatabaseDefinitionResponse> value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListKustoPoolFollowerDatabasesResult {
     }
 
     /**
-     * The list of follower database result.
+     * @return The list of follower database result.
      * 
-    */
+     */
     public List<FollowerDatabaseDefinitionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

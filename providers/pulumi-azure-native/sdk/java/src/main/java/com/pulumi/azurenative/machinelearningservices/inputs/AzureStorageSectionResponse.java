@@ -24,6 +24,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="accountKey")
     private @Nullable String accountKey;
 
+    /**
+     * @return  Storage Account Key (Deprecated).
+     * 
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -35,6 +39,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return Storage Account Name.
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -46,6 +54,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="areWorkspaceManagedIdentitiesAllowed")
     private @Nullable Boolean areWorkspaceManagedIdentitiesAllowed;
 
+    /**
+     * @return Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
+     * 
+     */
     public Optional<Boolean> areWorkspaceManagedIdentitiesAllowed() {
         return Optional.ofNullable(this.areWorkspaceManagedIdentitiesAllowed);
     }
@@ -57,6 +69,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="blobCacheTimeout")
     private @Nullable Integer blobCacheTimeout;
 
+    /**
+     * @return  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+     * 
+     */
     public Optional<Integer> blobCacheTimeout() {
         return Optional.ofNullable(this.blobCacheTimeout);
     }
@@ -75,6 +91,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return The storage container name.
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -86,6 +106,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="credential")
     private @Nullable String credential;
 
+    /**
+     * @return The credential.
+     * 
+     */
     public Optional<String> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -97,6 +121,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="credentialType")
     private @Nullable String credentialType;
 
+    /**
+     * @return  The credential type.
+     * 
+     */
     public Optional<String> credentialType() {
         return Optional.ofNullable(this.credentialType);
     }
@@ -108,6 +136,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="endpoint")
     private @Nullable String endpoint;
 
+    /**
+     * @return The host of the container.
+     * 
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -119,6 +151,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="isSas")
     private @Nullable Boolean isSas;
 
+    /**
+     * @return Indicate if we are using SAS token or Account Key (Deprecated).
+     * 
+     */
     public Optional<Boolean> isSas() {
         return Optional.ofNullable(this.isSas);
     }
@@ -130,6 +166,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The protocol to use. Defaults to https.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -141,6 +181,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="resourceGroup")
     private @Nullable String resourceGroup;
 
+    /**
+     * @return Resource Group.
+     * 
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -152,6 +196,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="sasToken")
     private @Nullable String sasToken;
 
+    /**
+     * @return  SAS Token for the container (Deprecated).
+     * 
+     */
     public Optional<String> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
@@ -163,6 +211,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="serviceDataAccessAuthIdentity")
     private @Nullable String serviceDataAccessAuthIdentity;
 
+    /**
+     * @return Indicates which identity to use to authenticate service data access to customer&#39;s storage.
+     * 
+     */
     public Optional<String> serviceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
@@ -174,6 +226,10 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return Subscription ID.
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -216,21 +272,45 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
             $ = new AzureStorageSectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey  Storage Account Key (Deprecated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable String accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountName Storage Account Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param areWorkspaceManagedIdentitiesAllowed Indicate if we are using Workspace ManagedIdentities/MSI token (Deprecated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder areWorkspaceManagedIdentitiesAllowed(@Nullable Boolean areWorkspaceManagedIdentitiesAllowed) {
             $.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
             return this;
         }
 
+        /**
+         * @param blobCacheTimeout  If this is an &#34;DataStoreType.AzureBlob&#34;, the length of time (in seconds) to cache files locally after they are accessed (downloaded).
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobCacheTimeout(@Nullable Integer blobCacheTimeout) {
             $.blobCacheTimeout = blobCacheTimeout;
             return this;
@@ -241,51 +321,111 @@ public final class AzureStorageSectionResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        /**
+         * @param containerName The storage container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param credential The credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable String credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credentialType  The credential type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialType(@Nullable String credentialType) {
             $.credentialType = credentialType;
             return this;
         }
 
+        /**
+         * @param endpoint The host of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param isSas Indicate if we are using SAS token or Account Key (Deprecated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSas(@Nullable Boolean isSas) {
             $.isSas = isSas;
             return this;
         }
 
+        /**
+         * @param protocol The protocol to use. Defaults to https.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param resourceGroup Resource Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param sasToken  SAS Token for the container (Deprecated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(@Nullable String sasToken) {
             $.sasToken = sasToken;
             return this;
         }
 
+        /**
+         * @param serviceDataAccessAuthIdentity Indicates which identity to use to authenticate service data access to customer&#39;s storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             $.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

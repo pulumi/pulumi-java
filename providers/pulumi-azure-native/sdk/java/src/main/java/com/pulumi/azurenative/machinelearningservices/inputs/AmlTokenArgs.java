@@ -26,6 +26,11 @@ public final class AmlTokenArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityType", required=true)
     private Output<String> identityType;
 
+    /**
+     * @return Enum to determine identity framework.
+     * Expected value is &#39;AMLToken&#39;.
+     * 
+     */
     public Output<String> identityType() {
         return this.identityType;
     }
@@ -54,11 +59,25 @@ public final class AmlTokenArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AmlTokenArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityType Enum to determine identity framework.
+         * Expected value is &#39;AMLToken&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(Output<String> identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param identityType Enum to determine identity framework.
+         * Expected value is &#39;AMLToken&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(String identityType) {
             return identityType(Output.of(identityType));
         }

@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FilterablePropertyResponse {
-    /**
-     * Values to be filtered.
-     * 
-     */
+        /**
+         * @return Values to be filtered.
+         * 
+         */
     private final List<String> supportedValues;
-    /**
-     * Type of product filter.
-     * 
-     */
+        /**
+         * @return Type of product filter.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FilterablePropertyResponse {
     }
 
     /**
-     * Values to be filtered.
+     * @return Values to be filtered.
      * 
-    */
+     */
     public List<String> supportedValues() {
         return this.supportedValues;
     }
     /**
-     * Type of product filter.
+     * @return Type of product filter.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class HourlyScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="minute")
     private @Nullable Integer minute;
 
+    /**
+     * @return Indicates which minute snapshot should be taken
+     * 
+     */
     public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }
@@ -37,6 +41,10 @@ public final class HourlyScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="snapshotsToKeep")
     private @Nullable Integer snapshotsToKeep;
 
+    /**
+     * @return Hourly snapshot count to keep
+     * 
+     */
     public Optional<Integer> snapshotsToKeep() {
         return Optional.ofNullable(this.snapshotsToKeep);
     }
@@ -48,6 +56,10 @@ public final class HourlyScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="usedBytes")
     private @Nullable Double usedBytes;
 
+    /**
+     * @return Resource size in bytes, current storage usage for the volume in bytes
+     * 
+     */
     public Optional<Double> usedBytes() {
         return Optional.ofNullable(this.usedBytes);
     }
@@ -78,16 +90,34 @@ public final class HourlyScheduleResponse extends com.pulumi.resources.InvokeArg
             $ = new HourlyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param minute Indicates which minute snapshot should be taken
+         * 
+         * @return builder
+         * 
+         */
         public Builder minute(@Nullable Integer minute) {
             $.minute = minute;
             return this;
         }
 
+        /**
+         * @param snapshotsToKeep Hourly snapshot count to keep
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
+        /**
+         * @param usedBytes Resource size in bytes, current storage usage for the volume in bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedBytes(@Nullable Double usedBytes) {
             $.usedBytes = usedBytes;
             return this;

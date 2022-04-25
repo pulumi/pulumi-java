@@ -28,6 +28,10 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
     @Import(name="directLineEmbedCode")
     private @Nullable Output<String> directLineEmbedCode;
 
+    /**
+     * @return Direct Line embed code of the resource
+     * 
+     */
     public Optional<Output<String>> directLineEmbedCode() {
         return Optional.ofNullable(this.directLineEmbedCode);
     }
@@ -39,6 +43,10 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
     @Import(name="sites")
     private @Nullable Output<List<DirectLineSiteArgs>> sites;
 
+    /**
+     * @return The list of Direct Line sites
+     * 
+     */
     public Optional<Output<List<DirectLineSiteArgs>>> sites() {
         return Optional.ofNullable(this.sites);
     }
@@ -68,24 +76,54 @@ public final class DirectLineChannelPropertiesArgs extends com.pulumi.resources.
             $ = new DirectLineChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directLineEmbedCode Direct Line embed code of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder directLineEmbedCode(@Nullable Output<String> directLineEmbedCode) {
             $.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
 
+        /**
+         * @param directLineEmbedCode Direct Line embed code of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder directLineEmbedCode(String directLineEmbedCode) {
             return directLineEmbedCode(Output.of(directLineEmbedCode));
         }
 
+        /**
+         * @param sites The list of Direct Line sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(@Nullable Output<List<DirectLineSiteArgs>> sites) {
             $.sites = sites;
             return this;
         }
 
+        /**
+         * @param sites The list of Direct Line sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(List<DirectLineSiteArgs> sites) {
             return sites(Output.of(sites));
         }
 
+        /**
+         * @param sites The list of Direct Line sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(DirectLineSiteArgs... sites) {
             return sites(List.of(sites));
         }

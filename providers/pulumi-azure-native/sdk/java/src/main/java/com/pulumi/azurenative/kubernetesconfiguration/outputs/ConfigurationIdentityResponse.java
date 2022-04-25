@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationIdentityResponse {
-    /**
-     * The principal id of the system assigned identity which is used by the configuration.
-     * 
-     */
+        /**
+         * @return The principal id of the system assigned identity which is used by the configuration.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant id of the system assigned identity which is used by the configuration.
-     * 
-     */
+        /**
+         * @return The tenant id of the system assigned identity which is used by the configuration.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
-     * 
-     */
+        /**
+         * @return The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ConfigurationIdentityResponse {
     }
 
     /**
-     * The principal id of the system assigned identity which is used by the configuration.
+     * @return The principal id of the system assigned identity which is used by the configuration.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id of the system assigned identity which is used by the configuration.
+     * @return The tenant id of the system assigned identity which is used by the configuration.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
+     * @return The type of identity used for the configuration. Type &#39;SystemAssigned&#39; will use an implicitly created identity. Type &#39;None&#39; will not use Managed Identity for the configuration.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

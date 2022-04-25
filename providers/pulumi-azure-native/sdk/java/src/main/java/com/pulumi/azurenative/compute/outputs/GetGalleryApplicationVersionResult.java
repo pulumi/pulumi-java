@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGalleryApplicationVersionResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The provisioning state, which only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The publishing profile of a gallery image version.
-     * 
-     */
+        /**
+         * @return The publishing profile of a gallery image version.
+         * 
+         */
     private final GalleryApplicationVersionPublishingProfileResponse publishingProfile;
-    /**
-     * This is the replication status of the gallery image version.
-     * 
-     */
+        /**
+         * @return This is the replication status of the gallery image version.
+         * 
+         */
     private final ReplicationStatusResponse replicationStatus;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetGalleryApplicationVersionResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The publishing profile of a gallery image version.
+     * @return The publishing profile of a gallery image version.
      * 
-    */
+     */
     public GalleryApplicationVersionPublishingProfileResponse publishingProfile() {
         return this.publishingProfile;
     }
     /**
-     * This is the replication status of the gallery image version.
+     * @return This is the replication status of the gallery image version.
      * 
-    */
+     */
     public ReplicationStatusResponse replicationStatus() {
         return this.replicationStatus;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

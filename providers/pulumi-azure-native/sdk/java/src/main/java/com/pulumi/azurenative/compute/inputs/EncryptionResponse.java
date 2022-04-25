@@ -25,6 +25,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diskEncryptionSetId")
     private @Nullable String diskEncryptionSetId;
 
+    /**
+     * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
+     * 
+     */
     public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -36,6 +40,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of key used to encrypt the data of the disk.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId ResourceId of the disk encryption set to use for enabling encryption at rest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param type The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -28,6 +28,10 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
     @Import(name="doubleEncryptionStatus")
     private @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 
+    /**
+     * @return Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+     * 
+     */
     public Optional<Output<Either<String,DoubleEncryptionStatus>>> doubleEncryptionStatus() {
         return Optional.ofNullable(this.doubleEncryptionStatus);
     }
@@ -56,19 +60,43 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
             $ = new EncryptionPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param doubleEncryptionStatus Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryptionStatus(@Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
             $.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
         }
 
+        /**
+         * @param doubleEncryptionStatus Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryptionStatus(Either<String,DoubleEncryptionStatus> doubleEncryptionStatus) {
             return doubleEncryptionStatus(Output.of(doubleEncryptionStatus));
         }
 
+        /**
+         * @param doubleEncryptionStatus Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryptionStatus(String doubleEncryptionStatus) {
             return doubleEncryptionStatus(Either.ofLeft(doubleEncryptionStatus));
         }
 
+        /**
+         * @param doubleEncryptionStatus Double encryption status as entered by the customer. It is compulsory to give this parameter if the &#39;Deny&#39; or &#39;Disabled&#39; policy is configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryptionStatus(DoubleEncryptionStatus doubleEncryptionStatus) {
             return doubleEncryptionStatus(Either.ofRight(doubleEncryptionStatus));
         }

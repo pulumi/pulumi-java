@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListLocationConsortiumsResult {
-    /**
-     * Gets or sets the collection of consortiums.
-     * 
-     */
+        /**
+         * @return Gets or sets the collection of consortiums.
+         * 
+         */
     private final @Nullable List<ConsortiumResponse> value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListLocationConsortiumsResult {
     }
 
     /**
-     * Gets or sets the collection of consortiums.
+     * @return Gets or sets the collection of consortiums.
      * 
-    */
+     */
     public List<ConsortiumResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

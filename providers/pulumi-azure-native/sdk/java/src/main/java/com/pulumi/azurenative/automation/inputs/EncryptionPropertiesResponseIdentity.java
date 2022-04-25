@@ -25,6 +25,10 @@ public final class EncryptionPropertiesResponseIdentity extends com.pulumi.resou
     @Import(name="userAssignedIdentity")
     private @Nullable Object userAssignedIdentity;
 
+    /**
+     * @return The user identity used for CMK. It will be an ARM resource id in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Object> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -53,6 +57,12 @@ public final class EncryptionPropertiesResponseIdentity extends com.pulumi.resou
             $ = new EncryptionPropertiesResponseIdentity(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userAssignedIdentity The user identity used for CMK. It will be an ARM resource id in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

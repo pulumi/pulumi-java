@@ -28,6 +28,10 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
     @Import(name="encryptionSettings")
     private @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
 
+    /**
+     * @return Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+     * 
+     */
     public Optional<List<DiskEncryptionSettingsResponse>> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
@@ -39,6 +43,10 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -80,25 +92,55 @@ public final class DiskInstanceViewResponse extends com.pulumi.resources.InvokeA
             $ = new DiskInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionSettings Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(@Nullable List<DiskEncryptionSettingsResponse> encryptionSettings) {
             $.encryptionSettings = encryptionSettings;
             return this;
         }
 
+        /**
+         * @param encryptionSettings Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(DiskEncryptionSettingsResponse... encryptionSettings) {
             return encryptionSettings(List.of(encryptionSettings));
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }

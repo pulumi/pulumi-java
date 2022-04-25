@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUserSettingsWithLocationResult {
-    /**
-     * The cloud shell user settings properties.
-     * 
-     */
+        /**
+         * @return The cloud shell user settings properties.
+         * 
+         */
     private final UserPropertiesResponse properties;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetUserSettingsWithLocationResult {
     }
 
     /**
-     * The cloud shell user settings properties.
+     * @return The cloud shell user settings properties.
      * 
-    */
+     */
     public UserPropertiesResponse properties() {
         return this.properties;
     }

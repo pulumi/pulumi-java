@@ -25,6 +25,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="extensionProperties")
     private @Nullable Output<Map<String,String>> extensionProperties;
 
+    /**
+     * @return Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
+     * 
+     */
     public Optional<Output<Map<String,String>>> extensionProperties() {
         return Optional.ofNullable(this.extensionProperties);
     }
@@ -36,6 +40,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets location of the resource
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="maintenanceScope")
     private @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
 
+    /**
+     * @return Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+     * 
+     */
     public Optional<Output<Either<String,MaintenanceScope>>> maintenanceScope() {
         return Optional.ofNullable(this.maintenanceScope);
     }
@@ -58,6 +70,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -69,6 +85,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource Group Name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return Resource Identifier
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -91,6 +115,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets tags of the resource
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,73 +153,169 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
             $ = new MaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensionProperties Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionProperties(@Nullable Output<Map<String,String>> extensionProperties) {
             $.extensionProperties = extensionProperties;
             return this;
         }
 
+        /**
+         * @param extensionProperties Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionProperties(Map<String,String> extensionProperties) {
             return extensionProperties(Output.of(extensionProperties));
         }
 
+        /**
+         * @param location Gets or sets location of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets location of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param maintenanceScope Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceScope(@Nullable Output<Either<String,MaintenanceScope>> maintenanceScope) {
             $.maintenanceScope = maintenanceScope;
             return this;
         }
 
+        /**
+         * @param maintenanceScope Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceScope(Either<String,MaintenanceScope> maintenanceScope) {
             return maintenanceScope(Output.of(maintenanceScope));
         }
 
+        /**
+         * @param maintenanceScope Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceScope(String maintenanceScope) {
             return maintenanceScope(Either.ofLeft(maintenanceScope));
         }
 
+        /**
+         * @param maintenanceScope Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceScope(MaintenanceScope maintenanceScope) {
             return maintenanceScope(Either.ofRight(maintenanceScope));
         }
 
+        /**
+         * @param namespace Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName Resource Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName Resource Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param tags Gets or sets tags of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets tags of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

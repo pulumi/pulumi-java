@@ -11,11 +11,11 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedIdentitySettingsResponse {
-    /**
-     * The Resource indicating the App ID URI of the target resource.
-     * It also appears in the aud (audience) claim of the issued token.
-     * 
-     */
+        /**
+         * @return The Resource indicating the App ID URI of the target resource.
+         * It also appears in the aud (audience) claim of the issued token.
+         * 
+         */
     private final @Nullable String resource;
 
     @CustomType.Constructor
@@ -24,10 +24,10 @@ public final class ManagedIdentitySettingsResponse {
     }
 
     /**
-     * The Resource indicating the App ID URI of the target resource.
+     * @return The Resource indicating the App ID URI of the target resource.
      * It also appears in the aud (audience) claim of the issued token.
      * 
-    */
+     */
     public Optional<String> resource() {
         return Optional.ofNullable(this.resource);
     }

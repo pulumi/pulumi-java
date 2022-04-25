@@ -22,6 +22,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress")
     private @Nullable Output<String> emailAddress;
 
+    /**
+     * @return Email of the user used by Logz for contacting them if needed
+     * 
+     */
     public Optional<Output<String>> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -33,6 +37,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
     private @Nullable Output<String> firstName;
 
+    /**
+     * @return First Name of the user
+     * 
+     */
     public Optional<Output<String>> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -44,6 +52,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
     private @Nullable Output<String> lastName;
 
+    /**
+     * @return Last Name of the user
+     * 
+     */
     public Optional<Output<String>> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -55,6 +67,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phoneNumber")
     private @Nullable Output<String> phoneNumber;
 
+    /**
+     * @return Phone number of the user used by Logz for contacting them if needed
+     * 
+     */
     public Optional<Output<String>> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
@@ -86,38 +102,86 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress Email of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param firstName First Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable Output<String> firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param firstName First Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             return firstName(Output.of(firstName));
         }
 
+        /**
+         * @param lastName Last Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable Output<String> lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param lastName Last Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             return lastName(Output.of(lastName));
         }
 
+        /**
+         * @param phoneNumber Phone number of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number of the user used by Logz for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             return phoneNumber(Output.of(phoneNumber));
         }

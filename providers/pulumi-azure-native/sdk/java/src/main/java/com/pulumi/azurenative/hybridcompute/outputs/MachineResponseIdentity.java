@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MachineResponseIdentity {
-    /**
-     * The identity&#39;s principal id.
-     * 
-     */
+        /**
+         * @return The identity&#39;s principal id.
+         * 
+         */
     private final String principalId;
-    /**
-     * The identity&#39;s tenant id.
-     * 
-     */
+        /**
+         * @return The identity&#39;s tenant id.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The identity type.
-     * 
-     */
+        /**
+         * @return The identity type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class MachineResponseIdentity {
     }
 
     /**
-     * The identity&#39;s principal id.
+     * @return The identity&#39;s principal id.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The identity&#39;s tenant id.
+     * @return The identity&#39;s tenant id.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

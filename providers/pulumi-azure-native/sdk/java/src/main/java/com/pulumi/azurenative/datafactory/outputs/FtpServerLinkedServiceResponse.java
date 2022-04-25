@@ -19,71 +19,71 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FtpServerLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The authentication type to be used to connect to the FTP server.
-     * 
-     */
+        /**
+         * @return The authentication type to be used to connect to the FTP server.
+         * 
+         */
     private final @Nullable String authenticationType;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object enableServerCertificateValidation;
-    /**
-     * If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object enableSsl;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Host name of the FTP server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Host name of the FTP server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object host;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Password to logon the FTP server.
-     * 
-     */
+        /**
+         * @return Password to logon the FTP server.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object port;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;FtpServer&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;FtpServer&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Username to logon the FTP server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Username to logon the FTP server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object userName;
 
     @CustomType.Constructor
@@ -117,94 +117,94 @@ public final class FtpServerLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The authentication type to be used to connect to the FTP server.
+     * @return The authentication type to be used to connect to the FTP server.
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
     /**
-     * If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Host name of the FTP server. Type: string (or Expression with resultType string).
+     * @return Host name of the FTP server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object host() {
         return this.host;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password to logon the FTP server.
+     * @return Password to logon the FTP server.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;FtpServer&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Username to logon the FTP server. Type: string (or Expression with resultType string).
+     * @return Username to logon the FTP server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

@@ -25,6 +25,10 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
     @Import(name="creationScript")
     private @Nullable ScriptReferenceResponse creationScript;
 
+    /**
+     * @return Script that&#39;s run only once during provision of the compute.
+     * 
+     */
     public Optional<ScriptReferenceResponse> creationScript() {
         return Optional.ofNullable(this.creationScript);
     }
@@ -36,6 +40,10 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
     @Import(name="startupScript")
     private @Nullable ScriptReferenceResponse startupScript;
 
+    /**
+     * @return Script that&#39;s run every time the machine starts.
+     * 
+     */
     public Optional<ScriptReferenceResponse> startupScript() {
         return Optional.ofNullable(this.startupScript);
     }
@@ -65,11 +73,23 @@ public final class ScriptsToExecuteResponse extends com.pulumi.resources.InvokeA
             $ = new ScriptsToExecuteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationScript Script that&#39;s run only once during provision of the compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationScript(@Nullable ScriptReferenceResponse creationScript) {
             $.creationScript = creationScript;
             return this;
         }
 
+        /**
+         * @param startupScript Script that&#39;s run every time the machine starts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startupScript(@Nullable ScriptReferenceResponse startupScript) {
             $.startupScript = startupScript;
             return this;

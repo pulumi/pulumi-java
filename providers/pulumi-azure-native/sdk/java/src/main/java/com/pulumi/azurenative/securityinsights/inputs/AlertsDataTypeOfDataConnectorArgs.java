@@ -26,6 +26,10 @@ public final class AlertsDataTypeOfDataConnectorArgs extends com.pulumi.resource
     @Import(name="alerts")
     private @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
+    /**
+     * @return Alerts data type connection.
+     * 
+     */
     public Optional<Output<DataConnectorDataTypeCommonArgs>> alerts() {
         return Optional.ofNullable(this.alerts);
     }
@@ -54,11 +58,23 @@ public final class AlertsDataTypeOfDataConnectorArgs extends com.pulumi.resource
             $ = new AlertsDataTypeOfDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alerts Alerts data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alerts(@Nullable Output<DataConnectorDataTypeCommonArgs> alerts) {
             $.alerts = alerts;
             return this;
         }
 
+        /**
+         * @param alerts Alerts data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alerts(DataConnectorDataTypeCommonArgs alerts) {
             return alerts(Output.of(alerts));
         }

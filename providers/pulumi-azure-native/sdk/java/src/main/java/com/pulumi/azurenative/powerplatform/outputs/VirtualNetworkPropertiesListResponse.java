@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkPropertiesListResponse {
-    /**
-     * Next page link if any.
-     * 
-     */
+        /**
+         * @return Next page link if any.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * Array of virtual networks.
-     * 
-     */
+        /**
+         * @return Array of virtual networks.
+         * 
+         */
     private final @Nullable List<VirtualNetworkPropertiesResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class VirtualNetworkPropertiesListResponse {
     }
 
     /**
-     * Next page link if any.
+     * @return Next page link if any.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * Array of virtual networks.
+     * @return Array of virtual networks.
      * 
-    */
+     */
     public List<VirtualNetworkPropertiesResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

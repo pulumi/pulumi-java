@@ -23,6 +23,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -34,6 +38,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource Location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -45,6 +53,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="marketplaceOffer")
     private @Nullable Output<String> marketplaceOffer;
 
+    /**
+     * @return Premier add on Marketplace offer.
+     * 
+     */
     public Optional<Output<String>> marketplaceOffer() {
         return Optional.ofNullable(this.marketplaceOffer);
     }
@@ -56,6 +68,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="marketplacePublisher")
     private @Nullable Output<String> marketplacePublisher;
 
+    /**
+     * @return Premier add on Marketplace publisher.
+     * 
+     */
     public Optional<Output<String>> marketplacePublisher() {
         return Optional.ofNullable(this.marketplacePublisher);
     }
@@ -67,6 +83,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -78,6 +98,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="premierAddOnName")
     private @Nullable Output<String> premierAddOnName;
 
+    /**
+     * @return Add-on name.
+     * 
+     */
     public Optional<Output<String>> premierAddOnName() {
         return Optional.ofNullable(this.premierAddOnName);
     }
@@ -89,6 +113,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="product")
     private @Nullable Output<String> product;
 
+    /**
+     * @return Premier add on Product.
+     * 
+     */
     public Optional<Output<String>> product() {
         return Optional.ofNullable(this.product);
     }
@@ -100,6 +128,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -111,6 +143,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="sku")
     private @Nullable Output<String> sku;
 
+    /**
+     * @return Premier add on SKU.
+     * 
+     */
     public Optional<Output<String>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -122,6 +158,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -133,6 +173,10 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
     @Import(name="vendor")
     private @Nullable Output<String> vendor;
 
+    /**
+     * @return Premier add on Vendor.
+     * 
+     */
     public Optional<Output<String>> vendor() {
         return Optional.ofNullable(this.vendor);
     }
@@ -171,101 +215,233 @@ public final class WebAppPremierAddOnArgs extends com.pulumi.resources.ResourceA
             $ = new WebAppPremierAddOnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource Location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param marketplaceOffer Premier add on Marketplace offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceOffer(@Nullable Output<String> marketplaceOffer) {
             $.marketplaceOffer = marketplaceOffer;
             return this;
         }
 
+        /**
+         * @param marketplaceOffer Premier add on Marketplace offer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplaceOffer(String marketplaceOffer) {
             return marketplaceOffer(Output.of(marketplaceOffer));
         }
 
+        /**
+         * @param marketplacePublisher Premier add on Marketplace publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplacePublisher(@Nullable Output<String> marketplacePublisher) {
             $.marketplacePublisher = marketplacePublisher;
             return this;
         }
 
+        /**
+         * @param marketplacePublisher Premier add on Marketplace publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder marketplacePublisher(String marketplacePublisher) {
             return marketplacePublisher(Output.of(marketplacePublisher));
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param premierAddOnName Add-on name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premierAddOnName(@Nullable Output<String> premierAddOnName) {
             $.premierAddOnName = premierAddOnName;
             return this;
         }
 
+        /**
+         * @param premierAddOnName Add-on name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder premierAddOnName(String premierAddOnName) {
             return premierAddOnName(Output.of(premierAddOnName));
         }
 
+        /**
+         * @param product Premier add on Product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(@Nullable Output<String> product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param product Premier add on Product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             return product(Output.of(product));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Premier add on SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<String> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Premier add on SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vendor Premier add on Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(@Nullable Output<String> vendor) {
             $.vendor = vendor;
             return this;
         }
 
+        /**
+         * @param vendor Premier add on Vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendor(String vendor) {
             return vendor(Output.of(vendor));
         }

@@ -25,6 +25,10 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Verbose error message about the provisioning failure
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -36,6 +40,10 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningErrorCode")
     private @Nullable String provisioningErrorCode;
 
+    /**
+     * @return Error code of the provisioning failure
+     * 
+     */
     public Optional<String> provisioningErrorCode() {
         return Optional.ofNullable(this.provisioningErrorCode);
     }
@@ -65,11 +73,23 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
             $ = new ProvisioningErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message Verbose error message about the provisioning failure
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param provisioningErrorCode Error code of the provisioning failure
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningErrorCode(@Nullable String provisioningErrorCode) {
             $.provisioningErrorCode = provisioningErrorCode;
             return this;

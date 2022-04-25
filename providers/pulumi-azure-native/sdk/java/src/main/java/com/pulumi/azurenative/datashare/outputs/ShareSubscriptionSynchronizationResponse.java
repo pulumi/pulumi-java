@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ShareSubscriptionSynchronizationResponse {
-    /**
-     * Synchronization duration
-     * 
-     */
+        /**
+         * @return Synchronization duration
+         * 
+         */
     private final Integer durationMs;
-    /**
-     * End time of synchronization
-     * 
-     */
+        /**
+         * @return End time of synchronization
+         * 
+         */
     private final String endTime;
-    /**
-     * message of Synchronization
-     * 
-     */
+        /**
+         * @return message of Synchronization
+         * 
+         */
     private final String message;
-    /**
-     * start time of synchronization
-     * 
-     */
+        /**
+         * @return start time of synchronization
+         * 
+         */
     private final String startTime;
-    /**
-     * Raw Status
-     * 
-     */
+        /**
+         * @return Raw Status
+         * 
+         */
     private final String status;
-    /**
-     * Synchronization id
-     * 
-     */
+        /**
+         * @return Synchronization id
+         * 
+         */
     private final String synchronizationId;
-    /**
-     * Synchronization Mode
-     * 
-     */
+        /**
+         * @return Synchronization Mode
+         * 
+         */
     private final String synchronizationMode;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class ShareSubscriptionSynchronizationResponse {
     }
 
     /**
-     * Synchronization duration
+     * @return Synchronization duration
      * 
-    */
+     */
     public Integer durationMs() {
         return this.durationMs;
     }
     /**
-     * End time of synchronization
+     * @return End time of synchronization
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * message of Synchronization
+     * @return message of Synchronization
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * start time of synchronization
+     * @return start time of synchronization
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Raw Status
+     * @return Raw Status
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Synchronization id
+     * @return Synchronization id
      * 
-    */
+     */
     public String synchronizationId() {
         return this.synchronizationId;
     }
     /**
-     * Synchronization Mode
+     * @return Synchronization Mode
      * 
-    */
+     */
     public String synchronizationMode() {
         return this.synchronizationMode;
     }

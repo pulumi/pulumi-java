@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkMappingPropertiesResponse {
-    /**
-     * The fabric specific settings.
-     * 
-     */
+        /**
+         * @return The fabric specific settings.
+         * 
+         */
     private final @Nullable Object fabricSpecificSettings;
-    /**
-     * The primary fabric friendly name.
-     * 
-     */
+        /**
+         * @return The primary fabric friendly name.
+         * 
+         */
     private final @Nullable String primaryFabricFriendlyName;
-    /**
-     * The primary network friendly name.
-     * 
-     */
+        /**
+         * @return The primary network friendly name.
+         * 
+         */
     private final @Nullable String primaryNetworkFriendlyName;
-    /**
-     * The primary network id for network mapping.
-     * 
-     */
+        /**
+         * @return The primary network id for network mapping.
+         * 
+         */
     private final @Nullable String primaryNetworkId;
-    /**
-     * The recovery fabric ARM id.
-     * 
-     */
+        /**
+         * @return The recovery fabric ARM id.
+         * 
+         */
     private final @Nullable String recoveryFabricArmId;
-    /**
-     * The recovery fabric friendly name.
-     * 
-     */
+        /**
+         * @return The recovery fabric friendly name.
+         * 
+         */
     private final @Nullable String recoveryFabricFriendlyName;
-    /**
-     * The recovery network friendly name.
-     * 
-     */
+        /**
+         * @return The recovery network friendly name.
+         * 
+         */
     private final @Nullable String recoveryNetworkFriendlyName;
-    /**
-     * The recovery network id for network mapping.
-     * 
-     */
+        /**
+         * @return The recovery network id for network mapping.
+         * 
+         */
     private final @Nullable String recoveryNetworkId;
-    /**
-     * The pairing state for network mapping.
-     * 
-     */
+        /**
+         * @return The pairing state for network mapping.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class NetworkMappingPropertiesResponse {
     }
 
     /**
-     * The fabric specific settings.
+     * @return The fabric specific settings.
      * 
-    */
+     */
     public Optional<Object> fabricSpecificSettings() {
         return Optional.ofNullable(this.fabricSpecificSettings);
     }
     /**
-     * The primary fabric friendly name.
+     * @return The primary fabric friendly name.
      * 
-    */
+     */
     public Optional<String> primaryFabricFriendlyName() {
         return Optional.ofNullable(this.primaryFabricFriendlyName);
     }
     /**
-     * The primary network friendly name.
+     * @return The primary network friendly name.
      * 
-    */
+     */
     public Optional<String> primaryNetworkFriendlyName() {
         return Optional.ofNullable(this.primaryNetworkFriendlyName);
     }
     /**
-     * The primary network id for network mapping.
+     * @return The primary network id for network mapping.
      * 
-    */
+     */
     public Optional<String> primaryNetworkId() {
         return Optional.ofNullable(this.primaryNetworkId);
     }
     /**
-     * The recovery fabric ARM id.
+     * @return The recovery fabric ARM id.
      * 
-    */
+     */
     public Optional<String> recoveryFabricArmId() {
         return Optional.ofNullable(this.recoveryFabricArmId);
     }
     /**
-     * The recovery fabric friendly name.
+     * @return The recovery fabric friendly name.
      * 
-    */
+     */
     public Optional<String> recoveryFabricFriendlyName() {
         return Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
     /**
-     * The recovery network friendly name.
+     * @return The recovery network friendly name.
      * 
-    */
+     */
     public Optional<String> recoveryNetworkFriendlyName() {
         return Optional.ofNullable(this.recoveryNetworkFriendlyName);
     }
     /**
-     * The recovery network id for network mapping.
+     * @return The recovery network id for network mapping.
      * 
-    */
+     */
     public Optional<String> recoveryNetworkId() {
         return Optional.ofNullable(this.recoveryNetworkId);
     }
     /**
-     * The pairing state for network mapping.
+     * @return The pairing state for network mapping.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

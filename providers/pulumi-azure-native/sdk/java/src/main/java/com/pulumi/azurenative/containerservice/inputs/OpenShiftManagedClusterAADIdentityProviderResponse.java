@@ -26,6 +26,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The clientId password associated with the provider.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -37,6 +41,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
     @Import(name="customerAdminGroupId")
     private @Nullable String customerAdminGroupId;
 
+    /**
+     * @return The groupId to be granted cluster admin role.
+     * 
+     */
     public Optional<String> customerAdminGroupId() {
         return Optional.ofNullable(this.customerAdminGroupId);
     }
@@ -49,6 +57,11 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The kind of the provider.
+     * Expected value is &#39;AADIdentityProvider&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -60,6 +73,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
     @Import(name="secret")
     private @Nullable String secret;
 
+    /**
+     * @return The secret password associated with the provider.
+     * 
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -71,6 +88,10 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The tenantId associated with the provider.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -103,26 +124,57 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse extends co
             $ = new OpenShiftManagedClusterAADIdentityProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The clientId password associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param customerAdminGroupId The groupId to be granted cluster admin role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
             $.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
 
+        /**
+         * @param kind The kind of the provider.
+         * Expected value is &#39;AADIdentityProvider&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param secret The secret password associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable String secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param tenantId The tenantId associated with the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;

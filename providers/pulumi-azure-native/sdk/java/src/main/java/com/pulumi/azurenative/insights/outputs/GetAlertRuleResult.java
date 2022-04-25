@@ -21,65 +21,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAlertRuleResult {
-    /**
-     * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
-     */
+        /**
+         * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         */
     private final @Nullable Either<RuleEmailActionResponse,RuleWebhookActionResponse> action;
-    /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
-     */
+        /**
+         * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         */
     private final @Nullable List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions;
-    /**
-     * the condition that results in the alert rule being activated.
-     * 
-     */
+        /**
+         * @return the condition that results in the alert rule being activated.
+         * 
+         */
     private final Object condition;
-    /**
-     * the description of the alert rule that will be included in the alert email.
-     * 
-     */
+        /**
+         * @return the description of the alert rule that will be included in the alert email.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * the flag that indicates whether the alert rule is enabled.
-     * 
-     */
+        /**
+         * @return the flag that indicates whether the alert rule is enabled.
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * Last time the rule was updated in ISO8601 format.
-     * 
-     */
+        /**
+         * @return Last time the rule was updated in ISO8601 format.
+         * 
+         */
     private final String lastUpdatedTime;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * the provisioning state.
-     * 
-     */
+        /**
+         * @return the provisioning state.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -111,86 +111,86 @@ public final class GetAlertRuleResult {
     }
 
     /**
-     * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-    */
+     */
     public Optional<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-    */
+     */
     public List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * the condition that results in the alert rule being activated.
+     * @return the condition that results in the alert rule being activated.
      * 
-    */
+     */
     public Object condition() {
         return this.condition;
     }
     /**
-     * the description of the alert rule that will be included in the alert email.
+     * @return the description of the alert rule that will be included in the alert email.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * the flag that indicates whether the alert rule is enabled.
+     * @return the flag that indicates whether the alert rule is enabled.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Last time the rule was updated in ISO8601 format.
+     * @return Last time the rule was updated in ISO8601 format.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the provisioning state.
+     * @return the provisioning state.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

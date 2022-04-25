@@ -13,48 +13,48 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RampUpRuleResponse {
-    /**
-     * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
-     * 
-     */
+        /**
+         * @return Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
+         * 
+         */
     private final @Nullable String actionHostName;
-    /**
-     * Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
-     * https://www.siteextensions.net/packages/TiPCallback/
-     * 
-     */
+        /**
+         * @return Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
+         * https://www.siteextensions.net/packages/TiPCallback/
+         * 
+         */
     private final @Nullable String changeDecisionCallbackUrl;
-    /**
-     * Specifies interval in minutes to reevaluate ReroutePercentage.
-     * 
-     */
+        /**
+         * @return Specifies interval in minutes to reevaluate ReroutePercentage.
+         * 
+         */
     private final @Nullable Integer changeIntervalInMinutes;
-    /**
-     * In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
-     * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
-     * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
+         * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
+         * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Double changeStep;
-    /**
-     * Specifies upper boundary below which ReroutePercentage will stay.
-     * 
-     */
+        /**
+         * @return Specifies upper boundary below which ReroutePercentage will stay.
+         * 
+         */
     private final @Nullable Double maxReroutePercentage;
-    /**
-     * Specifies lower boundary above which ReroutePercentage will stay.
-     * 
-     */
+        /**
+         * @return Specifies lower boundary above which ReroutePercentage will stay.
+         * 
+         */
     private final @Nullable Double minReroutePercentage;
-    /**
-     * Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
-     * 
-     */
+        /**
+         * @return Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Double reroutePercentage;
 
     @CustomType.Constructor
@@ -78,61 +78,61 @@ public final class RampUpRuleResponse {
     }
 
     /**
-     * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
+     * @return Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
      * 
-    */
+     */
     public Optional<String> actionHostName() {
         return Optional.ofNullable(this.actionHostName);
     }
     /**
-     * Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
+     * @return Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
      * https://www.siteextensions.net/packages/TiPCallback/
      * 
-    */
+     */
     public Optional<String> changeDecisionCallbackUrl() {
         return Optional.ofNullable(this.changeDecisionCallbackUrl);
     }
     /**
-     * Specifies interval in minutes to reevaluate ReroutePercentage.
+     * @return Specifies interval in minutes to reevaluate ReroutePercentage.
      * 
-    */
+     */
     public Optional<Integer> changeIntervalInMinutes() {
         return Optional.ofNullable(this.changeIntervalInMinutes);
     }
     /**
-     * In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
+     * @return In auto ramp up scenario this is the step to add/remove from &lt;code&gt;ReroutePercentage&lt;/code&gt; until it reaches \n&lt;code&gt;MinReroutePercentage&lt;/code&gt; or
      * &lt;code&gt;MaxReroutePercentage&lt;/code&gt;. Site metrics are checked every N minutes specified in &lt;code&gt;ChangeIntervalInMinutes&lt;/code&gt;.\nCustom decision algorithm
      * can be provided in TiPCallback site extension which URL can be specified in &lt;code&gt;ChangeDecisionCallbackUrl&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Double> changeStep() {
         return Optional.ofNullable(this.changeStep);
     }
     /**
-     * Specifies upper boundary below which ReroutePercentage will stay.
+     * @return Specifies upper boundary below which ReroutePercentage will stay.
      * 
-    */
+     */
     public Optional<Double> maxReroutePercentage() {
         return Optional.ofNullable(this.maxReroutePercentage);
     }
     /**
-     * Specifies lower boundary above which ReroutePercentage will stay.
+     * @return Specifies lower boundary above which ReroutePercentage will stay.
      * 
-    */
+     */
     public Optional<Double> minReroutePercentage() {
         return Optional.ofNullable(this.minReroutePercentage);
     }
     /**
-     * Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
+     * @return Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
+     * @return Percentage of the traffic which will be redirected to &lt;code&gt;ActionHostName&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Double> reroutePercentage() {
         return Optional.ofNullable(this.reroutePercentage);
     }

@@ -24,6 +24,10 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
     @Import(name="backupType", required=true)
     private String backupType;
 
+    /**
+     * @return BackupType ; Full/Incremental etc
+     * 
+     */
     public String backupType() {
         return this.backupType;
     }
@@ -36,6 +40,11 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;AzureBackupParams&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -65,11 +74,24 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
             $ = new AzureBackupParamsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupType BackupType ; Full/Incremental etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupType(String backupType) {
             $.backupType = backupType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;AzureBackupParams&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

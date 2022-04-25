@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LinuxOsInfoResponse {
-    /**
-     * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
-     * 
-     */
+        /**
+         * @return The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+         * 
+         */
     private final @Nullable String linuxOsState;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class LinuxOsInfoResponse {
     }
 
     /**
-     * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+     * @return The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
      * 
-    */
+     */
     public Optional<String> linuxOsState() {
         return Optional.ofNullable(this.linuxOsState);
     }

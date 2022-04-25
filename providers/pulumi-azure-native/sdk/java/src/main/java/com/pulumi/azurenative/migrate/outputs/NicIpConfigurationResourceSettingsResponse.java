@@ -17,45 +17,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NicIpConfigurationResourceSettingsResponse {
-    /**
-     * Gets or sets the references of the load balancer backend address pools.
-     * 
-     */
+        /**
+         * @return Gets or sets the references of the load balancer backend address pools.
+         * 
+         */
     private final @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools;
-    /**
-     * Gets or sets the references of the load balancer NAT rules.
-     * 
-     */
+        /**
+         * @return Gets or sets the references of the load balancer NAT rules.
+         * 
+         */
     private final @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules;
-    /**
-     * Gets or sets the IP configuration name.
-     * 
-     */
+        /**
+         * @return Gets or sets the IP configuration name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Gets or sets a value indicating whether this IP configuration is the primary.
-     * 
-     */
+        /**
+         * @return Gets or sets a value indicating whether this IP configuration is the primary.
+         * 
+         */
     private final @Nullable Boolean primary;
-    /**
-     * Gets or sets the private IP address of the network interface IP Configuration.
-     * 
-     */
+        /**
+         * @return Gets or sets the private IP address of the network interface IP Configuration.
+         * 
+         */
     private final @Nullable String privateIpAddress;
-    /**
-     * Gets or sets the private IP address allocation method.
-     * 
-     */
+        /**
+         * @return Gets or sets the private IP address allocation method.
+         * 
+         */
     private final @Nullable String privateIpAllocationMethod;
-    /**
-     * Defines reference to a public IP.
-     * 
-     */
+        /**
+         * @return Defines reference to a public IP.
+         * 
+         */
     private final @Nullable PublicIpReferenceResponse publicIp;
-    /**
-     * Defines reference to subnet.
-     * 
-     */
+        /**
+         * @return Defines reference to subnet.
+         * 
+         */
     private final @Nullable SubnetReferenceResponse subnet;
 
     @CustomType.Constructor
@@ -79,58 +79,58 @@ public final class NicIpConfigurationResourceSettingsResponse {
     }
 
     /**
-     * Gets or sets the references of the load balancer backend address pools.
+     * @return Gets or sets the references of the load balancer backend address pools.
      * 
-    */
+     */
     public List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
     /**
-     * Gets or sets the references of the load balancer NAT rules.
+     * @return Gets or sets the references of the load balancer NAT rules.
      * 
-    */
+     */
     public List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules() {
         return this.loadBalancerNatRules == null ? List.of() : this.loadBalancerNatRules;
     }
     /**
-     * Gets or sets the IP configuration name.
+     * @return Gets or sets the IP configuration name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets or sets a value indicating whether this IP configuration is the primary.
+     * @return Gets or sets a value indicating whether this IP configuration is the primary.
      * 
-    */
+     */
     public Optional<Boolean> primary() {
         return Optional.ofNullable(this.primary);
     }
     /**
-     * Gets or sets the private IP address of the network interface IP Configuration.
+     * @return Gets or sets the private IP address of the network interface IP Configuration.
      * 
-    */
+     */
     public Optional<String> privateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
-     * Gets or sets the private IP address allocation method.
+     * @return Gets or sets the private IP address allocation method.
      * 
-    */
+     */
     public Optional<String> privateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
     /**
-     * Defines reference to a public IP.
+     * @return Defines reference to a public IP.
      * 
-    */
+     */
     public Optional<PublicIpReferenceResponse> publicIp() {
         return Optional.ofNullable(this.publicIp);
     }
     /**
-     * Defines reference to subnet.
+     * @return Defines reference to subnet.
      * 
-    */
+     */
     public Optional<SubnetReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }

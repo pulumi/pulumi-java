@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserArtifactManageResponse {
-    /**
-     * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
-     * 
-     */
+        /**
+         * @return Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+         * 
+         */
     private final String install;
-    /**
-     * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
-     * 
-     */
+        /**
+         * @return Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+         * 
+         */
     private final String remove;
-    /**
-     * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
-     * 
-     */
+        /**
+         * @return Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+         * 
+         */
     private final @Nullable String update;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class UserArtifactManageResponse {
     }
 
     /**
-     * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
+     * @return Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
      * 
-    */
+     */
     public String install() {
         return this.install;
     }
     /**
-     * Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
+     * @return Required. The path and arguments to remove the gallery application. This is limited to 4096 characters.
      * 
-    */
+     */
     public String remove() {
         return this.remove;
     }
     /**
-     * Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
+     * @return Optional. The path and arguments to update the gallery application. If not present, then update operation will invoke remove command on the previous version and install command on the current version of the gallery application. This is limited to 4096 characters.
      * 
-    */
+     */
     public Optional<String> update() {
         return Optional.ofNullable(this.update);
     }

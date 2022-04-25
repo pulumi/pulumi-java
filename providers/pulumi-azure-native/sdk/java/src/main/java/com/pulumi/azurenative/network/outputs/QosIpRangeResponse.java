@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class QosIpRangeResponse {
-    /**
-     * End IP Address.
-     * 
-     */
+        /**
+         * @return End IP Address.
+         * 
+         */
     private final @Nullable String endIP;
-    /**
-     * Start IP Address.
-     * 
-     */
+        /**
+         * @return Start IP Address.
+         * 
+         */
     private final @Nullable String startIP;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class QosIpRangeResponse {
     }
 
     /**
-     * End IP Address.
+     * @return End IP Address.
      * 
-    */
+     */
     public Optional<String> endIP() {
         return Optional.ofNullable(this.endIP);
     }
     /**
-     * Start IP Address.
+     * @return Start IP Address.
      * 
-    */
+     */
     public Optional<String> startIP() {
         return Optional.ofNullable(this.startIP);
     }

@@ -15,60 +15,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackendAddressPoolResponse {
-    /**
-     * An array of references to IP addresses defined in network interfaces.
-     * 
-     */
+        /**
+         * @return An array of references to IP addresses defined in network interfaces.
+         * 
+         */
     private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * An array of backend addresses.
-     * 
-     */
+        /**
+         * @return An array of backend addresses.
+         * 
+         */
     private final @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
-    /**
-     * An array of references to load balancing rules that use this backend address pool.
-     * 
-     */
+        /**
+         * @return An array of references to load balancing rules that use this backend address pool.
+         * 
+         */
     private final List<SubResourceResponse> loadBalancingRules;
-    /**
-     * The location of the backend address pool.
-     * 
-     */
+        /**
+         * @return The location of the backend address pool.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * A reference to an outbound rule that uses this backend address pool.
-     * 
-     */
+        /**
+         * @return A reference to an outbound rule that uses this backend address pool.
+         * 
+         */
     private final SubResourceResponse outboundRule;
-    /**
-     * An array of references to outbound rules that use this backend address pool.
-     * 
-     */
+        /**
+         * @return An array of references to outbound rules that use this backend address pool.
+         * 
+         */
     private final List<SubResourceResponse> outboundRules;
-    /**
-     * The provisioning state of the backend address pool resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the backend address pool resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -98,79 +98,79 @@ public final class BackendAddressPoolResponse {
     }
 
     /**
-     * An array of references to IP addresses defined in network interfaces.
+     * @return An array of references to IP addresses defined in network interfaces.
      * 
-    */
+     */
     public List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * An array of backend addresses.
+     * @return An array of backend addresses.
      * 
-    */
+     */
     public List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses == null ? List.of() : this.loadBalancerBackendAddresses;
     }
     /**
-     * An array of references to load balancing rules that use this backend address pool.
+     * @return An array of references to load balancing rules that use this backend address pool.
      * 
-    */
+     */
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
-     * The location of the backend address pool.
+     * @return The location of the backend address pool.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * A reference to an outbound rule that uses this backend address pool.
+     * @return A reference to an outbound rule that uses this backend address pool.
      * 
-    */
+     */
     public SubResourceResponse outboundRule() {
         return this.outboundRule;
     }
     /**
-     * An array of references to outbound rules that use this backend address pool.
+     * @return An array of references to outbound rules that use this backend address pool.
      * 
-    */
+     */
     public List<SubResourceResponse> outboundRules() {
         return this.outboundRules;
     }
     /**
-     * The provisioning state of the backend address pool resource.
+     * @return The provisioning state of the backend address pool resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

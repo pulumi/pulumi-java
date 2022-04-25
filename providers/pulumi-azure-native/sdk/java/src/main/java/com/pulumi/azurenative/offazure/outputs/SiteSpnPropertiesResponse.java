@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SiteSpnPropertiesResponse {
-    /**
-     * AAD Authority URL which was used to request the token for the service principal.
-     * 
-     */
+        /**
+         * @return AAD Authority URL which was used to request the token for the service principal.
+         * 
+         */
     private final @Nullable String aadAuthority;
-    /**
-     * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
-     */
+        /**
+         * @return Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         */
     private final @Nullable String applicationId;
-    /**
-     * Intended audience for the service principal.
-     * 
-     */
+        /**
+         * @return Intended audience for the service principal.
+         * 
+         */
     private final @Nullable String audience;
-    /**
-     * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
-     */
+        /**
+         * @return Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         */
     private final @Nullable String objectId;
-    /**
-     * Raw certificate data for building certificate expiry flows.
-     * 
-     */
+        /**
+         * @return Raw certificate data for building certificate expiry flows.
+         * 
+         */
     private final @Nullable String rawCertData;
-    /**
-     * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
-     * 
-     */
+        /**
+         * @return Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         */
     private final @Nullable String tenantId;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class SiteSpnPropertiesResponse {
     }
 
     /**
-     * AAD Authority URL which was used to request the token for the service principal.
+     * @return AAD Authority URL which was used to request the token for the service principal.
      * 
-    */
+     */
     public Optional<String> aadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
     /**
-     * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
-     * Intended audience for the service principal.
+     * @return Intended audience for the service principal.
      * 
-    */
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
-     * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * Raw certificate data for building certificate expiry flows.
+     * @return Raw certificate data for building certificate expiry flows.
      * 
-    */
+     */
     public Optional<String> rawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
     /**
-     * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * @return Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

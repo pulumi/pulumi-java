@@ -23,6 +23,10 @@ public final class MigrationReportResultResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Migration validation result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class MigrationReportResultResponse extends com.pulumi.resources.In
     @Import(name="reportUrl", required=true)
     private String reportUrl;
 
+    /**
+     * @return The url of the report.
+     * 
+     */
     public String reportUrl() {
         return this.reportUrl;
     }
@@ -63,11 +71,23 @@ public final class MigrationReportResultResponse extends com.pulumi.resources.In
             $ = new MigrationReportResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Migration validation result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param reportUrl The url of the report.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportUrl(String reportUrl) {
             $.reportUrl = reportUrl;
             return this;

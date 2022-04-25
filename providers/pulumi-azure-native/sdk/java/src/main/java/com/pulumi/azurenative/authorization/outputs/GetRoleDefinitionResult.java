@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRoleDefinitionResult {
-    /**
-     * Role definition assignable scopes.
-     * 
-     */
+        /**
+         * @return Role definition assignable scopes.
+         * 
+         */
     private final @Nullable List<String> assignableScopes;
-    /**
-     * The role definition description.
-     * 
-     */
+        /**
+         * @return The role definition description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The role definition ID.
-     * 
-     */
+        /**
+         * @return The role definition ID.
+         * 
+         */
     private final String id;
-    /**
-     * The role definition name.
-     * 
-     */
+        /**
+         * @return The role definition name.
+         * 
+         */
     private final String name;
-    /**
-     * Role definition permissions.
-     * 
-     */
+        /**
+         * @return Role definition permissions.
+         * 
+         */
     private final @Nullable List<PermissionResponse> permissions;
-    /**
-     * The role name.
-     * 
-     */
+        /**
+         * @return The role name.
+         * 
+         */
     private final @Nullable String roleName;
-    /**
-     * The role type.
-     * 
-     */
+        /**
+         * @return The role type.
+         * 
+         */
     private final @Nullable String roleType;
-    /**
-     * The role definition type.
-     * 
-     */
+        /**
+         * @return The role definition type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetRoleDefinitionResult {
     }
 
     /**
-     * Role definition assignable scopes.
+     * @return Role definition assignable scopes.
      * 
-    */
+     */
     public List<String> assignableScopes() {
         return this.assignableScopes == null ? List.of() : this.assignableScopes;
     }
     /**
-     * The role definition description.
+     * @return The role definition description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The role definition ID.
+     * @return The role definition ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The role definition name.
+     * @return The role definition name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Role definition permissions.
+     * @return Role definition permissions.
      * 
-    */
+     */
     public List<PermissionResponse> permissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
     /**
-     * The role name.
+     * @return The role name.
      * 
-    */
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
-     * The role type.
+     * @return The role type.
      * 
-    */
+     */
     public Optional<String> roleType() {
         return Optional.ofNullable(this.roleType);
     }
     /**
-     * The role definition type.
+     * @return The role definition type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

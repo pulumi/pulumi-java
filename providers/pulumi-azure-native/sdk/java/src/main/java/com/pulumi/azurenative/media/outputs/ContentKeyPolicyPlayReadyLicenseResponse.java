@@ -16,55 +16,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContentKeyPolicyPlayReadyLicenseResponse {
-    /**
-     * A flag indicating whether test devices can use the license.
-     * 
-     */
+        /**
+         * @return A flag indicating whether test devices can use the license.
+         * 
+         */
     private final Boolean allowTestDevices;
-    /**
-     * The begin date of license
-     * 
-     */
+        /**
+         * @return The begin date of license
+         * 
+         */
     private final @Nullable String beginDate;
-    /**
-     * The content key location.
-     * 
-     */
+        /**
+         * @return The content key location.
+         * 
+         */
     private final Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
-    /**
-     * The PlayReady content type.
-     * 
-     */
+        /**
+         * @return The PlayReady content type.
+         * 
+         */
     private final String contentType;
-    /**
-     * The expiration date of license.
-     * 
-     */
+        /**
+         * @return The expiration date of license.
+         * 
+         */
     private final @Nullable String expirationDate;
-    /**
-     * The grace period of license.
-     * 
-     */
+        /**
+         * @return The grace period of license.
+         * 
+         */
     private final @Nullable String gracePeriod;
-    /**
-     * The license type.
-     * 
-     */
+        /**
+         * @return The license type.
+         * 
+         */
     private final String licenseType;
-    /**
-     * The license PlayRight
-     * 
-     */
+        /**
+         * @return The license PlayRight
+         * 
+         */
     private final @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
-    /**
-     * The relative begin date of license.
-     * 
-     */
+        /**
+         * @return The relative begin date of license.
+         * 
+         */
     private final @Nullable String relativeBeginDate;
-    /**
-     * The relative expiration date of license.
-     * 
-     */
+        /**
+         * @return The relative expiration date of license.
+         * 
+         */
     private final @Nullable String relativeExpirationDate;
 
     @CustomType.Constructor
@@ -92,72 +92,72 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
     }
 
     /**
-     * A flag indicating whether test devices can use the license.
+     * @return A flag indicating whether test devices can use the license.
      * 
-    */
+     */
     public Boolean allowTestDevices() {
         return this.allowTestDevices;
     }
     /**
-     * The begin date of license
+     * @return The begin date of license
      * 
-    */
+     */
     public Optional<String> beginDate() {
         return Optional.ofNullable(this.beginDate);
     }
     /**
-     * The content key location.
+     * @return The content key location.
      * 
-    */
+     */
     public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation() {
         return this.contentKeyLocation;
     }
     /**
-     * The PlayReady content type.
+     * @return The PlayReady content type.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * The expiration date of license.
+     * @return The expiration date of license.
      * 
-    */
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
-     * The grace period of license.
+     * @return The grace period of license.
      * 
-    */
+     */
     public Optional<String> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
     /**
-     * The license type.
+     * @return The license type.
      * 
-    */
+     */
     public String licenseType() {
         return this.licenseType;
     }
     /**
-     * The license PlayRight
+     * @return The license PlayRight
      * 
-    */
+     */
     public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> playRight() {
         return Optional.ofNullable(this.playRight);
     }
     /**
-     * The relative begin date of license.
+     * @return The relative begin date of license.
      * 
-    */
+     */
     public Optional<String> relativeBeginDate() {
         return Optional.ofNullable(this.relativeBeginDate);
     }
     /**
-     * The relative expiration date of license.
+     * @return The relative expiration date of license.
      * 
-    */
+     */
     public Optional<String> relativeExpirationDate() {
         return Optional.ofNullable(this.relativeExpirationDate);
     }

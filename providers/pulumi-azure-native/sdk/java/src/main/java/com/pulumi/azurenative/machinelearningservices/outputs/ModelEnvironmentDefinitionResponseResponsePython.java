@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ModelEnvironmentDefinitionResponseResponsePython {
     private final @Nullable String baseCondaEnvironment;
-    /**
-     * A JObject containing Conda dependencies.
-     * 
-     */
+        /**
+         * @return A JObject containing Conda dependencies.
+         * 
+         */
     private final @Nullable Object condaDependencies;
-    /**
-     * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
-     * 
-     */
+        /**
+         * @return The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+         * 
+         */
     private final @Nullable String interpreterPath;
-    /**
-     * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
-     * 
-     */
+        /**
+         * @return True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+         * 
+         */
     private final @Nullable Boolean userManagedDependencies;
 
     @CustomType.Constructor
@@ -46,23 +46,23 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
         return Optional.ofNullable(this.baseCondaEnvironment);
     }
     /**
-     * A JObject containing Conda dependencies.
+     * @return A JObject containing Conda dependencies.
      * 
-    */
+     */
     public Optional<Object> condaDependencies() {
         return Optional.ofNullable(this.condaDependencies);
     }
     /**
-     * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+     * @return The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
      * 
-    */
+     */
     public Optional<String> interpreterPath() {
         return Optional.ofNullable(this.interpreterPath);
     }
     /**
-     * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+     * @return True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
      * 
-    */
+     */
     public Optional<Boolean> userManagedDependencies() {
         return Optional.ofNullable(this.userManagedDependencies);
     }

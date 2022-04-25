@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SimpleRetentionPolicyResponse {
-    /**
-     * Retention duration of the protection policy.
-     * 
-     */
+        /**
+         * @return Retention duration of the protection policy.
+         * 
+         */
     private final @Nullable RetentionDurationResponse retentionDuration;
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is &#39;SimpleRetentionPolicy&#39;.
-     * 
-     */
+        /**
+         * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;SimpleRetentionPolicy&#39;.
+         * 
+         */
     private final String retentionPolicyType;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class SimpleRetentionPolicyResponse {
     }
 
     /**
-     * Retention duration of the protection policy.
+     * @return Retention duration of the protection policy.
      * 
-    */
+     */
     public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;SimpleRetentionPolicy&#39;.
      * 
-    */
+     */
     public String retentionPolicyType() {
         return this.retentionPolicyType;
     }

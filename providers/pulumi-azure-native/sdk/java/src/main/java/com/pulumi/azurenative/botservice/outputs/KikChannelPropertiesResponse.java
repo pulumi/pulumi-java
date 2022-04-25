@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KikChannelPropertiesResponse {
-    /**
-     * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
-     * 
-     */
+        /**
+         * @return Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         */
     private final @Nullable String apiKey;
-    /**
-     * Whether this channel is enabled for the bot
-     * 
-     */
+        /**
+         * @return Whether this channel is enabled for the bot
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * Whether this channel is validated for the bot
-     * 
-     */
+        /**
+         * @return Whether this channel is validated for the bot
+         * 
+         */
     private final @Nullable Boolean isValidated;
-    /**
-     * The Kik user name
-     * 
-     */
+        /**
+         * @return The Kik user name
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class KikChannelPropertiesResponse {
     }
 
     /**
-     * Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Kik API key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> apiKey() {
         return Optional.ofNullable(this.apiKey);
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
-    */
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
     /**
-     * The Kik user name
+     * @return The Kik user name
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

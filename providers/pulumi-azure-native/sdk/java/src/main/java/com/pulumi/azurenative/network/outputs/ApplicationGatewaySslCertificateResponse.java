@@ -11,50 +11,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationGatewaySslCertificateResponse {
-    /**
-     * Base-64 encoded pfx certificate. Only applicable in PUT Request.
-     * 
-     */
+        /**
+         * @return Base-64 encoded pfx certificate. Only applicable in PUT Request.
+         * 
+         */
     private final @Nullable String data;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
-     * 
-     */
+        /**
+         * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+         * 
+         */
     private final @Nullable String keyVaultSecretId;
-    /**
-     * Name of the SSL certificate that is unique within an Application Gateway.
-     * 
-     */
+        /**
+         * @return Name of the SSL certificate that is unique within an Application Gateway.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Password for the pfx file specified in data. Only applicable in PUT request.
-     * 
-     */
+        /**
+         * @return Password for the pfx file specified in data. Only applicable in PUT request.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The provisioning state of the SSL certificate resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the SSL certificate resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
-     * 
-     */
+        /**
+         * @return Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+         * 
+         */
     private final String publicCertData;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class ApplicationGatewaySslCertificateResponse {
     }
 
     /**
-     * Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     * @return Base-64 encoded pfx certificate. Only applicable in PUT Request.
      * 
-    */
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
+     * @return Secret Id of (base-64 encoded unencrypted pfx) &#39;Secret&#39; or &#39;Certificate&#39; object stored in KeyVault.
      * 
-    */
+     */
     public Optional<String> keyVaultSecretId() {
         return Optional.ofNullable(this.keyVaultSecretId);
     }
     /**
-     * Name of the SSL certificate that is unique within an Application Gateway.
+     * @return Name of the SSL certificate that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Password for the pfx file specified in data. Only applicable in PUT request.
+     * @return Password for the pfx file specified in data. Only applicable in PUT request.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The provisioning state of the SSL certificate resource.
+     * @return The provisioning state of the SSL certificate resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+     * @return Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
      * 
-    */
+     */
     public String publicCertData() {
         return this.publicCertData;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

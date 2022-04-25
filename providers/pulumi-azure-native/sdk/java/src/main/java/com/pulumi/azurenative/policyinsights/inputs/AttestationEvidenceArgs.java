@@ -26,6 +26,10 @@ public final class AttestationEvidenceArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description for this piece of evidence.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class AttestationEvidenceArgs extends com.pulumi.resources.Resource
     @Import(name="sourceUri")
     private @Nullable Output<String> sourceUri;
 
+    /**
+     * @return The URI location of the evidence.
+     * 
+     */
     public Optional<Output<String>> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -66,20 +74,44 @@ public final class AttestationEvidenceArgs extends com.pulumi.resources.Resource
             $ = new AttestationEvidenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description for this piece of evidence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description for this piece of evidence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param sourceUri The URI location of the evidence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
             $.sourceUri = sourceUri;
             return this;
         }
 
+        /**
+         * @param sourceUri The URI location of the evidence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(String sourceUri) {
             return sourceUri(Output.of(sourceUri));
         }

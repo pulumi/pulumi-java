@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ServerInfoResponse {
-    /**
-     * Server Id.
-     * 
-     */
+        /**
+         * @return Server Id.
+         * 
+         */
     private final String serverId;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ServerInfoResponse {
     }
 
     /**
-     * Server Id.
+     * @return Server Id.
      * 
-    */
+     */
     public String serverId() {
         return this.serverId;
     }

@@ -34,6 +34,12 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedExternalRedirectUrls")
     private @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
+    /**
+     * @return External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+     * This is an advanced setting typically only needed by Windows Store application backends.
+     * Note that URLs within the current domain are always implicitly allowed.
+     * 
+     */
     public Optional<Output<List<String>>> allowedExternalRedirectUrls() {
         return Optional.ofNullable(this.allowedExternalRedirectUrls);
     }
@@ -45,6 +51,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cookieExpiration")
     private @Nullable Output<CookieExpirationArgs> cookieExpiration;
 
+    /**
+     * @return The configuration settings of the session cookie&#39;s expiration.
+     * 
+     */
     public Optional<Output<CookieExpirationArgs>> cookieExpiration() {
         return Optional.ofNullable(this.cookieExpiration);
     }
@@ -56,6 +66,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nonce")
     private @Nullable Output<NonceArgs> nonce;
 
+    /**
+     * @return The configuration settings of the nonce used in the login flow.
+     * 
+     */
     public Optional<Output<NonceArgs>> nonce() {
         return Optional.ofNullable(this.nonce);
     }
@@ -67,6 +81,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preserveUrlFragmentsForLogins")
     private @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if the fragments from the request are preserved after the login request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> preserveUrlFragmentsForLogins() {
         return Optional.ofNullable(this.preserveUrlFragmentsForLogins);
     }
@@ -78,6 +96,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routes")
     private @Nullable Output<LoginRoutesArgs> routes;
 
+    /**
+     * @return The routes that specify the endpoints used for login and logout requests.
+     * 
+     */
     public Optional<Output<LoginRoutesArgs>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -89,6 +111,10 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenStore")
     private @Nullable Output<TokenStoreArgs> tokenStore;
 
+    /**
+     * @return The configuration settings of the token store.
+     * 
+     */
     public Optional<Output<TokenStoreArgs>> tokenStore() {
         return Optional.ofNullable(this.tokenStore);
     }
@@ -122,60 +148,144 @@ public final class LoginArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LoginArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedExternalRedirectUrls External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+         * This is an advanced setting typically only needed by Windows Store application backends.
+         * Note that URLs within the current domain are always implicitly allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExternalRedirectUrls(@Nullable Output<List<String>> allowedExternalRedirectUrls) {
             $.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
+        /**
+         * @param allowedExternalRedirectUrls External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+         * This is an advanced setting typically only needed by Windows Store application backends.
+         * Note that URLs within the current domain are always implicitly allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExternalRedirectUrls(List<String> allowedExternalRedirectUrls) {
             return allowedExternalRedirectUrls(Output.of(allowedExternalRedirectUrls));
         }
 
+        /**
+         * @param allowedExternalRedirectUrls External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
+         * This is an advanced setting typically only needed by Windows Store application backends.
+         * Note that URLs within the current domain are always implicitly allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedExternalRedirectUrls(String... allowedExternalRedirectUrls) {
             return allowedExternalRedirectUrls(List.of(allowedExternalRedirectUrls));
         }
 
+        /**
+         * @param cookieExpiration The configuration settings of the session cookie&#39;s expiration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieExpiration(@Nullable Output<CookieExpirationArgs> cookieExpiration) {
             $.cookieExpiration = cookieExpiration;
             return this;
         }
 
+        /**
+         * @param cookieExpiration The configuration settings of the session cookie&#39;s expiration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cookieExpiration(CookieExpirationArgs cookieExpiration) {
             return cookieExpiration(Output.of(cookieExpiration));
         }
 
+        /**
+         * @param nonce The configuration settings of the nonce used in the login flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonce(@Nullable Output<NonceArgs> nonce) {
             $.nonce = nonce;
             return this;
         }
 
+        /**
+         * @param nonce The configuration settings of the nonce used in the login flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonce(NonceArgs nonce) {
             return nonce(Output.of(nonce));
         }
 
+        /**
+         * @param preserveUrlFragmentsForLogins &lt;code&gt;true&lt;/code&gt; if the fragments from the request are preserved after the login request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUrlFragmentsForLogins(@Nullable Output<Boolean> preserveUrlFragmentsForLogins) {
             $.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
 
+        /**
+         * @param preserveUrlFragmentsForLogins &lt;code&gt;true&lt;/code&gt; if the fragments from the request are preserved after the login request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preserveUrlFragmentsForLogins(Boolean preserveUrlFragmentsForLogins) {
             return preserveUrlFragmentsForLogins(Output.of(preserveUrlFragmentsForLogins));
         }
 
+        /**
+         * @param routes The routes that specify the endpoints used for login and logout requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<LoginRoutesArgs> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes The routes that specify the endpoints used for login and logout requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(LoginRoutesArgs routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param tokenStore The configuration settings of the token store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenStore(@Nullable Output<TokenStoreArgs> tokenStore) {
             $.tokenStore = tokenStore;
             return this;
         }
 
+        /**
+         * @param tokenStore The configuration settings of the token store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenStore(TokenStoreArgs tokenStore) {
             return tokenStore(Output.of(tokenStore));
         }

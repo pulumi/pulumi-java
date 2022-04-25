@@ -26,6 +26,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="assignmentState", required=true)
     private String assignmentState;
 
+    /**
+     * @return The role assignment state eligible/active to review
+     * 
+     */
     public String assignmentState() {
         return this.assignmentState;
     }
@@ -37,6 +41,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="expandNestedMemberships")
     private @Nullable Boolean expandNestedMemberships;
 
+    /**
+     * @return Flag to indicate whether to expand nested memberships or not.
+     * 
+     */
     public Optional<Boolean> expandNestedMemberships() {
         return Optional.ofNullable(this.expandNestedMemberships);
     }
@@ -48,6 +56,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="inactiveDuration")
     private @Nullable String inactiveDuration;
 
+    /**
+     * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+     * 
+     */
     public Optional<String> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
@@ -59,6 +71,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="principalType", required=true)
     private String principalType;
 
+    /**
+     * @return The identity type user/servicePrincipal to review
+     * 
+     */
     public String principalType() {
         return this.principalType;
     }
@@ -70,6 +86,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return ResourceId in which this review is getting created
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -81,6 +101,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
     @Import(name="roleDefinitionId", required=true)
     private String roleDefinitionId;
 
+    /**
+     * @return This is used to indicate the role being reviewed
+     * 
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -114,31 +138,67 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
             $ = new AccessReviewScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignmentState The role assignment state eligible/active to review
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentState(String assignmentState) {
             $.assignmentState = assignmentState;
             return this;
         }
 
+        /**
+         * @param expandNestedMemberships Flag to indicate whether to expand nested memberships or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
             $.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
 
+        /**
+         * @param inactiveDuration Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         * @return builder
+         * 
+         */
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
             $.inactiveDuration = inactiveDuration;
             return this;
         }
 
+        /**
+         * @param principalType The identity type user/servicePrincipal to review
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalType(String principalType) {
             $.principalType = principalType;
             return this;
         }
 
+        /**
+         * @param resourceId ResourceId in which this review is getting created
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId This is used to indicate the role being reviewed
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;

@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackupSetInfoResponse {
-    /**
-     * Date and time that the backup operation finished
-     * 
-     */
+        /**
+         * @return Date and time that the backup operation finished
+         * 
+         */
     private final @Nullable String backupFinishedDate;
-    /**
-     * Id for the set of backup files
-     * 
-     */
+        /**
+         * @return Id for the set of backup files
+         * 
+         */
     private final @Nullable String backupSetId;
-    /**
-     * Date and time that the backup operation began
-     * 
-     */
+        /**
+         * @return Date and time that the backup operation began
+         * 
+         */
     private final @Nullable String backupStartDate;
-    /**
-     * Enum of the different backup types
-     * 
-     */
+        /**
+         * @return Enum of the different backup types
+         * 
+         */
     private final @Nullable String backupType;
-    /**
-     * Name of the database to which the backup set belongs
-     * 
-     */
+        /**
+         * @return Name of the database to which the backup set belongs
+         * 
+         */
     private final @Nullable String databaseName;
-    /**
-     * First log sequence number of the backup file
-     * 
-     */
+        /**
+         * @return First log sequence number of the backup file
+         * 
+         */
     private final @Nullable String firstLsn;
-    /**
-     * Whether the backup set is restored or not
-     * 
-     */
+        /**
+         * @return Whether the backup set is restored or not
+         * 
+         */
     private final @Nullable Boolean isBackupRestored;
-    /**
-     * Last log sequence number of the backup file
-     * 
-     */
+        /**
+         * @return Last log sequence number of the backup file
+         * 
+         */
     private final @Nullable String lastLsn;
-    /**
-     * Last modified time of the backup file in share location
-     * 
-     */
+        /**
+         * @return Last modified time of the backup file in share location
+         * 
+         */
     private final @Nullable String lastModifiedTime;
-    /**
-     * List of files in the backup set
-     * 
-     */
+        /**
+         * @return List of files in the backup set
+         * 
+         */
     private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class BackupSetInfoResponse {
     }
 
     /**
-     * Date and time that the backup operation finished
+     * @return Date and time that the backup operation finished
      * 
-    */
+     */
     public Optional<String> backupFinishedDate() {
         return Optional.ofNullable(this.backupFinishedDate);
     }
     /**
-     * Id for the set of backup files
+     * @return Id for the set of backup files
      * 
-    */
+     */
     public Optional<String> backupSetId() {
         return Optional.ofNullable(this.backupSetId);
     }
     /**
-     * Date and time that the backup operation began
+     * @return Date and time that the backup operation began
      * 
-    */
+     */
     public Optional<String> backupStartDate() {
         return Optional.ofNullable(this.backupStartDate);
     }
     /**
-     * Enum of the different backup types
+     * @return Enum of the different backup types
      * 
-    */
+     */
     public Optional<String> backupType() {
         return Optional.ofNullable(this.backupType);
     }
     /**
-     * Name of the database to which the backup set belongs
+     * @return Name of the database to which the backup set belongs
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * First log sequence number of the backup file
+     * @return First log sequence number of the backup file
      * 
-    */
+     */
     public Optional<String> firstLsn() {
         return Optional.ofNullable(this.firstLsn);
     }
     /**
-     * Whether the backup set is restored or not
+     * @return Whether the backup set is restored or not
      * 
-    */
+     */
     public Optional<Boolean> isBackupRestored() {
         return Optional.ofNullable(this.isBackupRestored);
     }
     /**
-     * Last log sequence number of the backup file
+     * @return Last log sequence number of the backup file
      * 
-    */
+     */
     public Optional<String> lastLsn() {
         return Optional.ofNullable(this.lastLsn);
     }
     /**
-     * Last modified time of the backup file in share location
+     * @return Last modified time of the backup file in share location
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * List of files in the backup set
+     * @return List of files in the backup set
      * 
-    */
+     */
     public List<BackupFileInfoResponse> listOfBackupFiles() {
         return this.listOfBackupFiles == null ? List.of() : this.listOfBackupFiles;
     }

@@ -15,35 +15,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RolloutStepResponse {
-    /**
-     * Supplementary informative messages during rollout.
-     * 
-     */
+        /**
+         * @return Supplementary informative messages during rollout.
+         * 
+         */
     private final List<MessageResponse> messages;
-    /**
-     * Name of the step.
-     * 
-     */
+        /**
+         * @return Name of the step.
+         * 
+         */
     private final String name;
-    /**
-     * Detailed information of specific action execution.
-     * 
-     */
+        /**
+         * @return Detailed information of specific action execution.
+         * 
+         */
     private final StepOperationInfoResponse operationInfo;
-    /**
-     * Set of resource operations that were performed, if any, on an Azure resource.
-     * 
-     */
+        /**
+         * @return Set of resource operations that were performed, if any, on an Azure resource.
+         * 
+         */
     private final List<ResourceOperationResponse> resourceOperations;
-    /**
-     * Current state of the step.
-     * 
-     */
+        /**
+         * @return Current state of the step.
+         * 
+         */
     private final String status;
-    /**
-     * The step group the current step is part of.
-     * 
-     */
+        /**
+         * @return The step group the current step is part of.
+         * 
+         */
     private final @Nullable String stepGroup;
 
     @CustomType.Constructor
@@ -63,44 +63,44 @@ public final class RolloutStepResponse {
     }
 
     /**
-     * Supplementary informative messages during rollout.
+     * @return Supplementary informative messages during rollout.
      * 
-    */
+     */
     public List<MessageResponse> messages() {
         return this.messages;
     }
     /**
-     * Name of the step.
+     * @return Name of the step.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Detailed information of specific action execution.
+     * @return Detailed information of specific action execution.
      * 
-    */
+     */
     public StepOperationInfoResponse operationInfo() {
         return this.operationInfo;
     }
     /**
-     * Set of resource operations that were performed, if any, on an Azure resource.
+     * @return Set of resource operations that were performed, if any, on an Azure resource.
      * 
-    */
+     */
     public List<ResourceOperationResponse> resourceOperations() {
         return this.resourceOperations;
     }
     /**
-     * Current state of the step.
+     * @return Current state of the step.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The step group the current step is part of.
+     * @return The step group the current step is part of.
      * 
-    */
+     */
     public Optional<String> stepGroup() {
         return Optional.ofNullable(this.stepGroup);
     }

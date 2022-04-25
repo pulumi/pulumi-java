@@ -31,6 +31,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="basicLoginInformation")
     private @Nullable BasicLoginInformationResponse basicLoginInformation;
 
+    /**
+     * @return Username and password for basic login authentication.
+     * 
+     */
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
@@ -42,6 +46,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="k8sRaw")
     private @Nullable Object k8sRaw;
 
+    /**
+     * @return The raw kubernetes information
+     * 
+     */
     public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
@@ -53,6 +61,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="lastUploadedDate")
     private @Nullable String lastUploadedDate;
 
+    /**
+     * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
+     * 
+     */
     public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
@@ -64,6 +76,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="logAnalyticsWorkspaceConfig")
     private @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
 
+    /**
+     * @return Log analytics workspace id and primary key
+     * 
+     */
     public Optional<LogAnalyticsWorkspaceConfigResponse> logAnalyticsWorkspaceConfig() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
@@ -75,6 +91,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="onPremiseProperty")
     private @Nullable OnPremisePropertyResponse onPremiseProperty;
 
+    /**
+     * @return Properties from the Kubernetes data controller
+     * 
+     */
     public Optional<OnPremisePropertyResponse> onPremiseProperty() {
         return Optional.ofNullable(this.onPremiseProperty);
     }
@@ -93,6 +113,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="uploadServicePrincipal")
     private @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
 
+    /**
+     * @return Service principal for uploading billing, metrics and logs.
+     * 
+     */
     public Optional<UploadServicePrincipalResponse> uploadServicePrincipal() {
         return Optional.ofNullable(this.uploadServicePrincipal);
     }
@@ -104,6 +128,10 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
     @Import(name="uploadWatermark")
     private @Nullable UploadWatermarkResponse uploadWatermark;
 
+    /**
+     * @return Properties on upload watermark.  Mostly timestamp for each upload data type
+     * 
+     */
     public Optional<UploadWatermarkResponse> uploadWatermark() {
         return Optional.ofNullable(this.uploadWatermark);
     }
@@ -139,26 +167,56 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
             $ = new DataControllerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basicLoginInformation Username and password for basic login authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             $.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
+        /**
+         * @param k8sRaw The raw kubernetes information
+         * 
+         * @return builder
+         * 
+         */
         public Builder k8sRaw(@Nullable Object k8sRaw) {
             $.k8sRaw = k8sRaw;
             return this;
         }
 
+        /**
+         * @param lastUploadedDate Last uploaded date from Kubernetes cluster. Defaults to current date time
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             $.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
+        /**
+         * @param logAnalyticsWorkspaceConfig Log analytics workspace id and primary key
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
             $.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
 
+        /**
+         * @param onPremiseProperty Properties from the Kubernetes data controller
+         * 
+         * @return builder
+         * 
+         */
         public Builder onPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
             $.onPremiseProperty = onPremiseProperty;
             return this;
@@ -169,11 +227,23 @@ public final class DataControllerPropertiesResponse extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param uploadServicePrincipal Service principal for uploading billing, metrics and logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
             $.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
 
+        /**
+         * @param uploadWatermark Properties on upload watermark.  Mostly timestamp for each upload data type
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
             $.uploadWatermark = uploadWatermark;
             return this;

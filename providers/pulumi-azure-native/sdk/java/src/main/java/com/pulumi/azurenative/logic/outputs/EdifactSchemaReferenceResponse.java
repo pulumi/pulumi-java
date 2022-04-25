@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdifactSchemaReferenceResponse {
-    /**
-     * The association assigned code.
-     * 
-     */
+        /**
+         * @return The association assigned code.
+         * 
+         */
     private final @Nullable String associationAssignedCode;
-    /**
-     * The message id.
-     * 
-     */
+        /**
+         * @return The message id.
+         * 
+         */
     private final String messageId;
-    /**
-     * The message release version.
-     * 
-     */
+        /**
+         * @return The message release version.
+         * 
+         */
     private final String messageRelease;
-    /**
-     * The message version.
-     * 
-     */
+        /**
+         * @return The message version.
+         * 
+         */
     private final String messageVersion;
-    /**
-     * The schema name.
-     * 
-     */
+        /**
+         * @return The schema name.
+         * 
+         */
     private final String schemaName;
-    /**
-     * The sender application id.
-     * 
-     */
+        /**
+         * @return The sender application id.
+         * 
+         */
     private final @Nullable String senderApplicationId;
-    /**
-     * The sender application qualifier.
-     * 
-     */
+        /**
+         * @return The sender application qualifier.
+         * 
+         */
     private final @Nullable String senderApplicationQualifier;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class EdifactSchemaReferenceResponse {
     }
 
     /**
-     * The association assigned code.
+     * @return The association assigned code.
      * 
-    */
+     */
     public Optional<String> associationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
     /**
-     * The message id.
+     * @return The message id.
      * 
-    */
+     */
     public String messageId() {
         return this.messageId;
     }
     /**
-     * The message release version.
+     * @return The message release version.
      * 
-    */
+     */
     public String messageRelease() {
         return this.messageRelease;
     }
     /**
-     * The message version.
+     * @return The message version.
      * 
-    */
+     */
     public String messageVersion() {
         return this.messageVersion;
     }
     /**
-     * The schema name.
+     * @return The schema name.
      * 
-    */
+     */
     public String schemaName() {
         return this.schemaName;
     }
     /**
-     * The sender application id.
+     * @return The sender application id.
      * 
-    */
+     */
     public Optional<String> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
     /**
-     * The sender application qualifier.
+     * @return The sender application qualifier.
      * 
-    */
+     */
     public Optional<String> senderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }

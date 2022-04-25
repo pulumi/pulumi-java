@@ -28,6 +28,10 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="bgpSession")
     private @Nullable Output<BgpSessionArgs> bgpSession;
 
+    /**
+     * @return The BGP session associated with the connection.
+     * 
+     */
     public Optional<Output<BgpSessionArgs>> bgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
@@ -39,6 +43,10 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="connectionIdentifier")
     private @Nullable Output<String> connectionIdentifier;
 
+    /**
+     * @return The unique identifier (GUID) for the connection.
+     * 
+     */
     public Optional<Output<String>> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
@@ -50,6 +58,10 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
     @Import(name="peeringDBFacilityId")
     private @Nullable Output<Integer> peeringDBFacilityId;
 
+    /**
+     * @return The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     public Optional<Output<Integer>> peeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
@@ -80,29 +92,65 @@ public final class ExchangeConnectionArgs extends com.pulumi.resources.ResourceA
             $ = new ExchangeConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgpSession The BGP session associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSession(@Nullable Output<BgpSessionArgs> bgpSession) {
             $.bgpSession = bgpSession;
             return this;
         }
 
+        /**
+         * @param bgpSession The BGP session associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSession(BgpSessionArgs bgpSession) {
             return bgpSession(Output.of(bgpSession));
         }
 
+        /**
+         * @param connectionIdentifier The unique identifier (GUID) for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionIdentifier(@Nullable Output<String> connectionIdentifier) {
             $.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
+        /**
+         * @param connectionIdentifier The unique identifier (GUID) for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionIdentifier(String connectionIdentifier) {
             return connectionIdentifier(Output.of(connectionIdentifier));
         }
 
+        /**
+         * @param peeringDBFacilityId The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringDBFacilityId(@Nullable Output<Integer> peeringDBFacilityId) {
             $.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }
 
+        /**
+         * @param peeringDBFacilityId The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringDBFacilityId(Integer peeringDBFacilityId) {
             return peeringDBFacilityId(Output.of(peeringDBFacilityId));
         }

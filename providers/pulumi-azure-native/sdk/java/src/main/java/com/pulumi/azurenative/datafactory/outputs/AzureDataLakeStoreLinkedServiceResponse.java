@@ -20,81 +20,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureDataLakeStoreLinkedServiceResponse {
-    /**
-     * Data Lake Store account name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Data Lake Store account name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object accountName;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object azureCloudType;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The credential reference containing authentication information.
-     * 
-     */
+        /**
+         * @return The credential reference containing authentication information.
+         * 
+         */
     private final @Nullable CredentialReferenceResponse credential;
-    /**
-     * Data Lake Store service URI. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Data Lake Store service URI. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object dataLakeStoreUri;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object resourceGroupName;
-    /**
-     * The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object servicePrincipalId;
-    /**
-     * The Key of the application used to authenticate against the Azure Data Lake Store account.
-     * 
-     */
+        /**
+         * @return The Key of the application used to authenticate against the Azure Data Lake Store account.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-    /**
-     * Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object subscriptionId;
-    /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object tenant;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;AzureDataLakeStore&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;AzureDataLakeStore&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -132,108 +132,108 @@ public final class AzureDataLakeStoreLinkedServiceResponse {
     }
 
     /**
-     * Data Lake Store account name. Type: string (or Expression with resultType string).
+     * @return Data Lake Store account name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     * @return Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> azureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Data Lake Store service URI. Type: string (or Expression with resultType string).
+     * @return Data Lake Store service URI. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object dataLakeStoreUri() {
         return this.dataLakeStoreUri;
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+     * @return Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
-     * The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
+     * @return The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The Key of the application used to authenticate against the Azure Data Lake Store account.
+     * @return The Key of the application used to authenticate against the Azure Data Lake Store account.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
-     * Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+     * @return Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
-     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AzureDataLakeStore&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

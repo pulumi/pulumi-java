@@ -26,6 +26,10 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="accessToken")
     private @Nullable String accessToken;
 
+    /**
+     * @return The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -37,6 +41,10 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -48,6 +56,10 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
     @Import(name="isValidated")
     private @Nullable Boolean isValidated;
 
+    /**
+     * @return Whether this channel is validated for the bot
+     * 
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
@@ -78,16 +90,34 @@ public final class TelegramChannelPropertiesResponse extends com.pulumi.resource
             $ = new TelegramChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable String accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isValidated Whether this channel is validated for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isValidated(@Nullable Boolean isValidated) {
             $.isValidated = isValidated;
             return this;

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SBSkuResponse {
-    /**
-     * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
-     * 
-     */
+        /**
+         * @return The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * Name of this SKU.
-     * 
-     */
+        /**
+         * @return Name of this SKU.
+         * 
+         */
     private final String name;
-    /**
-     * The billing tier of this particular SKU.
-     * 
-     */
+        /**
+         * @return The billing tier of this particular SKU.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class SBSkuResponse {
     }
 
     /**
-     * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
+     * @return The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Name of this SKU.
+     * @return Name of this SKU.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The billing tier of this particular SKU.
+     * @return The billing tier of this particular SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

@@ -21,6 +21,10 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
     @Import(name="serviceEndpointPolicyName", required=true)
     private String serviceEndpointPolicyName;
 
+    /**
+     * @return The name of the service endpoint policy.
+     * 
+     */
     public String serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
@@ -73,16 +85,34 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
             $ = new GetServiceEndpointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceEndpointPolicyName The name of the service endpoint policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
             $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;

@@ -25,6 +25,10 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinations", required=true)
     private Output<List<String>> destinations;
 
+    /**
+     * @return List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+     * 
+     */
     public Output<List<String>> destinations() {
         return this.destinations;
     }
@@ -36,6 +40,10 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The unique name for the routing policy.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextHop", required=true)
     private Output<String> nextHop;
 
+    /**
+     * @return The next hop resource id on which this routing policy is applicable to.
+     * 
+     */
     public Output<String> nextHop() {
         return this.nextHop;
     }
@@ -77,33 +89,75 @@ public final class RoutingPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoutingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinations List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<String> destinations) {
             return destinations(Output.of(destinations));
         }
 
+        /**
+         * @param destinations List of all destinations which this routing policy is applicable to (for example: Internet, PrivateTraffic).
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param name The unique name for the routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique name for the routing policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nextHop The next hop resource id on which this routing policy is applicable to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(Output<String> nextHop) {
             $.nextHop = nextHop;
             return this;
         }
 
+        /**
+         * @param nextHop The next hop resource id on which this routing policy is applicable to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(String nextHop) {
             return nextHop(Output.of(nextHop));
         }

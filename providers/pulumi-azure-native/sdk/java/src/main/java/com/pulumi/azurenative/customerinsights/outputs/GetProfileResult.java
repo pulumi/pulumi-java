@@ -16,110 +16,110 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProfileResult {
-    /**
-     * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
-     * 
-     */
+        /**
+         * @return The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+         * 
+         */
     private final @Nullable String apiEntitySetName;
-    /**
-     * The attributes for the Type.
-     * 
-     */
+        /**
+         * @return The attributes for the Type.
+         * 
+         */
     private final @Nullable Map<String,List<String>> attributes;
-    /**
-     * Localized descriptions for the property.
-     * 
-     */
+        /**
+         * @return Localized descriptions for the property.
+         * 
+         */
     private final @Nullable Map<String,String> description;
-    /**
-     * Localized display names for the property.
-     * 
-     */
+        /**
+         * @return Localized display names for the property.
+         * 
+         */
     private final @Nullable Map<String,String> displayName;
-    /**
-     * Type of entity.
-     * 
-     */
+        /**
+         * @return Type of entity.
+         * 
+         */
     private final @Nullable String entityType;
-    /**
-     * The properties of the Profile.
-     * 
-     */
+        /**
+         * @return The properties of the Profile.
+         * 
+         */
     private final @Nullable List<PropertyDefinitionResponse> fields;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The instance count.
-     * 
-     */
+        /**
+         * @return The instance count.
+         * 
+         */
     private final @Nullable Integer instancesCount;
-    /**
-     * Large Image associated with the Property or EntityType.
-     * 
-     */
+        /**
+         * @return Large Image associated with the Property or EntityType.
+         * 
+         */
     private final @Nullable String largeImage;
-    /**
-     * The last changed time for the type definition.
-     * 
-     */
+        /**
+         * @return The last changed time for the type definition.
+         * 
+         */
     private final String lastChangedUtc;
-    /**
-     * Any custom localized attributes for the Type.
-     * 
-     */
+        /**
+         * @return Any custom localized attributes for the Type.
+         * 
+         */
     private final @Nullable Map<String,Map<String,String>> localizedAttributes;
-    /**
-     * Medium Image associated with the Property or EntityType.
-     * 
-     */
+        /**
+         * @return Medium Image associated with the Property or EntityType.
+         * 
+         */
     private final @Nullable String mediumImage;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The schema org link. This helps ACI identify and suggest semantic models.
-     * 
-     */
+        /**
+         * @return The schema org link. This helps ACI identify and suggest semantic models.
+         * 
+         */
     private final @Nullable String schemaItemTypeLink;
-    /**
-     * Small Image associated with the Property or EntityType.
-     * 
-     */
+        /**
+         * @return Small Image associated with the Property or EntityType.
+         * 
+         */
     private final @Nullable String smallImage;
-    /**
-     * The strong IDs.
-     * 
-     */
+        /**
+         * @return The strong IDs.
+         * 
+         */
     private final @Nullable List<StrongIdResponse> strongIds;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The timestamp property name. Represents the time when the interaction or profile update happened.
-     * 
-     */
+        /**
+         * @return The timestamp property name. Represents the time when the interaction or profile update happened.
+         * 
+         */
     private final @Nullable String timestampFieldName;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The name of the entity.
-     * 
-     */
+        /**
+         * @return The name of the entity.
+         * 
+         */
     private final @Nullable String typeName;
 
     @CustomType.Constructor
@@ -169,149 +169,149 @@ public final class GetProfileResult {
     }
 
     /**
-     * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+     * @return The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
      * 
-    */
+     */
     public Optional<String> apiEntitySetName() {
         return Optional.ofNullable(this.apiEntitySetName);
     }
     /**
-     * The attributes for the Type.
+     * @return The attributes for the Type.
      * 
-    */
+     */
     public Map<String,List<String>> attributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
     /**
-     * Localized descriptions for the property.
+     * @return Localized descriptions for the property.
      * 
-    */
+     */
     public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
-     * Localized display names for the property.
+     * @return Localized display names for the property.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * Type of entity.
+     * @return Type of entity.
      * 
-    */
+     */
     public Optional<String> entityType() {
         return Optional.ofNullable(this.entityType);
     }
     /**
-     * The properties of the Profile.
+     * @return The properties of the Profile.
      * 
-    */
+     */
     public List<PropertyDefinitionResponse> fields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The instance count.
+     * @return The instance count.
      * 
-    */
+     */
     public Optional<Integer> instancesCount() {
         return Optional.ofNullable(this.instancesCount);
     }
     /**
-     * Large Image associated with the Property or EntityType.
+     * @return Large Image associated with the Property or EntityType.
      * 
-    */
+     */
     public Optional<String> largeImage() {
         return Optional.ofNullable(this.largeImage);
     }
     /**
-     * The last changed time for the type definition.
+     * @return The last changed time for the type definition.
      * 
-    */
+     */
     public String lastChangedUtc() {
         return this.lastChangedUtc;
     }
     /**
-     * Any custom localized attributes for the Type.
+     * @return Any custom localized attributes for the Type.
      * 
-    */
+     */
     public Map<String,Map<String,String>> localizedAttributes() {
         return this.localizedAttributes == null ? Map.of() : this.localizedAttributes;
     }
     /**
-     * Medium Image associated with the Property or EntityType.
+     * @return Medium Image associated with the Property or EntityType.
      * 
-    */
+     */
     public Optional<String> mediumImage() {
         return Optional.ofNullable(this.mediumImage);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The schema org link. This helps ACI identify and suggest semantic models.
+     * @return The schema org link. This helps ACI identify and suggest semantic models.
      * 
-    */
+     */
     public Optional<String> schemaItemTypeLink() {
         return Optional.ofNullable(this.schemaItemTypeLink);
     }
     /**
-     * Small Image associated with the Property or EntityType.
+     * @return Small Image associated with the Property or EntityType.
      * 
-    */
+     */
     public Optional<String> smallImage() {
         return Optional.ofNullable(this.smallImage);
     }
     /**
-     * The strong IDs.
+     * @return The strong IDs.
      * 
-    */
+     */
     public List<StrongIdResponse> strongIds() {
         return this.strongIds == null ? List.of() : this.strongIds;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The timestamp property name. Represents the time when the interaction or profile update happened.
+     * @return The timestamp property name. Represents the time when the interaction or profile update happened.
      * 
-    */
+     */
     public Optional<String> timestampFieldName() {
         return Optional.ofNullable(this.timestampFieldName);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The name of the entity.
+     * @return The name of the entity.
      * 
-    */
+     */
     public Optional<String> typeName() {
         return Optional.ofNullable(this.typeName);
     }

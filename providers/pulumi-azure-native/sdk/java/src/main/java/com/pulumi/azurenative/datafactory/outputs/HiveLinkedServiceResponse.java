@@ -19,116 +19,116 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HiveLinkedServiceResponse {
-    /**
-     * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
-     * 
-     */
+        /**
+         * @return Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+         * 
+         */
     private final @Nullable Object allowHostNameCNMismatch;
-    /**
-     * Specifies whether to allow self-signed certificates from the server. The default value is false.
-     * 
-     */
+        /**
+         * @return Specifies whether to allow self-signed certificates from the server. The default value is false.
+         * 
+         */
     private final @Nullable Object allowSelfSignedServerCert;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The authentication method used to access the Hive server.
-     * 
-     */
+        /**
+         * @return The authentication method used to access the Hive server.
+         * 
+         */
     private final String authenticationType;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
-     * 
-     */
+        /**
+         * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+         * 
+         */
     private final @Nullable Object enableSsl;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * IP address or host name of the Hive server, separated by &#39;;&#39; for multiple hosts (only when serviceDiscoveryMode is enable).
-     * 
-     */
+        /**
+         * @return IP address or host name of the Hive server, separated by &#39;;&#39; for multiple hosts (only when serviceDiscoveryMode is enable).
+         * 
+         */
     private final Object host;
-    /**
-     * The partial URL corresponding to the Hive server.
-     * 
-     */
+        /**
+         * @return The partial URL corresponding to the Hive server.
+         * 
+         */
     private final @Nullable Object httpPath;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password corresponding to the user name that you provided in the Username field
-     * 
-     */
+        /**
+         * @return The password corresponding to the user name that you provided in the Username field
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The TCP port that the Hive server uses to listen for client connections.
-     * 
-     */
+        /**
+         * @return The TCP port that the Hive server uses to listen for client connections.
+         * 
+         */
     private final @Nullable Object port;
-    /**
-     * The type of Hive server.
-     * 
-     */
+        /**
+         * @return The type of Hive server.
+         * 
+         */
     private final @Nullable String serverType;
-    /**
-     * true to indicate using the ZooKeeper service, false not.
-     * 
-     */
+        /**
+         * @return true to indicate using the ZooKeeper service, false not.
+         * 
+         */
     private final @Nullable Object serviceDiscoveryMode;
-    /**
-     * The transport protocol to use in the Thrift layer.
-     * 
-     */
+        /**
+         * @return The transport protocol to use in the Thrift layer.
+         * 
+         */
     private final @Nullable String thriftTransportProtocol;
-    /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
-     * 
-     */
+        /**
+         * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+         * 
+         */
     private final @Nullable Object trustedCertPath;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;Hive&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;Hive&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
-     * 
-     */
+        /**
+         * @return Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
+         * 
+         */
     private final @Nullable Object useNativeQuery;
-    /**
-     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
-     * 
-     */
+        /**
+         * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+         * 
+         */
     private final @Nullable Object useSystemTrustStore;
-    /**
-     * The user name that you use to access Hive Server.
-     * 
-     */
+        /**
+         * @return The user name that you use to access Hive Server.
+         * 
+         */
     private final @Nullable Object username;
-    /**
-     * The namespace on ZooKeeper under which Hive Server 2 nodes are added.
-     * 
-     */
+        /**
+         * @return The namespace on ZooKeeper under which Hive Server 2 nodes are added.
+         * 
+         */
     private final @Nullable Object zooKeeperNameSpace;
 
     @CustomType.Constructor
@@ -180,157 +180,157 @@ public final class HiveLinkedServiceResponse {
     }
 
     /**
-     * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+     * @return Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
      * 
-    */
+     */
     public Optional<Object> allowHostNameCNMismatch() {
         return Optional.ofNullable(this.allowHostNameCNMismatch);
     }
     /**
-     * Specifies whether to allow self-signed certificates from the server. The default value is false.
+     * @return Specifies whether to allow self-signed certificates from the server. The default value is false.
      * 
-    */
+     */
     public Optional<Object> allowSelfSignedServerCert() {
         return Optional.ofNullable(this.allowSelfSignedServerCert);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The authentication method used to access the Hive server.
+     * @return The authentication method used to access the Hive server.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+     * @return Specifies whether the connections to the server are encrypted using SSL. The default value is false.
      * 
-    */
+     */
     public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * IP address or host name of the Hive server, separated by &#39;;&#39; for multiple hosts (only when serviceDiscoveryMode is enable).
+     * @return IP address or host name of the Hive server, separated by &#39;;&#39; for multiple hosts (only when serviceDiscoveryMode is enable).
      * 
-    */
+     */
     public Object host() {
         return this.host;
     }
     /**
-     * The partial URL corresponding to the Hive server.
+     * @return The partial URL corresponding to the Hive server.
      * 
-    */
+     */
     public Optional<Object> httpPath() {
         return Optional.ofNullable(this.httpPath);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password corresponding to the user name that you provided in the Username field
+     * @return The password corresponding to the user name that you provided in the Username field
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The TCP port that the Hive server uses to listen for client connections.
+     * @return The TCP port that the Hive server uses to listen for client connections.
      * 
-    */
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The type of Hive server.
+     * @return The type of Hive server.
      * 
-    */
+     */
     public Optional<String> serverType() {
         return Optional.ofNullable(this.serverType);
     }
     /**
-     * true to indicate using the ZooKeeper service, false not.
+     * @return true to indicate using the ZooKeeper service, false not.
      * 
-    */
+     */
     public Optional<Object> serviceDiscoveryMode() {
         return Optional.ofNullable(this.serviceDiscoveryMode);
     }
     /**
-     * The transport protocol to use in the Thrift layer.
+     * @return The transport protocol to use in the Thrift layer.
      * 
-    */
+     */
     public Optional<String> thriftTransportProtocol() {
         return Optional.ofNullable(this.thriftTransportProtocol);
     }
     /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
-    */
+     */
     public Optional<Object> trustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Hive&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
+     * @return Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
      * 
-    */
+     */
     public Optional<Object> useNativeQuery() {
         return Optional.ofNullable(this.useNativeQuery);
     }
     /**
-     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
-    */
+     */
     public Optional<Object> useSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }
     /**
-     * The user name that you use to access Hive Server.
+     * @return The user name that you use to access Hive Server.
      * 
-    */
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }
     /**
-     * The namespace on ZooKeeper under which Hive Server 2 nodes are added.
+     * @return The namespace on ZooKeeper under which Hive Server 2 nodes are added.
      * 
-    */
+     */
     public Optional<Object> zooKeeperNameSpace() {
         return Optional.ofNullable(this.zooKeeperNameSpace);
     }

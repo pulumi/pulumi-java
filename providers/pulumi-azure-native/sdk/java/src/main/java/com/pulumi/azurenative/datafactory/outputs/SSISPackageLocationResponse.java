@@ -18,55 +18,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SSISPackageLocationResponse {
-    /**
-     * The package access credential.
-     * 
-     */
+        /**
+         * @return The package access credential.
+         * 
+         */
     private final @Nullable SSISAccessCredentialResponse accessCredential;
-    /**
-     * The embedded child package list.
-     * 
-     */
+        /**
+         * @return The embedded child package list.
+         * 
+         */
     private final @Nullable List<SSISChildPackageResponse> childPackages;
-    /**
-     * The configuration file access credential.
-     * 
-     */
+        /**
+         * @return The configuration file access credential.
+         * 
+         */
     private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
-    /**
-     * The configuration file of the package execution. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The configuration file of the package execution. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object configurationPath;
-    /**
-     * The embedded package content. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The embedded package content. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object packageContent;
-    /**
-     * The embedded package last modified date.
-     * 
-     */
+        /**
+         * @return The embedded package last modified date.
+         * 
+         */
     private final @Nullable String packageLastModifiedDate;
-    /**
-     * The package name.
-     * 
-     */
+        /**
+         * @return The package name.
+         * 
+         */
     private final @Nullable String packageName;
-    /**
-     * Password of the package.
-     * 
-     */
+        /**
+         * @return Password of the package.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
-    /**
-     * The SSIS package path. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The SSIS package path. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object packagePath;
-    /**
-     * The type of SSIS package location.
-     * 
-     */
+        /**
+         * @return The type of SSIS package location.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -94,72 +94,72 @@ public final class SSISPackageLocationResponse {
     }
 
     /**
-     * The package access credential.
+     * @return The package access credential.
      * 
-    */
+     */
     public Optional<SSISAccessCredentialResponse> accessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
     /**
-     * The embedded child package list.
+     * @return The embedded child package list.
      * 
-    */
+     */
     public List<SSISChildPackageResponse> childPackages() {
         return this.childPackages == null ? List.of() : this.childPackages;
     }
     /**
-     * The configuration file access credential.
+     * @return The configuration file access credential.
      * 
-    */
+     */
     public Optional<SSISAccessCredentialResponse> configurationAccessCredential() {
         return Optional.ofNullable(this.configurationAccessCredential);
     }
     /**
-     * The configuration file of the package execution. Type: string (or Expression with resultType string).
+     * @return The configuration file of the package execution. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> configurationPath() {
         return Optional.ofNullable(this.configurationPath);
     }
     /**
-     * The embedded package content. Type: string (or Expression with resultType string).
+     * @return The embedded package content. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> packageContent() {
         return Optional.ofNullable(this.packageContent);
     }
     /**
-     * The embedded package last modified date.
+     * @return The embedded package last modified date.
      * 
-    */
+     */
     public Optional<String> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
     /**
-     * The package name.
+     * @return The package name.
      * 
-    */
+     */
     public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
-     * Password of the package.
+     * @return Password of the package.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> packagePassword() {
         return Optional.ofNullable(this.packagePassword);
     }
     /**
-     * The SSIS package path. Type: string (or Expression with resultType string).
+     * @return The SSIS package path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> packagePath() {
         return Optional.ofNullable(this.packagePath);
     }
     /**
-     * The type of SSIS package location.
+     * @return The type of SSIS package location.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

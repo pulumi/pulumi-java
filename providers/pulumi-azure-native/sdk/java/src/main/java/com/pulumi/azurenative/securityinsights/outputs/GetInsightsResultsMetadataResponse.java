@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInsightsResultsMetadataResponse {
-    /**
-     * information about the failed queries
-     * 
-     */
+        /**
+         * @return information about the failed queries
+         * 
+         */
     private final @Nullable List<GetInsightsErrorResponse> errors;
-    /**
-     * the total items found for the insights request
-     * 
-     */
+        /**
+         * @return the total items found for the insights request
+         * 
+         */
     private final Integer totalCount;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetInsightsResultsMetadataResponse {
     }
 
     /**
-     * information about the failed queries
+     * @return information about the failed queries
      * 
-    */
+     */
     public List<GetInsightsErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * the total items found for the insights request
+     * @return the total items found for the insights request
      * 
-    */
+     */
     public Integer totalCount() {
         return this.totalCount;
     }

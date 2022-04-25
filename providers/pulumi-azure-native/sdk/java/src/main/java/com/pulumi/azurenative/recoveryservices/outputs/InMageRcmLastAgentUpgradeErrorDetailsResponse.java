@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
-    /**
-     * The error code.
-     * 
-     */
+        /**
+         * @return The error code.
+         * 
+         */
     private final String errorCode;
-    /**
-     * The error message.
-     * 
-     */
+        /**
+         * @return The error message.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * The error message parameters.
-     * 
-     */
+        /**
+         * @return The error message parameters.
+         * 
+         */
     private final Map<String,String> errorMessageParameters;
-    /**
-     * The error tags.
-     * 
-     */
+        /**
+         * @return The error tags.
+         * 
+         */
     private final Map<String,String> errorTags;
-    /**
-     * The possible causes.
-     * 
-     */
+        /**
+         * @return The possible causes.
+         * 
+         */
     private final String possibleCauses;
-    /**
-     * The recommended action.
-     * 
-     */
+        /**
+         * @return The recommended action.
+         * 
+         */
     private final String recommendedAction;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
     }
 
     /**
-     * The error code.
+     * @return The error code.
      * 
-    */
+     */
     public String errorCode() {
         return this.errorCode;
     }
     /**
-     * The error message.
+     * @return The error message.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * The error message parameters.
+     * @return The error message parameters.
      * 
-    */
+     */
     public Map<String,String> errorMessageParameters() {
         return this.errorMessageParameters;
     }
     /**
-     * The error tags.
+     * @return The error tags.
      * 
-    */
+     */
     public Map<String,String> errorTags() {
         return this.errorTags;
     }
     /**
-     * The possible causes.
+     * @return The possible causes.
      * 
-    */
+     */
     public String possibleCauses() {
         return this.possibleCauses;
     }
     /**
-     * The recommended action.
+     * @return The recommended action.
      * 
-    */
+     */
     public String recommendedAction() {
         return this.recommendedAction;
     }

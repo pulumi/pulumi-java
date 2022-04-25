@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PolicyDefinitionGroupResponse {
-    /**
-     * A resource ID of a resource that contains additional metadata about the group.
-     * 
-     */
+        /**
+         * @return A resource ID of a resource that contains additional metadata about the group.
+         * 
+         */
     private final @Nullable String additionalMetadataId;
-    /**
-     * The group&#39;s category.
-     * 
-     */
+        /**
+         * @return The group&#39;s category.
+         * 
+         */
     private final @Nullable String category;
-    /**
-     * The group&#39;s description.
-     * 
-     */
+        /**
+         * @return The group&#39;s description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The group&#39;s display name.
-     * 
-     */
+        /**
+         * @return The group&#39;s display name.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The name of the group.
-     * 
-     */
+        /**
+         * @return The name of the group.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class PolicyDefinitionGroupResponse {
     }
 
     /**
-     * A resource ID of a resource that contains additional metadata about the group.
+     * @return A resource ID of a resource that contains additional metadata about the group.
      * 
-    */
+     */
     public Optional<String> additionalMetadataId() {
         return Optional.ofNullable(this.additionalMetadataId);
     }
     /**
-     * The group&#39;s category.
+     * @return The group&#39;s category.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * The group&#39;s description.
+     * @return The group&#39;s description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The group&#39;s display name.
+     * @return The group&#39;s display name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The name of the group.
+     * @return The name of the group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -28,6 +28,10 @@ public final class DigitalTwinsIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
 
+    /**
+     * @return The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+     * 
+     */
     public Optional<Output<Either<String,DigitalTwinsIdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class DigitalTwinsIdentityArgs extends com.pulumi.resources.Resourc
             $ = new DigitalTwinsIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,DigitalTwinsIdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,DigitalTwinsIdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DigitalTwinsIdentityType type) {
             return type(Either.ofRight(type));
         }

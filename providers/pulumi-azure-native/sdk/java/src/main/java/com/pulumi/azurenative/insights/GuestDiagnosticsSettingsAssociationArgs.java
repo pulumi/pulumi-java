@@ -23,6 +23,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends com.pulumi.re
     @Import(name="associationName")
     private @Nullable Output<String> associationName;
 
+    /**
+     * @return The name of the diagnostic settings association.
+     * 
+     */
     public Optional<Output<String>> associationName() {
         return Optional.ofNullable(this.associationName);
     }
@@ -34,6 +38,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends com.pulumi.re
     @Import(name="guestDiagnosticSettingsName", required=true)
     private Output<String> guestDiagnosticSettingsName;
 
+    /**
+     * @return The guest diagnostic settings name.
+     * 
+     */
     public Output<String> guestDiagnosticSettingsName() {
         return this.guestDiagnosticSettingsName;
     }
@@ -45,6 +53,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends com.pulumi.re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -56,6 +68,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends com.pulumi.re
     @Import(name="resourceUri", required=true)
     private Output<String> resourceUri;
 
+    /**
+     * @return The fully qualified ID of the resource, including the resource name and resource type.
+     * 
+     */
     public Output<String> resourceUri() {
         return this.resourceUri;
     }
@@ -67,6 +83,10 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends com.pulumi.re
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -99,47 +119,107 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends com.pulumi.re
             $ = new GuestDiagnosticsSettingsAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param associationName The name of the diagnostic settings association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(@Nullable Output<String> associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param associationName The name of the diagnostic settings association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             return associationName(Output.of(associationName));
         }
 
+        /**
+         * @param guestDiagnosticSettingsName The guest diagnostic settings name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestDiagnosticSettingsName(Output<String> guestDiagnosticSettingsName) {
             $.guestDiagnosticSettingsName = guestDiagnosticSettingsName;
             return this;
         }
 
+        /**
+         * @param guestDiagnosticSettingsName The guest diagnostic settings name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestDiagnosticSettingsName(String guestDiagnosticSettingsName) {
             return guestDiagnosticSettingsName(Output.of(guestDiagnosticSettingsName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceUri The fully qualified ID of the resource, including the resource name and resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(Output<String> resourceUri) {
             $.resourceUri = resourceUri;
             return this;
         }
 
+        /**
+         * @param resourceUri The fully qualified ID of the resource, including the resource name and resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(String resourceUri) {
             return resourceUri(Output.of(resourceUri));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

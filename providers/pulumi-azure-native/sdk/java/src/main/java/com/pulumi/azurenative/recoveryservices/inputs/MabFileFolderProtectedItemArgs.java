@@ -34,6 +34,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="backupManagementType")
     private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
+    /**
+     * @return Type of backup management for the backed up item.
+     * 
+     */
     public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -45,6 +49,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="backupSetName")
     private @Nullable Output<String> backupSetName;
 
+    /**
+     * @return Name of the backup set the backup item belongs to
+     * 
+     */
     public Optional<Output<String>> backupSetName() {
         return Optional.ofNullable(this.backupSetName);
     }
@@ -56,6 +64,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="computerName")
     private @Nullable Output<String> computerName;
 
+    /**
+     * @return Name of the computer associated with this backup item.
+     * 
+     */
     public Optional<Output<String>> computerName() {
         return Optional.ofNullable(this.computerName);
     }
@@ -67,6 +79,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return Unique name of container
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -78,6 +94,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="createMode")
     private @Nullable Output<Either<String,CreateMode>> createMode;
 
+    /**
+     * @return Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     * 
+     */
     public Optional<Output<Either<String,CreateMode>>> createMode() {
         return Optional.ofNullable(this.createMode);
     }
@@ -89,6 +109,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="deferredDeleteSyncTimeInUTC")
     private @Nullable Output<Double> deferredDeleteSyncTimeInUTC;
 
+    /**
+     * @return Sync time for deferred deletion in UTC
+     * 
+     */
     public Optional<Output<Double>> deferredDeleteSyncTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteSyncTimeInUTC);
     }
@@ -100,6 +124,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="deferredDeleteTimeInUTC")
     private @Nullable Output<String> deferredDeleteTimeInUTC;
 
+    /**
+     * @return Time for deferred deletion in UTC
+     * 
+     */
     public Optional<Output<String>> deferredDeleteTimeInUTC() {
         return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
@@ -111,6 +139,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="deferredDeleteTimeRemaining")
     private @Nullable Output<String> deferredDeleteTimeRemaining;
 
+    /**
+     * @return Time remaining before the DS marked for deferred delete is permanently deleted
+     * 
+     */
     public Optional<Output<String>> deferredDeleteTimeRemaining() {
         return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
@@ -122,6 +154,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="extendedInfo")
     private @Nullable Output<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo;
 
+    /**
+     * @return Additional information with this backup item.
+     * 
+     */
     public Optional<Output<MabFileFolderProtectedItemExtendedInfoArgs>> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
@@ -133,6 +169,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of this backup item.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -144,6 +184,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="isDeferredDeleteScheduleUpcoming")
     private @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
+    /**
+     * @return Flag to identify whether the deferred deleted DS is to be purged soon
+     * 
+     */
     public Optional<Output<Boolean>> isDeferredDeleteScheduleUpcoming() {
         return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
@@ -155,6 +199,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="isRehydrate")
     private @Nullable Output<Boolean> isRehydrate;
 
+    /**
+     * @return Flag to identify that deferred deleted DS is to be moved into Pause state
+     * 
+     */
     public Optional<Output<Boolean>> isRehydrate() {
         return Optional.ofNullable(this.isRehydrate);
     }
@@ -166,6 +214,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="isScheduledForDeferredDelete")
     private @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
+    /**
+     * @return Flag to identify whether the DS is scheduled for deferred delete
+     * 
+     */
     public Optional<Output<Boolean>> isScheduledForDeferredDelete() {
         return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
@@ -177,6 +229,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="lastBackupStatus")
     private @Nullable Output<String> lastBackupStatus;
 
+    /**
+     * @return Status of last backup operation.
+     * 
+     */
     public Optional<Output<String>> lastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
@@ -188,6 +244,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="lastBackupTime")
     private @Nullable Output<String> lastBackupTime;
 
+    /**
+     * @return Timestamp of the last backup operation on this backup item.
+     * 
+     */
     public Optional<Output<String>> lastBackupTime() {
         return Optional.ofNullable(this.lastBackupTime);
     }
@@ -199,6 +259,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="lastRecoveryPoint")
     private @Nullable Output<String> lastRecoveryPoint;
 
+    /**
+     * @return Timestamp when the last (latest) backup copy was created for this backup item.
+     * 
+     */
     public Optional<Output<String>> lastRecoveryPoint() {
         return Optional.ofNullable(this.lastRecoveryPoint);
     }
@@ -210,6 +274,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return ID of the backup policy with which this item is backed up.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -222,6 +290,11 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="protectedItemType", required=true)
     private Output<String> protectedItemType;
 
+    /**
+     * @return backup item type.
+     * Expected value is &#39;MabFileFolderProtectedItem&#39;.
+     * 
+     */
     public Output<String> protectedItemType() {
         return this.protectedItemType;
     }
@@ -233,6 +306,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="protectionState")
     private @Nullable Output<String> protectionState;
 
+    /**
+     * @return Protected, ProtectionStopped, IRPending or ProtectionError
+     * 
+     */
     public Optional<Output<String>> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
@@ -244,6 +321,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="sourceResourceId")
     private @Nullable Output<String> sourceResourceId;
 
+    /**
+     * @return ARM ID of the resource to be backed up.
+     * 
+     */
     public Optional<Output<String>> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -255,6 +336,10 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
     @Import(name="workloadType")
     private @Nullable Output<Either<String,DataSourceType>> workloadType;
 
+    /**
+     * @return Type of workload this item represents.
+     * 
+     */
     public Optional<Output<Either<String,DataSourceType>>> workloadType() {
         return Optional.ofNullable(this.workloadType);
     }
@@ -303,215 +388,505 @@ public final class MabFileFolderProtectedItemArgs extends com.pulumi.resources.R
             $ = new MabFileFolderProtectedItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Either.ofLeft(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(BackupManagementType backupManagementType) {
             return backupManagementType(Either.ofRight(backupManagementType));
         }
 
+        /**
+         * @param backupSetName Name of the backup set the backup item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
             $.backupSetName = backupSetName;
             return this;
         }
 
+        /**
+         * @param backupSetName Name of the backup set the backup item belongs to
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSetName(String backupSetName) {
             return backupSetName(Output.of(backupSetName));
         }
 
+        /**
+         * @param computerName Name of the computer associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(@Nullable Output<String> computerName) {
             $.computerName = computerName;
             return this;
         }
 
+        /**
+         * @param computerName Name of the computer associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(String computerName) {
             return computerName(Output.of(computerName));
         }
 
+        /**
+         * @param containerName Unique name of container
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName Unique name of container
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param createMode Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             $.createMode = createMode;
             return this;
         }
 
+        /**
+         * @param createMode Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(Either<String,CreateMode> createMode) {
             return createMode(Output.of(createMode));
         }
 
+        /**
+         * @param createMode Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(String createMode) {
             return createMode(Either.ofLeft(createMode));
         }
 
+        /**
+         * @param createMode Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createMode(CreateMode createMode) {
             return createMode(Either.ofRight(createMode));
         }
 
+        /**
+         * @param deferredDeleteSyncTimeInUTC Sync time for deferred deletion in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteSyncTimeInUTC(@Nullable Output<Double> deferredDeleteSyncTimeInUTC) {
             $.deferredDeleteSyncTimeInUTC = deferredDeleteSyncTimeInUTC;
             return this;
         }
 
+        /**
+         * @param deferredDeleteSyncTimeInUTC Sync time for deferred deletion in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteSyncTimeInUTC(Double deferredDeleteSyncTimeInUTC) {
             return deferredDeleteSyncTimeInUTC(Output.of(deferredDeleteSyncTimeInUTC));
         }
 
+        /**
+         * @param deferredDeleteTimeInUTC Time for deferred deletion in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
             $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
+        /**
+         * @param deferredDeleteTimeInUTC Time for deferred deletion in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeInUTC(String deferredDeleteTimeInUTC) {
             return deferredDeleteTimeInUTC(Output.of(deferredDeleteTimeInUTC));
         }
 
+        /**
+         * @param deferredDeleteTimeRemaining Time remaining before the DS marked for deferred delete is permanently deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeRemaining(@Nullable Output<String> deferredDeleteTimeRemaining) {
             $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
+        /**
+         * @param deferredDeleteTimeRemaining Time remaining before the DS marked for deferred delete is permanently deleted
+         * 
+         * @return builder
+         * 
+         */
         public Builder deferredDeleteTimeRemaining(String deferredDeleteTimeRemaining) {
             return deferredDeleteTimeRemaining(Output.of(deferredDeleteTimeRemaining));
         }
 
+        /**
+         * @param extendedInfo Additional information with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(@Nullable Output<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo) {
             $.extendedInfo = extendedInfo;
             return this;
         }
 
+        /**
+         * @param extendedInfo Additional information with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(MabFileFolderProtectedItemExtendedInfoArgs extendedInfo) {
             return extendedInfo(Output.of(extendedInfo));
         }
 
+        /**
+         * @param friendlyName Friendly name of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param isDeferredDeleteScheduleUpcoming Flag to identify whether the deferred deleted DS is to be purged soon
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming) {
             $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
+        /**
+         * @param isDeferredDeleteScheduleUpcoming Flag to identify whether the deferred deleted DS is to be purged soon
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDeferredDeleteScheduleUpcoming(Boolean isDeferredDeleteScheduleUpcoming) {
             return isDeferredDeleteScheduleUpcoming(Output.of(isDeferredDeleteScheduleUpcoming));
         }
 
+        /**
+         * @param isRehydrate Flag to identify that deferred deleted DS is to be moved into Pause state
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRehydrate(@Nullable Output<Boolean> isRehydrate) {
             $.isRehydrate = isRehydrate;
             return this;
         }
 
+        /**
+         * @param isRehydrate Flag to identify that deferred deleted DS is to be moved into Pause state
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRehydrate(Boolean isRehydrate) {
             return isRehydrate(Output.of(isRehydrate));
         }
 
+        /**
+         * @param isScheduledForDeferredDelete Flag to identify whether the DS is scheduled for deferred delete
+         * 
+         * @return builder
+         * 
+         */
         public Builder isScheduledForDeferredDelete(@Nullable Output<Boolean> isScheduledForDeferredDelete) {
             $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
+        /**
+         * @param isScheduledForDeferredDelete Flag to identify whether the DS is scheduled for deferred delete
+         * 
+         * @return builder
+         * 
+         */
         public Builder isScheduledForDeferredDelete(Boolean isScheduledForDeferredDelete) {
             return isScheduledForDeferredDelete(Output.of(isScheduledForDeferredDelete));
         }
 
+        /**
+         * @param lastBackupStatus Status of last backup operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(@Nullable Output<String> lastBackupStatus) {
             $.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
+        /**
+         * @param lastBackupStatus Status of last backup operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupStatus(String lastBackupStatus) {
             return lastBackupStatus(Output.of(lastBackupStatus));
         }
 
+        /**
+         * @param lastBackupTime Timestamp of the last backup operation on this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupTime(@Nullable Output<String> lastBackupTime) {
             $.lastBackupTime = lastBackupTime;
             return this;
         }
 
+        /**
+         * @param lastBackupTime Timestamp of the last backup operation on this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastBackupTime(String lastBackupTime) {
             return lastBackupTime(Output.of(lastBackupTime));
         }
 
+        /**
+         * @param lastRecoveryPoint Timestamp when the last (latest) backup copy was created for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPoint(@Nullable Output<String> lastRecoveryPoint) {
             $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param lastRecoveryPoint Timestamp when the last (latest) backup copy was created for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPoint(String lastRecoveryPoint) {
             return lastRecoveryPoint(Output.of(lastRecoveryPoint));
         }
 
+        /**
+         * @param policyId ID of the backup policy with which this item is backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId ID of the backup policy with which this item is backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param protectedItemType backup item type.
+         * Expected value is &#39;MabFileFolderProtectedItem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemType(Output<String> protectedItemType) {
             $.protectedItemType = protectedItemType;
             return this;
         }
 
+        /**
+         * @param protectedItemType backup item type.
+         * Expected value is &#39;MabFileFolderProtectedItem&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemType(String protectedItemType) {
             return protectedItemType(Output.of(protectedItemType));
         }
 
+        /**
+         * @param protectionState Protected, ProtectionStopped, IRPending or ProtectionError
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(@Nullable Output<String> protectionState) {
             $.protectionState = protectionState;
             return this;
         }
 
+        /**
+         * @param protectionState Protected, ProtectionStopped, IRPending or ProtectionError
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionState(String protectionState) {
             return protectionState(Output.of(protectionState));
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the resource to be backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param sourceResourceId ARM ID of the resource to be backed up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(String sourceResourceId) {
             return sourceResourceId(Output.of(sourceResourceId));
         }
 
+        /**
+         * @param workloadType Type of workload this item represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(@Nullable Output<Either<String,DataSourceType>> workloadType) {
             $.workloadType = workloadType;
             return this;
         }
 
+        /**
+         * @param workloadType Type of workload this item represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(Either<String,DataSourceType> workloadType) {
             return workloadType(Output.of(workloadType));
         }
 
+        /**
+         * @param workloadType Type of workload this item represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(String workloadType) {
             return workloadType(Either.ofLeft(workloadType));
         }
 
+        /**
+         * @param workloadType Type of workload this item represents.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadType(DataSourceType workloadType) {
             return workloadType(Either.ofRight(workloadType));
         }

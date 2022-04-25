@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class LongTermSchedulePolicyResponse {
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is &#39;LongTermSchedulePolicy&#39;.
-     * 
-     */
+        /**
+         * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;LongTermSchedulePolicy&#39;.
+         * 
+         */
     private final String schedulePolicyType;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class LongTermSchedulePolicyResponse {
     }
 
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;LongTermSchedulePolicy&#39;.
      * 
-    */
+     */
     public String schedulePolicyType() {
         return this.schedulePolicyType;
     }

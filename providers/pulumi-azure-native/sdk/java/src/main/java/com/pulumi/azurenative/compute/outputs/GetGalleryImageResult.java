@@ -18,100 +18,100 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGalleryImageResult {
-    /**
-     * The description of this gallery image definition resource. This property is updatable.
-     * 
-     */
+        /**
+         * @return The description of this gallery image definition resource. This property is updatable.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Describes the disallowed disk types.
-     * 
-     */
+        /**
+         * @return Describes the disallowed disk types.
+         * 
+         */
     private final @Nullable DisallowedResponse disallowed;
-    /**
-     * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
-     * 
-     */
+        /**
+         * @return The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
+         * 
+         */
     private final @Nullable String endOfLifeDate;
-    /**
-     * The Eula agreement for the gallery image definition.
-     * 
-     */
+        /**
+         * @return The Eula agreement for the gallery image definition.
+         * 
+         */
     private final @Nullable String eula;
-    /**
-     * A list of gallery image features.
-     * 
-     */
+        /**
+         * @return A list of gallery image features.
+         * 
+         */
     private final @Nullable List<GalleryImageFeatureResponse> features;
-    /**
-     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
-     * 
-     */
+        /**
+         * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+         * 
+         */
     private final @Nullable String hyperVGeneration;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * This is the gallery image definition identifier.
-     * 
-     */
+        /**
+         * @return This is the gallery image definition identifier.
+         * 
+         */
     private final GalleryImageIdentifierResponse identifier;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
-     * 
-     */
+        /**
+         * @return This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
+         * 
+         */
     private final String osState;
-    /**
-     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
-     * 
-     */
+        /**
+         * @return This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+         * 
+         */
     private final String osType;
-    /**
-     * The privacy statement uri.
-     * 
-     */
+        /**
+         * @return The privacy statement uri.
+         * 
+         */
     private final @Nullable String privacyStatementUri;
-    /**
-     * The provisioning state, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The provisioning state, which only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Describes the gallery image definition purchase plan. This is used by marketplace images.
-     * 
-     */
+        /**
+         * @return Describes the gallery image definition purchase plan. This is used by marketplace images.
+         * 
+         */
     private final @Nullable ImagePurchasePlanResponse purchasePlan;
-    /**
-     * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
-     * 
-     */
+        /**
+         * @return The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
+         * 
+         */
     private final @Nullable RecommendedMachineConfigurationResponse recommended;
-    /**
-     * The release note uri.
-     * 
-     */
+        /**
+         * @return The release note uri.
+         * 
+         */
     private final @Nullable String releaseNoteUri;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -157,135 +157,135 @@ public final class GetGalleryImageResult {
     }
 
     /**
-     * The description of this gallery image definition resource. This property is updatable.
+     * @return The description of this gallery image definition resource. This property is updatable.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Describes the disallowed disk types.
+     * @return Describes the disallowed disk types.
      * 
-    */
+     */
     public Optional<DisallowedResponse> disallowed() {
         return Optional.ofNullable(this.disallowed);
     }
     /**
-     * The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
+     * @return The end of life date of the gallery image definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
-    */
+     */
     public Optional<String> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
-     * The Eula agreement for the gallery image definition.
+     * @return The Eula agreement for the gallery image definition.
      * 
-    */
+     */
     public Optional<String> eula() {
         return Optional.ofNullable(this.eula);
     }
     /**
-     * A list of gallery image features.
+     * @return A list of gallery image features.
      * 
-    */
+     */
     public List<GalleryImageFeatureResponse> features() {
         return this.features == null ? List.of() : this.features;
     }
     /**
-     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
-    */
+     */
     public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * This is the gallery image definition identifier.
+     * @return This is the gallery image definition identifier.
      * 
-    */
+     */
     public GalleryImageIdentifierResponse identifier() {
         return this.identifier;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
+     * @return This property allows the user to specify whether the virtual machines created under this image are &#39;Generalized&#39; or &#39;Specialized&#39;.
      * 
-    */
+     */
     public String osState() {
         return this.osState;
     }
     /**
-     * This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * @return This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
      * 
-    */
+     */
     public String osType() {
         return this.osType;
     }
     /**
-     * The privacy statement uri.
+     * @return The privacy statement uri.
      * 
-    */
+     */
     public Optional<String> privacyStatementUri() {
         return Optional.ofNullable(this.privacyStatementUri);
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Describes the gallery image definition purchase plan. This is used by marketplace images.
+     * @return Describes the gallery image definition purchase plan. This is used by marketplace images.
      * 
-    */
+     */
     public Optional<ImagePurchasePlanResponse> purchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
     /**
-     * The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
+     * @return The properties describe the recommended machine configuration for this Image Definition. These properties are updatable.
      * 
-    */
+     */
     public Optional<RecommendedMachineConfigurationResponse> recommended() {
         return Optional.ofNullable(this.recommended);
     }
     /**
-     * The release note uri.
+     * @return The release note uri.
      * 
-    */
+     */
     public Optional<String> releaseNoteUri() {
         return Optional.ofNullable(this.releaseNoteUri);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -30,6 +30,10 @@ public final class BinaryReadSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="compressionProperties")
     private @Nullable Object compressionProperties;
 
+    /**
+     * @return Compression settings.
+     * 
+     */
     public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -42,6 +46,11 @@ public final class BinaryReadSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;BinaryReadSettings&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -71,11 +80,24 @@ public final class BinaryReadSettingsResponse extends com.pulumi.resources.Invok
             $ = new BinaryReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(@Nullable Object compressionProperties) {
             $.compressionProperties = compressionProperties;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;BinaryReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

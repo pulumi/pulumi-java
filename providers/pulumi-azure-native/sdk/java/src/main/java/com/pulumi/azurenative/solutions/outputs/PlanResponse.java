@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PlanResponse {
-    /**
-     * The plan name.
-     * 
-     */
+        /**
+         * @return The plan name.
+         * 
+         */
     private final String name;
-    /**
-     * The product code.
-     * 
-     */
+        /**
+         * @return The product code.
+         * 
+         */
     private final String product;
-    /**
-     * The promotion code.
-     * 
-     */
+        /**
+         * @return The promotion code.
+         * 
+         */
     private final @Nullable String promotionCode;
-    /**
-     * The publisher ID.
-     * 
-     */
+        /**
+         * @return The publisher ID.
+         * 
+         */
     private final String publisher;
-    /**
-     * The plan&#39;s version.
-     * 
-     */
+        /**
+         * @return The plan&#39;s version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class PlanResponse {
     }
 
     /**
-     * The plan name.
+     * @return The plan name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The product code.
+     * @return The product code.
      * 
-    */
+     */
     public String product() {
         return this.product;
     }
     /**
-     * The promotion code.
+     * @return The promotion code.
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * The publisher ID.
+     * @return The publisher ID.
      * 
-    */
+     */
     public String publisher() {
         return this.publisher;
     }
     /**
-     * The plan&#39;s version.
+     * @return The plan&#39;s version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

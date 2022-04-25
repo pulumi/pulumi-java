@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ComputeInstanceApplicationResponse {
-    /**
-     * Name of the ComputeInstance application.
-     * 
-     */
+        /**
+         * @return Name of the ComputeInstance application.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Application&#39; endpoint URI.
-     * 
-     */
+        /**
+         * @return Application&#39; endpoint URI.
+         * 
+         */
     private final @Nullable String endpointUri;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ComputeInstanceApplicationResponse {
     }
 
     /**
-     * Name of the ComputeInstance application.
+     * @return Name of the ComputeInstance application.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Application&#39; endpoint URI.
+     * @return Application&#39; endpoint URI.
      * 
-    */
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }

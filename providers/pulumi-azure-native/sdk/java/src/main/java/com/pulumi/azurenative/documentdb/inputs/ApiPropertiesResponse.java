@@ -21,6 +21,10 @@ public final class ApiPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serverVersion")
     private @Nullable String serverVersion;
 
+    /**
+     * @return Describes the ServerVersion of an a MongoDB account.
+     * 
+     */
     public Optional<String> serverVersion() {
         return Optional.ofNullable(this.serverVersion);
     }
@@ -49,6 +53,12 @@ public final class ApiPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new ApiPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverVersion Describes the ServerVersion of an a MongoDB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(@Nullable String serverVersion) {
             $.serverVersion = serverVersion;
             return this;

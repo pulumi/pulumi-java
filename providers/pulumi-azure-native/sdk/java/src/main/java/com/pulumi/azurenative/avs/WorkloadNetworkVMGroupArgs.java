@@ -24,6 +24,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the VM group.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -35,6 +39,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="members")
     private @Nullable Output<List<String>> members;
 
+    /**
+     * @return Virtual machine members of this group.
+     * 
+     */
     public Optional<Output<List<String>>> members() {
         return Optional.ofNullable(this.members);
     }
@@ -46,6 +54,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -57,6 +69,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="revision")
     private @Nullable Output<Double> revision;
 
+    /**
+     * @return NSX revision number.
+     * 
+     */
     public Optional<Output<Double>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -79,6 +99,10 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
     @Import(name="vmGroupId")
     private @Nullable Output<String> vmGroupId;
 
+    /**
+     * @return NSX VM Group identifier. Generally the same as the VM Group&#39;s display name
+     * 
+     */
     public Optional<Output<String>> vmGroupId() {
         return Optional.ofNullable(this.vmGroupId);
     }
@@ -112,60 +136,138 @@ public final class WorkloadNetworkVMGroupArgs extends com.pulumi.resources.Resou
             $ = new WorkloadNetworkVMGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the VM group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the VM group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param members Virtual machine members of this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(@Nullable Output<List<String>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members Virtual machine members of this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<String> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members Virtual machine members of this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Double> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Double revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param vmGroupId NSX VM Group identifier. Generally the same as the VM Group&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmGroupId(@Nullable Output<String> vmGroupId) {
             $.vmGroupId = vmGroupId;
             return this;
         }
 
+        /**
+         * @param vmGroupId NSX VM Group identifier. Generally the same as the VM Group&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmGroupId(String vmGroupId) {
             return vmGroupId(Output.of(vmGroupId));
         }

@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiVersionSetResult {
-    /**
-     * Description of API Version Set.
-     * 
-     */
+        /**
+         * @return Description of API Version Set.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Name of API Version Set
-     * 
-     */
+        /**
+         * @return Name of API Version Set
+         * 
+         */
     private final String displayName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
-    /**
-     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-     * 
-     */
+        /**
+         * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+         * 
+         */
     private final @Nullable String versionHeaderName;
-    /**
-     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-     * 
-     */
+        /**
+         * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+         * 
+         */
     private final @Nullable String versionQueryName;
-    /**
-     * An value that determines where the API Version identifier will be located in a HTTP request.
-     * 
-     */
+        /**
+         * @return An value that determines where the API Version identifier will be located in a HTTP request.
+         * 
+         */
     private final String versioningScheme;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetApiVersionSetResult {
     }
 
     /**
-     * Description of API Version Set.
+     * @return Description of API Version Set.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Name of API Version Set
+     * @return Name of API Version Set
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
-    */
+     */
     public Optional<String> versionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
     /**
-     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
-    */
+     */
     public Optional<String> versionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
     /**
-     * An value that determines where the API Version identifier will be located in a HTTP request.
+     * @return An value that determines where the API Version identifier will be located in a HTTP request.
      * 
-    */
+     */
     public String versioningScheme() {
         return this.versioningScheme;
     }

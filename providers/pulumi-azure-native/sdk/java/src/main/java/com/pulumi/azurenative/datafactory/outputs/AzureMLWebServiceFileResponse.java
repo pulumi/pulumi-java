@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AzureMLWebServiceFileResponse {
-    /**
-     * The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object filePath;
-    /**
-     * Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
-     * 
-     */
+        /**
+         * @return Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class AzureMLWebServiceFileResponse {
     }
 
     /**
-     * The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+     * @return The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object filePath() {
         return this.filePath;
     }
     /**
-     * Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+     * @return Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }

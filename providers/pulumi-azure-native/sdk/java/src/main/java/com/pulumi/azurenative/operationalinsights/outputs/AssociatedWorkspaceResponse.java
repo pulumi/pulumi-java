@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AssociatedWorkspaceResponse {
-    /**
-     * The time of workspace association.
-     * 
-     */
+        /**
+         * @return The time of workspace association.
+         * 
+         */
     private final String associateDate;
-    /**
-     * The ResourceId id the assigned workspace.
-     * 
-     */
+        /**
+         * @return The ResourceId id the assigned workspace.
+         * 
+         */
     private final String resourceId;
-    /**
-     * The id of the assigned workspace.
-     * 
-     */
+        /**
+         * @return The id of the assigned workspace.
+         * 
+         */
     private final String workspaceId;
-    /**
-     * The name id the assigned workspace.
-     * 
-     */
+        /**
+         * @return The name id the assigned workspace.
+         * 
+         */
     private final String workspaceName;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class AssociatedWorkspaceResponse {
     }
 
     /**
-     * The time of workspace association.
+     * @return The time of workspace association.
      * 
-    */
+     */
     public String associateDate() {
         return this.associateDate;
     }
     /**
-     * The ResourceId id the assigned workspace.
+     * @return The ResourceId id the assigned workspace.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * The id of the assigned workspace.
+     * @return The id of the assigned workspace.
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }
     /**
-     * The name id the assigned workspace.
+     * @return The name id the assigned workspace.
      * 
-    */
+     */
     public String workspaceName() {
         return this.workspaceName;
     }

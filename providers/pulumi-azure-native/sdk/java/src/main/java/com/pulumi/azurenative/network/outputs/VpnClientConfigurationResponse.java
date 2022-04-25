@@ -17,65 +17,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpnClientConfigurationResponse {
-    /**
-     * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
-     * 
-     */
+        /**
+         * @return The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+         * 
+         */
     private final @Nullable String aadAudience;
-    /**
-     * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
-     * 
-     */
+        /**
+         * @return The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+         * 
+         */
     private final @Nullable String aadIssuer;
-    /**
-     * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
-     * 
-     */
+        /**
+         * @return The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+         * 
+         */
     private final @Nullable String aadTenant;
-    /**
-     * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
-     * 
-     */
+        /**
+         * @return The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
+         * 
+         */
     private final @Nullable String radiusServerAddress;
-    /**
-     * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
-     * 
-     */
+        /**
+         * @return The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
+         * 
+         */
     private final @Nullable String radiusServerSecret;
-    /**
-     * The radiusServers property for multiple radius server configuration.
-     * 
-     */
+        /**
+         * @return The radiusServers property for multiple radius server configuration.
+         * 
+         */
     private final @Nullable List<RadiusServerResponse> radiusServers;
-    /**
-     * VPN authentication types for the virtual network gateway..
-     * 
-     */
+        /**
+         * @return VPN authentication types for the virtual network gateway..
+         * 
+         */
     private final @Nullable List<String> vpnAuthenticationTypes;
-    /**
-     * The reference to the address space resource which represents Address space for P2S VpnClient.
-     * 
-     */
+        /**
+         * @return The reference to the address space resource which represents Address space for P2S VpnClient.
+         * 
+         */
     private final @Nullable AddressSpaceResponse vpnClientAddressPool;
-    /**
-     * VpnClientIpsecPolicies for virtual network gateway P2S client.
-     * 
-     */
+        /**
+         * @return VpnClientIpsecPolicies for virtual network gateway P2S client.
+         * 
+         */
     private final @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies;
-    /**
-     * VpnClientProtocols for Virtual network gateway.
-     * 
-     */
+        /**
+         * @return VpnClientProtocols for Virtual network gateway.
+         * 
+         */
     private final @Nullable List<String> vpnClientProtocols;
-    /**
-     * VpnClientRevokedCertificate for Virtual network gateway.
-     * 
-     */
+        /**
+         * @return VpnClientRevokedCertificate for Virtual network gateway.
+         * 
+         */
     private final @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates;
-    /**
-     * VpnClientRootCertificate for virtual network gateway.
-     * 
-     */
+        /**
+         * @return VpnClientRootCertificate for virtual network gateway.
+         * 
+         */
     private final @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates;
 
     @CustomType.Constructor
@@ -107,86 +107,86 @@ public final class VpnClientConfigurationResponse {
     }
 
     /**
-     * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+     * @return The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
-    */
+     */
     public Optional<String> aadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
     /**
-     * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+     * @return The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
-    */
+     */
     public Optional<String> aadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
     /**
-     * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+     * @return The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
-    */
+     */
     public Optional<String> aadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
     /**
-     * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
+     * @return The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
      * 
-    */
+     */
     public Optional<String> radiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
     /**
-     * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
+     * @return The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
      * 
-    */
+     */
     public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
-     * The radiusServers property for multiple radius server configuration.
+     * @return The radiusServers property for multiple radius server configuration.
      * 
-    */
+     */
     public List<RadiusServerResponse> radiusServers() {
         return this.radiusServers == null ? List.of() : this.radiusServers;
     }
     /**
-     * VPN authentication types for the virtual network gateway..
+     * @return VPN authentication types for the virtual network gateway..
      * 
-    */
+     */
     public List<String> vpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes == null ? List.of() : this.vpnAuthenticationTypes;
     }
     /**
-     * The reference to the address space resource which represents Address space for P2S VpnClient.
+     * @return The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> vpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
     /**
-     * VpnClientIpsecPolicies for virtual network gateway P2S client.
+     * @return VpnClientIpsecPolicies for virtual network gateway P2S client.
      * 
-    */
+     */
     public List<IpsecPolicyResponse> vpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? List.of() : this.vpnClientIpsecPolicies;
     }
     /**
-     * VpnClientProtocols for Virtual network gateway.
+     * @return VpnClientProtocols for Virtual network gateway.
      * 
-    */
+     */
     public List<String> vpnClientProtocols() {
         return this.vpnClientProtocols == null ? List.of() : this.vpnClientProtocols;
     }
     /**
-     * VpnClientRevokedCertificate for Virtual network gateway.
+     * @return VpnClientRevokedCertificate for Virtual network gateway.
      * 
-    */
+     */
     public List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates == null ? List.of() : this.vpnClientRevokedCertificates;
     }
     /**
-     * VpnClientRootCertificate for virtual network gateway.
+     * @return VpnClientRootCertificate for virtual network gateway.
      * 
-    */
+     */
     public List<VpnClientRootCertificateResponse> vpnClientRootCertificates() {
         return this.vpnClientRootCertificates == null ? List.of() : this.vpnClientRootCertificates;
     }

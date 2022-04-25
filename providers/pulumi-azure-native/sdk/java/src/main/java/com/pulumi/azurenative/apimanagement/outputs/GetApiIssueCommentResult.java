@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiIssueCommentResult {
-    /**
-     * Date and time when the comment was created.
-     * 
-     */
+        /**
+         * @return Date and time when the comment was created.
+         * 
+         */
     private final @Nullable String createdDate;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Comment text.
-     * 
-     */
+        /**
+         * @return Comment text.
+         * 
+         */
     private final String text;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
-    /**
-     * A resource identifier for the user who left the comment.
-     * 
-     */
+        /**
+         * @return A resource identifier for the user who left the comment.
+         * 
+         */
     private final String userId;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetApiIssueCommentResult {
     }
 
     /**
-     * Date and time when the comment was created.
+     * @return Date and time when the comment was created.
      * 
-    */
+     */
     public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Comment text.
+     * @return Comment text.
      * 
-    */
+     */
     public String text() {
         return this.text;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A resource identifier for the user who left the comment.
+     * @return A resource identifier for the user who left the comment.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

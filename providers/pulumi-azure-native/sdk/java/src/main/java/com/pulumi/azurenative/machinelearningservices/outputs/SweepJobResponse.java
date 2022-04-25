@@ -25,109 +25,109 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SweepJobResponse {
-    /**
-     * Type of the hyperparameter sampling algorithms
-     * 
-     */
+        /**
+         * @return Type of the hyperparameter sampling algorithms
+         * 
+         */
     private final String algorithm;
-    /**
-     * Compute binding for the job.
-     * 
-     */
+        /**
+         * @return Compute binding for the job.
+         * 
+         */
     private final ComputeConfigurationResponse compute;
-    /**
-     * The asset description text.
-     * 
-     */
+        /**
+         * @return The asset description text.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Early termination policies enable canceling poor-performing runs before they complete.
-     * 
-     */
+        /**
+         * @return Early termination policies enable canceling poor-performing runs before they complete.
+         * 
+         */
     private final @Nullable Object earlyTermination;
-    /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
-     * 
-     */
+        /**
+         * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+         * 
+         */
     private final @Nullable String experimentName;
-    /**
-     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
-     * Defaults to AmlToken if null.
-     * 
-     */
+        /**
+         * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+         * Defaults to AmlToken if null.
+         * 
+         */
     private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
-    /**
-     * List of JobEndpoints.
-     * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
-     * 
-     */
+        /**
+         * @return List of JobEndpoints.
+         * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+         * 
+         */
     private final Map<String,JobEndpointResponse> interactionEndpoints;
-    /**
-     * Enum to determine the type of job.
-     * Expected value is &#39;Sweep&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine the type of job.
+         * Expected value is &#39;Sweep&#39;.
+         * 
+         */
     private final String jobType;
-    /**
-     * An upper bound on the number of trials performed in parallel.
-     * 
-     */
+        /**
+         * @return An upper bound on the number of trials performed in parallel.
+         * 
+         */
     private final @Nullable Integer maxConcurrentTrials;
-    /**
-     * An upper bound on the number of trials to perform.
-     * 
-     */
+        /**
+         * @return An upper bound on the number of trials to perform.
+         * 
+         */
     private final @Nullable Integer maxTotalTrials;
-    /**
-     * Optimization objective.
-     * 
-     */
+        /**
+         * @return Optimization objective.
+         * 
+         */
     private final ObjectiveResponse objective;
-    /**
-     * Location of the job output logs and artifacts.
-     * 
-     */
+        /**
+         * @return Location of the job output logs and artifacts.
+         * 
+         */
     private final JobOutputResponse output;
-    /**
-     * Job priority for scheduling policy. Only applies to AMLCompute.
-     * Private preview feature and only available to users on the allow list.
-     * 
-     */
+        /**
+         * @return Job priority for scheduling policy. Only applies to AMLCompute.
+         * Private preview feature and only available to users on the allow list.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * The asset property dictionary.
-     * 
-     */
+        /**
+         * @return The asset property dictionary.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Specifies the job provisioning state.
-     * 
-     */
+        /**
+         * @return Specifies the job provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
-     * 
-     */
+        /**
+         * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+         * 
+         */
     private final Map<String,Object> searchSpace;
-    /**
-     * The status of a job.
-     * 
-     */
+        /**
+         * @return The status of a job.
+         * 
+         */
     private final String status;
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     * 
-     */
+        /**
+         * @return Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
-     * 
-     */
+        /**
+         * @return The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+         * 
+         */
     private final @Nullable String timeout;
-    /**
-     * Trial component definition.
-     * 
-     */
+        /**
+         * @return Trial component definition.
+         * 
+         */
     private final @Nullable TrialComponentResponse trial;
 
     @CustomType.Constructor
@@ -175,146 +175,146 @@ public final class SweepJobResponse {
     }
 
     /**
-     * Type of the hyperparameter sampling algorithms
+     * @return Type of the hyperparameter sampling algorithms
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * Compute binding for the job.
+     * @return Compute binding for the job.
      * 
-    */
+     */
     public ComputeConfigurationResponse compute() {
         return this.compute;
     }
     /**
-     * The asset description text.
+     * @return The asset description text.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Early termination policies enable canceling poor-performing runs before they complete.
+     * @return Early termination policies enable canceling poor-performing runs before they complete.
      * 
-    */
+     */
     public Optional<Object> earlyTermination() {
         return Optional.ofNullable(this.earlyTermination);
     }
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+     * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
-    */
+     */
     public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
     /**
-     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
+     * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity or null.
      * Defaults to AmlToken if null.
      * 
-    */
+     */
     public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * List of JobEndpoints.
+     * @return List of JobEndpoints.
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
      * 
-    */
+     */
     public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
     /**
-     * Enum to determine the type of job.
+     * @return Enum to determine the type of job.
      * Expected value is &#39;Sweep&#39;.
      * 
-    */
+     */
     public String jobType() {
         return this.jobType;
     }
     /**
-     * An upper bound on the number of trials performed in parallel.
+     * @return An upper bound on the number of trials performed in parallel.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentTrials() {
         return Optional.ofNullable(this.maxConcurrentTrials);
     }
     /**
-     * An upper bound on the number of trials to perform.
+     * @return An upper bound on the number of trials to perform.
      * 
-    */
+     */
     public Optional<Integer> maxTotalTrials() {
         return Optional.ofNullable(this.maxTotalTrials);
     }
     /**
-     * Optimization objective.
+     * @return Optimization objective.
      * 
-    */
+     */
     public ObjectiveResponse objective() {
         return this.objective;
     }
     /**
-     * Location of the job output logs and artifacts.
+     * @return Location of the job output logs and artifacts.
      * 
-    */
+     */
     public JobOutputResponse output() {
         return this.output;
     }
     /**
-     * Job priority for scheduling policy. Only applies to AMLCompute.
+     * @return Job priority for scheduling policy. Only applies to AMLCompute.
      * Private preview feature and only available to users on the allow list.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The asset property dictionary.
+     * @return The asset property dictionary.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Specifies the job provisioning state.
+     * @return Specifies the job provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
+     * @return A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
-    */
+     */
     public Map<String,Object> searchSpace() {
         return this.searchSpace;
     }
     /**
-     * The status of a job.
+     * @return The status of a job.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Tag dictionary. Tags can be added, removed, and updated.
+     * @return Tag dictionary. Tags can be added, removed, and updated.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
+     * @return The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Trial component definition.
+     * @return Trial component definition.
      * 
-    */
+     */
     public Optional<TrialComponentResponse> trial() {
         return Optional.ofNullable(this.trial);
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SetValueResponse {
-    /**
-     * Flag to indicate whether the value represents a secret or not.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether the value represents a secret or not.
+         * 
+         */
     private final @Nullable Boolean isSecret;
-    /**
-     * The name of the overridable value.
-     * 
-     */
+        /**
+         * @return The name of the overridable value.
+         * 
+         */
     private final String name;
-    /**
-     * The overridable value.
-     * 
-     */
+        /**
+         * @return The overridable value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class SetValueResponse {
     }
 
     /**
-     * Flag to indicate whether the value represents a secret or not.
+     * @return Flag to indicate whether the value represents a secret or not.
      * 
-    */
+     */
     public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
-     * The name of the overridable value.
+     * @return The name of the overridable value.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The overridable value.
+     * @return The overridable value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

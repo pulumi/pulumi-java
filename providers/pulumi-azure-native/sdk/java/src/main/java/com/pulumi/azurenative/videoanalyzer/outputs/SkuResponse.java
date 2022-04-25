@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The SKU name.
-     * 
-     */
+        /**
+         * @return The SKU name.
+         * 
+         */
     private final String name;
-    /**
-     * The SKU tier.
-     * 
-     */
+        /**
+         * @return The SKU tier.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The SKU name.
+     * @return The SKU name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The SKU tier.
+     * @return The SKU tier.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

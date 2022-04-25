@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIPv6FirewallRuleResult {
-    /**
-     * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
-     * 
-     */
+        /**
+         * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
+         * 
+         */
     private final @Nullable String endIPv6Address;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The start IP address of the firewall rule. Must be IPv6 format.
-     * 
-     */
+        /**
+         * @return The start IP address of the firewall rule. Must be IPv6 format.
+         * 
+         */
     private final @Nullable String startIPv6Address;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetIPv6FirewallRuleResult {
     }
 
     /**
-     * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
+     * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
      * 
-    */
+     */
     public Optional<String> endIPv6Address() {
         return Optional.ofNullable(this.endIPv6Address);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The start IP address of the firewall rule. Must be IPv6 format.
+     * @return The start IP address of the firewall rule. Must be IPv6 format.
      * 
-    */
+     */
     public Optional<String> startIPv6Address() {
         return Optional.ofNullable(this.startIPv6Address);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

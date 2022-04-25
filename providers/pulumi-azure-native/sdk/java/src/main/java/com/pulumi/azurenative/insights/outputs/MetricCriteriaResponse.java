@@ -15,51 +15,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MetricCriteriaResponse {
-    /**
-     * Specifies the type of threshold criteria
-     * Expected value is &#39;StaticThresholdCriterion&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the type of threshold criteria
+         * Expected value is &#39;StaticThresholdCriterion&#39;.
+         * 
+         */
     private final String criterionType;
-    /**
-     * List of dimension conditions.
-     * 
-     */
+        /**
+         * @return List of dimension conditions.
+         * 
+         */
     private final @Nullable List<MetricDimensionResponse> dimensions;
-    /**
-     * Name of the metric.
-     * 
-     */
+        /**
+         * @return Name of the metric.
+         * 
+         */
     private final String metricName;
-    /**
-     * Namespace of the metric.
-     * 
-     */
+        /**
+         * @return Namespace of the metric.
+         * 
+         */
     private final @Nullable String metricNamespace;
-    /**
-     * Name of the criteria.
-     * 
-     */
+        /**
+         * @return Name of the criteria.
+         * 
+         */
     private final String name;
-    /**
-     * the criteria operator.
-     * 
-     */
+        /**
+         * @return the criteria operator.
+         * 
+         */
     private final String operator;
-    /**
-     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
-     * 
-     */
+        /**
+         * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+         * 
+         */
     private final @Nullable Boolean skipMetricValidation;
-    /**
-     * the criteria threshold value that activates the alert.
-     * 
-     */
+        /**
+         * @return the criteria threshold value that activates the alert.
+         * 
+         */
     private final Double threshold;
-    /**
-     * the criteria time aggregation types.
-     * 
-     */
+        /**
+         * @return the criteria time aggregation types.
+         * 
+         */
     private final String timeAggregation;
 
     @CustomType.Constructor
@@ -85,66 +85,66 @@ public final class MetricCriteriaResponse {
     }
 
     /**
-     * Specifies the type of threshold criteria
+     * @return Specifies the type of threshold criteria
      * Expected value is &#39;StaticThresholdCriterion&#39;.
      * 
-    */
+     */
     public String criterionType() {
         return this.criterionType;
     }
     /**
-     * List of dimension conditions.
+     * @return List of dimension conditions.
      * 
-    */
+     */
     public List<MetricDimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
-     * Name of the metric.
+     * @return Name of the metric.
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }
     /**
-     * Namespace of the metric.
+     * @return Namespace of the metric.
      * 
-    */
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
-     * Name of the criteria.
+     * @return Name of the criteria.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the criteria operator.
+     * @return the criteria operator.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
+     * @return Allows creating an alert rule on a custom metric that isn&#39;t yet emitted, by causing the metric validation to be skipped.
      * 
-    */
+     */
     public Optional<Boolean> skipMetricValidation() {
         return Optional.ofNullable(this.skipMetricValidation);
     }
     /**
-     * the criteria threshold value that activates the alert.
+     * @return the criteria threshold value that activates the alert.
      * 
-    */
+     */
     public Double threshold() {
         return this.threshold;
     }
     /**
-     * the criteria time aggregation types.
+     * @return the criteria time aggregation types.
      * 
-    */
+     */
     public String timeAggregation() {
         return this.timeAggregation;
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReferenceVmResponse {
-    /**
-     * The password of the virtual machine. This will be set to null in GET resource API
-     * 
-     */
+        /**
+         * @return The password of the virtual machine. This will be set to null in GET resource API
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The username of the virtual machine
-     * 
-     */
+        /**
+         * @return The username of the virtual machine
+         * 
+         */
     private final String userName;
-    /**
-     * VM resource Id for the environment
-     * 
-     */
+        /**
+         * @return VM resource Id for the environment
+         * 
+         */
     private final String vmResourceId;
-    /**
-     * The state details for the reference virtual machine.
-     * 
-     */
+        /**
+         * @return The state details for the reference virtual machine.
+         * 
+         */
     private final VmStateDetailsResponse vmStateDetails;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ReferenceVmResponse {
     }
 
     /**
-     * The password of the virtual machine. This will be set to null in GET resource API
+     * @return The password of the virtual machine. This will be set to null in GET resource API
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The username of the virtual machine
+     * @return The username of the virtual machine
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }
     /**
-     * VM resource Id for the environment
+     * @return VM resource Id for the environment
      * 
-    */
+     */
     public String vmResourceId() {
         return this.vmResourceId;
     }
     /**
-     * The state details for the reference virtual machine.
+     * @return The state details for the reference virtual machine.
      * 
-    */
+     */
     public VmStateDetailsResponse vmStateDetails() {
         return this.vmStateDetails;
     }

@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
-    /**
-     * The private link resource group ids.
-     * 
-     */
+        /**
+         * @return The private link resource group ids.
+         * 
+         */
     private final @Nullable List<String> groupIds;
-    /**
-     * The resource of private end point.
-     * 
-     */
+        /**
+         * @return The resource of private end point.
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     * 
-     */
+        /**
+         * @return A collection of information about the state of the connection between service consumer and provider.
+         * 
+         */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     }
 
     /**
-     * The private link resource group ids.
+     * @return The private link resource group ids.
      * 
-    */
+     */
     public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
-    */
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }

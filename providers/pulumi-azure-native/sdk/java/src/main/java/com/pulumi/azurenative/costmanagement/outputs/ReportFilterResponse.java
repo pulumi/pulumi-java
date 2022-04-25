@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportFilterResponse {
-    /**
-     * The logical &#34;AND&#34; expression. Must have at least 2 items.
-     * 
-     */
+        /**
+         * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         */
     private final @Nullable List<ReportFilterResponse> and;
-    /**
-     * Has comparison expression for a dimension
-     * 
-     */
+        /**
+         * @return Has comparison expression for a dimension
+         * 
+         */
     private final @Nullable ReportComparisonExpressionResponse dimension;
-    /**
-     * The logical &#34;NOT&#34; expression.
-     * 
-     */
+        /**
+         * @return The logical &#34;NOT&#34; expression.
+         * 
+         */
     private final @Nullable ReportFilterResponse not;
-    /**
-     * The logical &#34;OR&#34; expression. Must have at least 2 items.
-     * 
-     */
+        /**
+         * @return The logical &#34;OR&#34; expression. Must have at least 2 items.
+         * 
+         */
     private final @Nullable List<ReportFilterResponse> or;
-    /**
-     * Has comparison expression for a tag
-     * 
-     */
+        /**
+         * @return Has comparison expression for a tag
+         * 
+         */
     private final @Nullable ReportComparisonExpressionResponse tag;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ReportFilterResponse {
     }
 
     /**
-     * The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
-    */
+     */
     public List<ReportFilterResponse> and() {
         return this.and == null ? List.of() : this.and;
     }
     /**
-     * Has comparison expression for a dimension
+     * @return Has comparison expression for a dimension
      * 
-    */
+     */
     public Optional<ReportComparisonExpressionResponse> dimension() {
         return Optional.ofNullable(this.dimension);
     }
     /**
-     * The logical &#34;NOT&#34; expression.
+     * @return The logical &#34;NOT&#34; expression.
      * 
-    */
+     */
     public Optional<ReportFilterResponse> not() {
         return Optional.ofNullable(this.not);
     }
     /**
-     * The logical &#34;OR&#34; expression. Must have at least 2 items.
+     * @return The logical &#34;OR&#34; expression. Must have at least 2 items.
      * 
-    */
+     */
     public List<ReportFilterResponse> or() {
         return this.or == null ? List.of() : this.or;
     }
     /**
-     * Has comparison expression for a tag
+     * @return Has comparison expression for a tag
      * 
-    */
+     */
     public Optional<ReportComparisonExpressionResponse> tag() {
         return Optional.ofNullable(this.tag);
     }

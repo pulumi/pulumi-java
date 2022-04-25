@@ -27,6 +27,10 @@ public final class DisallowedArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskTypes")
     private @Nullable Output<List<String>> diskTypes;
 
+    /**
+     * @return A list of disk types.
+     * 
+     */
     public Optional<Output<List<String>>> diskTypes() {
         return Optional.ofNullable(this.diskTypes);
     }
@@ -55,15 +59,33 @@ public final class DisallowedArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DisallowedArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskTypes A list of disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskTypes(@Nullable Output<List<String>> diskTypes) {
             $.diskTypes = diskTypes;
             return this;
         }
 
+        /**
+         * @param diskTypes A list of disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskTypes(List<String> diskTypes) {
             return diskTypes(Output.of(diskTypes));
         }
 
+        /**
+         * @param diskTypes A list of disk types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskTypes(String... diskTypes) {
             return diskTypes(List.of(diskTypes));
         }

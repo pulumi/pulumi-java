@@ -17,61 +17,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFunctionActivityResponse {
-    /**
-     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object body;
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
-     * 
-     */
+        /**
+         * @return Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+         * 
+         */
     private final Object functionName;
-    /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object headers;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Rest API method for target endpoint.
-     * 
-     */
+        /**
+         * @return Rest API method for target endpoint.
+         * 
+         */
     private final String method;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * Type of activity.
-     * Expected value is &#39;AzureFunctionActivity&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;AzureFunctionActivity&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -101,80 +101,80 @@ public final class AzureFunctionActivityResponse {
     }
 
     /**
-     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+     * @return Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Object functionName() {
         return this.functionName;
     }
     /**
-     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+     * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> headers() {
         return Optional.ofNullable(this.headers);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Rest API method for target endpoint.
+     * @return Rest API method for target endpoint.
      * 
-    */
+     */
     public String method() {
         return this.method;
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;AzureFunctionActivity&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

@@ -25,6 +25,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="error")
     private @Nullable CloudErrorBodyResponse error;
 
+    /**
+     * @return Details about the error.
+     * 
+     */
     public Optional<CloudErrorBodyResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -53,6 +57,12 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CloudErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Details about the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable CloudErrorBodyResponse error) {
             $.error = error;
             return this;

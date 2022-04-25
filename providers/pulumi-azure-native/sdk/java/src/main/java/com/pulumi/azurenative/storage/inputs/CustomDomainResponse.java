@@ -26,6 +26,10 @@ public final class CustomDomainResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class CustomDomainResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="useSubDomainName")
     private @Nullable Boolean useSubDomainName;
 
+    /**
+     * @return Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
+     * 
+     */
     public Optional<Boolean> useSubDomainName() {
         return Optional.ofNullable(this.useSubDomainName);
     }
@@ -66,11 +74,23 @@ public final class CustomDomainResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CustomDomainResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param useSubDomainName Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
             $.useSubDomainName = useSubDomainName;
             return this;

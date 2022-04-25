@@ -13,64 +13,64 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetKeyValueResult {
-    /**
-     * The content type of the key-value&#39;s value.
-     * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
-     * 
-     */
+        /**
+         * @return The content type of the key-value&#39;s value.
+         * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
+         * 
+         */
     private final @Nullable String contentType;
-    /**
-     * An ETag indicating the state of a key-value within a configuration store.
-     * 
-     */
+        /**
+         * @return An ETag indicating the state of a key-value within a configuration store.
+         * 
+         */
     private final String eTag;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The primary identifier of a key-value.
-     * The key is used in unison with the label to uniquely identify a key-value.
-     * 
-     */
+        /**
+         * @return The primary identifier of a key-value.
+         * The key is used in unison with the label to uniquely identify a key-value.
+         * 
+         */
     private final String key;
-    /**
-     * A value used to group key-values.
-     * The label is used in unison with the key to uniquely identify a key-value.
-     * 
-     */
+        /**
+         * @return A value used to group key-values.
+         * The label is used in unison with the key to uniquely identify a key-value.
+         * 
+         */
     private final String label;
-    /**
-     * The last time a modifying operation was performed on the given key-value.
-     * 
-     */
+        /**
+         * @return The last time a modifying operation was performed on the given key-value.
+         * 
+         */
     private final String lastModified;
-    /**
-     * A value indicating whether the key-value is locked.
-     * A locked key-value may not be modified until it is unlocked.
-     * 
-     */
+        /**
+         * @return A value indicating whether the key-value is locked.
+         * A locked key-value may not be modified until it is unlocked.
+         * 
+         */
     private final Boolean locked;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * A dictionary of tags that can help identify what a key-value may be applicable for.
-     * 
-     */
+        /**
+         * @return A dictionary of tags that can help identify what a key-value may be applicable for.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The value of the key-value.
-     * 
-     */
+        /**
+         * @return The value of the key-value.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -100,83 +100,83 @@ public final class GetKeyValueResult {
     }
 
     /**
-     * The content type of the key-value&#39;s value.
+     * @return The content type of the key-value&#39;s value.
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * An ETag indicating the state of a key-value within a configuration store.
+     * @return An ETag indicating the state of a key-value within a configuration store.
      * 
-    */
+     */
     public String eTag() {
         return this.eTag;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The primary identifier of a key-value.
+     * @return The primary identifier of a key-value.
      * The key is used in unison with the label to uniquely identify a key-value.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * A value used to group key-values.
+     * @return A value used to group key-values.
      * The label is used in unison with the key to uniquely identify a key-value.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * The last time a modifying operation was performed on the given key-value.
+     * @return The last time a modifying operation was performed on the given key-value.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * A value indicating whether the key-value is locked.
+     * @return A value indicating whether the key-value is locked.
      * A locked key-value may not be modified until it is unlocked.
      * 
-    */
+     */
     public Boolean locked() {
         return this.locked;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A dictionary of tags that can help identify what a key-value may be applicable for.
+     * @return A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The value of the key-value.
+     * @return The value of the key-value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

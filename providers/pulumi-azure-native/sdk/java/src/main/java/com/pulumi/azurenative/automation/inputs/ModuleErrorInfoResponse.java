@@ -25,6 +25,10 @@ public final class ModuleErrorInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Gets or sets the error code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class ModuleErrorInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Gets or sets the error message.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -65,11 +73,23 @@ public final class ModuleErrorInfoResponse extends com.pulumi.resources.InvokeAr
             $ = new ModuleErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Gets or sets the error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Gets or sets the error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

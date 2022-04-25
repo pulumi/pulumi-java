@@ -26,6 +26,10 @@ public final class PrincipalsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return Object Id for the user
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -37,6 +41,10 @@ public final class PrincipalsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="upn")
     private @Nullable Output<String> upn;
 
+    /**
+     * @return UPN of the user.
+     * 
+     */
     public Optional<Output<String>> upn() {
         return Optional.ofNullable(this.upn);
     }
@@ -66,20 +74,44 @@ public final class PrincipalsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PrincipalsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId Object Id for the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId Object Id for the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param upn UPN of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upn(@Nullable Output<String> upn) {
             $.upn = upn;
             return this;
         }
 
+        /**
+         * @param upn UPN of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upn(String upn) {
             return upn(Output.of(upn));
         }

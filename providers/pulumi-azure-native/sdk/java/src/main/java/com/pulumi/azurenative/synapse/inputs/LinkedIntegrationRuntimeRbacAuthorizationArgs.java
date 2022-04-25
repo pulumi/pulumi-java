@@ -26,6 +26,11 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
     @Import(name="authorizationType", required=true)
     private Output<String> authorizationType;
 
+    /**
+     * @return The authorization type for integration runtime sharing.
+     * Expected value is &#39;RBAC&#39;.
+     * 
+     */
     public Output<String> authorizationType() {
         return this.authorizationType;
     }
@@ -37,6 +42,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The resource identifier of the integration runtime to be shared.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -66,20 +75,46 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
             $ = new LinkedIntegrationRuntimeRbacAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationType The authorization type for integration runtime sharing.
+         * Expected value is &#39;RBAC&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(Output<String> authorizationType) {
             $.authorizationType = authorizationType;
             return this;
         }
 
+        /**
+         * @param authorizationType The authorization type for integration runtime sharing.
+         * Expected value is &#39;RBAC&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationType(String authorizationType) {
             return authorizationType(Output.of(authorizationType));
         }
 
+        /**
+         * @param resourceId The resource identifier of the integration runtime to be shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource identifier of the integration runtime to be shared.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

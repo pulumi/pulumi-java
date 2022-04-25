@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiTagDescriptionResult {
-    /**
-     * Description of the Tag.
-     * 
-     */
+        /**
+         * @return Description of the Tag.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Tag name.
-     * 
-     */
+        /**
+         * @return Tag name.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Description of the external resources describing the tag.
-     * 
-     */
+        /**
+         * @return Description of the external resources describing the tag.
+         * 
+         */
     private final @Nullable String externalDocsDescription;
-    /**
-     * Absolute URL of external resources describing the tag.
-     * 
-     */
+        /**
+         * @return Absolute URL of external resources describing the tag.
+         * 
+         */
     private final @Nullable String externalDocsUrl;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Identifier of the tag in the form of /tags/{tagId}
-     * 
-     */
+        /**
+         * @return Identifier of the tag in the form of /tags/{tagId}
+         * 
+         */
     private final @Nullable String tagId;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetApiTagDescriptionResult {
     }
 
     /**
-     * Description of the Tag.
+     * @return Description of the Tag.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Tag name.
+     * @return Tag name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Description of the external resources describing the tag.
+     * @return Description of the external resources describing the tag.
      * 
-    */
+     */
     public Optional<String> externalDocsDescription() {
         return Optional.ofNullable(this.externalDocsDescription);
     }
     /**
-     * Absolute URL of external resources describing the tag.
+     * @return Absolute URL of external resources describing the tag.
      * 
-    */
+     */
     public Optional<String> externalDocsUrl() {
         return Optional.ofNullable(this.externalDocsUrl);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Identifier of the tag in the form of /tags/{tagId}
+     * @return Identifier of the tag in the form of /tags/{tagId}
      * 
-    */
+     */
     public Optional<String> tagId() {
         return Optional.ofNullable(this.tagId);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

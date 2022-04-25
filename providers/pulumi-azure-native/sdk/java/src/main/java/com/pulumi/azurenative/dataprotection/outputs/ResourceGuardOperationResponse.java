@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceGuardOperationResponse {
-    /**
-     * Type of resource request.
-     * 
-     */
+        /**
+         * @return Type of resource request.
+         * 
+         */
     private final String requestResourceType;
-    /**
-     * Name of the critical operation.
-     * 
-     */
+        /**
+         * @return Name of the critical operation.
+         * 
+         */
     private final String vaultCriticalOperation;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ResourceGuardOperationResponse {
     }
 
     /**
-     * Type of resource request.
+     * @return Type of resource request.
      * 
-    */
+     */
     public String requestResourceType() {
         return this.requestResourceType;
     }
     /**
-     * Name of the critical operation.
+     * @return Name of the critical operation.
      * 
-    */
+     */
     public String vaultCriticalOperation() {
         return this.vaultCriticalOperation;
     }

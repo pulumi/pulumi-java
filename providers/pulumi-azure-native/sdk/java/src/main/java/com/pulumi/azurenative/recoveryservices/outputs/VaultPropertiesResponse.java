@@ -15,35 +15,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VaultPropertiesResponse {
-    /**
-     * Customer Managed Key details of the resource.
-     * 
-     */
+        /**
+         * @return Customer Managed Key details of the resource.
+         * 
+         */
     private final @Nullable VaultPropertiesResponseEncryption encryption;
-    /**
-     * List of private endpoint connection.
-     * 
-     */
+        /**
+         * @return List of private endpoint connection.
+         * 
+         */
     private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
-    /**
-     * Private endpoint state for backup.
-     * 
-     */
+        /**
+         * @return Private endpoint state for backup.
+         * 
+         */
     private final String privateEndpointStateForBackup;
-    /**
-     * Private endpoint state for site recovery.
-     * 
-     */
+        /**
+         * @return Private endpoint state for site recovery.
+         * 
+         */
     private final String privateEndpointStateForSiteRecovery;
-    /**
-     * Provisioning State.
-     * 
-     */
+        /**
+         * @return Provisioning State.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Details for upgrading vault.
-     * 
-     */
+        /**
+         * @return Details for upgrading vault.
+         * 
+         */
     private final @Nullable UpgradeDetailsResponse upgradeDetails;
 
     @CustomType.Constructor
@@ -63,44 +63,44 @@ public final class VaultPropertiesResponse {
     }
 
     /**
-     * Customer Managed Key details of the resource.
+     * @return Customer Managed Key details of the resource.
      * 
-    */
+     */
     public Optional<VaultPropertiesResponseEncryption> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * List of private endpoint connection.
+     * @return List of private endpoint connection.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Private endpoint state for backup.
+     * @return Private endpoint state for backup.
      * 
-    */
+     */
     public String privateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
     }
     /**
-     * Private endpoint state for site recovery.
+     * @return Private endpoint state for site recovery.
      * 
-    */
+     */
     public String privateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
     }
     /**
-     * Provisioning State.
+     * @return Provisioning State.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Details for upgrading vault.
+     * @return Details for upgrading vault.
      * 
-    */
+     */
     public Optional<UpgradeDetailsResponse> upgradeDetails() {
         return Optional.ofNullable(this.upgradeDetails);
     }

@@ -14,26 +14,26 @@ import java.util.Objects;
 
 @CustomType
 public final class EncoderProcessorResponse {
-    /**
-     * An array of upstream node references within the topology to be used as inputs for this node.
-     * 
-     */
+        /**
+         * @return An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         */
     private final List<NodeInputResponse> inputs;
-    /**
-     * Node name. Must be unique within the topology.
-     * 
-     */
+        /**
+         * @return Node name. Must be unique within the topology.
+         * 
+         */
     private final String name;
-    /**
-     * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
-     * 
-     */
+        /**
+         * @return The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+         * 
+         */
     private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -49,31 +49,31 @@ public final class EncoderProcessorResponse {
     }
 
     /**
-     * An array of upstream node references within the topology to be used as inputs for this node.
+     * @return An array of upstream node references within the topology to be used as inputs for this node.
      * 
-    */
+     */
     public List<NodeInputResponse> inputs() {
         return this.inputs;
     }
     /**
-     * Node name. Must be unique within the topology.
+     * @return Node name. Must be unique within the topology.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
+     * @return The encoder preset, which defines the recipe or instructions on how the input content should be processed.
      * 
-    */
+     */
     public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset() {
         return this.preset;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderProcessor&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

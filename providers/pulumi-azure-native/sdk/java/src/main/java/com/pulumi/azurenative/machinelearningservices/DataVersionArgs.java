@@ -22,6 +22,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Container name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
 
+    /**
+     * @return Additional attributes of the entity.
+     * 
+     */
     public Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties() {
         return this.properties;
     }
@@ -44,6 +52,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version identifier.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -66,6 +82,10 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -98,47 +118,107 @@ public final class DataVersionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional attributes of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(com.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param version Version identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

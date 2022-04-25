@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectToTargetSqlMITaskOutputResponse {
-    /**
-     * List of agent jobs on the target server.
-     * 
-     */
+        /**
+         * @return List of agent jobs on the target server.
+         * 
+         */
     private final List<String> agentJobs;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * List of logins on the target server.
-     * 
-     */
+        /**
+         * @return List of logins on the target server.
+         * 
+         */
     private final List<String> logins;
-    /**
-     * Target server brand version
-     * 
-     */
+        /**
+         * @return Target server brand version
+         * 
+         */
     private final String targetServerBrandVersion;
-    /**
-     * Target server version
-     * 
-     */
+        /**
+         * @return Target server version
+         * 
+         */
     private final String targetServerVersion;
-    /**
-     * Validation errors
-     * 
-     */
+        /**
+         * @return Validation errors
+         * 
+         */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
     }
 
     /**
-     * List of agent jobs on the target server.
+     * @return List of agent jobs on the target server.
      * 
-    */
+     */
     public List<String> agentJobs() {
         return this.agentJobs;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of logins on the target server.
+     * @return List of logins on the target server.
      * 
-    */
+     */
     public List<String> logins() {
         return this.logins;
     }
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Target server version
+     * @return Target server version
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
     /**
-     * Validation errors
+     * @return Validation errors
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

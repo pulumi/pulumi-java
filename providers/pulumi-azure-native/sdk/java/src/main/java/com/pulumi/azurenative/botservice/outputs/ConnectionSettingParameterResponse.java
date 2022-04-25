@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionSettingParameterResponse {
-    /**
-     * Key for the Connection Setting Parameter.
-     * 
-     */
+        /**
+         * @return Key for the Connection Setting Parameter.
+         * 
+         */
     private final @Nullable String key;
-    /**
-     * Value associated with the Connection Setting Parameter.
-     * 
-     */
+        /**
+         * @return Value associated with the Connection Setting Parameter.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ConnectionSettingParameterResponse {
     }
 
     /**
-     * Key for the Connection Setting Parameter.
+     * @return Key for the Connection Setting Parameter.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * Value associated with the Connection Setting Parameter.
+     * @return Value associated with the Connection Setting Parameter.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -19,95 +19,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetExtensionResult {
-    /**
-     * Flag to note if this instance participates in auto upgrade of minor version, or not.
-     * 
-     */
+        /**
+         * @return Flag to note if this instance participates in auto upgrade of minor version, or not.
+         * 
+         */
     private final @Nullable Boolean autoUpgradeMinorVersion;
-    /**
-     * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
-     * 
-     */
+        /**
+         * @return Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
+         * 
+         */
     private final @Nullable Map<String,String> configurationProtectedSettings;
-    /**
-     * Configuration settings, as name-value pairs for configuring this instance of the extension.
-     * 
-     */
+        /**
+         * @return Configuration settings, as name-value pairs for configuring this instance of the extension.
+         * 
+         */
     private final @Nullable Map<String,String> configurationSettings;
-    /**
-     * DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
-     * 
-     */
+        /**
+         * @return DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
+         * 
+         */
     private final String creationTime;
-    /**
-     * Error information from the Agent - e.g. errors during installation.
-     * 
-     */
+        /**
+         * @return Error information from the Agent - e.g. errors during installation.
+         * 
+         */
     private final ErrorDefinitionResponse errorInfo;
-    /**
-     * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
-     * 
-     */
+        /**
+         * @return Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
+         * 
+         */
     private final @Nullable String extensionType;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the configuration.
-     * 
-     */
+        /**
+         * @return The identity of the configuration.
+         * 
+         */
     private final @Nullable ConfigurationIdentityResponse identity;
-    /**
-     * Status of installation of this instance of the extension.
-     * 
-     */
+        /**
+         * @return Status of installation of this instance of the extension.
+         * 
+         */
     private final String installState;
-    /**
-     * DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
-     * 
-     */
+        /**
+         * @return DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * DateLiteral (per ISO8601) noting the time of last status from the agent.
-     * 
-     */
+        /**
+         * @return DateLiteral (per ISO8601) noting the time of last status from the agent.
+         * 
+         */
     private final String lastStatusTime;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
-     * 
-     */
+        /**
+         * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
+         * 
+         */
     private final @Nullable String releaseTrain;
-    /**
-     * Scope at which the extension instance is installed.
-     * 
-     */
+        /**
+         * @return Scope at which the extension instance is installed.
+         * 
+         */
     private final @Nullable ScopeResponse scope;
-    /**
-     * Status from this instance of the extension.
-     * 
-     */
+        /**
+         * @return Status from this instance of the extension.
+         * 
+         */
     private final @Nullable List<ExtensionStatusResponse> statuses;
-    /**
-     * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
-     */
+        /**
+         * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
+         * 
+         */
     private final @Nullable SystemDataResponse systemData;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
-     * 
-     */
+        /**
+         * @return Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -151,128 +151,128 @@ public final class GetExtensionResult {
     }
 
     /**
-     * Flag to note if this instance participates in auto upgrade of minor version, or not.
+     * @return Flag to note if this instance participates in auto upgrade of minor version, or not.
      * 
-    */
+     */
     public Optional<Boolean> autoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
-     * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
+     * @return Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
      * 
-    */
+     */
     public Map<String,String> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Map.of() : this.configurationProtectedSettings;
     }
     /**
-     * Configuration settings, as name-value pairs for configuring this instance of the extension.
+     * @return Configuration settings, as name-value pairs for configuring this instance of the extension.
      * 
-    */
+     */
     public Map<String,String> configurationSettings() {
         return this.configurationSettings == null ? Map.of() : this.configurationSettings;
     }
     /**
-     * DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
+     * @return DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Error information from the Agent - e.g. errors during installation.
+     * @return Error information from the Agent - e.g. errors during installation.
      * 
-    */
+     */
     public ErrorDefinitionResponse errorInfo() {
         return this.errorInfo;
     }
     /**
-     * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
+     * @return Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
      * 
-    */
+     */
     public Optional<String> extensionType() {
         return Optional.ofNullable(this.extensionType);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the configuration.
+     * @return The identity of the configuration.
      * 
-    */
+     */
     public Optional<ConfigurationIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Status of installation of this instance of the extension.
+     * @return Status of installation of this instance of the extension.
      * 
-    */
+     */
     public String installState() {
         return this.installState;
     }
     /**
-     * DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
+     * @return DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * DateLiteral (per ISO8601) noting the time of last status from the agent.
+     * @return DateLiteral (per ISO8601) noting the time of last status from the agent.
      * 
-    */
+     */
     public String lastStatusTime() {
         return this.lastStatusTime;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
+     * @return ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is &#39;true&#39;.
      * 
-    */
+     */
     public Optional<String> releaseTrain() {
         return Optional.ofNullable(this.releaseTrain);
     }
     /**
-     * Scope at which the extension instance is installed.
+     * @return Scope at which the extension instance is installed.
      * 
-    */
+     */
     public Optional<ScopeResponse> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Status from this instance of the extension.
+     * @return Status from this instance of the extension.
      * 
-    */
+     */
     public List<ExtensionStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
+     * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
-    */
+     */
     public Optional<SystemDataResponse> systemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
+     * @return Version of the extension for this extension instance, if it is &#39;pinned&#39; to a specific version. autoUpgradeMinorVersion must be &#39;false&#39;.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

@@ -28,6 +28,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="includePath")
     private @Nullable Boolean includePath;
 
+    /**
+     * @return Include path in the redirected url.
+     * 
+     */
     public Optional<Boolean> includePath() {
         return Optional.ofNullable(this.includePath);
     }
@@ -61,6 +73,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="includeQueryString")
     private @Nullable Boolean includeQueryString;
 
+    /**
+     * @return Include query string in the redirected url.
+     * 
+     */
     public Optional<Boolean> includeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
@@ -72,6 +88,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the redirect configuration that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="pathRules")
     private @Nullable List<SubResourceResponse> pathRules;
 
+    /**
+     * @return Path rules specifying redirect configuration.
+     * 
+     */
     public Optional<List<SubResourceResponse>> pathRules() {
         return Optional.ofNullable(this.pathRules);
     }
@@ -94,6 +118,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="redirectType")
     private @Nullable String redirectType;
 
+    /**
+     * @return HTTP redirection type.
+     * 
+     */
     public Optional<String> redirectType() {
         return Optional.ofNullable(this.redirectType);
     }
@@ -105,6 +133,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="requestRoutingRules")
     private @Nullable List<SubResourceResponse> requestRoutingRules;
 
+    /**
+     * @return Request routing specifying redirect configuration.
+     * 
+     */
     public Optional<List<SubResourceResponse>> requestRoutingRules() {
         return Optional.ofNullable(this.requestRoutingRules);
     }
@@ -116,6 +148,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="targetListener")
     private @Nullable SubResourceResponse targetListener;
 
+    /**
+     * @return Reference to a listener to redirect the request to.
+     * 
+     */
     public Optional<SubResourceResponse> targetListener() {
         return Optional.ofNullable(this.targetListener);
     }
@@ -127,6 +163,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="targetUrl")
     private @Nullable String targetUrl;
 
+    /**
+     * @return Url to redirect the request to.
+     * 
+     */
     public Optional<String> targetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }
@@ -138,6 +178,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -149,6 +193,10 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
     @Import(name="urlPathMaps")
     private @Nullable List<SubResourceResponse> urlPathMaps;
 
+    /**
+     * @return Url path maps specifying default redirect configuration.
+     * 
+     */
     public Optional<List<SubResourceResponse>> urlPathMaps() {
         return Optional.ofNullable(this.urlPathMaps);
     }
@@ -188,74 +236,164 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends com.p
             $ = new ApplicationGatewayRedirectConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param includePath Include path in the redirected url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePath(@Nullable Boolean includePath) {
             $.includePath = includePath;
             return this;
         }
 
+        /**
+         * @param includeQueryString Include query string in the redirected url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             $.includeQueryString = includeQueryString;
             return this;
         }
 
+        /**
+         * @param name Name of the redirect configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param pathRules Path rules specifying redirect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathRules(@Nullable List<SubResourceResponse> pathRules) {
             $.pathRules = pathRules;
             return this;
         }
 
+        /**
+         * @param pathRules Path rules specifying redirect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathRules(SubResourceResponse... pathRules) {
             return pathRules(List.of(pathRules));
         }
 
+        /**
+         * @param redirectType HTTP redirection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectType(@Nullable String redirectType) {
             $.redirectType = redirectType;
             return this;
         }
 
+        /**
+         * @param requestRoutingRules Request routing specifying redirect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
             $.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
+        /**
+         * @param requestRoutingRules Request routing specifying redirect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestRoutingRules(SubResourceResponse... requestRoutingRules) {
             return requestRoutingRules(List.of(requestRoutingRules));
         }
 
+        /**
+         * @param targetListener Reference to a listener to redirect the request to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetListener(@Nullable SubResourceResponse targetListener) {
             $.targetListener = targetListener;
             return this;
         }
 
+        /**
+         * @param targetUrl Url to redirect the request to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUrl(@Nullable String targetUrl) {
             $.targetUrl = targetUrl;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param urlPathMaps Url path maps specifying default redirect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
             $.urlPathMaps = urlPathMaps;
             return this;
         }
 
+        /**
+         * @param urlPathMaps Url path maps specifying default redirect configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlPathMaps(SubResourceResponse... urlPathMaps) {
             return urlPathMaps(List.of(urlPathMaps));
         }

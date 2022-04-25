@@ -11,50 +11,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureVmDiskDetailsResponse {
-    /**
-     * The DiskEncryptionSet ARM ID.
-     * 
-     */
+        /**
+         * @return The DiskEncryptionSet ARM ID.
+         * 
+         */
     private final @Nullable String diskEncryptionSetId;
-    /**
-     * The disk resource id.
-     * 
-     */
+        /**
+         * @return The disk resource id.
+         * 
+         */
     private final @Nullable String diskId;
-    /**
-     * Ordinal\LunId of the disk for the Azure VM.
-     * 
-     */
+        /**
+         * @return Ordinal\LunId of the disk for the Azure VM.
+         * 
+         */
     private final @Nullable String lunId;
-    /**
-     * Max side in MB.
-     * 
-     */
+        /**
+         * @return Max side in MB.
+         * 
+         */
     private final @Nullable String maxSizeMB;
-    /**
-     * Blob uri of the Azure disk.
-     * 
-     */
+        /**
+         * @return Blob uri of the Azure disk.
+         * 
+         */
     private final @Nullable String targetDiskLocation;
-    /**
-     * The target Azure disk name.
-     * 
-     */
+        /**
+         * @return The target Azure disk name.
+         * 
+         */
     private final @Nullable String targetDiskName;
-    /**
-     * The VHD id.
-     * 
-     */
+        /**
+         * @return The VHD id.
+         * 
+         */
     private final @Nullable String vhdId;
-    /**
-     * VHD name.
-     * 
-     */
+        /**
+         * @return VHD name.
+         * 
+         */
     private final @Nullable String vhdName;
-    /**
-     * VHD type.
-     * 
-     */
+        /**
+         * @return VHD type.
+         * 
+         */
     private final @Nullable String vhdType;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class AzureVmDiskDetailsResponse {
     }
 
     /**
-     * The DiskEncryptionSet ARM ID.
+     * @return The DiskEncryptionSet ARM ID.
      * 
-    */
+     */
     public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
-     * The disk resource id.
+     * @return The disk resource id.
      * 
-    */
+     */
     public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
-     * Ordinal\LunId of the disk for the Azure VM.
+     * @return Ordinal\LunId of the disk for the Azure VM.
      * 
-    */
+     */
     public Optional<String> lunId() {
         return Optional.ofNullable(this.lunId);
     }
     /**
-     * Max side in MB.
+     * @return Max side in MB.
      * 
-    */
+     */
     public Optional<String> maxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
     /**
-     * Blob uri of the Azure disk.
+     * @return Blob uri of the Azure disk.
      * 
-    */
+     */
     public Optional<String> targetDiskLocation() {
         return Optional.ofNullable(this.targetDiskLocation);
     }
     /**
-     * The target Azure disk name.
+     * @return The target Azure disk name.
      * 
-    */
+     */
     public Optional<String> targetDiskName() {
         return Optional.ofNullable(this.targetDiskName);
     }
     /**
-     * The VHD id.
+     * @return The VHD id.
      * 
-    */
+     */
     public Optional<String> vhdId() {
         return Optional.ofNullable(this.vhdId);
     }
     /**
-     * VHD name.
+     * @return VHD name.
      * 
-    */
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
     /**
-     * VHD type.
+     * @return VHD type.
      * 
-    */
+     */
     public Optional<String> vhdType() {
         return Optional.ofNullable(this.vhdType);
     }

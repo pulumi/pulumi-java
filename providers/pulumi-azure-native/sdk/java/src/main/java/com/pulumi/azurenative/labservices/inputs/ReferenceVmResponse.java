@@ -26,6 +26,10 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password of the virtual machine. This will be set to null in GET resource API
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The username of the virtual machine
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -48,6 +56,10 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId", required=true)
     private String vmResourceId;
 
+    /**
+     * @return VM resource Id for the environment
+     * 
+     */
     public String vmResourceId() {
         return this.vmResourceId;
     }
@@ -59,6 +71,10 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmStateDetails", required=true)
     private VmStateDetailsResponse vmStateDetails;
 
+    /**
+     * @return The state details for the reference virtual machine.
+     * 
+     */
     public VmStateDetailsResponse vmStateDetails() {
         return this.vmStateDetails;
     }
@@ -90,21 +106,45 @@ public final class ReferenceVmResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ReferenceVmResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password of the virtual machine. This will be set to null in GET resource API
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param userName The username of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param vmResourceId VM resource Id for the environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(String vmResourceId) {
             $.vmResourceId = vmResourceId;
             return this;
         }
 
+        /**
+         * @param vmStateDetails The state details for the reference virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmStateDetails(VmStateDetailsResponse vmStateDetails) {
             $.vmStateDetails = vmStateDetails;
             return this;

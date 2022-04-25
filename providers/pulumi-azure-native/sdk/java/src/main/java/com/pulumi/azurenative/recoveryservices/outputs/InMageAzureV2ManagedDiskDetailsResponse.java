@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InMageAzureV2ManagedDiskDetailsResponse {
-    /**
-     * The disk id.
-     * 
-     */
+        /**
+         * @return The disk id.
+         * 
+         */
     private final @Nullable String diskId;
-    /**
-     * The replica disk type.
-     * 
-     */
+        /**
+         * @return The replica disk type.
+         * 
+         */
     private final @Nullable String replicaDiskType;
-    /**
-     * Seed managed disk Id.
-     * 
-     */
+        /**
+         * @return Seed managed disk Id.
+         * 
+         */
     private final @Nullable String seedManagedDiskId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
     }
 
     /**
-     * The disk id.
+     * @return The disk id.
      * 
-    */
+     */
     public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
-     * The replica disk type.
+     * @return The replica disk type.
      * 
-    */
+     */
     public Optional<String> replicaDiskType() {
         return Optional.ofNullable(this.replicaDiskType);
     }
     /**
-     * Seed managed disk Id.
+     * @return Seed managed disk Id.
      * 
-    */
+     */
     public Optional<String> seedManagedDiskId() {
         return Optional.ofNullable(this.seedManagedDiskId);
     }

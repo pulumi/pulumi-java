@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobDeliveryInfoResponse {
-    /**
-     * Scheduled date time.
-     * 
-     */
+        /**
+         * @return Scheduled date time.
+         * 
+         */
     private final @Nullable String scheduledDateTime;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class JobDeliveryInfoResponse {
     }
 
     /**
-     * Scheduled date time.
+     * @return Scheduled date time.
      * 
-    */
+     */
     public Optional<String> scheduledDateTime() {
         return Optional.ofNullable(this.scheduledDateTime);
     }

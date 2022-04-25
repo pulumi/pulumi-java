@@ -25,6 +25,10 @@ public final class ArmTemplateParameterPropertiesResponse extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the template parameter.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ArmTemplateParameterPropertiesResponse extends com.pulumi.res
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value of the template parameter.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ArmTemplateParameterPropertiesResponse extends com.pulumi.res
             $ = new ArmTemplateParameterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the template parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The value of the template parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

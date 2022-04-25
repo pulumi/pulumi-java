@@ -25,121 +25,121 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebServicePropertiesForGraphResponse {
-    /**
-     * Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
-     * 
-     */
+        /**
+         * @return Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
+         * 
+         */
     private final @Nullable Map<String,AssetItemResponse> assets;
-    /**
-     * Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
-     * 
-     */
+        /**
+         * @return Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
+         * 
+         */
     private final @Nullable CommitmentPlanResponse commitmentPlan;
-    /**
-     * Read Only: The date and time when the web service was created.
-     * 
-     */
+        /**
+         * @return Read Only: The date and time when the web service was created.
+         * 
+         */
     private final String createdOn;
-    /**
-     * The description of the web service.
-     * 
-     */
+        /**
+         * @return The description of the web service.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Settings controlling the diagnostics traces collection for the web service.
-     * 
-     */
+        /**
+         * @return Settings controlling the diagnostics traces collection for the web service.
+         * 
+         */
     private final @Nullable DiagnosticsConfigurationResponse diagnostics;
-    /**
-     * Defines sample input data for one or more of the service&#39;s inputs.
-     * 
-     */
+        /**
+         * @return Defines sample input data for one or more of the service&#39;s inputs.
+         * 
+         */
     private final @Nullable ExampleRequestResponse exampleRequest;
-    /**
-     * When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
-     * 
-     */
+        /**
+         * @return When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
+         * 
+         */
     private final @Nullable Boolean exposeSampleData;
-    /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
-     * 
-     */
+        /**
+         * @return Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
+         * 
+         */
     private final @Nullable ServiceInputOutputSpecificationResponse input;
-    /**
-     * Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
-     * 
-     */
+        /**
+         * @return Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
+         * 
+         */
     private final @Nullable WebServiceKeysResponse keys;
-    /**
-     * Specifies the Machine Learning workspace containing the experiment that is source for the web service.
-     * 
-     */
+        /**
+         * @return Specifies the Machine Learning workspace containing the experiment that is source for the web service.
+         * 
+         */
     private final @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
-    /**
-     * Read Only: The date and time when the web service was last modified.
-     * 
-     */
+        /**
+         * @return Read Only: The date and time when the web service was last modified.
+         * 
+         */
     private final String modifiedOn;
-    /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
-     * 
-     */
+        /**
+         * @return Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
+         * 
+         */
     private final @Nullable ServiceInputOutputSpecificationResponse output;
-    /**
-     * The definition of the graph package making up this web service.
-     * 
-     */
+        /**
+         * @return The definition of the graph package making up this web service.
+         * 
+         */
     private final @Nullable GraphPackageResponse package_;
-    /**
-     * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
-     * Expected value is &#39;Graph&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
+         * Expected value is &#39;Graph&#39;.
+         * 
+         */
     private final String packageType;
-    /**
-     * The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
-     * 
-     */
+        /**
+         * @return The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
+         * 
+         */
     private final @Nullable Map<String,WebServiceParameterResponse> parameters;
-    /**
-     * When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
-     * 
-     */
+        /**
+         * @return When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
+         * 
+         */
     private final @Nullable Boolean payloadsInBlobStorage;
-    /**
-     * The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
-     * 
-     */
+        /**
+         * @return The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
+         * 
+         */
     private final @Nullable BlobLocationResponse payloadsLocation;
-    /**
-     * Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
-     * 
-     */
+        /**
+         * @return Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
-     * 
-     */
+        /**
+         * @return When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
+         * 
+         */
     private final @Nullable Boolean readOnly;
-    /**
-     * Contains the configuration settings for the web service endpoint.
-     * 
-     */
+        /**
+         * @return Contains the configuration settings for the web service endpoint.
+         * 
+         */
     private final @Nullable RealtimeConfigurationResponse realtimeConfiguration;
-    /**
-     * Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
-     * 
-     */
+        /**
+         * @return Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
+         * 
+         */
     private final @Nullable StorageAccountResponse storageAccount;
-    /**
-     * Read Only: Contains the URI of the swagger spec associated with this web service.
-     * 
-     */
+        /**
+         * @return Read Only: Contains the URI of the swagger spec associated with this web service.
+         * 
+         */
     private final String swaggerLocation;
-    /**
-     * The title of the web service.
-     * 
-     */
+        /**
+         * @return The title of the web service.
+         * 
+         */
     private final @Nullable String title;
 
     @CustomType.Constructor
@@ -193,164 +193,164 @@ public final class WebServicePropertiesForGraphResponse {
     }
 
     /**
-     * Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
+     * @return Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
      * 
-    */
+     */
     public Map<String,AssetItemResponse> assets() {
         return this.assets == null ? Map.of() : this.assets;
     }
     /**
-     * Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
+     * @return Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
      * 
-    */
+     */
     public Optional<CommitmentPlanResponse> commitmentPlan() {
         return Optional.ofNullable(this.commitmentPlan);
     }
     /**
-     * Read Only: The date and time when the web service was created.
+     * @return Read Only: The date and time when the web service was created.
      * 
-    */
+     */
     public String createdOn() {
         return this.createdOn;
     }
     /**
-     * The description of the web service.
+     * @return The description of the web service.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Settings controlling the diagnostics traces collection for the web service.
+     * @return Settings controlling the diagnostics traces collection for the web service.
      * 
-    */
+     */
     public Optional<DiagnosticsConfigurationResponse> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
-     * Defines sample input data for one or more of the service&#39;s inputs.
+     * @return Defines sample input data for one or more of the service&#39;s inputs.
      * 
-    */
+     */
     public Optional<ExampleRequestResponse> exampleRequest() {
         return Optional.ofNullable(this.exampleRequest);
     }
     /**
-     * When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
+     * @return When set to true, sample data is included in the web service&#39;s swagger definition. The default value is true.
      * 
-    */
+     */
     public Optional<Boolean> exposeSampleData() {
         return Optional.ofNullable(this.exposeSampleData);
     }
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
+     * @return Contains the Swagger 2.0 schema describing one or more of the web service&#39;s inputs. For more information, see the Swagger specification.
      * 
-    */
+     */
     public Optional<ServiceInputOutputSpecificationResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
-     * Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
+     * @return Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
      * 
-    */
+     */
     public Optional<WebServiceKeysResponse> keys() {
         return Optional.ofNullable(this.keys);
     }
     /**
-     * Specifies the Machine Learning workspace containing the experiment that is source for the web service.
+     * @return Specifies the Machine Learning workspace containing the experiment that is source for the web service.
      * 
-    */
+     */
     public Optional<MachineLearningWorkspaceResponse> machineLearningWorkspace() {
         return Optional.ofNullable(this.machineLearningWorkspace);
     }
     /**
-     * Read Only: The date and time when the web service was last modified.
+     * @return Read Only: The date and time when the web service was last modified.
      * 
-    */
+     */
     public String modifiedOn() {
         return this.modifiedOn;
     }
     /**
-     * Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
+     * @return Contains the Swagger 2.0 schema describing one or more of the web service&#39;s outputs. For more information, see the Swagger specification.
      * 
-    */
+     */
     public Optional<ServiceInputOutputSpecificationResponse> output() {
         return Optional.ofNullable(this.output);
     }
     /**
-     * The definition of the graph package making up this web service.
+     * @return The definition of the graph package making up this web service.
      * 
-    */
+     */
     public Optional<GraphPackageResponse> package_() {
         return Optional.ofNullable(this.package_);
     }
     /**
-     * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
+     * @return Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
      * Expected value is &#39;Graph&#39;.
      * 
-    */
+     */
     public String packageType() {
         return this.packageType;
     }
     /**
-     * The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
+     * @return The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
      * 
-    */
+     */
     public Map<String,WebServiceParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
+     * @return When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
      * 
-    */
+     */
     public Optional<Boolean> payloadsInBlobStorage() {
         return Optional.ofNullable(this.payloadsInBlobStorage);
     }
     /**
-     * The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
+     * @return The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
      * 
-    */
+     */
     public Optional<BlobLocationResponse> payloadsLocation() {
         return Optional.ofNullable(this.payloadsLocation);
     }
     /**
-     * Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
+     * @return Read Only: The provision state of the web service. Valid values are Unknown, Provisioning, Succeeded, and Failed.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
+     * @return When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
-     * Contains the configuration settings for the web service endpoint.
+     * @return Contains the configuration settings for the web service endpoint.
      * 
-    */
+     */
     public Optional<RealtimeConfigurationResponse> realtimeConfiguration() {
         return Optional.ofNullable(this.realtimeConfiguration);
     }
     /**
-     * Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
+     * @return Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
      * 
-    */
+     */
     public Optional<StorageAccountResponse> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
-     * Read Only: Contains the URI of the swagger spec associated with this web service.
+     * @return Read Only: Contains the URI of the swagger spec associated with this web service.
      * 
-    */
+     */
     public String swaggerLocation() {
         return this.swaggerLocation;
     }
     /**
-     * The title of the web service.
+     * @return The title of the web service.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }

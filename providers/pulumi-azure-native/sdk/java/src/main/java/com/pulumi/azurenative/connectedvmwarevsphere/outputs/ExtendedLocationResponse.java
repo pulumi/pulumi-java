@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExtendedLocationResponse {
-    /**
-     * The extended location name.
-     * 
-     */
+        /**
+         * @return The extended location name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The extended location type.
-     * 
-     */
+        /**
+         * @return The extended location type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ExtendedLocationResponse {
     }
 
     /**
-     * The extended location name.
+     * @return The extended location name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The extended location type.
+     * @return The extended location type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

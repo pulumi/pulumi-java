@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerServiceLinuxProfileResponse {
-    /**
-     * The administrator username to use for Linux VMs.
-     * 
-     */
+        /**
+         * @return The administrator username to use for Linux VMs.
+         * 
+         */
     private final String adminUsername;
-    /**
-     * SSH configuration for Linux-based VMs running on Azure.
-     * 
-     */
+        /**
+         * @return SSH configuration for Linux-based VMs running on Azure.
+         * 
+         */
     private final ContainerServiceSshConfigurationResponse ssh;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ContainerServiceLinuxProfileResponse {
     }
 
     /**
-     * The administrator username to use for Linux VMs.
+     * @return The administrator username to use for Linux VMs.
      * 
-    */
+     */
     public String adminUsername() {
         return this.adminUsername;
     }
     /**
-     * SSH configuration for Linux-based VMs running on Azure.
+     * @return SSH configuration for Linux-based VMs running on Azure.
      * 
-    */
+     */
     public ContainerServiceSshConfigurationResponse ssh() {
         return this.ssh;
     }

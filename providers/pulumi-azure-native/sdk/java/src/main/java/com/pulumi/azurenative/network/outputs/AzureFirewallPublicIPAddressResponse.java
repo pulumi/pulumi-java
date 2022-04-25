@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFirewallPublicIPAddressResponse {
-    /**
-     * Public IP Address value.
-     * 
-     */
+        /**
+         * @return Public IP Address value.
+         * 
+         */
     private final @Nullable String address;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AzureFirewallPublicIPAddressResponse {
     }
 
     /**
-     * Public IP Address value.
+     * @return Public IP Address value.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }

@@ -28,6 +28,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="accessModes")
     private @Nullable List<String> accessModes;
 
+    /**
+     * @return The list of access modes for the application.
+     * 
+     */
     public Optional<List<String>> accessModes() {
         return Optional.ofNullable(this.accessModes);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="destinationPort")
     private @Nullable Integer destinationPort;
 
+    /**
+     * @return The destination port to connect to.
+     * 
+     */
     public Optional<Integer> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="disableGatewayAuth")
     private @Nullable Boolean disableGatewayAuth;
 
+    /**
+     * @return The value indicates whether to disable GatewayAuth.
+     * 
+     */
     public Optional<Boolean> disableGatewayAuth() {
         return Optional.ofNullable(this.disableGatewayAuth);
     }
@@ -61,6 +73,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The location of the endpoint.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -72,6 +88,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return The private ip address of the endpoint.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -83,6 +103,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="publicPort", required=true)
     private Integer publicPort;
 
+    /**
+     * @return The public port to connect to.
+     * 
+     */
     public Integer publicPort() {
         return this.publicPort;
     }
@@ -94,6 +118,10 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
     @Import(name="subDomainSuffix")
     private @Nullable String subDomainSuffix;
 
+    /**
+     * @return The subdomain suffix of the application.
+     * 
+     */
     public Optional<String> subDomainSuffix() {
         return Optional.ofNullable(this.subDomainSuffix);
     }
@@ -128,40 +156,88 @@ public final class ApplicationGetHttpsEndpointResponse extends com.pulumi.resour
             $ = new ApplicationGetHttpsEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessModes The list of access modes for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessModes(@Nullable List<String> accessModes) {
             $.accessModes = accessModes;
             return this;
         }
 
+        /**
+         * @param accessModes The list of access modes for the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessModes(String... accessModes) {
             return accessModes(List.of(accessModes));
         }
 
+        /**
+         * @param destinationPort The destination port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(@Nullable Integer destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param disableGatewayAuth The value indicates whether to disable GatewayAuth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
             $.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
 
+        /**
+         * @param location The location of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The private ip address of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param publicPort The public port to connect to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicPort(Integer publicPort) {
             $.publicPort = publicPort;
             return this;
         }
 
+        /**
+         * @param subDomainSuffix The subdomain suffix of the application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
             $.subDomainSuffix = subDomainSuffix;
             return this;

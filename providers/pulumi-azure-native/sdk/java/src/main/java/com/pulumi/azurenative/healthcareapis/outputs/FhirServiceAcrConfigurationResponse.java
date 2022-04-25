@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FhirServiceAcrConfigurationResponse {
-    /**
-     * The list of the Azure container registry login servers.
-     * 
-     */
+        /**
+         * @return The list of the Azure container registry login servers.
+         * 
+         */
     private final @Nullable List<String> loginServers;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FhirServiceAcrConfigurationResponse {
     }
 
     /**
-     * The list of the Azure container registry login servers.
+     * @return The list of the Azure container registry login servers.
      * 
-    */
+     */
     public List<String> loginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }

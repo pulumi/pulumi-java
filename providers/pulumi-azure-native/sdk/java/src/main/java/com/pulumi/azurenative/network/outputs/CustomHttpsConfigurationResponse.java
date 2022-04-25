@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomHttpsConfigurationResponse {
-    /**
-     * Defines the source of the SSL certificate
-     * 
-     */
+        /**
+         * @return Defines the source of the SSL certificate
+         * 
+         */
     private final String certificateSource;
-    /**
-     * Defines the type of the certificate used for secure connections to a frontendEndpoint
-     * 
-     */
+        /**
+         * @return Defines the type of the certificate used for secure connections to a frontendEndpoint
+         * 
+         */
     private final @Nullable String certificateType;
-    /**
-     * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
-     * 
-     */
+        /**
+         * @return The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+         * 
+         */
     private final String minimumTlsVersion;
-    /**
-     * Defines the TLS extension protocol that is used for secure delivery
-     * 
-     */
+        /**
+         * @return Defines the TLS extension protocol that is used for secure delivery
+         * 
+         */
     private final String protocolType;
-    /**
-     * The name of the Key Vault secret representing the full certificate PFX
-     * 
-     */
+        /**
+         * @return The name of the Key Vault secret representing the full certificate PFX
+         * 
+         */
     private final @Nullable String secretName;
-    /**
-     * The version of the Key Vault secret representing the full certificate PFX
-     * 
-     */
+        /**
+         * @return The version of the Key Vault secret representing the full certificate PFX
+         * 
+         */
     private final @Nullable String secretVersion;
-    /**
-     * The Key Vault containing the SSL certificate
-     * 
-     */
+        /**
+         * @return The Key Vault containing the SSL certificate
+         * 
+         */
     private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class CustomHttpsConfigurationResponse {
     }
 
     /**
-     * Defines the source of the SSL certificate
+     * @return Defines the source of the SSL certificate
      * 
-    */
+     */
     public String certificateSource() {
         return this.certificateSource;
     }
     /**
-     * Defines the type of the certificate used for secure connections to a frontendEndpoint
+     * @return Defines the type of the certificate used for secure connections to a frontendEndpoint
      * 
-    */
+     */
     public Optional<String> certificateType() {
         return Optional.ofNullable(this.certificateType);
     }
     /**
-     * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
+     * @return The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
      * 
-    */
+     */
     public String minimumTlsVersion() {
         return this.minimumTlsVersion;
     }
     /**
-     * Defines the TLS extension protocol that is used for secure delivery
+     * @return Defines the TLS extension protocol that is used for secure delivery
      * 
-    */
+     */
     public String protocolType() {
         return this.protocolType;
     }
     /**
-     * The name of the Key Vault secret representing the full certificate PFX
+     * @return The name of the Key Vault secret representing the full certificate PFX
      * 
-    */
+     */
     public Optional<String> secretName() {
         return Optional.ofNullable(this.secretName);
     }
     /**
-     * The version of the Key Vault secret representing the full certificate PFX
+     * @return The version of the Key Vault secret representing the full certificate PFX
      * 
-    */
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
-     * The Key Vault containing the SSL certificate
+     * @return The Key Vault containing the SSL certificate
      * 
-    */
+     */
     public Optional<KeyVaultCertificateSourceParametersResponseVault> vault() {
         return Optional.ofNullable(this.vault);
     }

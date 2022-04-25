@@ -27,6 +27,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return The name of the RedisEnterprise cluster.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -38,6 +42,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -49,6 +57,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="minimumTlsVersion")
     private @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
+    /**
+     * @return The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+     * 
+     */
     public Optional<Output<Either<String,TlsVersion>>> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
@@ -60,6 +72,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,6 +87,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
     private Output<EnterpriseSkuArgs> sku;
 
+    /**
+     * @return The SKU to create, which affects price, performance, and features.
+     * 
+     */
     public Output<EnterpriseSkuArgs> sku() {
         return this.sku;
     }
@@ -82,6 +102,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,6 +117,10 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return The Availability Zones where this cluster will be deployed.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -127,77 +155,179 @@ public final class RedisEnterpriseArgs extends com.pulumi.resources.ResourceArgs
             $ = new RedisEnterpriseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the RedisEnterprise cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the RedisEnterprise cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param minimumTlsVersion The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
+        /**
+         * @param minimumTlsVersion The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(Either<String,TlsVersion> minimumTlsVersion) {
             return minimumTlsVersion(Output.of(minimumTlsVersion));
         }
 
+        /**
+         * @param minimumTlsVersion The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(String minimumTlsVersion) {
             return minimumTlsVersion(Either.ofLeft(minimumTlsVersion));
         }
 
+        /**
+         * @param minimumTlsVersion The minimum TLS version for the cluster to support, e.g. &#39;1.2&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(TlsVersion minimumTlsVersion) {
             return minimumTlsVersion(Either.ofRight(minimumTlsVersion));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU to create, which affects price, performance, and features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<EnterpriseSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU to create, which affects price, performance, and features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(EnterpriseSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param zones The Availability Zones where this cluster will be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones The Availability Zones where this cluster will be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones The Availability Zones where this cluster will be deployed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

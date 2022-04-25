@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MaintenanceRedeployStatusResponse {
-    /**
-     * True, if customer is allowed to perform Maintenance.
-     * 
-     */
+        /**
+         * @return True, if customer is allowed to perform Maintenance.
+         * 
+         */
     private final @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
-    /**
-     * Message returned for the last Maintenance Operation.
-     * 
-     */
+        /**
+         * @return Message returned for the last Maintenance Operation.
+         * 
+         */
     private final @Nullable String lastOperationMessage;
-    /**
-     * The Last Maintenance Operation Result Code.
-     * 
-     */
+        /**
+         * @return The Last Maintenance Operation Result Code.
+         * 
+         */
     private final @Nullable String lastOperationResultCode;
-    /**
-     * End Time for the Maintenance Window.
-     * 
-     */
+        /**
+         * @return End Time for the Maintenance Window.
+         * 
+         */
     private final @Nullable String maintenanceWindowEndTime;
-    /**
-     * Start Time for the Maintenance Window.
-     * 
-     */
+        /**
+         * @return Start Time for the Maintenance Window.
+         * 
+         */
     private final @Nullable String maintenanceWindowStartTime;
-    /**
-     * End Time for the Pre Maintenance Window.
-     * 
-     */
+        /**
+         * @return End Time for the Pre Maintenance Window.
+         * 
+         */
     private final @Nullable String preMaintenanceWindowEndTime;
-    /**
-     * Start Time for the Pre Maintenance Window.
-     * 
-     */
+        /**
+         * @return Start Time for the Pre Maintenance Window.
+         * 
+         */
     private final @Nullable String preMaintenanceWindowStartTime;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class MaintenanceRedeployStatusResponse {
     }
 
     /**
-     * True, if customer is allowed to perform Maintenance.
+     * @return True, if customer is allowed to perform Maintenance.
      * 
-    */
+     */
     public Optional<Boolean> isCustomerInitiatedMaintenanceAllowed() {
         return Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
     }
     /**
-     * Message returned for the last Maintenance Operation.
+     * @return Message returned for the last Maintenance Operation.
      * 
-    */
+     */
     public Optional<String> lastOperationMessage() {
         return Optional.ofNullable(this.lastOperationMessage);
     }
     /**
-     * The Last Maintenance Operation Result Code.
+     * @return The Last Maintenance Operation Result Code.
      * 
-    */
+     */
     public Optional<String> lastOperationResultCode() {
         return Optional.ofNullable(this.lastOperationResultCode);
     }
     /**
-     * End Time for the Maintenance Window.
+     * @return End Time for the Maintenance Window.
      * 
-    */
+     */
     public Optional<String> maintenanceWindowEndTime() {
         return Optional.ofNullable(this.maintenanceWindowEndTime);
     }
     /**
-     * Start Time for the Maintenance Window.
+     * @return Start Time for the Maintenance Window.
      * 
-    */
+     */
     public Optional<String> maintenanceWindowStartTime() {
         return Optional.ofNullable(this.maintenanceWindowStartTime);
     }
     /**
-     * End Time for the Pre Maintenance Window.
+     * @return End Time for the Pre Maintenance Window.
      * 
-    */
+     */
     public Optional<String> preMaintenanceWindowEndTime() {
         return Optional.ofNullable(this.preMaintenanceWindowEndTime);
     }
     /**
-     * Start Time for the Pre Maintenance Window.
+     * @return Start Time for the Pre Maintenance Window.
      * 
-    */
+     */
     public Optional<String> preMaintenanceWindowStartTime() {
         return Optional.ofNullable(this.preMaintenanceWindowStartTime);
     }

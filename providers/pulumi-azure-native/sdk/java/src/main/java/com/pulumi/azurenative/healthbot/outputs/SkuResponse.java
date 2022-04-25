@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The name of the HealthBot SKU
-     * 
-     */
+        /**
+         * @return The name of the HealthBot SKU
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class SkuResponse {
     }
 
     /**
-     * The name of the HealthBot SKU
+     * @return The name of the HealthBot SKU
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

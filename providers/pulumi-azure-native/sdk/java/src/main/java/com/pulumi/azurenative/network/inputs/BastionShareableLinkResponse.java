@@ -24,6 +24,10 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="bsl", required=true)
     private String bsl;
 
+    /**
+     * @return The unique Bastion Shareable Link to the virtual machine.
+     * 
+     */
     public String bsl() {
         return this.bsl;
     }
@@ -35,6 +39,10 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="createdAt", required=true)
     private String createdAt;
 
+    /**
+     * @return The time when the link was created.
+     * 
+     */
     public String createdAt() {
         return this.createdAt;
     }
@@ -46,6 +54,10 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Optional field indicating the warning or error message related to the vm in case of partial failure.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -57,6 +69,10 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
     @Import(name="vm", required=true)
     private VMResponse vm;
 
+    /**
+     * @return Reference of the virtual machine resource.
+     * 
+     */
     public VMResponse vm() {
         return this.vm;
     }
@@ -88,21 +104,45 @@ public final class BastionShareableLinkResponse extends com.pulumi.resources.Inv
             $ = new BastionShareableLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bsl The unique Bastion Shareable Link to the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bsl(String bsl) {
             $.bsl = bsl;
             return this;
         }
 
+        /**
+         * @param createdAt The time when the link was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param message Optional field indicating the warning or error message related to the vm in case of partial failure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param vm Reference of the virtual machine resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(VMResponse vm) {
             $.vm = vm;
             return this;

@@ -25,6 +25,10 @@ public final class ContainerGroupDiagnosticsResponse extends com.pulumi.resource
     @Import(name="logAnalytics")
     private @Nullable LogAnalyticsResponse logAnalytics;
 
+    /**
+     * @return Container group log analytics information.
+     * 
+     */
     public Optional<LogAnalyticsResponse> logAnalytics() {
         return Optional.ofNullable(this.logAnalytics);
     }
@@ -53,6 +57,12 @@ public final class ContainerGroupDiagnosticsResponse extends com.pulumi.resource
             $ = new ContainerGroupDiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logAnalytics Container group log analytics information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(@Nullable LogAnalyticsResponse logAnalytics) {
             $.logAnalytics = logAnalytics;
             return this;

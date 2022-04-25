@@ -24,6 +24,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="commitmentPlanName")
     private @Nullable Output<String> commitmentPlanName;
 
+    /**
+     * @return The Azure ML commitment plan name.
+     * 
+     */
     public Optional<Output<String>> commitmentPlanName() {
         return Optional.ofNullable(this.commitmentPlanName);
     }
@@ -35,6 +39,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<ResourceSkuArgs> sku;
 
+    /**
+     * @return The commitment plan SKU.
+     * 
+     */
     public Optional<Output<ResourceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -68,6 +84,10 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return User-defined tags for the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class CommitmentPlanArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CommitmentPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commitmentPlanName The Azure ML commitment plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentPlanName(@Nullable Output<String> commitmentPlanName) {
             $.commitmentPlanName = commitmentPlanName;
             return this;
         }
 
+        /**
+         * @param commitmentPlanName The Azure ML commitment plan name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitmentPlanName(String commitmentPlanName) {
             return commitmentPlanName(Output.of(commitmentPlanName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The commitment plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The commitment plan SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ResourceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags User-defined tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags User-defined tags for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

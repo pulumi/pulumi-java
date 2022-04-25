@@ -28,6 +28,10 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="locations")
     private @Nullable Output<List<String>> locations;
 
+    /**
+     * @return List of locations to scope the query to.
+     * 
+     */
     public Optional<Output<List<String>>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -39,6 +43,10 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="scope")
     private @Nullable Output<List<String>> scope;
 
+    /**
+     * @return List of Subscription or Resource Group ARM Ids.
+     * 
+     */
     public Optional<Output<List<String>>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -50,6 +58,10 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
     @Import(name="tagSettings")
     private @Nullable Output<TagSettingsPropertiesArgs> tagSettings;
 
+    /**
+     * @return Tag settings for the VM.
+     * 
+     */
     public Optional<Output<TagSettingsPropertiesArgs>> tagSettings() {
         return Optional.ofNullable(this.tagSettings);
     }
@@ -80,37 +92,85 @@ public final class AzureQueryPropertiesArgs extends com.pulumi.resources.Resourc
             $ = new AzureQueryPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations List of locations to scope the query to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable Output<List<String>> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations List of locations to scope the query to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(List<String> locations) {
             return locations(Output.of(locations));
         }
 
+        /**
+         * @param locations List of locations to scope the query to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param scope List of Subscription or Resource Group ARM Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<List<String>> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope List of Subscription or Resource Group ARM Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(List<String> scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scope List of Subscription or Resource Group ARM Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }
 
+        /**
+         * @param tagSettings Tag settings for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagSettings(@Nullable Output<TagSettingsPropertiesArgs> tagSettings) {
             $.tagSettings = tagSettings;
             return this;
         }
 
+        /**
+         * @param tagSettings Tag settings for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagSettings(TagSettingsPropertiesArgs tagSettings) {
             return tagSettings(Output.of(tagSettings));
         }

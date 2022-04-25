@@ -27,6 +27,10 @@ public final class SSISAccessCredentialArgs extends com.pulumi.resources.Resourc
     @Import(name="domain", required=true)
     private Output<Object> domain;
 
+    /**
+     * @return Domain for windows authentication.
+     * 
+     */
     public Output<Object> domain() {
         return this.domain;
     }
@@ -38,6 +42,10 @@ public final class SSISAccessCredentialArgs extends com.pulumi.resources.Resourc
     @Import(name="password", required=true)
     private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return Password for windows authentication.
+     * 
+     */
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
@@ -49,6 +57,10 @@ public final class SSISAccessCredentialArgs extends com.pulumi.resources.Resourc
     @Import(name="userName", required=true)
     private Output<Object> userName;
 
+    /**
+     * @return UseName for windows authentication.
+     * 
+     */
     public Output<Object> userName() {
         return this.userName;
     }
@@ -79,37 +91,85 @@ public final class SSISAccessCredentialArgs extends com.pulumi.resources.Resourc
             $ = new SSISAccessCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain Domain for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<Object> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain Domain for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Object domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param userName UseName for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Output<Object> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName UseName for windows authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             return userName(Output.of(userName));
         }

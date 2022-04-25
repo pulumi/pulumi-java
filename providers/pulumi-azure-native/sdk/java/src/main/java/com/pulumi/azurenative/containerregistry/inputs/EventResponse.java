@@ -27,6 +27,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventRequestMessage")
     private @Nullable EventRequestMessageResponse eventRequestMessage;
 
+    /**
+     * @return The event request message sent to the service URI.
+     * 
+     */
     public Optional<EventRequestMessageResponse> eventRequestMessage() {
         return Optional.ofNullable(this.eventRequestMessage);
     }
@@ -38,6 +42,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventResponseMessage")
     private @Nullable EventResponseMessageResponse eventResponseMessage;
 
+    /**
+     * @return The event response message received from the service URI.
+     * 
+     */
     public Optional<EventResponseMessageResponse> eventResponseMessage() {
         return Optional.ofNullable(this.eventResponseMessage);
     }
@@ -49,6 +57,10 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The event ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -79,16 +91,34 @@ public final class EventResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EventResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventRequestMessage The event request message sent to the service URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventRequestMessage(@Nullable EventRequestMessageResponse eventRequestMessage) {
             $.eventRequestMessage = eventRequestMessage;
             return this;
         }
 
+        /**
+         * @param eventResponseMessage The event response message received from the service URI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventResponseMessage(@Nullable EventResponseMessageResponse eventResponseMessage) {
             $.eventResponseMessage = eventResponseMessage;
             return this;
         }
 
+        /**
+         * @param id The event ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceResponseBaseResponseError {
-    /**
-     * The error response.
-     * 
-     */
+        /**
+         * @return The error response.
+         * 
+         */
     private final ErrorResponseResponse error;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ServiceResponseBaseResponseError {
     }
 
     /**
-     * The error response.
+     * @return The error response.
      * 
-    */
+     */
     public ErrorResponseResponse error() {
         return this.error;
     }

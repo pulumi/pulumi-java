@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TriggerReferenceResponse {
-    /**
-     * Reference trigger name.
-     * 
-     */
+        /**
+         * @return Reference trigger name.
+         * 
+         */
     private final String referenceName;
-    /**
-     * Trigger reference type.
-     * 
-     */
+        /**
+         * @return Trigger reference type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TriggerReferenceResponse {
     }
 
     /**
-     * Reference trigger name.
+     * @return Reference trigger name.
      * 
-    */
+     */
     public String referenceName() {
         return this.referenceName;
     }
     /**
-     * Trigger reference type.
+     * @return Trigger reference type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

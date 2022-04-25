@@ -24,6 +24,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the DNS Zone.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -35,6 +39,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="dnsServerIps")
     private @Nullable Output<List<String>> dnsServerIps;
 
+    /**
+     * @return DNS Server IP array of the DNS Zone.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServerIps() {
         return Optional.ofNullable(this.dnsServerIps);
     }
@@ -46,6 +54,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="dnsServices")
     private @Nullable Output<Double> dnsServices;
 
+    /**
+     * @return Number of DNS Services using the DNS zone.
+     * 
+     */
     public Optional<Output<Double>> dnsServices() {
         return Optional.ofNullable(this.dnsServices);
     }
@@ -57,6 +69,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="dnsZoneId")
     private @Nullable Output<String> dnsZoneId;
 
+    /**
+     * @return NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
+     * 
+     */
     public Optional<Output<String>> dnsZoneId() {
         return Optional.ofNullable(this.dnsZoneId);
     }
@@ -68,6 +84,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="domain")
     private @Nullable Output<List<String>> domain;
 
+    /**
+     * @return Domain names of the DNS Zone.
+     * 
+     */
     public Optional<Output<List<String>>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -79,6 +99,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -90,6 +114,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="revision")
     private @Nullable Output<Double> revision;
 
+    /**
+     * @return NSX revision number.
+     * 
+     */
     public Optional<Output<Double>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -112,6 +144,10 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
     @Import(name="sourceIp")
     private @Nullable Output<String> sourceIp;
 
+    /**
+     * @return Source IP of the DNS Zone.
+     * 
+     */
     public Optional<Output<String>> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
@@ -148,91 +184,211 @@ public final class WorkloadNetworkDnsZoneArgs extends com.pulumi.resources.Resou
             $ = new WorkloadNetworkDnsZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param dnsServerIps DNS Server IP array of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServerIps(@Nullable Output<List<String>> dnsServerIps) {
             $.dnsServerIps = dnsServerIps;
             return this;
         }
 
+        /**
+         * @param dnsServerIps DNS Server IP array of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServerIps(List<String> dnsServerIps) {
             return dnsServerIps(Output.of(dnsServerIps));
         }
 
+        /**
+         * @param dnsServerIps DNS Server IP array of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServerIps(String... dnsServerIps) {
             return dnsServerIps(List.of(dnsServerIps));
         }
 
+        /**
+         * @param dnsServices Number of DNS Services using the DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServices(@Nullable Output<Double> dnsServices) {
             $.dnsServices = dnsServices;
             return this;
         }
 
+        /**
+         * @param dnsServices Number of DNS Services using the DNS zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServices(Double dnsServices) {
             return dnsServices(Output.of(dnsServices));
         }
 
+        /**
+         * @param dnsZoneId NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
             $.dnsZoneId = dnsZoneId;
             return this;
         }
 
+        /**
+         * @param dnsZoneId NSX DNS Zone identifier. Generally the same as the DNS Zone&#39;s display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsZoneId(String dnsZoneId) {
             return dnsZoneId(Output.of(dnsZoneId));
         }
 
+        /**
+         * @param domain Domain names of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<List<String>> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain Domain names of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(List<String> domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param domain Domain names of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String... domain) {
             return domain(List.of(domain));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Double> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Double revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param sourceIp Source IP of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIp(@Nullable Output<String> sourceIp) {
             $.sourceIp = sourceIp;
             return this;
         }
 
+        /**
+         * @param sourceIp Source IP of the DNS Zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceIp(String sourceIp) {
             return sourceIp(Output.of(sourceIp));
         }

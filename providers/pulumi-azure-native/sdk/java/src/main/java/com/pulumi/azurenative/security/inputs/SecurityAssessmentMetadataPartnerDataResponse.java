@@ -25,6 +25,10 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
     @Import(name="partnerName", required=true)
     private String partnerName;
 
+    /**
+     * @return Name of the company of the partner
+     * 
+     */
     public String partnerName() {
         return this.partnerName;
     }
@@ -36,6 +40,10 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
     @Import(name="productName")
     private @Nullable String productName;
 
+    /**
+     * @return Name of the product of the partner that created the assessment
+     * 
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
@@ -47,6 +55,10 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
     @Import(name="secret", required=true)
     private String secret;
 
+    /**
+     * @return Secret to authenticate the partner and verify it created the assessment - write only
+     * 
+     */
     public String secret() {
         return this.secret;
     }
@@ -77,16 +89,34 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends com.pul
             $ = new SecurityAssessmentMetadataPartnerDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerName Name of the company of the partner
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerName(String partnerName) {
             $.partnerName = partnerName;
             return this;
         }
 
+        /**
+         * @param productName Name of the product of the partner that created the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(@Nullable String productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param secret Secret to authenticate the partner and verify it created the assessment - write only
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             $.secret = secret;
             return this;

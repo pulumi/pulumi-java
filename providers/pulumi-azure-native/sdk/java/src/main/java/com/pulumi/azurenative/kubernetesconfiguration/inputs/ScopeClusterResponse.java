@@ -25,6 +25,10 @@ public final class ScopeClusterResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="releaseNamespace")
     private @Nullable String releaseNamespace;
 
+    /**
+     * @return Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+     * 
+     */
     public Optional<String> releaseNamespace() {
         return Optional.ofNullable(this.releaseNamespace);
     }
@@ -53,6 +57,12 @@ public final class ScopeClusterResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ScopeClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param releaseNamespace Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseNamespace(@Nullable String releaseNamespace) {
             $.releaseNamespace = releaseNamespace;
             return this;

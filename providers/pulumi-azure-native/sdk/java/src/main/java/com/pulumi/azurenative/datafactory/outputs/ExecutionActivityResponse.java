@@ -16,41 +16,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExecutionActivityResponse {
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * Type of activity.
-     * Expected value is &#39;Execution&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;Execution&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -72,52 +72,52 @@ public final class ExecutionActivityResponse {
     }
 
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Execution&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

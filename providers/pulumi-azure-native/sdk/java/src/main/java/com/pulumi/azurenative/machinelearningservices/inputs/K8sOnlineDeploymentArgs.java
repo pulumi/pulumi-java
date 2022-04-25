@@ -36,6 +36,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="appInsightsEnabled")
     private @Nullable Output<Boolean> appInsightsEnabled;
 
+    /**
+     * @return If true, enables Application Insights logging.
+     * 
+     */
     public Optional<Output<Boolean>> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
@@ -47,6 +51,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="codeConfiguration")
     private @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
+    /**
+     * @return Code configuration for the endpoint deployment.
+     * 
+     */
     public Optional<Output<CodeConfigurationArgs>> codeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
@@ -58,6 +66,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="containerResourceRequirements")
     private @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
+    /**
+     * @return Resource requirements for each container instance within an online deployment.
+     * 
+     */
     public Optional<Output<ContainerResourceRequirementsArgs>> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
@@ -69,6 +81,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the endpoint deployment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -81,6 +97,11 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="endpointComputeType", required=true)
     private Output<String> endpointComputeType;
 
+    /**
+     * @return Enum to determine endpoint compute type.
+     * Expected value is &#39;K8S&#39;.
+     * 
+     */
     public Output<String> endpointComputeType() {
         return this.endpointComputeType;
     }
@@ -92,6 +113,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="environmentId")
     private @Nullable Output<String> environmentId;
 
+    /**
+     * @return ARM resource ID of the environment specification for the endpoint deployment.
+     * 
+     */
     public Optional<Output<String>> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -103,6 +128,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="environmentVariables")
     private @Nullable Output<Map<String,String>> environmentVariables;
 
+    /**
+     * @return Environment variables configuration for the deployment.
+     * 
+     */
     public Optional<Output<Map<String,String>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -114,6 +143,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="livenessProbe")
     private @Nullable Output<ProbeSettingsArgs> livenessProbe;
 
+    /**
+     * @return Deployment container liveness/readiness probe configuration.
+     * 
+     */
     public Optional<Output<ProbeSettingsArgs>> livenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
@@ -125,6 +158,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="model")
     private @Nullable Output<Object> model;
 
+    /**
+     * @return Reference to the model asset for the endpoint deployment.
+     * 
+     */
     public Optional<Output<Object>> model() {
         return Optional.ofNullable(this.model);
     }
@@ -136,6 +173,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -147,6 +188,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="requestSettings")
     private @Nullable Output<OnlineRequestSettingsArgs> requestSettings;
 
+    /**
+     * @return Online deployment scoring requests configuration.
+     * 
+     */
     public Optional<Output<OnlineRequestSettingsArgs>> requestSettings() {
         return Optional.ofNullable(this.requestSettings);
     }
@@ -158,6 +203,10 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
     @Import(name="scaleSettings")
     private @Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
+    /**
+     * @return Online deployment scaling configuration.
+     * 
+     */
     public Optional<Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>>> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
@@ -197,118 +246,276 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
             $ = new K8sOnlineDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appInsightsEnabled If true, enables Application Insights logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(@Nullable Output<Boolean> appInsightsEnabled) {
             $.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param appInsightsEnabled If true, enables Application Insights logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appInsightsEnabled(Boolean appInsightsEnabled) {
             return appInsightsEnabled(Output.of(appInsightsEnabled));
         }
 
+        /**
+         * @param codeConfiguration Code configuration for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeConfiguration(@Nullable Output<CodeConfigurationArgs> codeConfiguration) {
             $.codeConfiguration = codeConfiguration;
             return this;
         }
 
+        /**
+         * @param codeConfiguration Code configuration for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeConfiguration(CodeConfigurationArgs codeConfiguration) {
             return codeConfiguration(Output.of(codeConfiguration));
         }
 
+        /**
+         * @param containerResourceRequirements Resource requirements for each container instance within an online deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             $.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
+        /**
+         * @param containerResourceRequirements Resource requirements for each container instance within an online deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceRequirements(ContainerResourceRequirementsArgs containerResourceRequirements) {
             return containerResourceRequirements(Output.of(containerResourceRequirements));
         }
 
+        /**
+         * @param description Description of the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endpointComputeType Enum to determine endpoint compute type.
+         * Expected value is &#39;K8S&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointComputeType(Output<String> endpointComputeType) {
             $.endpointComputeType = endpointComputeType;
             return this;
         }
 
+        /**
+         * @param endpointComputeType Enum to determine endpoint compute type.
+         * Expected value is &#39;K8S&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointComputeType(String endpointComputeType) {
             return endpointComputeType(Output.of(endpointComputeType));
         }
 
+        /**
+         * @param environmentId ARM resource ID of the environment specification for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable Output<String> environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentId ARM resource ID of the environment specification for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(String environmentId) {
             return environmentId(Output.of(environmentId));
         }
 
+        /**
+         * @param environmentVariables Environment variables configuration for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables configuration for the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(Map<String,String> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param livenessProbe Deployment container liveness/readiness probe configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbe(@Nullable Output<ProbeSettingsArgs> livenessProbe) {
             $.livenessProbe = livenessProbe;
             return this;
         }
 
+        /**
+         * @param livenessProbe Deployment container liveness/readiness probe configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessProbe(ProbeSettingsArgs livenessProbe) {
             return livenessProbe(Output.of(livenessProbe));
         }
 
+        /**
+         * @param model Reference to the model asset for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(@Nullable Output<Object> model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param model Reference to the model asset for the endpoint deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(Object model) {
             return model(Output.of(model));
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param requestSettings Online deployment scoring requests configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestSettings(@Nullable Output<OnlineRequestSettingsArgs> requestSettings) {
             $.requestSettings = requestSettings;
             return this;
         }
 
+        /**
+         * @param requestSettings Online deployment scoring requests configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestSettings(OnlineRequestSettingsArgs requestSettings) {
             return requestSettings(Output.of(requestSettings));
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(@Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings) {
             $.scaleSettings = scaleSettings;
             return this;
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs> scaleSettings) {
             return scaleSettings(Output.of(scaleSettings));
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(AutoScaleSettingsArgs scaleSettings) {
             return scaleSettings(Either.ofLeft(scaleSettings));
         }
 
+        /**
+         * @param scaleSettings Online deployment scaling configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(ManualScaleSettingsArgs scaleSettings) {
             return scaleSettings(Either.ofRight(scaleSettings));
         }

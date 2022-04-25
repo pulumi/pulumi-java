@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TcpConfigResponse {
-    /**
-     * Describes destination endpoint for routing traffic.
-     * 
-     */
+        /**
+         * @return Describes destination endpoint for routing traffic.
+         * 
+         */
     private final GatewayDestinationResponse destination;
-    /**
-     * tcp gateway config name.
-     * 
-     */
+        /**
+         * @return tcp gateway config name.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the port at which the service endpoint below needs to be exposed.
-     * 
-     */
+        /**
+         * @return Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         */
     private final Integer port;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TcpConfigResponse {
     }
 
     /**
-     * Describes destination endpoint for routing traffic.
+     * @return Describes destination endpoint for routing traffic.
      * 
-    */
+     */
     public GatewayDestinationResponse destination() {
         return this.destination;
     }
     /**
-     * tcp gateway config name.
+     * @return tcp gateway config name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the port at which the service endpoint below needs to be exposed.
+     * @return Specifies the port at which the service endpoint below needs to be exposed.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }

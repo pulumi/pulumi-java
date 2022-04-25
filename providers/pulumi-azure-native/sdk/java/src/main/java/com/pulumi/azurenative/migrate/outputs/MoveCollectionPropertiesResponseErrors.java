@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MoveCollectionPropertiesResponseErrors {
-    /**
-     * The move resource error body.
-     * 
-     */
+        /**
+         * @return The move resource error body.
+         * 
+         */
     private final @Nullable MoveResourceErrorBodyResponse properties;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class MoveCollectionPropertiesResponseErrors {
     }
 
     /**
-     * The move resource error body.
+     * @return The move resource error body.
      * 
-    */
+     */
     public Optional<MoveResourceErrorBodyResponse> properties() {
         return Optional.ofNullable(this.properties);
     }

@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HybridComputeSettingsPropertiesResponse {
-    /**
-     * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
-     * 
-     */
+        /**
+         * @return Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+         * 
+         */
     private final String autoProvision;
-    /**
-     * State of the service principal and its secret
-     * 
-     */
+        /**
+         * @return State of the service principal and its secret
+         * 
+         */
     private final String hybridComputeProvisioningState;
-    /**
-     * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
-     * 
-     */
+        /**
+         * @return For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+         * 
+         */
     private final @Nullable ProxyServerPropertiesResponse proxyServer;
-    /**
-     * The location where the metadata of machines will be stored
-     * 
-     */
+        /**
+         * @return The location where the metadata of machines will be stored
+         * 
+         */
     private final @Nullable String region;
-    /**
-     * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
-     * 
-     */
+        /**
+         * @return The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+         * 
+         */
     private final @Nullable String resourceGroupName;
-    /**
-     * An object to access resources that are secured by an Azure AD tenant.
-     * 
-     */
+        /**
+         * @return An object to access resources that are secured by an Azure AD tenant.
+         * 
+         */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class HybridComputeSettingsPropertiesResponse {
     }
 
     /**
-     * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+     * @return Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
      * 
-    */
+     */
     public String autoProvision() {
         return this.autoProvision;
     }
     /**
-     * State of the service principal and its secret
+     * @return State of the service principal and its secret
      * 
-    */
+     */
     public String hybridComputeProvisioningState() {
         return this.hybridComputeProvisioningState;
     }
     /**
-     * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+     * @return For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
      * 
-    */
+     */
     public Optional<ProxyServerPropertiesResponse> proxyServer() {
         return Optional.ofNullable(this.proxyServer);
     }
     /**
-     * The location where the metadata of machines will be stored
+     * @return The location where the metadata of machines will be stored
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+     * @return The name of the resource group where Arc (Hybrid Compute) connectors are connected.
      * 
-    */
+     */
     public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
-     * An object to access resources that are secured by an Azure AD tenant.
+     * @return An object to access resources that are secured by an Azure AD tenant.
      * 
-    */
+     */
     public Optional<ServicePrincipalPropertiesResponse> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }

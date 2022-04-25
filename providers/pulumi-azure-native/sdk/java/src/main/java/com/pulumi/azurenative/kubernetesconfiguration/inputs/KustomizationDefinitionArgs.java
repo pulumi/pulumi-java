@@ -33,6 +33,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="dependsOn")
     private @Nullable Output<List<DependsOnDefinitionArgs>> dependsOn;
 
+    /**
+     * @return Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
+     * 
+     */
     public Optional<Output<List<DependsOnDefinitionArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -44,6 +48,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="force")
     private @Nullable Output<Boolean> force;
 
+    /**
+     * @return Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
+     * 
+     */
     public Optional<Output<Boolean>> force() {
         return Optional.ofNullable(this.force);
     }
@@ -55,6 +63,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path in the source reference to reconcile on the cluster.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -66,6 +78,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="prune")
     private @Nullable Output<Boolean> prune;
 
+    /**
+     * @return Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
+     * 
+     */
     public Optional<Output<Boolean>> prune() {
         return Optional.ofNullable(this.prune);
     }
@@ -77,6 +93,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="retryIntervalInSeconds")
     private @Nullable Output<Double> retryIntervalInSeconds;
 
+    /**
+     * @return The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
+     * 
+     */
     public Optional<Output<Double>> retryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
@@ -88,6 +108,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="syncIntervalInSeconds")
     private @Nullable Output<Double> syncIntervalInSeconds;
 
+    /**
+     * @return The interval at which to re-reconcile the Kustomization on the cluster.
+     * 
+     */
     public Optional<Output<Double>> syncIntervalInSeconds() {
         return Optional.ofNullable(this.syncIntervalInSeconds);
     }
@@ -99,6 +123,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="timeoutInSeconds")
     private @Nullable Output<Double> timeoutInSeconds;
 
+    /**
+     * @return The maximum time to attempt to reconcile the Kustomization on the cluster.
+     * 
+     */
     public Optional<Output<Double>> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -110,6 +138,10 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="validation")
     private @Nullable Output<Either<String,KustomizationValidationType>> validation;
 
+    /**
+     * @return Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+     * 
+     */
     public Optional<Output<Either<String,KustomizationValidationType>>> validation() {
         return Optional.ofNullable(this.validation);
     }
@@ -145,86 +177,200 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
             $ = new KustomizationDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<DependsOnDefinitionArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<DependsOnDefinitionArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(DependsOnDefinitionArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param force Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(@Nullable Output<Boolean> force) {
             $.force = force;
             return this;
         }
 
+        /**
+         * @param force Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder force(Boolean force) {
             return force(Output.of(force));
         }
 
+        /**
+         * @param path The path in the source reference to reconcile on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path in the source reference to reconcile on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param prune Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prune(@Nullable Output<Boolean> prune) {
             $.prune = prune;
             return this;
         }
 
+        /**
+         * @param prune Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prune(Boolean prune) {
             return prune(Output.of(prune));
         }
 
+        /**
+         * @param retryIntervalInSeconds The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryIntervalInSeconds(@Nullable Output<Double> retryIntervalInSeconds) {
             $.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param retryIntervalInSeconds The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryIntervalInSeconds(Double retryIntervalInSeconds) {
             return retryIntervalInSeconds(Output.of(retryIntervalInSeconds));
         }
 
+        /**
+         * @param syncIntervalInSeconds The interval at which to re-reconcile the Kustomization on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncIntervalInSeconds(@Nullable Output<Double> syncIntervalInSeconds) {
             $.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param syncIntervalInSeconds The interval at which to re-reconcile the Kustomization on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncIntervalInSeconds(Double syncIntervalInSeconds) {
             return syncIntervalInSeconds(Output.of(syncIntervalInSeconds));
         }
 
+        /**
+         * @param timeoutInSeconds The maximum time to attempt to reconcile the Kustomization on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Output<Double> timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds The maximum time to attempt to reconcile the Kustomization on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(Double timeoutInSeconds) {
             return timeoutInSeconds(Output.of(timeoutInSeconds));
         }
 
+        /**
+         * @param validation Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(@Nullable Output<Either<String,KustomizationValidationType>> validation) {
             $.validation = validation;
             return this;
         }
 
+        /**
+         * @param validation Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(Either<String,KustomizationValidationType> validation) {
             return validation(Output.of(validation));
         }
 
+        /**
+         * @param validation Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(String validation) {
             return validation(Either.ofLeft(validation));
         }
 
+        /**
+         * @param validation Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(KustomizationValidationType validation) {
             return validation(Either.ofRight(validation));
         }

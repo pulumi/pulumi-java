@@ -17,35 +17,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IndexingPolicyResponse {
-    /**
-     * Indicates if the indexing policy is automatic
-     * 
-     */
+        /**
+         * @return Indicates if the indexing policy is automatic
+         * 
+         */
     private final @Nullable Boolean automatic;
-    /**
-     * List of composite path list
-     * 
-     */
+        /**
+         * @return List of composite path list
+         * 
+         */
     private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
-    /**
-     * List of paths to exclude from indexing
-     * 
-     */
+        /**
+         * @return List of paths to exclude from indexing
+         * 
+         */
     private final @Nullable List<ExcludedPathResponse> excludedPaths;
-    /**
-     * List of paths to include in the indexing
-     * 
-     */
+        /**
+         * @return List of paths to include in the indexing
+         * 
+         */
     private final @Nullable List<IncludedPathResponse> includedPaths;
-    /**
-     * Indicates the indexing mode.
-     * 
-     */
+        /**
+         * @return Indicates the indexing mode.
+         * 
+         */
     private final @Nullable String indexingMode;
-    /**
-     * List of spatial specifics
-     * 
-     */
+        /**
+         * @return List of spatial specifics
+         * 
+         */
     private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
     @CustomType.Constructor
@@ -65,44 +65,44 @@ public final class IndexingPolicyResponse {
     }
 
     /**
-     * Indicates if the indexing policy is automatic
+     * @return Indicates if the indexing policy is automatic
      * 
-    */
+     */
     public Optional<Boolean> automatic() {
         return Optional.ofNullable(this.automatic);
     }
     /**
-     * List of composite path list
+     * @return List of composite path list
      * 
-    */
+     */
     public List<List<CompositePathResponse>> compositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }
     /**
-     * List of paths to exclude from indexing
+     * @return List of paths to exclude from indexing
      * 
-    */
+     */
     public List<ExcludedPathResponse> excludedPaths() {
         return this.excludedPaths == null ? List.of() : this.excludedPaths;
     }
     /**
-     * List of paths to include in the indexing
+     * @return List of paths to include in the indexing
      * 
-    */
+     */
     public List<IncludedPathResponse> includedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
     }
     /**
-     * Indicates the indexing mode.
+     * @return Indicates the indexing mode.
      * 
-    */
+     */
     public Optional<String> indexingMode() {
         return Optional.ofNullable(this.indexingMode);
     }
     /**
-     * List of spatial specifics
+     * @return List of spatial specifics
      * 
-    */
+     */
     public List<SpatialSpecResponse> spatialIndexes() {
         return this.spatialIndexes == null ? List.of() : this.spatialIndexes;
     }

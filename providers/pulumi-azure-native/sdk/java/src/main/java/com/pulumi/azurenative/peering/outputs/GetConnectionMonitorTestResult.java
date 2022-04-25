@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectionMonitorTestResult {
-    /**
-     * The Connection Monitor test destination
-     * 
-     */
+        /**
+         * @return The Connection Monitor test destination
+         * 
+         */
     private final @Nullable String destination;
-    /**
-     * The Connection Monitor test destination port
-     * 
-     */
+        /**
+         * @return The Connection Monitor test destination port
+         * 
+         */
     private final @Nullable Integer destinationPort;
-    /**
-     * The ID of the resource.
-     * 
-     */
+        /**
+         * @return The ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The flag that indicates if the Connection Monitor test is successful or not.
-     * 
-     */
+        /**
+         * @return The flag that indicates if the Connection Monitor test is successful or not.
+         * 
+         */
     private final Boolean isTestSuccessful;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The path representing the Connection Monitor test.
-     * 
-     */
+        /**
+         * @return The path representing the Connection Monitor test.
+         * 
+         */
     private final List<String> path;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The Connection Monitor test source agent
-     * 
-     */
+        /**
+         * @return The Connection Monitor test source agent
+         * 
+         */
     private final @Nullable String sourceAgent;
-    /**
-     * The Connection Monitor test frequency in seconds
-     * 
-     */
+        /**
+         * @return The Connection Monitor test frequency in seconds
+         * 
+         */
     private final @Nullable Integer testFrequencyInSec;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetConnectionMonitorTestResult {
     }
 
     /**
-     * The Connection Monitor test destination
+     * @return The Connection Monitor test destination
      * 
-    */
+     */
     public Optional<String> destination() {
         return Optional.ofNullable(this.destination);
     }
     /**
-     * The Connection Monitor test destination port
+     * @return The Connection Monitor test destination port
      * 
-    */
+     */
     public Optional<Integer> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The flag that indicates if the Connection Monitor test is successful or not.
+     * @return The flag that indicates if the Connection Monitor test is successful or not.
      * 
-    */
+     */
     public Boolean isTestSuccessful() {
         return this.isTestSuccessful;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The path representing the Connection Monitor test.
+     * @return The path representing the Connection Monitor test.
      * 
-    */
+     */
     public List<String> path() {
         return this.path;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The Connection Monitor test source agent
+     * @return The Connection Monitor test source agent
      * 
-    */
+     */
     public Optional<String> sourceAgent() {
         return Optional.ofNullable(this.sourceAgent);
     }
     /**
-     * The Connection Monitor test frequency in seconds
+     * @return The Connection Monitor test frequency in seconds
      * 
-    */
+     */
     public Optional<Integer> testFrequencyInSec() {
         return Optional.ofNullable(this.testFrequencyInSec);
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

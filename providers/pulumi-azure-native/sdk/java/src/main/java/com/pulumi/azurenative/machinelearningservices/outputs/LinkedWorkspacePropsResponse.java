@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LinkedWorkspacePropsResponse {
-    /**
-     * ResourceId of the link target of the linked workspace.
-     * 
-     */
+        /**
+         * @return ResourceId of the link target of the linked workspace.
+         * 
+         */
     private final @Nullable String linkedWorkspaceResourceId;
-    /**
-     * ResourceId of the user assigned identity for the linked workspace.
-     * 
-     */
+        /**
+         * @return ResourceId of the user assigned identity for the linked workspace.
+         * 
+         */
     private final @Nullable String userAssignedIdentityResourceId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class LinkedWorkspacePropsResponse {
     }
 
     /**
-     * ResourceId of the link target of the linked workspace.
+     * @return ResourceId of the link target of the linked workspace.
      * 
-    */
+     */
     public Optional<String> linkedWorkspaceResourceId() {
         return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
     /**
-     * ResourceId of the user assigned identity for the linked workspace.
+     * @return ResourceId of the user assigned identity for the linked workspace.
      * 
-    */
+     */
     public Optional<String> userAssignedIdentityResourceId() {
         return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }

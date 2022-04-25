@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkProfileResponse {
-    /**
-     * The CIDR used for OpenShift/Kubernetes Pods (immutable).
-     * 
-     */
+        /**
+         * @return The CIDR used for OpenShift/Kubernetes Pods (immutable).
+         * 
+         */
     private final @Nullable String podCidr;
-    /**
-     * The CIDR used for OpenShift/Kubernetes Services (immutable).
-     * 
-     */
+        /**
+         * @return The CIDR used for OpenShift/Kubernetes Services (immutable).
+         * 
+         */
     private final @Nullable String serviceCidr;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class NetworkProfileResponse {
     }
 
     /**
-     * The CIDR used for OpenShift/Kubernetes Pods (immutable).
+     * @return The CIDR used for OpenShift/Kubernetes Pods (immutable).
      * 
-    */
+     */
     public Optional<String> podCidr() {
         return Optional.ofNullable(this.podCidr);
     }
     /**
-     * The CIDR used for OpenShift/Kubernetes Services (immutable).
+     * @return The CIDR used for OpenShift/Kubernetes Services (immutable).
      * 
-    */
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }

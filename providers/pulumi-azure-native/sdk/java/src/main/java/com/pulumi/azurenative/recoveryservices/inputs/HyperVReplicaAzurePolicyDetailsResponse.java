@@ -27,6 +27,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="activeStorageAccountId")
     private @Nullable String activeStorageAccountId;
 
+    /**
+     * @return The active storage account Id.
+     * 
+     */
     public Optional<String> activeStorageAccountId() {
         return Optional.ofNullable(this.activeStorageAccountId);
     }
@@ -38,6 +42,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
     private @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
+    /**
+     * @return The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+     * 
+     */
     public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
@@ -49,6 +57,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="encryption")
     private @Nullable String encryption;
 
+    /**
+     * @return A value indicating whether encryption is enabled for virtual machines in this cloud.
+     * 
+     */
     public Optional<String> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -61,6 +73,11 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;HyperVReplicaAzure&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -72,6 +89,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="onlineReplicationStartTime")
     private @Nullable String onlineReplicationStartTime;
 
+    /**
+     * @return The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+     * 
+     */
     public Optional<String> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
@@ -83,6 +104,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="recoveryPointHistoryDurationInHours")
     private @Nullable Integer recoveryPointHistoryDurationInHours;
 
+    /**
+     * @return The duration (in hours) to which point the recovery history needs to be maintained.
+     * 
+     */
     public Optional<Integer> recoveryPointHistoryDurationInHours() {
         return Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
@@ -94,6 +119,10 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
     @Import(name="replicationInterval")
     private @Nullable Integer replicationInterval;
 
+    /**
+     * @return The replication interval.
+     * 
+     */
     public Optional<Integer> replicationInterval() {
         return Optional.ofNullable(this.replicationInterval);
     }
@@ -128,36 +157,79 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends com.pulumi.re
             $ = new HyperVReplicaAzurePolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeStorageAccountId The active storage account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeStorageAccountId(@Nullable String activeStorageAccountId) {
             $.activeStorageAccountId = activeStorageAccountId;
             return this;
         }
 
+        /**
+         * @param applicationConsistentSnapshotFrequencyInHours The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
+        /**
+         * @param encryption A value indicating whether encryption is enabled for virtual machines in this cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable String encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;HyperVReplicaAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param onlineReplicationStartTime The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
+        /**
+         * @param recoveryPointHistoryDurationInHours The duration (in hours) to which point the recovery history needs to be maintained.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
             $.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
             return this;
         }
 
+        /**
+         * @param replicationInterval The replication interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationInterval(@Nullable Integer replicationInterval) {
             $.replicationInterval = replicationInterval;
             return this;

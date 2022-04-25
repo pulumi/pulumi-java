@@ -24,6 +24,10 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends com.p
     @Import(name="keyName", required=true)
     private Output<String> keyName;
 
+    /**
+     * @return Encryption Key name
+     * 
+     */
     public Output<String> keyName() {
         return this.keyName;
     }
@@ -35,6 +39,10 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends com.p
     @Import(name="keyVersion", required=true)
     private Output<String> keyVersion;
 
+    /**
+     * @return Encryption Key Version
+     * 
+     */
     public Output<String> keyVersion() {
         return this.keyVersion;
     }
@@ -46,6 +54,10 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends com.p
     @Import(name="vaultBaseUrl", required=true)
     private Output<String> vaultBaseUrl;
 
+    /**
+     * @return vault base Url
+     * 
+     */
     public Output<String> vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
@@ -76,29 +88,65 @@ public final class ACIServiceCreateRequestEncryptionPropertiesArgs extends com.p
             $ = new ACIServiceCreateRequestEncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Encryption Key name
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName Encryption Key name
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVersion Encryption Key Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion Encryption Key Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }
 
+        /**
+         * @param vaultBaseUrl vault base Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(Output<String> vaultBaseUrl) {
             $.vaultBaseUrl = vaultBaseUrl;
             return this;
         }
 
+        /**
+         * @param vaultBaseUrl vault base Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             return vaultBaseUrl(Output.of(vaultBaseUrl));
         }

@@ -24,6 +24,10 @@ public final class ProductDetailsArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="hierarchyInformation", required=true)
     private Output<HierarchyInformationArgs> hierarchyInformation;
 
+    /**
+     * @return Hierarchy of the product which uniquely identifies the product
+     * 
+     */
     public Output<HierarchyInformationArgs> hierarchyInformation() {
         return this.hierarchyInformation;
     }
@@ -52,11 +56,23 @@ public final class ProductDetailsArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ProductDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hierarchyInformation Hierarchy of the product which uniquely identifies the product
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyInformation(Output<HierarchyInformationArgs> hierarchyInformation) {
             $.hierarchyInformation = hierarchyInformation;
             return this;
         }
 
+        /**
+         * @param hierarchyInformation Hierarchy of the product which uniquely identifies the product
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyInformation(HierarchyInformationArgs hierarchyInformation) {
             return hierarchyInformation(Output.of(hierarchyInformation));
         }

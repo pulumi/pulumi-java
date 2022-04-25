@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityPolicyResult {
     private final String deploymentStatus;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * object which contains security policy parameters
-     * 
-     */
+        /**
+         * @return object which contains security policy parameters
+         * 
+         */
     private final @Nullable SecurityPolicyWebApplicationFirewallParametersResponse parameters;
-    /**
-     * Provisioning status
-     * 
-     */
+        /**
+         * @return Provisioning status
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Read only system data
-     * 
-     */
+        /**
+         * @return Read only system data
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,44 +67,44 @@ public final class GetSecurityPolicyResult {
         return this.deploymentStatus;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * object which contains security policy parameters
+     * @return object which contains security policy parameters
      * 
-    */
+     */
     public Optional<SecurityPolicyWebApplicationFirewallParametersResponse> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

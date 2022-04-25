@@ -12,30 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoScaleSettingsResponse {
-    /**
-     * Maximum number of instances for this deployment.
-     * 
-     */
+        /**
+         * @return Maximum number of instances for this deployment.
+         * 
+         */
     private final @Nullable Integer maxInstances;
-    /**
-     * Minimum number of instances for this deployment.
-     * 
-     */
+        /**
+         * @return Minimum number of instances for this deployment.
+         * 
+         */
     private final @Nullable Integer minInstances;
-    /**
-     * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
-     * 
-     */
+        /**
+         * @return The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+         * 
+         */
     private final @Nullable String pollingInterval;
-    /**
-     * Expected value is &#39;Auto&#39;.
-     * 
-     */
+        /**
+         * @return
+         * Expected value is &#39;Auto&#39;.
+         * 
+         */
     private final String scaleType;
-    /**
-     * Target CPU usage for the autoscaler.
-     * 
-     */
+        /**
+         * @return Target CPU usage for the autoscaler.
+         * 
+         */
     private final @Nullable Integer targetUtilizationPercentage;
 
     @CustomType.Constructor
@@ -53,37 +54,38 @@ public final class AutoScaleSettingsResponse {
     }
 
     /**
-     * Maximum number of instances for this deployment.
+     * @return Maximum number of instances for this deployment.
      * 
-    */
+     */
     public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
-     * Minimum number of instances for this deployment.
+     * @return Minimum number of instances for this deployment.
      * 
-    */
+     */
     public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
-     * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
+     * @return The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
      * 
-    */
+     */
     public Optional<String> pollingInterval() {
         return Optional.ofNullable(this.pollingInterval);
     }
     /**
+     * @return
      * Expected value is &#39;Auto&#39;.
      * 
-    */
+     */
     public String scaleType() {
         return this.scaleType;
     }
     /**
-     * Target CPU usage for the autoscaler.
+     * @return Target CPU usage for the autoscaler.
      * 
-    */
+     */
     public Optional<Integer> targetUtilizationPercentage() {
         return Optional.ofNullable(this.targetUtilizationPercentage);
     }

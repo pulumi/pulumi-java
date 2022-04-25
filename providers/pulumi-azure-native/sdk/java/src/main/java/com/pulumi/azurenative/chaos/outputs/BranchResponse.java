@@ -14,15 +14,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BranchResponse {
-    /**
-     * List of actions.
-     * 
-     */
+        /**
+         * @return List of actions.
+         * 
+         */
     private final List<Object> actions;
-    /**
-     * String of the branch name.
-     * 
-     */
+        /**
+         * @return String of the branch name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -34,16 +34,16 @@ public final class BranchResponse {
     }
 
     /**
-     * List of actions.
+     * @return List of actions.
      * 
-    */
+     */
     public List<Object> actions() {
         return this.actions;
     }
     /**
-     * String of the branch name.
+     * @return String of the branch name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

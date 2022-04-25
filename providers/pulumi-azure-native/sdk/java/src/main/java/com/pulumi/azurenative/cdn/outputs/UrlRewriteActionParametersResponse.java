@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UrlRewriteActionParametersResponse {
-    /**
-     * Define the relative URL to which the above requests will be rewritten by.
-     * 
-     */
+        /**
+         * @return Define the relative URL to which the above requests will be rewritten by.
+         * 
+         */
     private final String destination;
     private final String odataType;
-    /**
-     * Whether to preserve unmatched path. Default value is true.
-     * 
-     */
+        /**
+         * @return Whether to preserve unmatched path. Default value is true.
+         * 
+         */
     private final @Nullable Boolean preserveUnmatchedPath;
-    /**
-     * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
-     * 
-     */
+        /**
+         * @return define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+         * 
+         */
     private final String sourcePattern;
 
     @CustomType.Constructor
@@ -42,9 +42,9 @@ public final class UrlRewriteActionParametersResponse {
     }
 
     /**
-     * Define the relative URL to which the above requests will be rewritten by.
+     * @return Define the relative URL to which the above requests will be rewritten by.
      * 
-    */
+     */
     public String destination() {
         return this.destination;
     }
@@ -52,16 +52,16 @@ public final class UrlRewriteActionParametersResponse {
         return this.odataType;
     }
     /**
-     * Whether to preserve unmatched path. Default value is true.
+     * @return Whether to preserve unmatched path. Default value is true.
      * 
-    */
+     */
     public Optional<Boolean> preserveUnmatchedPath() {
         return Optional.ofNullable(this.preserveUnmatchedPath);
     }
     /**
-     * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+     * @return define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
      * 
-    */
+     */
     public String sourcePattern() {
         return this.sourcePattern;
     }

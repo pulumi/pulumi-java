@@ -12,41 +12,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetASCDataConnectorResult {
-    /**
-     * The available data types for the connector.
-     * 
-     */
+        /**
+         * @return The available data types for the connector.
+         * 
+         */
     private final @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes;
-    /**
-     * Etag of the azure resource
-     * 
-     */
+        /**
+         * @return Etag of the azure resource
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The kind of the data connector
-     * Expected value is &#39;AzureSecurityCenter&#39;.
-     * 
-     */
+        /**
+         * @return The kind of the data connector
+         * Expected value is &#39;AzureSecurityCenter&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * The subscription id to connect to, and get the data from.
-     * 
-     */
+        /**
+         * @return The subscription id to connect to, and get the data from.
+         * 
+         */
     private final @Nullable String subscriptionId;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -68,52 +68,52 @@ public final class GetASCDataConnectorResult {
     }
 
     /**
-     * The available data types for the connector.
+     * @return The available data types for the connector.
      * 
-    */
+     */
     public Optional<AlertsDataTypeOfDataConnectorResponse> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the data connector
+     * @return The kind of the data connector
      * Expected value is &#39;AzureSecurityCenter&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The subscription id to connect to, and get the data from.
+     * @return The subscription id to connect to, and get the data from.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

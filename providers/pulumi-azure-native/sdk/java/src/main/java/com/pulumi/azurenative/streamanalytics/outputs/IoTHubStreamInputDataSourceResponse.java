@@ -11,36 +11,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IoTHubStreamInputDataSourceResponse {
-    /**
-     * The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
-     * 
-     */
+        /**
+         * @return The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
+         * 
+         */
     private final @Nullable String consumerGroupName;
-    /**
-     * The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
-     * 
-     */
+        /**
+         * @return The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
+         * 
+         */
     private final @Nullable String endpoint;
-    /**
-     * The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String iotHubNamespace;
-    /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String sharedAccessPolicyKey;
-    /**
-     * The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String sharedAccessPolicyName;
-    /**
-     * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;Microsoft.Devices/IotHubs&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Microsoft.Devices/IotHubs&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,45 +60,45 @@ public final class IoTHubStreamInputDataSourceResponse {
     }
 
     /**
-     * The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
+     * @return The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
      * 
-    */
+     */
     public Optional<String> consumerGroupName() {
         return Optional.ofNullable(this.consumerGroupName);
     }
     /**
-     * The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
+     * @return The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
+     * @return The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> iotHubNamespace() {
         return Optional.ofNullable(this.iotHubNamespace);
     }
     /**
-     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     * @return The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> sharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
-     * The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
+     * @return The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> sharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
     /**
-     * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.Devices/IotHubs&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

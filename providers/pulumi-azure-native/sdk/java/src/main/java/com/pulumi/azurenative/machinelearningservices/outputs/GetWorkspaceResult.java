@@ -23,145 +23,145 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkspaceResult {
-    /**
-     * The flag to indicate whether to allow public access when behind VNet.
-     * 
-     */
+        /**
+         * @return The flag to indicate whether to allow public access when behind VNet.
+         * 
+         */
     private final @Nullable Boolean allowPublicAccessWhenBehindVnet;
-    /**
-     * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
-     * 
-     */
+        /**
+         * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         */
     private final @Nullable String applicationInsights;
-    /**
-     * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
-     * 
-     */
+        /**
+         * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         */
     private final @Nullable String containerRegistry;
-    /**
-     * The description of this workspace.
-     * 
-     */
+        /**
+         * @return The description of this workspace.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Url for the discovery service to identify regional endpoints for machine learning experimentation services
-     * 
-     */
+        /**
+         * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
+         * 
+         */
     private final @Nullable String discoveryUrl;
-    /**
-     * The encryption settings of Azure ML workspace.
-     * 
-     */
+        /**
+         * @return The encryption settings of Azure ML workspace.
+         * 
+         */
     private final @Nullable EncryptionPropertyResponse encryption;
-    /**
-     * The friendly name for this workspace. This name in mutable
-     * 
-     */
+        /**
+         * @return The friendly name for this workspace. This name in mutable
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
-     * 
-     */
+        /**
+         * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+         * 
+         */
     private final @Nullable Boolean hbiWorkspace;
-    /**
-     * Specifies the resource ID.
-     * 
-     */
+        /**
+         * @return Specifies the resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the resource.
-     * 
-     */
+        /**
+         * @return The identity of the resource.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * The compute name for image build
-     * 
-     */
+        /**
+         * @return The compute name for image build
+         * 
+         */
     private final @Nullable String imageBuildCompute;
-    /**
-     * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
-     * 
-     */
+        /**
+         * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         */
     private final @Nullable String keyVault;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Specifies the name of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The notebook info of Azure ML workspace.
-     * 
-     */
+        /**
+         * @return The notebook info of Azure ML workspace.
+         * 
+         */
     private final NotebookResourceInfoResponse notebookInfo;
-    /**
-     * The user assigned identity resource id that represents the workspace identity.
-     * 
-     */
+        /**
+         * @return The user assigned identity resource id that represents the workspace identity.
+         * 
+         */
     private final @Nullable String primaryUserAssignedIdentity;
-    /**
-     * The list of private endpoint connections in the workspace.
-     * 
-     */
+        /**
+         * @return The list of private endpoint connections in the workspace.
+         * 
+         */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Count of private connections in the workspace
-     * 
-     */
+        /**
+         * @return Count of private connections in the workspace
+         * 
+         */
     private final Integer privateLinkCount;
-    /**
-     * The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
-     * 
-     */
+        /**
+         * @return The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The service managed resource settings.
-     * 
-     */
+        /**
+         * @return The service managed resource settings.
+         * 
+         */
     private final @Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings;
-    /**
-     * The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
-     * 
-     */
+        /**
+         * @return The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
+         * 
+         */
     private final String serviceProvisionedResourceGroup;
-    /**
-     * The list of shared private link resources in this workspace.
-     * 
-     */
+        /**
+         * @return The list of shared private link resources in this workspace.
+         * 
+         */
     private final @Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources;
-    /**
-     * The sku of the workspace.
-     * 
-     */
+        /**
+         * @return The sku of the workspace.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
-     * 
-     */
+        /**
+         * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+         * 
+         */
     private final @Nullable String storageAccount;
-    /**
-     * Read only system data
-     * 
-     */
+        /**
+         * @return Read only system data
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Contains resource tags defined as key/value pairs.
-     * 
-     */
+        /**
+         * @return Contains resource tags defined as key/value pairs.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Specifies the type of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The immutable id associated with this workspace.
-     * 
-     */
+        /**
+         * @return The immutable id associated with this workspace.
+         * 
+         */
     private final String workspaceId;
 
     @CustomType.Constructor
@@ -225,198 +225,198 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * The flag to indicate whether to allow public access when behind VNet.
+     * @return The flag to indicate whether to allow public access when behind VNet.
      * 
-    */
+     */
     public Optional<Boolean> allowPublicAccessWhenBehindVnet() {
         return Optional.ofNullable(this.allowPublicAccessWhenBehindVnet);
     }
     /**
-     * ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
+     * @return ARM id of the application insights associated with this workspace. This cannot be changed once the workspace has been created
      * 
-    */
+     */
     public Optional<String> applicationInsights() {
         return Optional.ofNullable(this.applicationInsights);
     }
     /**
-     * ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
+     * @return ARM id of the container registry associated with this workspace. This cannot be changed once the workspace has been created
      * 
-    */
+     */
     public Optional<String> containerRegistry() {
         return Optional.ofNullable(this.containerRegistry);
     }
     /**
-     * The description of this workspace.
+     * @return The description of this workspace.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Url for the discovery service to identify regional endpoints for machine learning experimentation services
+     * @return Url for the discovery service to identify regional endpoints for machine learning experimentation services
      * 
-    */
+     */
     public Optional<String> discoveryUrl() {
         return Optional.ofNullable(this.discoveryUrl);
     }
     /**
-     * The encryption settings of Azure ML workspace.
+     * @return The encryption settings of Azure ML workspace.
      * 
-    */
+     */
     public Optional<EncryptionPropertyResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * The friendly name for this workspace. This name in mutable
+     * @return The friendly name for this workspace. This name in mutable
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
+     * @return The flag to signal HBI data in the workspace and reduce diagnostic data collected by the service
      * 
-    */
+     */
     public Optional<Boolean> hbiWorkspace() {
         return Optional.ofNullable(this.hbiWorkspace);
     }
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The compute name for image build
+     * @return The compute name for image build
      * 
-    */
+     */
     public Optional<String> imageBuildCompute() {
         return Optional.ofNullable(this.imageBuildCompute);
     }
     /**
-     * ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
+     * @return ARM id of the key vault associated with this workspace. This cannot be changed once the workspace has been created
      * 
-    */
+     */
     public Optional<String> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The notebook info of Azure ML workspace.
+     * @return The notebook info of Azure ML workspace.
      * 
-    */
+     */
     public NotebookResourceInfoResponse notebookInfo() {
         return this.notebookInfo;
     }
     /**
-     * The user assigned identity resource id that represents the workspace identity.
+     * @return The user assigned identity resource id that represents the workspace identity.
      * 
-    */
+     */
     public Optional<String> primaryUserAssignedIdentity() {
         return Optional.ofNullable(this.primaryUserAssignedIdentity);
     }
     /**
-     * The list of private endpoint connections in the workspace.
+     * @return The list of private endpoint connections in the workspace.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Count of private connections in the workspace
+     * @return Count of private connections in the workspace
      * 
-    */
+     */
     public Integer privateLinkCount() {
         return this.privateLinkCount;
     }
     /**
-     * The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of workspace resource. The provisioningState is to indicate states for resource provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The service managed resource settings.
+     * @return The service managed resource settings.
      * 
-    */
+     */
     public Optional<ServiceManagedResourcesSettingsResponse> serviceManagedResourcesSettings() {
         return Optional.ofNullable(this.serviceManagedResourcesSettings);
     }
     /**
-     * The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
+     * @return The name of the managed resource group created by workspace RP in customer subscription if the workspace is CMK workspace
      * 
-    */
+     */
     public String serviceProvisionedResourceGroup() {
         return this.serviceProvisionedResourceGroup;
     }
     /**
-     * The list of shared private link resources in this workspace.
+     * @return The list of shared private link resources in this workspace.
      * 
-    */
+     */
     public List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources == null ? List.of() : this.sharedPrivateLinkResources;
     }
     /**
-     * The sku of the workspace.
+     * @return The sku of the workspace.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
+     * @return ARM id of the storage account associated with this workspace. This cannot be changed once the workspace has been created
      * 
-    */
+     */
     public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The immutable id associated with this workspace.
+     * @return The immutable id associated with this workspace.
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }

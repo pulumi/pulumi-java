@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkInterfaceDnsSettingsResponse {
-    /**
-     * If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
-     * 
-     */
+        /**
+         * @return If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
+         * 
+         */
     private final List<String> appliedDnsServers;
-    /**
-     * List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
-     * 
-     */
+        /**
+         * @return List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+         * 
+         */
     private final @Nullable List<String> dnsServers;
-    /**
-     * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
-     * 
-     */
+        /**
+         * @return Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+         * 
+         */
     private final @Nullable String internalDnsNameLabel;
-    /**
-     * Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
-     * 
-     */
+        /**
+         * @return Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
+         * 
+         */
     private final String internalDomainNameSuffix;
-    /**
-     * Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
-     * 
-     */
+        /**
+         * @return Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
+         * 
+         */
     private final String internalFqdn;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class NetworkInterfaceDnsSettingsResponse {
     }
 
     /**
-     * If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
+     * @return If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
      * 
-    */
+     */
     public List<String> appliedDnsServers() {
         return this.appliedDnsServers;
     }
     /**
-     * List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+     * @return List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
-     * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+     * @return Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
      * 
-    */
+     */
     public Optional<String> internalDnsNameLabel() {
         return Optional.ofNullable(this.internalDnsNameLabel);
     }
     /**
-     * Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
+     * @return Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
      * 
-    */
+     */
     public String internalDomainNameSuffix() {
         return this.internalDomainNameSuffix;
     }
     /**
-     * Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
+     * @return Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
      * 
-    */
+     */
     public String internalFqdn() {
         return this.internalFqdn;
     }

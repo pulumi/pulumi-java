@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetKustoPoolAttachedDatabaseConfigurationResult {
-    /**
-     * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
-     * 
-     */
+        /**
+         * @return The list of databases from the clusterResourceId which are currently attached to the kusto pool.
+         * 
+         */
     private final List<String> attachedDatabaseNames;
-    /**
-     * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-     * 
-     */
+        /**
+         * @return The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+         * 
+         */
     private final String databaseName;
-    /**
-     * The default principals modification kind
-     * 
-     */
+        /**
+         * @return The default principals modification kind
+         * 
+         */
     private final String defaultPrincipalsModificationKind;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The resource id of the kusto pool where the databases you would like to attach reside.
-     * 
-     */
+        /**
+         * @return The resource id of the kusto pool where the databases you would like to attach reside.
+         * 
+         */
     private final String kustoPoolResourceId;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Table level sharing specifications
-     * 
-     */
+        /**
+         * @return Table level sharing specifications
+         * 
+         */
     private final @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
     }
 
     /**
-     * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
+     * @return The list of databases from the clusterResourceId which are currently attached to the kusto pool.
      * 
-    */
+     */
     public List<String> attachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
-     * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+     * @return The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * The default principals modification kind
+     * @return The default principals modification kind
      * 
-    */
+     */
     public String defaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource id of the kusto pool where the databases you would like to attach reside.
+     * @return The resource id of the kusto pool where the databases you would like to attach reside.
      * 
-    */
+     */
     public String kustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Table level sharing specifications
+     * @return Table level sharing specifications
      * 
-    */
+     */
     public Optional<TableLevelSharingPropertiesResponse> tableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

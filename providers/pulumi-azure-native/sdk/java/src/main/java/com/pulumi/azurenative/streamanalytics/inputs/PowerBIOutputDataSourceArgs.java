@@ -27,6 +27,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="dataset")
     private @Nullable Output<String> dataset;
 
+    /**
+     * @return The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -38,6 +42,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return The ID of the Power BI group.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -49,6 +57,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="groupName")
     private @Nullable Output<String> groupName;
 
+    /**
+     * @return The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
+     * 
+     */
     public Optional<Output<String>> groupName() {
         return Optional.ofNullable(this.groupName);
     }
@@ -60,6 +72,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="refreshToken")
     private @Nullable Output<String> refreshToken;
 
+    /**
+     * @return A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -71,6 +87,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="table")
     private @Nullable Output<String> table;
 
+    /**
+     * @return The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<String>> table() {
         return Optional.ofNullable(this.table);
     }
@@ -82,6 +102,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="tokenUserDisplayName")
     private @Nullable Output<String> tokenUserDisplayName;
 
+    /**
+     * @return The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * 
+     */
     public Optional<Output<String>> tokenUserDisplayName() {
         return Optional.ofNullable(this.tokenUserDisplayName);
     }
@@ -93,6 +117,10 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="tokenUserPrincipalName")
     private @Nullable Output<String> tokenUserPrincipalName;
 
+    /**
+     * @return The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * 
+     */
     public Optional<Output<String>> tokenUserPrincipalName() {
         return Optional.ofNullable(this.tokenUserPrincipalName);
     }
@@ -105,6 +133,11 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * Expected value is &#39;PowerBI&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -140,74 +173,172 @@ public final class PowerBIOutputDataSourceArgs extends com.pulumi.resources.Reso
             $ = new PowerBIOutputDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<String> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(String dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param groupId The ID of the Power BI group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId The ID of the Power BI group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param groupName The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(@Nullable Output<String> groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param groupName The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             return groupName(Output.of(groupName));
         }
 
+        /**
+         * @param refreshToken A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(String refreshToken) {
             return refreshToken(Output.of(refreshToken));
         }
 
+        /**
+         * @param table The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(@Nullable Output<String> table) {
             $.table = table;
             return this;
         }
 
+        /**
+         * @param table The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder table(String table) {
             return table(Output.of(table));
         }
 
+        /**
+         * @param tokenUserDisplayName The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
             $.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
+        /**
+         * @param tokenUserDisplayName The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserDisplayName(String tokenUserDisplayName) {
             return tokenUserDisplayName(Output.of(tokenUserDisplayName));
         }
 
+        /**
+         * @param tokenUserPrincipalName The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
             $.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
+        /**
+         * @param tokenUserPrincipalName The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUserPrincipalName(String tokenUserPrincipalName) {
             return tokenUserPrincipalName(Output.of(tokenUserPrincipalName));
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;PowerBI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;PowerBI&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

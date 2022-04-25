@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetManagedPrivateEndpointResult {
-    /**
-     * Etag identifies change in the resource.
-     * 
-     */
+        /**
+         * @return Etag identifies change in the resource.
+         * 
+         */
     private final String etag;
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Managed private endpoint properties.
-     * 
-     */
+        /**
+         * @return Managed private endpoint properties.
+         * 
+         */
     private final ManagedPrivateEndpointResponse properties;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetManagedPrivateEndpointResult {
     }
 
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Managed private endpoint properties.
+     * @return Managed private endpoint properties.
      * 
-    */
+     */
     public ManagedPrivateEndpointResponse properties() {
         return this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

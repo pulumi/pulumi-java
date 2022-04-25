@@ -26,6 +26,10 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="backendPort")
     private @Nullable Integer backendPort;
 
+    /**
+     * @return The port to which the external traffic will be redirected.
+     * 
+     */
     public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
@@ -37,6 +41,10 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="frontendPort")
     private @Nullable Integer frontendPort;
 
+    /**
+     * @return The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+     * 
+     */
     public Optional<Integer> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
@@ -48,6 +56,10 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="transportProtocol")
     private @Nullable String transportProtocol;
 
+    /**
+     * @return The transport protocol for the endpoint.
+     * 
+     */
     public Optional<String> transportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }
@@ -78,16 +90,34 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
             $ = new InboundNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort The port to which the external traffic will be redirected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(@Nullable Integer backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param frontendPort The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(@Nullable Integer frontendPort) {
             $.frontendPort = frontendPort;
             return this;
         }
 
+        /**
+         * @param transportProtocol The transport protocol for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transportProtocol(@Nullable String transportProtocol) {
             $.transportProtocol = transportProtocol;
             return this;

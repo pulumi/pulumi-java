@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SystemDataResponse {
-    /**
-     * The timestamp of the key vault resource creation (UTC).
-     * 
-     */
+        /**
+         * @return The timestamp of the key vault resource creation (UTC).
+         * 
+         */
     private final @Nullable String createdAt;
-    /**
-     * The identity that created the key vault resource.
-     * 
-     */
+        /**
+         * @return The identity that created the key vault resource.
+         * 
+         */
     private final @Nullable String createdBy;
-    /**
-     * The type of identity that created the key vault resource.
-     * 
-     */
+        /**
+         * @return The type of identity that created the key vault resource.
+         * 
+         */
     private final @Nullable String createdByType;
-    /**
-     * The timestamp of the key vault resource last modification (UTC).
-     * 
-     */
+        /**
+         * @return The timestamp of the key vault resource last modification (UTC).
+         * 
+         */
     private final @Nullable String lastModifiedAt;
-    /**
-     * The identity that last modified the key vault resource.
-     * 
-     */
+        /**
+         * @return The identity that last modified the key vault resource.
+         * 
+         */
     private final @Nullable String lastModifiedBy;
-    /**
-     * The type of identity that last modified the key vault resource.
-     * 
-     */
+        /**
+         * @return The type of identity that last modified the key vault resource.
+         * 
+         */
     private final @Nullable String lastModifiedByType;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class SystemDataResponse {
     }
 
     /**
-     * The timestamp of the key vault resource creation (UTC).
+     * @return The timestamp of the key vault resource creation (UTC).
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * The identity that created the key vault resource.
+     * @return The identity that created the key vault resource.
      * 
-    */
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The type of identity that created the key vault resource.
+     * @return The type of identity that created the key vault resource.
      * 
-    */
+     */
     public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
-     * The timestamp of the key vault resource last modification (UTC).
+     * @return The timestamp of the key vault resource last modification (UTC).
      * 
-    */
+     */
     public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
-     * The identity that last modified the key vault resource.
+     * @return The identity that last modified the key vault resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
-     * The type of identity that last modified the key vault resource.
+     * @return The type of identity that last modified the key vault resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }

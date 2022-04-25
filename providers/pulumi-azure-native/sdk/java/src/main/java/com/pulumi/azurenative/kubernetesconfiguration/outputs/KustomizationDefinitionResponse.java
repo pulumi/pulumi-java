@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KustomizationDefinitionResponse {
-    /**
-     * Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
-     * 
-     */
+        /**
+         * @return Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
+         * 
+         */
     private final @Nullable List<DependsOnDefinitionResponse> dependsOn;
-    /**
-     * Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
-     * 
-     */
+        /**
+         * @return Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
+         * 
+         */
     private final @Nullable Boolean force;
-    /**
-     * The path in the source reference to reconcile on the cluster.
-     * 
-     */
+        /**
+         * @return The path in the source reference to reconcile on the cluster.
+         * 
+         */
     private final @Nullable String path;
-    /**
-     * Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
-     * 
-     */
+        /**
+         * @return Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
+         * 
+         */
     private final @Nullable Boolean prune;
-    /**
-     * The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
-     * 
-     */
+        /**
+         * @return The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
+         * 
+         */
     private final @Nullable Double retryIntervalInSeconds;
-    /**
-     * The interval at which to re-reconcile the Kustomization on the cluster.
-     * 
-     */
+        /**
+         * @return The interval at which to re-reconcile the Kustomization on the cluster.
+         * 
+         */
     private final @Nullable Double syncIntervalInSeconds;
-    /**
-     * The maximum time to attempt to reconcile the Kustomization on the cluster.
-     * 
-     */
+        /**
+         * @return The maximum time to attempt to reconcile the Kustomization on the cluster.
+         * 
+         */
     private final @Nullable Double timeoutInSeconds;
-    /**
-     * Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
-     * 
-     */
+        /**
+         * @return Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+         * 
+         */
     private final @Nullable String validation;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class KustomizationDefinitionResponse {
     }
 
     /**
-     * Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
+     * @return Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
      * 
-    */
+     */
     public List<DependsOnDefinitionResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
+     * @return Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
      * 
-    */
+     */
     public Optional<Boolean> force() {
         return Optional.ofNullable(this.force);
     }
     /**
-     * The path in the source reference to reconcile on the cluster.
+     * @return The path in the source reference to reconcile on the cluster.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
+     * @return Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
      * 
-    */
+     */
     public Optional<Boolean> prune() {
         return Optional.ofNullable(this.prune);
     }
     /**
-     * The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
+     * @return The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
      * 
-    */
+     */
     public Optional<Double> retryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
     /**
-     * The interval at which to re-reconcile the Kustomization on the cluster.
+     * @return The interval at which to re-reconcile the Kustomization on the cluster.
      * 
-    */
+     */
     public Optional<Double> syncIntervalInSeconds() {
         return Optional.ofNullable(this.syncIntervalInSeconds);
     }
     /**
-     * The maximum time to attempt to reconcile the Kustomization on the cluster.
+     * @return The maximum time to attempt to reconcile the Kustomization on the cluster.
      * 
-    */
+     */
     public Optional<Double> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
-     * Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+     * @return Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
      * 
-    */
+     */
     public Optional<String> validation() {
         return Optional.ofNullable(this.validation);
     }

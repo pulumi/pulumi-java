@@ -25,6 +25,10 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends com.
     @Import(name="billingType")
     private @Nullable String billingType;
 
+    /**
+     * @return The type of billing. Will be MAU for all new customers. If &#39;Auths&#39;, it can be updated to &#39;MAU&#39;. Cannot be changed if value is &#39;MAU&#39;. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
+     * 
+     */
     public Optional<String> billingType() {
         return Optional.ofNullable(this.billingType);
     }
@@ -36,6 +40,10 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends com.
     @Import(name="effectiveStartDateUtc", required=true)
     private String effectiveStartDateUtc;
 
+    /**
+     * @return The data from which the billing type took effect
+     * 
+     */
     public String effectiveStartDateUtc() {
         return this.effectiveStartDateUtc;
     }
@@ -65,11 +73,23 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig extends com.
             $ = new B2CTenantResourcePropertiesResponseBillingConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingType The type of billing. Will be MAU for all new customers. If &#39;Auths&#39;, it can be updated to &#39;MAU&#39;. Cannot be changed if value is &#39;MAU&#39;. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingType(@Nullable String billingType) {
             $.billingType = billingType;
             return this;
         }
 
+        /**
+         * @param effectiveStartDateUtc The data from which the billing type took effect
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveStartDateUtc(String effectiveStartDateUtc) {
             $.effectiveStartDateUtc = effectiveStartDateUtc;
             return this;

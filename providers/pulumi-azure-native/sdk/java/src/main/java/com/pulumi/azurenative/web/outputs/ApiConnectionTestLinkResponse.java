@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiConnectionTestLinkResponse {
-    /**
-     * HTTP Method
-     * 
-     */
+        /**
+         * @return HTTP Method
+         * 
+         */
     private final @Nullable String method;
-    /**
-     * Test link request URI
-     * 
-     */
+        /**
+         * @return Test link request URI
+         * 
+         */
     private final @Nullable String requestUri;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ApiConnectionTestLinkResponse {
     }
 
     /**
-     * HTTP Method
+     * @return HTTP Method
      * 
-    */
+     */
     public Optional<String> method() {
         return Optional.ofNullable(this.method);
     }
     /**
-     * Test link request URI
+     * @return Test link request URI
      * 
-    */
+     */
     public Optional<String> requestUri() {
         return Optional.ofNullable(this.requestUri);
     }

@@ -28,6 +28,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backends")
     private @Nullable List<BackendResponse> backends;
 
+    /**
+     * @return The set of backends for this pool
+     * 
+     */
     public Optional<List<BackendResponse>> backends() {
         return Optional.ofNullable(this.backends);
     }
@@ -39,6 +43,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="healthProbeSettings")
     private @Nullable SubResourceResponse healthProbeSettings;
 
+    /**
+     * @return L7 health probe settings for a backend pool
+     * 
+     */
     public Optional<SubResourceResponse> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
@@ -50,6 +58,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -61,6 +73,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="loadBalancingSettings")
     private @Nullable SubResourceResponse loadBalancingSettings;
 
+    /**
+     * @return Load balancing settings for a backend pool
+     * 
+     */
     public Optional<SubResourceResponse> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
@@ -72,6 +88,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceState", required=true)
     private String resourceState;
 
+    /**
+     * @return Resource status.
+     * 
+     */
     public String resourceState() {
         return this.resourceState;
     }
@@ -94,6 +118,10 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -128,40 +156,88 @@ public final class BackendPoolResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackendPoolResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backends The set of backends for this pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(@Nullable List<BackendResponse> backends) {
             $.backends = backends;
             return this;
         }
 
+        /**
+         * @param backends The set of backends for this pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(BackendResponse... backends) {
             return backends(List.of(backends));
         }
 
+        /**
+         * @param healthProbeSettings L7 health probe settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
             $.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
             $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceState Resource status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceState(String resourceState) {
             $.resourceState = resourceState;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

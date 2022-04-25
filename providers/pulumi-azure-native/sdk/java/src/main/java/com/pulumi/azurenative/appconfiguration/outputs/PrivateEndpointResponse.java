@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointResponse {
-    /**
-     * The resource Id for private endpoint
-     * 
-     */
+        /**
+         * @return The resource Id for private endpoint
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class PrivateEndpointResponse {
     }
 
     /**
-     * The resource Id for private endpoint
+     * @return The resource Id for private endpoint
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

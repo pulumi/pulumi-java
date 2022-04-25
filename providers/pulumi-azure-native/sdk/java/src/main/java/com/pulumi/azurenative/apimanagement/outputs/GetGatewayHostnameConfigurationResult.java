@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGatewayHostnameConfigurationResult {
-    /**
-     * Identifier of Certificate entity that will be used for TLS connection establishment
-     * 
-     */
+        /**
+         * @return Identifier of Certificate entity that will be used for TLS connection establishment
+         * 
+         */
     private final @Nullable String certificateId;
-    /**
-     * Hostname value. Supports valid domain name, partial or full wildcard
-     * 
-     */
+        /**
+         * @return Hostname value. Supports valid domain name, partial or full wildcard
+         * 
+         */
     private final @Nullable String hostname;
-    /**
-     * Specifies if HTTP/2.0 is supported
-     * 
-     */
+        /**
+         * @return Specifies if HTTP/2.0 is supported
+         * 
+         */
     private final @Nullable Boolean http2Enabled;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Determines whether gateway requests client certificate
-     * 
-     */
+        /**
+         * @return Determines whether gateway requests client certificate
+         * 
+         */
     private final @Nullable Boolean negotiateClientCertificate;
-    /**
-     * Specifies if TLS 1.0 is supported
-     * 
-     */
+        /**
+         * @return Specifies if TLS 1.0 is supported
+         * 
+         */
     private final @Nullable Boolean tls10Enabled;
-    /**
-     * Specifies if TLS 1.1 is supported
-     * 
-     */
+        /**
+         * @return Specifies if TLS 1.1 is supported
+         * 
+         */
     private final @Nullable Boolean tls11Enabled;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -81,65 +81,65 @@ public final class GetGatewayHostnameConfigurationResult {
     }
 
     /**
-     * Identifier of Certificate entity that will be used for TLS connection establishment
+     * @return Identifier of Certificate entity that will be used for TLS connection establishment
      * 
-    */
+     */
     public Optional<String> certificateId() {
         return Optional.ofNullable(this.certificateId);
     }
     /**
-     * Hostname value. Supports valid domain name, partial or full wildcard
+     * @return Hostname value. Supports valid domain name, partial or full wildcard
      * 
-    */
+     */
     public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
-     * Specifies if HTTP/2.0 is supported
+     * @return Specifies if HTTP/2.0 is supported
      * 
-    */
+     */
     public Optional<Boolean> http2Enabled() {
         return Optional.ofNullable(this.http2Enabled);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Determines whether gateway requests client certificate
+     * @return Determines whether gateway requests client certificate
      * 
-    */
+     */
     public Optional<Boolean> negotiateClientCertificate() {
         return Optional.ofNullable(this.negotiateClientCertificate);
     }
     /**
-     * Specifies if TLS 1.0 is supported
+     * @return Specifies if TLS 1.0 is supported
      * 
-    */
+     */
     public Optional<Boolean> tls10Enabled() {
         return Optional.ofNullable(this.tls10Enabled);
     }
     /**
-     * Specifies if TLS 1.1 is supported
+     * @return Specifies if TLS 1.1 is supported
      * 
-    */
+     */
     public Optional<Boolean> tls11Enabled() {
         return Optional.ofNullable(this.tls11Enabled);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

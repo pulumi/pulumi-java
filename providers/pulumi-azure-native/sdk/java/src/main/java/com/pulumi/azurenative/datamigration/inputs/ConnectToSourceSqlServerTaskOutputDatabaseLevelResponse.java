@@ -27,6 +27,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="compatibilityLevel", required=true)
     private String compatibilityLevel;
 
+    /**
+     * @return SQL Server compatibility level of database
+     * 
+     */
     public String compatibilityLevel() {
         return this.compatibilityLevel;
     }
@@ -38,6 +42,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="databaseFiles", required=true)
     private List<DatabaseFileInfoResponse> databaseFiles;
 
+    /**
+     * @return The list of database files
+     * 
+     */
     public List<DatabaseFileInfoResponse> databaseFiles() {
         return this.databaseFiles;
     }
@@ -49,6 +57,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="databaseState", required=true)
     private String databaseState;
 
+    /**
+     * @return State of the database
+     * 
+     */
     public String databaseState() {
         return this.databaseState;
     }
@@ -60,6 +72,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -71,6 +87,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Database name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -83,6 +103,11 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Type of result - database level or task level
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -94,6 +119,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
     @Import(name="sizeMB", required=true)
     private Double sizeMB;
 
+    /**
+     * @return Size of the file in megabytes
+     * 
+     */
     public Double sizeMB() {
         return this.sizeMB;
     }
@@ -128,40 +157,89 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
             $ = new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compatibilityLevel SQL Server compatibility level of database
+         * 
+         * @return builder
+         * 
+         */
         public Builder compatibilityLevel(String compatibilityLevel) {
             $.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
+        /**
+         * @param databaseFiles The list of database files
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseFiles(List<DatabaseFileInfoResponse> databaseFiles) {
             $.databaseFiles = databaseFiles;
             return this;
         }
 
+        /**
+         * @param databaseFiles The list of database files
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseFiles(DatabaseFileInfoResponse... databaseFiles) {
             return databaseFiles(List.of(databaseFiles));
         }
 
+        /**
+         * @param databaseState State of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseState(String databaseState) {
             $.databaseState = databaseState;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Database name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resultType Type of result - database level or task level
+         * Expected value is &#39;DatabaseLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sizeMB Size of the file in megabytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeMB(Double sizeMB) {
             $.sizeMB = sizeMB;
             return this;

@@ -19,6 +19,10 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="roleDefinitionId", required=true)
     private String roleDefinitionId;
 
+    /**
+     * @return The ID of the role definition.
+     * 
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -30,6 +34,10 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope of the role definition.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetRoleDefinitionArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roleDefinitionId The ID of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param scope The scope of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

@@ -25,6 +25,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -36,6 +40,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrateKbps", required=true)
     private Output<Integer> bitrateKbps;
 
+    /**
+     * @return Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one &#39;noisy neighbor&#39; does not affect other live pipelines in your account.
+     * 
+     */
     public Output<Integer> bitrateKbps() {
         return this.bitrateKbps;
     }
@@ -47,6 +55,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description for the pipeline.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -58,6 +70,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="livePipelineName")
     private @Nullable Output<String> livePipelineName;
 
+    /**
+     * @return Live pipeline unique identifier.
+     * 
+     */
     public Optional<Output<String>> livePipelineName() {
         return Optional.ofNullable(this.livePipelineName);
     }
@@ -69,6 +85,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
+    /**
+     * @return List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
+     * 
+     */
     public Optional<Output<List<ParameterDefinitionArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -80,6 +100,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="topologyName", required=true)
     private Output<String> topologyName;
 
+    /**
+     * @return The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
+     * 
+     */
     public Output<String> topologyName() {
         return this.topologyName;
     }
@@ -125,69 +153,159 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LivePipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param bitrateKbps Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one &#39;noisy neighbor&#39; does not affect other live pipelines in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(Output<Integer> bitrateKbps) {
             $.bitrateKbps = bitrateKbps;
             return this;
         }
 
+        /**
+         * @param bitrateKbps Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one &#39;noisy neighbor&#39; does not affect other live pipelines in your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrateKbps(Integer bitrateKbps) {
             return bitrateKbps(Output.of(bitrateKbps));
         }
 
+        /**
+         * @param description An optional description for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param livePipelineName Live pipeline unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePipelineName(@Nullable Output<String> livePipelineName) {
             $.livePipelineName = livePipelineName;
             return this;
         }
 
+        /**
+         * @param livePipelineName Live pipeline unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePipelineName(String livePipelineName) {
             return livePipelineName(Output.of(livePipelineName));
         }
 
+        /**
+         * @param parameters List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ParameterDefinitionArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ParameterDefinitionArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param topologyName The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyName(Output<String> topologyName) {
             $.topologyName = topologyName;
             return this;
         }
 
+        /**
+         * @param topologyName The reference to an existing pipeline topology defined for real-time content processing. When activated, this live pipeline will process content according to the pipeline topology definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder topologyName(String topologyName) {
             return topologyName(Output.of(topologyName));
         }

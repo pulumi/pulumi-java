@@ -26,6 +26,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mountPath", required=true)
     private String mountPath;
 
+    /**
+     * @return The path within the container where the volume should be mounted. Must not contain colon (:).
+     * 
+     */
     public String mountPath() {
         return this.mountPath;
     }
@@ -37,6 +41,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the volume mount.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="readOnly")
     private @Nullable Boolean readOnly;
 
+    /**
+     * @return The flag indicating whether the volume mount is read-only.
+     * 
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -78,16 +90,34 @@ public final class VolumeMountResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VolumeMountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mountPath The path within the container where the volume should be mounted. Must not contain colon (:).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mountPath(String mountPath) {
             $.mountPath = mountPath;
             return this;
         }
 
+        /**
+         * @param name The name of the volume mount.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param readOnly The flag indicating whether the volume mount is read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Boolean readOnly) {
             $.readOnly = readOnly;
             return this;

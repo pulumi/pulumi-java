@@ -28,6 +28,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return The error code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -39,6 +43,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details")
     private @Nullable List<ApiErrorBaseResponse> details;
 
+    /**
+     * @return The Api error details
+     * 
+     */
     public Optional<List<ApiErrorBaseResponse>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -50,6 +58,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="innererror")
     private @Nullable InnerErrorResponse innererror;
 
+    /**
+     * @return The Api inner error
+     * 
+     */
     public Optional<InnerErrorResponse> innererror() {
         return Optional.ofNullable(this.innererror);
     }
@@ -61,6 +73,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The error message.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -72,6 +88,10 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The target of the particular error.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -104,30 +124,66 @@ public final class ApiErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ApiErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details The Api error details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable List<ApiErrorBaseResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details The Api error details
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(ApiErrorBaseResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param innererror The Api inner error
+         * 
+         * @return builder
+         * 
+         */
         public Builder innererror(@Nullable InnerErrorResponse innererror) {
             $.innererror = innererror;
             return this;
         }
 
+        /**
+         * @param message The error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target The target of the particular error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

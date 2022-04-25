@@ -30,6 +30,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliases")
     private @Nullable Output<List<KpiAliasArgs>> aliases;
 
+    /**
+     * @return The aliases.
+     * 
+     */
     public Optional<Output<List<KpiAliasArgs>>> aliases() {
         return Optional.ofNullable(this.aliases);
     }
@@ -41,6 +45,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="calculationWindow", required=true)
     private Output<CalculationWindowTypes> calculationWindow;
 
+    /**
+     * @return The calculation window.
+     * 
+     */
     public Output<CalculationWindowTypes> calculationWindow() {
         return this.calculationWindow;
     }
@@ -52,6 +60,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="calculationWindowFieldName")
     private @Nullable Output<String> calculationWindowFieldName;
 
+    /**
+     * @return Name of calculation window field.
+     * 
+     */
     public Optional<Output<String>> calculationWindowFieldName() {
         return Optional.ofNullable(this.calculationWindowFieldName);
     }
@@ -63,6 +75,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Localized description for the KPI.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -74,6 +90,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Localized display name for the KPI.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -85,6 +105,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entityType", required=true)
     private Output<EntityTypes> entityType;
 
+    /**
+     * @return The mapping entity type.
+     * 
+     */
     public Output<EntityTypes> entityType() {
         return this.entityType;
     }
@@ -96,6 +120,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entityTypeName", required=true)
     private Output<String> entityTypeName;
 
+    /**
+     * @return The mapping entity name.
+     * 
+     */
     public Output<String> entityTypeName() {
         return this.entityTypeName;
     }
@@ -107,6 +135,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expression", required=true)
     private Output<String> expression;
 
+    /**
+     * @return The computation expression for the KPI.
+     * 
+     */
     public Output<String> expression() {
         return this.expression;
     }
@@ -118,6 +150,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extracts")
     private @Nullable Output<List<KpiExtractArgs>> extracts;
 
+    /**
+     * @return The KPI extracts.
+     * 
+     */
     public Optional<Output<List<KpiExtractArgs>>> extracts() {
         return Optional.ofNullable(this.extracts);
     }
@@ -129,6 +165,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="filter")
     private @Nullable Output<String> filter;
 
+    /**
+     * @return The filter expression for the KPI.
+     * 
+     */
     public Optional<Output<String>> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -140,6 +180,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="function", required=true)
     private Output<KpiFunctions> function;
 
+    /**
+     * @return The computation function for the KPI.
+     * 
+     */
     public Output<KpiFunctions> function() {
         return this.function;
     }
@@ -151,6 +195,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupBy")
     private @Nullable Output<List<String>> groupBy;
 
+    /**
+     * @return the group by properties for the KPI.
+     * 
+     */
     public Optional<Output<List<String>>> groupBy() {
         return Optional.ofNullable(this.groupBy);
     }
@@ -162,6 +210,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -173,6 +225,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kpiName")
     private @Nullable Output<String> kpiName;
 
+    /**
+     * @return The name of the KPI.
+     * 
+     */
     public Optional<Output<String>> kpiName() {
         return Optional.ofNullable(this.kpiName);
     }
@@ -184,6 +240,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -195,6 +255,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="thresHolds")
     private @Nullable Output<KpiThresholdsArgs> thresHolds;
 
+    /**
+     * @return The KPI thresholds.
+     * 
+     */
     public Optional<Output<KpiThresholdsArgs>> thresHolds() {
         return Optional.ofNullable(this.thresHolds);
     }
@@ -206,6 +270,10 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unit")
     private @Nullable Output<String> unit;
 
+    /**
+     * @return The unit of measurement for the KPI.
+     * 
+     */
     public Optional<Output<String>> unit() {
         return Optional.ofNullable(this.unit);
     }
@@ -250,167 +318,389 @@ public final class KpiArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KpiArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliases The aliases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(@Nullable Output<List<KpiAliasArgs>> aliases) {
             $.aliases = aliases;
             return this;
         }
 
+        /**
+         * @param aliases The aliases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(List<KpiAliasArgs> aliases) {
             return aliases(Output.of(aliases));
         }
 
+        /**
+         * @param aliases The aliases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(KpiAliasArgs... aliases) {
             return aliases(List.of(aliases));
         }
 
+        /**
+         * @param calculationWindow The calculation window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calculationWindow(Output<CalculationWindowTypes> calculationWindow) {
             $.calculationWindow = calculationWindow;
             return this;
         }
 
+        /**
+         * @param calculationWindow The calculation window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calculationWindow(CalculationWindowTypes calculationWindow) {
             return calculationWindow(Output.of(calculationWindow));
         }
 
+        /**
+         * @param calculationWindowFieldName Name of calculation window field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calculationWindowFieldName(@Nullable Output<String> calculationWindowFieldName) {
             $.calculationWindowFieldName = calculationWindowFieldName;
             return this;
         }
 
+        /**
+         * @param calculationWindowFieldName Name of calculation window field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder calculationWindowFieldName(String calculationWindowFieldName) {
             return calculationWindowFieldName(Output.of(calculationWindowFieldName));
         }
 
+        /**
+         * @param description Localized description for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Localized description for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Localized display name for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Localized display name for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param entityType The mapping entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(Output<EntityTypes> entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param entityType The mapping entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(EntityTypes entityType) {
             return entityType(Output.of(entityType));
         }
 
+        /**
+         * @param entityTypeName The mapping entity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeName(Output<String> entityTypeName) {
             $.entityTypeName = entityTypeName;
             return this;
         }
 
+        /**
+         * @param entityTypeName The mapping entity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeName(String entityTypeName) {
             return entityTypeName(Output.of(entityTypeName));
         }
 
+        /**
+         * @param expression The computation expression for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(Output<String> expression) {
             $.expression = expression;
             return this;
         }
 
+        /**
+         * @param expression The computation expression for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expression(String expression) {
             return expression(Output.of(expression));
         }
 
+        /**
+         * @param extracts The KPI extracts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extracts(@Nullable Output<List<KpiExtractArgs>> extracts) {
             $.extracts = extracts;
             return this;
         }
 
+        /**
+         * @param extracts The KPI extracts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extracts(List<KpiExtractArgs> extracts) {
             return extracts(Output.of(extracts));
         }
 
+        /**
+         * @param extracts The KPI extracts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extracts(KpiExtractArgs... extracts) {
             return extracts(List.of(extracts));
         }
 
+        /**
+         * @param filter The filter expression for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable Output<String> filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param filter The filter expression for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(String filter) {
             return filter(Output.of(filter));
         }
 
+        /**
+         * @param function The computation function for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(Output<KpiFunctions> function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param function The computation function for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(KpiFunctions function) {
             return function(Output.of(function));
         }
 
+        /**
+         * @param groupBy the group by properties for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupBy(@Nullable Output<List<String>> groupBy) {
             $.groupBy = groupBy;
             return this;
         }
 
+        /**
+         * @param groupBy the group by properties for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupBy(List<String> groupBy) {
             return groupBy(Output.of(groupBy));
         }
 
+        /**
+         * @param groupBy the group by properties for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupBy(String... groupBy) {
             return groupBy(List.of(groupBy));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param kpiName The name of the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpiName(@Nullable Output<String> kpiName) {
             $.kpiName = kpiName;
             return this;
         }
 
+        /**
+         * @param kpiName The name of the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kpiName(String kpiName) {
             return kpiName(Output.of(kpiName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param thresHolds The KPI thresholds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresHolds(@Nullable Output<KpiThresholdsArgs> thresHolds) {
             $.thresHolds = thresHolds;
             return this;
         }
 
+        /**
+         * @param thresHolds The KPI thresholds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresHolds(KpiThresholdsArgs thresHolds) {
             return thresHolds(Output.of(thresHolds));
         }
 
+        /**
+         * @param unit The unit of measurement for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(@Nullable Output<String> unit) {
             $.unit = unit;
             return this;
         }
 
+        /**
+         * @param unit The unit of measurement for the KPI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unit(String unit) {
             return unit(Output.of(unit));
         }

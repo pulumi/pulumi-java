@@ -26,6 +26,10 @@ public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="paramIndicator", required=true)
     private Output<Either<String,ParamIndicator>> paramIndicator;
 
+    /**
+     * @return Indicates the purpose of the parameter
+     * 
+     */
     public Output<Either<String,ParamIndicator>> paramIndicator() {
         return this.paramIndicator;
     }
@@ -37,6 +41,10 @@ public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.Re
     @Import(name="paramName", required=true)
     private Output<String> paramName;
 
+    /**
+     * @return Parameter name
+     * 
+     */
     public Output<String> paramName() {
         return this.paramName;
     }
@@ -66,28 +74,64 @@ public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.Re
             $ = new UrlSigningParamIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param paramIndicator Indicates the purpose of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramIndicator(Output<Either<String,ParamIndicator>> paramIndicator) {
             $.paramIndicator = paramIndicator;
             return this;
         }
 
+        /**
+         * @param paramIndicator Indicates the purpose of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramIndicator(Either<String,ParamIndicator> paramIndicator) {
             return paramIndicator(Output.of(paramIndicator));
         }
 
+        /**
+         * @param paramIndicator Indicates the purpose of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramIndicator(String paramIndicator) {
             return paramIndicator(Either.ofLeft(paramIndicator));
         }
 
+        /**
+         * @param paramIndicator Indicates the purpose of the parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramIndicator(ParamIndicator paramIndicator) {
             return paramIndicator(Either.ofRight(paramIndicator));
         }
 
+        /**
+         * @param paramName Parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramName(Output<String> paramName) {
             $.paramName = paramName;
             return this;
         }
 
+        /**
+         * @param paramName Parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder paramName(String paramName) {
             return paramName(Output.of(paramName));
         }

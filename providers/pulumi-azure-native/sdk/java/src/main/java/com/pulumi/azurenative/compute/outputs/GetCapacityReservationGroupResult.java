@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCapacityReservationGroupResult {
-    /**
-     * A list of all capacity reservation resource ids that belong to capacity reservation group.
-     * 
-     */
+        /**
+         * @return A list of all capacity reservation resource ids that belong to capacity reservation group.
+         * 
+         */
     private final List<SubResourceReadOnlyResponse> capacityReservations;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
-     * 
-     */
+        /**
+         * @return The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
+         * 
+         */
     private final CapacityReservationGroupInstanceViewResponse instanceView;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * A list of references to all virtual machines associated to the capacity reservation group.
-     * 
-     */
+        /**
+         * @return A list of references to all virtual machines associated to the capacity reservation group.
+         * 
+         */
     private final List<SubResourceReadOnlyResponse> virtualMachinesAssociated;
-    /**
-     * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
-     * 
-     */
+        /**
+         * @return Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetCapacityReservationGroupResult {
     }
 
     /**
-     * A list of all capacity reservation resource ids that belong to capacity reservation group.
+     * @return A list of all capacity reservation resource ids that belong to capacity reservation group.
      * 
-    */
+     */
     public List<SubResourceReadOnlyResponse> capacityReservations() {
         return this.capacityReservations;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
+     * @return The capacity reservation group instance view which has the list of instance views for all the capacity reservations that belong to the capacity reservation group.
      * 
-    */
+     */
     public CapacityReservationGroupInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of references to all virtual machines associated to the capacity reservation group.
+     * @return A list of references to all virtual machines associated to the capacity reservation group.
      * 
-    */
+     */
     public List<SubResourceReadOnlyResponse> virtualMachinesAssociated() {
         return this.virtualMachinesAssociated;
     }
     /**
-     * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
+     * @return Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

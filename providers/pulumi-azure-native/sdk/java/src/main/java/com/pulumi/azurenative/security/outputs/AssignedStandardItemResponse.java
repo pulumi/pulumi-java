@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssignedStandardItemResponse {
-    /**
-     * full resourceId of the Microsoft.Security/standard object
-     * 
-     */
+        /**
+         * @return full resourceId of the Microsoft.Security/standard object
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AssignedStandardItemResponse {
     }
 
     /**
-     * full resourceId of the Microsoft.Security/standard object
+     * @return full resourceId of the Microsoft.Security/standard object
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

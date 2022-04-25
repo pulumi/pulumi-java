@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class X12DelimiterOverridesResponse {
-    /**
-     * The component separator.
-     * 
-     */
+        /**
+         * @return The component separator.
+         * 
+         */
     private final Integer componentSeparator;
-    /**
-     * The data element separator.
-     * 
-     */
+        /**
+         * @return The data element separator.
+         * 
+         */
     private final Integer dataElementSeparator;
-    /**
-     * The message id.
-     * 
-     */
+        /**
+         * @return The message id.
+         * 
+         */
     private final @Nullable String messageId;
-    /**
-     * The protocol version.
-     * 
-     */
+        /**
+         * @return The protocol version.
+         * 
+         */
     private final @Nullable String protocolVersion;
-    /**
-     * The replacement character.
-     * 
-     */
+        /**
+         * @return The replacement character.
+         * 
+         */
     private final Integer replaceCharacter;
-    /**
-     * The value indicating whether to replace separators in payload.
-     * 
-     */
+        /**
+         * @return The value indicating whether to replace separators in payload.
+         * 
+         */
     private final Boolean replaceSeparatorsInPayload;
-    /**
-     * The segment terminator.
-     * 
-     */
+        /**
+         * @return The segment terminator.
+         * 
+         */
     private final Integer segmentTerminator;
-    /**
-     * The segment terminator suffix.
-     * 
-     */
+        /**
+         * @return The segment terminator suffix.
+         * 
+         */
     private final String segmentTerminatorSuffix;
-    /**
-     * The target namespace on which this delimiter settings has to be applied.
-     * 
-     */
+        /**
+         * @return The target namespace on which this delimiter settings has to be applied.
+         * 
+         */
     private final @Nullable String targetNamespace;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class X12DelimiterOverridesResponse {
     }
 
     /**
-     * The component separator.
+     * @return The component separator.
      * 
-    */
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
-     * The data element separator.
+     * @return The data element separator.
      * 
-    */
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
-     * The message id.
+     * @return The message id.
      * 
-    */
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
     /**
-     * The protocol version.
+     * @return The protocol version.
      * 
-    */
+     */
     public Optional<String> protocolVersion() {
         return Optional.ofNullable(this.protocolVersion);
     }
     /**
-     * The replacement character.
+     * @return The replacement character.
      * 
-    */
+     */
     public Integer replaceCharacter() {
         return this.replaceCharacter;
     }
     /**
-     * The value indicating whether to replace separators in payload.
+     * @return The value indicating whether to replace separators in payload.
      * 
-    */
+     */
     public Boolean replaceSeparatorsInPayload() {
         return this.replaceSeparatorsInPayload;
     }
     /**
-     * The segment terminator.
+     * @return The segment terminator.
      * 
-    */
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
-     * The segment terminator suffix.
+     * @return The segment terminator suffix.
      * 
-    */
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
-     * The target namespace on which this delimiter settings has to be applied.
+     * @return The target namespace on which this delimiter settings has to be applied.
      * 
-    */
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }

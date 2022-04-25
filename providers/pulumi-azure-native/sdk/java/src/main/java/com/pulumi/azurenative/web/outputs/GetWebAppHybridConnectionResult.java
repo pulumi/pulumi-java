@@ -12,66 +12,66 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebAppHybridConnectionResult {
-    /**
-     * The hostname of the endpoint.
-     * 
-     */
+        /**
+         * @return The hostname of the endpoint.
+         * 
+         */
     private final @Nullable String hostname;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * The port of the endpoint.
-     * 
-     */
+        /**
+         * @return The port of the endpoint.
+         * 
+         */
     private final @Nullable Integer port;
-    /**
-     * The ARM URI to the Service Bus relay.
-     * 
-     */
+        /**
+         * @return The ARM URI to the Service Bus relay.
+         * 
+         */
     private final @Nullable String relayArmUri;
-    /**
-     * The name of the Service Bus relay.
-     * 
-     */
+        /**
+         * @return The name of the Service Bus relay.
+         * 
+         */
     private final @Nullable String relayName;
-    /**
-     * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
-     * 
-     */
+        /**
+         * @return The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
+         * 
+         */
     private final @Nullable String sendKeyName;
-    /**
-     * The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
-     * normally, use the POST /listKeys API instead.
-     * 
-     */
+        /**
+         * @return The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
+         * normally, use the POST /listKeys API instead.
+         * 
+         */
     private final @Nullable String sendKeyValue;
-    /**
-     * The name of the Service Bus namespace.
-     * 
-     */
+        /**
+         * @return The name of the Service Bus namespace.
+         * 
+         */
     private final @Nullable String serviceBusNamespace;
-    /**
-     * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
-     * 
-     */
+        /**
+         * @return The suffix for the service bus endpoint. By default this is .servicebus.windows.net
+         * 
+         */
     private final @Nullable String serviceBusSuffix;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -103,87 +103,87 @@ public final class GetWebAppHybridConnectionResult {
     }
 
     /**
-     * The hostname of the endpoint.
+     * @return The hostname of the endpoint.
      * 
-    */
+     */
     public Optional<String> hostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The port of the endpoint.
+     * @return The port of the endpoint.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The ARM URI to the Service Bus relay.
+     * @return The ARM URI to the Service Bus relay.
      * 
-    */
+     */
     public Optional<String> relayArmUri() {
         return Optional.ofNullable(this.relayArmUri);
     }
     /**
-     * The name of the Service Bus relay.
+     * @return The name of the Service Bus relay.
      * 
-    */
+     */
     public Optional<String> relayName() {
         return Optional.ofNullable(this.relayName);
     }
     /**
-     * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
+     * @return The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
-    */
+     */
     public Optional<String> sendKeyName() {
         return Optional.ofNullable(this.sendKeyName);
     }
     /**
-     * The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
+     * @return The value of the Service Bus key. This is used to authenticate to Service Bus. In ARM this key will not be returned
      * normally, use the POST /listKeys API instead.
      * 
-    */
+     */
     public Optional<String> sendKeyValue() {
         return Optional.ofNullable(this.sendKeyValue);
     }
     /**
-     * The name of the Service Bus namespace.
+     * @return The name of the Service Bus namespace.
      * 
-    */
+     */
     public Optional<String> serviceBusNamespace() {
         return Optional.ofNullable(this.serviceBusNamespace);
     }
     /**
-     * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
+     * @return The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
-    */
+     */
     public Optional<String> serviceBusSuffix() {
         return Optional.ofNullable(this.serviceBusSuffix);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SystemServiceResponse {
-    /**
-     * Public IP address
-     * 
-     */
+        /**
+         * @return Public IP address
+         * 
+         */
     private final String publicIpAddress;
-    /**
-     * The type of this system service.
-     * 
-     */
+        /**
+         * @return The type of this system service.
+         * 
+         */
     private final String systemServiceType;
-    /**
-     * The version for this type.
-     * 
-     */
+        /**
+         * @return The version for this type.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class SystemServiceResponse {
     }
 
     /**
-     * Public IP address
+     * @return Public IP address
      * 
-    */
+     */
     public String publicIpAddress() {
         return this.publicIpAddress;
     }
     /**
-     * The type of this system service.
+     * @return The type of this system service.
      * 
-    */
+     */
     public String systemServiceType() {
         return this.systemServiceType;
     }
     /**
-     * The version for this type.
+     * @return The version for this type.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListRunLogSasUrlResult {
-    /**
-     * The link to logs in registry for a run on a azure container registry.
-     * 
-     */
+        /**
+         * @return The link to logs in registry for a run on a azure container registry.
+         * 
+         */
     private final @Nullable String logArtifactLink;
-    /**
-     * The link to logs for a run on a azure container registry.
-     * 
-     */
+        /**
+         * @return The link to logs for a run on a azure container registry.
+         * 
+         */
     private final @Nullable String logLink;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListRunLogSasUrlResult {
     }
 
     /**
-     * The link to logs in registry for a run on a azure container registry.
+     * @return The link to logs in registry for a run on a azure container registry.
      * 
-    */
+     */
     public Optional<String> logArtifactLink() {
         return Optional.ofNullable(this.logArtifactLink);
     }
     /**
-     * The link to logs for a run on a azure container registry.
+     * @return The link to logs for a run on a azure container registry.
      * 
-    */
+     */
     public Optional<String> logLink() {
         return Optional.ofNullable(this.logLink);
     }

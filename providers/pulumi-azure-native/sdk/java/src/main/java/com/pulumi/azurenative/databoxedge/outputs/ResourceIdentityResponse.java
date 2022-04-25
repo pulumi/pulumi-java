@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceIdentityResponse {
-    /**
-     * Service Principal Id backing the Msi
-     * 
-     */
+        /**
+         * @return Service Principal Id backing the Msi
+         * 
+         */
     private final String principalId;
-    /**
-     * Home Tenant Id
-     * 
-     */
+        /**
+         * @return Home Tenant Id
+         * 
+         */
     private final String tenantId;
-    /**
-     * Identity type
-     * 
-     */
+        /**
+         * @return Identity type
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ResourceIdentityResponse {
     }
 
     /**
-     * Service Principal Id backing the Msi
+     * @return Service Principal Id backing the Msi
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * Home Tenant Id
+     * @return Home Tenant Id
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Identity type
+     * @return Identity type
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

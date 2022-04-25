@@ -28,6 +28,10 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="buildpackGroups")
     private @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
+    /**
+     * @return Builder buildpack groups.
+     * 
+     */
     public Optional<Output<List<BuildpacksGroupPropertiesArgs>>> buildpackGroups() {
         return Optional.ofNullable(this.buildpackGroups);
     }
@@ -39,6 +43,10 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="stack")
     private @Nullable Output<StackPropertiesArgs> stack;
 
+    /**
+     * @return Builder cluster stack property.
+     * 
+     */
     public Optional<Output<StackPropertiesArgs>> stack() {
         return Optional.ofNullable(this.stack);
     }
@@ -68,24 +76,54 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new BuilderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildpackGroups Builder buildpack groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackGroups(@Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups) {
             $.buildpackGroups = buildpackGroups;
             return this;
         }
 
+        /**
+         * @param buildpackGroups Builder buildpack groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackGroups(List<BuildpacksGroupPropertiesArgs> buildpackGroups) {
             return buildpackGroups(Output.of(buildpackGroups));
         }
 
+        /**
+         * @param buildpackGroups Builder buildpack groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpackGroups(BuildpacksGroupPropertiesArgs... buildpackGroups) {
             return buildpackGroups(List.of(buildpackGroups));
         }
 
+        /**
+         * @param stack Builder cluster stack property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stack(@Nullable Output<StackPropertiesArgs> stack) {
             $.stack = stack;
             return this;
         }
 
+        /**
+         * @param stack Builder cluster stack property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stack(StackPropertiesArgs stack) {
             return stack(Output.of(stack));
         }

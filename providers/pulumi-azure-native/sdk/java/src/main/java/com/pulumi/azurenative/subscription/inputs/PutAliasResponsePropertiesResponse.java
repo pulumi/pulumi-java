@@ -25,6 +25,10 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -36,6 +40,10 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
     @Import(name="subscriptionId", required=true)
     private String subscriptionId;
 
+    /**
+     * @return Newly created subscription Id.
+     * 
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
@@ -65,11 +73,23 @@ public final class PutAliasResponsePropertiesResponse extends com.pulumi.resourc
             $ = new PutAliasResponsePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param subscriptionId Newly created subscription Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

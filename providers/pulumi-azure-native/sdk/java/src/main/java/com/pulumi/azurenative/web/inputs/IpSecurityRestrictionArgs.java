@@ -31,6 +31,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="action")
     private @Nullable Output<String> action;
 
+    /**
+     * @return Allow or Deny access for this IP range.
+     * 
+     */
     public Optional<Output<String>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -42,6 +46,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return IP restriction rule description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +76,25 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="headers")
     private @Nullable Output<Map<String,List<String>>> headers;
 
+    /**
+     * @return IP restriction rule headers.
+     * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+     * The matching logic is ..
+     * - If the property is null or empty (default), all hosts(or lack of) are allowed.
+     * - A value is compared using ordinal-ignore-case (excluding port number).
+     * - Subdomain wildcards are permitted but don&#39;t match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com
+     *    but not the root domain contoso.com or multi-level foo.bar.contoso.com
+     * - Unicode host names are allowed but are converted to Punycode for matching.
+     * 
+     * X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+     * The matching logic is ..
+     * - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+     * - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+     * 
+     * X-Azure-FDID and X-FD-HealthProbe.
+     * The matching logic is exact match.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -82,6 +109,13 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return IP address the security restriction is valid for.
+     * It can be in form of pure ipv4 address (required SubnetMask property) or
+     * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+     * SubnetMask property must not be specified.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -93,6 +127,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return IP restriction rule name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +142,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority of IP restriction rule.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -115,6 +157,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="subnetMask")
     private @Nullable Output<String> subnetMask;
 
+    /**
+     * @return Subnet mask for the range of IP addresses the restriction is valid for.
+     * 
+     */
     public Optional<Output<String>> subnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
@@ -126,6 +172,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="subnetTrafficTag")
     private @Nullable Output<Integer> subnetTrafficTag;
 
+    /**
+     * @return (internal) Subnet traffic tag
+     * 
+     */
     public Optional<Output<Integer>> subnetTrafficTag() {
         return Optional.ofNullable(this.subnetTrafficTag);
     }
@@ -137,6 +187,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="tag")
     private @Nullable Output<Either<String,IpFilterTag>> tag;
 
+    /**
+     * @return Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+     * 
+     */
     public Optional<Output<Either<String,IpFilterTag>>> tag() {
         return Optional.ofNullable(this.tag);
     }
@@ -148,6 +202,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="vnetSubnetResourceId")
     private @Nullable Output<String> vnetSubnetResourceId;
 
+    /**
+     * @return Virtual network resource id
+     * 
+     */
     public Optional<Output<String>> vnetSubnetResourceId() {
         return Optional.ofNullable(this.vnetSubnetResourceId);
     }
@@ -159,6 +217,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
     @Import(name="vnetTrafficTag")
     private @Nullable Output<Integer> vnetTrafficTag;
 
+    /**
+     * @return (internal) Vnet traffic tag
+     * 
+     */
     public Optional<Output<Integer>> vnetTrafficTag() {
         return Optional.ofNullable(this.vnetTrafficTag);
     }
@@ -197,109 +259,289 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
             $ = new IpSecurityRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Allow or Deny access for this IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action Allow or Deny access for this IP range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param description IP restriction rule description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description IP restriction rule description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param headers IP restriction rule headers.
+         * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+         * The matching logic is ..
+         * - If the property is null or empty (default), all hosts(or lack of) are allowed.
+         * - A value is compared using ordinal-ignore-case (excluding port number).
+         * - Subdomain wildcards are permitted but don&#39;t match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com
+         *    but not the root domain contoso.com or multi-level foo.bar.contoso.com
+         * - Unicode host names are allowed but are converted to Punycode for matching.
+         * 
+         * X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+         * The matching logic is ..
+         * - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+         * - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+         * 
+         * X-Azure-FDID and X-FD-HealthProbe.
+         * The matching logic is exact match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Map<String,List<String>>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers IP restriction rule headers.
+         * X-Forwarded-Host (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host#Examples).
+         * The matching logic is ..
+         * - If the property is null or empty (default), all hosts(or lack of) are allowed.
+         * - A value is compared using ordinal-ignore-case (excluding port number).
+         * - Subdomain wildcards are permitted but don&#39;t match the root domain. For example, *.contoso.com matches the subdomain foo.contoso.com
+         *    but not the root domain contoso.com or multi-level foo.bar.contoso.com
+         * - Unicode host names are allowed but are converted to Punycode for matching.
+         * 
+         * X-Forwarded-For (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For#Examples).
+         * The matching logic is ..
+         * - If the property is null or empty (default), any forwarded-for chains (or lack of) are allowed.
+         * - If any address (excluding port number) in the chain (comma separated) matches the CIDR defined by the property.
+         * 
+         * X-Azure-FDID and X-FD-HealthProbe.
+         * The matching logic is exact match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Map<String,List<String>> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param ipAddress IP address the security restriction is valid for.
+         * It can be in form of pure ipv4 address (required SubnetMask property) or
+         * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+         * SubnetMask property must not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress IP address the security restriction is valid for.
+         * It can be in form of pure ipv4 address (required SubnetMask property) or
+         * CIDR notation such as ipv4/mask (leading bit match). For CIDR,
+         * SubnetMask property must not be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param name IP restriction rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name IP restriction rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority of IP restriction rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of IP restriction rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param subnetMask Subnet mask for the range of IP addresses the restriction is valid for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
             $.subnetMask = subnetMask;
             return this;
         }
 
+        /**
+         * @param subnetMask Subnet mask for the range of IP addresses the restriction is valid for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMask(String subnetMask) {
             return subnetMask(Output.of(subnetMask));
         }
 
+        /**
+         * @param subnetTrafficTag (internal) Subnet traffic tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetTrafficTag(@Nullable Output<Integer> subnetTrafficTag) {
             $.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
 
+        /**
+         * @param subnetTrafficTag (internal) Subnet traffic tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetTrafficTag(Integer subnetTrafficTag) {
             return subnetTrafficTag(Output.of(subnetTrafficTag));
         }
 
+        /**
+         * @param tag Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(@Nullable Output<Either<String,IpFilterTag>> tag) {
             $.tag = tag;
             return this;
         }
 
+        /**
+         * @param tag Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(Either<String,IpFilterTag> tag) {
             return tag(Output.of(tag));
         }
 
+        /**
+         * @param tag Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(String tag) {
             return tag(Either.ofLeft(tag));
         }
 
+        /**
+         * @param tag Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(IpFilterTag tag) {
             return tag(Either.ofRight(tag));
         }
 
+        /**
+         * @param vnetSubnetResourceId Virtual network resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetSubnetResourceId(@Nullable Output<String> vnetSubnetResourceId) {
             $.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
 
+        /**
+         * @param vnetSubnetResourceId Virtual network resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetSubnetResourceId(String vnetSubnetResourceId) {
             return vnetSubnetResourceId(Output.of(vnetSubnetResourceId));
         }
 
+        /**
+         * @param vnetTrafficTag (internal) Vnet traffic tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetTrafficTag(@Nullable Output<Integer> vnetTrafficTag) {
             $.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
 
+        /**
+         * @param vnetTrafficTag (internal) Vnet traffic tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetTrafficTag(Integer vnetTrafficTag) {
             return vnetTrafficTag(Output.of(vnetTrafficTag));
         }

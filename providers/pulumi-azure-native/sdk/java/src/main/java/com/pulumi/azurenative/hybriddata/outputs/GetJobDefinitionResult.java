@@ -15,65 +15,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetJobDefinitionResult {
-    /**
-     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
-     * 
-     */
+        /**
+         * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         */
     private final @Nullable List<CustomerSecretResponse> customerSecrets;
-    /**
-     * A generic json used differently by each data service type.
-     * 
-     */
+        /**
+         * @return A generic json used differently by each data service type.
+         * 
+         */
     private final @Nullable Object dataServiceInput;
-    /**
-     * Data Sink Id associated to the job definition.
-     * 
-     */
+        /**
+         * @return Data Sink Id associated to the job definition.
+         * 
+         */
     private final String dataSinkId;
-    /**
-     * Data Source Id associated to the job definition.
-     * 
-     */
+        /**
+         * @return Data Source Id associated to the job definition.
+         * 
+         */
     private final String dataSourceId;
-    /**
-     * Id of the object.
-     * 
-     */
+        /**
+         * @return Id of the object.
+         * 
+         */
     private final String id;
-    /**
-     * Last modified time of the job definition.
-     * 
-     */
+        /**
+         * @return Last modified time of the job definition.
+         * 
+         */
     private final @Nullable String lastModifiedTime;
-    /**
-     * Name of the object.
-     * 
-     */
+        /**
+         * @return Name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * This is the preferred geo location for the job to run.
-     * 
-     */
+        /**
+         * @return This is the preferred geo location for the job to run.
+         * 
+         */
     private final @Nullable String runLocation;
-    /**
-     * Schedule for running the job definition
-     * 
-     */
+        /**
+         * @return Schedule for running the job definition
+         * 
+         */
     private final @Nullable List<ScheduleResponse> schedules;
-    /**
-     * State of the job definition.
-     * 
-     */
+        /**
+         * @return State of the job definition.
+         * 
+         */
     private final String state;
-    /**
-     * Type of the object.
-     * 
-     */
+        /**
+         * @return Type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
-     * 
-     */
+        /**
+         * @return Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+         * 
+         */
     private final @Nullable String userConfirmation;
 
     @CustomType.Constructor
@@ -105,86 +105,86 @@ public final class GetJobDefinitionResult {
     }
 
     /**
-     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
-    */
+     */
     public List<CustomerSecretResponse> customerSecrets() {
         return this.customerSecrets == null ? List.of() : this.customerSecrets;
     }
     /**
-     * A generic json used differently by each data service type.
+     * @return A generic json used differently by each data service type.
      * 
-    */
+     */
     public Optional<Object> dataServiceInput() {
         return Optional.ofNullable(this.dataServiceInput);
     }
     /**
-     * Data Sink Id associated to the job definition.
+     * @return Data Sink Id associated to the job definition.
      * 
-    */
+     */
     public String dataSinkId() {
         return this.dataSinkId;
     }
     /**
-     * Data Source Id associated to the job definition.
+     * @return Data Source Id associated to the job definition.
      * 
-    */
+     */
     public String dataSourceId() {
         return this.dataSourceId;
     }
     /**
-     * Id of the object.
+     * @return Id of the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Last modified time of the job definition.
+     * @return Last modified time of the job definition.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * Name of the object.
+     * @return Name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * This is the preferred geo location for the job to run.
+     * @return This is the preferred geo location for the job to run.
      * 
-    */
+     */
     public Optional<String> runLocation() {
         return Optional.ofNullable(this.runLocation);
     }
     /**
-     * Schedule for running the job definition
+     * @return Schedule for running the job definition
      * 
-    */
+     */
     public List<ScheduleResponse> schedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
     /**
-     * State of the job definition.
+     * @return State of the job definition.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Type of the object.
+     * @return Type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+     * @return Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
-    */
+     */
     public Optional<String> userConfirmation() {
         return Optional.ofNullable(this.userConfirmation);
     }

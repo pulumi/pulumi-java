@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class QosPortRangeResponse {
-    /**
-     * Qos Port Range end.
-     * 
-     */
+        /**
+         * @return Qos Port Range end.
+         * 
+         */
     private final @Nullable Integer end;
-    /**
-     * Qos Port Range start.
-     * 
-     */
+        /**
+         * @return Qos Port Range start.
+         * 
+         */
     private final @Nullable Integer start;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class QosPortRangeResponse {
     }
 
     /**
-     * Qos Port Range end.
+     * @return Qos Port Range end.
      * 
-    */
+     */
     public Optional<Integer> end() {
         return Optional.ofNullable(this.end);
     }
     /**
-     * Qos Port Range start.
+     * @return Qos Port Range start.
      * 
-    */
+     */
     public Optional<Integer> start() {
         return Optional.ofNullable(this.start);
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCloudLinkResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Identifier of the other private cloud participating in the link.
-     * 
-     */
+        /**
+         * @return Identifier of the other private cloud participating in the link.
+         * 
+         */
     private final @Nullable String linkedCloud;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the cloud link.
-     * 
-     */
+        /**
+         * @return The state of the cloud link.
+         * 
+         */
     private final String status;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetCloudLinkResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identifier of the other private cloud participating in the link.
+     * @return Identifier of the other private cloud participating in the link.
      * 
-    */
+     */
     public Optional<String> linkedCloud() {
         return Optional.ofNullable(this.linkedCloud);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the cloud link.
+     * @return The state of the cloud link.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

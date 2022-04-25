@@ -16,65 +16,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGuestAgentResult {
-    /**
-     * Username / Password Credentials to provision guest agent.
-     * 
-     */
+        /**
+         * @return Username / Password Credentials to provision guest agent.
+         * 
+         */
     private final @Nullable GuestCredentialResponse credentials;
-    /**
-     * Gets the name of the corresponding resource in Kubernetes.
-     * 
-     */
+        /**
+         * @return Gets the name of the corresponding resource in Kubernetes.
+         * 
+         */
     private final String customResourceName;
-    /**
-     * HTTP Proxy configuration for the VM.
-     * 
-     */
+        /**
+         * @return HTTP Proxy configuration for the VM.
+         * 
+         */
     private final @Nullable HttpProxyConfigurationResponse httpProxyConfig;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets or sets the guest agent provisioning action.
-     * 
-     */
+        /**
+         * @return Gets or sets the guest agent provisioning action.
+         * 
+         */
     private final @Nullable String provisioningAction;
-    /**
-     * Gets or sets the provisioning state.
-     * 
-     */
+        /**
+         * @return Gets or sets the provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Gets or sets the guest agent status.
-     * 
-     */
+        /**
+         * @return Gets or sets the guest agent status.
+         * 
+         */
     private final String status;
-    /**
-     * The resource status information.
-     * 
-     */
+        /**
+         * @return The resource status information.
+         * 
+         */
     private final List<ResourceStatusResponse> statuses;
-    /**
-     * The system data.
-     * 
-     */
+        /**
+         * @return The system data.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Gets or sets a unique identifier for this resource.
-     * 
-     */
+        /**
+         * @return Gets or sets a unique identifier for this resource.
+         * 
+         */
     private final String uuid;
 
     @CustomType.Constructor
@@ -106,86 +106,86 @@ public final class GetGuestAgentResult {
     }
 
     /**
-     * Username / Password Credentials to provision guest agent.
+     * @return Username / Password Credentials to provision guest agent.
      * 
-    */
+     */
     public Optional<GuestCredentialResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * Gets the name of the corresponding resource in Kubernetes.
+     * @return Gets the name of the corresponding resource in Kubernetes.
      * 
-    */
+     */
     public String customResourceName() {
         return this.customResourceName;
     }
     /**
-     * HTTP Proxy configuration for the VM.
+     * @return HTTP Proxy configuration for the VM.
      * 
-    */
+     */
     public Optional<HttpProxyConfigurationResponse> httpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the guest agent provisioning action.
+     * @return Gets or sets the guest agent provisioning action.
      * 
-    */
+     */
     public Optional<String> provisioningAction() {
         return Optional.ofNullable(this.provisioningAction);
     }
     /**
-     * Gets or sets the provisioning state.
+     * @return Gets or sets the provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the guest agent status.
+     * @return Gets or sets the guest agent status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<ResourceStatusResponse> statuses() {
         return this.statuses;
     }
     /**
-     * The system data.
+     * @return The system data.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets a unique identifier for this resource.
+     * @return Gets or sets a unique identifier for this resource.
      * 
-    */
+     */
     public String uuid() {
         return this.uuid;
     }

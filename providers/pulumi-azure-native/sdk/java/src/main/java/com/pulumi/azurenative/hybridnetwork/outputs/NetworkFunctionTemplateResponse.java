@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkFunctionTemplateResponse {
-    /**
-     * An array of network function role definitions.
-     * 
-     */
+        /**
+         * @return An array of network function role definitions.
+         * 
+         */
     private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class NetworkFunctionTemplateResponse {
     }
 
     /**
-     * An array of network function role definitions.
+     * @return An array of network function role definitions.
      * 
-    */
+     */
     public List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations() {
         return this.networkFunctionRoleConfigurations == null ? List.of() : this.networkFunctionRoleConfigurations;
     }

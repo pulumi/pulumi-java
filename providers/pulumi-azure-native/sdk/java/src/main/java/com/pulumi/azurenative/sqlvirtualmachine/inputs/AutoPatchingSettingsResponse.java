@@ -27,6 +27,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="dayOfWeek")
     private @Nullable String dayOfWeek;
 
+    /**
+     * @return Day of week to apply the patch on.
+     * 
+     */
     public Optional<String> dayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
@@ -38,6 +42,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="enable")
     private @Nullable Boolean enable;
 
+    /**
+     * @return Enable or disable autopatching on SQL virtual machine.
+     * 
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -49,6 +57,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="maintenanceWindowDuration")
     private @Nullable Integer maintenanceWindowDuration;
 
+    /**
+     * @return Duration of patching.
+     * 
+     */
     public Optional<Integer> maintenanceWindowDuration() {
         return Optional.ofNullable(this.maintenanceWindowDuration);
     }
@@ -60,6 +72,10 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="maintenanceWindowStartingHour")
     private @Nullable Integer maintenanceWindowStartingHour;
 
+    /**
+     * @return Hour of the day when patching is initiated. Local VM time.
+     * 
+     */
     public Optional<Integer> maintenanceWindowStartingHour() {
         return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }
@@ -91,21 +107,45 @@ public final class AutoPatchingSettingsResponse extends com.pulumi.resources.Inv
             $ = new AutoPatchingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of week to apply the patch on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(@Nullable String dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param enable Enable or disable autopatching on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowDuration Duration of patching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
             $.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowStartingHour Hour of the day when patching is initiated. Local VM time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
             $.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;

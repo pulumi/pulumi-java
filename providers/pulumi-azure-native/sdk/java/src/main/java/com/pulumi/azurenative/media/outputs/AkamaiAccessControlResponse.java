@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AkamaiAccessControlResponse {
-    /**
-     * authentication key list
-     * 
-     */
+        /**
+         * @return authentication key list
+         * 
+         */
     private final @Nullable List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AkamaiAccessControlResponse {
     }
 
     /**
-     * authentication key list
+     * @return authentication key list
      * 
-    */
+     */
     public List<AkamaiSignatureHeaderAuthenticationKeyResponse> akamaiSignatureHeaderAuthenticationKeyList() {
         return this.akamaiSignatureHeaderAuthenticationKeyList == null ? List.of() : this.akamaiSignatureHeaderAuthenticationKeyList;
     }

@@ -14,61 +14,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReadWriteDatabaseResult {
-    /**
-     * The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
-     */
+        /**
+         * @return The time the data should be kept in cache for fast queries in TimeSpan.
+         * 
+         */
     private final @Nullable String hotCachePeriod;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Indicates whether the database is followed.
-     * 
-     */
+        /**
+         * @return Indicates whether the database is followed.
+         * 
+         */
     private final Boolean isFollowed;
-    /**
-     * Kind of the database
-     * Expected value is &#39;ReadWrite&#39;.
-     * 
-     */
+        /**
+         * @return Kind of the database
+         * Expected value is &#39;ReadWrite&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
-     */
+        /**
+         * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
+         * 
+         */
     private final @Nullable String softDeletePeriod;
-    /**
-     * The statistics of the database.
-     * 
-     */
+        /**
+         * @return The statistics of the database.
+         * 
+         */
     private final DatabaseStatisticsResponse statistics;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -98,80 +98,80 @@ public final class GetReadWriteDatabaseResult {
     }
 
     /**
-     * The time the data should be kept in cache for fast queries in TimeSpan.
+     * @return The time the data should be kept in cache for fast queries in TimeSpan.
      * 
-    */
+     */
     public Optional<String> hotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Indicates whether the database is followed.
+     * @return Indicates whether the database is followed.
      * 
-    */
+     */
     public Boolean isFollowed() {
         return this.isFollowed;
     }
     /**
-     * Kind of the database
+     * @return Kind of the database
      * Expected value is &#39;ReadWrite&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The time the data should be kept before it stops being accessible to queries in TimeSpan.
+     * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
-    */
+     */
     public Optional<String> softDeletePeriod() {
         return Optional.ofNullable(this.softDeletePeriod);
     }
     /**
-     * The statistics of the database.
+     * @return The statistics of the database.
      * 
-    */
+     */
     public DatabaseStatisticsResponse statistics() {
         return this.statistics;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

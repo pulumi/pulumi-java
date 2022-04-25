@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ReverseShippingDetailsResponse {
-    /**
-     * Carrier Name for display purpose. Not to be used for any processing.
-     * 
-     */
+        /**
+         * @return Carrier Name for display purpose. Not to be used for any processing.
+         * 
+         */
     private final String carrierDisplayName;
-    /**
-     * Name of the carrier.
-     * 
-     */
+        /**
+         * @return Name of the carrier.
+         * 
+         */
     private final String carrierName;
-    /**
-     * SAS key to download the reverse shipment label of the package.
-     * 
-     */
+        /**
+         * @return SAS key to download the reverse shipment label of the package.
+         * 
+         */
     private final String sasKeyForLabel;
-    /**
-     * TrackingId of the package
-     * 
-     */
+        /**
+         * @return TrackingId of the package
+         * 
+         */
     private final String trackingId;
-    /**
-     * TrackingUrl of the package.
-     * 
-     */
+        /**
+         * @return TrackingUrl of the package.
+         * 
+         */
     private final String trackingUrl;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class ReverseShippingDetailsResponse {
     }
 
     /**
-     * Carrier Name for display purpose. Not to be used for any processing.
+     * @return Carrier Name for display purpose. Not to be used for any processing.
      * 
-    */
+     */
     public String carrierDisplayName() {
         return this.carrierDisplayName;
     }
     /**
-     * Name of the carrier.
+     * @return Name of the carrier.
      * 
-    */
+     */
     public String carrierName() {
         return this.carrierName;
     }
     /**
-     * SAS key to download the reverse shipment label of the package.
+     * @return SAS key to download the reverse shipment label of the package.
      * 
-    */
+     */
     public String sasKeyForLabel() {
         return this.sasKeyForLabel;
     }
     /**
-     * TrackingId of the package
+     * @return TrackingId of the package
      * 
-    */
+     */
     public String trackingId() {
         return this.trackingId;
     }
     /**
-     * TrackingUrl of the package.
+     * @return TrackingUrl of the package.
      * 
-    */
+     */
     public String trackingUrl() {
         return this.trackingUrl;
     }

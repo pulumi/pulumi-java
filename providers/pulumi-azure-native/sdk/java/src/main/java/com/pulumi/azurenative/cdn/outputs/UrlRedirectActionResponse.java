@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class UrlRedirectActionResponse {
-    /**
-     * The name of the action for the delivery rule.
-     * Expected value is &#39;UrlRedirect&#39;.
-     * 
-     */
+        /**
+         * @return The name of the action for the delivery rule.
+         * Expected value is &#39;UrlRedirect&#39;.
+         * 
+         */
     private final String name;
-    /**
-     * Defines the parameters for the action.
-     * 
-     */
+        /**
+         * @return Defines the parameters for the action.
+         * 
+         */
     private final UrlRedirectActionParametersResponse parameters;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class UrlRedirectActionResponse {
     }
 
     /**
-     * The name of the action for the delivery rule.
+     * @return The name of the action for the delivery rule.
      * Expected value is &#39;UrlRedirect&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the action.
+     * @return Defines the parameters for the action.
      * 
-    */
+     */
     public UrlRedirectActionParametersResponse parameters() {
         return this.parameters;
     }

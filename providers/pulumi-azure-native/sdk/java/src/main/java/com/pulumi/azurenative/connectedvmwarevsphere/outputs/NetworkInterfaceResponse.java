@@ -14,61 +14,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkInterfaceResponse {
-    /**
-     * Gets or sets the device key value.
-     * 
-     */
+        /**
+         * @return Gets or sets the device key value.
+         * 
+         */
     private final @Nullable Integer deviceKey;
-    /**
-     * Gets or sets the nic ip addresses.
-     * 
-     */
+        /**
+         * @return Gets or sets the nic ip addresses.
+         * 
+         */
     private final List<String> ipAddresses;
-    /**
-     * Gets or sets the ipsettings.
-     * 
-     */
+        /**
+         * @return Gets or sets the ipsettings.
+         * 
+         */
     private final @Nullable NicIPSettingsResponse ipSettings;
-    /**
-     * Gets or sets the label of the virtual network in vCenter that the nic is connected to.
-     * 
-     */
+        /**
+         * @return Gets or sets the label of the virtual network in vCenter that the nic is connected to.
+         * 
+         */
     private final String label;
-    /**
-     * Gets or sets the NIC MAC address.
-     * 
-     */
+        /**
+         * @return Gets or sets the NIC MAC address.
+         * 
+         */
     private final String macAddress;
-    /**
-     * Gets or sets the name of the network interface.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the network interface.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Gets or sets the ARM Id of the network resource to connect the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets or sets the ARM Id of the network resource to connect the virtual machine.
+         * 
+         */
     private final @Nullable String networkId;
-    /**
-     * Gets or sets the name of the virtual network in vCenter that the nic is connected to.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the virtual network in vCenter that the nic is connected to.
+         * 
+         */
     private final String networkMoName;
-    /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
-     * that the nic is connected to.
-     * 
-     */
+        /**
+         * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
+         * that the nic is connected to.
+         * 
+         */
     private final String networkMoRefId;
-    /**
-     * NIC type
-     * 
-     */
+        /**
+         * @return NIC type
+         * 
+         */
     private final @Nullable String nicType;
-    /**
-     * Gets or sets the power on boot.
-     * 
-     */
+        /**
+         * @return Gets or sets the power on boot.
+         * 
+         */
     private final @Nullable String powerOnBoot;
 
     @CustomType.Constructor
@@ -98,80 +98,80 @@ public final class NetworkInterfaceResponse {
     }
 
     /**
-     * Gets or sets the device key value.
+     * @return Gets or sets the device key value.
      * 
-    */
+     */
     public Optional<Integer> deviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
     /**
-     * Gets or sets the nic ip addresses.
+     * @return Gets or sets the nic ip addresses.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses;
     }
     /**
-     * Gets or sets the ipsettings.
+     * @return Gets or sets the ipsettings.
      * 
-    */
+     */
     public Optional<NicIPSettingsResponse> ipSettings() {
         return Optional.ofNullable(this.ipSettings);
     }
     /**
-     * Gets or sets the label of the virtual network in vCenter that the nic is connected to.
+     * @return Gets or sets the label of the virtual network in vCenter that the nic is connected to.
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * Gets or sets the NIC MAC address.
+     * @return Gets or sets the NIC MAC address.
      * 
-    */
+     */
     public String macAddress() {
         return this.macAddress;
     }
     /**
-     * Gets or sets the name of the network interface.
+     * @return Gets or sets the name of the network interface.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets or sets the ARM Id of the network resource to connect the virtual machine.
+     * @return Gets or sets the ARM Id of the network resource to connect the virtual machine.
      * 
-    */
+     */
     public Optional<String> networkId() {
         return Optional.ofNullable(this.networkId);
     }
     /**
-     * Gets or sets the name of the virtual network in vCenter that the nic is connected to.
+     * @return Gets or sets the name of the virtual network in vCenter that the nic is connected to.
      * 
-    */
+     */
     public String networkMoName() {
         return this.networkMoName;
     }
     /**
-     * Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID of the virtual network
      * that the nic is connected to.
      * 
-    */
+     */
     public String networkMoRefId() {
         return this.networkMoRefId;
     }
     /**
-     * NIC type
+     * @return NIC type
      * 
-    */
+     */
     public Optional<String> nicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
-     * Gets or sets the power on boot.
+     * @return Gets or sets the power on boot.
      * 
-    */
+     */
     public Optional<String> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }

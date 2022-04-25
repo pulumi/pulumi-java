@@ -26,6 +26,10 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
     @Import(name="networkProfile")
     private @Nullable Output<NetworkProfileArgs> networkProfile;
 
+    /**
+     * @return Network profile of the Service
+     * 
+     */
     public Optional<Output<NetworkProfileArgs>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -54,11 +58,23 @@ public final class ClusterResourcePropertiesArgs extends com.pulumi.resources.Re
             $ = new ClusterResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkProfile Network profile of the Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile Network profile of the Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(NetworkProfileArgs networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }

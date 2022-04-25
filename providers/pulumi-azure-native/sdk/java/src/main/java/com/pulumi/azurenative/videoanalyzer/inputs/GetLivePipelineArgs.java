@@ -19,6 +19,10 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="livePipelineName", required=true)
     private String livePipelineName;
 
+    /**
+     * @return Live pipeline unique identifier.
+     * 
+     */
     public String livePipelineName() {
         return this.livePipelineName;
     }
@@ -41,6 +49,10 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLivePipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param livePipelineName Live pipeline unique identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livePipelineName(String livePipelineName) {
             $.livePipelineName = livePipelineName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -26,6 +26,10 @@ public final class BlobNfsTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Resource ID of the storage container.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -37,6 +41,10 @@ public final class BlobNfsTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="usageModel")
     private @Nullable Output<String> usageModel;
 
+    /**
+     * @return Identifies the StorageCache usage model to be used for this storage target.
+     * 
+     */
     public Optional<Output<String>> usageModel() {
         return Optional.ofNullable(this.usageModel);
     }
@@ -66,20 +74,44 @@ public final class BlobNfsTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BlobNfsTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Resource ID of the storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Resource ID of the storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param usageModel Identifies the StorageCache usage model to be used for this storage target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageModel(@Nullable Output<String> usageModel) {
             $.usageModel = usageModel;
             return this;
         }
 
+        /**
+         * @param usageModel Identifies the StorageCache usage model to be used for this storage target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageModel(String usageModel) {
             return usageModel(Output.of(usageModel));
         }

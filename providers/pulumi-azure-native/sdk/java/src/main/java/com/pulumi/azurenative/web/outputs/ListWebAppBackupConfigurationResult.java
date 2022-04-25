@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListWebAppBackupConfigurationResult {
-    /**
-     * Name of the backup.
-     * 
-     */
+        /**
+         * @return Name of the backup.
+         * 
+         */
     private final @Nullable String backupName;
-    /**
-     * Schedule for the backup if it is executed periodically.
-     * 
-     */
+        /**
+         * @return Schedule for the backup if it is executed periodically.
+         * 
+         */
     private final @Nullable BackupScheduleResponse backupSchedule;
-    /**
-     * Databases included in the backup.
-     * 
-     */
+        /**
+         * @return Databases included in the backup.
+         * 
+         */
     private final @Nullable List<DatabaseBackupSettingResponse> databases;
-    /**
-     * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
-     * 
-     */
+        /**
+         * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * SAS URL to the container.
-     * 
-     */
+        /**
+         * @return SAS URL to the container.
+         * 
+         */
     private final String storageAccountUrl;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class ListWebAppBackupConfigurationResult {
     }
 
     /**
-     * Name of the backup.
+     * @return Name of the backup.
      * 
-    */
+     */
     public Optional<String> backupName() {
         return Optional.ofNullable(this.backupName);
     }
     /**
-     * Schedule for the backup if it is executed periodically.
+     * @return Schedule for the backup if it is executed periodically.
      * 
-    */
+     */
     public Optional<BackupScheduleResponse> backupSchedule() {
         return Optional.ofNullable(this.backupSchedule);
     }
     /**
-     * Databases included in the backup.
+     * @return Databases included in the backup.
      * 
-    */
+     */
     public List<DatabaseBackupSettingResponse> databases() {
         return this.databases == null ? List.of() : this.databases;
     }
     /**
-     * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
+     * @return True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * SAS URL to the container.
+     * @return SAS URL to the container.
      * 
-    */
+     */
     public String storageAccountUrl() {
         return this.storageAccountUrl;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

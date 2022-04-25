@@ -13,60 +13,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServiceResult {
-    /**
-     * HTTP strong entity tag value. Ignored if submitted
-     * 
-     */
+        /**
+         * @return HTTP strong entity tag value. Ignored if submitted
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The resource kind. Only &#39;vm&#39; (the default) is supported.
-     * 
-     */
+        /**
+         * @return The resource kind. Only &#39;vm&#39; (the default) is supported.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The resource&#39;s provisioning state
-     * 
-     */
+        /**
+         * @return The resource&#39;s provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The public key of the service, used to encrypt secrets sent to the service
-     * 
-     */
+        /**
+         * @return The public key of the service, used to encrypt secrets sent to the service
+         * 
+         */
     private final @Nullable String publicKey;
-    /**
-     * Service SKU
-     * 
-     */
+        /**
+         * @return Service SKU
+         * 
+         */
     private final @Nullable ServiceSkuResponse sku;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
-     * 
-     */
+        /**
+         * @return The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
+         * 
+         */
     private final String virtualSubnetId;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class GetServiceResult {
     }
 
     /**
-     * HTTP strong entity tag value. Ignored if submitted
+     * @return HTTP strong entity tag value. Ignored if submitted
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource kind. Only &#39;vm&#39; (the default) is supported.
+     * @return The resource kind. Only &#39;vm&#39; (the default) is supported.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource&#39;s provisioning state
+     * @return The resource&#39;s provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The public key of the service, used to encrypt secrets sent to the service
+     * @return The public key of the service, used to encrypt secrets sent to the service
      * 
-    */
+     */
     public Optional<String> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
     /**
-     * Service SKU
+     * @return Service SKU
      * 
-    */
+     */
     public Optional<ServiceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
+     * @return The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
      * 
-    */
+     */
     public String virtualSubnetId() {
         return this.virtualSubnetId;
     }

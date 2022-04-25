@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAppResult {
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The Managed Identity type of the app resource
-     * 
-     */
+        /**
+         * @return The Managed Identity type of the app resource
+         * 
+         */
     private final @Nullable ManagedIdentityPropertiesResponse identity;
-    /**
-     * The GEO location of the application, always the same with its parent resource
-     * 
-     */
+        /**
+         * @return The GEO location of the application, always the same with its parent resource
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the App resource
-     * 
-     */
+        /**
+         * @return Properties of the App resource
+         * 
+         */
     private final AppResourcePropertiesResponse properties;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetAppResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Managed Identity type of the app resource
+     * @return The Managed Identity type of the app resource
      * 
-    */
+     */
     public Optional<ManagedIdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The GEO location of the application, always the same with its parent resource
+     * @return The GEO location of the application, always the same with its parent resource
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the App resource
+     * @return Properties of the App resource
      * 
-    */
+     */
     public AppResourcePropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

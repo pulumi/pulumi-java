@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RemediationFiltersResponse {
-    /**
-     * The resource locations that will be remediated.
-     * 
-     */
+        /**
+         * @return The resource locations that will be remediated.
+         * 
+         */
     private final @Nullable List<String> locations;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RemediationFiltersResponse {
     }
 
     /**
-     * The resource locations that will be remediated.
+     * @return The resource locations that will be remediated.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }

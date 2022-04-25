@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetStateResponse {
-    /**
-     * Reference to better Dataset or a Definition
-     * 
-     */
+        /**
+         * @return Reference to better Dataset or a Definition
+         * 
+         */
     private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
-    /**
-     * eTag description
-     * 
-     */
+        /**
+         * @return eTag description
+         * 
+         */
     private final String etag;
-    /**
-     * Dataset state
-     * 
-     */
+        /**
+         * @return Dataset state
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class DatasetStateResponse {
     }
 
     /**
-     * Reference to better Dataset or a Definition
+     * @return Reference to better Dataset or a Definition
      * 
-    */
+     */
     public Optional<DatasetStateResponseDeprecatedBy> deprecatedBy() {
         return Optional.ofNullable(this.deprecatedBy);
     }
     /**
-     * eTag description
+     * @return eTag description
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Dataset state
+     * @return Dataset state
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkflowAccessKeyResult {
-    /**
-     * Gets or sets the resource id.
-     * 
-     */
+        /**
+         * @return Gets or sets the resource id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Gets the workflow access key name.
-     * 
-     */
+        /**
+         * @return Gets the workflow access key name.
+         * 
+         */
     private final String name;
-    /**
-     * Gets or sets the not-after time.
-     * 
-     */
+        /**
+         * @return Gets or sets the not-after time.
+         * 
+         */
     private final @Nullable String notAfter;
-    /**
-     * Gets or sets the not-before time.
-     * 
-     */
+        /**
+         * @return Gets or sets the not-before time.
+         * 
+         */
     private final @Nullable String notBefore;
-    /**
-     * Gets the workflow access key type.
-     * 
-     */
+        /**
+         * @return Gets the workflow access key type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetWorkflowAccessKeyResult {
     }
 
     /**
-     * Gets or sets the resource id.
+     * @return Gets or sets the resource id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Gets the workflow access key name.
+     * @return Gets the workflow access key name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the not-after time.
+     * @return Gets or sets the not-after time.
      * 
-    */
+     */
     public Optional<String> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
     /**
-     * Gets or sets the not-before time.
+     * @return Gets or sets the not-before time.
      * 
-    */
+     */
     public Optional<String> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
     /**
-     * Gets the workflow access key type.
+     * @return Gets the workflow access key type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MetricCounterResponse {
-    /**
-     * The additional dimensions to be added to metric.
-     * 
-     */
+        /**
+         * @return The additional dimensions to be added to metric.
+         * 
+         */
     private final @Nullable List<MetricDimensionResponse> additionalDimensions;
-    /**
-     * The dimension filter.
-     * 
-     */
+        /**
+         * @return The dimension filter.
+         * 
+         */
     private final @Nullable List<MetricDimensionResponse> dimensionFilter;
-    /**
-     * The instance from which counter should be collected.
-     * 
-     */
+        /**
+         * @return The instance from which counter should be collected.
+         * 
+         */
     private final @Nullable String instance;
-    /**
-     * The counter name.
-     * 
-     */
+        /**
+         * @return The counter name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class MetricCounterResponse {
     }
 
     /**
-     * The additional dimensions to be added to metric.
+     * @return The additional dimensions to be added to metric.
      * 
-    */
+     */
     public List<MetricDimensionResponse> additionalDimensions() {
         return this.additionalDimensions == null ? List.of() : this.additionalDimensions;
     }
     /**
-     * The dimension filter.
+     * @return The dimension filter.
      * 
-    */
+     */
     public List<MetricDimensionResponse> dimensionFilter() {
         return this.dimensionFilter == null ? List.of() : this.dimensionFilter;
     }
     /**
-     * The instance from which counter should be collected.
+     * @return The instance from which counter should be collected.
      * 
-    */
+     */
     public Optional<String> instance() {
         return Optional.ofNullable(this.instance);
     }
     /**
-     * The counter name.
+     * @return The counter name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

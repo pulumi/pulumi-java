@@ -29,6 +29,10 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
     @Import(name="body")
     private @Nullable Output<BodyDiagnosticSettingsArgs> body;
 
+    /**
+     * @return Body logging settings.
+     * 
+     */
     public Optional<Output<BodyDiagnosticSettingsArgs>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -40,6 +44,10 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
     @Import(name="dataMasking")
     private @Nullable Output<DataMaskingArgs> dataMasking;
 
+    /**
+     * @return Data masking settings.
+     * 
+     */
     public Optional<Output<DataMaskingArgs>> dataMasking() {
         return Optional.ofNullable(this.dataMasking);
     }
@@ -51,6 +59,10 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
     @Import(name="headers")
     private @Nullable Output<List<String>> headers;
 
+    /**
+     * @return Array of HTTP Headers to log.
+     * 
+     */
     public Optional<Output<List<String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -81,33 +93,75 @@ public final class HttpMessageDiagnosticArgs extends com.pulumi.resources.Resour
             $ = new HttpMessageDiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body logging settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<BodyDiagnosticSettingsArgs> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Body logging settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(BodyDiagnosticSettingsArgs body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param dataMasking Data masking settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataMasking(@Nullable Output<DataMaskingArgs> dataMasking) {
             $.dataMasking = dataMasking;
             return this;
         }
 
+        /**
+         * @param dataMasking Data masking settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataMasking(DataMaskingArgs dataMasking) {
             return dataMasking(Output.of(dataMasking));
         }
 
+        /**
+         * @param headers Array of HTTP Headers to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Array of HTTP Headers to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers Array of HTTP Headers to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }

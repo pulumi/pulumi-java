@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NWRuleSetVirtualNetworkRulesResponse {
-    /**
-     * Value that indicates whether to ignore missing VNet Service Endpoint
-     * 
-     */
+        /**
+         * @return Value that indicates whether to ignore missing VNet Service Endpoint
+         * 
+         */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
-    /**
-     * Subnet properties
-     * 
-     */
+        /**
+         * @return Subnet properties
+         * 
+         */
     private final @Nullable SubnetResponse subnet;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class NWRuleSetVirtualNetworkRulesResponse {
     }
 
     /**
-     * Value that indicates whether to ignore missing VNet Service Endpoint
+     * @return Value that indicates whether to ignore missing VNet Service Endpoint
      * 
-    */
+     */
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
-     * Subnet properties
+     * @return Subnet properties
      * 
-    */
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }

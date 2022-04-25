@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityConnectorPropertiesResponseOrganizationalData {
-    /**
-     * If the multi cloud account is of membership type organization, list of accounts excluded from offering
-     * 
-     */
+        /**
+         * @return If the multi cloud account is of membership type organization, list of accounts excluded from offering
+         * 
+         */
     private final @Nullable List<String> excludedAccountIds;
-    /**
-     * The multi cloud account&#39;s membership type in the organization
-     * 
-     */
+        /**
+         * @return The multi cloud account&#39;s membership type in the organization
+         * 
+         */
     private final @Nullable String organizationMembershipType;
-    /**
-     * If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
-     * 
-     */
+        /**
+         * @return If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
+         * 
+         */
     private final @Nullable String parentHierarchyId;
-    /**
-     * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
-     * 
-     */
+        /**
+         * @return If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
+         * 
+         */
     private final @Nullable String stacksetName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
     }
 
     /**
-     * If the multi cloud account is of membership type organization, list of accounts excluded from offering
+     * @return If the multi cloud account is of membership type organization, list of accounts excluded from offering
      * 
-    */
+     */
     public List<String> excludedAccountIds() {
         return this.excludedAccountIds == null ? List.of() : this.excludedAccountIds;
     }
     /**
-     * The multi cloud account&#39;s membership type in the organization
+     * @return The multi cloud account&#39;s membership type in the organization
      * 
-    */
+     */
     public Optional<String> organizationMembershipType() {
         return Optional.ofNullable(this.organizationMembershipType);
     }
     /**
-     * If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
+     * @return If the multi cloud account is not of membership type organization, this will be the ID of the account&#39;s parent
      * 
-    */
+     */
     public Optional<String> parentHierarchyId() {
         return Optional.ofNullable(this.parentHierarchyId);
     }
     /**
-     * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
+     * @return If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
      * 
-    */
+     */
     public Optional<String> stacksetName() {
         return Optional.ofNullable(this.stacksetName);
     }

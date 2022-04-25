@@ -28,6 +28,10 @@ public final class TriggerPipelineReferenceResponse extends com.pulumi.resources
     @Import(name="parameters")
     private @Nullable Map<String,Object> parameters;
 
+    /**
+     * @return Pipeline parameters.
+     * 
+     */
     public Optional<Map<String,Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -39,6 +43,10 @@ public final class TriggerPipelineReferenceResponse extends com.pulumi.resources
     @Import(name="pipelineReference")
     private @Nullable PipelineReferenceResponse pipelineReference;
 
+    /**
+     * @return Pipeline reference.
+     * 
+     */
     public Optional<PipelineReferenceResponse> pipelineReference() {
         return Optional.ofNullable(this.pipelineReference);
     }
@@ -68,11 +76,23 @@ public final class TriggerPipelineReferenceResponse extends com.pulumi.resources
             $ = new TriggerPipelineReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Pipeline parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param pipelineReference Pipeline reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineReference(@Nullable PipelineReferenceResponse pipelineReference) {
             $.pipelineReference = pipelineReference;
             return this;

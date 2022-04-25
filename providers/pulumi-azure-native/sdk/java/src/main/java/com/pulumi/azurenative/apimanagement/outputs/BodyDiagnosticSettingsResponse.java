@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BodyDiagnosticSettingsResponse {
-    /**
-     * Number of request body bytes to log.
-     * 
-     */
+        /**
+         * @return Number of request body bytes to log.
+         * 
+         */
     private final @Nullable Integer bytes;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class BodyDiagnosticSettingsResponse {
     }
 
     /**
-     * Number of request body bytes to log.
+     * @return Number of request body bytes to log.
      * 
-    */
+     */
     public Optional<Integer> bytes() {
         return Optional.ofNullable(this.bytes);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class KeyValuePairResponse {
-    /**
-     * The name of the setting for the action.
-     * 
-     */
+        /**
+         * @return The name of the setting for the action.
+         * 
+         */
     private final String key;
-    /**
-     * The value of the setting for the action.
-     * 
-     */
+        /**
+         * @return The value of the setting for the action.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class KeyValuePairResponse {
     }
 
     /**
-     * The name of the setting for the action.
+     * @return The name of the setting for the action.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value of the setting for the action.
+     * @return The value of the setting for the action.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

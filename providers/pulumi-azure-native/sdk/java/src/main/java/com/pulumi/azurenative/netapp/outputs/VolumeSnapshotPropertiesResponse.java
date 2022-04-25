@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumeSnapshotPropertiesResponse {
-    /**
-     * Snapshot Policy ResourceId
-     * 
-     */
+        /**
+         * @return Snapshot Policy ResourceId
+         * 
+         */
     private final @Nullable String snapshotPolicyId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VolumeSnapshotPropertiesResponse {
     }
 
     /**
-     * Snapshot Policy ResourceId
+     * @return Snapshot Policy ResourceId
      * 
-    */
+     */
     public Optional<String> snapshotPolicyId() {
         return Optional.ofNullable(this.snapshotPolicyId);
     }

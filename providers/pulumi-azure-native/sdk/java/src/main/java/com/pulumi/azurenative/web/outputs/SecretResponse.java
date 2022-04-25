@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecretResponse {
-    /**
-     * Secret Name.
-     * 
-     */
+        /**
+         * @return Secret Name.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SecretResponse {
     }
 
     /**
-     * Secret Name.
+     * @return Secret Name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

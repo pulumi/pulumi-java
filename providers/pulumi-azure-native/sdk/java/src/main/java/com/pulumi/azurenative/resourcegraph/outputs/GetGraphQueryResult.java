@@ -12,55 +12,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGraphQueryResult {
-    /**
-     * The description of a graph query.
-     * 
-     */
+        /**
+         * @return The description of a graph query.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
-     * 
-     */
+        /**
+         * @return This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource
-     * 
-     */
+        /**
+         * @return The location of the resource
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Azure resource name. This is GUID value. The display name should be assigned within properties field.
-     * 
-     */
+        /**
+         * @return Azure resource name. This is GUID value. The display name should be assigned within properties field.
+         * 
+         */
     private final String name;
-    /**
-     * KQL query that will be graph.
-     * 
-     */
+        /**
+         * @return KQL query that will be graph.
+         * 
+         */
     private final String query;
-    /**
-     * Enum indicating a type of graph query.
-     * 
-     */
+        /**
+         * @return Enum indicating a type of graph query.
+         * 
+         */
     private final String resultKind;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Date and time in UTC of the last modification that was made to this graph query definition.
-     * 
-     */
+        /**
+         * @return Date and time in UTC of the last modification that was made to this graph query definition.
+         * 
+         */
     private final String timeModified;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -88,72 +88,72 @@ public final class GetGraphQueryResult {
     }
 
     /**
-     * The description of a graph query.
+     * @return The description of a graph query.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
+     * @return This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource
+     * @return The location of the resource
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Azure resource name. This is GUID value. The display name should be assigned within properties field.
+     * @return Azure resource name. This is GUID value. The display name should be assigned within properties field.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * KQL query that will be graph.
+     * @return KQL query that will be graph.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * Enum indicating a type of graph query.
+     * @return Enum indicating a type of graph query.
      * 
-    */
+     */
     public String resultKind() {
         return this.resultKind;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Date and time in UTC of the last modification that was made to this graph query definition.
+     * @return Date and time in UTC of the last modification that was made to this graph query definition.
      * 
-    */
+     */
     public String timeModified() {
         return this.timeModified;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

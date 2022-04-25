@@ -22,6 +22,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="extensionId")
     private @Nullable Output<String> extensionId;
 
+    /**
+     * @return Id of extension resource.
+     * 
+     */
     public Optional<Output<String>> extensionId() {
         return Optional.ofNullable(this.extensionId);
     }
@@ -33,6 +37,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="farmBeatsResourceName", required=true)
     private Output<String> farmBeatsResourceName;
 
+    /**
+     * @return FarmBeats resource name.
+     * 
+     */
     public Output<String> farmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
@@ -44,6 +52,10 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -74,29 +86,65 @@ public final class ExtensionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ExtensionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensionId Id of extension resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionId(@Nullable Output<String> extensionId) {
             $.extensionId = extensionId;
             return this;
         }
 
+        /**
+         * @param extensionId Id of extension resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionId(String extensionId) {
             return extensionId(Output.of(extensionId));
         }
 
+        /**
+         * @param farmBeatsResourceName FarmBeats resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder farmBeatsResourceName(Output<String> farmBeatsResourceName) {
             $.farmBeatsResourceName = farmBeatsResourceName;
             return this;
         }
 
+        /**
+         * @param farmBeatsResourceName FarmBeats resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
             return farmBeatsResourceName(Output.of(farmBeatsResourceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

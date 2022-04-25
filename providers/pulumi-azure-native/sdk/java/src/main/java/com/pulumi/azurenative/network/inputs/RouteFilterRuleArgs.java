@@ -30,6 +30,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="access", required=true)
     private Output<Either<String,Access>> access;
 
+    /**
+     * @return The access type of the rule.
+     * 
+     */
     public Output<Either<String,Access>> access() {
         return this.access;
     }
@@ -41,6 +45,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="communities", required=true)
     private Output<List<String>> communities;
 
+    /**
+     * @return The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+     * 
+     */
     public Output<List<String>> communities() {
         return this.communities;
     }
@@ -52,6 +60,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -63,6 +75,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -74,6 +90,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,6 +105,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="routeFilterRuleType", required=true)
     private Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
+    /**
+     * @return The rule type of the rule.
+     * 
+     */
     public Output<Either<String,RouteFilterRuleType>> routeFilterRuleType() {
         return this.routeFilterRuleType;
     }
@@ -118,76 +142,178 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new RouteFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access The access type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(Output<Either<String,Access>> access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param access The access type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(Either<String,Access> access) {
             return access(Output.of(access));
         }
 
+        /**
+         * @param access The access type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(String access) {
             return access(Either.ofLeft(access));
         }
 
+        /**
+         * @param access The access type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(Access access) {
             return access(Either.ofRight(access));
         }
 
+        /**
+         * @param communities The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder communities(Output<List<String>> communities) {
             $.communities = communities;
             return this;
         }
 
+        /**
+         * @param communities The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder communities(List<String> communities) {
             return communities(Output.of(communities));
         }
 
+        /**
+         * @param communities The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder communities(String... communities) {
             return communities(List.of(communities));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param routeFilterRuleType The rule type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterRuleType(Output<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
             $.routeFilterRuleType = routeFilterRuleType;
             return this;
         }
 
+        /**
+         * @param routeFilterRuleType The rule type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
             return routeFilterRuleType(Output.of(routeFilterRuleType));
         }
 
+        /**
+         * @param routeFilterRuleType The rule type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterRuleType(String routeFilterRuleType) {
             return routeFilterRuleType(Either.ofLeft(routeFilterRuleType));
         }
 
+        /**
+         * @param routeFilterRuleType The rule type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterRuleType(RouteFilterRuleType routeFilterRuleType) {
             return routeFilterRuleType(Either.ofRight(routeFilterRuleType));
         }

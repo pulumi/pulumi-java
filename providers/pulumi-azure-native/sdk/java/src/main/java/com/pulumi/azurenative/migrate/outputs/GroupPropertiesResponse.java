@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GroupPropertiesResponse {
-    /**
-     * If the assessments are in running state.
-     * 
-     */
+        /**
+         * @return If the assessments are in running state.
+         * 
+         */
     private final Boolean areAssessmentsRunning;
-    /**
-     * List of References to Assessments created on this group.
-     * 
-     */
+        /**
+         * @return List of References to Assessments created on this group.
+         * 
+         */
     private final List<String> assessments;
-    /**
-     * Time when this group was created. Date-Time represented in ISO-8601 format.
-     * 
-     */
+        /**
+         * @return Time when this group was created. Date-Time represented in ISO-8601 format.
+         * 
+         */
     private final String createdTimestamp;
-    /**
-     * Whether the group has been created and is valid.
-     * 
-     */
+        /**
+         * @return Whether the group has been created and is valid.
+         * 
+         */
     private final String groupStatus;
-    /**
-     * The type of group.
-     * 
-     */
+        /**
+         * @return The type of group.
+         * 
+         */
     private final @Nullable String groupType;
-    /**
-     * Number of machines part of this group.
-     * 
-     */
+        /**
+         * @return Number of machines part of this group.
+         * 
+         */
     private final Integer machineCount;
-    /**
-     * Time when this group was last updated. Date-Time represented in ISO-8601 format.
-     * 
-     */
+        /**
+         * @return Time when this group was last updated. Date-Time represented in ISO-8601 format.
+         * 
+         */
     private final String updatedTimestamp;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class GroupPropertiesResponse {
     }
 
     /**
-     * If the assessments are in running state.
+     * @return If the assessments are in running state.
      * 
-    */
+     */
     public Boolean areAssessmentsRunning() {
         return this.areAssessmentsRunning;
     }
     /**
-     * List of References to Assessments created on this group.
+     * @return List of References to Assessments created on this group.
      * 
-    */
+     */
     public List<String> assessments() {
         return this.assessments;
     }
     /**
-     * Time when this group was created. Date-Time represented in ISO-8601 format.
+     * @return Time when this group was created. Date-Time represented in ISO-8601 format.
      * 
-    */
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
     /**
-     * Whether the group has been created and is valid.
+     * @return Whether the group has been created and is valid.
      * 
-    */
+     */
     public String groupStatus() {
         return this.groupStatus;
     }
     /**
-     * The type of group.
+     * @return The type of group.
      * 
-    */
+     */
     public Optional<String> groupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
-     * Number of machines part of this group.
+     * @return Number of machines part of this group.
      * 
-    */
+     */
     public Integer machineCount() {
         return this.machineCount;
     }
     /**
-     * Time when this group was last updated. Date-Time represented in ISO-8601 format.
+     * @return Time when this group was last updated. Date-Time represented in ISO-8601 format.
      * 
-    */
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }

@@ -28,6 +28,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="host")
     private @Nullable String host;
 
+    /**
+     * @return Host name to send the probe to.
+     * 
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -61,6 +73,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="interval")
     private @Nullable Integer interval;
 
+    /**
+     * @return The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
+     * 
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -72,6 +88,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="match")
     private @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
 
+    /**
+     * @return Criterion for classifying a healthy probe response.
+     * 
+     */
     public Optional<ApplicationGatewayProbeHealthResponseMatchResponse> match() {
         return Optional.ofNullable(this.match);
     }
@@ -83,6 +103,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="minServers")
     private @Nullable Integer minServers;
 
+    /**
+     * @return Minimum number of servers that are always marked healthy. Default value is 0.
+     * 
+     */
     public Optional<Integer> minServers() {
         return Optional.ofNullable(this.minServers);
     }
@@ -94,6 +118,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the probe that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -105,6 +133,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -116,6 +148,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="pickHostNameFromBackendHttpSettings")
     private @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
+    /**
+     * @return Whether the host header should be picked from the backend http settings. Default value is false.
+     * 
+     */
     public Optional<Boolean> pickHostNameFromBackendHttpSettings() {
         return Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
@@ -127,6 +163,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -138,6 +178,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The protocol used for the probe.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -149,6 +193,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the probe resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -160,6 +208,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="timeout")
     private @Nullable Integer timeout;
 
+    /**
+     * @return The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+     * 
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -171,6 +223,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -182,6 +238,10 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
     @Import(name="unhealthyThreshold")
     private @Nullable Integer unhealthyThreshold;
 
+    /**
+     * @return The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
+     * 
+     */
     public Optional<Integer> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -224,76 +284,166 @@ public final class ApplicationGatewayProbeResponse extends com.pulumi.resources.
             $ = new ApplicationGatewayProbeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param host Host name to send the probe to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param interval The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Integer interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param match Criterion for classifying a healthy probe response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param minServers Minimum number of servers that are always marked healthy. Default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minServers(@Nullable Integer minServers) {
             $.minServers = minServers;
             return this;
         }
 
+        /**
+         * @param name Name of the probe that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param path Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param pickHostNameFromBackendHttpSettings Whether the host header should be picked from the backend http settings. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             $.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
+        /**
+         * @param port Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param protocol The protocol used for the probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the probe resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param timeout The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Integer timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;

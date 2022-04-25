@@ -15,55 +15,55 @@ import java.util.Objects;
 
 @CustomType
 public final class ServerEndpointCloudTieringStatusResponse {
-    /**
-     * Information regarding how well the local cache on the server is performing.
-     * 
-     */
+        /**
+         * @return Information regarding how well the local cache on the server is performing.
+         * 
+         */
     private final CloudTieringCachePerformanceResponse cachePerformance;
-    /**
-     * Status of the date policy
-     * 
-     */
+        /**
+         * @return Status of the date policy
+         * 
+         */
     private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
-    /**
-     * Information regarding files that failed to be tiered
-     * 
-     */
+        /**
+         * @return Information regarding files that failed to be tiered
+         * 
+         */
     private final CloudTieringFilesNotTieringResponse filesNotTiering;
-    /**
-     * Cloud tiering health state.
-     * 
-     */
+        /**
+         * @return Cloud tiering health state.
+         * 
+         */
     private final String health;
-    /**
-     * The last updated timestamp of health state
-     * 
-     */
+        /**
+         * @return The last updated timestamp of health state
+         * 
+         */
     private final String healthLastUpdatedTimestamp;
-    /**
-     * Last cloud tiering result (HResult)
-     * 
-     */
+        /**
+         * @return Last cloud tiering result (HResult)
+         * 
+         */
     private final Integer lastCloudTieringResult;
-    /**
-     * Last cloud tiering success timestamp
-     * 
-     */
+        /**
+         * @return Last cloud tiering success timestamp
+         * 
+         */
     private final String lastSuccessTimestamp;
-    /**
-     * Last updated timestamp
-     * 
-     */
+        /**
+         * @return Last updated timestamp
+         * 
+         */
     private final String lastUpdatedTimestamp;
-    /**
-     * Information regarding how much local space cloud tiering is saving.
-     * 
-     */
+        /**
+         * @return Information regarding how much local space cloud tiering is saving.
+         * 
+         */
     private final CloudTieringSpaceSavingsResponse spaceSavings;
-    /**
-     * Status of the volume free space policy
-     * 
-     */
+        /**
+         * @return Status of the volume free space policy
+         * 
+         */
     private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class ServerEndpointCloudTieringStatusResponse {
     }
 
     /**
-     * Information regarding how well the local cache on the server is performing.
+     * @return Information regarding how well the local cache on the server is performing.
      * 
-    */
+     */
     public CloudTieringCachePerformanceResponse cachePerformance() {
         return this.cachePerformance;
     }
     /**
-     * Status of the date policy
+     * @return Status of the date policy
      * 
-    */
+     */
     public CloudTieringDatePolicyStatusResponse datePolicyStatus() {
         return this.datePolicyStatus;
     }
     /**
-     * Information regarding files that failed to be tiered
+     * @return Information regarding files that failed to be tiered
      * 
-    */
+     */
     public CloudTieringFilesNotTieringResponse filesNotTiering() {
         return this.filesNotTiering;
     }
     /**
-     * Cloud tiering health state.
+     * @return Cloud tiering health state.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The last updated timestamp of health state
+     * @return The last updated timestamp of health state
      * 
-    */
+     */
     public String healthLastUpdatedTimestamp() {
         return this.healthLastUpdatedTimestamp;
     }
     /**
-     * Last cloud tiering result (HResult)
+     * @return Last cloud tiering result (HResult)
      * 
-    */
+     */
     public Integer lastCloudTieringResult() {
         return this.lastCloudTieringResult;
     }
     /**
-     * Last cloud tiering success timestamp
+     * @return Last cloud tiering success timestamp
      * 
-    */
+     */
     public String lastSuccessTimestamp() {
         return this.lastSuccessTimestamp;
     }
     /**
-     * Last updated timestamp
+     * @return Last updated timestamp
      * 
-    */
+     */
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
-     * Information regarding how much local space cloud tiering is saving.
+     * @return Information regarding how much local space cloud tiering is saving.
      * 
-    */
+     */
     public CloudTieringSpaceSavingsResponse spaceSavings() {
         return this.spaceSavings;
     }
     /**
-     * Status of the volume free space policy
+     * @return Status of the volume free space policy
      * 
-    */
+     */
     public CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus() {
         return this.volumeFreeSpacePolicyStatus;
     }

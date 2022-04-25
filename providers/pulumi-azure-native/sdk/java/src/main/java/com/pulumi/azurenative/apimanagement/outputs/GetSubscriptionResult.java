@@ -12,85 +12,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSubscriptionResult {
-    /**
-     * Determines whether tracing is enabled
-     * 
-     */
+        /**
+         * @return Determines whether tracing is enabled
+         * 
+         */
     private final @Nullable Boolean allowTracing;
-    /**
-     * Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final String createdDate;
-    /**
-     * The name of the subscription, or null if the subscription has no name.
-     * 
-     */
+        /**
+         * @return The name of the subscription, or null if the subscription has no name.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final @Nullable String endDate;
-    /**
-     * Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final @Nullable String expirationDate;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final @Nullable String notificationDate;
-    /**
-     * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
-     * 
-     */
+        /**
+         * @return The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
+         * 
+         */
     private final @Nullable String ownerId;
-    /**
-     * Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
-     * 
-     */
+        /**
+         * @return Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+         * 
+         */
     private final @Nullable String primaryKey;
-    /**
-     * Scope like /products/{productId} or /apis or /apis/{apiId}.
-     * 
-     */
+        /**
+         * @return Scope like /products/{productId} or /apis or /apis/{apiId}.
+         * 
+         */
     private final String scope;
-    /**
-     * Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
-     * 
-     */
+        /**
+         * @return Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+         * 
+         */
     private final @Nullable String secondaryKey;
-    /**
-     * Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final @Nullable String startDate;
-    /**
-     * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
-     * 
-     */
+        /**
+         * @return Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+         * 
+         */
     private final String state;
-    /**
-     * Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
-     * 
-     */
+        /**
+         * @return Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
+         * 
+         */
     private final @Nullable String stateComment;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -130,114 +130,114 @@ public final class GetSubscriptionResult {
     }
 
     /**
-     * Determines whether tracing is enabled
+     * @return Determines whether tracing is enabled
      * 
-    */
+     */
     public Optional<Boolean> allowTracing() {
         return Optional.ofNullable(this.allowTracing);
     }
     /**
-     * Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The name of the subscription, or null if the subscription has no name.
+     * @return The name of the subscription, or null if the subscription has no name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
-     * Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public Optional<String> notificationDate() {
         return Optional.ofNullable(this.notificationDate);
     }
     /**
-     * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
+     * @return The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
      * 
-    */
+     */
     public Optional<String> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
-     * Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+     * @return Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
-    */
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
-     * Scope like /products/{productId} or /apis or /apis/{apiId}.
+     * @return Scope like /products/{productId} or /apis or /apis/{apiId}.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
+     * @return Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
-    */
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
     /**
-     * Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
-     * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+     * @return Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
+     * @return Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
      * 
-    */
+     */
     public Optional<String> stateComment() {
         return Optional.ofNullable(this.stateComment);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

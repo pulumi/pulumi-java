@@ -31,6 +31,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="characterEncoding")
     private @Nullable Output<String> characterEncoding;
 
+    /**
+     * @return The character encoding.
+     * 
+     */
     public Optional<Output<String>> characterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
@@ -42,6 +46,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="characterSet", required=true)
     private Output<Either<String,EdifactCharacterSet>> characterSet;
 
+    /**
+     * @return The EDIFACT frame setting characterSet.
+     * 
+     */
     public Output<Either<String,EdifactCharacterSet>> characterSet() {
         return this.characterSet;
     }
@@ -53,6 +61,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="componentSeparator", required=true)
     private Output<Integer> componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
@@ -64,6 +76,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="dataElementSeparator", required=true)
     private Output<Integer> dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -75,6 +91,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="decimalPointIndicator", required=true)
     private Output<EdifactDecimalIndicator> decimalPointIndicator;
 
+    /**
+     * @return The EDIFACT frame setting decimal indicator.
+     * 
+     */
     public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
@@ -86,6 +106,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="protocolVersion", required=true)
     private Output<Integer> protocolVersion;
 
+    /**
+     * @return The protocol version.
+     * 
+     */
     public Output<Integer> protocolVersion() {
         return this.protocolVersion;
     }
@@ -97,6 +121,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="releaseIndicator", required=true)
     private Output<Integer> releaseIndicator;
 
+    /**
+     * @return The release indicator.
+     * 
+     */
     public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
     }
@@ -108,6 +136,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="repetitionSeparator", required=true)
     private Output<Integer> repetitionSeparator;
 
+    /**
+     * @return The repetition separator.
+     * 
+     */
     public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
     }
@@ -119,6 +151,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="segmentTerminator", required=true)
     private Output<Integer> segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -130,6 +166,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="segmentTerminatorSuffix", required=true)
     private Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
+    /**
+     * @return The EDIFACT frame setting segment terminator suffix.
+     * 
+     */
     public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -141,6 +181,10 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="serviceCodeListDirectoryVersion")
     private @Nullable Output<String> serviceCodeListDirectoryVersion;
 
+    /**
+     * @return The service code list directory version.
+     * 
+     */
     public Optional<Output<String>> serviceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }
@@ -179,109 +223,253 @@ public final class EdifactFramingSettingsArgs extends com.pulumi.resources.Resou
             $ = new EdifactFramingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param characterEncoding The character encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterEncoding(@Nullable Output<String> characterEncoding) {
             $.characterEncoding = characterEncoding;
             return this;
         }
 
+        /**
+         * @param characterEncoding The character encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterEncoding(String characterEncoding) {
             return characterEncoding(Output.of(characterEncoding));
         }
 
+        /**
+         * @param characterSet The EDIFACT frame setting characterSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(Output<Either<String,EdifactCharacterSet>> characterSet) {
             $.characterSet = characterSet;
             return this;
         }
 
+        /**
+         * @param characterSet The EDIFACT frame setting characterSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(Either<String,EdifactCharacterSet> characterSet) {
             return characterSet(Output.of(characterSet));
         }
 
+        /**
+         * @param characterSet The EDIFACT frame setting characterSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(String characterSet) {
             return characterSet(Either.ofLeft(characterSet));
         }
 
+        /**
+         * @param characterSet The EDIFACT frame setting characterSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder characterSet(EdifactCharacterSet characterSet) {
             return characterSet(Either.ofRight(characterSet));
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             return componentSeparator(Output.of(componentSeparator));
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Output<Integer> dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             return dataElementSeparator(Output.of(dataElementSeparator));
         }
 
+        /**
+         * @param decimalPointIndicator The EDIFACT frame setting decimal indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalPointIndicator(Output<EdifactDecimalIndicator> decimalPointIndicator) {
             $.decimalPointIndicator = decimalPointIndicator;
             return this;
         }
 
+        /**
+         * @param decimalPointIndicator The EDIFACT frame setting decimal indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
             return decimalPointIndicator(Output.of(decimalPointIndicator));
         }
 
+        /**
+         * @param protocolVersion The protocol version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(Output<Integer> protocolVersion) {
             $.protocolVersion = protocolVersion;
             return this;
         }
 
+        /**
+         * @param protocolVersion The protocol version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(Integer protocolVersion) {
             return protocolVersion(Output.of(protocolVersion));
         }
 
+        /**
+         * @param releaseIndicator The release indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseIndicator(Output<Integer> releaseIndicator) {
             $.releaseIndicator = releaseIndicator;
             return this;
         }
 
+        /**
+         * @param releaseIndicator The release indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseIndicator(Integer releaseIndicator) {
             return releaseIndicator(Output.of(releaseIndicator));
         }
 
+        /**
+         * @param repetitionSeparator The repetition separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repetitionSeparator(Output<Integer> repetitionSeparator) {
             $.repetitionSeparator = repetitionSeparator;
             return this;
         }
 
+        /**
+         * @param repetitionSeparator The repetition separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             return repetitionSeparator(Output.of(repetitionSeparator));
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Output<Integer> segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             return segmentTerminator(Output.of(segmentTerminator));
         }
 
+        /**
+         * @param segmentTerminatorSuffix The EDIFACT frame setting segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(Output<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The EDIFACT frame setting segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             return segmentTerminatorSuffix(Output.of(segmentTerminatorSuffix));
         }
 
+        /**
+         * @param serviceCodeListDirectoryVersion The service code list directory version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCodeListDirectoryVersion(@Nullable Output<String> serviceCodeListDirectoryVersion) {
             $.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }
 
+        /**
+         * @param serviceCodeListDirectoryVersion The service code list directory version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCodeListDirectoryVersion(String serviceCodeListDirectoryVersion) {
             return serviceCodeListDirectoryVersion(Output.of(serviceCodeListDirectoryVersion));
         }

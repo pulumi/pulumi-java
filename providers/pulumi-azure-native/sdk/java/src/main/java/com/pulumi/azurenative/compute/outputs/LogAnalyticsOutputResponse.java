@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LogAnalyticsOutputResponse {
-    /**
-     * Output file Uri path to blob container.
-     * 
-     */
+        /**
+         * @return Output file Uri path to blob container.
+         * 
+         */
     private final String output;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class LogAnalyticsOutputResponse {
     }
 
     /**
-     * Output file Uri path to blob container.
+     * @return Output file Uri path to blob container.
      * 
-    */
+     */
     public String output() {
         return this.output;
     }

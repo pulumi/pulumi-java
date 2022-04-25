@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConditionResponse {
-    /**
-     * The issue requiring attention.
-     * 
-     */
+        /**
+         * @return The issue requiring attention.
+         * 
+         */
     private final String message;
-    /**
-     * The time when the condition was raised.
-     * 
-     */
+        /**
+         * @return The time when the condition was raised.
+         * 
+         */
     private final String timestamp;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ConditionResponse {
     }
 
     /**
-     * The issue requiring attention.
+     * @return The issue requiring attention.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The time when the condition was raised.
+     * @return The time when the condition was raised.
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }

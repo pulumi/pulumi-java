@@ -9,40 +9,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServerCommunicationLinkResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Communication link kind.  This property is used for Azure Portal metadata.
-     * 
-     */
+        /**
+         * @return Communication link kind.  This property is used for Azure Portal metadata.
+         * 
+         */
     private final String kind;
-    /**
-     * Communication link location.
-     * 
-     */
+        /**
+         * @return Communication link location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The name of the partner server.
-     * 
-     */
+        /**
+         * @return The name of the partner server.
+         * 
+         */
     private final String partnerServer;
-    /**
-     * The state.
-     * 
-     */
+        /**
+         * @return The state.
+         * 
+         */
     private final String state;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -64,51 +64,51 @@ public final class GetServerCommunicationLinkResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Communication link kind.  This property is used for Azure Portal metadata.
+     * @return Communication link kind.  This property is used for Azure Portal metadata.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Communication link location.
+     * @return Communication link location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the partner server.
+     * @return The name of the partner server.
      * 
-    */
+     */
     public String partnerServer() {
         return this.partnerServer;
     }
     /**
-     * The state.
+     * @return The state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpnSiteLinkResponse {
-    /**
-     * The set of bgp properties.
-     * 
-     */
+        /**
+         * @return The set of bgp properties.
+         * 
+         */
     private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * FQDN of vpn-site-link.
-     * 
-     */
+        /**
+         * @return FQDN of vpn-site-link.
+         * 
+         */
     private final @Nullable String fqdn;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The ip-address for the vpn-site-link.
-     * 
-     */
+        /**
+         * @return The ip-address for the vpn-site-link.
+         * 
+         */
     private final @Nullable String ipAddress;
-    /**
-     * The link provider properties.
-     * 
-     */
+        /**
+         * @return The link provider properties.
+         * 
+         */
     private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the VPN site link resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the VPN site link resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class VpnSiteLinkResponse {
     }
 
     /**
-     * The set of bgp properties.
+     * @return The set of bgp properties.
      * 
-    */
+     */
     public Optional<VpnLinkBgpSettingsResponse> bgpProperties() {
         return Optional.ofNullable(this.bgpProperties);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * FQDN of vpn-site-link.
+     * @return FQDN of vpn-site-link.
      * 
-    */
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The ip-address for the vpn-site-link.
+     * @return The ip-address for the vpn-site-link.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * The link provider properties.
+     * @return The link provider properties.
      * 
-    */
+     */
     public Optional<VpnLinkProviderPropertiesResponse> linkProperties() {
         return Optional.ofNullable(this.linkProperties);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the VPN site link resource.
+     * @return The provisioning state of the VPN site link resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

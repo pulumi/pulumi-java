@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class EdifactValidationOverrideResponse {
-    /**
-     * The value indicating whether to allow leading and trailing spaces and zeroes.
-     * 
-     */
+        /**
+         * @return The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         */
     private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
-    /**
-     * The value indicating whether to validate character Set.
-     * 
-     */
+        /**
+         * @return The value indicating whether to validate character Set.
+         * 
+         */
     private final Boolean enforceCharacterSet;
-    /**
-     * The message id on which the validation settings has to be applied.
-     * 
-     */
+        /**
+         * @return The message id on which the validation settings has to be applied.
+         * 
+         */
     private final String messageId;
-    /**
-     * The trailing separator policy.
-     * 
-     */
+        /**
+         * @return The trailing separator policy.
+         * 
+         */
     private final String trailingSeparatorPolicy;
-    /**
-     * The value indicating whether to trim leading and trailing spaces and zeroes.
-     * 
-     */
+        /**
+         * @return The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         */
     private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
-    /**
-     * The value indicating whether to validate EDI types.
-     * 
-     */
+        /**
+         * @return The value indicating whether to validate EDI types.
+         * 
+         */
     private final Boolean validateEDITypes;
-    /**
-     * The value indicating whether to validate XSD types.
-     * 
-     */
+        /**
+         * @return The value indicating whether to validate XSD types.
+         * 
+         */
     private final Boolean validateXSDTypes;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class EdifactValidationOverrideResponse {
     }
 
     /**
-     * The value indicating whether to allow leading and trailing spaces and zeroes.
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
-    */
+     */
     public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
     /**
-     * The value indicating whether to validate character Set.
+     * @return The value indicating whether to validate character Set.
      * 
-    */
+     */
     public Boolean enforceCharacterSet() {
         return this.enforceCharacterSet;
     }
     /**
-     * The message id on which the validation settings has to be applied.
+     * @return The message id on which the validation settings has to be applied.
      * 
-    */
+     */
     public String messageId() {
         return this.messageId;
     }
     /**
-     * The trailing separator policy.
+     * @return The trailing separator policy.
      * 
-    */
+     */
     public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
     /**
-     * The value indicating whether to trim leading and trailing spaces and zeroes.
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
-    */
+     */
     public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
     /**
-     * The value indicating whether to validate EDI types.
+     * @return The value indicating whether to validate EDI types.
      * 
-    */
+     */
     public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
     /**
-     * The value indicating whether to validate XSD types.
+     * @return The value indicating whether to validate XSD types.
      * 
-    */
+     */
     public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }

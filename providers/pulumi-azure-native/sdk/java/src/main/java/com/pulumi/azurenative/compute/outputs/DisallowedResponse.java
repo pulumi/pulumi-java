@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DisallowedResponse {
-    /**
-     * A list of disk types.
-     * 
-     */
+        /**
+         * @return A list of disk types.
+         * 
+         */
     private final @Nullable List<String> diskTypes;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DisallowedResponse {
     }
 
     /**
-     * A list of disk types.
+     * @return A list of disk types.
      * 
-    */
+     */
     public List<String> diskTypes() {
         return this.diskTypes == null ? List.of() : this.diskTypes;
     }

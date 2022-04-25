@@ -25,6 +25,10 @@ public final class PipelineJobErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return The error code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class PipelineJobErrorResponse extends com.pulumi.resources.InvokeA
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The error message.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -65,11 +73,23 @@ public final class PipelineJobErrorResponse extends com.pulumi.resources.InvokeA
             $ = new PipelineJobErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message The error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListOpenShiftClusterAdminCredentialsResult {
-    /**
-     * The base64-encoded kubeconfig file.
-     * 
-     */
+        /**
+         * @return The base64-encoded kubeconfig file.
+         * 
+         */
     private final @Nullable String kubeconfig;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
     }
 
     /**
-     * The base64-encoded kubeconfig file.
+     * @return The base64-encoded kubeconfig file.
      * 
-    */
+     */
     public Optional<String> kubeconfig() {
         return Optional.ofNullable(this.kubeconfig);
     }

@@ -15,70 +15,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCapacityDetailsResult {
-    /**
-     * A collection of Dedicated capacity administrators
-     * 
-     */
+        /**
+         * @return A collection of Dedicated capacity administrators
+         * 
+         */
     private final @Nullable DedicatedCapacityAdministratorsResponse administration;
-    /**
-     * Capacity name
-     * 
-     */
+        /**
+         * @return Capacity name
+         * 
+         */
     private final String friendlyName;
-    /**
-     * An identifier that represents the PowerBI Dedicated resource.
-     * 
-     */
+        /**
+         * @return An identifier that represents the PowerBI Dedicated resource.
+         * 
+         */
     private final String id;
-    /**
-     * Location of the PowerBI Dedicated resource.
-     * 
-     */
+        /**
+         * @return Location of the PowerBI Dedicated resource.
+         * 
+         */
     private final String location;
-    /**
-     * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
-     * 
-     */
+        /**
+         * @return Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * The name of the PowerBI Dedicated resource.
-     * 
-     */
+        /**
+         * @return The name of the PowerBI Dedicated resource.
+         * 
+         */
     private final String name;
-    /**
-     * The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
-     * 
-     */
+        /**
+         * @return The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The SKU of the PowerBI Dedicated capacity resource.
-     * 
-     */
+        /**
+         * @return The SKU of the PowerBI Dedicated capacity resource.
+         * 
+         */
     private final CapacitySkuResponse sku;
-    /**
-     * The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
-     * 
-     */
+        /**
+         * @return The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
+         * 
+         */
     private final String state;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final @Nullable SystemDataResponse systemData;
-    /**
-     * Key-value pairs of additional resource provisioning properties.
-     * 
-     */
+        /**
+         * @return Key-value pairs of additional resource provisioning properties.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Tenant ID for the capacity. Used for creating Pro Plus capacity.
-     * 
-     */
+        /**
+         * @return Tenant ID for the capacity. Used for creating Pro Plus capacity.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of the PowerBI Dedicated resource.
-     * 
-     */
+        /**
+         * @return The type of the PowerBI Dedicated resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -112,93 +112,93 @@ public final class GetCapacityDetailsResult {
     }
 
     /**
-     * A collection of Dedicated capacity administrators
+     * @return A collection of Dedicated capacity administrators
      * 
-    */
+     */
     public Optional<DedicatedCapacityAdministratorsResponse> administration() {
         return Optional.ofNullable(this.administration);
     }
     /**
-     * Capacity name
+     * @return Capacity name
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * An identifier that represents the PowerBI Dedicated resource.
+     * @return An identifier that represents the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the PowerBI Dedicated resource.
+     * @return Location of the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
+     * @return Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value &#39;Gen2&#39; is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The name of the PowerBI Dedicated resource.
+     * @return The name of the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the PowerBI Dedicated capacity resource.
+     * @return The SKU of the PowerBI Dedicated capacity resource.
      * 
-    */
+     */
     public CapacitySkuResponse sku() {
         return this.sku;
     }
     /**
-     * The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
+     * @return The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public Optional<SystemDataResponse> systemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
-     * Key-value pairs of additional resource provisioning properties.
+     * @return Key-value pairs of additional resource provisioning properties.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Tenant ID for the capacity. Used for creating Pro Plus capacity.
+     * @return Tenant ID for the capacity. Used for creating Pro Plus capacity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of the PowerBI Dedicated resource.
+     * @return The type of the PowerBI Dedicated resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

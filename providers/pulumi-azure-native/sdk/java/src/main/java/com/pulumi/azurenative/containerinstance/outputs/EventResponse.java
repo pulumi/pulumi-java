@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class EventResponse {
-    /**
-     * The count of the event.
-     * 
-     */
+        /**
+         * @return The count of the event.
+         * 
+         */
     private final Integer count;
-    /**
-     * The date-time of the earliest logged event.
-     * 
-     */
+        /**
+         * @return The date-time of the earliest logged event.
+         * 
+         */
     private final String firstTimestamp;
-    /**
-     * The date-time of the latest logged event.
-     * 
-     */
+        /**
+         * @return The date-time of the latest logged event.
+         * 
+         */
     private final String lastTimestamp;
-    /**
-     * The event message.
-     * 
-     */
+        /**
+         * @return The event message.
+         * 
+         */
     private final String message;
-    /**
-     * The event name.
-     * 
-     */
+        /**
+         * @return The event name.
+         * 
+         */
     private final String name;
-    /**
-     * The event type.
-     * 
-     */
+        /**
+         * @return The event type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class EventResponse {
     }
 
     /**
-     * The count of the event.
+     * @return The count of the event.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * The date-time of the earliest logged event.
+     * @return The date-time of the earliest logged event.
      * 
-    */
+     */
     public String firstTimestamp() {
         return this.firstTimestamp;
     }
     /**
-     * The date-time of the latest logged event.
+     * @return The date-time of the latest logged event.
      * 
-    */
+     */
     public String lastTimestamp() {
         return this.lastTimestamp;
     }
     /**
-     * The event message.
+     * @return The event message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The event name.
+     * @return The event name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The event type.
+     * @return The event type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

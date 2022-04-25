@@ -26,6 +26,10 @@ public final class BulkCreationParametersArgs extends com.pulumi.resources.Resou
     @Import(name="instanceCount")
     private @Nullable Output<Integer> instanceCount;
 
+    /**
+     * @return The number of virtual machine instances to create.
+     * 
+     */
     public Optional<Output<Integer>> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -54,11 +58,23 @@ public final class BulkCreationParametersArgs extends com.pulumi.resources.Resou
             $ = new BulkCreationParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceCount The number of virtual machine instances to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceCount The number of virtual machine instances to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             return instanceCount(Output.of(instanceCount));
         }

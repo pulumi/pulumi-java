@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProbeResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
-     * 
-     */
+        /**
+         * @return The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
+         * 
+         */
     private final @Nullable Integer intervalInSeconds;
-    /**
-     * The load balancer rules that use this probe.
-     * 
-     */
+        /**
+         * @return The load balancer rules that use this probe.
+         * 
+         */
     private final List<SubResourceResponse> loadBalancingRules;
-    /**
-     * The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
-     * 
-     */
+        /**
+         * @return The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
+         * 
+         */
     private final @Nullable Integer numberOfProbes;
-    /**
-     * The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
-     * 
-     */
+        /**
+         * @return The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
+         * 
+         */
     private final Integer port;
-    /**
-     * The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
-     * 
-     */
+        /**
+         * @return The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+         * 
+         */
     private final String protocol;
-    /**
-     * The provisioning state of the probe resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the probe resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
-     * 
-     */
+        /**
+         * @return The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
+         * 
+         */
     private final @Nullable String requestPath;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class ProbeResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
+     * @return The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
      * 
-    */
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
     /**
-     * The load balancer rules that use this probe.
+     * @return The load balancer rules that use this probe.
      * 
-    */
+     */
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
-     * The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
+     * @return The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
      * 
-    */
+     */
     public Optional<Integer> numberOfProbes() {
         return Optional.ofNullable(this.numberOfProbes);
     }
     /**
-     * The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
+     * @return The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+     * @return The protocol of the end point. If &#39;Tcp&#39; is specified, a received ACK is required for the probe to be successful. If &#39;Http&#39; or &#39;Https&#39; is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The provisioning state of the probe resource.
+     * @return The provisioning state of the probe resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
+     * @return The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
      * 
-    */
+     */
     public Optional<String> requestPath() {
         return Optional.ofNullable(this.requestPath);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

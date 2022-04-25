@@ -16,65 +16,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetADCCatalogResult {
-    /**
-     * Azure data catalog admin list.
-     * 
-     */
+        /**
+         * @return Azure data catalog admin list.
+         * 
+         */
     private final @Nullable List<PrincipalsResponse> admins;
-    /**
-     * Automatic unit adjustment enabled or not.
-     * 
-     */
+        /**
+         * @return Automatic unit adjustment enabled or not.
+         * 
+         */
     private final @Nullable Boolean enableAutomaticUnitAdjustment;
-    /**
-     * Resource etag
-     * 
-     */
+        /**
+         * @return Resource etag
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Azure data catalog SKU.
-     * 
-     */
+        /**
+         * @return Azure data catalog SKU.
+         * 
+         */
     private final @Nullable String sku;
-    /**
-     * Azure data catalog provision status.
-     * 
-     */
+        /**
+         * @return Azure data catalog provision status.
+         * 
+         */
     private final @Nullable Boolean successfullyProvisioned;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Azure data catalog units.
-     * 
-     */
+        /**
+         * @return Azure data catalog units.
+         * 
+         */
     private final @Nullable Integer units;
-    /**
-     * Azure data catalog user list.
-     * 
-     */
+        /**
+         * @return Azure data catalog user list.
+         * 
+         */
     private final @Nullable List<PrincipalsResponse> users;
 
     @CustomType.Constructor
@@ -106,86 +106,86 @@ public final class GetADCCatalogResult {
     }
 
     /**
-     * Azure data catalog admin list.
+     * @return Azure data catalog admin list.
      * 
-    */
+     */
     public List<PrincipalsResponse> admins() {
         return this.admins == null ? List.of() : this.admins;
     }
     /**
-     * Automatic unit adjustment enabled or not.
+     * @return Automatic unit adjustment enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> enableAutomaticUnitAdjustment() {
         return Optional.ofNullable(this.enableAutomaticUnitAdjustment);
     }
     /**
-     * Resource etag
+     * @return Resource etag
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure data catalog SKU.
+     * @return Azure data catalog SKU.
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Azure data catalog provision status.
+     * @return Azure data catalog provision status.
      * 
-    */
+     */
     public Optional<Boolean> successfullyProvisioned() {
         return Optional.ofNullable(this.successfullyProvisioned);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Azure data catalog units.
+     * @return Azure data catalog units.
      * 
-    */
+     */
     public Optional<Integer> units() {
         return Optional.ofNullable(this.units);
     }
     /**
-     * Azure data catalog user list.
+     * @return Azure data catalog user list.
      * 
-    */
+     */
     public List<PrincipalsResponse> users() {
         return this.users == null ? List.of() : this.users;
     }

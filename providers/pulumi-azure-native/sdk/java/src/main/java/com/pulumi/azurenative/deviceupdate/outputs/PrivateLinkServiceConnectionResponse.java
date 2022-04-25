@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateLinkServiceConnectionResponse {
-    /**
-     * List of group IDs.
-     * 
-     */
+        /**
+         * @return List of group IDs.
+         * 
+         */
     private final @Nullable List<String> groupIds;
-    /**
-     * Private link service connection name.
-     * 
-     */
+        /**
+         * @return Private link service connection name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Request message.
-     * 
-     */
+        /**
+         * @return Request message.
+         * 
+         */
     private final @Nullable String requestMessage;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class PrivateLinkServiceConnectionResponse {
     }
 
     /**
-     * List of group IDs.
+     * @return List of group IDs.
      * 
-    */
+     */
     public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
-     * Private link service connection name.
+     * @return Private link service connection name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Request message.
+     * @return Request message.
      * 
-    */
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }

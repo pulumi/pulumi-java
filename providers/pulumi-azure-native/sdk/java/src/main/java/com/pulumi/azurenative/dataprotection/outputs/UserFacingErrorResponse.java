@@ -15,46 +15,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserFacingErrorResponse {
-    /**
-     * Unique code for this error
-     * 
-     */
+        /**
+         * @return Unique code for this error
+         * 
+         */
     private final @Nullable String code;
-    /**
-     * Additional related Errors
-     * 
-     */
+        /**
+         * @return Additional related Errors
+         * 
+         */
     private final @Nullable List<UserFacingErrorResponse> details;
-    /**
-     * Inner Error
-     * 
-     */
+        /**
+         * @return Inner Error
+         * 
+         */
     private final @Nullable InnerErrorResponse innerError;
-    /**
-     * Whether the operation will be retryable or not
-     * 
-     */
+        /**
+         * @return Whether the operation will be retryable or not
+         * 
+         */
     private final @Nullable Boolean isRetryable;
-    /**
-     * Whether the operation is due to a user error or service error
-     * 
-     */
+        /**
+         * @return Whether the operation is due to a user error or service error
+         * 
+         */
     private final @Nullable Boolean isUserError;
     private final @Nullable String message;
-    /**
-     * Any key value pairs that can be injected inside error object
-     * 
-     */
+        /**
+         * @return Any key value pairs that can be injected inside error object
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * RecommendedAction � localized.
-     * 
-     */
+        /**
+         * @return RecommendedAction � localized.
+         * 
+         */
     private final @Nullable List<String> recommendedAction;
-    /**
-     * Target of the error.
-     * 
-     */
+        /**
+         * @return Target of the error.
+         * 
+         */
     private final @Nullable String target;
 
     @CustomType.Constructor
@@ -80,37 +80,37 @@ public final class UserFacingErrorResponse {
     }
 
     /**
-     * Unique code for this error
+     * @return Unique code for this error
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Additional related Errors
+     * @return Additional related Errors
      * 
-    */
+     */
     public List<UserFacingErrorResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * Inner Error
+     * @return Inner Error
      * 
-    */
+     */
     public Optional<InnerErrorResponse> innerError() {
         return Optional.ofNullable(this.innerError);
     }
     /**
-     * Whether the operation will be retryable or not
+     * @return Whether the operation will be retryable or not
      * 
-    */
+     */
     public Optional<Boolean> isRetryable() {
         return Optional.ofNullable(this.isRetryable);
     }
     /**
-     * Whether the operation is due to a user error or service error
+     * @return Whether the operation is due to a user error or service error
      * 
-    */
+     */
     public Optional<Boolean> isUserError() {
         return Optional.ofNullable(this.isUserError);
     }
@@ -118,23 +118,23 @@ public final class UserFacingErrorResponse {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Any key value pairs that can be injected inside error object
+     * @return Any key value pairs that can be injected inside error object
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * RecommendedAction � localized.
+     * @return RecommendedAction � localized.
      * 
-    */
+     */
     public List<String> recommendedAction() {
         return this.recommendedAction == null ? List.of() : this.recommendedAction;
     }
     /**
-     * Target of the error.
+     * @return Target of the error.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

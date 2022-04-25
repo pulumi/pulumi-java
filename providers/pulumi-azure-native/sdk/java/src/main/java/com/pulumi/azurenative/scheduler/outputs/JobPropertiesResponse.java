@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobPropertiesResponse {
-    /**
-     * Gets or sets the job action.
-     * 
-     */
+        /**
+         * @return Gets or sets the job action.
+         * 
+         */
     private final @Nullable JobActionResponse action;
-    /**
-     * Gets or sets the job recurrence.
-     * 
-     */
+        /**
+         * @return Gets or sets the job recurrence.
+         * 
+         */
     private final @Nullable JobRecurrenceResponse recurrence;
-    /**
-     * Gets or sets the job start time.
-     * 
-     */
+        /**
+         * @return Gets or sets the job start time.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * Gets or set the job state.
-     * 
-     */
+        /**
+         * @return Gets or set the job state.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * Gets the job status.
-     * 
-     */
+        /**
+         * @return Gets the job status.
+         * 
+         */
     private final JobStatusResponse status;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class JobPropertiesResponse {
     }
 
     /**
-     * Gets or sets the job action.
+     * @return Gets or sets the job action.
      * 
-    */
+     */
     public Optional<JobActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * Gets or sets the job recurrence.
+     * @return Gets or sets the job recurrence.
      * 
-    */
+     */
     public Optional<JobRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
-     * Gets or sets the job start time.
+     * @return Gets or sets the job start time.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Gets or set the job state.
+     * @return Gets or set the job state.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Gets the job status.
+     * @return Gets the job status.
      * 
-    */
+     */
     public JobStatusResponse status() {
         return this.status;
     }

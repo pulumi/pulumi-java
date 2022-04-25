@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrincipalResponse {
-    /**
-     * The name of the principal made changes
-     * 
-     */
+        /**
+         * @return The name of the principal made changes
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Email of principal
-     * 
-     */
+        /**
+         * @return Email of principal
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * The id of the principal made changes
-     * 
-     */
+        /**
+         * @return The id of the principal made changes
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Type of principal such as user , group etc
-     * 
-     */
+        /**
+         * @return Type of principal such as user , group etc
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class PrincipalResponse {
     }
 
     /**
-     * The name of the principal made changes
+     * @return The name of the principal made changes
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Email of principal
+     * @return Email of principal
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The id of the principal made changes
+     * @return The id of the principal made changes
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Type of principal such as user , group etc
+     * @return Type of principal such as user , group etc
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

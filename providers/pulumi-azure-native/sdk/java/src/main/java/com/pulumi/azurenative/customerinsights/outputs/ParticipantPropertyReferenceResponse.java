@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ParticipantPropertyReferenceResponse {
-    /**
-     * The source property that maps to the target property.
-     * 
-     */
+        /**
+         * @return The source property that maps to the target property.
+         * 
+         */
     private final String sourcePropertyName;
-    /**
-     * The target property that maps to the source property.
-     * 
-     */
+        /**
+         * @return The target property that maps to the source property.
+         * 
+         */
     private final String targetPropertyName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ParticipantPropertyReferenceResponse {
     }
 
     /**
-     * The source property that maps to the target property.
+     * @return The source property that maps to the target property.
      * 
-    */
+     */
     public String sourcePropertyName() {
         return this.sourcePropertyName;
     }
     /**
-     * The target property that maps to the source property.
+     * @return The target property that maps to the source property.
      * 
-    */
+     */
     public String targetPropertyName() {
         return this.targetPropertyName;
     }

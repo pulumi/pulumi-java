@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectorCollectionErrorInfoResponse {
-    /**
-     * Short error code
-     * 
-     */
+        /**
+         * @return Short error code
+         * 
+         */
     private final String errorCode;
-    /**
-     * External Provider error message
-     * 
-     */
+        /**
+         * @return External Provider error message
+         * 
+         */
     private final String errorInnerMessage;
-    /**
-     * Detailed error message
-     * 
-     */
+        /**
+         * @return Detailed error message
+         * 
+         */
     private final String errorMessage;
-    /**
-     * Time the error started occurring (Last time error occurred in lastChecked)
-     * 
-     */
+        /**
+         * @return Time the error started occurring (Last time error occurred in lastChecked)
+         * 
+         */
     private final String errorStartTime;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class ConnectorCollectionErrorInfoResponse {
     }
 
     /**
-     * Short error code
+     * @return Short error code
      * 
-    */
+     */
     public String errorCode() {
         return this.errorCode;
     }
     /**
-     * External Provider error message
+     * @return External Provider error message
      * 
-    */
+     */
     public String errorInnerMessage() {
         return this.errorInnerMessage;
     }
     /**
-     * Detailed error message
+     * @return Detailed error message
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * Time the error started occurring (Last time error occurred in lastChecked)
+     * @return Time the error started occurring (Last time error occurred in lastChecked)
      * 
-    */
+     */
     public String errorStartTime() {
         return this.errorStartTime;
     }

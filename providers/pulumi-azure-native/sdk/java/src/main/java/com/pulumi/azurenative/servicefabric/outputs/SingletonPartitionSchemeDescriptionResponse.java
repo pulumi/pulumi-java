@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class SingletonPartitionSchemeDescriptionResponse {
-    /**
-     * Enumerates the ways that a service can be partitioned.
-     * Expected value is &#39;Singleton&#39;.
-     * 
-     */
+        /**
+         * @return Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;Singleton&#39;.
+         * 
+         */
     private final String partitionScheme;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class SingletonPartitionSchemeDescriptionResponse {
     }
 
     /**
-     * Enumerates the ways that a service can be partitioned.
+     * @return Enumerates the ways that a service can be partitioned.
      * Expected value is &#39;Singleton&#39;.
      * 
-    */
+     */
     public String partitionScheme() {
         return this.partitionScheme;
     }

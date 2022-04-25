@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerLabelResponse {
-    /**
-     * The name of the container label.
-     * 
-     */
+        /**
+         * @return The name of the container label.
+         * 
+         */
     private final String name;
-    /**
-     * The value of the container label.
-     * 
-     */
+        /**
+         * @return The value of the container label.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ContainerLabelResponse {
     }
 
     /**
-     * The name of the container label.
+     * @return The name of the container label.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The value of the container label.
+     * @return The value of the container label.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

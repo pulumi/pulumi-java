@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApplicationGatewayPrivateEndpointConnectionResult {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The consumer link id.
-     * 
-     */
+        /**
+         * @return The consumer link id.
+         * 
+         */
     private final String linkIdentifier;
-    /**
-     * Name of the private endpoint connection on an application gateway.
-     * 
-     */
+        /**
+         * @return Name of the private endpoint connection on an application gateway.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The resource of private end point.
-     * 
-     */
+        /**
+         * @return The resource of private end point.
+         * 
+         */
     private final PrivateEndpointResponse privateEndpoint;
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     * 
-     */
+        /**
+         * @return A collection of information about the state of the connection between service consumer and provider.
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * The provisioning state of the application gateway private endpoint connection resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the application gateway private endpoint connection resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetApplicationGatewayPrivateEndpointConnectionResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The consumer link id.
+     * @return The consumer link id.
      * 
-    */
+     */
     public String linkIdentifier() {
         return this.linkIdentifier;
     }
     /**
-     * Name of the private endpoint connection on an application gateway.
+     * @return Name of the private endpoint connection on an application gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
-    */
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * The provisioning state of the application gateway private endpoint connection resource.
+     * @return The provisioning state of the application gateway private endpoint connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

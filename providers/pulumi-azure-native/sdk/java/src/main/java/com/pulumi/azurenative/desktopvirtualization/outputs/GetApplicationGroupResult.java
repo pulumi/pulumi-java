@@ -17,88 +17,88 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApplicationGroupResult {
-    /**
-     * Resource Type of ApplicationGroup.
-     * 
-     */
+        /**
+         * @return Resource Type of ApplicationGroup.
+         * 
+         */
     private final String applicationGroupType;
-    /**
-     * Is cloud pc resource.
-     * 
-     */
+        /**
+         * @return Is cloud pc resource.
+         * 
+         */
     private final Boolean cloudPcResource;
-    /**
-     * Description of ApplicationGroup.
-     * 
-     */
+        /**
+         * @return Description of ApplicationGroup.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
-     * 
-     */
+        /**
+         * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+         * 
+         */
     private final String etag;
-    /**
-     * Friendly name of ApplicationGroup.
-     * 
-     */
+        /**
+         * @return Friendly name of ApplicationGroup.
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * HostPool arm path of ApplicationGroup.
-     * 
-     */
+        /**
+         * @return HostPool arm path of ApplicationGroup.
+         * 
+         */
     private final String hostPoolArmPath;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
     private final @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity;
-    /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
-     * 
-     */
+        /**
+         * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
-     * 
-     */
+        /**
+         * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+         * 
+         */
     private final @Nullable String managedBy;
-    /**
-     * The registration info of HostPool.
-     * 
-     */
+        /**
+         * @return The registration info of HostPool.
+         * 
+         */
     private final @Nullable MigrationRequestPropertiesResponse migrationRequest;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * ObjectId of ApplicationGroup. (internal use)
-     * 
-     */
+        /**
+         * @return ObjectId of ApplicationGroup. (internal use)
+         * 
+         */
     private final String objectId;
     private final @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan;
     private final @Nullable ResourceModelWithAllowedPropertySetResponseSku sku;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Workspace arm path of ApplicationGroup.
-     * 
-     */
+        /**
+         * @return Workspace arm path of ApplicationGroup.
+         * 
+         */
     private final String workspaceArmPath;
 
     @CustomType.Constructor
@@ -144,51 +144,51 @@ public final class GetApplicationGroupResult {
     }
 
     /**
-     * Resource Type of ApplicationGroup.
+     * @return Resource Type of ApplicationGroup.
      * 
-    */
+     */
     public String applicationGroupType() {
         return this.applicationGroupType;
     }
     /**
-     * Is cloud pc resource.
+     * @return Is cloud pc resource.
      * 
-    */
+     */
     public Boolean cloudPcResource() {
         return this.cloudPcResource;
     }
     /**
-     * Description of ApplicationGroup.
+     * @return Description of ApplicationGroup.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
+     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Friendly name of ApplicationGroup.
+     * @return Friendly name of ApplicationGroup.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * HostPool arm path of ApplicationGroup.
+     * @return HostPool arm path of ApplicationGroup.
      * 
-    */
+     */
     public String hostPoolArmPath() {
         return this.hostPoolArmPath;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -196,44 +196,44 @@ public final class GetApplicationGroupResult {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
-    */
+     */
     public Optional<String> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
-     * The registration info of HostPool.
+     * @return The registration info of HostPool.
      * 
-    */
+     */
     public Optional<MigrationRequestPropertiesResponse> migrationRequest() {
         return Optional.ofNullable(this.migrationRequest);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * ObjectId of ApplicationGroup. (internal use)
+     * @return ObjectId of ApplicationGroup. (internal use)
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
@@ -244,23 +244,23 @@ public final class GetApplicationGroupResult {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Workspace arm path of ApplicationGroup.
+     * @return Workspace arm path of ApplicationGroup.
      * 
-    */
+     */
     public String workspaceArmPath() {
         return this.workspaceArmPath;
     }

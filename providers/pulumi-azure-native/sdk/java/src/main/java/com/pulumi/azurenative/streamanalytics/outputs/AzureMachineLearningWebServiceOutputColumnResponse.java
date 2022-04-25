@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureMachineLearningWebServiceOutputColumnResponse {
-    /**
-     * The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
-     * 
-     */
+        /**
+         * @return The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+         * 
+         */
     private final @Nullable String dataType;
-    /**
-     * The name of the output column.
-     * 
-     */
+        /**
+         * @return The name of the output column.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse {
     }
 
     /**
-     * The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+     * @return The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * The name of the output column.
+     * @return The name of the output column.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

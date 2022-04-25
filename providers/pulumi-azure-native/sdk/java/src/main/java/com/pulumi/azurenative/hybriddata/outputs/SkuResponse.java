@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The sku name. Required for data manager creation, optional for update.
-     * 
-     */
+        /**
+         * @return The sku name. Required for data manager creation, optional for update.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The sku tier. This is based on the SKU name.
-     * 
-     */
+        /**
+         * @return The sku tier. This is based on the SKU name.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The sku name. Required for data manager creation, optional for update.
+     * @return The sku name. Required for data manager creation, optional for update.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The sku tier. This is based on the SKU name.
+     * @return The sku tier. This is based on the SKU name.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClusterGatewaySettingsResult {
-    /**
-     * Indicates whether or not the gateway settings based authorization is enabled.
-     * 
-     */
+        /**
+         * @return Indicates whether or not the gateway settings based authorization is enabled.
+         * 
+         */
     private final String isCredentialEnabled;
-    /**
-     * The gateway settings user password.
-     * 
-     */
+        /**
+         * @return The gateway settings user password.
+         * 
+         */
     private final String password;
-    /**
-     * The gateway settings user name.
-     * 
-     */
+        /**
+         * @return The gateway settings user name.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GetClusterGatewaySettingsResult {
     }
 
     /**
-     * Indicates whether or not the gateway settings based authorization is enabled.
+     * @return Indicates whether or not the gateway settings based authorization is enabled.
      * 
-    */
+     */
     public String isCredentialEnabled() {
         return this.isCredentialEnabled;
     }
     /**
-     * The gateway settings user password.
+     * @return The gateway settings user password.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The gateway settings user name.
+     * @return The gateway settings user name.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

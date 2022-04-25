@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse {
-    /**
-     * The content key ID.
-     * 
-     */
+        /**
+         * @return The content key ID.
+         * 
+         */
     private final String keyId;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     }
 
     /**
-     * The content key ID.
+     * @return The content key ID.
      * 
-    */
+     */
     public String keyId() {
         return this.keyId;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifier&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

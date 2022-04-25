@@ -12,65 +12,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDeviceExtendedInformationResult {
-    /**
-     * The name of Channel Integrity Key stored in the Client Key Vault
-     * 
-     */
+        /**
+         * @return The name of Channel Integrity Key stored in the Client Key Vault
+         * 
+         */
     private final @Nullable String channelIntegrityKeyName;
-    /**
-     * The version of Channel Integrity Key stored in the Client Key Vault
-     * 
-     */
+        /**
+         * @return The version of Channel Integrity Key stored in the Client Key Vault
+         * 
+         */
     private final @Nullable String channelIntegrityKeyVersion;
-    /**
-     * The Key Vault ARM Id for client secrets
-     * 
-     */
+        /**
+         * @return The Key Vault ARM Id for client secrets
+         * 
+         */
     private final @Nullable String clientSecretStoreId;
-    /**
-     * The url to access the Client Key Vault
-     * 
-     */
+        /**
+         * @return The url to access the Client Key Vault
+         * 
+         */
     private final @Nullable String clientSecretStoreUrl;
-    /**
-     * Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
-     * 
-     */
+        /**
+         * @return Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
+         * 
+         */
     private final DeviceSecretsResponse deviceSecrets;
-    /**
-     * The public part of the encryption certificate. Client uses this to encrypt any secret.
-     * 
-     */
+        /**
+         * @return The public part of the encryption certificate. Client uses this to encrypt any secret.
+         * 
+         */
     private final @Nullable String encryptionKey;
-    /**
-     * The digital signature of encrypted certificate.
-     * 
-     */
+        /**
+         * @return The digital signature of encrypted certificate.
+         * 
+         */
     private final @Nullable String encryptionKeyThumbprint;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * Key vault sync status
-     * 
-     */
+        /**
+         * @return Key vault sync status
+         * 
+         */
     private final @Nullable String keyVaultSyncStatus;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * The Resource ID of the Resource.
-     * 
-     */
+        /**
+         * @return The Resource ID of the Resource.
+         * 
+         */
     private final String resourceKey;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class GetDeviceExtendedInformationResult {
     }
 
     /**
-     * The name of Channel Integrity Key stored in the Client Key Vault
+     * @return The name of Channel Integrity Key stored in the Client Key Vault
      * 
-    */
+     */
     public Optional<String> channelIntegrityKeyName() {
         return Optional.ofNullable(this.channelIntegrityKeyName);
     }
     /**
-     * The version of Channel Integrity Key stored in the Client Key Vault
+     * @return The version of Channel Integrity Key stored in the Client Key Vault
      * 
-    */
+     */
     public Optional<String> channelIntegrityKeyVersion() {
         return Optional.ofNullable(this.channelIntegrityKeyVersion);
     }
     /**
-     * The Key Vault ARM Id for client secrets
+     * @return The Key Vault ARM Id for client secrets
      * 
-    */
+     */
     public Optional<String> clientSecretStoreId() {
         return Optional.ofNullable(this.clientSecretStoreId);
     }
     /**
-     * The url to access the Client Key Vault
+     * @return The url to access the Client Key Vault
      * 
-    */
+     */
     public Optional<String> clientSecretStoreUrl() {
         return Optional.ofNullable(this.clientSecretStoreUrl);
     }
     /**
-     * Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
+     * @return Device secrets, will be returned only with ODataFilter $expand=deviceSecrets
      * 
-    */
+     */
     public DeviceSecretsResponse deviceSecrets() {
         return this.deviceSecrets;
     }
     /**
-     * The public part of the encryption certificate. Client uses this to encrypt any secret.
+     * @return The public part of the encryption certificate. Client uses this to encrypt any secret.
      * 
-    */
+     */
     public Optional<String> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
-     * The digital signature of encrypted certificate.
+     * @return The digital signature of encrypted certificate.
      * 
-    */
+     */
     public Optional<String> encryptionKeyThumbprint() {
         return Optional.ofNullable(this.encryptionKeyThumbprint);
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key vault sync status
+     * @return Key vault sync status
      * 
-    */
+     */
     public Optional<String> keyVaultSyncStatus() {
         return Optional.ofNullable(this.keyVaultSyncStatus);
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Resource ID of the Resource.
+     * @return The Resource ID of the Resource.
      * 
-    */
+     */
     public String resourceKey() {
         return this.resourceKey;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

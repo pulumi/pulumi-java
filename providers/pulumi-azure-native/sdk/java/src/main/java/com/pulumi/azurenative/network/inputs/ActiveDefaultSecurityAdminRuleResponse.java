@@ -31,6 +31,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="access", required=true)
     private String access;
 
+    /**
+     * @return Indicates the access allowed for this particular rule
+     * 
+     */
     public String access() {
         return this.access;
     }
@@ -42,6 +46,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="commitTime")
     private @Nullable String commitTime;
 
+    /**
+     * @return Deployment time string.
+     * 
+     */
     public Optional<String> commitTime() {
         return Optional.ofNullable(this.commitTime);
     }
@@ -53,6 +61,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="configurationDescription")
     private @Nullable String configurationDescription;
 
+    /**
+     * @return A description of the security admin configuration.
+     * 
+     */
     public Optional<String> configurationDescription() {
         return Optional.ofNullable(this.configurationDescription);
     }
@@ -64,6 +76,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="configurationDisplayName")
     private @Nullable String configurationDisplayName;
 
+    /**
+     * @return A display name of the security admin configuration.
+     * 
+     */
     public Optional<String> configurationDisplayName() {
         return Optional.ofNullable(this.configurationDisplayName);
     }
@@ -75,6 +91,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return A description for this rule. Restricted to 140 chars.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -86,6 +106,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="destinationPortRanges", required=true)
     private List<String> destinationPortRanges;
 
+    /**
+     * @return The destination port ranges.
+     * 
+     */
     public List<String> destinationPortRanges() {
         return this.destinationPortRanges;
     }
@@ -97,6 +121,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="destinations", required=true)
     private List<AddressPrefixItemResponse> destinations;
 
+    /**
+     * @return The destination address prefixes. CIDR or destination IP ranges.
+     * 
+     */
     public List<AddressPrefixItemResponse> destinations() {
         return this.destinations;
     }
@@ -108,6 +136,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="direction", required=true)
     private String direction;
 
+    /**
+     * @return Indicates if the traffic matched against the rule in inbound or outbound.
+     * 
+     */
     public String direction() {
         return this.direction;
     }
@@ -119,6 +151,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return A friendly name for the rule.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -130,6 +166,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="flag")
     private @Nullable String flag;
 
+    /**
+     * @return Default rule flag.
+     * 
+     */
     public Optional<String> flag() {
         return Optional.ofNullable(this.flag);
     }
@@ -141,6 +181,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -153,6 +197,11 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return Whether the rule is custom or default.
+     * Expected value is &#39;Default&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -164,6 +213,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -175,6 +228,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return Network protocol this rule applies to.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -186,6 +243,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -197,6 +258,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return Deployment region.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -208,6 +273,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="ruleCollectionAppliesToGroups")
     private @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
 
+    /**
+     * @return Groups for rule collection
+     * 
+     */
     public Optional<List<NetworkManagerSecurityGroupItemResponse>> ruleCollectionAppliesToGroups() {
         return Optional.ofNullable(this.ruleCollectionAppliesToGroups);
     }
@@ -219,6 +288,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="ruleCollectionDescription")
     private @Nullable String ruleCollectionDescription;
 
+    /**
+     * @return A description of the rule collection.
+     * 
+     */
     public Optional<String> ruleCollectionDescription() {
         return Optional.ofNullable(this.ruleCollectionDescription);
     }
@@ -230,6 +303,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="ruleCollectionDisplayName")
     private @Nullable String ruleCollectionDisplayName;
 
+    /**
+     * @return A display name of the rule collection.
+     * 
+     */
     public Optional<String> ruleCollectionDisplayName() {
         return Optional.ofNullable(this.ruleCollectionDisplayName);
     }
@@ -241,6 +318,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="ruleGroups")
     private @Nullable List<ConfigurationGroupResponse> ruleGroups;
 
+    /**
+     * @return Effective configuration groups.
+     * 
+     */
     public Optional<List<ConfigurationGroupResponse>> ruleGroups() {
         return Optional.ofNullable(this.ruleGroups);
     }
@@ -252,6 +333,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="sourcePortRanges", required=true)
     private List<String> sourcePortRanges;
 
+    /**
+     * @return The source port ranges.
+     * 
+     */
     public List<String> sourcePortRanges() {
         return this.sourcePortRanges;
     }
@@ -263,6 +348,10 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
     @Import(name="sources", required=true)
     private List<AddressPrefixItemResponse> sources;
 
+    /**
+     * @return The CIDR or source IP ranges.
+     * 
+     */
     public List<AddressPrefixItemResponse> sources() {
         return this.sources;
     }
@@ -312,136 +401,305 @@ public final class ActiveDefaultSecurityAdminRuleResponse extends com.pulumi.res
             $ = new ActiveDefaultSecurityAdminRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access Indicates the access allowed for this particular rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(String access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param commitTime Deployment time string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitTime(@Nullable String commitTime) {
             $.commitTime = commitTime;
             return this;
         }
 
+        /**
+         * @param configurationDescription A description of the security admin configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationDescription(@Nullable String configurationDescription) {
             $.configurationDescription = configurationDescription;
             return this;
         }
 
+        /**
+         * @param configurationDisplayName A display name of the security admin configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationDisplayName(@Nullable String configurationDisplayName) {
             $.configurationDisplayName = configurationDisplayName;
             return this;
         }
 
+        /**
+         * @param description A description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param destinationPortRanges The destination port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRanges(List<String> destinationPortRanges) {
             $.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
+        /**
+         * @param destinationPortRanges The destination port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRanges(String... destinationPortRanges) {
             return destinationPortRanges(List.of(destinationPortRanges));
         }
 
+        /**
+         * @param destinations The destination address prefixes. CIDR or destination IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(List<AddressPrefixItemResponse> destinations) {
             $.destinations = destinations;
             return this;
         }
 
+        /**
+         * @param destinations The destination address prefixes. CIDR or destination IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinations(AddressPrefixItemResponse... destinations) {
             return destinations(List.of(destinations));
         }
 
+        /**
+         * @param direction Indicates if the traffic matched against the rule in inbound or outbound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param displayName A friendly name for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param flag Default rule flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(@Nullable String flag) {
             $.flag = flag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param kind Whether the rule is custom or default.
+         * Expected value is &#39;Default&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param priority The priority of the rule. The value can be between 1 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param protocol Network protocol this rule applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param region Deployment region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param ruleCollectionAppliesToGroups Groups for rule collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
             $.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
             return this;
         }
 
+        /**
+         * @param ruleCollectionAppliesToGroups Groups for rule collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionAppliesToGroups(NetworkManagerSecurityGroupItemResponse... ruleCollectionAppliesToGroups) {
             return ruleCollectionAppliesToGroups(List.of(ruleCollectionAppliesToGroups));
         }
 
+        /**
+         * @param ruleCollectionDescription A description of the rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionDescription(@Nullable String ruleCollectionDescription) {
             $.ruleCollectionDescription = ruleCollectionDescription;
             return this;
         }
 
+        /**
+         * @param ruleCollectionDisplayName A display name of the rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
             $.ruleCollectionDisplayName = ruleCollectionDisplayName;
             return this;
         }
 
+        /**
+         * @param ruleGroups Effective configuration groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
             $.ruleGroups = ruleGroups;
             return this;
         }
 
+        /**
+         * @param ruleGroups Effective configuration groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroups(ConfigurationGroupResponse... ruleGroups) {
             return ruleGroups(List.of(ruleGroups));
         }
 
+        /**
+         * @param sourcePortRanges The source port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRanges(List<String> sourcePortRanges) {
             $.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
+        /**
+         * @param sourcePortRanges The source port ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRanges(String... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
         }
 
+        /**
+         * @param sources The CIDR or source IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<AddressPrefixItemResponse> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources The CIDR or source IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(AddressPrefixItemResponse... sources) {
             return sources(List.of(sources));
         }

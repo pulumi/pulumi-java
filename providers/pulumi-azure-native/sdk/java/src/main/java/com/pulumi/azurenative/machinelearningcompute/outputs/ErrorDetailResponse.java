@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ErrorDetailResponse {
-    /**
-     * Error code.
-     * 
-     */
+        /**
+         * @return Error code.
+         * 
+         */
     private final String code;
-    /**
-     * Error message.
-     * 
-     */
+        /**
+         * @return Error message.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ErrorDetailResponse {
     }
 
     /**
-     * Error code.
+     * @return Error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Error message.
+     * @return Error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

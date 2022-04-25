@@ -12,60 +12,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkspaceResult {
-    /**
-     * The immutable id of the team account which contains this workspace.
-     * 
-     */
+        /**
+         * @return The immutable id of the team account which contains this workspace.
+         * 
+         */
     private final String accountId;
-    /**
-     * The creation date of the machine learning workspace in ISO8601 format.
-     * 
-     */
+        /**
+         * @return The creation date of the machine learning workspace in ISO8601 format.
+         * 
+         */
     private final String creationDate;
-    /**
-     * The description of this workspace.
-     * 
-     */
+        /**
+         * @return The description of this workspace.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
-     * 
-     */
+        /**
+         * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+         * 
+         */
     private final String friendlyName;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     * 
-     */
+        /**
+         * @return The location of the resource. This cannot be changed after the resource is created.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
-     * 
-     */
+        /**
+         * @return The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The immutable id of this workspace.
-     * 
-     */
+        /**
+         * @return The immutable id of this workspace.
+         * 
+         */
     private final String workspaceId;
 
     @CustomType.Constructor
@@ -95,79 +95,79 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * The immutable id of the team account which contains this workspace.
+     * @return The immutable id of the team account which contains this workspace.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * The creation date of the machine learning workspace in ISO8601 format.
+     * @return The creation date of the machine learning workspace in ISO8601 format.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The description of this workspace.
+     * @return The description of this workspace.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
+     * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
-    */
+     */
     public String friendlyName() {
         return this.friendlyName;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
+     * @return The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The immutable id of this workspace.
+     * @return The immutable id of this workspace.
      * 
-    */
+     */
     public String workspaceId() {
         return this.workspaceId;
     }

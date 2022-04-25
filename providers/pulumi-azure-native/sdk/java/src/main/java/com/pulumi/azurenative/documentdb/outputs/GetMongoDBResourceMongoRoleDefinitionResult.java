@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetMongoDBResourceMongoRoleDefinitionResult {
-    /**
-     * The database name for which access is being granted for this Role Definition.
-     * 
-     */
+        /**
+         * @return The database name for which access is being granted for this Role Definition.
+         * 
+         */
     private final @Nullable String databaseName;
-    /**
-     * The unique resource identifier of the database account.
-     * 
-     */
+        /**
+         * @return The unique resource identifier of the database account.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the database account.
-     * 
-     */
+        /**
+         * @return The name of the database account.
+         * 
+         */
     private final String name;
-    /**
-     * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
-     * 
-     */
+        /**
+         * @return A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+         * 
+         */
     private final @Nullable List<PrivilegeResponse> privileges;
-    /**
-     * A user-friendly name for the Role Definition. Must be unique for the database account.
-     * 
-     */
+        /**
+         * @return A user-friendly name for the Role Definition. Must be unique for the database account.
+         * 
+         */
     private final @Nullable String roleName;
-    /**
-     * The set of roles inherited by this Role Definition.
-     * 
-     */
+        /**
+         * @return The set of roles inherited by this Role Definition.
+         * 
+         */
     private final @Nullable List<RoleResponse> roles;
-    /**
-     * The type of Azure resource.
-     * 
-     */
+        /**
+         * @return The type of Azure resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
     }
 
     /**
-     * The database name for which access is being granted for this Role Definition.
+     * @return The database name for which access is being granted for this Role Definition.
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * The unique resource identifier of the database account.
+     * @return The unique resource identifier of the database account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the database account.
+     * @return The name of the database account.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+     * @return A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
      * 
-    */
+     */
     public List<PrivilegeResponse> privileges() {
         return this.privileges == null ? List.of() : this.privileges;
     }
     /**
-     * A user-friendly name for the Role Definition. Must be unique for the database account.
+     * @return A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
-    */
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
-     * The set of roles inherited by this Role Definition.
+     * @return The set of roles inherited by this Role Definition.
      * 
-    */
+     */
     public List<RoleResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
-     * The type of Azure resource.
+     * @return The type of Azure resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

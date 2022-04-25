@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CommandResponse {
-    /**
-     * The action of the command.
-     * 
-     */
+        /**
+         * @return The action of the command.
+         * 
+         */
     private final String action;
-    /**
-     * Specifies whether to run the command even if a previous command is failed.
-     * 
-     */
+        /**
+         * @return Specifies whether to run the command even if a previous command is failed.
+         * 
+         */
     private final @Nullable Boolean alwaysRun;
-    /**
-     * Specifies whether to apply update before the command.
-     * 
-     */
+        /**
+         * @return Specifies whether to apply update before the command.
+         * 
+         */
     private final @Nullable Boolean applyUpdateBefore;
-    /**
-     * The content of the command. The content depends on source type.
-     * 
-     */
+        /**
+         * @return The content of the command. The content depends on source type.
+         * 
+         */
     private final String content;
-    /**
-     * The type of command content.
-     * 
-     */
+        /**
+         * @return The type of command content.
+         * 
+         */
     private final String contentType;
-    /**
-     * Specifies the max run time of the command.
-     * 
-     */
+        /**
+         * @return Specifies the max run time of the command.
+         * 
+         */
     private final @Nullable Integer maxRunTime;
-    /**
-     * The name of the command.
-     * 
-     */
+        /**
+         * @return The name of the command.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies whether to restart the VM after the command executed.
-     * 
-     */
+        /**
+         * @return Specifies whether to restart the VM after the command executed.
+         * 
+         */
     private final @Nullable Boolean restartAfter;
-    /**
-     * Specifies whether to run the command in interactive mode.
-     * 
-     */
+        /**
+         * @return Specifies whether to run the command in interactive mode.
+         * 
+         */
     private final @Nullable Boolean runAsInteractive;
-    /**
-     * Specifies whether to run the command as administrator.
-     * 
-     */
+        /**
+         * @return Specifies whether to run the command as administrator.
+         * 
+         */
     private final @Nullable Boolean runElevated;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class CommandResponse {
     }
 
     /**
-     * The action of the command.
+     * @return The action of the command.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * Specifies whether to run the command even if a previous command is failed.
+     * @return Specifies whether to run the command even if a previous command is failed.
      * 
-    */
+     */
     public Optional<Boolean> alwaysRun() {
         return Optional.ofNullable(this.alwaysRun);
     }
     /**
-     * Specifies whether to apply update before the command.
+     * @return Specifies whether to apply update before the command.
      * 
-    */
+     */
     public Optional<Boolean> applyUpdateBefore() {
         return Optional.ofNullable(this.applyUpdateBefore);
     }
     /**
-     * The content of the command. The content depends on source type.
+     * @return The content of the command. The content depends on source type.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The type of command content.
+     * @return The type of command content.
      * 
-    */
+     */
     public String contentType() {
         return this.contentType;
     }
     /**
-     * Specifies the max run time of the command.
+     * @return Specifies the max run time of the command.
      * 
-    */
+     */
     public Optional<Integer> maxRunTime() {
         return Optional.ofNullable(this.maxRunTime);
     }
     /**
-     * The name of the command.
+     * @return The name of the command.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies whether to restart the VM after the command executed.
+     * @return Specifies whether to restart the VM after the command executed.
      * 
-    */
+     */
     public Optional<Boolean> restartAfter() {
         return Optional.ofNullable(this.restartAfter);
     }
     /**
-     * Specifies whether to run the command in interactive mode.
+     * @return Specifies whether to run the command in interactive mode.
      * 
-    */
+     */
     public Optional<Boolean> runAsInteractive() {
         return Optional.ofNullable(this.runAsInteractive);
     }
     /**
-     * Specifies whether to run the command as administrator.
+     * @return Specifies whether to run the command as administrator.
      * 
-    */
+     */
     public Optional<Boolean> runElevated() {
         return Optional.ofNullable(this.runElevated);
     }

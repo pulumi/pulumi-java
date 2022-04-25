@@ -23,6 +23,10 @@ public final class AS2MessageConnectionSettingsResponse extends com.pulumi.resou
     @Import(name="ignoreCertificateNameMismatch", required=true)
     private Boolean ignoreCertificateNameMismatch;
 
+    /**
+     * @return The value indicating whether to ignore mismatch in certificate name.
+     * 
+     */
     public Boolean ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
     }
@@ -34,6 +38,10 @@ public final class AS2MessageConnectionSettingsResponse extends com.pulumi.resou
     @Import(name="keepHttpConnectionAlive", required=true)
     private Boolean keepHttpConnectionAlive;
 
+    /**
+     * @return The value indicating whether to keep the connection alive.
+     * 
+     */
     public Boolean keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
     }
@@ -45,6 +53,10 @@ public final class AS2MessageConnectionSettingsResponse extends com.pulumi.resou
     @Import(name="supportHttpStatusCodeContinue", required=true)
     private Boolean supportHttpStatusCodeContinue;
 
+    /**
+     * @return The value indicating whether to support HTTP status code &#39;CONTINUE&#39;.
+     * 
+     */
     public Boolean supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
     }
@@ -56,6 +68,10 @@ public final class AS2MessageConnectionSettingsResponse extends com.pulumi.resou
     @Import(name="unfoldHttpHeaders", required=true)
     private Boolean unfoldHttpHeaders;
 
+    /**
+     * @return The value indicating whether to unfold the HTTP headers.
+     * 
+     */
     public Boolean unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
@@ -87,21 +103,45 @@ public final class AS2MessageConnectionSettingsResponse extends com.pulumi.resou
             $ = new AS2MessageConnectionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreCertificateNameMismatch The value indicating whether to ignore mismatch in certificate name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
             $.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
             return this;
         }
 
+        /**
+         * @param keepHttpConnectionAlive The value indicating whether to keep the connection alive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
             $.keepHttpConnectionAlive = keepHttpConnectionAlive;
             return this;
         }
 
+        /**
+         * @param supportHttpStatusCodeContinue The value indicating whether to support HTTP status code &#39;CONTINUE&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
             $.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;
             return this;
         }
 
+        /**
+         * @param unfoldHttpHeaders The value indicating whether to unfold the HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
             $.unfoldHttpHeaders = unfoldHttpHeaders;
             return this;

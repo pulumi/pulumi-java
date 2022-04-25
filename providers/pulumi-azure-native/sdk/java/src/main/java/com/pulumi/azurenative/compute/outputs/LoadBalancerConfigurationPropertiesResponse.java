@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class LoadBalancerConfigurationPropertiesResponse {
-    /**
-     * Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
-     * 
-     */
+        /**
+         * @return Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+         * 
+         */
     private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class LoadBalancerConfigurationPropertiesResponse {
     }
 
     /**
-     * Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
+     * @return Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
      * 
-    */
+     */
     public List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }

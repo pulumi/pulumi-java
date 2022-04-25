@@ -15,16 +15,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JsonReadSettingsResponse {
-    /**
-     * Compression settings.
-     * 
-     */
+        /**
+         * @return Compression settings.
+         * 
+         */
     private final @Nullable Object compressionProperties;
-    /**
-     * The read setting type.
-     * Expected value is &#39;JsonReadSettings&#39;.
-     * 
-     */
+        /**
+         * @return The read setting type.
+         * Expected value is &#39;JsonReadSettings&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,17 +36,17 @@ public final class JsonReadSettingsResponse {
     }
 
     /**
-     * Compression settings.
+     * @return Compression settings.
      * 
-    */
+     */
     public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
     /**
-     * The read setting type.
+     * @return The read setting type.
      * Expected value is &#39;JsonReadSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

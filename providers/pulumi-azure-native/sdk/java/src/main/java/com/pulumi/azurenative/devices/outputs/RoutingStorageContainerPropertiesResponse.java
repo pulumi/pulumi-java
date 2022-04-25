@@ -12,65 +12,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RoutingStorageContainerPropertiesResponse {
-    /**
-     * Method used to authenticate against the storage endpoint
-     * 
-     */
+        /**
+         * @return Method used to authenticate against the storage endpoint
+         * 
+         */
     private final @Nullable String authenticationType;
-    /**
-     * Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
-     * 
-     */
+        /**
+         * @return Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
+         * 
+         */
     private final @Nullable Integer batchFrequencyInSeconds;
-    /**
-     * The connection string of the storage account.
-     * 
-     */
+        /**
+         * @return The connection string of the storage account.
+         * 
+         */
     private final @Nullable String connectionString;
-    /**
-     * The name of storage container in the storage account.
-     * 
-     */
+        /**
+         * @return The name of storage container in the storage account.
+         * 
+         */
     private final String containerName;
-    /**
-     * Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
-     * 
-     */
+        /**
+         * @return Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
+         * 
+         */
     private final @Nullable String encoding;
-    /**
-     * The url of the storage endpoint. It must include the protocol https://
-     * 
-     */
+        /**
+         * @return The url of the storage endpoint. It must include the protocol https://
+         * 
+         */
     private final @Nullable String endpointUri;
-    /**
-     * File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
-     * 
-     */
+        /**
+         * @return File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
+         * 
+         */
     private final @Nullable String fileNameFormat;
-    /**
-     * Id of the storage container endpoint
-     * 
-     */
+        /**
+         * @return Id of the storage container endpoint
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
-     * 
-     */
+        /**
+         * @return Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
+         * 
+         */
     private final @Nullable Integer maxChunkSizeInBytes;
-    /**
-     * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
-     * 
-     */
+        /**
+         * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+         * 
+         */
     private final String name;
-    /**
-     * The name of the resource group of the storage account.
-     * 
-     */
+        /**
+         * @return The name of the resource group of the storage account.
+         * 
+         */
     private final @Nullable String resourceGroup;
-    /**
-     * The subscription identifier of the storage account.
-     * 
-     */
+        /**
+         * @return The subscription identifier of the storage account.
+         * 
+         */
     private final @Nullable String subscriptionId;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class RoutingStorageContainerPropertiesResponse {
     }
 
     /**
-     * Method used to authenticate against the storage endpoint
+     * @return Method used to authenticate against the storage endpoint
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
+     * @return Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
      * 
-    */
+     */
     public Optional<Integer> batchFrequencyInSeconds() {
         return Optional.ofNullable(this.batchFrequencyInSeconds);
     }
     /**
-     * The connection string of the storage account.
+     * @return The connection string of the storage account.
      * 
-    */
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * The name of storage container in the storage account.
+     * @return The name of storage container in the storage account.
      * 
-    */
+     */
     public String containerName() {
         return this.containerName;
     }
     /**
-     * Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
+     * @return Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
      * 
-    */
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
-     * The url of the storage endpoint. It must include the protocol https://
+     * @return The url of the storage endpoint. It must include the protocol https://
      * 
-    */
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
-     * File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
+     * @return File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
      * 
-    */
+     */
     public Optional<String> fileNameFormat() {
         return Optional.ofNullable(this.fileNameFormat);
     }
     /**
-     * Id of the storage container endpoint
+     * @return Id of the storage container endpoint
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
+     * @return Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
      * 
-    */
+     */
     public Optional<Integer> maxChunkSizeInBytes() {
         return Optional.ofNullable(this.maxChunkSizeInBytes);
     }
     /**
-     * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+     * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the resource group of the storage account.
+     * @return The name of the resource group of the storage account.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     * The subscription identifier of the storage account.
+     * @return The subscription identifier of the storage account.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }

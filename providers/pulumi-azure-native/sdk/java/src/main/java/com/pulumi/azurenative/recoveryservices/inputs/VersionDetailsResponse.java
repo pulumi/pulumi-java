@@ -25,6 +25,10 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="expiryDate")
     private @Nullable String expiryDate;
 
+    /**
+     * @return Version expiry date.
+     * 
+     */
     public Optional<String> expiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
@@ -36,6 +40,10 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return A value indicating whether security update required.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -47,6 +55,10 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The agent version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -77,16 +89,34 @@ public final class VersionDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new VersionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiryDate Version expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDate(@Nullable String expiryDate) {
             $.expiryDate = expiryDate;
             return this;
         }
 
+        /**
+         * @param status A value indicating whether security update required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param version The agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

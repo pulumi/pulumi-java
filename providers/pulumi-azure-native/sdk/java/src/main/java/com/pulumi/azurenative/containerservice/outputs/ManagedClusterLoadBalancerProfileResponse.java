@@ -16,35 +16,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterLoadBalancerProfileResponse {
-    /**
-     * Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
-     * 
-     */
+        /**
+         * @return Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
+         * 
+         */
     private final @Nullable Integer allocatedOutboundPorts;
-    /**
-     * The effective outbound IP resources of the cluster load balancer.
-     * 
-     */
+        /**
+         * @return The effective outbound IP resources of the cluster load balancer.
+         * 
+         */
     private final @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs;
-    /**
-     * Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
-     * 
-     */
+        /**
+         * @return Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
+         * 
+         */
     private final @Nullable Integer idleTimeoutInMinutes;
-    /**
-     * Desired managed outbound IPs for the cluster load balancer.
-     * 
-     */
+        /**
+         * @return Desired managed outbound IPs for the cluster load balancer.
+         * 
+         */
     private final @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs;
-    /**
-     * Desired outbound IP Prefix resources for the cluster load balancer.
-     * 
-     */
+        /**
+         * @return Desired outbound IP Prefix resources for the cluster load balancer.
+         * 
+         */
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes;
-    /**
-     * Desired outbound IP resources for the cluster load balancer.
-     * 
-     */
+        /**
+         * @return Desired outbound IP resources for the cluster load balancer.
+         * 
+         */
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 
     @CustomType.Constructor
@@ -64,44 +64,44 @@ public final class ManagedClusterLoadBalancerProfileResponse {
     }
 
     /**
-     * Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
+     * @return Desired number of allocated SNAT ports per VM. Allowed values must be in the range of 0 to 64000 (inclusive). The default value is 0 which results in Azure dynamically allocating ports.
      * 
-    */
+     */
     public Optional<Integer> allocatedOutboundPorts() {
         return Optional.ofNullable(this.allocatedOutboundPorts);
     }
     /**
-     * The effective outbound IP resources of the cluster load balancer.
+     * @return The effective outbound IP resources of the cluster load balancer.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> effectiveOutboundIPs() {
         return this.effectiveOutboundIPs == null ? List.of() : this.effectiveOutboundIPs;
     }
     /**
-     * Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
+     * @return Desired outbound flow idle timeout in minutes. Allowed values must be in the range of 4 to 120 (inclusive). The default value is 30 minutes.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
-     * Desired managed outbound IPs for the cluster load balancer.
+     * @return Desired managed outbound IPs for the cluster load balancer.
      * 
-    */
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs> managedOutboundIPs() {
         return Optional.ofNullable(this.managedOutboundIPs);
     }
     /**
-     * Desired outbound IP Prefix resources for the cluster load balancer.
+     * @return Desired outbound IP Prefix resources for the cluster load balancer.
      * 
-    */
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes> outboundIPPrefixes() {
         return Optional.ofNullable(this.outboundIPPrefixes);
     }
     /**
-     * Desired outbound IP resources for the cluster load balancer.
+     * @return Desired outbound IP resources for the cluster load balancer.
      * 
-    */
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponseOutboundIPs> outboundIPs() {
         return Optional.ofNullable(this.outboundIPs);
     }

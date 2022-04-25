@@ -28,6 +28,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedRegions")
     private @Nullable Output<List<String>> allowedRegions;
 
+    /**
+     * @return The allowed regions for the lab creator to use when creating labs using this lab plan.
+     * 
+     */
     public Optional<Output<List<String>>> allowedRegions() {
         return Optional.ofNullable(this.allowedRegions);
     }
@@ -39,6 +43,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultAutoShutdownProfile")
     private @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
 
+    /**
+     * @return The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
+     * 
+     */
     public Optional<Output<AutoShutdownProfileArgs>> defaultAutoShutdownProfile() {
         return Optional.ofNullable(this.defaultAutoShutdownProfile);
     }
@@ -50,6 +58,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultConnectionProfile")
     private @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile;
 
+    /**
+     * @return The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
+     * 
+     */
     public Optional<Output<ConnectionProfileArgs>> defaultConnectionProfile() {
         return Optional.ofNullable(this.defaultConnectionProfile);
     }
@@ -61,6 +73,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultNetworkProfile")
     private @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile;
 
+    /**
+     * @return The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
+     * 
+     */
     public Optional<Output<LabPlanNetworkProfileArgs>> defaultNetworkProfile() {
         return Optional.ofNullable(this.defaultNetworkProfile);
     }
@@ -72,6 +88,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labPlanName")
     private @Nullable Output<String> labPlanName;
 
+    /**
+     * @return The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+     * 
+     */
     public Optional<Output<String>> labPlanName() {
         return Optional.ofNullable(this.labPlanName);
     }
@@ -83,6 +103,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedLmsInstance")
     private @Nullable Output<String> linkedLmsInstance;
 
+    /**
+     * @return Base Url of the lms instance this lab plan can link lab rosters against.
+     * 
+     */
     public Optional<Output<String>> linkedLmsInstance() {
         return Optional.ofNullable(this.linkedLmsInstance);
     }
@@ -94,6 +118,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -105,6 +133,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -116,6 +148,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharedGalleryId")
     private @Nullable Output<String> sharedGalleryId;
 
+    /**
+     * @return Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
+     * 
+     */
     public Optional<Output<String>> sharedGalleryId() {
         return Optional.ofNullable(this.sharedGalleryId);
     }
@@ -127,6 +163,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="supportInfo")
     private @Nullable Output<SupportInfoArgs> supportInfo;
 
+    /**
+     * @return Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
+     * 
+     */
     public Optional<Output<SupportInfoArgs>> supportInfo() {
         return Optional.ofNullable(this.supportInfo);
     }
@@ -138,6 +178,10 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -176,105 +220,243 @@ public final class LabPlanArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedRegions The allowed regions for the lab creator to use when creating labs using this lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedRegions(@Nullable Output<List<String>> allowedRegions) {
             $.allowedRegions = allowedRegions;
             return this;
         }
 
+        /**
+         * @param allowedRegions The allowed regions for the lab creator to use when creating labs using this lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedRegions(List<String> allowedRegions) {
             return allowedRegions(Output.of(allowedRegions));
         }
 
+        /**
+         * @param allowedRegions The allowed regions for the lab creator to use when creating labs using this lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedRegions(String... allowedRegions) {
             return allowedRegions(List.of(allowedRegions));
         }
 
+        /**
+         * @param defaultAutoShutdownProfile The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAutoShutdownProfile(@Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile) {
             $.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
             return this;
         }
 
+        /**
+         * @param defaultAutoShutdownProfile The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAutoShutdownProfile(AutoShutdownProfileArgs defaultAutoShutdownProfile) {
             return defaultAutoShutdownProfile(Output.of(defaultAutoShutdownProfile));
         }
 
+        /**
+         * @param defaultConnectionProfile The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConnectionProfile(@Nullable Output<ConnectionProfileArgs> defaultConnectionProfile) {
             $.defaultConnectionProfile = defaultConnectionProfile;
             return this;
         }
 
+        /**
+         * @param defaultConnectionProfile The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultConnectionProfile(ConnectionProfileArgs defaultConnectionProfile) {
             return defaultConnectionProfile(Output.of(defaultConnectionProfile));
         }
 
+        /**
+         * @param defaultNetworkProfile The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultNetworkProfile(@Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
             $.defaultNetworkProfile = defaultNetworkProfile;
             return this;
         }
 
+        /**
+         * @param defaultNetworkProfile The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultNetworkProfile(LabPlanNetworkProfileArgs defaultNetworkProfile) {
             return defaultNetworkProfile(Output.of(defaultNetworkProfile));
         }
 
+        /**
+         * @param labPlanName The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labPlanName(@Nullable Output<String> labPlanName) {
             $.labPlanName = labPlanName;
             return this;
         }
 
+        /**
+         * @param labPlanName The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labPlanName(String labPlanName) {
             return labPlanName(Output.of(labPlanName));
         }
 
+        /**
+         * @param linkedLmsInstance Base Url of the lms instance this lab plan can link lab rosters against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedLmsInstance(@Nullable Output<String> linkedLmsInstance) {
             $.linkedLmsInstance = linkedLmsInstance;
             return this;
         }
 
+        /**
+         * @param linkedLmsInstance Base Url of the lms instance this lab plan can link lab rosters against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedLmsInstance(String linkedLmsInstance) {
             return linkedLmsInstance(Output.of(linkedLmsInstance));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sharedGalleryId Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedGalleryId(@Nullable Output<String> sharedGalleryId) {
             $.sharedGalleryId = sharedGalleryId;
             return this;
         }
 
+        /**
+         * @param sharedGalleryId Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedGalleryId(String sharedGalleryId) {
             return sharedGalleryId(Output.of(sharedGalleryId));
         }
 
+        /**
+         * @param supportInfo Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportInfo(@Nullable Output<SupportInfoArgs> supportInfo) {
             $.supportInfo = supportInfo;
             return this;
         }
 
+        /**
+         * @param supportInfo Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportInfo(SupportInfoArgs supportInfo) {
             return supportInfo(Output.of(supportInfo));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

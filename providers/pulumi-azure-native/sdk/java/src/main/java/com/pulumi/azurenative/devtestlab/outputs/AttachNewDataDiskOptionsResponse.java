@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AttachNewDataDiskOptionsResponse {
-    /**
-     * The name of the disk to be attached.
-     * 
-     */
+        /**
+         * @return The name of the disk to be attached.
+         * 
+         */
     private final @Nullable String diskName;
-    /**
-     * Size of the disk to be attached in Gibibytes.
-     * 
-     */
+        /**
+         * @return Size of the disk to be attached in Gibibytes.
+         * 
+         */
     private final @Nullable Integer diskSizeGiB;
-    /**
-     * The storage type for the disk (i.e. Standard, Premium).
-     * 
-     */
+        /**
+         * @return The storage type for the disk (i.e. Standard, Premium).
+         * 
+         */
     private final @Nullable String diskType;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class AttachNewDataDiskOptionsResponse {
     }
 
     /**
-     * The name of the disk to be attached.
+     * @return The name of the disk to be attached.
      * 
-    */
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
-     * Size of the disk to be attached in Gibibytes.
+     * @return Size of the disk to be attached in Gibibytes.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
     /**
-     * The storage type for the disk (i.e. Standard, Premium).
+     * @return The storage type for the disk (i.e. Standard, Premium).
      * 
-    */
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }

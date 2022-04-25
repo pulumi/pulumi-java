@@ -26,6 +26,10 @@ public final class AccessReviewInstanceArgs extends com.pulumi.resources.Resourc
     @Import(name="endDateTime")
     private @Nullable Output<String> endDateTime;
 
+    /**
+     * @return The DateTime when the review instance is scheduled to end.
+     * 
+     */
     public Optional<Output<String>> endDateTime() {
         return Optional.ofNullable(this.endDateTime);
     }
@@ -37,6 +41,10 @@ public final class AccessReviewInstanceArgs extends com.pulumi.resources.Resourc
     @Import(name="startDateTime")
     private @Nullable Output<String> startDateTime;
 
+    /**
+     * @return The DateTime when the review instance is scheduled to be start.
+     * 
+     */
     public Optional<Output<String>> startDateTime() {
         return Optional.ofNullable(this.startDateTime);
     }
@@ -66,20 +74,44 @@ public final class AccessReviewInstanceArgs extends com.pulumi.resources.Resourc
             $ = new AccessReviewInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDateTime The DateTime when the review instance is scheduled to end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDateTime(@Nullable Output<String> endDateTime) {
             $.endDateTime = endDateTime;
             return this;
         }
 
+        /**
+         * @param endDateTime The DateTime when the review instance is scheduled to end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDateTime(String endDateTime) {
             return endDateTime(Output.of(endDateTime));
         }
 
+        /**
+         * @param startDateTime The DateTime when the review instance is scheduled to be start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDateTime(@Nullable Output<String> startDateTime) {
             $.startDateTime = startDateTime;
             return this;
         }
 
+        /**
+         * @param startDateTime The DateTime when the review instance is scheduled to be start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDateTime(String startDateTime) {
             return startDateTime(Output.of(startDateTime));
         }

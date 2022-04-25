@@ -19,6 +19,10 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="contactProfileName", required=true)
     private String contactProfileName;
 
+    /**
+     * @return Contact Profile Name
+     * 
+     */
     public String contactProfileName() {
         return this.contactProfileName;
     }
@@ -30,6 +34,10 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetContactProfileArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetContactProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contactProfileName Contact Profile Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactProfileName(String contactProfileName) {
             $.contactProfileName = contactProfileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

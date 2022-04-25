@@ -34,6 +34,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -56,6 +64,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -67,6 +79,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -78,6 +94,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="host", required=true)
     private Object host;
 
+    /**
+     * @return Host name of the server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object host() {
         return this.host;
     }
@@ -89,6 +109,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -100,6 +124,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password to logon the server.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -112,6 +140,11 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;FileServer&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -123,6 +156,10 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
     @Import(name="userId")
     private @Nullable Object userId;
 
+    /**
+     * @return User ID to logon the server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -159,58 +196,131 @@ public final class FileServerLinkedServiceResponse extends com.pulumi.resources.
             $ = new FileServerLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param host Host name of the server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Object host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;FileServer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userId User ID to logon the server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(@Nullable Object userId) {
             $.userId = userId;
             return this;

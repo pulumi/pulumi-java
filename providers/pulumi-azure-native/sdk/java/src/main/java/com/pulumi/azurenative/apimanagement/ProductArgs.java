@@ -25,6 +25,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="approvalRequired")
     private @Nullable Output<Boolean> approvalRequired;
 
+    /**
+     * @return whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
+     * 
+     */
     public Optional<Output<Boolean>> approvalRequired() {
         return Optional.ofNullable(this.approvalRequired);
     }
@@ -36,6 +40,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Product description. May include HTML formatting tags.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Product name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -58,6 +70,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productId")
     private @Nullable Output<String> productId;
 
+    /**
+     * @return Product identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> productId() {
         return Optional.ofNullable(this.productId);
     }
@@ -69,6 +85,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -80,6 +100,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -91,6 +115,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<ProductState> state;
 
+    /**
+     * @return whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
+     * 
+     */
     public Optional<Output<ProductState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -102,6 +130,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionRequired")
     private @Nullable Output<Boolean> subscriptionRequired;
 
+    /**
+     * @return Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
+     * 
+     */
     public Optional<Output<Boolean>> subscriptionRequired() {
         return Optional.ofNullable(this.subscriptionRequired);
     }
@@ -113,6 +145,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionsLimit")
     private @Nullable Output<Integer> subscriptionsLimit;
 
+    /**
+     * @return Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
+     * 
+     */
     public Optional<Output<Integer>> subscriptionsLimit() {
         return Optional.ofNullable(this.subscriptionsLimit);
     }
@@ -124,6 +160,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="terms")
     private @Nullable Output<String> terms;
 
+    /**
+     * @return Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+     * 
+     */
     public Optional<Output<String>> terms() {
         return Optional.ofNullable(this.terms);
     }
@@ -161,92 +201,212 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProductArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param approvalRequired whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRequired(@Nullable Output<Boolean> approvalRequired) {
             $.approvalRequired = approvalRequired;
             return this;
         }
 
+        /**
+         * @param approvalRequired whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder approvalRequired(Boolean approvalRequired) {
             return approvalRequired(Output.of(approvalRequired));
         }
 
+        /**
+         * @param description Product description. May include HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Product description. May include HTML formatting tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Product name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Product name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(@Nullable Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param state whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<ProductState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ProductState state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param subscriptionRequired Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
             $.subscriptionRequired = subscriptionRequired;
             return this;
         }
 
+        /**
+         * @param subscriptionRequired Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as &#34;protected&#34; and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as &#34;open&#34; and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it&#39;s value is assumed to be true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionRequired(Boolean subscriptionRequired) {
             return subscriptionRequired(Output.of(subscriptionRequired));
         }
 
+        /**
+         * @param subscriptionsLimit Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionsLimit(@Nullable Output<Integer> subscriptionsLimit) {
             $.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
 
+        /**
+         * @param subscriptionsLimit Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionsLimit(Integer subscriptionsLimit) {
             return subscriptionsLimit(Output.of(subscriptionsLimit));
         }
 
+        /**
+         * @param terms Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(@Nullable Output<String> terms) {
             $.terms = terms;
             return this;
         }
 
+        /**
+         * @param terms Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terms(String terms) {
             return terms(Output.of(terms));
         }

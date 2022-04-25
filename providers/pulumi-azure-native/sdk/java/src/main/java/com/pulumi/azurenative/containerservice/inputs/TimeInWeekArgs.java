@@ -30,6 +30,10 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="day")
     private @Nullable Output<Either<String,WeekDay>> day;
 
+    /**
+     * @return A day in a week.
+     * 
+     */
     public Optional<Output<Either<String,WeekDay>>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -41,6 +45,10 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hourSlots")
     private @Nullable Output<List<Integer>> hourSlots;
 
+    /**
+     * @return hour slots in a day.
+     * 
+     */
     public Optional<Output<List<Integer>>> hourSlots() {
         return Optional.ofNullable(this.hourSlots);
     }
@@ -70,32 +78,74 @@ public final class TimeInWeekArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TimeInWeekArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day A day in a week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<Either<String,WeekDay>> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day A day in a week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Either<String,WeekDay> day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param day A day in a week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             return day(Either.ofLeft(day));
         }
 
+        /**
+         * @param day A day in a week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(WeekDay day) {
             return day(Either.ofRight(day));
         }
 
+        /**
+         * @param hourSlots hour slots in a day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourSlots(@Nullable Output<List<Integer>> hourSlots) {
             $.hourSlots = hourSlots;
             return this;
         }
 
+        /**
+         * @param hourSlots hour slots in a day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourSlots(List<Integer> hourSlots) {
             return hourSlots(Output.of(hourSlots));
         }
 
+        /**
+         * @param hourSlots hour slots in a day.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hourSlots(Integer... hourSlots) {
             return hourSlots(List.of(hourSlots));
         }

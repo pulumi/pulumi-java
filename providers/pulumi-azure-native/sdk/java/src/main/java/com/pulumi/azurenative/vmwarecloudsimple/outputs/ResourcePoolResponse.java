@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourcePoolResponse {
-    /**
-     * Hierarchical resource pool name
-     * 
-     */
+        /**
+         * @return Hierarchical resource pool name
+         * 
+         */
     private final String fullName;
-    /**
-     * resource pool id (privateCloudId:vsphereId)
-     * 
-     */
+        /**
+         * @return resource pool id (privateCloudId:vsphereId)
+         * 
+         */
     private final String id;
-    /**
-     * Azure region
-     * 
-     */
+        /**
+         * @return Azure region
+         * 
+         */
     private final String location;
-    /**
-     * {ResourcePoolName}
-     * 
-     */
+        /**
+         * @return {ResourcePoolName}
+         * 
+         */
     private final String name;
-    /**
-     * The Private Cloud Id
-     * 
-     */
+        /**
+         * @return The Private Cloud Id
+         * 
+         */
     private final String privateCloudId;
-    /**
-     * {resourceProviderNamespace}/{resourceType}
-     * 
-     */
+        /**
+         * @return {resourceProviderNamespace}/{resourceType}
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class ResourcePoolResponse {
     }
 
     /**
-     * Hierarchical resource pool name
+     * @return Hierarchical resource pool name
      * 
-    */
+     */
     public String fullName() {
         return this.fullName;
     }
     /**
-     * resource pool id (privateCloudId:vsphereId)
+     * @return resource pool id (privateCloudId:vsphereId)
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure region
+     * @return Azure region
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * {ResourcePoolName}
+     * @return {ResourcePoolName}
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Private Cloud Id
+     * @return The Private Cloud Id
      * 
-    */
+     */
     public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

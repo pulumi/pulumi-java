@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
-    /**
-     * Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
-     * 
-     */
+        /**
+         * @return Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+         * 
+         */
     private final @Nullable Object computeType;
-    /**
-     * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
-     * 
-     */
+        /**
+         * @return Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+         * 
+         */
     private final @Nullable Object coreCount;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
     }
 
     /**
-     * Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
+     * @return Compute type of the cluster which will execute data flow job. Possible values include: &#39;General&#39;, &#39;MemoryOptimized&#39;, &#39;ComputeOptimized&#39;. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> computeType() {
         return Optional.ofNullable(this.computeType);
     }
     /**
-     * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+     * @return Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
      * 
-    */
+     */
     public Optional<Object> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }

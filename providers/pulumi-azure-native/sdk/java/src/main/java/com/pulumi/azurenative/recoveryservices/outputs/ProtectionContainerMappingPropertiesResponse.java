@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProtectionContainerMappingPropertiesResponse {
-    /**
-     * Health of pairing.
-     * 
-     */
+        /**
+         * @return Health of pairing.
+         * 
+         */
     private final @Nullable String health;
-    /**
-     * Health error.
-     * 
-     */
+        /**
+         * @return Health error.
+         * 
+         */
     private final @Nullable List<HealthErrorResponse> healthErrorDetails;
-    /**
-     * Friendly name of replication policy.
-     * 
-     */
+        /**
+         * @return Friendly name of replication policy.
+         * 
+         */
     private final @Nullable String policyFriendlyName;
-    /**
-     * Policy ARM Id.
-     * 
-     */
+        /**
+         * @return Policy ARM Id.
+         * 
+         */
     private final @Nullable String policyId;
-    /**
-     * Provider specific provider details.
-     * 
-     */
+        /**
+         * @return Provider specific provider details.
+         * 
+         */
     private final @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails;
-    /**
-     * Friendly name of source fabric.
-     * 
-     */
+        /**
+         * @return Friendly name of source fabric.
+         * 
+         */
     private final @Nullable String sourceFabricFriendlyName;
-    /**
-     * Friendly name of source protection container.
-     * 
-     */
+        /**
+         * @return Friendly name of source protection container.
+         * 
+         */
     private final @Nullable String sourceProtectionContainerFriendlyName;
-    /**
-     * Association Status
-     * 
-     */
+        /**
+         * @return Association Status
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * Friendly name of target fabric.
-     * 
-     */
+        /**
+         * @return Friendly name of target fabric.
+         * 
+         */
     private final @Nullable String targetFabricFriendlyName;
-    /**
-     * Friendly name of paired container.
-     * 
-     */
+        /**
+         * @return Friendly name of paired container.
+         * 
+         */
     private final @Nullable String targetProtectionContainerFriendlyName;
-    /**
-     * Paired protection container ARM ID.
-     * 
-     */
+        /**
+         * @return Paired protection container ARM ID.
+         * 
+         */
     private final @Nullable String targetProtectionContainerId;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class ProtectionContainerMappingPropertiesResponse {
     }
 
     /**
-     * Health of pairing.
+     * @return Health of pairing.
      * 
-    */
+     */
     public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
     /**
-     * Health error.
+     * @return Health error.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
     /**
-     * Friendly name of replication policy.
+     * @return Friendly name of replication policy.
      * 
-    */
+     */
     public Optional<String> policyFriendlyName() {
         return Optional.ofNullable(this.policyFriendlyName);
     }
     /**
-     * Policy ARM Id.
+     * @return Policy ARM Id.
      * 
-    */
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
-     * Provider specific provider details.
+     * @return Provider specific provider details.
      * 
-    */
+     */
     public Optional<Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse>> providerSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
-     * Friendly name of source fabric.
+     * @return Friendly name of source fabric.
      * 
-    */
+     */
     public Optional<String> sourceFabricFriendlyName() {
         return Optional.ofNullable(this.sourceFabricFriendlyName);
     }
     /**
-     * Friendly name of source protection container.
+     * @return Friendly name of source protection container.
      * 
-    */
+     */
     public Optional<String> sourceProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.sourceProtectionContainerFriendlyName);
     }
     /**
-     * Association Status
+     * @return Association Status
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Friendly name of target fabric.
+     * @return Friendly name of target fabric.
      * 
-    */
+     */
     public Optional<String> targetFabricFriendlyName() {
         return Optional.ofNullable(this.targetFabricFriendlyName);
     }
     /**
-     * Friendly name of paired container.
+     * @return Friendly name of paired container.
      * 
-    */
+     */
     public Optional<String> targetProtectionContainerFriendlyName() {
         return Optional.ofNullable(this.targetProtectionContainerFriendlyName);
     }
     /**
-     * Paired protection container ARM ID.
+     * @return Paired protection container ARM ID.
      * 
-    */
+     */
     public Optional<String> targetProtectionContainerId() {
         return Optional.ofNullable(this.targetProtectionContainerId);
     }

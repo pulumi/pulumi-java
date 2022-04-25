@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KeyVaultMetaInfoResponse {
-    /**
-     * The name of the user managed encryption key.
-     * 
-     */
+        /**
+         * @return The name of the user managed encryption key.
+         * 
+         */
     private final String encryptionKeyName;
-    /**
-     * The version of the user managed encryption key.
-     * 
-     */
+        /**
+         * @return The version of the user managed encryption key.
+         * 
+         */
     private final String encryptionKeyVersion;
-    /**
-     * The resource identifier for the user managed Key Vault being used to encrypt.
-     * 
-     */
+        /**
+         * @return The resource identifier for the user managed Key Vault being used to encrypt.
+         * 
+         */
     private final String keyVaultResourceId;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class KeyVaultMetaInfoResponse {
     }
 
     /**
-     * The name of the user managed encryption key.
+     * @return The name of the user managed encryption key.
      * 
-    */
+     */
     public String encryptionKeyName() {
         return this.encryptionKeyName;
     }
     /**
-     * The version of the user managed encryption key.
+     * @return The version of the user managed encryption key.
      * 
-    */
+     */
     public String encryptionKeyVersion() {
         return this.encryptionKeyVersion;
     }
     /**
-     * The resource identifier for the user managed Key Vault being used to encrypt.
+     * @return The resource identifier for the user managed Key Vault being used to encrypt.
      * 
-    */
+     */
     public String keyVaultResourceId() {
         return this.keyVaultResourceId;
     }

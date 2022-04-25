@@ -12,40 +12,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDataPoolResult {
-    /**
-     * The Data Pool&#39;s data-plane ID
-     * 
-     */
+        /**
+         * @return The Data Pool&#39;s data-plane ID
+         * 
+         */
     private final String dataPoolId;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Gets or sets the collection of locations where Data Pool resources should be created
-     * 
-     */
+        /**
+         * @return Gets or sets the collection of locations where Data Pool resources should be created
+         * 
+         */
     private final List<DataPoolLocationResponse> locations;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets the status of the data pool at the time the operation was called
-     * 
-     */
+        /**
+         * @return Gets the status of the data pool at the time the operation was called
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The system meta data relating to this resource
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetDataPoolResult {
     }
 
     /**
-     * The Data Pool&#39;s data-plane ID
+     * @return The Data Pool&#39;s data-plane ID
      * 
-    */
+     */
     public String dataPoolId() {
         return this.dataPoolId;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the collection of locations where Data Pool resources should be created
+     * @return Gets or sets the collection of locations where Data Pool resources should be created
      * 
-    */
+     */
     public List<DataPoolLocationResponse> locations() {
         return this.locations;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the status of the data pool at the time the operation was called
+     * @return Gets the status of the data pool at the time the operation was called
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system meta data relating to this resource
+     * @return The system meta data relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

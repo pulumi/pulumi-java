@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccountEncryptionResponse {
-    /**
-     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
-     * 
-     */
+        /**
+         * @return Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+         * 
+         */
     private final @Nullable String keySource;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AccountEncryptionResponse {
     }
 
     /**
-     * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
+     * @return Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;.
      * 
-    */
+     */
     public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }

@@ -27,6 +27,10 @@ public final class VideoAnalyzerIdentityResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -38,6 +42,10 @@ public final class VideoAnalyzerIdentityResponse extends com.pulumi.resources.In
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
+    /**
+     * @return The User Assigned Managed Identities.
+     * 
+     */
     public Optional<Map<String,UserAssignedManagedIdentityResponse>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -67,11 +75,23 @@ public final class VideoAnalyzerIdentityResponse extends com.pulumi.resources.In
             $ = new VideoAnalyzerIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The User Assigned Managed Identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

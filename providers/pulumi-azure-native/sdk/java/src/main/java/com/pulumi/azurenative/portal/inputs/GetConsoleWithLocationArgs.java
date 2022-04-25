@@ -19,6 +19,10 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
     @Import(name="consoleName", required=true)
     private String consoleName;
 
+    /**
+     * @return The name of the console
+     * 
+     */
     public String consoleName() {
         return this.consoleName;
     }
@@ -30,6 +34,10 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The provider location
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -59,11 +67,23 @@ public final class GetConsoleWithLocationArgs extends com.pulumi.resources.Invok
             $ = new GetConsoleWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consoleName The name of the console
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleName(String consoleName) {
             $.consoleName = consoleName;
             return this;
         }
 
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;

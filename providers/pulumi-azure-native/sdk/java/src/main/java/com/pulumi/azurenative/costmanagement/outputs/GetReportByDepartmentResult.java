@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReportByDepartmentResult {
-    /**
-     * Has definition for the report.
-     * 
-     */
+        /**
+         * @return Has definition for the report.
+         * 
+         */
     private final ReportDefinitionResponse definition;
-    /**
-     * Has delivery information for the report.
-     * 
-     */
+        /**
+         * @return Has delivery information for the report.
+         * 
+         */
     private final ReportDeliveryInfoResponse deliveryInfo;
-    /**
-     * The format of the report being delivered.
-     * 
-     */
+        /**
+         * @return The format of the report being delivered.
+         * 
+         */
     private final @Nullable String format;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Has schedule information for the report.
-     * 
-     */
+        /**
+         * @return Has schedule information for the report.
+         * 
+         */
     private final @Nullable ReportScheduleResponse schedule;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -77,58 +77,58 @@ public final class GetReportByDepartmentResult {
     }
 
     /**
-     * Has definition for the report.
+     * @return Has definition for the report.
      * 
-    */
+     */
     public ReportDefinitionResponse definition() {
         return this.definition;
     }
     /**
-     * Has delivery information for the report.
+     * @return Has delivery information for the report.
      * 
-    */
+     */
     public ReportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
-     * The format of the report being delivered.
+     * @return The format of the report being delivered.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Has schedule information for the report.
+     * @return Has schedule information for the report.
      * 
-    */
+     */
     public Optional<ReportScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

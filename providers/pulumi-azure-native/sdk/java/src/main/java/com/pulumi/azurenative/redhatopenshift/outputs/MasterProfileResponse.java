@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MasterProfileResponse {
-    /**
-     * The Azure resource ID of the master subnet (immutable).
-     * 
-     */
+        /**
+         * @return The Azure resource ID of the master subnet (immutable).
+         * 
+         */
     private final @Nullable String subnetId;
-    /**
-     * The size of the master VMs (immutable).
-     * 
-     */
+        /**
+         * @return The size of the master VMs (immutable).
+         * 
+         */
     private final @Nullable String vmSize;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MasterProfileResponse {
     }
 
     /**
-     * The Azure resource ID of the master subnet (immutable).
+     * @return The Azure resource ID of the master subnet (immutable).
      * 
-    */
+     */
     public Optional<String> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
-     * The size of the master VMs (immutable).
+     * @return The size of the master VMs (immutable).
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }

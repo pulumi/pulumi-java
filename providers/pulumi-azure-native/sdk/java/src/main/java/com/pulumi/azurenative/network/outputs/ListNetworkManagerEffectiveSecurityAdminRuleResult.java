@@ -15,15 +15,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
-    /**
-     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
-     * 
-     */
+        /**
+         * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         */
     private final @Nullable String skipToken;
-    /**
-     * Gets a page of NetworkManagerEffectiveSecurityAdminRules
-     * 
-     */
+        /**
+         * @return Gets a page of NetworkManagerEffectiveSecurityAdminRules
+         * 
+         */
     private final @Nullable List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value;
 
     @CustomType.Constructor
@@ -35,16 +35,16 @@ public final class ListNetworkManagerEffectiveSecurityAdminRuleResult {
     }
 
     /**
-     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
-    */
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
-     * Gets a page of NetworkManagerEffectiveSecurityAdminRules
+     * @return Gets a page of NetworkManagerEffectiveSecurityAdminRules
      * 
-    */
+     */
     public List<Either<EffectiveDefaultSecurityAdminRuleResponse,EffectiveSecurityAdminRuleResponse>> value() {
         return this.value == null ? List.of() : this.value;
     }

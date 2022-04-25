@@ -26,6 +26,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The supported Azure location where the dedicated HSM should be created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -37,6 +41,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the dedicated Hsm
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkProfile")
     private @Nullable Output<NetworkProfileArgs> networkProfile;
 
+    /**
+     * @return Specifies the network interfaces of the dedicated hsm.
+     * 
+     */
     public Optional<Output<NetworkProfileArgs>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -59,6 +71,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the Resource Group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +86,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return SKU details
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -81,6 +101,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stampId")
     private @Nullable Output<String> stampId;
 
+    /**
+     * @return This field will be used when RP does not support Availability zones.
+     * 
+     */
     public Optional<Output<String>> stampId() {
         return Optional.ofNullable(this.stampId);
     }
@@ -92,6 +116,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -103,6 +131,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return The Dedicated Hsm zones.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -138,78 +170,180 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DedicatedHsmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The supported Azure location where the dedicated HSM should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The supported Azure location where the dedicated HSM should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the dedicated Hsm
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the dedicated Hsm
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkProfile Specifies the network interfaces of the dedicated hsm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile Specifies the network interfaces of the dedicated hsm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(NetworkProfileArgs networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku SKU details
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param stampId This field will be used when RP does not support Availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stampId(@Nullable Output<String> stampId) {
             $.stampId = stampId;
             return this;
         }
 
+        /**
+         * @param stampId This field will be used when RP does not support Availability zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stampId(String stampId) {
             return stampId(Output.of(stampId));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param zones The Dedicated Hsm zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones The Dedicated Hsm zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones The Dedicated Hsm zones.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

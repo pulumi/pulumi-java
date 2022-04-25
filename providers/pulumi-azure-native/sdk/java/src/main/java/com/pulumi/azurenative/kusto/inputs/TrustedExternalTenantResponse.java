@@ -25,6 +25,10 @@ public final class TrustedExternalTenantResponse extends com.pulumi.resources.In
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return GUID representing an external tenant.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -53,6 +57,12 @@ public final class TrustedExternalTenantResponse extends com.pulumi.resources.In
             $ = new TrustedExternalTenantResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value GUID representing an external tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

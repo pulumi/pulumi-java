@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationGatewayFirewallExclusionResponse {
-    /**
-     * The variable to be excluded.
-     * 
-     */
+        /**
+         * @return The variable to be excluded.
+         * 
+         */
     private final String matchVariable;
-    /**
-     * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
-     * 
-     */
+        /**
+         * @return When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+         * 
+         */
     private final String selector;
-    /**
-     * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
-     * 
-     */
+        /**
+         * @return When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+         * 
+         */
     private final String selectorMatchOperator;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ApplicationGatewayFirewallExclusionResponse {
     }
 
     /**
-     * The variable to be excluded.
+     * @return The variable to be excluded.
      * 
-    */
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
     /**
-     * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+     * @return When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
      * 
-    */
+     */
     public String selector() {
         return this.selector;
     }
     /**
-     * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+     * @return When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
      * 
-    */
+     */
     public String selectorMatchOperator() {
         return this.selectorMatchOperator;
     }

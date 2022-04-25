@@ -34,6 +34,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return The authentication type to be used to connect to the FTP server.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -56,6 +64,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -67,6 +79,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -78,6 +94,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="enableServerCertificateValidation")
     private @Nullable Object enableServerCertificateValidation;
 
+    /**
+     * @return If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
@@ -89,6 +109,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="enableSsl")
     private @Nullable Object enableSsl;
 
+    /**
+     * @return If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableSsl() {
         return Optional.ofNullable(this.enableSsl);
     }
@@ -100,6 +124,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -111,6 +139,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="host", required=true)
     private Object host;
 
+    /**
+     * @return Host name of the FTP server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object host() {
         return this.host;
     }
@@ -122,6 +154,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -133,6 +169,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return Password to logon the FTP server.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -144,6 +184,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="port")
     private @Nullable Object port;
 
+    /**
+     * @return The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
+     * 
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
@@ -156,6 +200,11 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;FtpServer&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -167,6 +216,10 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return Username to logon the FTP server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -207,78 +260,175 @@ public final class FtpServerLinkedServiceResponse extends com.pulumi.resources.I
             $ = new FtpServerLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the FTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param enableServerCertificateValidation If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
             $.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
 
+        /**
+         * @param enableSsl If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableSsl(@Nullable Object enableSsl) {
             $.enableSsl = enableSsl;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param host Host name of the FTP server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Object host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password Password to logon the FTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to logon the FTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to logon the FTP server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param port The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;FtpServer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName Username to logon the FTP server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

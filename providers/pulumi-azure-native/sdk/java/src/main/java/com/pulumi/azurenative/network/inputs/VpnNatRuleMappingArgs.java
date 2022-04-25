@@ -26,6 +26,10 @@ public final class VpnNatRuleMappingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="addressSpace")
     private @Nullable Output<String> addressSpace;
 
+    /**
+     * @return Address space for Vpn NatRule mapping.
+     * 
+     */
     public Optional<Output<String>> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
@@ -54,11 +58,23 @@ public final class VpnNatRuleMappingArgs extends com.pulumi.resources.ResourceAr
             $ = new VpnNatRuleMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressSpace Address space for Vpn NatRule mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(@Nullable Output<String> addressSpace) {
             $.addressSpace = addressSpace;
             return this;
         }
 
+        /**
+         * @param addressSpace Address space for Vpn NatRule mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(String addressSpace) {
             return addressSpace(Output.of(addressSpace));
         }

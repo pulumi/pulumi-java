@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReplicationResult {
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     * 
-     */
+        /**
+         * @return The location of the resource. This cannot be changed after the resource is created.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the replication at the time the operation was called.
-     * 
-     */
+        /**
+         * @return The provisioning state of the replication at the time the operation was called.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The status of the replication at the time the operation was called.
-     * 
-     */
+        /**
+         * @return The status of the replication at the time the operation was called.
+         * 
+         */
     private final StatusResponse status;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetReplicationResult {
     }
 
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the replication at the time the operation was called.
+     * @return The provisioning state of the replication at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The status of the replication at the time the operation was called.
+     * @return The status of the replication at the time the operation was called.
      * 
-    */
+     */
     public StatusResponse status() {
         return this.status;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

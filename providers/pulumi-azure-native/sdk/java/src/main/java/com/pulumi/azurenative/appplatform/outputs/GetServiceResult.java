@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServiceResult {
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The GEO location of the resource.
-     * 
-     */
+        /**
+         * @return The GEO location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the Service resource
-     * 
-     */
+        /**
+         * @return Properties of the Service resource
+         * 
+         */
     private final ClusterResourcePropertiesResponse properties;
-    /**
-     * Sku of the Service resource
-     * 
-     */
+        /**
+         * @return Sku of the Service resource
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
-     */
+        /**
+         * @return Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class GetServiceResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The GEO location of the resource.
+     * @return The GEO location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the Service resource
+     * @return Properties of the Service resource
      * 
-    */
+     */
     public ClusterResourcePropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Sku of the Service resource
+     * @return Sku of the Service resource
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

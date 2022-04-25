@@ -33,30 +33,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTaskResult {
-    /**
-     * HTTP strong entity tag value. This is ignored if submitted.
-     * 
-     */
+        /**
+         * @return HTTP strong entity tag value. This is ignored if submitted.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Custom task properties
-     * 
-     */
+        /**
+         * @return Custom task properties
+         * 
+         */
     private final Object properties;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,37 +74,37 @@ public final class GetTaskResult {
     }
 
     /**
-     * HTTP strong entity tag value. This is ignored if submitted.
+     * @return HTTP strong entity tag value. This is ignored if submitted.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Custom task properties
+     * @return Custom task properties
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

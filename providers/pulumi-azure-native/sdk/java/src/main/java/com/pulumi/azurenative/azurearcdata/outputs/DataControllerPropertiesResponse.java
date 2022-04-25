@@ -17,41 +17,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataControllerPropertiesResponse {
-    /**
-     * Username and password for basic login authentication.
-     * 
-     */
+        /**
+         * @return Username and password for basic login authentication.
+         * 
+         */
     private final @Nullable BasicLoginInformationResponse basicLoginInformation;
-    /**
-     * The raw kubernetes information
-     * 
-     */
+        /**
+         * @return The raw kubernetes information
+         * 
+         */
     private final @Nullable Object k8sRaw;
-    /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
-     * 
-     */
+        /**
+         * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
+         * 
+         */
     private final @Nullable String lastUploadedDate;
-    /**
-     * Log analytics workspace id and primary key
-     * 
-     */
+        /**
+         * @return Log analytics workspace id and primary key
+         * 
+         */
     private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
-    /**
-     * Properties from the Kubernetes data controller
-     * 
-     */
+        /**
+         * @return Properties from the Kubernetes data controller
+         * 
+         */
     private final @Nullable OnPremisePropertyResponse onPremiseProperty;
     private final String provisioningState;
-    /**
-     * Service principal for uploading billing, metrics and logs.
-     * 
-     */
+        /**
+         * @return Service principal for uploading billing, metrics and logs.
+         * 
+         */
     private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
-    /**
-     * Properties on upload watermark.  Mostly timestamp for each upload data type
-     * 
-     */
+        /**
+         * @return Properties on upload watermark.  Mostly timestamp for each upload data type
+         * 
+         */
     private final @Nullable UploadWatermarkResponse uploadWatermark;
 
     @CustomType.Constructor
@@ -75,37 +75,37 @@ public final class DataControllerPropertiesResponse {
     }
 
     /**
-     * Username and password for basic login authentication.
+     * @return Username and password for basic login authentication.
      * 
-    */
+     */
     public Optional<BasicLoginInformationResponse> basicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
-     * The raw kubernetes information
+     * @return The raw kubernetes information
      * 
-    */
+     */
     public Optional<Object> k8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
-     * Last uploaded date from Kubernetes cluster. Defaults to current date time
+     * @return Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
-    */
+     */
     public Optional<String> lastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
     /**
-     * Log analytics workspace id and primary key
+     * @return Log analytics workspace id and primary key
      * 
-    */
+     */
     public Optional<LogAnalyticsWorkspaceConfigResponse> logAnalyticsWorkspaceConfig() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
     /**
-     * Properties from the Kubernetes data controller
+     * @return Properties from the Kubernetes data controller
      * 
-    */
+     */
     public Optional<OnPremisePropertyResponse> onPremiseProperty() {
         return Optional.ofNullable(this.onPremiseProperty);
     }
@@ -113,16 +113,16 @@ public final class DataControllerPropertiesResponse {
         return this.provisioningState;
     }
     /**
-     * Service principal for uploading billing, metrics and logs.
+     * @return Service principal for uploading billing, metrics and logs.
      * 
-    */
+     */
     public Optional<UploadServicePrincipalResponse> uploadServicePrincipal() {
         return Optional.ofNullable(this.uploadServicePrincipal);
     }
     /**
-     * Properties on upload watermark.  Mostly timestamp for each upload data type
+     * @return Properties on upload watermark.  Mostly timestamp for each upload data type
      * 
-    */
+     */
     public Optional<UploadWatermarkResponse> uploadWatermark() {
         return Optional.ofNullable(this.uploadWatermark);
     }

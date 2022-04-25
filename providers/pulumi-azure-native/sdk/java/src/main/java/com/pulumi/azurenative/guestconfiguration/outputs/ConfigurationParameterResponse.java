@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationParameterResponse {
-    /**
-     * Name of the configuration parameter.
-     * 
-     */
+        /**
+         * @return Name of the configuration parameter.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Value of the configuration parameter.
-     * 
-     */
+        /**
+         * @return Value of the configuration parameter.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ConfigurationParameterResponse {
     }
 
     /**
-     * Name of the configuration parameter.
+     * @return Name of the configuration parameter.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Value of the configuration parameter.
+     * @return Value of the configuration parameter.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -11,46 +11,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PowerBIOutputDataSourceResponse {
-    /**
-     * The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String dataset;
-    /**
-     * The ID of the Power BI group.
-     * 
-     */
+        /**
+         * @return The ID of the Power BI group.
+         * 
+         */
     private final @Nullable String groupId;
-    /**
-     * The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
-     * 
-     */
+        /**
+         * @return The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
+         * 
+         */
     private final @Nullable String groupName;
-    /**
-     * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String refreshToken;
-    /**
-     * The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String table;
-    /**
-     * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
-     * 
-     */
+        /**
+         * @return The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         */
     private final @Nullable String tokenUserDisplayName;
-    /**
-     * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
-     * 
-     */
+        /**
+         * @return The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+         * 
+         */
     private final @Nullable String tokenUserPrincipalName;
-    /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;PowerBI&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;PowerBI&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,59 +74,59 @@ public final class PowerBIOutputDataSourceResponse {
     }
 
     /**
-     * The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> dataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
-     * The ID of the Power BI group.
+     * @return The ID of the Power BI group.
      * 
-    */
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
+     * @return The name of the Power BI group. Use this property to help remember which specific Power BI group id was used.
      * 
-    */
+     */
     public Optional<String> groupName() {
         return Optional.ofNullable(this.groupName);
     }
     /**
-     * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
+     * @return A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
-     * The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the Power BI table under the specified dataset. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> table() {
         return Optional.ofNullable(this.table);
     }
     /**
-     * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * @return The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-    */
+     */
     public Optional<String> tokenUserDisplayName() {
         return Optional.ofNullable(this.tokenUserDisplayName);
     }
     /**
-     * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
+     * @return The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-    */
+     */
     public Optional<String> tokenUserPrincipalName() {
         return Optional.ofNullable(this.tokenUserPrincipalName);
     }
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;PowerBI&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

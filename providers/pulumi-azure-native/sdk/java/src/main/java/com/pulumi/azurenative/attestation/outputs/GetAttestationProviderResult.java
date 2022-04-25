@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAttestationProviderResult {
-    /**
-     * Gets the uri of attestation service
-     * 
-     */
+        /**
+         * @return Gets the uri of attestation service
+         * 
+         */
     private final @Nullable String attestUri;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * List of private endpoint connections associated with the attestation provider.
-     * 
-     */
+        /**
+         * @return List of private endpoint connections associated with the attestation provider.
+         * 
+         */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Status of attestation service.
-     * 
-     */
+        /**
+         * @return Status of attestation service.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * The system metadata relating to this resource
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Trust model for the attestation provider.
-     * 
-     */
+        /**
+         * @return Trust model for the attestation provider.
+         * 
+         */
     private final @Nullable String trustModel;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetAttestationProviderResult {
     }
 
     /**
-     * Gets the uri of attestation service
+     * @return Gets the uri of attestation service
      * 
-    */
+     */
     public Optional<String> attestUri() {
         return Optional.ofNullable(this.attestUri);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of private endpoint connections associated with the attestation provider.
+     * @return List of private endpoint connections associated with the attestation provider.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Status of attestation service.
+     * @return Status of attestation service.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The system metadata relating to this resource
+     * @return The system metadata relating to this resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Trust model for the attestation provider.
+     * @return Trust model for the attestation provider.
      * 
-    */
+     */
     public Optional<String> trustModel() {
         return Optional.ofNullable(this.trustModel);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

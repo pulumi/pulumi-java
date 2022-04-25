@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The ETag for the resource
-     * 
-     */
+        /**
+         * @return The ETag for the resource
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the cluster, if configured.
-     * 
-     */
+        /**
+         * @return The identity of the cluster, if configured.
+         * 
+         */
     private final @Nullable ClusterIdentityResponse identity;
-    /**
-     * The Azure Region where the resource lives
-     * 
-     */
+        /**
+         * @return The Azure Region where the resource lives
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The properties of the cluster.
-     * 
-     */
+        /**
+         * @return The properties of the cluster.
+         * 
+         */
     private final ClusterGetPropertiesResponse properties;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class GetClusterResult {
     }
 
     /**
-     * The ETag for the resource
+     * @return The ETag for the resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the cluster, if configured.
+     * @return The identity of the cluster, if configured.
      * 
-    */
+     */
     public Optional<ClusterIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The properties of the cluster.
+     * @return The properties of the cluster.
      * 
-    */
+     */
     public ClusterGetPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

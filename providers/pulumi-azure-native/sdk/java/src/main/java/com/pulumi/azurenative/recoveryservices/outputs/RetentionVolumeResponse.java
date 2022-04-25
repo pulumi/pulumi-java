@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RetentionVolumeResponse {
-    /**
-     * The volume capacity.
-     * 
-     */
+        /**
+         * @return The volume capacity.
+         * 
+         */
     private final @Nullable Double capacityInBytes;
-    /**
-     * The free space available in this volume.
-     * 
-     */
+        /**
+         * @return The free space available in this volume.
+         * 
+         */
     private final @Nullable Double freeSpaceInBytes;
-    /**
-     * The threshold percentage.
-     * 
-     */
+        /**
+         * @return The threshold percentage.
+         * 
+         */
     private final @Nullable Integer thresholdPercentage;
-    /**
-     * The volume name.
-     * 
-     */
+        /**
+         * @return The volume name.
+         * 
+         */
     private final @Nullable String volumeName;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class RetentionVolumeResponse {
     }
 
     /**
-     * The volume capacity.
+     * @return The volume capacity.
      * 
-    */
+     */
     public Optional<Double> capacityInBytes() {
         return Optional.ofNullable(this.capacityInBytes);
     }
     /**
-     * The free space available in this volume.
+     * @return The free space available in this volume.
      * 
-    */
+     */
     public Optional<Double> freeSpaceInBytes() {
         return Optional.ofNullable(this.freeSpaceInBytes);
     }
     /**
-     * The threshold percentage.
+     * @return The threshold percentage.
      * 
-    */
+     */
     public Optional<Integer> thresholdPercentage() {
         return Optional.ofNullable(this.thresholdPercentage);
     }
     /**
-     * The volume name.
+     * @return The volume name.
      * 
-    */
+     */
     public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }

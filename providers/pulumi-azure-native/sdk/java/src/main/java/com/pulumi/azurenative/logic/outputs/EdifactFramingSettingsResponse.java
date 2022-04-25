@@ -12,60 +12,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdifactFramingSettingsResponse {
-    /**
-     * The character encoding.
-     * 
-     */
+        /**
+         * @return The character encoding.
+         * 
+         */
     private final @Nullable String characterEncoding;
-    /**
-     * The EDIFACT frame setting characterSet.
-     * 
-     */
+        /**
+         * @return The EDIFACT frame setting characterSet.
+         * 
+         */
     private final String characterSet;
-    /**
-     * The component separator.
-     * 
-     */
+        /**
+         * @return The component separator.
+         * 
+         */
     private final Integer componentSeparator;
-    /**
-     * The data element separator.
-     * 
-     */
+        /**
+         * @return The data element separator.
+         * 
+         */
     private final Integer dataElementSeparator;
-    /**
-     * The EDIFACT frame setting decimal indicator.
-     * 
-     */
+        /**
+         * @return The EDIFACT frame setting decimal indicator.
+         * 
+         */
     private final String decimalPointIndicator;
-    /**
-     * The protocol version.
-     * 
-     */
+        /**
+         * @return The protocol version.
+         * 
+         */
     private final Integer protocolVersion;
-    /**
-     * The release indicator.
-     * 
-     */
+        /**
+         * @return The release indicator.
+         * 
+         */
     private final Integer releaseIndicator;
-    /**
-     * The repetition separator.
-     * 
-     */
+        /**
+         * @return The repetition separator.
+         * 
+         */
     private final Integer repetitionSeparator;
-    /**
-     * The segment terminator.
-     * 
-     */
+        /**
+         * @return The segment terminator.
+         * 
+         */
     private final Integer segmentTerminator;
-    /**
-     * The EDIFACT frame setting segment terminator suffix.
-     * 
-     */
+        /**
+         * @return The EDIFACT frame setting segment terminator suffix.
+         * 
+         */
     private final String segmentTerminatorSuffix;
-    /**
-     * The service code list directory version.
-     * 
-     */
+        /**
+         * @return The service code list directory version.
+         * 
+         */
     private final @Nullable String serviceCodeListDirectoryVersion;
 
     @CustomType.Constructor
@@ -95,79 +95,79 @@ public final class EdifactFramingSettingsResponse {
     }
 
     /**
-     * The character encoding.
+     * @return The character encoding.
      * 
-    */
+     */
     public Optional<String> characterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
     /**
-     * The EDIFACT frame setting characterSet.
+     * @return The EDIFACT frame setting characterSet.
      * 
-    */
+     */
     public String characterSet() {
         return this.characterSet;
     }
     /**
-     * The component separator.
+     * @return The component separator.
      * 
-    */
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
-     * The data element separator.
+     * @return The data element separator.
      * 
-    */
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
-     * The EDIFACT frame setting decimal indicator.
+     * @return The EDIFACT frame setting decimal indicator.
      * 
-    */
+     */
     public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
     /**
-     * The protocol version.
+     * @return The protocol version.
      * 
-    */
+     */
     public Integer protocolVersion() {
         return this.protocolVersion;
     }
     /**
-     * The release indicator.
+     * @return The release indicator.
      * 
-    */
+     */
     public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
     /**
-     * The repetition separator.
+     * @return The repetition separator.
      * 
-    */
+     */
     public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
     /**
-     * The segment terminator.
+     * @return The segment terminator.
      * 
-    */
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
-     * The EDIFACT frame setting segment terminator suffix.
+     * @return The EDIFACT frame setting segment terminator suffix.
      * 
-    */
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
-     * The service code list directory version.
+     * @return The service code list directory version.
      * 
-    */
+     */
     public Optional<String> serviceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }

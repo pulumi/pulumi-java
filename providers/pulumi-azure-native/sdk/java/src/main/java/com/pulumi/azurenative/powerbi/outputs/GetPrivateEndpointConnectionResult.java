@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
-    /**
-     * Specifies the id of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the id of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * Specifies the name of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the private endpoint.
-     * 
-     */
+        /**
+         * @return Specifies the private endpoint.
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * Specifies the connection state.
-     * 
-     */
+        /**
+         * @return Specifies the connection state.
+         * 
+         */
     private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * Provisioning state of the Private Endpoint Connection.
-     * 
-     */
+        /**
+         * @return Provisioning state of the Private Endpoint Connection.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * The system meta data relating to this resource.
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Specifies the type of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * Specifies the id of the resource.
+     * @return Specifies the id of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the private endpoint.
+     * @return Specifies the private endpoint.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Specifies the connection state.
+     * @return Specifies the connection state.
      * 
-    */
+     */
     public Optional<ConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Provisioning state of the Private Endpoint Connection.
+     * @return Provisioning state of the Private Endpoint Connection.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

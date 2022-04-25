@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MCASDataConnectorDataTypesResponse {
-    /**
-     * Alerts data type connection.
-     * 
-     */
+        /**
+         * @return Alerts data type connection.
+         * 
+         */
     private final @Nullable DataConnectorDataTypeCommonResponse alerts;
-    /**
-     * Discovery log data type connection.
-     * 
-     */
+        /**
+         * @return Discovery log data type connection.
+         * 
+         */
     private final @Nullable DataConnectorDataTypeCommonResponse discoveryLogs;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MCASDataConnectorDataTypesResponse {
     }
 
     /**
-     * Alerts data type connection.
+     * @return Alerts data type connection.
      * 
-    */
+     */
     public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return Optional.ofNullable(this.alerts);
     }
     /**
-     * Discovery log data type connection.
+     * @return Discovery log data type connection.
      * 
-    */
+     */
     public Optional<DataConnectorDataTypeCommonResponse> discoveryLogs() {
         return Optional.ofNullable(this.discoveryLogs);
     }

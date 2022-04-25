@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TaskPropertiesResponse {
-    /**
-     * Gets or sets the parameters of the task.
-     * 
-     */
+        /**
+         * @return Gets or sets the parameters of the task.
+         * 
+         */
     private final @Nullable Map<String,String> parameters;
-    /**
-     * Gets or sets the name of the runbook.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the runbook.
+         * 
+         */
     private final @Nullable String source;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class TaskPropertiesResponse {
     }
 
     /**
-     * Gets or sets the parameters of the task.
+     * @return Gets or sets the parameters of the task.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Gets or sets the name of the runbook.
+     * @return Gets or sets the name of the runbook.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }

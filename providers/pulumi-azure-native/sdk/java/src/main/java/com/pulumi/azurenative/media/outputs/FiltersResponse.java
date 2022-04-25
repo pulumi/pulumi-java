@@ -17,25 +17,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FiltersResponse {
-    /**
-     * The parameters for the rectangular window with which to crop the input video.
-     * 
-     */
+        /**
+         * @return The parameters for the rectangular window with which to crop the input video.
+         * 
+         */
     private final @Nullable RectangleResponse crop;
-    /**
-     * The de-interlacing settings.
-     * 
-     */
+        /**
+         * @return The de-interlacing settings.
+         * 
+         */
     private final @Nullable DeinterlaceResponse deinterlace;
-    /**
-     * The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
-     * 
-     */
+        /**
+         * @return The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+         * 
+         */
     private final @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays;
-    /**
-     * The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
-     * 
-     */
+        /**
+         * @return The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+         * 
+         */
     private final @Nullable String rotation;
 
     @CustomType.Constructor
@@ -51,30 +51,30 @@ public final class FiltersResponse {
     }
 
     /**
-     * The parameters for the rectangular window with which to crop the input video.
+     * @return The parameters for the rectangular window with which to crop the input video.
      * 
-    */
+     */
     public Optional<RectangleResponse> crop() {
         return Optional.ofNullable(this.crop);
     }
     /**
-     * The de-interlacing settings.
+     * @return The de-interlacing settings.
      * 
-    */
+     */
     public Optional<DeinterlaceResponse> deinterlace() {
         return Optional.ofNullable(this.deinterlace);
     }
     /**
-     * The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
+     * @return The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
      * 
-    */
+     */
     public List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays() {
         return this.overlays == null ? List.of() : this.overlays;
     }
     /**
-     * The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
+     * @return The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
      * 
-    */
+     */
     public Optional<String> rotation() {
         return Optional.ofNullable(this.rotation);
     }

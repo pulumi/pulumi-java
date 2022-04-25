@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivilegeResponseResource {
-    /**
-     * The collection name the role is applied.
-     * 
-     */
+        /**
+         * @return The collection name the role is applied.
+         * 
+         */
     private final @Nullable String collection;
-    /**
-     * The database name the role is applied.
-     * 
-     */
+        /**
+         * @return The database name the role is applied.
+         * 
+         */
     private final @Nullable String db;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PrivilegeResponseResource {
     }
 
     /**
-     * The collection name the role is applied.
+     * @return The collection name the role is applied.
      * 
-    */
+     */
     public Optional<String> collection() {
         return Optional.ofNullable(this.collection);
     }
     /**
-     * The database name the role is applied.
+     * @return The database name the role is applied.
      * 
-    */
+     */
     public Optional<String> db() {
         return Optional.ofNullable(this.db);
     }

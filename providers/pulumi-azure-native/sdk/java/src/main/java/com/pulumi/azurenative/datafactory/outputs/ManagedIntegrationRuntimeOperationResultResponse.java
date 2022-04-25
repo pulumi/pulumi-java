@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedIntegrationRuntimeOperationResultResponse {
-    /**
-     * The activity id for the operation request.
-     * 
-     */
+        /**
+         * @return The activity id for the operation request.
+         * 
+         */
     private final String activityId;
-    /**
-     * The error code.
-     * 
-     */
+        /**
+         * @return The error code.
+         * 
+         */
     private final String errorCode;
-    /**
-     * Managed integration runtime error parameters.
-     * 
-     */
+        /**
+         * @return Managed integration runtime error parameters.
+         * 
+         */
     private final List<String> parameters;
-    /**
-     * The operation result.
-     * 
-     */
+        /**
+         * @return The operation result.
+         * 
+         */
     private final String result;
-    /**
-     * The start time of the operation.
-     * 
-     */
+        /**
+         * @return The start time of the operation.
+         * 
+         */
     private final String startTime;
-    /**
-     * The operation type. Could be start or stop.
-     * 
-     */
+        /**
+         * @return The operation type. Could be start or stop.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
     }
 
     /**
-     * The activity id for the operation request.
+     * @return The activity id for the operation request.
      * 
-    */
+     */
     public String activityId() {
         return this.activityId;
     }
     /**
-     * The error code.
+     * @return The error code.
      * 
-    */
+     */
     public String errorCode() {
         return this.errorCode;
     }
     /**
-     * Managed integration runtime error parameters.
+     * @return Managed integration runtime error parameters.
      * 
-    */
+     */
     public List<String> parameters() {
         return this.parameters;
     }
     /**
-     * The operation result.
+     * @return The operation result.
      * 
-    */
+     */
     public String result() {
         return this.result;
     }
     /**
-     * The start time of the operation.
+     * @return The start time of the operation.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The operation type. Could be start or stop.
+     * @return The operation type. Could be start or stop.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

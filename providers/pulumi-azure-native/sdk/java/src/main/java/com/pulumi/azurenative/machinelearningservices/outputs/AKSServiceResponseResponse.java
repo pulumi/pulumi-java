@@ -25,151 +25,151 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AKSServiceResponseResponse {
-    /**
-     * Whether or not AAD authentication is enabled.
-     * 
-     */
+        /**
+         * @return Whether or not AAD authentication is enabled.
+         * 
+         */
     private final @Nullable Boolean aadAuthEnabled;
-    /**
-     * Whether or not Application Insights is enabled.
-     * 
-     */
+        /**
+         * @return Whether or not Application Insights is enabled.
+         * 
+         */
     private final @Nullable Boolean appInsightsEnabled;
-    /**
-     * Whether or not authentication is enabled.
-     * 
-     */
+        /**
+         * @return Whether or not authentication is enabled.
+         * 
+         */
     private final @Nullable Boolean authEnabled;
-    /**
-     * The auto scaler properties.
-     * 
-     */
+        /**
+         * @return The auto scaler properties.
+         * 
+         */
     private final @Nullable AKSServiceResponseResponseAutoScaler autoScaler;
-    /**
-     * The name of the compute resource.
-     * 
-     */
+        /**
+         * @return The name of the compute resource.
+         * 
+         */
     private final @Nullable String computeName;
-    /**
-     * The compute environment type for the service.
-     * Expected value is &#39;AKS&#39;.
-     * 
-     */
+        /**
+         * @return The compute environment type for the service.
+         * Expected value is &#39;AKS&#39;.
+         * 
+         */
     private final String computeType;
-    /**
-     * The container resource requirements.
-     * 
-     */
+        /**
+         * @return The container resource requirements.
+         * 
+         */
     private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
-    /**
-     * Details of the data collection options specified.
-     * 
-     */
+        /**
+         * @return Details of the data collection options specified.
+         * 
+         */
     private final @Nullable AKSServiceResponseResponseDataCollection dataCollection;
-    /**
-     * The deployment status.
-     * 
-     */
+        /**
+         * @return The deployment status.
+         * 
+         */
     private final AKSServiceResponseResponseDeploymentStatus deploymentStatus;
-    /**
-     * The deployment type for the service.
-     * 
-     */
+        /**
+         * @return The deployment type for the service.
+         * 
+         */
     private final @Nullable String deploymentType;
-    /**
-     * The service description.
-     * 
-     */
+        /**
+         * @return The service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The Environment, models and assets used for inferencing.
-     * 
-     */
+        /**
+         * @return The Environment, models and assets used for inferencing.
+         * 
+         */
     private final @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
-    /**
-     * The error details.
-     * 
-     */
+        /**
+         * @return The error details.
+         * 
+         */
     private final ServiceResponseBaseResponseError error;
-    /**
-     * Is this the default variant.
-     * 
-     */
+        /**
+         * @return Is this the default variant.
+         * 
+         */
     private final @Nullable Boolean isDefault;
-    /**
-     * The service tag dictionary. Tags are mutable.
-     * 
-     */
+        /**
+         * @return The service tag dictionary. Tags are mutable.
+         * 
+         */
     private final @Nullable Map<String,String> kvTags;
-    /**
-     * The liveness probe requirements.
-     * 
-     */
+        /**
+         * @return The liveness probe requirements.
+         * 
+         */
     private final @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements;
-    /**
-     * The maximum number of concurrent requests per container.
-     * 
-     */
+        /**
+         * @return The maximum number of concurrent requests per container.
+         * 
+         */
     private final @Nullable Integer maxConcurrentRequestsPerContainer;
-    /**
-     * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
-     * 
-     */
+        /**
+         * @return Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+         * 
+         */
     private final @Nullable Integer maxQueueWaitMs;
-    /**
-     * Details on the models and configurations.
-     * 
-     */
+        /**
+         * @return Details on the models and configurations.
+         * 
+         */
     private final Map<String,Object> modelConfigMap;
-    /**
-     * The list of models.
-     * 
-     */
+        /**
+         * @return The list of models.
+         * 
+         */
     private final @Nullable List<ModelResponse> models;
-    /**
-     * The Kubernetes namespace of the deployment.
-     * 
-     */
+        /**
+         * @return The Kubernetes namespace of the deployment.
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * The number of replicas on the cluster.
-     * 
-     */
+        /**
+         * @return The number of replicas on the cluster.
+         * 
+         */
     private final @Nullable Integer numReplicas;
-    /**
-     * The service property dictionary. Properties are immutable.
-     * 
-     */
+        /**
+         * @return The service property dictionary. Properties are immutable.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * The scoring timeout in milliseconds.
-     * 
-     */
+        /**
+         * @return The scoring timeout in milliseconds.
+         * 
+         */
     private final @Nullable Integer scoringTimeoutMs;
-    /**
-     * The Uri for sending scoring requests.
-     * 
-     */
+        /**
+         * @return The Uri for sending scoring requests.
+         * 
+         */
     private final String scoringUri;
-    /**
-     * The current state of the service.
-     * 
-     */
+        /**
+         * @return The current state of the service.
+         * 
+         */
     private final String state;
-    /**
-     * The Uri for sending swagger requests.
-     * 
-     */
+        /**
+         * @return The Uri for sending swagger requests.
+         * 
+         */
     private final String swaggerUri;
-    /**
-     * The amount of traffic variant receives.
-     * 
-     */
+        /**
+         * @return The amount of traffic variant receives.
+         * 
+         */
     private final @Nullable Double trafficPercentile;
-    /**
-     * The type of the variant.
-     * 
-     */
+        /**
+         * @return The type of the variant.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -235,206 +235,206 @@ public final class AKSServiceResponseResponse {
     }
 
     /**
-     * Whether or not AAD authentication is enabled.
+     * @return Whether or not AAD authentication is enabled.
      * 
-    */
+     */
     public Optional<Boolean> aadAuthEnabled() {
         return Optional.ofNullable(this.aadAuthEnabled);
     }
     /**
-     * Whether or not Application Insights is enabled.
+     * @return Whether or not Application Insights is enabled.
      * 
-    */
+     */
     public Optional<Boolean> appInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
-     * Whether or not authentication is enabled.
+     * @return Whether or not authentication is enabled.
      * 
-    */
+     */
     public Optional<Boolean> authEnabled() {
         return Optional.ofNullable(this.authEnabled);
     }
     /**
-     * The auto scaler properties.
+     * @return The auto scaler properties.
      * 
-    */
+     */
     public Optional<AKSServiceResponseResponseAutoScaler> autoScaler() {
         return Optional.ofNullable(this.autoScaler);
     }
     /**
-     * The name of the compute resource.
+     * @return The name of the compute resource.
      * 
-    */
+     */
     public Optional<String> computeName() {
         return Optional.ofNullable(this.computeName);
     }
     /**
-     * The compute environment type for the service.
+     * @return The compute environment type for the service.
      * Expected value is &#39;AKS&#39;.
      * 
-    */
+     */
     public String computeType() {
         return this.computeType;
     }
     /**
-     * The container resource requirements.
+     * @return The container resource requirements.
      * 
-    */
+     */
     public Optional<ContainerResourceRequirementsResponse> containerResourceRequirements() {
         return Optional.ofNullable(this.containerResourceRequirements);
     }
     /**
-     * Details of the data collection options specified.
+     * @return Details of the data collection options specified.
      * 
-    */
+     */
     public Optional<AKSServiceResponseResponseDataCollection> dataCollection() {
         return Optional.ofNullable(this.dataCollection);
     }
     /**
-     * The deployment status.
+     * @return The deployment status.
      * 
-    */
+     */
     public AKSServiceResponseResponseDeploymentStatus deploymentStatus() {
         return this.deploymentStatus;
     }
     /**
-     * The deployment type for the service.
+     * @return The deployment type for the service.
      * 
-    */
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
-     * The service description.
+     * @return The service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Environment, models and assets used for inferencing.
+     * @return The Environment, models and assets used for inferencing.
      * 
-    */
+     */
     public Optional<AKSServiceResponseResponseEnvironmentImageRequest> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
     /**
-     * The error details.
+     * @return The error details.
      * 
-    */
+     */
     public ServiceResponseBaseResponseError error() {
         return this.error;
     }
     /**
-     * Is this the default variant.
+     * @return Is this the default variant.
      * 
-    */
+     */
     public Optional<Boolean> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
-     * The service tag dictionary. Tags are mutable.
+     * @return The service tag dictionary. Tags are mutable.
      * 
-    */
+     */
     public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
-     * The liveness probe requirements.
+     * @return The liveness probe requirements.
      * 
-    */
+     */
     public Optional<AKSServiceResponseResponseLivenessProbeRequirements> livenessProbeRequirements() {
         return Optional.ofNullable(this.livenessProbeRequirements);
     }
     /**
-     * The maximum number of concurrent requests per container.
+     * @return The maximum number of concurrent requests per container.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentRequestsPerContainer() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerContainer);
     }
     /**
-     * Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
+     * @return Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable)
      * 
-    */
+     */
     public Optional<Integer> maxQueueWaitMs() {
         return Optional.ofNullable(this.maxQueueWaitMs);
     }
     /**
-     * Details on the models and configurations.
+     * @return Details on the models and configurations.
      * 
-    */
+     */
     public Map<String,Object> modelConfigMap() {
         return this.modelConfigMap;
     }
     /**
-     * The list of models.
+     * @return The list of models.
      * 
-    */
+     */
     public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }
     /**
-     * The Kubernetes namespace of the deployment.
+     * @return The Kubernetes namespace of the deployment.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * The number of replicas on the cluster.
+     * @return The number of replicas on the cluster.
      * 
-    */
+     */
     public Optional<Integer> numReplicas() {
         return Optional.ofNullable(this.numReplicas);
     }
     /**
-     * The service property dictionary. Properties are immutable.
+     * @return The service property dictionary. Properties are immutable.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * The scoring timeout in milliseconds.
+     * @return The scoring timeout in milliseconds.
      * 
-    */
+     */
     public Optional<Integer> scoringTimeoutMs() {
         return Optional.ofNullable(this.scoringTimeoutMs);
     }
     /**
-     * The Uri for sending scoring requests.
+     * @return The Uri for sending scoring requests.
      * 
-    */
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
     /**
-     * The current state of the service.
+     * @return The current state of the service.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The Uri for sending swagger requests.
+     * @return The Uri for sending swagger requests.
      * 
-    */
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
-     * The amount of traffic variant receives.
+     * @return The amount of traffic variant receives.
      * 
-    */
+     */
     public Optional<Double> trafficPercentile() {
         return Optional.ofNullable(this.trafficPercentile);
     }
     /**
-     * The type of the variant.
+     * @return The type of the variant.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

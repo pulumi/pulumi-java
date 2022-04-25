@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceCorrelationDescriptionResponse {
-    /**
-     * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
-     * 
-     */
+        /**
+         * @return The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+         * 
+         */
     private final String scheme;
-    /**
-     * The name of the service that the correlation relationship is established with.
-     * 
-     */
+        /**
+         * @return The name of the service that the correlation relationship is established with.
+         * 
+         */
     private final String serviceName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ServiceCorrelationDescriptionResponse {
     }
 
     /**
-     * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+     * @return The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
      * 
-    */
+     */
     public String scheme() {
         return this.scheme;
     }
     /**
-     * The name of the service that the correlation relationship is established with.
+     * @return The name of the service that the correlation relationship is established with.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }

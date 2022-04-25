@@ -23,6 +23,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="columnName", required=true)
     private Output<String> columnName;
 
+    /**
+     * @return The name of the column.
+     * 
+     */
     public Output<String> columnName() {
         return this.columnName;
     }
@@ -34,6 +38,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="informationType")
     private @Nullable Output<String> informationType;
 
+    /**
+     * @return The information type.
+     * 
+     */
     public Optional<Output<String>> informationType() {
         return Optional.ofNullable(this.informationType);
     }
@@ -45,6 +53,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="informationTypeId")
     private @Nullable Output<String> informationTypeId;
 
+    /**
+     * @return The information type ID.
+     * 
+     */
     public Optional<Output<String>> informationTypeId() {
         return Optional.ofNullable(this.informationTypeId);
     }
@@ -56,6 +68,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="labelId")
     private @Nullable Output<String> labelId;
 
+    /**
+     * @return The label ID.
+     * 
+     */
     public Optional<Output<String>> labelId() {
         return Optional.ofNullable(this.labelId);
     }
@@ -67,6 +83,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="labelName")
     private @Nullable Output<String> labelName;
 
+    /**
+     * @return The label name.
+     * 
+     */
     public Optional<Output<String>> labelName() {
         return Optional.ofNullable(this.labelName);
     }
@@ -85,6 +105,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -96,6 +120,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="schemaName", required=true)
     private Output<String> schemaName;
 
+    /**
+     * @return The name of the schema.
+     * 
+     */
     public Output<String> schemaName() {
         return this.schemaName;
     }
@@ -107,6 +135,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="sensitivityLabelSource")
     private @Nullable Output<String> sensitivityLabelSource;
 
+    /**
+     * @return The source of the sensitivity label.
+     * 
+     */
     public Optional<Output<String>> sensitivityLabelSource() {
         return Optional.ofNullable(this.sensitivityLabelSource);
     }
@@ -118,6 +150,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="sqlPoolName", required=true)
     private Output<String> sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -129,6 +165,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="tableName", required=true)
     private Output<String> tableName;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public Output<String> tableName() {
         return this.tableName;
     }
@@ -140,6 +180,10 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -179,47 +223,107 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
             $ = new SqlPoolSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(Output<String> columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             return columnName(Output.of(columnName));
         }
 
+        /**
+         * @param informationType The information type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationType(@Nullable Output<String> informationType) {
             $.informationType = informationType;
             return this;
         }
 
+        /**
+         * @param informationType The information type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationType(String informationType) {
             return informationType(Output.of(informationType));
         }
 
+        /**
+         * @param informationTypeId The information type ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationTypeId(@Nullable Output<String> informationTypeId) {
             $.informationTypeId = informationTypeId;
             return this;
         }
 
+        /**
+         * @param informationTypeId The information type ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder informationTypeId(String informationTypeId) {
             return informationTypeId(Output.of(informationTypeId));
         }
 
+        /**
+         * @param labelId The label ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelId(@Nullable Output<String> labelId) {
             $.labelId = labelId;
             return this;
         }
 
+        /**
+         * @param labelId The label ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelId(String labelId) {
             return labelId(Output.of(labelId));
         }
 
+        /**
+         * @param labelName The label name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(@Nullable Output<String> labelName) {
             $.labelName = labelName;
             return this;
         }
 
+        /**
+         * @param labelName The label name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelName(String labelName) {
             return labelName(Output.of(labelName));
         }
@@ -233,56 +337,128 @@ public final class SqlPoolSensitivityLabelArgs extends com.pulumi.resources.Reso
             return rank(Output.of(rank));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(Output<String> schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             return schemaName(Output.of(schemaName));
         }
 
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitivityLabelSource(@Nullable Output<String> sensitivityLabelSource) {
             $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             return sensitivityLabelSource(Output.of(sensitivityLabelSource));
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             return sqlPoolName(Output.of(sqlPoolName));
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(Output<String> tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             return tableName(Output.of(tableName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

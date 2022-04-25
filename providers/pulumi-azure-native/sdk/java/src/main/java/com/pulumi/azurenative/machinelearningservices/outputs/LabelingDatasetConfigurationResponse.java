@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LabelingDatasetConfigurationResponse {
-    /**
-     * Name of the data asset to perform labeling.
-     * 
-     */
+        /**
+         * @return Name of the data asset to perform labeling.
+         * 
+         */
     private final String assetName;
-    /**
-     * AML dataset version.
-     * 
-     */
+        /**
+         * @return AML dataset version.
+         * 
+         */
     private final String datasetVersion;
-    /**
-     * Indicates whether to enable incremental dataset refresh.
-     * 
-     */
+        /**
+         * @return Indicates whether to enable incremental dataset refresh.
+         * 
+         */
     private final @Nullable Boolean enableIncrementalDatasetRefresh;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class LabelingDatasetConfigurationResponse {
     }
 
     /**
-     * Name of the data asset to perform labeling.
+     * @return Name of the data asset to perform labeling.
      * 
-    */
+     */
     public String assetName() {
         return this.assetName;
     }
     /**
-     * AML dataset version.
+     * @return AML dataset version.
      * 
-    */
+     */
     public String datasetVersion() {
         return this.datasetVersion;
     }
     /**
-     * Indicates whether to enable incremental dataset refresh.
+     * @return Indicates whether to enable incremental dataset refresh.
      * 
-    */
+     */
     public Optional<Boolean> enableIncrementalDatasetRefresh() {
         return Optional.ofNullable(this.enableIncrementalDatasetRefresh);
     }

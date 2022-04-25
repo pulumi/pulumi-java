@@ -13,51 +13,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServersProjectSummaryResponse {
-    /**
-     * Gets or sets the count of entities assessed.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of entities assessed.
+         * 
+         */
     private final @Nullable Integer assessedCount;
-    /**
-     * Gets or sets the count of entities discovered.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of entities discovered.
+         * 
+         */
     private final @Nullable Integer discoveredCount;
-    /**
-     * Gets or sets the extended summary.
-     * 
-     */
+        /**
+         * @return Gets or sets the extended summary.
+         * 
+         */
     private final @Nullable Map<String,String> extendedSummary;
-    /**
-     * Gets the Instance type.
-     * Expected value is &#39;Servers&#39;.
-     * 
-     */
+        /**
+         * @return Gets the Instance type.
+         * Expected value is &#39;Servers&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * Gets or sets the time when summary was last refreshed.
-     * 
-     */
+        /**
+         * @return Gets or sets the time when summary was last refreshed.
+         * 
+         */
     private final @Nullable String lastSummaryRefreshedTime;
-    /**
-     * Gets or sets the count of entities migrated.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of entities migrated.
+         * 
+         */
     private final @Nullable Integer migratedCount;
-    /**
-     * Gets or sets the state of refresh summary.
-     * 
-     */
+        /**
+         * @return Gets or sets the state of refresh summary.
+         * 
+         */
     private final @Nullable String refreshSummaryState;
-    /**
-     * Gets or sets the count of entities being replicated.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of entities being replicated.
+         * 
+         */
     private final @Nullable Integer replicatingCount;
-    /**
-     * Gets or sets the count of entities test migrated.
-     * 
-     */
+        /**
+         * @return Gets or sets the count of entities test migrated.
+         * 
+         */
     private final @Nullable Integer testMigratedCount;
 
     @CustomType.Constructor
@@ -83,66 +83,66 @@ public final class ServersProjectSummaryResponse {
     }
 
     /**
-     * Gets or sets the count of entities assessed.
+     * @return Gets or sets the count of entities assessed.
      * 
-    */
+     */
     public Optional<Integer> assessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
     /**
-     * Gets or sets the count of entities discovered.
+     * @return Gets or sets the count of entities discovered.
      * 
-    */
+     */
     public Optional<Integer> discoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
     /**
-     * Gets or sets the extended summary.
+     * @return Gets or sets the extended summary.
      * 
-    */
+     */
     public Map<String,String> extendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Servers&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * Gets or sets the time when summary was last refreshed.
+     * @return Gets or sets the time when summary was last refreshed.
      * 
-    */
+     */
     public Optional<String> lastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
     /**
-     * Gets or sets the count of entities migrated.
+     * @return Gets or sets the count of entities migrated.
      * 
-    */
+     */
     public Optional<Integer> migratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
     /**
-     * Gets or sets the state of refresh summary.
+     * @return Gets or sets the state of refresh summary.
      * 
-    */
+     */
     public Optional<String> refreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }
     /**
-     * Gets or sets the count of entities being replicated.
+     * @return Gets or sets the count of entities being replicated.
      * 
-    */
+     */
     public Optional<Integer> replicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
     /**
-     * Gets or sets the count of entities test migrated.
+     * @return Gets or sets the count of entities test migrated.
      * 
-    */
+     */
     public Optional<Integer> testMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }

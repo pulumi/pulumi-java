@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
-    /**
-     * The virtual network private IP address of the IP configuration.
-     * 
-     */
+        /**
+         * @return The virtual network private IP address of the IP configuration.
+         * 
+         */
     private final @Nullable String privateIPAddress;
-    /**
-     * The reference to the public ip address resource.
-     * 
-     */
+        /**
+         * @return The reference to the public ip address resource.
+         * 
+         */
     private final @Nullable SubResourceResponse publicIPAddress;
-    /**
-     * The reference to the virtual network subnet resource.
-     * 
-     */
+        /**
+         * @return The reference to the virtual network subnet resource.
+         * 
+         */
     private final @Nullable SubResourceResponse subnet;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
     }
 
     /**
-     * The virtual network private IP address of the IP configuration.
+     * @return The virtual network private IP address of the IP configuration.
      * 
-    */
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
-     * The reference to the public ip address resource.
+     * @return The reference to the public ip address resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * The reference to the virtual network subnet resource.
+     * @return The reference to the virtual network subnet resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }

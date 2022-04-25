@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceSettingsResponse {
-    /**
-     * The translated compute cores of the virtual machine
-     * 
-     */
+        /**
+         * @return The translated compute cores of the virtual machine
+         * 
+         */
     private final Integer cores;
-    /**
-     * The resource id of the gallery image used for creating the virtual machine
-     * 
-     */
+        /**
+         * @return The resource id of the gallery image used for creating the virtual machine
+         * 
+         */
     private final @Nullable String galleryImageResourceId;
-    /**
-     * The unique id of the resource setting
-     * 
-     */
+        /**
+         * @return The unique id of the resource setting
+         * 
+         */
     private final String id;
-    /**
-     * The name of the image used to created the environment setting
-     * 
-     */
+        /**
+         * @return The name of the image used to created the environment setting
+         * 
+         */
     private final String imageName;
-    /**
-     * Details specific to Reference Vm
-     * 
-     */
+        /**
+         * @return Details specific to Reference Vm
+         * 
+         */
     private final ReferenceVmResponse referenceVm;
-    /**
-     * The size of the virtual machine
-     * 
-     */
+        /**
+         * @return The size of the virtual machine
+         * 
+         */
     private final @Nullable String size;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class ResourceSettingsResponse {
     }
 
     /**
-     * The translated compute cores of the virtual machine
+     * @return The translated compute cores of the virtual machine
      * 
-    */
+     */
     public Integer cores() {
         return this.cores;
     }
     /**
-     * The resource id of the gallery image used for creating the virtual machine
+     * @return The resource id of the gallery image used for creating the virtual machine
      * 
-    */
+     */
     public Optional<String> galleryImageResourceId() {
         return Optional.ofNullable(this.galleryImageResourceId);
     }
     /**
-     * The unique id of the resource setting
+     * @return The unique id of the resource setting
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the image used to created the environment setting
+     * @return The name of the image used to created the environment setting
      * 
-    */
+     */
     public String imageName() {
         return this.imageName;
     }
     /**
-     * Details specific to Reference Vm
+     * @return Details specific to Reference Vm
      * 
-    */
+     */
     public ReferenceVmResponse referenceVm() {
         return this.referenceVm;
     }
     /**
-     * The size of the virtual machine
+     * @return The size of the virtual machine
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }

@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecordSetResponse {
-    /**
-     * Fqdn that resolves to private endpoint ip address.
-     * 
-     */
+        /**
+         * @return Fqdn that resolves to private endpoint ip address.
+         * 
+         */
     private final @Nullable String fqdn;
-    /**
-     * The private ip address of the private endpoint.
-     * 
-     */
+        /**
+         * @return The private ip address of the private endpoint.
+         * 
+         */
     private final @Nullable List<String> ipAddresses;
-    /**
-     * The provisioning state of the recordset.
-     * 
-     */
+        /**
+         * @return The provisioning state of the recordset.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Recordset name.
-     * 
-     */
+        /**
+         * @return Recordset name.
+         * 
+         */
     private final @Nullable String recordSetName;
-    /**
-     * Resource record type.
-     * 
-     */
+        /**
+         * @return Resource record type.
+         * 
+         */
     private final @Nullable String recordType;
-    /**
-     * Recordset time to live.
-     * 
-     */
+        /**
+         * @return Recordset time to live.
+         * 
+         */
     private final @Nullable Integer ttl;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class RecordSetResponse {
     }
 
     /**
-     * Fqdn that resolves to private endpoint ip address.
+     * @return Fqdn that resolves to private endpoint ip address.
      * 
-    */
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * The private ip address of the private endpoint.
+     * @return The private ip address of the private endpoint.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
-     * The provisioning state of the recordset.
+     * @return The provisioning state of the recordset.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Recordset name.
+     * @return Recordset name.
      * 
-    */
+     */
     public Optional<String> recordSetName() {
         return Optional.ofNullable(this.recordSetName);
     }
     /**
-     * Resource record type.
+     * @return Resource record type.
      * 
-    */
+     */
     public Optional<String> recordType() {
         return Optional.ofNullable(this.recordType);
     }
     /**
-     * Recordset time to live.
+     * @return Recordset time to live.
      * 
-    */
+     */
     public Optional<Integer> ttl() {
         return Optional.ofNullable(this.ttl);
     }

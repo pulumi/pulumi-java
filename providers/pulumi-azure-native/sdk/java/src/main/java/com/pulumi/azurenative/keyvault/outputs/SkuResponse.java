@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * SKU family name
-     * 
-     */
+        /**
+         * @return SKU family name
+         * 
+         */
     private final String family;
-    /**
-     * SKU name to specify whether the key vault is a standard vault or a premium vault.
-     * 
-     */
+        /**
+         * @return SKU name to specify whether the key vault is a standard vault or a premium vault.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SkuResponse {
     }
 
     /**
-     * SKU family name
+     * @return SKU family name
      * 
-    */
+     */
     public String family() {
         return this.family;
     }
     /**
-     * SKU name to specify whether the key vault is a standard vault or a premium vault.
+     * @return SKU name to specify whether the key vault is a standard vault or a premium vault.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

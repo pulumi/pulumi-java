@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatadogApiKeyResponse {
-    /**
-     * The time of creation of the API key.
-     * 
-     */
+        /**
+         * @return The time of creation of the API key.
+         * 
+         */
     private final @Nullable String created;
-    /**
-     * The user that created the API key.
-     * 
-     */
+        /**
+         * @return The user that created the API key.
+         * 
+         */
     private final @Nullable String createdBy;
-    /**
-     * The value of the API key.
-     * 
-     */
+        /**
+         * @return The value of the API key.
+         * 
+         */
     private final String key;
-    /**
-     * The name of the API key.
-     * 
-     */
+        /**
+         * @return The name of the API key.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class DatadogApiKeyResponse {
     }
 
     /**
-     * The time of creation of the API key.
+     * @return The time of creation of the API key.
      * 
-    */
+     */
     public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
-     * The user that created the API key.
+     * @return The user that created the API key.
      * 
-    */
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The value of the API key.
+     * @return The value of the API key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The name of the API key.
+     * @return The name of the API key.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

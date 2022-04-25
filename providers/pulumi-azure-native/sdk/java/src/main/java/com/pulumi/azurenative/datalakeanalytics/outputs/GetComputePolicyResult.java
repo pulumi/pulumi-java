@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetComputePolicyResult {
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The maximum degree of parallelism per job this user can use to submit jobs.
-     * 
-     */
+        /**
+         * @return The maximum degree of parallelism per job this user can use to submit jobs.
+         * 
+         */
     private final Integer maxDegreeOfParallelismPerJob;
-    /**
-     * The minimum priority per job this user can use to submit jobs.
-     * 
-     */
+        /**
+         * @return The minimum priority per job this user can use to submit jobs.
+         * 
+         */
     private final Integer minPriorityPerJob;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The AAD object identifier for the entity to create a policy for.
-     * 
-     */
+        /**
+         * @return The AAD object identifier for the entity to create a policy for.
+         * 
+         */
     private final String objectId;
-    /**
-     * The type of AAD object the object identifier refers to.
-     * 
-     */
+        /**
+         * @return The type of AAD object the object identifier refers to.
+         * 
+         */
     private final String objectType;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class GetComputePolicyResult {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The maximum degree of parallelism per job this user can use to submit jobs.
+     * @return The maximum degree of parallelism per job this user can use to submit jobs.
      * 
-    */
+     */
     public Integer maxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
     /**
-     * The minimum priority per job this user can use to submit jobs.
+     * @return The minimum priority per job this user can use to submit jobs.
      * 
-    */
+     */
     public Integer minPriorityPerJob() {
         return this.minPriorityPerJob;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The AAD object identifier for the entity to create a policy for.
+     * @return The AAD object identifier for the entity to create a policy for.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * The type of AAD object the object identifier refers to.
+     * @return The type of AAD object the object identifier refers to.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

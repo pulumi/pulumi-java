@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointResponse {
-    /**
-     * This is private endpoint resource created with Microsoft.Network resource provider.
-     * 
-     */
+        /**
+         * @return This is private endpoint resource created with Microsoft.Network resource provider.
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class PrivateEndpointResponse {
     }
 
     /**
-     * This is private endpoint resource created with Microsoft.Network resource provider.
+     * @return This is private endpoint resource created with Microsoft.Network resource provider.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

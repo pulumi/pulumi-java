@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class AgentDetailsResponse {
-    /**
-     * The Id of the agent running on the server.
-     * 
-     */
+        /**
+         * @return The Id of the agent running on the server.
+         * 
+         */
     private final String agentId;
-    /**
-     * The machine BIOS Id.
-     * 
-     */
+        /**
+         * @return The machine BIOS Id.
+         * 
+         */
     private final String biosId;
-    /**
-     * The details of agent disks.
-     * 
-     */
+        /**
+         * @return The details of agent disks.
+         * 
+         */
     private final List<AgentDiskDetailsResponse> disks;
-    /**
-     * The machine FQDN.
-     * 
-     */
+        /**
+         * @return The machine FQDN.
+         * 
+         */
     private final String fqdn;
-    /**
-     * The Id of the machine to which the agent is registered.
-     * 
-     */
+        /**
+         * @return The Id of the machine to which the agent is registered.
+         * 
+         */
     private final String machineId;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class AgentDetailsResponse {
     }
 
     /**
-     * The Id of the agent running on the server.
+     * @return The Id of the agent running on the server.
      * 
-    */
+     */
     public String agentId() {
         return this.agentId;
     }
     /**
-     * The machine BIOS Id.
+     * @return The machine BIOS Id.
      * 
-    */
+     */
     public String biosId() {
         return this.biosId;
     }
     /**
-     * The details of agent disks.
+     * @return The details of agent disks.
      * 
-    */
+     */
     public List<AgentDiskDetailsResponse> disks() {
         return this.disks;
     }
     /**
-     * The machine FQDN.
+     * @return The machine FQDN.
      * 
-    */
+     */
     public String fqdn() {
         return this.fqdn;
     }
     /**
-     * The Id of the machine to which the agent is registered.
+     * @return The Id of the machine to which the agent is registered.
      * 
-    */
+     */
     public String machineId() {
         return this.machineId;
     }

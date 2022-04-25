@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReplicationRecoveryServicesProviderResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource Location
-     * 
-     */
+        /**
+         * @return Resource Location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource Name
-     * 
-     */
+        /**
+         * @return Resource Name
+         * 
+         */
     private final String name;
-    /**
-     * Provider properties.
-     * 
-     */
+        /**
+         * @return Provider properties.
+         * 
+         */
     private final RecoveryServicesProviderPropertiesResponse properties;
-    /**
-     * Resource Type
-     * 
-     */
+        /**
+         * @return Resource Type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GetReplicationRecoveryServicesProviderResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource Location
+     * @return Resource Location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource Name
+     * @return Resource Name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provider properties.
+     * @return Provider properties.
      * 
-    */
+     */
     public RecoveryServicesProviderPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource Type
+     * @return Resource Type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -24,6 +24,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Region where the Azure resource is located.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -35,6 +39,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return Model representing SKU for Azure Dev Spaces Controller.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -68,6 +84,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags for the Azure resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +99,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetContainerHostCredentialsBase64", required=true)
     private Output<String> targetContainerHostCredentialsBase64;
 
+    /**
+     * @return Credentials of the target container host (base64).
+     * 
+     */
     public Output<String> targetContainerHostCredentialsBase64() {
         return this.targetContainerHostCredentialsBase64;
     }
@@ -90,6 +114,10 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetContainerHostResourceId", required=true)
     private Output<String> targetContainerHostResourceId;
 
+    /**
+     * @return Resource ID of the target container host
+     * 
+     */
     public Output<String> targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
@@ -124,65 +152,149 @@ public final class ControllerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ControllerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Region where the Azure resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Region where the Azure resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Model representing SKU for Azure Dev Spaces Controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Model representing SKU for Azure Dev Spaces Controller.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Tags for the Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags for the Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param targetContainerHostCredentialsBase64 Credentials of the target container host (base64).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerHostCredentialsBase64(Output<String> targetContainerHostCredentialsBase64) {
             $.targetContainerHostCredentialsBase64 = targetContainerHostCredentialsBase64;
             return this;
         }
 
+        /**
+         * @param targetContainerHostCredentialsBase64 Credentials of the target container host (base64).
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerHostCredentialsBase64(String targetContainerHostCredentialsBase64) {
             return targetContainerHostCredentialsBase64(Output.of(targetContainerHostCredentialsBase64));
         }
 
+        /**
+         * @param targetContainerHostResourceId Resource ID of the target container host
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerHostResourceId(Output<String> targetContainerHostResourceId) {
             $.targetContainerHostResourceId = targetContainerHostResourceId;
             return this;
         }
 
+        /**
+         * @param targetContainerHostResourceId Resource ID of the target container host
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
             return targetContainerHostResourceId(Output.of(targetContainerHostResourceId));
         }

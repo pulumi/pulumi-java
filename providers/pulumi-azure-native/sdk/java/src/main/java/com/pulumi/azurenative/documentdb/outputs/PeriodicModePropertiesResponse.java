@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PeriodicModePropertiesResponse {
-    /**
-     * An integer representing the interval in minutes between two backups
-     * 
-     */
+        /**
+         * @return An integer representing the interval in minutes between two backups
+         * 
+         */
     private final @Nullable Integer backupIntervalInMinutes;
-    /**
-     * An integer representing the time (in hours) that each backup is retained
-     * 
-     */
+        /**
+         * @return An integer representing the time (in hours) that each backup is retained
+         * 
+         */
     private final @Nullable Integer backupRetentionIntervalInHours;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PeriodicModePropertiesResponse {
     }
 
     /**
-     * An integer representing the interval in minutes between two backups
+     * @return An integer representing the interval in minutes between two backups
      * 
-    */
+     */
     public Optional<Integer> backupIntervalInMinutes() {
         return Optional.ofNullable(this.backupIntervalInMinutes);
     }
     /**
-     * An integer representing the time (in hours) that each backup is retained
+     * @return An integer representing the time (in hours) that each backup is retained
      * 
-    */
+     */
     public Optional<Integer> backupRetentionIntervalInHours() {
         return Optional.ofNullable(this.backupRetentionIntervalInHours);
     }

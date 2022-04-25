@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerInstanceViewResponse {
-    /**
-     * Current container instance state.
-     * 
-     */
+        /**
+         * @return Current container instance state.
+         * 
+         */
     private final @Nullable ContainerStateResponse currentState;
-    /**
-     * The events of this container instance.
-     * 
-     */
+        /**
+         * @return The events of this container instance.
+         * 
+         */
     private final @Nullable List<ContainerEventResponse> events;
-    /**
-     * Previous container instance state.
-     * 
-     */
+        /**
+         * @return Previous container instance state.
+         * 
+         */
     private final @Nullable ContainerStateResponse previousState;
-    /**
-     * The number of times the container has been restarted.
-     * 
-     */
+        /**
+         * @return The number of times the container has been restarted.
+         * 
+         */
     private final @Nullable Integer restartCount;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class ContainerInstanceViewResponse {
     }
 
     /**
-     * Current container instance state.
+     * @return Current container instance state.
      * 
-    */
+     */
     public Optional<ContainerStateResponse> currentState() {
         return Optional.ofNullable(this.currentState);
     }
     /**
-     * The events of this container instance.
+     * @return The events of this container instance.
      * 
-    */
+     */
     public List<ContainerEventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
     /**
-     * Previous container instance state.
+     * @return Previous container instance state.
      * 
-    */
+     */
     public Optional<ContainerStateResponse> previousState() {
         return Optional.ofNullable(this.previousState);
     }
     /**
-     * The number of times the container has been restarted.
+     * @return The number of times the container has been restarted.
      * 
-    */
+     */
     public Optional<Integer> restartCount() {
         return Optional.ofNullable(this.restartCount);
     }

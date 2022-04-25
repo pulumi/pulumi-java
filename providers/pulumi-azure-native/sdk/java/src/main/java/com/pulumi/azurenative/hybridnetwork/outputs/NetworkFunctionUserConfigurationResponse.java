@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkFunctionUserConfigurationResponse {
-    /**
-     * The network interface configuration.
-     * 
-     */
+        /**
+         * @return The network interface configuration.
+         * 
+         */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
-    /**
-     * Specifies the operating system settings for the role instance.
-     * 
-     */
+        /**
+         * @return Specifies the operating system settings for the role instance.
+         * 
+         */
     private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
-    /**
-     * The name of the network function role.
-     * 
-     */
+        /**
+         * @return The name of the network function role.
+         * 
+         */
     private final @Nullable String roleName;
-    /**
-     * The user data parameters from the customer.
-     * 
-     */
+        /**
+         * @return The user data parameters from the customer.
+         * 
+         */
     private final @Nullable Object userDataParameters;
 
     @CustomType.Constructor
@@ -49,30 +49,30 @@ public final class NetworkFunctionUserConfigurationResponse {
     }
 
     /**
-     * The network interface configuration.
+     * @return The network interface configuration.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
-     * Specifies the operating system settings for the role instance.
+     * @return Specifies the operating system settings for the role instance.
      * 
-    */
+     */
     public Optional<NetworkFunctionUserConfigurationResponseOsProfile> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * The name of the network function role.
+     * @return The name of the network function role.
      * 
-    */
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
-     * The user data parameters from the customer.
+     * @return The user data parameters from the customer.
      * 
-    */
+     */
     public Optional<Object> userDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }

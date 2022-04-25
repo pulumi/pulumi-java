@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkProfileResponse {
-    /**
-     * Name of the resource group containing network resources of Azure Spring Cloud Apps
-     * 
-     */
+        /**
+         * @return Name of the resource group containing network resources of Azure Spring Cloud Apps
+         * 
+         */
     private final @Nullable String appNetworkResourceGroup;
-    /**
-     * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+         * 
+         */
     private final @Nullable String appSubnetId;
-    /**
-     * Desired outbound IP resources for Azure Spring Cloud instance.
-     * 
-     */
+        /**
+         * @return Desired outbound IP resources for Azure Spring Cloud instance.
+         * 
+         */
     private final NetworkProfileResponseOutboundIPs outboundIPs;
-    /**
-     * Required inbound or outbound traffics for Azure Spring Cloud instance.
-     * 
-     */
+        /**
+         * @return Required inbound or outbound traffics for Azure Spring Cloud instance.
+         * 
+         */
     private final List<RequiredTrafficResponse> requiredTraffics;
-    /**
-     * Azure Spring Cloud service reserved CIDR
-     * 
-     */
+        /**
+         * @return Azure Spring Cloud service reserved CIDR
+         * 
+         */
     private final @Nullable String serviceCidr;
-    /**
-     * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
-     * 
-     */
+        /**
+         * @return Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+         * 
+         */
     private final @Nullable String serviceRuntimeNetworkResourceGroup;
-    /**
-     * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+         * 
+         */
     private final @Nullable String serviceRuntimeSubnetId;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class NetworkProfileResponse {
     }
 
     /**
-     * Name of the resource group containing network resources of Azure Spring Cloud Apps
+     * @return Name of the resource group containing network resources of Azure Spring Cloud Apps
      * 
-    */
+     */
     public Optional<String> appNetworkResourceGroup() {
         return Optional.ofNullable(this.appNetworkResourceGroup);
     }
     /**
-     * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+     * @return Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
      * 
-    */
+     */
     public Optional<String> appSubnetId() {
         return Optional.ofNullable(this.appSubnetId);
     }
     /**
-     * Desired outbound IP resources for Azure Spring Cloud instance.
+     * @return Desired outbound IP resources for Azure Spring Cloud instance.
      * 
-    */
+     */
     public NetworkProfileResponseOutboundIPs outboundIPs() {
         return this.outboundIPs;
     }
     /**
-     * Required inbound or outbound traffics for Azure Spring Cloud instance.
+     * @return Required inbound or outbound traffics for Azure Spring Cloud instance.
      * 
-    */
+     */
     public List<RequiredTrafficResponse> requiredTraffics() {
         return this.requiredTraffics;
     }
     /**
-     * Azure Spring Cloud service reserved CIDR
+     * @return Azure Spring Cloud service reserved CIDR
      * 
-    */
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
     /**
-     * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+     * @return Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
      * 
-    */
+     */
     public Optional<String> serviceRuntimeNetworkResourceGroup() {
         return Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
     /**
-     * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+     * @return Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
      * 
-    */
+     */
     public Optional<String> serviceRuntimeSubnetId() {
         return Optional.ofNullable(this.serviceRuntimeSubnetId);
     }

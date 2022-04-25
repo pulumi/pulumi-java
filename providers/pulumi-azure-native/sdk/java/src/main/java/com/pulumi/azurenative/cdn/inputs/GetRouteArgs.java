@@ -19,6 +19,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointName", required=true)
     private String endpointName;
 
+    /**
+     * @return Name of the endpoint under the profile which is unique globally.
+     * 
+     */
     public String endpointName() {
         return this.endpointName;
     }
@@ -30,6 +34,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -41,6 +49,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="routeName", required=true)
     private String routeName;
 
+    /**
+     * @return Name of the routing rule.
+     * 
+     */
     public String routeName() {
         return this.routeName;
     }
@@ -83,21 +99,45 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName Name of the endpoint under the profile which is unique globally.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param routeName Name of the routing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             $.routeName = routeName;
             return this;

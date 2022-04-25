@@ -27,6 +27,10 @@ public final class ComputeBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="computeId")
     private @Nullable Output<String> computeId;
 
+    /**
+     * @return ID of the compute resource.
+     * 
+     */
     public Optional<Output<String>> computeId() {
         return Optional.ofNullable(this.computeId);
     }
@@ -38,6 +42,10 @@ public final class ComputeBindingArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="nodeCount")
     private @Nullable Output<Integer> nodeCount;
 
+    /**
+     * @return Number of nodes.
+     * 
+     */
     public Optional<Output<Integer>> nodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }
@@ -67,20 +75,44 @@ public final class ComputeBindingArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ComputeBindingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeId ID of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeId(@Nullable Output<String> computeId) {
             $.computeId = computeId;
             return this;
         }
 
+        /**
+         * @param computeId ID of the compute resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeId(String computeId) {
             return computeId(Output.of(computeId));
         }
 
+        /**
+         * @param nodeCount Number of nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             $.nodeCount = nodeCount;
             return this;
         }
 
+        /**
+         * @param nodeCount Number of nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeCount(Integer nodeCount) {
             return nodeCount(Output.of(nodeCount));
         }

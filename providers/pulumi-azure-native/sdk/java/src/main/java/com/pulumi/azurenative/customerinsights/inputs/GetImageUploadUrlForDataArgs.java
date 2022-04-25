@@ -21,6 +21,10 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="entityType")
     private @Nullable String entityType;
 
+    /**
+     * @return Type of entity. Can be Profile or Interaction.
+     * 
+     */
     public Optional<String> entityType() {
         return Optional.ofNullable(this.entityType);
     }
@@ -32,6 +36,10 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="entityTypeName")
     private @Nullable String entityTypeName;
 
+    /**
+     * @return Name of the entity type.
+     * 
+     */
     public Optional<String> entityTypeName() {
         return Optional.ofNullable(this.entityTypeName);
     }
@@ -43,6 +51,10 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="hubName", required=true)
     private String hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public String hubName() {
         return this.hubName;
     }
@@ -54,6 +66,10 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="relativePath")
     private @Nullable String relativePath;
 
+    /**
+     * @return Relative path of the image.
+     * 
+     */
     public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
@@ -65,6 +81,10 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -97,26 +117,56 @@ public final class GetImageUploadUrlForDataArgs extends com.pulumi.resources.Inv
             $ = new GetImageUploadUrlForDataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entityType Type of entity. Can be Profile or Interaction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(@Nullable String entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param entityTypeName Name of the entity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityTypeName(@Nullable String entityTypeName) {
             $.entityTypeName = entityTypeName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param relativePath Relative path of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(@Nullable String relativePath) {
             $.relativePath = relativePath;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

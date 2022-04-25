@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class RedisLinkedServerResponse {
-    /**
-     * Linked server Id.
-     * 
-     */
+        /**
+         * @return Linked server Id.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class RedisLinkedServerResponse {
     }
 
     /**
-     * Linked server Id.
+     * @return Linked server Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

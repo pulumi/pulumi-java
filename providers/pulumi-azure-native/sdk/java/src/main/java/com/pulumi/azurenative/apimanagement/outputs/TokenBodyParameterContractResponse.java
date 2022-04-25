@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TokenBodyParameterContractResponse {
-    /**
-     * body parameter name.
-     * 
-     */
+        /**
+         * @return body parameter name.
+         * 
+         */
     private final String name;
-    /**
-     * body parameter value.
-     * 
-     */
+        /**
+         * @return body parameter value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TokenBodyParameterContractResponse {
     }
 
     /**
-     * body parameter name.
+     * @return body parameter name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * body parameter value.
+     * @return body parameter value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

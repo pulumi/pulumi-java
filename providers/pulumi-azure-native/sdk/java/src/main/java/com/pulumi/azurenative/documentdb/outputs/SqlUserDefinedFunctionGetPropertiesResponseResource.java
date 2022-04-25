@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
-    /**
-     * Body of the User Defined Function
-     * 
-     */
+        /**
+         * @return Body of the User Defined Function
+         * 
+         */
     private final @Nullable String body;
-    /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
-     */
+        /**
+         * @return A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         */
     private final String etag;
-    /**
-     * Name of the Cosmos DB SQL userDefinedFunction
-     * 
-     */
+        /**
+         * @return Name of the Cosmos DB SQL userDefinedFunction
+         * 
+         */
     private final String id;
-    /**
-     * A system generated property. A unique identifier.
-     * 
-     */
+        /**
+         * @return A system generated property. A unique identifier.
+         * 
+         */
     private final String rid;
-    /**
-     * A system generated property that denotes the last updated timestamp of the resource.
-     * 
-     */
+        /**
+         * @return A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         */
     private final Double ts;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource {
     }
 
     /**
-     * Body of the User Defined Function
+     * @return Body of the User Defined Function
      * 
-    */
+     */
     public Optional<String> body() {
         return Optional.ofNullable(this.body);
     }
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Name of the Cosmos DB SQL userDefinedFunction
+     * @return Name of the Cosmos DB SQL userDefinedFunction
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
-    */
+     */
     public String rid() {
         return this.rid;
     }
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
-    */
+     */
     public Double ts() {
         return this.ts;
     }

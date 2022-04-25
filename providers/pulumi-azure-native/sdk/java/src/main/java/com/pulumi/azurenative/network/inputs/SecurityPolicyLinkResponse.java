@@ -25,6 +25,10 @@ public final class SecurityPolicyLinkResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class SecurityPolicyLinkResponse extends com.pulumi.resources.Invok
             $ = new SecurityPolicyLinkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

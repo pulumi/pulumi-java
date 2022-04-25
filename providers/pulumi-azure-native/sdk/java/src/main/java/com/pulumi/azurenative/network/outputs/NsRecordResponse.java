@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NsRecordResponse {
-    /**
-     * The name server name for this NS record.
-     * 
-     */
+        /**
+         * @return The name server name for this NS record.
+         * 
+         */
     private final @Nullable String nsdname;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class NsRecordResponse {
     }
 
     /**
-     * The name server name for this NS record.
+     * @return The name server name for this NS record.
      * 
-    */
+     */
     public Optional<String> nsdname() {
         return Optional.ofNullable(this.nsdname);
     }

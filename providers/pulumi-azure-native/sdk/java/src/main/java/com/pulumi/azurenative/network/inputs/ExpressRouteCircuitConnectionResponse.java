@@ -27,6 +27,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="addressPrefix")
     private @Nullable String addressPrefix;
 
+    /**
+     * @return /29 IP address space to carve out Customer addresses for tunnels.
+     * 
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -38,6 +42,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="authorizationKey")
     private @Nullable String authorizationKey;
 
+    /**
+     * @return The authorization key.
+     * 
+     */
     public Optional<String> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
@@ -49,6 +57,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="circuitConnectionStatus", required=true)
     private String circuitConnectionStatus;
 
+    /**
+     * @return Express Route Circuit connection state.
+     * 
+     */
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
@@ -60,6 +72,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -71,6 +87,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="expressRouteCircuitPeering")
     private @Nullable SubResourceResponse expressRouteCircuitPeering;
 
+    /**
+     * @return Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
+     * 
+     */
     public Optional<SubResourceResponse> expressRouteCircuitPeering() {
         return Optional.ofNullable(this.expressRouteCircuitPeering);
     }
@@ -82,6 +102,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -93,6 +117,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="ipv6CircuitConnectionConfig")
     private @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig;
 
+    /**
+     * @return IPv6 Address PrefixProperties of the express route circuit connection.
+     * 
+     */
     public Optional<Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig() {
         return Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
@@ -104,6 +132,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -115,6 +147,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="peerExpressRouteCircuitPeering")
     private @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
 
+    /**
+     * @return Reference to Express Route Circuit Private Peering Resource of the peered circuit.
+     * 
+     */
     public Optional<SubResourceResponse> peerExpressRouteCircuitPeering() {
         return Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
@@ -126,6 +162,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the express route circuit connection resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -137,6 +177,10 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -175,56 +219,122 @@ public final class ExpressRouteCircuitConnectionResponse extends com.pulumi.reso
             $ = new ExpressRouteCircuitConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix /29 IP address space to carve out Customer addresses for tunnels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable String addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param authorizationKey The authorization key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(@Nullable String authorizationKey) {
             $.authorizationKey = authorizationKey;
             return this;
         }
 
+        /**
+         * @param circuitConnectionStatus Express Route Circuit connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             $.circuitConnectionStatus = circuitConnectionStatus;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param expressRouteCircuitPeering Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteCircuitPeering(@Nullable SubResourceResponse expressRouteCircuitPeering) {
             $.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ipv6CircuitConnectionConfig IPv6 Address PrefixProperties of the express route circuit connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig) {
             $.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param peerExpressRouteCircuitPeering Reference to Express Route Circuit Private Peering Resource of the peered circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceResponse peerExpressRouteCircuitPeering) {
             $.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the express route circuit connection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

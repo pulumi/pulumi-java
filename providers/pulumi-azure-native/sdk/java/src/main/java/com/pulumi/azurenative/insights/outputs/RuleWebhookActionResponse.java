@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleWebhookActionResponse {
-    /**
-     * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
-     * 
-     */
+        /**
+         * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
-     * 
-     */
+        /**
+         * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * the service uri to Post the notification when the alert activates or resolves.
-     * 
-     */
+        /**
+         * @return the service uri to Post the notification when the alert activates or resolves.
+         * 
+         */
     private final @Nullable String serviceUri;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class RuleWebhookActionResponse {
     }
 
     /**
-     * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+     * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
      * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+     * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * the service uri to Post the notification when the alert activates or resolves.
+     * @return the service uri to Post the notification when the alert activates or resolves.
      * 
-    */
+     */
     public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }

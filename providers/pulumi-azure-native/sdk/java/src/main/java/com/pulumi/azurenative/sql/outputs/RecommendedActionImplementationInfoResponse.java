@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RecommendedActionImplementationInfoResponse {
-    /**
-     * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
-     * 
-     */
+        /**
+         * @return Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+         * 
+         */
     private final String method;
-    /**
-     * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
-     * 
-     */
+        /**
+         * @return Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+         * 
+         */
     private final String script;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RecommendedActionImplementationInfoResponse {
     }
 
     /**
-     * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+     * @return Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
      * 
-    */
+     */
     public String method() {
         return this.method;
     }
     /**
-     * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+     * @return Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
      * 
-    */
+     */
     public String script() {
         return this.script;
     }

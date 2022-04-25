@@ -26,6 +26,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -37,6 +41,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceCount")
     private @Nullable Output<Integer> instanceCount;
 
+    /**
+     * @return Instance count for the service.
+     * 
+     */
     public Optional<Output<Integer>> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
@@ -48,6 +56,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceSize")
     private @Nullable Output<Either<String,ServiceSize>> instanceSize;
 
+    /**
+     * @return Instance type for the service.
+     * 
+     */
     public Optional<Output<Either<String,ServiceSize>>> instanceSize() {
         return Optional.ofNullable(this.instanceSize);
     }
@@ -59,6 +71,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +86,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Cosmos DB service name.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -81,6 +101,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceType")
     private @Nullable Output<Either<String,ServiceType>> serviceType;
 
+    /**
+     * @return ServiceType for the service.
+     * 
+     */
     public Optional<Output<Either<String,ServiceType>>> serviceType() {
         return Optional.ofNullable(this.serviceType);
     }
@@ -114,72 +138,168 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param instanceCount Instance count for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param instanceCount Instance count for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             return instanceCount(Output.of(instanceCount));
         }
 
+        /**
+         * @param instanceSize Instance type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSize(@Nullable Output<Either<String,ServiceSize>> instanceSize) {
             $.instanceSize = instanceSize;
             return this;
         }
 
+        /**
+         * @param instanceSize Instance type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSize(Either<String,ServiceSize> instanceSize) {
             return instanceSize(Output.of(instanceSize));
         }
 
+        /**
+         * @param instanceSize Instance type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSize(String instanceSize) {
             return instanceSize(Either.ofLeft(instanceSize));
         }
 
+        /**
+         * @param instanceSize Instance type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSize(ServiceSize instanceSize) {
             return instanceSize(Either.ofRight(instanceSize));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName Cosmos DB service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Cosmos DB service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceType ServiceType for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(@Nullable Output<Either<String,ServiceType>> serviceType) {
             $.serviceType = serviceType;
             return this;
         }
 
+        /**
+         * @param serviceType ServiceType for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(Either<String,ServiceType> serviceType) {
             return serviceType(Output.of(serviceType));
         }
 
+        /**
+         * @param serviceType ServiceType for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(String serviceType) {
             return serviceType(Either.ofLeft(serviceType));
         }
 
+        /**
+         * @param serviceType ServiceType for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(ServiceType serviceType) {
             return serviceType(Either.ofRight(serviceType));
         }

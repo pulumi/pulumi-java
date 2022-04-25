@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAppServiceCertificateOrderCertificateResult {
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Key Vault resource Id.
-     * 
-     */
+        /**
+         * @return Key Vault resource Id.
+         * 
+         */
     private final @Nullable String keyVaultId;
-    /**
-     * Key Vault secret name.
-     * 
-     */
+        /**
+         * @return Key Vault secret name.
+         * 
+         */
     private final @Nullable String keyVaultSecretName;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Location.
-     * 
-     */
+        /**
+         * @return Resource Location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * Status of the Key Vault secret.
-     * 
-     */
+        /**
+         * @return Status of the Key Vault secret.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The system metadata relating to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetAppServiceCertificateOrderCertificateResult {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key Vault resource Id.
+     * @return Key Vault resource Id.
      * 
-    */
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
-     * Key Vault secret name.
+     * @return Key Vault secret name.
      * 
-    */
+     */
     public Optional<String> keyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the Key Vault secret.
+     * @return Status of the Key Vault secret.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

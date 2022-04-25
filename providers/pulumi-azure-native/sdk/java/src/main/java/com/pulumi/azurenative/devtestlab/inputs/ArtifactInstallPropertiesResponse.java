@@ -27,6 +27,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="artifactId")
     private @Nullable String artifactId;
 
+    /**
+     * @return The artifact&#39;s identifier.
+     * 
+     */
     public Optional<String> artifactId() {
         return Optional.ofNullable(this.artifactId);
     }
@@ -38,6 +42,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="artifactTitle")
     private @Nullable String artifactTitle;
 
+    /**
+     * @return The artifact&#39;s title.
+     * 
+     */
     public Optional<String> artifactTitle() {
         return Optional.ofNullable(this.artifactTitle);
     }
@@ -49,6 +57,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="deploymentStatusMessage")
     private @Nullable String deploymentStatusMessage;
 
+    /**
+     * @return The status message from the deployment.
+     * 
+     */
     public Optional<String> deploymentStatusMessage() {
         return Optional.ofNullable(this.deploymentStatusMessage);
     }
@@ -60,6 +72,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="installTime")
     private @Nullable String installTime;
 
+    /**
+     * @return The time that the artifact starts to install on the virtual machine.
+     * 
+     */
     public Optional<String> installTime() {
         return Optional.ofNullable(this.installTime);
     }
@@ -71,6 +87,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="parameters")
     private @Nullable List<ArtifactParameterPropertiesResponse> parameters;
 
+    /**
+     * @return The parameters of the artifact.
+     * 
+     */
     public Optional<List<ArtifactParameterPropertiesResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -82,6 +102,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the artifact.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -93,6 +117,10 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
     @Import(name="vmExtensionStatusMessage")
     private @Nullable String vmExtensionStatusMessage;
 
+    /**
+     * @return The status message from the virtual machine extension.
+     * 
+     */
     public Optional<String> vmExtensionStatusMessage() {
         return Optional.ofNullable(this.vmExtensionStatusMessage);
     }
@@ -127,40 +155,88 @@ public final class ArtifactInstallPropertiesResponse extends com.pulumi.resource
             $ = new ArtifactInstallPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactId The artifact&#39;s identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactId(@Nullable String artifactId) {
             $.artifactId = artifactId;
             return this;
         }
 
+        /**
+         * @param artifactTitle The artifact&#39;s title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTitle(@Nullable String artifactTitle) {
             $.artifactTitle = artifactTitle;
             return this;
         }
 
+        /**
+         * @param deploymentStatusMessage The status message from the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
             $.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
 
+        /**
+         * @param installTime The time that the artifact starts to install on the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder installTime(@Nullable String installTime) {
             $.installTime = installTime;
             return this;
         }
 
+        /**
+         * @param parameters The parameters of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ArtifactParameterPropertiesResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param status The status of the artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param vmExtensionStatusMessage The status message from the virtual machine extension.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
             $.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;

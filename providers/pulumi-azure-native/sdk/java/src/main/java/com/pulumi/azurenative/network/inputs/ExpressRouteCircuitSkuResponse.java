@@ -25,6 +25,10 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return The family of the SKU.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -36,6 +40,10 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The tier of the SKU.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -77,16 +89,34 @@ public final class ExpressRouteCircuitSkuResponse extends com.pulumi.resources.I
             $ = new ExpressRouteCircuitSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family The family of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

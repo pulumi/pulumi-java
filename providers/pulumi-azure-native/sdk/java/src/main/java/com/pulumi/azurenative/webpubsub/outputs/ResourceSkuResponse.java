@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceSkuResponse {
-    /**
-     * Optional, integer. The unit count of the resource. 1 by default.
-     * 
-     * If present, following values are allowed:
-     *     Free: 1
-     *     Standard: 1,2,5,10,20,50,100
-     * 
-     */
+        /**
+         * @return Optional, integer. The unit count of the resource. 1 by default.
+         * 
+         * If present, following values are allowed:
+         *     Free: 1
+         *     Standard: 1,2,5,10,20,50,100
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * Not used. Retained for future use.
-     * 
-     */
+        /**
+         * @return Not used. Retained for future use.
+         * 
+         */
     private final String family;
-    /**
-     * The name of the SKU. Required.
-     * 
-     * Allowed values: Standard_S1, Free_F1
-     * 
-     */
+        /**
+         * @return The name of the SKU. Required.
+         * 
+         * Allowed values: Standard_S1, Free_F1
+         * 
+         */
     private final String name;
-    /**
-     * Not used. Retained for future use.
-     * 
-     */
+        /**
+         * @return Not used. Retained for future use.
+         * 
+         */
     private final String size;
-    /**
-     * Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
-     * 
-     * `Basic` is deprecated, use `Standard` instead.
-     * 
-     */
+        /**
+         * @return Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+         * 
+         * `Basic` is deprecated, use `Standard` instead.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -61,45 +61,45 @@ public final class ResourceSkuResponse {
     }
 
     /**
-     * Optional, integer. The unit count of the resource. 1 by default.
+     * @return Optional, integer. The unit count of the resource. 1 by default.
      * 
      * If present, following values are allowed:
      *     Free: 1
      *     Standard: 1,2,5,10,20,50,100
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Not used. Retained for future use.
+     * @return Not used. Retained for future use.
      * 
-    */
+     */
     public String family() {
         return this.family;
     }
     /**
-     * The name of the SKU. Required.
+     * @return The name of the SKU. Required.
      * 
      * Allowed values: Standard_S1, Free_F1
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Not used. Retained for future use.
+     * @return Not used. Retained for future use.
      * 
-    */
+     */
     public String size() {
         return this.size;
     }
     /**
-     * Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+     * @return Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
      * 
      * `Basic` is deprecated, use `Standard` instead.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

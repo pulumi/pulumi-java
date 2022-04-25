@@ -30,6 +30,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return The list of DNS servers IP addresses.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -41,6 +45,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="gateway")
     private @Nullable Output<String> gateway;
 
+    /**
+     * @return The value of the gateway.
+     * 
+     */
     public Optional<Output<String>> gateway() {
         return Optional.ofNullable(this.gateway);
     }
@@ -52,6 +60,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return The value of the IP address.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -63,6 +75,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="ipAllocationMethod")
     private @Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod;
 
+    /**
+     * @return IP address allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAllocationMethod>>> ipAllocationMethod() {
         return Optional.ofNullable(this.ipAllocationMethod);
     }
@@ -74,6 +90,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="ipVersion")
     private @Nullable Output<Either<String,IPVersion>> ipVersion;
 
+    /**
+     * @return IP address version.
+     * 
+     */
     public Optional<Output<Either<String,IPVersion>>> ipVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
@@ -85,6 +105,10 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
     @Import(name="subnet")
     private @Nullable Output<String> subnet;
 
+    /**
+     * @return The value of the subnet.
+     * 
+     */
     public Optional<Output<String>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -118,76 +142,178 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
             $ = new NetworkInterfaceIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param gateway The value of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(@Nullable Output<String> gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @param gateway The value of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(String gateway) {
             return gateway(Output.of(gateway));
         }
 
+        /**
+         * @param ipAddress The value of the IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The value of the IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param ipAllocationMethod IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod) {
             $.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
 
+        /**
+         * @param ipAllocationMethod IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationMethod(Either<String,IPAllocationMethod> ipAllocationMethod) {
             return ipAllocationMethod(Output.of(ipAllocationMethod));
         }
 
+        /**
+         * @param ipAllocationMethod IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationMethod(String ipAllocationMethod) {
             return ipAllocationMethod(Either.ofLeft(ipAllocationMethod));
         }
 
+        /**
+         * @param ipAllocationMethod IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationMethod(IPAllocationMethod ipAllocationMethod) {
             return ipAllocationMethod(Either.ofRight(ipAllocationMethod));
         }
 
+        /**
+         * @param ipVersion IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(@Nullable Output<Either<String,IPVersion>> ipVersion) {
             $.ipVersion = ipVersion;
             return this;
         }
 
+        /**
+         * @param ipVersion IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(Either<String,IPVersion> ipVersion) {
             return ipVersion(Output.of(ipVersion));
         }
 
+        /**
+         * @param ipVersion IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(String ipVersion) {
             return ipVersion(Either.ofLeft(ipVersion));
         }
 
+        /**
+         * @param ipVersion IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(IPVersion ipVersion) {
             return ipVersion(Either.ofRight(ipVersion));
         }
 
+        /**
+         * @param subnet The value of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<String> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The value of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(String subnet) {
             return subnet(Output.of(subnet));
         }

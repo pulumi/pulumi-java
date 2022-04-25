@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TargetOSInfoResponse {
-    /**
-     * Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+         * 
+         */
     private final String osUpdateType;
-    /**
-     * Specifies the target OSs to be tested.
-     * 
-     */
+        /**
+         * @return Specifies the target OSs to be tested.
+         * 
+         */
     private final List<String> targetOSs;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class TargetOSInfoResponse {
     }
 
     /**
-     * Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
+     * @return Specifies the OS update type to test against, e.g., &#39;Security updates&#39; or &#39;Feature updates&#39;.
      * 
-    */
+     */
     public String osUpdateType() {
         return this.osUpdateType;
     }
     /**
-     * Specifies the target OSs to be tested.
+     * @return Specifies the target OSs to be tested.
      * 
-    */
+     */
     public List<String> targetOSs() {
         return this.targetOSs;
     }

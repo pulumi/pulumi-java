@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MatchConditionResponse {
-    /**
-     * Match value.
-     * 
-     */
+        /**
+         * @return Match value.
+         * 
+         */
     private final List<String> matchValues;
-    /**
-     * List of match variables.
-     * 
-     */
+        /**
+         * @return List of match variables.
+         * 
+         */
     private final List<MatchVariableResponse> matchVariables;
-    /**
-     * Whether this is negate condition or not.
-     * 
-     */
+        /**
+         * @return Whether this is negate condition or not.
+         * 
+         */
     private final @Nullable Boolean negationConditon;
-    /**
-     * The operator to be matched.
-     * 
-     */
+        /**
+         * @return The operator to be matched.
+         * 
+         */
     private final String operator;
-    /**
-     * List of transforms.
-     * 
-     */
+        /**
+         * @return List of transforms.
+         * 
+         */
     private final @Nullable List<String> transforms;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class MatchConditionResponse {
     }
 
     /**
-     * Match value.
+     * @return Match value.
      * 
-    */
+     */
     public List<String> matchValues() {
         return this.matchValues;
     }
     /**
-     * List of match variables.
+     * @return List of match variables.
      * 
-    */
+     */
     public List<MatchVariableResponse> matchVariables() {
         return this.matchVariables;
     }
     /**
-     * Whether this is negate condition or not.
+     * @return Whether this is negate condition or not.
      * 
-    */
+     */
     public Optional<Boolean> negationConditon() {
         return Optional.ofNullable(this.negationConditon);
     }
     /**
-     * The operator to be matched.
+     * @return The operator to be matched.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * List of transforms.
+     * @return List of transforms.
      * 
-    */
+     */
     public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

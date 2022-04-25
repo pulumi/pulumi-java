@@ -12,70 +12,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureDataLakeSectionResponse {
-    /**
-     * The authority URL used for authentication.
-     * 
-     */
+        /**
+         * @return The authority URL used for authentication.
+         * 
+         */
     private final @Nullable String authorityUrl;
-    /**
-     * The content of the certificate used for authentication.
-     * 
-     */
+        /**
+         * @return The content of the certificate used for authentication.
+         * 
+         */
     private final @Nullable String certificate;
-    /**
-     * The Client ID/Application ID
-     * 
-     */
+        /**
+         * @return The Client ID/Application ID
+         * 
+         */
     private final @Nullable String clientId;
-    /**
-     * The client secret.
-     * 
-     */
+        /**
+         * @return The client secret.
+         * 
+         */
     private final @Nullable String clientSecret;
-    /**
-     * The Azure Data Lake credential type.
-     * 
-     */
+        /**
+         * @return The Azure Data Lake credential type.
+         * 
+         */
     private final @Nullable String credentialType;
-    /**
-     *  Is it using certificate to authenticate. If false then use client secret.
-     * 
-     */
+        /**
+         * @return  Is it using certificate to authenticate. If false then use client secret.
+         * 
+         */
     private final @Nullable Boolean isCertAuth;
-    /**
-     * Resource Group.
-     * 
-     */
+        /**
+         * @return Resource Group.
+         * 
+         */
     private final @Nullable String resourceGroup;
-    /**
-     * The resource the service principal/app has access to.
-     * 
-     */
+        /**
+         * @return The resource the service principal/app has access to.
+         * 
+         */
     private final @Nullable String resourceUri;
-    /**
-     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
-     * 
-     */
+        /**
+         * @return Indicates which identity to use to authenticate service data access to customer&#39;s storage.
+         * 
+         */
     private final @Nullable String serviceDataAccessAuthIdentity;
-    /**
-     * The Azure Data Lake store name.
-     * 
-     */
+        /**
+         * @return The Azure Data Lake store name.
+         * 
+         */
     private final @Nullable String storeName;
-    /**
-     * Subscription ID.
-     * 
-     */
+        /**
+         * @return Subscription ID.
+         * 
+         */
     private final @Nullable String subscriptionId;
-    /**
-     * The ID of the tenant the service principal/app belongs to.
-     * 
-     */
+        /**
+         * @return The ID of the tenant the service principal/app belongs to.
+         * 
+         */
     private final @Nullable String tenantId;
-    /**
-     * The thumbprint of the certificate above.
-     * 
-     */
+        /**
+         * @return The thumbprint of the certificate above.
+         * 
+         */
     private final @Nullable String thumbprint;
 
     @CustomType.Constructor
@@ -109,93 +109,93 @@ public final class AzureDataLakeSectionResponse {
     }
 
     /**
-     * The authority URL used for authentication.
+     * @return The authority URL used for authentication.
      * 
-    */
+     */
     public Optional<String> authorityUrl() {
         return Optional.ofNullable(this.authorityUrl);
     }
     /**
-     * The content of the certificate used for authentication.
+     * @return The content of the certificate used for authentication.
      * 
-    */
+     */
     public Optional<String> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
-     * The Client ID/Application ID
+     * @return The Client ID/Application ID
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The client secret.
+     * @return The client secret.
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * The Azure Data Lake credential type.
+     * @return The Azure Data Lake credential type.
      * 
-    */
+     */
     public Optional<String> credentialType() {
         return Optional.ofNullable(this.credentialType);
     }
     /**
-     *  Is it using certificate to authenticate. If false then use client secret.
+     * @return  Is it using certificate to authenticate. If false then use client secret.
      * 
-    */
+     */
     public Optional<Boolean> isCertAuth() {
         return Optional.ofNullable(this.isCertAuth);
     }
     /**
-     * Resource Group.
+     * @return Resource Group.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     * The resource the service principal/app has access to.
+     * @return The resource the service principal/app has access to.
      * 
-    */
+     */
     public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
     /**
-     * Indicates which identity to use to authenticate service data access to customer&#39;s storage.
+     * @return Indicates which identity to use to authenticate service data access to customer&#39;s storage.
      * 
-    */
+     */
     public Optional<String> serviceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
-     * The Azure Data Lake store name.
+     * @return The Azure Data Lake store name.
      * 
-    */
+     */
     public Optional<String> storeName() {
         return Optional.ofNullable(this.storeName);
     }
     /**
-     * Subscription ID.
+     * @return Subscription ID.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
-     * The ID of the tenant the service principal/app belongs to.
+     * @return The ID of the tenant the service principal/app belongs to.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The thumbprint of the certificate above.
+     * @return The thumbprint of the certificate above.
      * 
-    */
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

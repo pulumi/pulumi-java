@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class StatusResponse {
-    /**
-     * The short label for the status.
-     * 
-     */
+        /**
+         * @return The short label for the status.
+         * 
+         */
     private final String displayStatus;
-    /**
-     * The detailed message for the status, including alerts and error messages.
-     * 
-     */
+        /**
+         * @return The detailed message for the status, including alerts and error messages.
+         * 
+         */
     private final String message;
-    /**
-     * The timestamp when the status was changed to the current value.
-     * 
-     */
+        /**
+         * @return The timestamp when the status was changed to the current value.
+         * 
+         */
     private final String timestamp;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class StatusResponse {
     }
 
     /**
-     * The short label for the status.
+     * @return The short label for the status.
      * 
-    */
+     */
     public String displayStatus() {
         return this.displayStatus;
     }
     /**
-     * The detailed message for the status, including alerts and error messages.
+     * @return The detailed message for the status, including alerts and error messages.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The timestamp when the status was changed to the current value.
+     * @return The timestamp when the status was changed to the current value.
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ReportTimePeriodResponse {
-    /**
-     * The start date to pull data from.
-     * 
-     */
+        /**
+         * @return The start date to pull data from.
+         * 
+         */
     private final String from;
-    /**
-     * The end date to pull data to.
-     * 
-     */
+        /**
+         * @return The end date to pull data to.
+         * 
+         */
     private final String to;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ReportTimePeriodResponse {
     }
 
     /**
-     * The start date to pull data from.
+     * @return The start date to pull data from.
      * 
-    */
+     */
     public String from() {
         return this.from;
     }
     /**
-     * The end date to pull data to.
+     * @return The end date to pull data to.
      * 
-    */
+     */
     public String to() {
         return this.to;
     }

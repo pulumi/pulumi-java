@@ -19,6 +19,10 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
     @Import(name="virtualNetworkGatewayName", required=true)
     private String virtualNetworkGatewayName;
 
+    /**
+     * @return The name of the virtual network gateway.
+     * 
+     */
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthArgs extends
             $ = new GetVirtualNetworkGatewayVpnclientConnectionHealthArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGatewayName The name of the virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;

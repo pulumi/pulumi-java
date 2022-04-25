@@ -12,55 +12,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAlertsSuppressionRuleResult {
-    /**
-     * Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
-     * 
-     */
+        /**
+         * @return Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
+         * 
+         */
     private final String alertType;
-    /**
-     * Any comment regarding the rule
-     * 
-     */
+        /**
+         * @return Any comment regarding the rule
+         * 
+         */
     private final @Nullable String comment;
-    /**
-     * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
-     * 
-     */
+        /**
+         * @return Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
+         * 
+         */
     private final @Nullable String expirationDateUtc;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The last time this rule was modified
-     * 
-     */
+        /**
+         * @return The last time this rule was modified
+         * 
+         */
     private final String lastModifiedUtc;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The reason for dismissing the alert
-     * 
-     */
+        /**
+         * @return The reason for dismissing the alert
+         * 
+         */
     private final String reason;
-    /**
-     * Possible states of the rule
-     * 
-     */
+        /**
+         * @return Possible states of the rule
+         * 
+         */
     private final String state;
-    /**
-     * The suppression conditions
-     * 
-     */
+        /**
+         * @return The suppression conditions
+         * 
+         */
     private final @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -88,72 +88,72 @@ public final class GetAlertsSuppressionRuleResult {
     }
 
     /**
-     * Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
+     * @return Type of the alert to automatically suppress. For all alert types, use &#39;*&#39;
      * 
-    */
+     */
     public String alertType() {
         return this.alertType;
     }
     /**
-     * Any comment regarding the rule
+     * @return Any comment regarding the rule
      * 
-    */
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
     /**
-     * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
+     * @return Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
-    */
+     */
     public Optional<String> expirationDateUtc() {
         return Optional.ofNullable(this.expirationDateUtc);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last time this rule was modified
+     * @return The last time this rule was modified
      * 
-    */
+     */
     public String lastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The reason for dismissing the alert
+     * @return The reason for dismissing the alert
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }
     /**
-     * Possible states of the rule
+     * @return Possible states of the rule
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The suppression conditions
+     * @return The suppression conditions
      * 
-    */
+     */
     public Optional<SuppressionAlertsScopeResponse> suppressionAlertsScope() {
         return Optional.ofNullable(this.suppressionAlertsScope);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -20,121 +20,121 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAzurePowerShellScriptResult {
-    /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
-     * 
-     */
+        /**
+         * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
+         * 
+         */
     private final @Nullable String arguments;
-    /**
-     * Azure PowerShell module version to be used.
-     * 
-     */
+        /**
+         * @return Azure PowerShell module version to be used.
+         * 
+         */
     private final String azPowerShellVersion;
-    /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
-     * 
-     */
+        /**
+         * @return The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+         * 
+         */
     private final @Nullable String cleanupPreference;
-    /**
-     * Container settings.
-     * 
-     */
+        /**
+         * @return Container settings.
+         * 
+         */
     private final @Nullable ContainerConfigurationResponse containerSettings;
-    /**
-     * The environment variables to pass over to the script.
-     * 
-     */
+        /**
+         * @return The environment variables to pass over to the script.
+         * 
+         */
     private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
-    /**
-     * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
-     * 
-     */
+        /**
+         * @return Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
+         * 
+         */
     private final @Nullable String forceUpdateTag;
-    /**
-     * String Id used to locate any resource on Azure.
-     * 
-     */
+        /**
+         * @return String Id used to locate any resource on Azure.
+         * 
+         */
     private final String id;
-    /**
-     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     * 
-     */
+        /**
+         * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+         * 
+         */
     private final @Nullable ManagedServiceIdentityResponse identity;
-    /**
-     * Type of the script.
-     * Expected value is &#39;AzurePowerShell&#39;.
-     * 
-     */
+        /**
+         * @return Type of the script.
+         * Expected value is &#39;AzurePowerShell&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * The location of the ACI and the storage account for the deployment script.
-     * 
-     */
+        /**
+         * @return The location of the ACI and the storage account for the deployment script.
+         * 
+         */
     private final String location;
-    /**
-     * Name of this resource.
-     * 
-     */
+        /**
+         * @return Name of this resource.
+         * 
+         */
     private final String name;
-    /**
-     * List of script outputs.
-     * 
-     */
+        /**
+         * @return List of script outputs.
+         * 
+         */
     private final Map<String,Object> outputs;
-    /**
-     * Uri for the script. This is the entry point for the external script.
-     * 
-     */
+        /**
+         * @return Uri for the script. This is the entry point for the external script.
+         * 
+         */
     private final @Nullable String primaryScriptUri;
-    /**
-     * State of the script execution. This only appears in the response.
-     * 
-     */
+        /**
+         * @return State of the script execution. This only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
-     * 
-     */
+        /**
+         * @return Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
+         * 
+         */
     private final String retentionInterval;
-    /**
-     * Script body.
-     * 
-     */
+        /**
+         * @return Script body.
+         * 
+         */
     private final @Nullable String scriptContent;
-    /**
-     * Contains the results of script execution.
-     * 
-     */
+        /**
+         * @return Contains the results of script execution.
+         * 
+         */
     private final ScriptStatusResponse status;
-    /**
-     * Storage Account settings.
-     * 
-     */
+        /**
+         * @return Storage Account settings.
+         * 
+         */
     private final @Nullable StorageAccountConfigurationResponse storageAccountSettings;
-    /**
-     * Supporting files for the external script.
-     * 
-     */
+        /**
+         * @return Supporting files for the external script.
+         * 
+         */
     private final @Nullable List<String> supportingScriptUris;
-    /**
-     * The system metadata related to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata related to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
-     * 
-     */
+        /**
+         * @return Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
+         * 
+         */
     private final @Nullable String timeout;
-    /**
-     * Type of this resource.
-     * 
-     */
+        /**
+         * @return Type of this resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -188,164 +188,164 @@ public final class GetAzurePowerShellScriptResult {
     }
 
     /**
-     * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
+     * @return Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location &#39;West US 2&#39;
      * 
-    */
+     */
     public Optional<String> arguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
-     * Azure PowerShell module version to be used.
+     * @return Azure PowerShell module version to be used.
      * 
-    */
+     */
     public String azPowerShellVersion() {
         return this.azPowerShellVersion;
     }
     /**
-     * The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
+     * @return The clean up preference when the script execution gets in a terminal state. Default setting is &#39;Always&#39;.
      * 
-    */
+     */
     public Optional<String> cleanupPreference() {
         return Optional.ofNullable(this.cleanupPreference);
     }
     /**
-     * Container settings.
+     * @return Container settings.
      * 
-    */
+     */
     public Optional<ContainerConfigurationResponse> containerSettings() {
         return Optional.ofNullable(this.containerSettings);
     }
     /**
-     * The environment variables to pass over to the script.
+     * @return The environment variables to pass over to the script.
      * 
-    */
+     */
     public List<EnvironmentVariableResponse> environmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
-     * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
+     * @return Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+     * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Type of the script.
+     * @return Type of the script.
      * Expected value is &#39;AzurePowerShell&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The location of the ACI and the storage account for the deployment script.
+     * @return The location of the ACI and the storage account for the deployment script.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of script outputs.
+     * @return List of script outputs.
      * 
-    */
+     */
     public Map<String,Object> outputs() {
         return this.outputs;
     }
     /**
-     * Uri for the script. This is the entry point for the external script.
+     * @return Uri for the script. This is the entry point for the external script.
      * 
-    */
+     */
     public Optional<String> primaryScriptUri() {
         return Optional.ofNullable(this.primaryScriptUri);
     }
     /**
-     * State of the script execution. This only appears in the response.
+     * @return State of the script execution. This only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
+     * @return Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
      * 
-    */
+     */
     public String retentionInterval() {
         return this.retentionInterval;
     }
     /**
-     * Script body.
+     * @return Script body.
      * 
-    */
+     */
     public Optional<String> scriptContent() {
         return Optional.ofNullable(this.scriptContent);
     }
     /**
-     * Contains the results of script execution.
+     * @return Contains the results of script execution.
      * 
-    */
+     */
     public ScriptStatusResponse status() {
         return this.status;
     }
     /**
-     * Storage Account settings.
+     * @return Storage Account settings.
      * 
-    */
+     */
     public Optional<StorageAccountConfigurationResponse> storageAccountSettings() {
         return Optional.ofNullable(this.storageAccountSettings);
     }
     /**
-     * Supporting files for the external script.
+     * @return Supporting files for the external script.
      * 
-    */
+     */
     public List<String> supportingScriptUris() {
         return this.supportingScriptUris == null ? List.of() : this.supportingScriptUris;
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
+     * @return Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

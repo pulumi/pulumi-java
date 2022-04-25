@@ -23,6 +23,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="allowedSourceAddressPrefix")
     private @Nullable String allowedSourceAddressPrefix;
 
+    /**
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+     * 
+     */
     public Optional<String> allowedSourceAddressPrefix() {
         return Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
@@ -34,6 +38,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="allowedSourceAddressPrefixes")
     private @Nullable List<String> allowedSourceAddressPrefixes;
 
+    /**
+     * @return Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+     * 
+     */
     public Optional<List<String>> allowedSourceAddressPrefixes() {
         return Optional.ofNullable(this.allowedSourceAddressPrefixes);
     }
@@ -45,6 +53,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="endTimeUtc", required=true)
     private String endTimeUtc;
 
+    /**
+     * @return The date &amp; time at which the request ends in UTC
+     * 
+     */
     public String endTimeUtc() {
         return this.endTimeUtc;
     }
@@ -56,6 +68,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="mappedPort")
     private @Nullable Integer mappedPort;
 
+    /**
+     * @return The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+     * 
+     */
     public Optional<Integer> mappedPort() {
         return Optional.ofNullable(this.mappedPort);
     }
@@ -74,6 +90,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the port
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -85,6 +105,10 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
     @Import(name="statusReason", required=true)
     private String statusReason;
 
+    /**
+     * @return A description of why the `status` has its value
+     * 
+     */
     public String statusReason() {
         return this.statusReason;
     }
@@ -119,25 +143,55 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
             $ = new JitNetworkAccessRequestPortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedSourceAddressPrefix Mutually exclusive with the &#34;allowedSourceAddressPrefixes&#34; parameter. Should be an IP address or CIDR, for example &#34;192.168.0.3&#34; or &#34;192.168.0.0/16&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             $.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             $.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
+        /**
+         * @param allowedSourceAddressPrefixes Mutually exclusive with the &#34;allowedSourceAddressPrefix&#34; parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
             return allowedSourceAddressPrefixes(List.of(allowedSourceAddressPrefixes));
         }
 
+        /**
+         * @param endTimeUtc The date &amp; time at which the request ends in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTimeUtc(String endTimeUtc) {
             $.endTimeUtc = endTimeUtc;
             return this;
         }
 
+        /**
+         * @param mappedPort The port which is mapped to this port&#39;s `number` in the Azure Firewall, if applicable
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappedPort(@Nullable Integer mappedPort) {
             $.mappedPort = mappedPort;
             return this;
@@ -148,11 +202,23 @@ public final class JitNetworkAccessRequestPortResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param status The status of the port
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusReason A description of why the `status` has its value
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusReason(String statusReason) {
             $.statusReason = statusReason;
             return this;

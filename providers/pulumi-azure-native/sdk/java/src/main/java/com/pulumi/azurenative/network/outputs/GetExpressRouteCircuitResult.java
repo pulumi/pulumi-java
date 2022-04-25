@@ -21,110 +21,110 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetExpressRouteCircuitResult {
-    /**
-     * Allow classic operations.
-     * 
-     */
+        /**
+         * @return Allow classic operations.
+         * 
+         */
     private final @Nullable Boolean allowClassicOperations;
-    /**
-     * The list of authorizations.
-     * 
-     */
+        /**
+         * @return The list of authorizations.
+         * 
+         */
     private final @Nullable List<ExpressRouteCircuitAuthorizationResponse> authorizations;
-    /**
-     * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
-     * 
-     */
+        /**
+         * @return The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+         * 
+         */
     private final @Nullable Double bandwidthInGbps;
-    /**
-     * The CircuitProvisioningState state of the resource.
-     * 
-     */
+        /**
+         * @return The CircuitProvisioningState state of the resource.
+         * 
+         */
     private final @Nullable String circuitProvisioningState;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
-     * 
-     */
+        /**
+         * @return The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+         * 
+         */
     private final @Nullable SubResourceResponse expressRoutePort;
-    /**
-     * The GatewayManager Etag.
-     * 
-     */
+        /**
+         * @return The GatewayManager Etag.
+         * 
+         */
     private final @Nullable String gatewayManagerEtag;
-    /**
-     * Flag denoting global reach status.
-     * 
-     */
+        /**
+         * @return Flag denoting global reach status.
+         * 
+         */
     private final @Nullable Boolean globalReachEnabled;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The list of peerings.
-     * 
-     */
+        /**
+         * @return The list of peerings.
+         * 
+         */
     private final @Nullable List<ExpressRouteCircuitPeeringResponse> peerings;
-    /**
-     * The provisioning state of the express route circuit resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the express route circuit resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The ServiceKey.
-     * 
-     */
+        /**
+         * @return The ServiceKey.
+         * 
+         */
     private final @Nullable String serviceKey;
-    /**
-     * The ServiceProviderNotes.
-     * 
-     */
+        /**
+         * @return The ServiceProviderNotes.
+         * 
+         */
     private final @Nullable String serviceProviderNotes;
-    /**
-     * The ServiceProviderProperties.
-     * 
-     */
+        /**
+         * @return The ServiceProviderProperties.
+         * 
+         */
     private final @Nullable ExpressRouteCircuitServiceProviderPropertiesResponse serviceProviderProperties;
-    /**
-     * The ServiceProviderProvisioningState state of the resource.
-     * 
-     */
+        /**
+         * @return The ServiceProviderProvisioningState state of the resource.
+         * 
+         */
     private final @Nullable String serviceProviderProvisioningState;
-    /**
-     * The SKU.
-     * 
-     */
+        /**
+         * @return The SKU.
+         * 
+         */
     private final @Nullable ExpressRouteCircuitSkuResponse sku;
-    /**
-     * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
-     * 
-     */
+        /**
+         * @return The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
+         * 
+         */
     private final Integer stag;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -174,149 +174,149 @@ public final class GetExpressRouteCircuitResult {
     }
 
     /**
-     * Allow classic operations.
+     * @return Allow classic operations.
      * 
-    */
+     */
     public Optional<Boolean> allowClassicOperations() {
         return Optional.ofNullable(this.allowClassicOperations);
     }
     /**
-     * The list of authorizations.
+     * @return The list of authorizations.
      * 
-    */
+     */
     public List<ExpressRouteCircuitAuthorizationResponse> authorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
     /**
-     * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+     * @return The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
-    */
+     */
     public Optional<Double> bandwidthInGbps() {
         return Optional.ofNullable(this.bandwidthInGbps);
     }
     /**
-     * The CircuitProvisioningState state of the resource.
+     * @return The CircuitProvisioningState state of the resource.
      * 
-    */
+     */
     public Optional<String> circuitProvisioningState() {
         return Optional.ofNullable(this.circuitProvisioningState);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+     * @return The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> expressRoutePort() {
         return Optional.ofNullable(this.expressRoutePort);
     }
     /**
-     * The GatewayManager Etag.
+     * @return The GatewayManager Etag.
      * 
-    */
+     */
     public Optional<String> gatewayManagerEtag() {
         return Optional.ofNullable(this.gatewayManagerEtag);
     }
     /**
-     * Flag denoting global reach status.
+     * @return Flag denoting global reach status.
      * 
-    */
+     */
     public Optional<Boolean> globalReachEnabled() {
         return Optional.ofNullable(this.globalReachEnabled);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of peerings.
+     * @return The list of peerings.
      * 
-    */
+     */
     public List<ExpressRouteCircuitPeeringResponse> peerings() {
         return this.peerings == null ? List.of() : this.peerings;
     }
     /**
-     * The provisioning state of the express route circuit resource.
+     * @return The provisioning state of the express route circuit resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The ServiceKey.
+     * @return The ServiceKey.
      * 
-    */
+     */
     public Optional<String> serviceKey() {
         return Optional.ofNullable(this.serviceKey);
     }
     /**
-     * The ServiceProviderNotes.
+     * @return The ServiceProviderNotes.
      * 
-    */
+     */
     public Optional<String> serviceProviderNotes() {
         return Optional.ofNullable(this.serviceProviderNotes);
     }
     /**
-     * The ServiceProviderProperties.
+     * @return The ServiceProviderProperties.
      * 
-    */
+     */
     public Optional<ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties() {
         return Optional.ofNullable(this.serviceProviderProperties);
     }
     /**
-     * The ServiceProviderProvisioningState state of the resource.
+     * @return The ServiceProviderProvisioningState state of the resource.
      * 
-    */
+     */
     public Optional<String> serviceProviderProvisioningState() {
         return Optional.ofNullable(this.serviceProviderProvisioningState);
     }
     /**
-     * The SKU.
+     * @return The SKU.
      * 
-    */
+     */
     public Optional<ExpressRouteCircuitSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
+     * @return The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
      * 
-    */
+     */
     public Integer stag() {
         return this.stag;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ACIServiceResponseResponseDataCollection {
-    /**
-     * Option for enabling/disabling Event Hub.
-     * 
-     */
+        /**
+         * @return Option for enabling/disabling Event Hub.
+         * 
+         */
     private final @Nullable Boolean eventHubEnabled;
-    /**
-     * Option for enabling/disabling storage.
-     * 
-     */
+        /**
+         * @return Option for enabling/disabling storage.
+         * 
+         */
     private final @Nullable Boolean storageEnabled;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ACIServiceResponseResponseDataCollection {
     }
 
     /**
-     * Option for enabling/disabling Event Hub.
+     * @return Option for enabling/disabling Event Hub.
      * 
-    */
+     */
     public Optional<Boolean> eventHubEnabled() {
         return Optional.ofNullable(this.eventHubEnabled);
     }
     /**
-     * Option for enabling/disabling storage.
+     * @return Option for enabling/disabling storage.
      * 
-    */
+     */
     public Optional<Boolean> storageEnabled() {
         return Optional.ofNullable(this.storageEnabled);
     }

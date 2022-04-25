@@ -28,6 +28,10 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="indexes")
     private @Nullable Output<List<IndexesArgs>> indexes;
 
+    /**
+     * @return List of indexes for this path
+     * 
+     */
     public Optional<Output<List<IndexesArgs>>> indexes() {
         return Optional.ofNullable(this.indexes);
     }
@@ -39,6 +43,10 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -68,24 +76,54 @@ public final class IncludedPathArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IncludedPathArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param indexes List of indexes for this path
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(@Nullable Output<List<IndexesArgs>> indexes) {
             $.indexes = indexes;
             return this;
         }
 
+        /**
+         * @param indexes List of indexes for this path
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(List<IndexesArgs> indexes) {
             return indexes(Output.of(indexes));
         }
 
+        /**
+         * @param indexes List of indexes for this path
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(IndexesArgs... indexes) {
             return indexes(List.of(indexes));
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

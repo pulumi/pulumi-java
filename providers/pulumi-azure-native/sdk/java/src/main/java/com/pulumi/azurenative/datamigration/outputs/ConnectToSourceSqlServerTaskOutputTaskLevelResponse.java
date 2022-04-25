@@ -12,46 +12,46 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
-    /**
-     * Source agent jobs as a map from agent job name to id.
-     * 
-     */
+        /**
+         * @return Source agent jobs as a map from agent job name to id.
+         * 
+         */
     private final Map<String,String> agentJobs;
-    /**
-     * Source databases as a map from database name to database id
-     * 
-     */
+        /**
+         * @return Source databases as a map from database name to database id
+         * 
+         */
     private final Map<String,String> databases;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * Source logins as a map from login name to login id.
-     * 
-     */
+        /**
+         * @return Source logins as a map from login name to login id.
+         * 
+         */
     private final Map<String,String> logins;
-    /**
-     * Type of result - database level or task level
-     * Expected value is &#39;TaskLevelOutput&#39;.
-     * 
-     */
+        /**
+         * @return Type of result - database level or task level
+         * Expected value is &#39;TaskLevelOutput&#39;.
+         * 
+         */
     private final String resultType;
-    /**
-     * Source server brand version
-     * 
-     */
+        /**
+         * @return Source server brand version
+         * 
+         */
     private final String sourceServerBrandVersion;
-    /**
-     * Source server version
-     * 
-     */
+        /**
+         * @return Source server version
+         * 
+         */
     private final String sourceServerVersion;
-    /**
-     * Validation errors
-     * 
-     */
+        /**
+         * @return Validation errors
+         * 
+         */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @CustomType.Constructor
@@ -75,59 +75,59 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse {
     }
 
     /**
-     * Source agent jobs as a map from agent job name to id.
+     * @return Source agent jobs as a map from agent job name to id.
      * 
-    */
+     */
     public Map<String,String> agentJobs() {
         return this.agentJobs;
     }
     /**
-     * Source databases as a map from database name to database id
+     * @return Source databases as a map from database name to database id
      * 
-    */
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Source logins as a map from login name to login id.
+     * @return Source logins as a map from login name to login id.
      * 
-    */
+     */
     public Map<String,String> logins() {
         return this.logins;
     }
     /**
-     * Type of result - database level or task level
+     * @return Type of result - database level or task level
      * Expected value is &#39;TaskLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Source server brand version
+     * @return Source server brand version
      * 
-    */
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
-     * Source server version
+     * @return Source server version
      * 
-    */
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
-     * Validation errors
+     * @return Validation errors
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

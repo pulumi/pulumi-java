@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectivityGroupItemResponse {
-    /**
-     * Group connectivity type.
-     * 
-     */
+        /**
+         * @return Group connectivity type.
+         * 
+         */
     private final @Nullable String groupConnectivity;
-    /**
-     * Flag if global is supported.
-     * 
-     */
+        /**
+         * @return Flag if global is supported.
+         * 
+         */
     private final @Nullable String isGlobal;
-    /**
-     * Network group Id.
-     * 
-     */
+        /**
+         * @return Network group Id.
+         * 
+         */
     private final @Nullable String networkGroupId;
-    /**
-     * Flag if need to use hub gateway.
-     * 
-     */
+        /**
+         * @return Flag if need to use hub gateway.
+         * 
+         */
     private final @Nullable String useHubGateway;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class ConnectivityGroupItemResponse {
     }
 
     /**
-     * Group connectivity type.
+     * @return Group connectivity type.
      * 
-    */
+     */
     public Optional<String> groupConnectivity() {
         return Optional.ofNullable(this.groupConnectivity);
     }
     /**
-     * Flag if global is supported.
+     * @return Flag if global is supported.
      * 
-    */
+     */
     public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
-     * Network group Id.
+     * @return Network group Id.
      * 
-    */
+     */
     public Optional<String> networkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
     /**
-     * Flag if need to use hub gateway.
+     * @return Flag if need to use hub gateway.
      * 
-    */
+     */
     public Optional<String> useHubGateway() {
         return Optional.ofNullable(this.useHubGateway);
     }

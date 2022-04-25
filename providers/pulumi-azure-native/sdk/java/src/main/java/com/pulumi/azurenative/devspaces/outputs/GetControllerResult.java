@@ -12,60 +12,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetControllerResult {
-    /**
-     * DNS name for accessing DataPlane services
-     * 
-     */
+        /**
+         * @return DNS name for accessing DataPlane services
+         * 
+         */
     private final String dataPlaneFqdn;
-    /**
-     * DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
-     * 
-     */
+        /**
+         * @return DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
+         * 
+         */
     private final String hostSuffix;
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * Region where the Azure resource is located.
-     * 
-     */
+        /**
+         * @return Region where the Azure resource is located.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state of the Azure Dev Spaces Controller.
-     * 
-     */
+        /**
+         * @return Provisioning state of the Azure Dev Spaces Controller.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Model representing SKU for Azure Dev Spaces Controller.
-     * 
-     */
+        /**
+         * @return Model representing SKU for Azure Dev Spaces Controller.
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * Tags for the Azure resource.
-     * 
-     */
+        /**
+         * @return Tags for the Azure resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * DNS of the target container host&#39;s API server
-     * 
-     */
+        /**
+         * @return DNS of the target container host&#39;s API server
+         * 
+         */
     private final String targetContainerHostApiServerFqdn;
-    /**
-     * Resource ID of the target container host
-     * 
-     */
+        /**
+         * @return Resource ID of the target container host
+         * 
+         */
     private final String targetContainerHostResourceId;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -95,79 +95,79 @@ public final class GetControllerResult {
     }
 
     /**
-     * DNS name for accessing DataPlane services
+     * @return DNS name for accessing DataPlane services
      * 
-    */
+     */
     public String dataPlaneFqdn() {
         return this.dataPlaneFqdn;
     }
     /**
-     * DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
+     * @return DNS suffix for public endpoints running in the Azure Dev Spaces Controller.
      * 
-    */
+     */
     public String hostSuffix() {
         return this.hostSuffix;
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Region where the Azure resource is located.
+     * @return Region where the Azure resource is located.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the Azure Dev Spaces Controller.
+     * @return Provisioning state of the Azure Dev Spaces Controller.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Model representing SKU for Azure Dev Spaces Controller.
+     * @return Model representing SKU for Azure Dev Spaces Controller.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Tags for the Azure resource.
+     * @return Tags for the Azure resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * DNS of the target container host&#39;s API server
+     * @return DNS of the target container host&#39;s API server
      * 
-    */
+     */
     public String targetContainerHostApiServerFqdn() {
         return this.targetContainerHostApiServerFqdn;
     }
     /**
-     * Resource ID of the target container host
+     * @return Resource ID of the target container host
      * 
-    */
+     */
     public String targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

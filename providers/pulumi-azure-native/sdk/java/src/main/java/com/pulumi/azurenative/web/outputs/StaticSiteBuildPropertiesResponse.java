@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StaticSiteBuildPropertiesResponse {
-    /**
-     * A custom command to run during deployment of the Azure Functions API application.
-     * 
-     */
+        /**
+         * @return A custom command to run during deployment of the Azure Functions API application.
+         * 
+         */
     private final @Nullable String apiBuildCommand;
-    /**
-     * The path to the api code within the repository.
-     * 
-     */
+        /**
+         * @return The path to the api code within the repository.
+         * 
+         */
     private final @Nullable String apiLocation;
-    /**
-     * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
-     * 
-     */
+        /**
+         * @return Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+         * 
+         */
     private final @Nullable String appArtifactLocation;
-    /**
-     * A custom command to run during deployment of the static content application.
-     * 
-     */
+        /**
+         * @return A custom command to run during deployment of the static content application.
+         * 
+         */
     private final @Nullable String appBuildCommand;
-    /**
-     * The path to the app code within the repository.
-     * 
-     */
+        /**
+         * @return The path to the app code within the repository.
+         * 
+         */
     private final @Nullable String appLocation;
-    /**
-     * Github Action secret name override.
-     * 
-     */
+        /**
+         * @return Github Action secret name override.
+         * 
+         */
     private final @Nullable String githubActionSecretNameOverride;
-    /**
-     * The output path of the app after building.
-     * 
-     */
+        /**
+         * @return The output path of the app after building.
+         * 
+         */
     private final @Nullable String outputLocation;
-    /**
-     * Skip Github Action workflow generation.
-     * 
-     */
+        /**
+         * @return Skip Github Action workflow generation.
+         * 
+         */
     private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class StaticSiteBuildPropertiesResponse {
     }
 
     /**
-     * A custom command to run during deployment of the Azure Functions API application.
+     * @return A custom command to run during deployment of the Azure Functions API application.
      * 
-    */
+     */
     public Optional<String> apiBuildCommand() {
         return Optional.ofNullable(this.apiBuildCommand);
     }
     /**
-     * The path to the api code within the repository.
+     * @return The path to the api code within the repository.
      * 
-    */
+     */
     public Optional<String> apiLocation() {
         return Optional.ofNullable(this.apiLocation);
     }
     /**
-     * Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+     * @return Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
      * 
-    */
+     */
     public Optional<String> appArtifactLocation() {
         return Optional.ofNullable(this.appArtifactLocation);
     }
     /**
-     * A custom command to run during deployment of the static content application.
+     * @return A custom command to run during deployment of the static content application.
      * 
-    */
+     */
     public Optional<String> appBuildCommand() {
         return Optional.ofNullable(this.appBuildCommand);
     }
     /**
-     * The path to the app code within the repository.
+     * @return The path to the app code within the repository.
      * 
-    */
+     */
     public Optional<String> appLocation() {
         return Optional.ofNullable(this.appLocation);
     }
     /**
-     * Github Action secret name override.
+     * @return Github Action secret name override.
      * 
-    */
+     */
     public Optional<String> githubActionSecretNameOverride() {
         return Optional.ofNullable(this.githubActionSecretNameOverride);
     }
     /**
-     * The output path of the app after building.
+     * @return The output path of the app after building.
      * 
-    */
+     */
     public Optional<String> outputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }
     /**
-     * Skip Github Action workflow generation.
+     * @return Skip Github Action workflow generation.
      * 
-    */
+     */
     public Optional<Boolean> skipGithubActionWorkflowGeneration() {
         return Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }

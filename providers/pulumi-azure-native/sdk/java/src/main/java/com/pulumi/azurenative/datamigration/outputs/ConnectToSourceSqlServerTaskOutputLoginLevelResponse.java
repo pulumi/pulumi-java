@@ -11,41 +11,41 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
-    /**
-     * The default database for the login.
-     * 
-     */
+        /**
+         * @return The default database for the login.
+         * 
+         */
     private final String defaultDatabase;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * The state of the login.
-     * 
-     */
+        /**
+         * @return The state of the login.
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * The type of login.
-     * 
-     */
+        /**
+         * @return The type of login.
+         * 
+         */
     private final String loginType;
-    /**
-     * Information about eligibility of login for migration.
-     * 
-     */
+        /**
+         * @return Information about eligibility of login for migration.
+         * 
+         */
     private final MigrationEligibilityInfoResponse migrationEligibility;
-    /**
-     * Login name.
-     * 
-     */
+        /**
+         * @return Login name.
+         * 
+         */
     private final String name;
-    /**
-     * Type of result - database level or task level
-     * Expected value is &#39;LoginLevelOutput&#39;.
-     * 
-     */
+        /**
+         * @return Type of result - database level or task level
+         * Expected value is &#39;LoginLevelOutput&#39;.
+         * 
+         */
     private final String resultType;
 
     @CustomType.Constructor
@@ -67,52 +67,52 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse {
     }
 
     /**
-     * The default database for the login.
+     * @return The default database for the login.
      * 
-    */
+     */
     public String defaultDatabase() {
         return this.defaultDatabase;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The state of the login.
+     * @return The state of the login.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The type of login.
+     * @return The type of login.
      * 
-    */
+     */
     public String loginType() {
         return this.loginType;
     }
     /**
-     * Information about eligibility of login for migration.
+     * @return Information about eligibility of login for migration.
      * 
-    */
+     */
     public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
     /**
-     * Login name.
+     * @return Login name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of result - database level or task level
+     * @return Type of result - database level or task level
      * Expected value is &#39;LoginLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }

@@ -9,21 +9,21 @@ import java.util.Objects;
 
 @CustomType
 public final class EnvironmentVariableSetupResponse {
-    /**
-     * The type of custom setup.
-     * Expected value is &#39;EnvironmentVariableSetup&#39;.
-     * 
-     */
+        /**
+         * @return The type of custom setup.
+         * Expected value is &#39;EnvironmentVariableSetup&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The name of the environment variable.
-     * 
-     */
+        /**
+         * @return The name of the environment variable.
+         * 
+         */
     private final String variableName;
-    /**
-     * The value of the environment variable.
-     * 
-     */
+        /**
+         * @return The value of the environment variable.
+         * 
+         */
     private final String variableValue;
 
     @CustomType.Constructor
@@ -37,24 +37,24 @@ public final class EnvironmentVariableSetupResponse {
     }
 
     /**
-     * The type of custom setup.
+     * @return The type of custom setup.
      * Expected value is &#39;EnvironmentVariableSetup&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The name of the environment variable.
+     * @return The name of the environment variable.
      * 
-    */
+     */
     public String variableName() {
         return this.variableName;
     }
     /**
-     * The value of the environment variable.
+     * @return The value of the environment variable.
      * 
-    */
+     */
     public String variableValue() {
         return this.variableValue;
     }

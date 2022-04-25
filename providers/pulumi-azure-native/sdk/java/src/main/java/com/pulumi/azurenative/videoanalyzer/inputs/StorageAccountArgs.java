@@ -27,6 +27,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return A managed identity that Video Analyzer will use to access the storage account.
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -67,20 +75,44 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param identity A managed identity that Video Analyzer will use to access the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity A managed identity that Video Analyzer will use to access the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }

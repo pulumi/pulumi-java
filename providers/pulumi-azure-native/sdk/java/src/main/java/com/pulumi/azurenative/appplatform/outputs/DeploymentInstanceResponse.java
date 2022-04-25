@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class DeploymentInstanceResponse {
-    /**
-     * Discovery status of the deployment instance
-     * 
-     */
+        /**
+         * @return Discovery status of the deployment instance
+         * 
+         */
     private final String discoveryStatus;
-    /**
-     * Name of the deployment instance
-     * 
-     */
+        /**
+         * @return Name of the deployment instance
+         * 
+         */
     private final String name;
-    /**
-     * Failed reason of the deployment instance
-     * 
-     */
+        /**
+         * @return Failed reason of the deployment instance
+         * 
+         */
     private final String reason;
-    /**
-     * Start time of the deployment instance
-     * 
-     */
+        /**
+         * @return Start time of the deployment instance
+         * 
+         */
     private final String startTime;
-    /**
-     * Status of the deployment instance
-     * 
-     */
+        /**
+         * @return Status of the deployment instance
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class DeploymentInstanceResponse {
     }
 
     /**
-     * Discovery status of the deployment instance
+     * @return Discovery status of the deployment instance
      * 
-    */
+     */
     public String discoveryStatus() {
         return this.discoveryStatus;
     }
     /**
-     * Name of the deployment instance
+     * @return Name of the deployment instance
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Failed reason of the deployment instance
+     * @return Failed reason of the deployment instance
      * 
-    */
+     */
     public String reason() {
         return this.reason;
     }
     /**
-     * Start time of the deployment instance
+     * @return Start time of the deployment instance
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Status of the deployment instance
+     * @return Status of the deployment instance
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

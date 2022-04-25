@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ActionGroupResponse {
-    /**
-     * The resource ID of the Action Group. This cannot be null or empty.
-     * 
-     */
+        /**
+         * @return The resource ID of the Action Group. This cannot be null or empty.
+         * 
+         */
     private final String actionGroupId;
-    /**
-     * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
-     * 
-     */
+        /**
+         * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         */
     private final @Nullable Map<String,String> webhookProperties;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ActionGroupResponse {
     }
 
     /**
-     * The resource ID of the Action Group. This cannot be null or empty.
+     * @return The resource ID of the Action Group. This cannot be null or empty.
      * 
-    */
+     */
     public String actionGroupId() {
         return this.actionGroupId;
     }
     /**
-     * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+     * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
-    */
+     */
     public Map<String,String> webhookProperties() {
         return this.webhookProperties == null ? Map.of() : this.webhookProperties;
     }

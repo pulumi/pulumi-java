@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ActorResponse {
-    /**
-     * The subject or username associated with the request context that generated the event.
-     * 
-     */
+        /**
+         * @return The subject or username associated with the request context that generated the event.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ActorResponse {
     }
 
     /**
-     * The subject or username associated with the request context that generated the event.
+     * @return The subject or username associated with the request context that generated the event.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

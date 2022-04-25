@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetJobCredentialResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The credential user name.
-     * 
-     */
+        /**
+         * @return The credential user name.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GetJobCredentialResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The credential user name.
+     * @return The credential user name.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

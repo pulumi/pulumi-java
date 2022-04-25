@@ -20,190 +20,190 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAgentPoolResult {
-    /**
-     * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
-     * 
-     */
+        /**
+         * @return Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+         * 
+         */
     private final @Nullable List<String> availabilityZones;
-    /**
-     * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
-     * 
-     */
+        /**
+         * @return Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
+         * 
+         */
     private final @Nullable Integer count;
-    /**
-     * Whether to enable auto-scaler
-     * 
-     */
+        /**
+         * @return Whether to enable auto-scaler
+         * 
+         */
     private final @Nullable Boolean enableAutoScaling;
-    /**
-     * Whether to enable EncryptionAtHost
-     * 
-     */
+        /**
+         * @return Whether to enable EncryptionAtHost
+         * 
+         */
     private final @Nullable Boolean enableEncryptionAtHost;
-    /**
-     * Whether to use FIPS enabled OS
-     * 
-     */
+        /**
+         * @return Whether to use FIPS enabled OS
+         * 
+         */
     private final @Nullable Boolean enableFIPS;
-    /**
-     * Enable public IP for nodes
-     * 
-     */
+        /**
+         * @return Enable public IP for nodes
+         * 
+         */
     private final @Nullable Boolean enableNodePublicIP;
-    /**
-     * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
-     * 
-     */
+        /**
+         * @return GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+         * 
+         */
     private final @Nullable String gpuInstanceProfile;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * KubeletConfig specifies the configuration of kubelet on agent nodes.
-     * 
-     */
+        /**
+         * @return KubeletConfig specifies the configuration of kubelet on agent nodes.
+         * 
+         */
     private final @Nullable KubeletConfigResponse kubeletConfig;
-    /**
-     * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
-     * 
-     */
+        /**
+         * @return KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+         * 
+         */
     private final @Nullable String kubeletDiskType;
-    /**
-     * LinuxOSConfig specifies the OS configuration of linux agent nodes.
-     * 
-     */
+        /**
+         * @return LinuxOSConfig specifies the OS configuration of linux agent nodes.
+         * 
+         */
     private final @Nullable LinuxOSConfigResponse linuxOSConfig;
-    /**
-     * Maximum number of nodes for auto-scaling
-     * 
-     */
+        /**
+         * @return Maximum number of nodes for auto-scaling
+         * 
+         */
     private final @Nullable Integer maxCount;
-    /**
-     * Maximum number of pods that can run on a node.
-     * 
-     */
+        /**
+         * @return Maximum number of pods that can run on a node.
+         * 
+         */
     private final @Nullable Integer maxPods;
-    /**
-     * Minimum number of nodes for auto-scaling
-     * 
-     */
+        /**
+         * @return Minimum number of nodes for auto-scaling
+         * 
+         */
     private final @Nullable Integer minCount;
-    /**
-     * AgentPoolMode represents mode of an agent pool
-     * 
-     */
+        /**
+         * @return AgentPoolMode represents mode of an agent pool
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Version of node image
-     * 
-     */
+        /**
+         * @return Version of node image
+         * 
+         */
     private final String nodeImageVersion;
-    /**
-     * Agent pool node labels to be persisted across all nodes in agent pool.
-     * 
-     */
+        /**
+         * @return Agent pool node labels to be persisted across all nodes in agent pool.
+         * 
+         */
     private final @Nullable Map<String,String> nodeLabels;
-    /**
-     * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
-     * 
-     */
+        /**
+         * @return Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
+         * 
+         */
     private final @Nullable String nodePublicIPPrefixID;
-    /**
-     * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
-     * 
-     */
+        /**
+         * @return Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+         * 
+         */
     private final @Nullable List<String> nodeTaints;
-    /**
-     * Version of orchestrator specified when creating the managed cluster.
-     * 
-     */
+        /**
+         * @return Version of orchestrator specified when creating the managed cluster.
+         * 
+         */
     private final @Nullable String orchestratorVersion;
-    /**
-     * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
-     * 
-     */
+        /**
+         * @return OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+         * 
+         */
     private final @Nullable Integer osDiskSizeGB;
-    /**
-     * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
-     * 
-     */
+        /**
+         * @return OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
+         * 
+         */
     private final @Nullable String osDiskType;
-    /**
-     * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
-     * 
-     */
+        /**
+         * @return OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+         * 
+         */
     private final @Nullable String osSKU;
-    /**
-     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
-     * 
-     */
+        /**
+         * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
-     * 
-     */
+        /**
+         * @return Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
+         * 
+         */
     private final @Nullable String podSubnetID;
-    /**
-     * Describes whether the Agent Pool is Running or Stopped
-     * 
-     */
+        /**
+         * @return Describes whether the Agent Pool is Running or Stopped
+         * 
+         */
     private final PowerStateResponse powerState;
-    /**
-     * The current deployment or provisioning state, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The current deployment or provisioning state, which only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The ID for Proximity Placement Group.
-     * 
-     */
+        /**
+         * @return The ID for Proximity Placement Group.
+         * 
+         */
     private final @Nullable String proximityPlacementGroupID;
-    /**
-     * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
-     * 
-     */
+        /**
+         * @return ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+         * 
+         */
     private final @Nullable String scaleSetEvictionPolicy;
-    /**
-     * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
-     * 
-     */
+        /**
+         * @return ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+         * 
+         */
     private final @Nullable String scaleSetPriority;
-    /**
-     * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
-     * 
-     */
+        /**
+         * @return SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
+         * 
+         */
     private final @Nullable Double spotMaxPrice;
-    /**
-     * Agent pool tags to be persisted on the agent pool virtual machine scale set.
-     * 
-     */
+        /**
+         * @return Agent pool tags to be persisted on the agent pool virtual machine scale set.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * AgentPoolType represents types of an agent pool
-     * 
-     */
+        /**
+         * @return AgentPoolType represents types of an agent pool
+         * 
+         */
     private final String type;
-    /**
-     * Settings for upgrading the agentpool
-     * 
-     */
+        /**
+         * @return Settings for upgrading the agentpool
+         * 
+         */
     private final @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings;
-    /**
-     * Size of agent VMs.
-     * 
-     */
+        /**
+         * @return Size of agent VMs.
+         * 
+         */
     private final @Nullable String vmSize;
-    /**
-     * VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
-     * 
-     */
+        /**
+         * @return VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
+         * 
+         */
     private final @Nullable String vnetSubnetID;
 
     @CustomType.Constructor
@@ -285,261 +285,261 @@ public final class GetAgentPoolResult {
     }
 
     /**
-     * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+     * @return Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
      * 
-    */
+     */
     public List<String> availabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
     /**
-     * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
+     * @return Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Whether to enable auto-scaler
+     * @return Whether to enable auto-scaler
      * 
-    */
+     */
     public Optional<Boolean> enableAutoScaling() {
         return Optional.ofNullable(this.enableAutoScaling);
     }
     /**
-     * Whether to enable EncryptionAtHost
+     * @return Whether to enable EncryptionAtHost
      * 
-    */
+     */
     public Optional<Boolean> enableEncryptionAtHost() {
         return Optional.ofNullable(this.enableEncryptionAtHost);
     }
     /**
-     * Whether to use FIPS enabled OS
+     * @return Whether to use FIPS enabled OS
      * 
-    */
+     */
     public Optional<Boolean> enableFIPS() {
         return Optional.ofNullable(this.enableFIPS);
     }
     /**
-     * Enable public IP for nodes
+     * @return Enable public IP for nodes
      * 
-    */
+     */
     public Optional<Boolean> enableNodePublicIP() {
         return Optional.ofNullable(this.enableNodePublicIP);
     }
     /**
-     * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+     * @return GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
      * 
-    */
+     */
     public Optional<String> gpuInstanceProfile() {
         return Optional.ofNullable(this.gpuInstanceProfile);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * KubeletConfig specifies the configuration of kubelet on agent nodes.
+     * @return KubeletConfig specifies the configuration of kubelet on agent nodes.
      * 
-    */
+     */
     public Optional<KubeletConfigResponse> kubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
     /**
-     * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+     * @return KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
      * 
-    */
+     */
     public Optional<String> kubeletDiskType() {
         return Optional.ofNullable(this.kubeletDiskType);
     }
     /**
-     * LinuxOSConfig specifies the OS configuration of linux agent nodes.
+     * @return LinuxOSConfig specifies the OS configuration of linux agent nodes.
      * 
-    */
+     */
     public Optional<LinuxOSConfigResponse> linuxOSConfig() {
         return Optional.ofNullable(this.linuxOSConfig);
     }
     /**
-     * Maximum number of nodes for auto-scaling
+     * @return Maximum number of nodes for auto-scaling
      * 
-    */
+     */
     public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
     /**
-     * Maximum number of pods that can run on a node.
+     * @return Maximum number of pods that can run on a node.
      * 
-    */
+     */
     public Optional<Integer> maxPods() {
         return Optional.ofNullable(this.maxPods);
     }
     /**
-     * Minimum number of nodes for auto-scaling
+     * @return Minimum number of nodes for auto-scaling
      * 
-    */
+     */
     public Optional<Integer> minCount() {
         return Optional.ofNullable(this.minCount);
     }
     /**
-     * AgentPoolMode represents mode of an agent pool
+     * @return AgentPoolMode represents mode of an agent pool
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Version of node image
+     * @return Version of node image
      * 
-    */
+     */
     public String nodeImageVersion() {
         return this.nodeImageVersion;
     }
     /**
-     * Agent pool node labels to be persisted across all nodes in agent pool.
+     * @return Agent pool node labels to be persisted across all nodes in agent pool.
      * 
-    */
+     */
     public Map<String,String> nodeLabels() {
         return this.nodeLabels == null ? Map.of() : this.nodeLabels;
     }
     /**
-     * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
+     * @return Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
      * 
-    */
+     */
     public Optional<String> nodePublicIPPrefixID() {
         return Optional.ofNullable(this.nodePublicIPPrefixID);
     }
     /**
-     * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+     * @return Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
      * 
-    */
+     */
     public List<String> nodeTaints() {
         return this.nodeTaints == null ? List.of() : this.nodeTaints;
     }
     /**
-     * Version of orchestrator specified when creating the managed cluster.
+     * @return Version of orchestrator specified when creating the managed cluster.
      * 
-    */
+     */
     public Optional<String> orchestratorVersion() {
         return Optional.ofNullable(this.orchestratorVersion);
     }
     /**
-     * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+     * @return OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
      * 
-    */
+     */
     public Optional<Integer> osDiskSizeGB() {
         return Optional.ofNullable(this.osDiskSizeGB);
     }
     /**
-     * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
+     * @return OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
      * 
-    */
+     */
     public Optional<String> osDiskType() {
         return Optional.ofNullable(this.osDiskType);
     }
     /**
-     * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+     * @return OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
      * 
-    */
+     */
     public Optional<String> osSKU() {
         return Optional.ofNullable(this.osSKU);
     }
     /**
-     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
+     * @return Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
      * 
-    */
+     */
     public Optional<String> podSubnetID() {
         return Optional.ofNullable(this.podSubnetID);
     }
     /**
-     * Describes whether the Agent Pool is Running or Stopped
+     * @return Describes whether the Agent Pool is Running or Stopped
      * 
-    */
+     */
     public PowerStateResponse powerState() {
         return this.powerState;
     }
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The ID for Proximity Placement Group.
+     * @return The ID for Proximity Placement Group.
      * 
-    */
+     */
     public Optional<String> proximityPlacementGroupID() {
         return Optional.ofNullable(this.proximityPlacementGroupID);
     }
     /**
-     * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+     * @return ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
      * 
-    */
+     */
     public Optional<String> scaleSetEvictionPolicy() {
         return Optional.ofNullable(this.scaleSetEvictionPolicy);
     }
     /**
-     * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+     * @return ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
      * 
-    */
+     */
     public Optional<String> scaleSetPriority() {
         return Optional.ofNullable(this.scaleSetPriority);
     }
     /**
-     * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
+     * @return SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
      * 
-    */
+     */
     public Optional<Double> spotMaxPrice() {
         return Optional.ofNullable(this.spotMaxPrice);
     }
     /**
-     * Agent pool tags to be persisted on the agent pool virtual machine scale set.
+     * @return Agent pool tags to be persisted on the agent pool virtual machine scale set.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * AgentPoolType represents types of an agent pool
+     * @return AgentPoolType represents types of an agent pool
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Settings for upgrading the agentpool
+     * @return Settings for upgrading the agentpool
      * 
-    */
+     */
     public Optional<AgentPoolUpgradeSettingsResponse> upgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
     /**
-     * Size of agent VMs.
+     * @return Size of agent VMs.
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
     /**
-     * VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
+     * @return VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
      * 
-    */
+     */
     public Optional<String> vnetSubnetID() {
         return Optional.ofNullable(this.vnetSubnetID);
     }

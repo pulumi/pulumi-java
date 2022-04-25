@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedPrivateEndpointResponse {
-    /**
-     * The managed private endpoint connection state
-     * 
-     */
+        /**
+         * @return The managed private endpoint connection state
+         * 
+         */
     private final @Nullable ConnectionStatePropertiesResponse connectionState;
-    /**
-     * Fully qualified domain names
-     * 
-     */
+        /**
+         * @return Fully qualified domain names
+         * 
+         */
     private final @Nullable List<String> fqdns;
-    /**
-     * The groupId to which the managed private endpoint is created
-     * 
-     */
+        /**
+         * @return The groupId to which the managed private endpoint is created
+         * 
+         */
     private final @Nullable String groupId;
-    /**
-     * Denotes whether the managed private endpoint is reserved
-     * 
-     */
+        /**
+         * @return Denotes whether the managed private endpoint is reserved
+         * 
+         */
     private final Boolean isReserved;
-    /**
-     * The ARM resource ID of the resource to which the managed private endpoint is created
-     * 
-     */
+        /**
+         * @return The ARM resource ID of the resource to which the managed private endpoint is created
+         * 
+         */
     private final @Nullable String privateLinkResourceId;
-    /**
-     * The managed private endpoint provisioning state
-     * 
-     */
+        /**
+         * @return The managed private endpoint provisioning state
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class ManagedPrivateEndpointResponse {
     }
 
     /**
-     * The managed private endpoint connection state
+     * @return The managed private endpoint connection state
      * 
-    */
+     */
     public Optional<ConnectionStatePropertiesResponse> connectionState() {
         return Optional.ofNullable(this.connectionState);
     }
     /**
-     * Fully qualified domain names
+     * @return Fully qualified domain names
      * 
-    */
+     */
     public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
-     * The groupId to which the managed private endpoint is created
+     * @return The groupId to which the managed private endpoint is created
      * 
-    */
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
-     * Denotes whether the managed private endpoint is reserved
+     * @return Denotes whether the managed private endpoint is reserved
      * 
-    */
+     */
     public Boolean isReserved() {
         return this.isReserved;
     }
     /**
-     * The ARM resource ID of the resource to which the managed private endpoint is created
+     * @return The ARM resource ID of the resource to which the managed private endpoint is created
      * 
-    */
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
-     * The managed private endpoint provisioning state
+     * @return The managed private endpoint provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

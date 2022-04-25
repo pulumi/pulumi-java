@@ -25,6 +25,10 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
     @Import(name="lun")
     private @Nullable String lun;
 
+    /**
+     * @return Disk Lun
+     * 
+     */
     public Optional<String> lun() {
         return Optional.ofNullable(this.lun);
     }
@@ -36,6 +40,10 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
     @Import(name="storageType")
     private @Nullable String storageType;
 
+    /**
+     * @return Disk Storage Type
+     * 
+     */
     public Optional<String> storageType() {
         return Optional.ofNullable(this.storageType);
     }
@@ -65,11 +73,23 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
             $ = new DataDiskStorageTypeInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lun Disk Lun
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(@Nullable String lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param storageType Disk Storage Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageType(@Nullable String storageType) {
             $.storageType = storageType;
             return this;

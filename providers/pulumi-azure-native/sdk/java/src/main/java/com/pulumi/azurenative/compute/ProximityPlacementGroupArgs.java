@@ -26,6 +26,10 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="colocationStatus")
     private @Nullable Output<InstanceViewStatusArgs> colocationStatus;
 
+    /**
+     * @return Describes colocation status of the Proximity Placement Group.
+     * 
+     */
     public Optional<Output<InstanceViewStatusArgs>> colocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
@@ -37,6 +41,10 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -48,6 +56,10 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="proximityPlacementGroupName")
     private @Nullable Output<String> proximityPlacementGroupName;
 
+    /**
+     * @return The name of the proximity placement group.
+     * 
+     */
     public Optional<Output<String>> proximityPlacementGroupName() {
         return Optional.ofNullable(this.proximityPlacementGroupName);
     }
@@ -59,6 +71,10 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="proximityPlacementGroupType")
     private @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
 
+    /**
+     * @return Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+     * 
+     */
     public Optional<Output<Either<String,ProximityPlacementGroupType>>> proximityPlacementGroupType() {
         return Optional.ofNullable(this.proximityPlacementGroupType);
     }
@@ -70,6 +86,10 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -114,64 +138,148 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
             $ = new ProximityPlacementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colocationStatus Describes colocation status of the Proximity Placement Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colocationStatus(@Nullable Output<InstanceViewStatusArgs> colocationStatus) {
             $.colocationStatus = colocationStatus;
             return this;
         }
 
+        /**
+         * @param colocationStatus Describes colocation status of the Proximity Placement Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colocationStatus(InstanceViewStatusArgs colocationStatus) {
             return colocationStatus(Output.of(colocationStatus));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param proximityPlacementGroupName The name of the proximity placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupName(@Nullable Output<String> proximityPlacementGroupName) {
             $.proximityPlacementGroupName = proximityPlacementGroupName;
             return this;
         }
 
+        /**
+         * @param proximityPlacementGroupName The name of the proximity placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupName(String proximityPlacementGroupName) {
             return proximityPlacementGroupName(Output.of(proximityPlacementGroupName));
         }
 
+        /**
+         * @param proximityPlacementGroupType Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupType(@Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
             $.proximityPlacementGroupType = proximityPlacementGroupType;
             return this;
         }
 
+        /**
+         * @param proximityPlacementGroupType Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupType(Either<String,ProximityPlacementGroupType> proximityPlacementGroupType) {
             return proximityPlacementGroupType(Output.of(proximityPlacementGroupType));
         }
 
+        /**
+         * @param proximityPlacementGroupType Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupType(String proximityPlacementGroupType) {
             return proximityPlacementGroupType(Either.ofLeft(proximityPlacementGroupType));
         }
 
+        /**
+         * @param proximityPlacementGroupType Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupType(ProximityPlacementGroupType proximityPlacementGroupType) {
             return proximityPlacementGroupType(Either.ofRight(proximityPlacementGroupType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -34,6 +34,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
     private @Nullable Output<String> clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public Optional<Output<String>> clusterName() {
         return Optional.ofNullable(this.clusterName);
     }
@@ -45,6 +49,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDiskEncryption")
     private @Nullable Output<Boolean> enableDiskEncryption;
 
+    /**
+     * @return A boolean value that indicates if the cluster&#39;s disks are encrypted.
+     * 
+     */
     public Optional<Output<Boolean>> enableDiskEncryption() {
         return Optional.ofNullable(this.enableDiskEncryption);
     }
@@ -56,6 +64,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableDoubleEncryption")
     private @Nullable Output<Boolean> enableDoubleEncryption;
 
+    /**
+     * @return A boolean value that indicates if double encryption is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableDoubleEncryption() {
         return Optional.ofNullable(this.enableDoubleEncryption);
     }
@@ -67,6 +79,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enablePurge")
     private @Nullable Output<Boolean> enablePurge;
 
+    /**
+     * @return A boolean value that indicates if the purge operations are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enablePurge() {
         return Optional.ofNullable(this.enablePurge);
     }
@@ -78,6 +94,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableStreamingIngest")
     private @Nullable Output<Boolean> enableStreamingIngest;
 
+    /**
+     * @return A boolean value that indicates if the streaming ingest is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableStreamingIngest() {
         return Optional.ofNullable(this.enableStreamingIngest);
     }
@@ -89,6 +109,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="engineType")
     private @Nullable Output<Either<String,EngineType>> engineType;
 
+    /**
+     * @return The engine type
+     * 
+     */
     public Optional<Output<Either<String,EngineType>>> engineType() {
         return Optional.ofNullable(this.engineType);
     }
@@ -100,6 +124,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity of the cluster, if configured.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -111,6 +139,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
     private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return KeyVault properties for the cluster encryption.
+     * 
+     */
     public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -122,6 +154,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -133,6 +169,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="optimizedAutoscale")
     private @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
 
+    /**
+     * @return Optimized auto scale definition.
+     * 
+     */
     public Optional<Output<OptimizedAutoscaleArgs>> optimizedAutoscale() {
         return Optional.ofNullable(this.optimizedAutoscale);
     }
@@ -144,6 +184,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -155,6 +199,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<AzureSkuArgs> sku;
 
+    /**
+     * @return The SKU of the cluster.
+     * 
+     */
     public Output<AzureSkuArgs> sku() {
         return this.sku;
     }
@@ -166,6 +214,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -177,6 +229,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="trustedExternalTenants")
     private @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
 
+    /**
+     * @return The cluster&#39;s external tenants.
+     * 
+     */
     public Optional<Output<List<TrustedExternalTenantArgs>>> trustedExternalTenants() {
         return Optional.ofNullable(this.trustedExternalTenants);
     }
@@ -188,6 +244,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkConfiguration")
     private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
+    /**
+     * @return Virtual network definition.
+     * 
+     */
     public Optional<Output<VirtualNetworkConfigurationArgs>> virtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
@@ -199,6 +259,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return The availability zones of the cluster.
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -242,162 +306,378 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(@Nullable Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param enableDiskEncryption A boolean value that indicates if the cluster&#39;s disks are encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDiskEncryption(@Nullable Output<Boolean> enableDiskEncryption) {
             $.enableDiskEncryption = enableDiskEncryption;
             return this;
         }
 
+        /**
+         * @param enableDiskEncryption A boolean value that indicates if the cluster&#39;s disks are encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDiskEncryption(Boolean enableDiskEncryption) {
             return enableDiskEncryption(Output.of(enableDiskEncryption));
         }
 
+        /**
+         * @param enableDoubleEncryption A boolean value that indicates if double encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDoubleEncryption(@Nullable Output<Boolean> enableDoubleEncryption) {
             $.enableDoubleEncryption = enableDoubleEncryption;
             return this;
         }
 
+        /**
+         * @param enableDoubleEncryption A boolean value that indicates if double encryption is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDoubleEncryption(Boolean enableDoubleEncryption) {
             return enableDoubleEncryption(Output.of(enableDoubleEncryption));
         }
 
+        /**
+         * @param enablePurge A boolean value that indicates if the purge operations are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePurge(@Nullable Output<Boolean> enablePurge) {
             $.enablePurge = enablePurge;
             return this;
         }
 
+        /**
+         * @param enablePurge A boolean value that indicates if the purge operations are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enablePurge(Boolean enablePurge) {
             return enablePurge(Output.of(enablePurge));
         }
 
+        /**
+         * @param enableStreamingIngest A boolean value that indicates if the streaming ingest is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStreamingIngest(@Nullable Output<Boolean> enableStreamingIngest) {
             $.enableStreamingIngest = enableStreamingIngest;
             return this;
         }
 
+        /**
+         * @param enableStreamingIngest A boolean value that indicates if the streaming ingest is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableStreamingIngest(Boolean enableStreamingIngest) {
             return enableStreamingIngest(Output.of(enableStreamingIngest));
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(@Nullable Output<Either<String,EngineType>> engineType) {
             $.engineType = engineType;
             return this;
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(Either<String,EngineType> engineType) {
             return engineType(Output.of(engineType));
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(String engineType) {
             return engineType(Either.ofLeft(engineType));
         }
 
+        /**
+         * @param engineType The engine type
+         * 
+         * @return builder
+         * 
+         */
         public Builder engineType(EngineType engineType) {
             return engineType(Either.ofRight(engineType));
         }
 
+        /**
+         * @param identity The identity of the cluster, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the cluster, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param keyVaultProperties KeyVault properties for the cluster encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties KeyVault properties for the cluster encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param optimizedAutoscale Optimized auto scale definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optimizedAutoscale(@Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale) {
             $.optimizedAutoscale = optimizedAutoscale;
             return this;
         }
 
+        /**
+         * @param optimizedAutoscale Optimized auto scale definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optimizedAutoscale(OptimizedAutoscaleArgs optimizedAutoscale) {
             return optimizedAutoscale(Output.of(optimizedAutoscale));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<AzureSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(AzureSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param trustedExternalTenants The cluster&#39;s external tenants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedExternalTenants(@Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants) {
             $.trustedExternalTenants = trustedExternalTenants;
             return this;
         }
 
+        /**
+         * @param trustedExternalTenants The cluster&#39;s external tenants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedExternalTenants(List<TrustedExternalTenantArgs> trustedExternalTenants) {
             return trustedExternalTenants(Output.of(trustedExternalTenants));
         }
 
+        /**
+         * @param trustedExternalTenants The cluster&#39;s external tenants.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedExternalTenants(TrustedExternalTenantArgs... trustedExternalTenants) {
             return trustedExternalTenants(List.of(trustedExternalTenants));
         }
 
+        /**
+         * @param virtualNetworkConfiguration Virtual network definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             $.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
+        /**
+         * @param virtualNetworkConfiguration Virtual network definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkConfiguration(VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             return virtualNetworkConfiguration(Output.of(virtualNetworkConfiguration));
         }
 
+        /**
+         * @param zones The availability zones of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones The availability zones of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones The availability zones of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

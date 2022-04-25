@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccessPolicyResult {
-    /**
-     * An description of the access policy.
-     * 
-     */
+        /**
+         * @return An description of the access policy.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The objectId of the principal in Azure Active Directory.
-     * 
-     */
+        /**
+         * @return The objectId of the principal in Azure Active Directory.
+         * 
+         */
     private final @Nullable String principalObjectId;
-    /**
-     * The list of roles the principal is assigned on the environment.
-     * 
-     */
+        /**
+         * @return The list of roles the principal is assigned on the environment.
+         * 
+         */
     private final @Nullable List<String> roles;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetAccessPolicyResult {
     }
 
     /**
-     * An description of the access policy.
+     * @return An description of the access policy.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The objectId of the principal in Azure Active Directory.
+     * @return The objectId of the principal in Azure Active Directory.
      * 
-    */
+     */
     public Optional<String> principalObjectId() {
         return Optional.ofNullable(this.principalObjectId);
     }
     /**
-     * The list of roles the principal is assigned on the environment.
+     * @return The list of roles the principal is assigned on the environment.
      * 
-    */
+     */
     public List<String> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

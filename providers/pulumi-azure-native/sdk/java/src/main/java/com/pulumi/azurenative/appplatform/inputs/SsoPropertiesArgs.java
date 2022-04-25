@@ -27,6 +27,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The public identifier for the application
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -38,6 +42,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return The secret known only to the application and the authorization server
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -49,6 +57,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issuerUri")
     private @Nullable Output<String> issuerUri;
 
+    /**
+     * @return The URI of Issuer Identifier
+     * 
+     */
     public Optional<Output<String>> issuerUri() {
         return Optional.ofNullable(this.issuerUri);
     }
@@ -60,6 +72,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope")
     private @Nullable Output<List<String>> scope;
 
+    /**
+     * @return It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+     * 
+     */
     public Optional<Output<List<String>>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -91,42 +107,96 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SsoPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The public identifier for the application
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The public identifier for the application
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The secret known only to the application and the authorization server
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The secret known only to the application and the authorization server
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param issuerUri The URI of Issuer Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
             $.issuerUri = issuerUri;
             return this;
         }
 
+        /**
+         * @param issuerUri The URI of Issuer Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerUri(String issuerUri) {
             return issuerUri(Output.of(issuerUri));
         }
 
+        /**
+         * @param scope It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<List<String>> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(List<String> scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scope It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }

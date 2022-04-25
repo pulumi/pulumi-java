@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetImageResult {
-    /**
-     * The extended location of the Image.
-     * 
-     */
+        /**
+         * @return The extended location of the Image.
+         * 
+         */
     private final @Nullable ExtendedLocationResponse extendedLocation;
-    /**
-     * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
-     * 
-     */
+        /**
+         * @return Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
+         * 
+         */
     private final @Nullable String hyperVGeneration;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The source virtual machine from which Image is created.
-     * 
-     */
+        /**
+         * @return The source virtual machine from which Image is created.
+         * 
+         */
     private final @Nullable SubResourceResponse sourceVirtualMachine;
-    /**
-     * Specifies the storage settings for the virtual machine disks.
-     * 
-     */
+        /**
+         * @return Specifies the storage settings for the virtual machine disks.
+         * 
+         */
     private final @Nullable ImageStorageProfileResponse storageProfile;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetImageResult {
     }
 
     /**
-     * The extended location of the Image.
+     * @return The extended location of the Image.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
+     * @return Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
-    */
+     */
     public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The source virtual machine from which Image is created.
+     * @return The source virtual machine from which Image is created.
      * 
-    */
+     */
     public Optional<SubResourceResponse> sourceVirtualMachine() {
         return Optional.ofNullable(this.sourceVirtualMachine);
     }
     /**
-     * Specifies the storage settings for the virtual machine disks.
+     * @return Specifies the storage settings for the virtual machine disks.
      * 
-    */
+     */
     public Optional<ImageStorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,21 +11,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecoveryPlanA2ADetailsResponse {
-    /**
-     * Gets the Instance type.
-     * Expected value is &#39;A2A&#39;.
-     * 
-     */
+        /**
+         * @return Gets the Instance type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The primary zone.
-     * 
-     */
+        /**
+         * @return The primary zone.
+         * 
+         */
     private final @Nullable String primaryZone;
-    /**
-     * The recovery zone.
-     * 
-     */
+        /**
+         * @return The recovery zone.
+         * 
+         */
     private final @Nullable String recoveryZone;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class RecoveryPlanA2ADetailsResponse {
     }
 
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;A2A&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The primary zone.
+     * @return The primary zone.
      * 
-    */
+     */
     public Optional<String> primaryZone() {
         return Optional.ofNullable(this.primaryZone);
     }
     /**
-     * The recovery zone.
+     * @return The recovery zone.
      * 
-    */
+     */
     public Optional<String> recoveryZone() {
         return Optional.ofNullable(this.recoveryZone);
     }

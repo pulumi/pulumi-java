@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SourceTriggerResponse {
-    /**
-     * The name of the trigger.
-     * 
-     */
+        /**
+         * @return The name of the trigger.
+         * 
+         */
     private final String name;
-    /**
-     * The properties that describes the source(code) for the task.
-     * 
-     */
+        /**
+         * @return The properties that describes the source(code) for the task.
+         * 
+         */
     private final SourcePropertiesResponse sourceRepository;
-    /**
-     * The source event corresponding to the trigger.
-     * 
-     */
+        /**
+         * @return The source event corresponding to the trigger.
+         * 
+         */
     private final List<String> sourceTriggerEvents;
-    /**
-     * The current status of trigger.
-     * 
-     */
+        /**
+         * @return The current status of trigger.
+         * 
+         */
     private final @Nullable String status;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class SourceTriggerResponse {
     }
 
     /**
-     * The name of the trigger.
+     * @return The name of the trigger.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The properties that describes the source(code) for the task.
+     * @return The properties that describes the source(code) for the task.
      * 
-    */
+     */
     public SourcePropertiesResponse sourceRepository() {
         return this.sourceRepository;
     }
     /**
-     * The source event corresponding to the trigger.
+     * @return The source event corresponding to the trigger.
      * 
-    */
+     */
     public List<String> sourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
     /**
-     * The current status of trigger.
+     * @return The current status of trigger.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetHcxEnterpriseSiteResult {
-    /**
-     * The activation key
-     * 
-     */
+        /**
+         * @return The activation key
+         * 
+         */
     private final String activationKey;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The status of the HCX Enterprise Site
-     * 
-     */
+        /**
+         * @return The status of the HCX Enterprise Site
+         * 
+         */
     private final String status;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class GetHcxEnterpriseSiteResult {
     }
 
     /**
-     * The activation key
+     * @return The activation key
      * 
-    */
+     */
     public String activationKey() {
         return this.activationKey;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The status of the HCX Enterprise Site
+     * @return The status of the HCX Enterprise Site
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

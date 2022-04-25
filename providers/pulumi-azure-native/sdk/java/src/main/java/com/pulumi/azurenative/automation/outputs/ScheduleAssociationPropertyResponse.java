@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScheduleAssociationPropertyResponse {
-    /**
-     * Gets or sets the name of the Schedule.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the Schedule.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ScheduleAssociationPropertyResponse {
     }
 
     /**
-     * Gets or sets the name of the Schedule.
+     * @return Gets or sets the name of the Schedule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -29,6 +29,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="azureVirtualMachines")
     private @Nullable List<String> azureVirtualMachines;
 
+    /**
+     * @return List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+     * 
+     */
     public Optional<List<String>> azureVirtualMachines() {
         return Optional.ofNullable(this.azureVirtualMachines);
     }
@@ -40,6 +44,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="duration")
     private @Nullable String duration;
 
+    /**
+     * @return Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+     * 
+     */
     public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -51,6 +59,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="linux")
     private @Nullable LinuxPropertiesResponse linux;
 
+    /**
+     * @return Linux specific update configuration.
+     * 
+     */
     public Optional<LinuxPropertiesResponse> linux() {
         return Optional.ofNullable(this.linux);
     }
@@ -62,6 +74,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="nonAzureComputerNames")
     private @Nullable List<String> nonAzureComputerNames;
 
+    /**
+     * @return List of names of non-azure machines targeted by the software update configuration.
+     * 
+     */
     public Optional<List<String>> nonAzureComputerNames() {
         return Optional.ofNullable(this.nonAzureComputerNames);
     }
@@ -73,6 +89,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="operatingSystem", required=true)
     private String operatingSystem;
 
+    /**
+     * @return operating system of target machines
+     * 
+     */
     public String operatingSystem() {
         return this.operatingSystem;
     }
@@ -84,6 +104,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="targets")
     private @Nullable TargetPropertiesResponse targets;
 
+    /**
+     * @return Group targets for the software update configuration.
+     * 
+     */
     public Optional<TargetPropertiesResponse> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -95,6 +119,10 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="windows")
     private @Nullable WindowsPropertiesResponse windows;
 
+    /**
+     * @return Windows specific update configuration.
+     * 
+     */
     public Optional<WindowsPropertiesResponse> windows() {
         return Optional.ofNullable(this.windows);
     }
@@ -129,44 +157,98 @@ public final class UpdateConfigurationResponse extends com.pulumi.resources.Invo
             $ = new UpdateConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureVirtualMachines List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
             $.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
 
+        /**
+         * @param azureVirtualMachines List of azure resource Ids for azure virtual machines targeted by the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVirtualMachines(String... azureVirtualMachines) {
             return azureVirtualMachines(List.of(azureVirtualMachines));
         }
 
+        /**
+         * @param duration Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param linux Linux specific update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linux(@Nullable LinuxPropertiesResponse linux) {
             $.linux = linux;
             return this;
         }
 
+        /**
+         * @param nonAzureComputerNames List of names of non-azure machines targeted by the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
             $.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
 
+        /**
+         * @param nonAzureComputerNames List of names of non-azure machines targeted by the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonAzureComputerNames(String... nonAzureComputerNames) {
             return nonAzureComputerNames(List.of(nonAzureComputerNames));
         }
 
+        /**
+         * @param operatingSystem operating system of target machines
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystem(String operatingSystem) {
             $.operatingSystem = operatingSystem;
             return this;
         }
 
+        /**
+         * @param targets Group targets for the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable TargetPropertiesResponse targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param windows Windows specific update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windows(@Nullable WindowsPropertiesResponse windows) {
             $.windows = windows;
             return this;

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConsortiumResponse {
-    /**
-     * Gets or sets the blockchain member name.
-     * 
-     */
+        /**
+         * @return Gets or sets the blockchain member name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Gets or sets the protocol for the consortium.
-     * 
-     */
+        /**
+         * @return Gets or sets the protocol for the consortium.
+         * 
+         */
     private final @Nullable String protocol;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ConsortiumResponse {
     }
 
     /**
-     * Gets or sets the blockchain member name.
+     * @return Gets or sets the blockchain member name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Gets or sets the protocol for the consortium.
+     * @return Gets or sets the protocol for the consortium.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }

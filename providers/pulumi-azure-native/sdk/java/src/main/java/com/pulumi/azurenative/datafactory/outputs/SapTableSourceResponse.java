@@ -13,86 +13,86 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SapTableSourceResponse {
-    /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
-     * 
-     */
+        /**
+         * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         */
     private final @Nullable Object additionalColumns;
-    /**
-     * Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object batchSize;
-    /**
-     * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object customRfcReadTableFunctionModule;
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object disableMetricsCollection;
-    /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object maxConcurrentConnections;
-    /**
-     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
-     * 
-     */
+        /**
+         * @return The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
+         * 
+         */
     private final @Nullable Object partitionOption;
-    /**
-     * The settings that will be leveraged for SAP table source partitioning.
-     * 
-     */
+        /**
+         * @return The settings that will be leveraged for SAP table source partitioning.
+         * 
+         */
     private final @Nullable SapTablePartitionSettingsResponse partitionSettings;
-    /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object queryTimeout;
-    /**
-     * The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object rfcTableFields;
-    /**
-     * The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object rfcTableOptions;
-    /**
-     * The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object rowCount;
-    /**
-     * The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object rowSkips;
-    /**
-     * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object sapDataColumnDelimiter;
-    /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object sourceRetryCount;
-    /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object sourceRetryWait;
-    /**
-     * Copy source type.
-     * Expected value is &#39;SapTableSource&#39;.
-     * 
-     */
+        /**
+         * @return Copy source type.
+         * Expected value is &#39;SapTableSource&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -132,115 +132,115 @@ public final class SapTableSourceResponse {
     }
 
     /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-    */
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
-     * Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
+     * @return Specifies the maximum number of rows that will be retrieved at a time when retrieving data from SAP Table. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
-     * Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
+     * @return Specifies the custom RFC function module that will be used to read data from SAP Table. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> customRfcReadTableFunctionModule() {
         return Optional.ofNullable(this.customRfcReadTableFunctionModule);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
+     * @return The partition mechanism that will be used for SAP table read in parallel. Possible values include: &#34;None&#34;, &#34;PartitionOnInt&#34;, &#34;PartitionOnCalendarYear&#34;, &#34;PartitionOnCalendarMonth&#34;, &#34;PartitionOnCalendarDate&#34;, &#34;PartitionOnTime&#34;.
      * 
-    */
+     */
     public Optional<Object> partitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
     /**
-     * The settings that will be leveraged for SAP table source partitioning.
+     * @return The settings that will be leveraged for SAP table source partitioning.
      * 
-    */
+     */
     public Optional<SapTablePartitionSettingsResponse> partitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
     /**
-     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
-     * The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
+     * @return The fields of the SAP table that will be retrieved. For example, column0, column1. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> rfcTableFields() {
         return Optional.ofNullable(this.rfcTableFields);
     }
     /**
-     * The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
+     * @return The options for the filtering of the SAP Table. For example, COLUMN0 EQ SOME VALUE. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> rfcTableOptions() {
         return Optional.ofNullable(this.rfcTableOptions);
     }
     /**
-     * The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
+     * @return The number of rows to be retrieved. Type: integer(or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> rowCount() {
         return Optional.ofNullable(this.rowCount);
     }
     /**
-     * The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
+     * @return The number of rows that will be skipped. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> rowSkips() {
         return Optional.ofNullable(this.rowSkips);
     }
     /**
-     * The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
+     * @return The single character that will be used as delimiter passed to SAP RFC as well as splitting the output data retrieved. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> sapDataColumnDelimiter() {
         return Optional.ofNullable(this.sapDataColumnDelimiter);
     }
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;SapTableSource&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

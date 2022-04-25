@@ -16,55 +16,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPacketCaptureResult {
-    /**
-     * Number of bytes captured per packet, the remaining bytes are truncated.
-     * 
-     */
+        /**
+         * @return Number of bytes captured per packet, the remaining bytes are truncated.
+         * 
+         */
     private final @Nullable Double bytesToCapturePerPacket;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * A list of packet capture filters.
-     * 
-     */
+        /**
+         * @return A list of packet capture filters.
+         * 
+         */
     private final @Nullable List<PacketCaptureFilterResponse> filters;
-    /**
-     * ID of the packet capture operation.
-     * 
-     */
+        /**
+         * @return ID of the packet capture operation.
+         * 
+         */
     private final String id;
-    /**
-     * Name of the packet capture session.
-     * 
-     */
+        /**
+         * @return Name of the packet capture session.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the packet capture session.
-     * 
-     */
+        /**
+         * @return The provisioning state of the packet capture session.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The storage location for a packet capture session.
-     * 
-     */
+        /**
+         * @return The storage location for a packet capture session.
+         * 
+         */
     private final PacketCaptureStorageLocationResponse storageLocation;
-    /**
-     * The ID of the targeted resource, only VM is currently supported.
-     * 
-     */
+        /**
+         * @return The ID of the targeted resource, only VM is currently supported.
+         * 
+         */
     private final String target;
-    /**
-     * Maximum duration of the capture session in seconds.
-     * 
-     */
+        /**
+         * @return Maximum duration of the capture session in seconds.
+         * 
+         */
     private final @Nullable Integer timeLimitInSeconds;
-    /**
-     * Maximum size of the capture output.
-     * 
-     */
+        /**
+         * @return Maximum size of the capture output.
+         * 
+         */
     private final @Nullable Double totalBytesPerSession;
 
     @CustomType.Constructor
@@ -92,72 +92,72 @@ public final class GetPacketCaptureResult {
     }
 
     /**
-     * Number of bytes captured per packet, the remaining bytes are truncated.
+     * @return Number of bytes captured per packet, the remaining bytes are truncated.
      * 
-    */
+     */
     public Optional<Double> bytesToCapturePerPacket() {
         return Optional.ofNullable(this.bytesToCapturePerPacket);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A list of packet capture filters.
+     * @return A list of packet capture filters.
      * 
-    */
+     */
     public List<PacketCaptureFilterResponse> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * ID of the packet capture operation.
+     * @return ID of the packet capture operation.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the packet capture session.
+     * @return Name of the packet capture session.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the packet capture session.
+     * @return The provisioning state of the packet capture session.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The storage location for a packet capture session.
+     * @return The storage location for a packet capture session.
      * 
-    */
+     */
     public PacketCaptureStorageLocationResponse storageLocation() {
         return this.storageLocation;
     }
     /**
-     * The ID of the targeted resource, only VM is currently supported.
+     * @return The ID of the targeted resource, only VM is currently supported.
      * 
-    */
+     */
     public String target() {
         return this.target;
     }
     /**
-     * Maximum duration of the capture session in seconds.
+     * @return Maximum duration of the capture session in seconds.
      * 
-    */
+     */
     public Optional<Integer> timeLimitInSeconds() {
         return Optional.ofNullable(this.timeLimitInSeconds);
     }
     /**
-     * Maximum size of the capture output.
+     * @return Maximum size of the capture output.
      * 
-    */
+     */
     public Optional<Double> totalBytesPerSession() {
         return Optional.ofNullable(this.totalBytesPerSession);
     }

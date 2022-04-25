@@ -25,6 +25,10 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
     @Import(name="blobRanges", required=true)
     private List<BlobRestoreRangeResponse> blobRanges;
 
+    /**
+     * @return Blob ranges to restore.
+     * 
+     */
     public List<BlobRestoreRangeResponse> blobRanges() {
         return this.blobRanges;
     }
@@ -36,6 +40,10 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
     @Import(name="timeToRestore", required=true)
     private String timeToRestore;
 
+    /**
+     * @return Restore blob to the specified time.
+     * 
+     */
     public String timeToRestore() {
         return this.timeToRestore;
     }
@@ -65,15 +73,33 @@ public final class BlobRestoreParametersResponse extends com.pulumi.resources.In
             $ = new BlobRestoreParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobRanges Blob ranges to restore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobRanges(List<BlobRestoreRangeResponse> blobRanges) {
             $.blobRanges = blobRanges;
             return this;
         }
 
+        /**
+         * @param blobRanges Blob ranges to restore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobRanges(BlobRestoreRangeResponse... blobRanges) {
             return blobRanges(List.of(blobRanges));
         }
 
+        /**
+         * @param timeToRestore Restore blob to the specified time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToRestore(String timeToRestore) {
             $.timeToRestore = timeToRestore;
             return this;

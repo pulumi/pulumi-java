@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceManagementPrivateLinkResult {
-    /**
-     * The rmplResourceID.
-     * 
-     */
+        /**
+         * @return The rmplResourceID.
+         * 
+         */
     private final String id;
-    /**
-     * the region of the rmpl
-     * 
-     */
+        /**
+         * @return the region of the rmpl
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The rmpl Name.
-     * 
-     */
+        /**
+         * @return The rmpl Name.
+         * 
+         */
     private final String name;
     private final ResourceManagementPrivateLinkEndpointConnectionsResponse properties;
-    /**
-     * The operation type.
-     * 
-     */
+        /**
+         * @return The operation type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -49,23 +49,23 @@ public final class GetResourceManagementPrivateLinkResult {
     }
 
     /**
-     * The rmplResourceID.
+     * @return The rmplResourceID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * the region of the rmpl
+     * @return the region of the rmpl
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The rmpl Name.
+     * @return The rmpl Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -73,9 +73,9 @@ public final class GetResourceManagementPrivateLinkResult {
         return this.properties;
     }
     /**
-     * The operation type.
+     * @return The operation type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

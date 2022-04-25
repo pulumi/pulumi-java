@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectorMappingStructureResponse {
-    /**
-     * The column name of the import file.
-     * 
-     */
+        /**
+         * @return The column name of the import file.
+         * 
+         */
     private final String columnName;
-    /**
-     * Custom format specifier for input parsing.
-     * 
-     */
+        /**
+         * @return Custom format specifier for input parsing.
+         * 
+         */
     private final @Nullable String customFormatSpecifier;
-    /**
-     * Indicates if the column is encrypted.
-     * 
-     */
+        /**
+         * @return Indicates if the column is encrypted.
+         * 
+         */
     private final @Nullable Boolean isEncrypted;
-    /**
-     * The property name of the mapping entity.
-     * 
-     */
+        /**
+         * @return The property name of the mapping entity.
+         * 
+         */
     private final String propertyName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ConnectorMappingStructureResponse {
     }
 
     /**
-     * The column name of the import file.
+     * @return The column name of the import file.
      * 
-    */
+     */
     public String columnName() {
         return this.columnName;
     }
     /**
-     * Custom format specifier for input parsing.
+     * @return Custom format specifier for input parsing.
      * 
-    */
+     */
     public Optional<String> customFormatSpecifier() {
         return Optional.ofNullable(this.customFormatSpecifier);
     }
     /**
-     * Indicates if the column is encrypted.
+     * @return Indicates if the column is encrypted.
      * 
-    */
+     */
     public Optional<Boolean> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
-     * The property name of the mapping entity.
+     * @return The property name of the mapping entity.
      * 
-    */
+     */
     public String propertyName() {
         return this.propertyName;
     }

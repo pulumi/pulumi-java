@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBandwidthSettingResult {
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     * 
-     */
+        /**
+         * @return The Kind of the object. Currently only Series8000 is supported
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The name of the object.
-     * 
-     */
+        /**
+         * @return The name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * The schedules.
-     * 
-     */
+        /**
+         * @return The schedules.
+         * 
+         */
     private final List<BandwidthScheduleResponse> schedules;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * The number of volumes that uses the bandwidth setting.
-     * 
-     */
+        /**
+         * @return The number of volumes that uses the bandwidth setting.
+         * 
+         */
     private final Integer volumeCount;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GetBandwidthSettingResult {
     }
 
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The schedules.
+     * @return The schedules.
      * 
-    */
+     */
     public List<BandwidthScheduleResponse> schedules() {
         return this.schedules;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The number of volumes that uses the bandwidth setting.
+     * @return The number of volumes that uses the bandwidth setting.
      * 
-    */
+     */
     public Integer volumeCount() {
         return this.volumeCount;
     }

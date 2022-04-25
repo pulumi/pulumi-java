@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualApplicationResponse {
-    /**
-     * Physical path.
-     * 
-     */
+        /**
+         * @return Physical path.
+         * 
+         */
     private final @Nullable String physicalPath;
-    /**
-     * &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Boolean preloadEnabled;
-    /**
-     * Virtual directories for virtual application.
-     * 
-     */
+        /**
+         * @return Virtual directories for virtual application.
+         * 
+         */
     private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
-    /**
-     * Virtual path.
-     * 
-     */
+        /**
+         * @return Virtual path.
+         * 
+         */
     private final @Nullable String virtualPath;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class VirtualApplicationResponse {
     }
 
     /**
-     * Physical path.
+     * @return Physical path.
      * 
-    */
+     */
     public Optional<String> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if preloading is enabled; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> preloadEnabled() {
         return Optional.ofNullable(this.preloadEnabled);
     }
     /**
-     * Virtual directories for virtual application.
+     * @return Virtual directories for virtual application.
      * 
-    */
+     */
     public List<VirtualDirectoryResponse> virtualDirectories() {
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
     }
     /**
-     * Virtual path.
+     * @return Virtual path.
      * 
-    */
+     */
     public Optional<String> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }

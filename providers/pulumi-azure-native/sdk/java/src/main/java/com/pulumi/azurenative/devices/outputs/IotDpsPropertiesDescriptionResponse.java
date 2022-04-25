@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IotDpsPropertiesDescriptionResponse {
-    /**
-     * Allocation policy to be used by this provisioning service.
-     * 
-     */
+        /**
+         * @return Allocation policy to be used by this provisioning service.
+         * 
+         */
     private final @Nullable String allocationPolicy;
-    /**
-     * List of authorization keys for a provisioning service.
-     * 
-     */
+        /**
+         * @return List of authorization keys for a provisioning service.
+         * 
+         */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
-    /**
-     * Device endpoint for this provisioning service.
-     * 
-     */
+        /**
+         * @return Device endpoint for this provisioning service.
+         * 
+         */
     private final String deviceProvisioningHostName;
-    /**
-     * Unique identifier of this provisioning service.
-     * 
-     */
+        /**
+         * @return Unique identifier of this provisioning service.
+         * 
+         */
     private final String idScope;
-    /**
-     * List of IoT hubs associated with this provisioning service.
-     * 
-     */
+        /**
+         * @return List of IoT hubs associated with this provisioning service.
+         * 
+         */
     private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
-    /**
-     * The IP filter rules.
-     * 
-     */
+        /**
+         * @return The IP filter rules.
+         * 
+         */
     private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
-    /**
-     * Private endpoint connections created on this IotHub
-     * 
-     */
+        /**
+         * @return Private endpoint connections created on this IotHub
+         * 
+         */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * The ARM provisioning state of the provisioning service.
-     * 
-     */
+        /**
+         * @return The ARM provisioning state of the provisioning service.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Whether requests from Public Network are allowed
-     * 
-     */
+        /**
+         * @return Whether requests from Public Network are allowed
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
-    /**
-     * Service endpoint for provisioning service.
-     * 
-     */
+        /**
+         * @return Service endpoint for provisioning service.
+         * 
+         */
     private final String serviceOperationsHostName;
-    /**
-     * Current state of the provisioning service.
-     * 
-     */
+        /**
+         * @return Current state of the provisioning service.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class IotDpsPropertiesDescriptionResponse {
     }
 
     /**
-     * Allocation policy to be used by this provisioning service.
+     * @return Allocation policy to be used by this provisioning service.
      * 
-    */
+     */
     public Optional<String> allocationPolicy() {
         return Optional.ofNullable(this.allocationPolicy);
     }
     /**
-     * List of authorization keys for a provisioning service.
+     * @return List of authorization keys for a provisioning service.
      * 
-    */
+     */
     public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
     }
     /**
-     * Device endpoint for this provisioning service.
+     * @return Device endpoint for this provisioning service.
      * 
-    */
+     */
     public String deviceProvisioningHostName() {
         return this.deviceProvisioningHostName;
     }
     /**
-     * Unique identifier of this provisioning service.
+     * @return Unique identifier of this provisioning service.
      * 
-    */
+     */
     public String idScope() {
         return this.idScope;
     }
     /**
-     * List of IoT hubs associated with this provisioning service.
+     * @return List of IoT hubs associated with this provisioning service.
      * 
-    */
+     */
     public List<IotHubDefinitionDescriptionResponse> iotHubs() {
         return this.iotHubs == null ? List.of() : this.iotHubs;
     }
     /**
-     * The IP filter rules.
+     * @return The IP filter rules.
      * 
-    */
+     */
     public List<TargetIpFilterRuleResponse> ipFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
     }
     /**
-     * Private endpoint connections created on this IotHub
+     * @return Private endpoint connections created on this IotHub
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
-     * The ARM provisioning state of the provisioning service.
+     * @return The ARM provisioning state of the provisioning service.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Whether requests from Public Network are allowed
+     * @return Whether requests from Public Network are allowed
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Service endpoint for provisioning service.
+     * @return Service endpoint for provisioning service.
      * 
-    */
+     */
     public String serviceOperationsHostName() {
         return this.serviceOperationsHostName;
     }
     /**
-     * Current state of the provisioning service.
+     * @return Current state of the provisioning service.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

@@ -10,21 +10,21 @@ import java.util.Objects;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
     private final PrivateEndpointConnectionResponseProperties properties;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -40,16 +40,16 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -57,9 +57,9 @@ public final class PrivateEndpointConnectionResponse {
         return this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

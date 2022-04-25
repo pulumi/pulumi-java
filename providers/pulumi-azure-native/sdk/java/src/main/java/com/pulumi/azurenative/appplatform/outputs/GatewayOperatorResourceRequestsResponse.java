@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GatewayOperatorResourceRequestsResponse {
-    /**
-     * Cpu allocated to each Spring Cloud Gateway Operator instance.
-     * 
-     */
+        /**
+         * @return Cpu allocated to each Spring Cloud Gateway Operator instance.
+         * 
+         */
     private final String cpu;
-    /**
-     * Instance count of the Spring Cloud Gateway Operator.
-     * 
-     */
+        /**
+         * @return Instance count of the Spring Cloud Gateway Operator.
+         * 
+         */
     private final Integer instanceCount;
-    /**
-     * Memory allocated to each Spring Cloud Gateway Operator instance.
-     * 
-     */
+        /**
+         * @return Memory allocated to each Spring Cloud Gateway Operator instance.
+         * 
+         */
     private final String memory;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class GatewayOperatorResourceRequestsResponse {
     }
 
     /**
-     * Cpu allocated to each Spring Cloud Gateway Operator instance.
+     * @return Cpu allocated to each Spring Cloud Gateway Operator instance.
      * 
-    */
+     */
     public String cpu() {
         return this.cpu;
     }
     /**
-     * Instance count of the Spring Cloud Gateway Operator.
+     * @return Instance count of the Spring Cloud Gateway Operator.
      * 
-    */
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
     /**
-     * Memory allocated to each Spring Cloud Gateway Operator instance.
+     * @return Memory allocated to each Spring Cloud Gateway Operator instance.
      * 
-    */
+     */
     public String memory() {
         return this.memory;
     }

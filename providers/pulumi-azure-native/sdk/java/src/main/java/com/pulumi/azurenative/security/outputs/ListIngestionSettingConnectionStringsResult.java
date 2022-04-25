@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ListIngestionSettingConnectionStringsResult {
-    /**
-     * Connection strings
-     * 
-     */
+        /**
+         * @return Connection strings
+         * 
+         */
     private final List<IngestionConnectionStringResponse> value;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ListIngestionSettingConnectionStringsResult {
     }
 
     /**
-     * Connection strings
+     * @return Connection strings
      * 
-    */
+     */
     public List<IngestionConnectionStringResponse> value() {
         return this.value;
     }

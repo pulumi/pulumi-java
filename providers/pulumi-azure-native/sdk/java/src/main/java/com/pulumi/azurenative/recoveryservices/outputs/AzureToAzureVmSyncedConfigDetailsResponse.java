@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureToAzureVmSyncedConfigDetailsResponse {
-    /**
-     * The Azure VM input endpoints.
-     * 
-     */
+        /**
+         * @return The Azure VM input endpoints.
+         * 
+         */
     private final @Nullable List<InputEndpointResponse> inputEndpoints;
-    /**
-     * The Azure VM tags.
-     * 
-     */
+        /**
+         * @return The Azure VM tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
     }
 
     /**
-     * The Azure VM input endpoints.
+     * @return The Azure VM input endpoints.
      * 
-    */
+     */
     public List<InputEndpointResponse> inputEndpoints() {
         return this.inputEndpoints == null ? List.of() : this.inputEndpoints;
     }
     /**
-     * The Azure VM tags.
+     * @return The Azure VM tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }

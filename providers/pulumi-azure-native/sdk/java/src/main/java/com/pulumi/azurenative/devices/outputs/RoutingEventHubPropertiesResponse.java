@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RoutingEventHubPropertiesResponse {
-    /**
-     * Method used to authenticate against the event hub endpoint
-     * 
-     */
+        /**
+         * @return Method used to authenticate against the event hub endpoint
+         * 
+         */
     private final @Nullable String authenticationType;
-    /**
-     * The connection string of the event hub endpoint.
-     * 
-     */
+        /**
+         * @return The connection string of the event hub endpoint.
+         * 
+         */
     private final @Nullable String connectionString;
-    /**
-     * The url of the event hub endpoint. It must include the protocol sb://
-     * 
-     */
+        /**
+         * @return The url of the event hub endpoint. It must include the protocol sb://
+         * 
+         */
     private final @Nullable String endpointUri;
-    /**
-     * Event hub name on the event hub namespace
-     * 
-     */
+        /**
+         * @return Event hub name on the event hub namespace
+         * 
+         */
     private final @Nullable String entityPath;
-    /**
-     * Id of the event hub endpoint
-     * 
-     */
+        /**
+         * @return Id of the event hub endpoint
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
-     * 
-     */
+        /**
+         * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+         * 
+         */
     private final String name;
-    /**
-     * The name of the resource group of the event hub endpoint.
-     * 
-     */
+        /**
+         * @return The name of the resource group of the event hub endpoint.
+         * 
+         */
     private final @Nullable String resourceGroup;
-    /**
-     * The subscription identifier of the event hub endpoint.
-     * 
-     */
+        /**
+         * @return The subscription identifier of the event hub endpoint.
+         * 
+         */
     private final @Nullable String subscriptionId;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class RoutingEventHubPropertiesResponse {
     }
 
     /**
-     * Method used to authenticate against the event hub endpoint
+     * @return Method used to authenticate against the event hub endpoint
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * The connection string of the event hub endpoint.
+     * @return The connection string of the event hub endpoint.
      * 
-    */
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * The url of the event hub endpoint. It must include the protocol sb://
+     * @return The url of the event hub endpoint. It must include the protocol sb://
      * 
-    */
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
     /**
-     * Event hub name on the event hub namespace
+     * @return Event hub name on the event hub namespace
      * 
-    */
+     */
     public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
     /**
-     * Id of the event hub endpoint
+     * @return Id of the event hub endpoint
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+     * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the resource group of the event hub endpoint.
+     * @return The name of the resource group of the event hub endpoint.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     * The subscription identifier of the event hub endpoint.
+     * @return The subscription identifier of the event hub endpoint.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }

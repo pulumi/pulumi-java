@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificateInformationResponse {
-    /**
-     * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-     * 
-     */
+        /**
+         * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         */
     private final String expiry;
-    /**
-     * Subject of the certificate.
-     * 
-     */
+        /**
+         * @return Subject of the certificate.
+         * 
+         */
     private final String subject;
-    /**
-     * Thumbprint of the certificate.
-     * 
-     */
+        /**
+         * @return Thumbprint of the certificate.
+         * 
+         */
     private final String thumbprint;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class CertificateInformationResponse {
     }
 
     /**
-     * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
-    */
+     */
     public String expiry() {
         return this.expiry;
     }
     /**
-     * Subject of the certificate.
+     * @return Subject of the certificate.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * Thumbprint of the certificate.
+     * @return Thumbprint of the certificate.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }

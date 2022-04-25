@@ -25,6 +25,10 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
     @Import(name="firewallRuleName")
     private @Nullable String firewallRuleName;
 
+    /**
+     * @return The rule name.
+     * 
+     */
     public Optional<String> firewallRuleName() {
         return Optional.ofNullable(this.firewallRuleName);
     }
@@ -36,6 +40,10 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
     @Import(name="rangeEnd")
     private @Nullable String rangeEnd;
 
+    /**
+     * @return The end range of IPv4.
+     * 
+     */
     public Optional<String> rangeEnd() {
         return Optional.ofNullable(this.rangeEnd);
     }
@@ -47,6 +55,10 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
     @Import(name="rangeStart")
     private @Nullable String rangeStart;
 
+    /**
+     * @return The start range of IPv4.
+     * 
+     */
     public Optional<String> rangeStart() {
         return Optional.ofNullable(this.rangeStart);
     }
@@ -77,16 +89,34 @@ public final class IPv4FirewallRuleResponse extends com.pulumi.resources.InvokeA
             $ = new IPv4FirewallRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallRuleName The rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
             $.firewallRuleName = firewallRuleName;
             return this;
         }
 
+        /**
+         * @param rangeEnd The end range of IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeEnd(@Nullable String rangeEnd) {
             $.rangeEnd = rangeEnd;
             return this;
         }
 
+        /**
+         * @param rangeStart The start range of IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeStart(@Nullable String rangeStart) {
             $.rangeStart = rangeStart;
             return this;

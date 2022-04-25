@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListMonitorLinkedResourcesResult {
-    /**
-     * Link to the next set of results, if any.
-     * 
-     */
+        /**
+         * @return Link to the next set of results, if any.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * Results of a list operation.
-     * 
-     */
+        /**
+         * @return Results of a list operation.
+         * 
+         */
     private final @Nullable List<LinkedResourceResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ListMonitorLinkedResourcesResult {
     }
 
     /**
-     * Link to the next set of results, if any.
+     * @return Link to the next set of results, if any.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * Results of a list operation.
+     * @return Results of a list operation.
      * 
-    */
+     */
     public List<LinkedResourceResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

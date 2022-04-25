@@ -27,6 +27,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="category")
     private @Nullable String category;
 
+    /**
+     * @return Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * 
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
@@ -38,6 +42,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return A value indicating whether this log is enabled.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -49,6 +57,10 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retentionPolicy")
     private @Nullable RetentionPolicyResponse retentionPolicy;
 
+    /**
+     * @return The retention policy for this log.
+     * 
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -79,16 +91,34 @@ public final class LogSettingsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LogSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable String category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param enabled A value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param retentionPolicy The retention policy for this log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;

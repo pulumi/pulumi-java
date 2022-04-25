@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StandardComponentPropertiesResponse {
-    /**
-     * Component Key matching componentMetadata
-     * 
-     */
+        /**
+         * @return Component Key matching componentMetadata
+         * 
+         */
     private final @Nullable String key;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class StandardComponentPropertiesResponse {
     }
 
     /**
-     * Component Key matching componentMetadata
+     * @return Component Key matching componentMetadata
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }

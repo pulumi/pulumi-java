@@ -27,6 +27,10 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
     @Import(name="errors")
     private @Nullable MoveResourceErrorResponse errors;
 
+    /**
+     * @return An error response from the azure resource mover service.
+     * 
+     */
     public Optional<MoveResourceErrorResponse> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -38,6 +42,10 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
     @Import(name="jobStatus")
     private @Nullable JobStatusResponse jobStatus;
 
+    /**
+     * @return Defines the job status.
+     * 
+     */
     public Optional<JobStatusResponse> jobStatus() {
         return Optional.ofNullable(this.jobStatus);
     }
@@ -49,6 +57,10 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
     @Import(name="moveState", required=true)
     private String moveState;
 
+    /**
+     * @return Defines the MoveResource states.
+     * 
+     */
     public String moveState() {
         return this.moveState;
     }
@@ -79,16 +91,34 @@ public final class MoveResourcePropertiesResponseMoveStatus extends com.pulumi.r
             $ = new MoveResourcePropertiesResponseMoveStatus(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors An error response from the azure resource mover service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable MoveResourceErrorResponse errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param jobStatus Defines the job status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStatus(@Nullable JobStatusResponse jobStatus) {
             $.jobStatus = jobStatus;
             return this;
         }
 
+        /**
+         * @param moveState Defines the MoveResource states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveState(String moveState) {
             $.moveState = moveState;
             return this;

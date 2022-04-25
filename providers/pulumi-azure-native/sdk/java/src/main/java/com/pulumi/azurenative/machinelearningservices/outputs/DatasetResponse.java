@@ -15,65 +15,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetResponse {
-    /**
-     * The dataset creation time (UTC).
-     * 
-     */
+        /**
+         * @return The dataset creation time (UTC).
+         * 
+         */
     private final String createdTime;
-    /**
-     * Unique Dataset identifier.
-     * 
-     */
+        /**
+         * @return Unique Dataset identifier.
+         * 
+         */
     private final String datasetId;
-    /**
-     * Dataset state
-     * 
-     */
+        /**
+         * @return Dataset state
+         * 
+         */
     private final @Nullable DatasetStateResponse datasetState;
-    /**
-     * Dataset Type.
-     * 
-     */
+        /**
+         * @return Dataset Type.
+         * 
+         */
     private final String datasetType;
-    /**
-     * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
-     * 
-     */
+        /**
+         * @return Name of the default compute to be used for any Dataset actions (such as Profile, Write).
+         * 
+         */
     private final String defaultCompute;
-    /**
-     * Description about this dataset version.
-     * 
-     */
+        /**
+         * @return Description about this dataset version.
+         * 
+         */
     private final String description;
-    /**
-     * eTag description
-     * 
-     */
+        /**
+         * @return eTag description
+         * 
+         */
     private final String etag;
-    /**
-     * Flag to hide Dataset in UI
-     * 
-     */
+        /**
+         * @return Flag to hide Dataset in UI
+         * 
+         */
     private final Boolean isVisible;
-    /**
-     * Last created Dataset definition.
-     * 
-     */
+        /**
+         * @return Last created Dataset definition.
+         * 
+         */
     private final @Nullable DatasetResponseLatest latest;
-    /**
-     * The dataset last modified time (UTC).
-     * 
-     */
+        /**
+         * @return The dataset last modified time (UTC).
+         * 
+         */
     private final String modifiedTime;
-    /**
-     * Unique dataset name
-     * 
-     */
+        /**
+         * @return Unique dataset name
+         * 
+         */
     private final String name;
-    /**
-     * Tags for this dataset version.
-     * 
-     */
+        /**
+         * @return Tags for this dataset version.
+         * 
+         */
     private final Map<String,String> tags;
 
     @CustomType.Constructor
@@ -105,86 +105,86 @@ public final class DatasetResponse {
     }
 
     /**
-     * The dataset creation time (UTC).
+     * @return The dataset creation time (UTC).
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * Unique Dataset identifier.
+     * @return Unique Dataset identifier.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * Dataset state
+     * @return Dataset state
      * 
-    */
+     */
     public Optional<DatasetStateResponse> datasetState() {
         return Optional.ofNullable(this.datasetState);
     }
     /**
-     * Dataset Type.
+     * @return Dataset Type.
      * 
-    */
+     */
     public String datasetType() {
         return this.datasetType;
     }
     /**
-     * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
+     * @return Name of the default compute to be used for any Dataset actions (such as Profile, Write).
      * 
-    */
+     */
     public String defaultCompute() {
         return this.defaultCompute;
     }
     /**
-     * Description about this dataset version.
+     * @return Description about this dataset version.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * eTag description
+     * @return eTag description
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Flag to hide Dataset in UI
+     * @return Flag to hide Dataset in UI
      * 
-    */
+     */
     public Boolean isVisible() {
         return this.isVisible;
     }
     /**
-     * Last created Dataset definition.
+     * @return Last created Dataset definition.
      * 
-    */
+     */
     public Optional<DatasetResponseLatest> latest() {
         return Optional.ofNullable(this.latest);
     }
     /**
-     * The dataset last modified time (UTC).
+     * @return The dataset last modified time (UTC).
      * 
-    */
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
     /**
-     * Unique dataset name
+     * @return Unique dataset name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Tags for this dataset version.
+     * @return Tags for this dataset version.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }

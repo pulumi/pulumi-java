@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SlotSwapStatusResponse {
-    /**
-     * The destination slot of the last swap operation.
-     * 
-     */
+        /**
+         * @return The destination slot of the last swap operation.
+         * 
+         */
     private final String destinationSlotName;
-    /**
-     * The source slot of the last swap operation.
-     * 
-     */
+        /**
+         * @return The source slot of the last swap operation.
+         * 
+         */
     private final String sourceSlotName;
-    /**
-     * The time the last successful slot swap completed.
-     * 
-     */
+        /**
+         * @return The time the last successful slot swap completed.
+         * 
+         */
     private final String timestampUtc;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class SlotSwapStatusResponse {
     }
 
     /**
-     * The destination slot of the last swap operation.
+     * @return The destination slot of the last swap operation.
      * 
-    */
+     */
     public String destinationSlotName() {
         return this.destinationSlotName;
     }
     /**
-     * The source slot of the last swap operation.
+     * @return The source slot of the last swap operation.
      * 
-    */
+     */
     public String sourceSlotName() {
         return this.sourceSlotName;
     }
     /**
-     * The time the last successful slot swap completed.
+     * @return The time the last successful slot swap completed.
      * 
-    */
+     */
     public String timestampUtc() {
         return this.timestampUtc;
     }

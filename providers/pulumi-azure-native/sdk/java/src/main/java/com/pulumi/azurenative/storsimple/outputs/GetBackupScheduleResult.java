@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBackupScheduleResult {
-    /**
-     * The type of backup which needs to be taken.
-     * 
-     */
+        /**
+         * @return The type of backup which needs to be taken.
+         * 
+         */
     private final String backupType;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     * 
-     */
+        /**
+         * @return The Kind of the object. Currently only Series8000 is supported
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The last successful backup run which was triggered for the schedule.
-     * 
-     */
+        /**
+         * @return The last successful backup run which was triggered for the schedule.
+         * 
+         */
     private final String lastSuccessfulRun;
-    /**
-     * The name of the object.
-     * 
-     */
+        /**
+         * @return The name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * The number of backups to be retained.
-     * 
-     */
+        /**
+         * @return The number of backups to be retained.
+         * 
+         */
     private final Double retentionCount;
-    /**
-     * The schedule recurrence.
-     * 
-     */
+        /**
+         * @return The schedule recurrence.
+         * 
+         */
     private final ScheduleRecurrenceResponse scheduleRecurrence;
-    /**
-     * The schedule status.
-     * 
-     */
+        /**
+         * @return The schedule status.
+         * 
+         */
     private final String scheduleStatus;
-    /**
-     * The start time of the schedule.
-     * 
-     */
+        /**
+         * @return The start time of the schedule.
+         * 
+         */
     private final String startTime;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetBackupScheduleResult {
     }
 
     /**
-     * The type of backup which needs to be taken.
+     * @return The type of backup which needs to be taken.
      * 
-    */
+     */
     public String backupType() {
         return this.backupType;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The last successful backup run which was triggered for the schedule.
+     * @return The last successful backup run which was triggered for the schedule.
      * 
-    */
+     */
     public String lastSuccessfulRun() {
         return this.lastSuccessfulRun;
     }
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The number of backups to be retained.
+     * @return The number of backups to be retained.
      * 
-    */
+     */
     public Double retentionCount() {
         return this.retentionCount;
     }
     /**
-     * The schedule recurrence.
+     * @return The schedule recurrence.
      * 
-    */
+     */
     public ScheduleRecurrenceResponse scheduleRecurrence() {
         return this.scheduleRecurrence;
     }
     /**
-     * The schedule status.
+     * @return The schedule status.
      * 
-    */
+     */
     public String scheduleStatus() {
         return this.scheduleStatus;
     }
     /**
-     * The start time of the schedule.
+     * @return The start time of the schedule.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

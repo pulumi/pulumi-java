@@ -19,6 +19,10 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Threat intelligence indicator name field.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
     @Import(name="operationalInsightsResourceProvider", required=true)
     private String operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -41,6 +49,10 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -83,21 +99,45 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
             $ = new GetThreatIntelligenceIndicatorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Threat intelligence indicator name field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

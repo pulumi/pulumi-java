@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceCosmosDbConfigurationInfoResponse {
-    /**
-     * The URI of the customer-managed key for the backing database.
-     * 
-     */
+        /**
+         * @return The URI of the customer-managed key for the backing database.
+         * 
+         */
     private final @Nullable String keyVaultKeyUri;
-    /**
-     * The provisioned throughput for the backing database.
-     * 
-     */
+        /**
+         * @return The provisioned throughput for the backing database.
+         * 
+         */
     private final @Nullable Integer offerThroughput;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
     }
 
     /**
-     * The URI of the customer-managed key for the backing database.
+     * @return The URI of the customer-managed key for the backing database.
      * 
-    */
+     */
     public Optional<String> keyVaultKeyUri() {
         return Optional.ofNullable(this.keyVaultKeyUri);
     }
     /**
-     * The provisioned throughput for the backing database.
+     * @return The provisioned throughput for the backing database.
      * 
-    */
+     */
     public Optional<Integer> offerThroughput() {
         return Optional.ofNullable(this.offerThroughput);
     }

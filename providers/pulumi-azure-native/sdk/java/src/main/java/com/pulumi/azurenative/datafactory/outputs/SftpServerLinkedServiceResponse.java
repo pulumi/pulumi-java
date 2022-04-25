@@ -19,86 +19,86 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SftpServerLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The authentication type to be used to connect to the FTP server.
-     * 
-     */
+        /**
+         * @return The authentication type to be used to connect to the FTP server.
+         * 
+         */
     private final @Nullable String authenticationType;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The SFTP server host name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The SFTP server host name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object host;
-    /**
-     * The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object hostKeyFingerprint;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password to decrypt the SSH private key if the SSH private key is encrypted.
-     * 
-     */
+        /**
+         * @return The password to decrypt the SSH private key if the SSH private key is encrypted.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase;
-    /**
-     * Password to logon the SFTP server for Basic authentication.
-     * 
-     */
+        /**
+         * @return Password to logon the SFTP server for Basic authentication.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object port;
-    /**
-     * Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
-     * 
-     */
+        /**
+         * @return Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent;
-    /**
-     * The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object privateKeyPath;
-    /**
-     * If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object skipHostKeyValidation;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;Sftp&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;Sftp&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object userName;
 
     @CustomType.Constructor
@@ -138,115 +138,115 @@ public final class SftpServerLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The authentication type to be used to connect to the FTP server.
+     * @return The authentication type to be used to connect to the FTP server.
      * 
-    */
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The SFTP server host name. Type: string (or Expression with resultType string).
+     * @return The SFTP server host name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object host() {
         return this.host;
     }
     /**
-     * The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
+     * @return The host key finger-print of the SFTP server. When SkipHostKeyValidation is false, HostKeyFingerprint should be specified. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> hostKeyFingerprint() {
         return Optional.ofNullable(this.hostKeyFingerprint);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password to decrypt the SSH private key if the SSH private key is encrypted.
+     * @return The password to decrypt the SSH private key if the SSH private key is encrypted.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> passPhrase() {
         return Optional.ofNullable(this.passPhrase);
     }
     /**
-     * Password to logon the SFTP server for Basic authentication.
+     * @return Password to logon the SFTP server for Basic authentication.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return The TCP port number that the SFTP server uses to listen for client connections. Default value is 22. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
+     * @return Base64 encoded SSH private key content for SshPublicKey authentication. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> privateKeyContent() {
         return Optional.ofNullable(this.privateKeyContent);
     }
     /**
-     * The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
+     * @return The SSH private key file path for SshPublicKey authentication. Only valid for on-premises copy. For on-premises copy with SshPublicKey authentication, either PrivateKeyPath or PrivateKeyContent should be specified. SSH private key should be OpenSSH format. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> privateKeyPath() {
         return Optional.ofNullable(this.privateKeyPath);
     }
     /**
-     * If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, skip the SSH host key validation. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> skipHostKeyValidation() {
         return Optional.ofNullable(this.skipHostKeyValidation);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Sftp&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
+     * @return The username used to log on to the SFTP server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

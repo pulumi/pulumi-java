@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListAppServicePlanHybridConnectionKeysResult {
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * The name of the send key.
-     * 
-     */
+        /**
+         * @return The name of the send key.
+         * 
+         */
     private final String sendKeyName;
-    /**
-     * The value of the send key.
-     * 
-     */
+        /**
+         * @return The value of the send key.
+         * 
+         */
     private final String sendKeyValue;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ListAppServicePlanHybridConnectionKeysResult {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the send key.
+     * @return The name of the send key.
      * 
-    */
+     */
     public String sendKeyName() {
         return this.sendKeyName;
     }
     /**
-     * The value of the send key.
+     * @return The value of the send key.
      * 
-    */
+     */
     public String sendKeyValue() {
         return this.sendKeyValue;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

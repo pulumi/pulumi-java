@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVendorSkusResult {
-    /**
-     * The sku deployment mode.
-     * 
-     */
+        /**
+         * @return The sku deployment mode.
+         * 
+         */
     private final @Nullable String deploymentMode;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The parameters for the managed application to be supplied by the vendor.
-     * 
-     */
+        /**
+         * @return The parameters for the managed application to be supplied by the vendor.
+         * 
+         */
     private final @Nullable Object managedApplicationParameters;
-    /**
-     * The template for the managed application deployment.
-     * 
-     */
+        /**
+         * @return The template for the managed application deployment.
+         * 
+         */
     private final @Nullable Object managedApplicationTemplate;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The template definition of the network function.
-     * 
-     */
+        /**
+         * @return The template definition of the network function.
+         * 
+         */
     private final @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate;
-    /**
-     * Indicates if the vendor sku is in preview mode.
-     * 
-     */
+        /**
+         * @return Indicates if the vendor sku is in preview mode.
+         * 
+         */
     private final @Nullable Boolean preview;
-    /**
-     * The provisioning state of the vendor sku sub resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the vendor sku sub resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The sku type.
-     * 
-     */
+        /**
+         * @return The sku type.
+         * 
+         */
     private final @Nullable String skuType;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetVendorSkusResult {
     }
 
     /**
-     * The sku deployment mode.
+     * @return The sku deployment mode.
      * 
-    */
+     */
     public Optional<String> deploymentMode() {
         return Optional.ofNullable(this.deploymentMode);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The parameters for the managed application to be supplied by the vendor.
+     * @return The parameters for the managed application to be supplied by the vendor.
      * 
-    */
+     */
     public Optional<Object> managedApplicationParameters() {
         return Optional.ofNullable(this.managedApplicationParameters);
     }
     /**
-     * The template for the managed application deployment.
+     * @return The template for the managed application deployment.
      * 
-    */
+     */
     public Optional<Object> managedApplicationTemplate() {
         return Optional.ofNullable(this.managedApplicationTemplate);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The template definition of the network function.
+     * @return The template definition of the network function.
      * 
-    */
+     */
     public Optional<NetworkFunctionTemplateResponse> networkFunctionTemplate() {
         return Optional.ofNullable(this.networkFunctionTemplate);
     }
     /**
-     * Indicates if the vendor sku is in preview mode.
+     * @return Indicates if the vendor sku is in preview mode.
      * 
-    */
+     */
     public Optional<Boolean> preview() {
         return Optional.ofNullable(this.preview);
     }
     /**
-     * The provisioning state of the vendor sku sub resource.
+     * @return The provisioning state of the vendor sku sub resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The sku type.
+     * @return The sku type.
      * 
-    */
+     */
     public Optional<String> skuType() {
         return Optional.ofNullable(this.skuType);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

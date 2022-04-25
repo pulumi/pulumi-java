@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class VmmDetailsResponse {
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;VMM&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMM&#39;.
+         * 
+         */
     private final String instanceType;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class VmmDetailsResponse {
     }
 
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMM&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }

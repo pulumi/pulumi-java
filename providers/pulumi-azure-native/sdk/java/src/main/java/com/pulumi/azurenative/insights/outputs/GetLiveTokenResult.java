@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLiveTokenResult {
-    /**
-     * JWT token for accessing live metrics stream data.
-     * 
-     */
+        /**
+         * @return JWT token for accessing live metrics stream data.
+         * 
+         */
     private final String liveToken;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetLiveTokenResult {
     }
 
     /**
-     * JWT token for accessing live metrics stream data.
+     * @return JWT token for accessing live metrics stream data.
      * 
-    */
+     */
     public String liveToken() {
         return this.liveToken;
     }

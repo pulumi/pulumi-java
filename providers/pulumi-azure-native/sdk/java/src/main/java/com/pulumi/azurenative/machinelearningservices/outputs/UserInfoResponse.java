@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserInfoResponse {
-    /**
-     * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
-     * 
-     */
+        /**
+         * @return A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+         * 
+         */
     private final @Nullable String userAltSecId;
-    /**
-     * A user identity provider. Eg live.com
-     * 
-     */
+        /**
+         * @return A user identity provider. Eg live.com
+         * 
+         */
     private final @Nullable String userIdp;
-    /**
-     * The issuer which issued the token for this user.
-     * 
-     */
+        /**
+         * @return The issuer which issued the token for this user.
+         * 
+         */
     private final @Nullable String userIss;
-    /**
-     *  A user&#39;s full name or a service principal&#39;s app ID.
-     * 
-     */
+        /**
+         * @return  A user&#39;s full name or a service principal&#39;s app ID.
+         * 
+         */
     private final @Nullable String userName;
-    /**
-     * A user or service principal&#39;s object ID..
-     * 
-     */
+        /**
+         * @return A user or service principal&#39;s object ID..
+         * 
+         */
     private final @Nullable String userObjectId;
-    /**
-     * A user or service principal&#39;s PuID.
-     * 
-     */
+        /**
+         * @return A user or service principal&#39;s PuID.
+         * 
+         */
     private final @Nullable String userPuId;
-    /**
-     * A user or service principal&#39;s tenant ID.
-     * 
-     */
+        /**
+         * @return A user or service principal&#39;s tenant ID.
+         * 
+         */
     private final @Nullable String userTenantId;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class UserInfoResponse {
     }
 
     /**
-     * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+     * @return A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
      * 
-    */
+     */
     public Optional<String> userAltSecId() {
         return Optional.ofNullable(this.userAltSecId);
     }
     /**
-     * A user identity provider. Eg live.com
+     * @return A user identity provider. Eg live.com
      * 
-    */
+     */
     public Optional<String> userIdp() {
         return Optional.ofNullable(this.userIdp);
     }
     /**
-     * The issuer which issued the token for this user.
+     * @return The issuer which issued the token for this user.
      * 
-    */
+     */
     public Optional<String> userIss() {
         return Optional.ofNullable(this.userIss);
     }
     /**
-     *  A user&#39;s full name or a service principal&#39;s app ID.
+     * @return  A user&#39;s full name or a service principal&#39;s app ID.
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
     /**
-     * A user or service principal&#39;s object ID..
+     * @return A user or service principal&#39;s object ID..
      * 
-    */
+     */
     public Optional<String> userObjectId() {
         return Optional.ofNullable(this.userObjectId);
     }
     /**
-     * A user or service principal&#39;s PuID.
+     * @return A user or service principal&#39;s PuID.
      * 
-    */
+     */
     public Optional<String> userPuId() {
         return Optional.ofNullable(this.userPuId);
     }
     /**
-     * A user or service principal&#39;s tenant ID.
+     * @return A user or service principal&#39;s tenant ID.
      * 
-    */
+     */
     public Optional<String> userTenantId() {
         return Optional.ofNullable(this.userTenantId);
     }

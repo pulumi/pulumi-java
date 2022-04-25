@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SeedNodeResponse {
-    /**
-     * IP address of this seed node.
-     * 
-     */
+        /**
+         * @return IP address of this seed node.
+         * 
+         */
     private final @Nullable String ipAddress;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SeedNodeResponse {
     }
 
     /**
-     * IP address of this seed node.
+     * @return IP address of this seed node.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

@@ -25,114 +25,114 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CommandJobResponse {
-    /**
-     * ARM resource ID of the code asset.
-     * 
-     */
+        /**
+         * @return ARM resource ID of the code asset.
+         * 
+         */
     private final @Nullable String codeId;
-    /**
-     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
-     * 
-     */
+        /**
+         * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * 
+         */
     private final String command;
-    /**
-     * Compute binding for the job.
-     * 
-     */
+        /**
+         * @return Compute binding for the job.
+         * 
+         */
     private final ComputeConfigurationResponse compute;
-    /**
-     * The asset description text.
-     * 
-     */
+        /**
+         * @return The asset description text.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
-     * 
-     */
+        /**
+         * @return Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+         * 
+         */
     private final @Nullable Object distribution;
-    /**
-     * The ARM resource ID of the Environment specification for the job.
-     * 
-     */
+        /**
+         * @return The ARM resource ID of the Environment specification for the job.
+         * 
+         */
     private final @Nullable String environmentId;
-    /**
-     * Environment variables included in the job.
-     * 
-     */
+        /**
+         * @return Environment variables included in the job.
+         * 
+         */
     private final @Nullable Map<String,String> environmentVariables;
-    /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
-     * 
-     */
+        /**
+         * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+         * 
+         */
     private final @Nullable String experimentName;
-    /**
-     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
-     * Defaults to AmlToken if null.
-     * 
-     */
+        /**
+         * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+         * Defaults to AmlToken if null.
+         * 
+         */
     private final @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
-    /**
-     * Mapping of input data bindings used in the job.
-     * 
-     */
+        /**
+         * @return Mapping of input data bindings used in the job.
+         * 
+         */
     private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
-    /**
-     * List of JobEndpoints.
-     * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
-     * 
-     */
+        /**
+         * @return List of JobEndpoints.
+         * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+         * 
+         */
     private final Map<String,JobEndpointResponse> interactionEndpoints;
-    /**
-     * Enum to determine the type of job.
-     * Expected value is &#39;Command&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine the type of job.
+         * Expected value is &#39;Command&#39;.
+         * 
+         */
     private final String jobType;
-    /**
-     * Location of the job output logs and artifacts.
-     * 
-     */
+        /**
+         * @return Location of the job output logs and artifacts.
+         * 
+         */
     private final JobOutputResponse output;
-    /**
-     * Mapping of output data bindings used in the job.
-     * 
-     */
+        /**
+         * @return Mapping of output data bindings used in the job.
+         * 
+         */
     private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
-    /**
-     * Input parameters.
-     * 
-     */
+        /**
+         * @return Input parameters.
+         * 
+         */
     private final Object parameters;
-    /**
-     * Job priority for scheduling policy. Only applies to AMLCompute.
-     * Private preview feature and only available to users on the allow list.
-     * 
-     */
+        /**
+         * @return Job priority for scheduling policy. Only applies to AMLCompute.
+         * Private preview feature and only available to users on the allow list.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * The asset property dictionary.
-     * 
-     */
+        /**
+         * @return The asset property dictionary.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Specifies the job provisioning state.
-     * 
-     */
+        /**
+         * @return Specifies the job provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Status of the job.
-     * 
-     */
+        /**
+         * @return Status of the job.
+         * 
+         */
     private final String status;
-    /**
-     * Tag dictionary. Tags can be added, removed, and updated.
-     * 
-     */
+        /**
+         * @return Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
-     * 
-     */
+        /**
+         * @return The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
+         * 
+         */
     private final @Nullable String timeout;
 
     @CustomType.Constructor
@@ -182,153 +182,153 @@ public final class CommandJobResponse {
     }
 
     /**
-     * ARM resource ID of the code asset.
+     * @return ARM resource ID of the code asset.
      * 
-    */
+     */
     public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
     /**
-     * The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
      * 
-    */
+     */
     public String command() {
         return this.command;
     }
     /**
-     * Compute binding for the job.
+     * @return Compute binding for the job.
      * 
-    */
+     */
     public ComputeConfigurationResponse compute() {
         return this.compute;
     }
     /**
-     * The asset description text.
+     * @return The asset description text.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     * @return Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
-    */
+     */
     public Optional<Object> distribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
-     * The ARM resource ID of the Environment specification for the job.
+     * @return The ARM resource ID of the Environment specification for the job.
      * 
-    */
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
-     * Environment variables included in the job.
+     * @return Environment variables included in the job.
      * 
-    */
+     */
     public Map<String,String> environmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
-     * The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+     * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
      * 
-    */
+     */
     public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
     /**
-     * Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+     * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
      * Defaults to AmlToken if null.
      * 
-    */
+     */
     public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Mapping of input data bindings used in the job.
+     * @return Mapping of input data bindings used in the job.
      * 
-    */
+     */
     public Map<String,InputDataBindingResponse> inputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
     /**
-     * List of JobEndpoints.
+     * @return List of JobEndpoints.
      * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
      * 
-    */
+     */
     public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
     /**
-     * Enum to determine the type of job.
+     * @return Enum to determine the type of job.
      * Expected value is &#39;Command&#39;.
      * 
-    */
+     */
     public String jobType() {
         return this.jobType;
     }
     /**
-     * Location of the job output logs and artifacts.
+     * @return Location of the job output logs and artifacts.
      * 
-    */
+     */
     public JobOutputResponse output() {
         return this.output;
     }
     /**
-     * Mapping of output data bindings used in the job.
+     * @return Mapping of output data bindings used in the job.
      * 
-    */
+     */
     public Map<String,OutputDataBindingResponse> outputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
     /**
-     * Input parameters.
+     * @return Input parameters.
      * 
-    */
+     */
     public Object parameters() {
         return this.parameters;
     }
     /**
-     * Job priority for scheduling policy. Only applies to AMLCompute.
+     * @return Job priority for scheduling policy. Only applies to AMLCompute.
      * Private preview feature and only available to users on the allow list.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * The asset property dictionary.
+     * @return The asset property dictionary.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Specifies the job provisioning state.
+     * @return Specifies the job provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Status of the job.
+     * @return Status of the job.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Tag dictionary. Tags can be added, removed, and updated.
+     * @return Tag dictionary. Tags can be added, removed, and updated.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
+     * @return The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
      * 
-    */
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }

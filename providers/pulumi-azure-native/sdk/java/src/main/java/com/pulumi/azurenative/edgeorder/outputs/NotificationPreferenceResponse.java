@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class NotificationPreferenceResponse {
-    /**
-     * Notification is required or not.
-     * 
-     */
+        /**
+         * @return Notification is required or not.
+         * 
+         */
     private final Boolean sendNotification;
-    /**
-     * Name of the stage.
-     * 
-     */
+        /**
+         * @return Name of the stage.
+         * 
+         */
     private final String stageName;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class NotificationPreferenceResponse {
     }
 
     /**
-     * Notification is required or not.
+     * @return Notification is required or not.
      * 
-    */
+     */
     public Boolean sendNotification() {
         return this.sendNotification;
     }
     /**
-     * Name of the stage.
+     * @return Name of the stage.
      * 
-    */
+     */
     public String stageName() {
         return this.stageName;
     }

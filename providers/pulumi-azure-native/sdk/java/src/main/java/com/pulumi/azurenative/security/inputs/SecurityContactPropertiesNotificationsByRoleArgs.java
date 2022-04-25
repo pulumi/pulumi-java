@@ -30,6 +30,10 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
     @Import(name="roles")
     private @Nullable Output<List<Either<String,Roles>>> roles;
 
+    /**
+     * @return Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+     * 
+     */
     public Optional<Output<List<Either<String,Roles>>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -41,6 +45,10 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
+    /**
+     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     * 
+     */
     public Optional<Output<Either<String,State>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -70,32 +78,74 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
             $ = new SecurityContactPropertiesNotificationsByRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<Either<String,Roles>>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<Either<String,Roles>> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(Either<String,Roles>... roles) {
             return roles(List.of(roles));
         }
 
+        /**
+         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Either.ofRight(state));
         }

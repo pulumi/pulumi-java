@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVideoResult {
-    /**
-     * Optional video description provided by the user. Value can be up to 2048 characters long.
-     * 
-     */
+        /**
+         * @return Optional video description provided by the user. Value can be up to 2048 characters long.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
-     * 
-     */
+        /**
+         * @return Video flags contain information about the available video actions and its dynamic properties based on the current video state.
+         * 
+         */
     private final VideoFlagsResponse flags;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Contains information about the video and audio content.
-     * 
-     */
+        /**
+         * @return Contains information about the video and audio content.
+         * 
+         */
     private final VideoMediaInfoResponse mediaInfo;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Video streaming holds information about video streaming URLs.
-     * 
-     */
+        /**
+         * @return Video streaming holds information about video streaming URLs.
+         * 
+         */
     private final VideoStreamingResponse streaming;
-    /**
-     * The system metadata relating to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Optional video title provided by the user. Value can be up to 256 characters long.
-     * 
-     */
+        /**
+         * @return Optional video title provided by the user. Value can be up to 256 characters long.
+         * 
+         */
     private final @Nullable String title;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class GetVideoResult {
     }
 
     /**
-     * Optional video description provided by the user. Value can be up to 2048 characters long.
+     * @return Optional video description provided by the user. Value can be up to 2048 characters long.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
+     * @return Video flags contain information about the available video actions and its dynamic properties based on the current video state.
      * 
-    */
+     */
     public VideoFlagsResponse flags() {
         return this.flags;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Contains information about the video and audio content.
+     * @return Contains information about the video and audio content.
      * 
-    */
+     */
     public VideoMediaInfoResponse mediaInfo() {
         return this.mediaInfo;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Video streaming holds information about video streaming URLs.
+     * @return Video streaming holds information about video streaming URLs.
      * 
-    */
+     */
     public VideoStreamingResponse streaming() {
         return this.streaming;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Optional video title provided by the user. Value can be up to 256 characters long.
+     * @return Optional video title provided by the user. Value can be up to 256 characters long.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

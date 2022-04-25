@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CorsRulesResponse {
-    /**
-     * The List of CORS rules. You can include up to five CorsRule elements in the request.
-     * 
-     */
+        /**
+         * @return The List of CORS rules. You can include up to five CorsRule elements in the request.
+         * 
+         */
     private final @Nullable List<CorsRuleResponse> corsRules;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CorsRulesResponse {
     }
 
     /**
-     * The List of CORS rules. You can include up to five CorsRule elements in the request.
+     * @return The List of CORS rules. You can include up to five CorsRule elements in the request.
      * 
-    */
+     */
     public List<CorsRuleResponse> corsRules() {
         return this.corsRules == null ? List.of() : this.corsRules;
     }

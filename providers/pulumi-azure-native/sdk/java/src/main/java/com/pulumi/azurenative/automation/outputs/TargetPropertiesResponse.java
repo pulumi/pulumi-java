@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TargetPropertiesResponse {
-    /**
-     * List of Azure queries in the software update configuration.
-     * 
-     */
+        /**
+         * @return List of Azure queries in the software update configuration.
+         * 
+         */
     private final @Nullable List<AzureQueryPropertiesResponse> azureQueries;
-    /**
-     * List of non Azure queries in the software update configuration.
-     * 
-     */
+        /**
+         * @return List of non Azure queries in the software update configuration.
+         * 
+         */
     private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class TargetPropertiesResponse {
     }
 
     /**
-     * List of Azure queries in the software update configuration.
+     * @return List of Azure queries in the software update configuration.
      * 
-    */
+     */
     public List<AzureQueryPropertiesResponse> azureQueries() {
         return this.azureQueries == null ? List.of() : this.azureQueries;
     }
     /**
-     * List of non Azure queries in the software update configuration.
+     * @return List of non Azure queries in the software update configuration.
      * 
-    */
+     */
     public List<NonAzureQueryPropertiesResponse> nonAzureQueries() {
         return this.nonAzureQueries == null ? List.of() : this.nonAzureQueries;
     }

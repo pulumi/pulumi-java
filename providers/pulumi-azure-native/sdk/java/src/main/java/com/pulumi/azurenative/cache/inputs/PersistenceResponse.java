@@ -26,6 +26,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aofEnabled")
     private @Nullable Boolean aofEnabled;
 
+    /**
+     * @return Sets whether AOF is enabled.
+     * 
+     */
     public Optional<Boolean> aofEnabled() {
         return Optional.ofNullable(this.aofEnabled);
     }
@@ -37,6 +41,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="aofFrequency")
     private @Nullable String aofFrequency;
 
+    /**
+     * @return Sets the frequency at which data is written to disk.
+     * 
+     */
     public Optional<String> aofFrequency() {
         return Optional.ofNullable(this.aofFrequency);
     }
@@ -48,6 +56,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rdbEnabled")
     private @Nullable Boolean rdbEnabled;
 
+    /**
+     * @return Sets whether RDB is enabled.
+     * 
+     */
     public Optional<Boolean> rdbEnabled() {
         return Optional.ofNullable(this.rdbEnabled);
     }
@@ -59,6 +71,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="rdbFrequency")
     private @Nullable String rdbFrequency;
 
+    /**
+     * @return Sets the frequency at which a snapshot of the database is created.
+     * 
+     */
     public Optional<String> rdbFrequency() {
         return Optional.ofNullable(this.rdbFrequency);
     }
@@ -90,21 +106,45 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PersistenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aofEnabled Sets whether AOF is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofEnabled(@Nullable Boolean aofEnabled) {
             $.aofEnabled = aofEnabled;
             return this;
         }
 
+        /**
+         * @param aofFrequency Sets the frequency at which data is written to disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aofFrequency(@Nullable String aofFrequency) {
             $.aofFrequency = aofFrequency;
             return this;
         }
 
+        /**
+         * @param rdbEnabled Sets whether RDB is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
             $.rdbEnabled = rdbEnabled;
             return this;
         }
 
+        /**
+         * @param rdbFrequency Sets the frequency at which a snapshot of the database is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdbFrequency(@Nullable String rdbFrequency) {
             $.rdbFrequency = rdbFrequency;
             return this;

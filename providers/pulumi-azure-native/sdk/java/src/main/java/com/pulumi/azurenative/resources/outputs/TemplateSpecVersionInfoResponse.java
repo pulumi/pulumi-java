@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TemplateSpecVersionInfoResponse {
-    /**
-     * Template Spec version description.
-     * 
-     */
+        /**
+         * @return Template Spec version description.
+         * 
+         */
     private final String description;
-    /**
-     * The timestamp of when the version was created.
-     * 
-     */
+        /**
+         * @return The timestamp of when the version was created.
+         * 
+         */
     private final String timeCreated;
-    /**
-     * The timestamp of when the version was last modified.
-     * 
-     */
+        /**
+         * @return The timestamp of when the version was last modified.
+         * 
+         */
     private final String timeModified;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class TemplateSpecVersionInfoResponse {
     }
 
     /**
-     * Template Spec version description.
+     * @return Template Spec version description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The timestamp of when the version was created.
+     * @return The timestamp of when the version was created.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * The timestamp of when the version was last modified.
+     * @return The timestamp of when the version was last modified.
      * 
-    */
+     */
     public String timeModified() {
         return this.timeModified;
     }

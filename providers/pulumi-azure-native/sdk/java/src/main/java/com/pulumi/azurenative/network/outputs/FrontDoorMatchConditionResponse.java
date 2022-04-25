@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FrontDoorMatchConditionResponse {
-    /**
-     * List of possible match values.
-     * 
-     */
+        /**
+         * @return List of possible match values.
+         * 
+         */
     private final List<String> matchValue;
-    /**
-     * Request variable to compare with.
-     * 
-     */
+        /**
+         * @return Request variable to compare with.
+         * 
+         */
     private final String matchVariable;
-    /**
-     * Describes if the result of this condition should be negated.
-     * 
-     */
+        /**
+         * @return Describes if the result of this condition should be negated.
+         * 
+         */
     private final @Nullable Boolean negateCondition;
-    /**
-     * Comparison type to use for matching with the variable value.
-     * 
-     */
+        /**
+         * @return Comparison type to use for matching with the variable value.
+         * 
+         */
     private final String operator;
-    /**
-     * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
-     * 
-     */
+        /**
+         * @return Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+         * 
+         */
     private final @Nullable String selector;
-    /**
-     * List of transforms.
-     * 
-     */
+        /**
+         * @return List of transforms.
+         * 
+         */
     private final @Nullable List<String> transforms;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class FrontDoorMatchConditionResponse {
     }
 
     /**
-     * List of possible match values.
+     * @return List of possible match values.
      * 
-    */
+     */
     public List<String> matchValue() {
         return this.matchValue;
     }
     /**
-     * Request variable to compare with.
+     * @return Request variable to compare with.
      * 
-    */
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
     /**
-     * Describes if the result of this condition should be negated.
+     * @return Describes if the result of this condition should be negated.
      * 
-    */
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
     /**
-     * Comparison type to use for matching with the variable value.
+     * @return Comparison type to use for matching with the variable value.
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
+     * @return Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
      * 
-    */
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
-     * List of transforms.
+     * @return List of transforms.
      * 
-    */
+     */
     public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

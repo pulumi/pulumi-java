@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetContentKeyPolicyResult {
-    /**
-     * The creation date of the Policy
-     * 
-     */
+        /**
+         * @return The creation date of the Policy
+         * 
+         */
     private final String created;
-    /**
-     * A description for the Policy.
-     * 
-     */
+        /**
+         * @return A description for the Policy.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The last modified date of the Policy
-     * 
-     */
+        /**
+         * @return The last modified date of the Policy
+         * 
+         */
     private final String lastModified;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The Key Policy options.
-     * 
-     */
+        /**
+         * @return The Key Policy options.
+         * 
+         */
     private final List<ContentKeyPolicyOptionResponse> options;
-    /**
-     * The legacy Policy ID.
-     * 
-     */
+        /**
+         * @return The legacy Policy ID.
+         * 
+         */
     private final String policyId;
-    /**
-     * The system metadata relating to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetContentKeyPolicyResult {
     }
 
     /**
-     * The creation date of the Policy
+     * @return The creation date of the Policy
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * A description for the Policy.
+     * @return A description for the Policy.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last modified date of the Policy
+     * @return The last modified date of the Policy
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Key Policy options.
+     * @return The Key Policy options.
      * 
-    */
+     */
     public List<ContentKeyPolicyOptionResponse> options() {
         return this.options;
     }
     /**
-     * The legacy Policy ID.
+     * @return The legacy Policy ID.
      * 
-    */
+     */
     public String policyId() {
         return this.policyId;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

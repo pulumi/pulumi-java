@@ -24,6 +24,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseId", required=true)
     private Output<String> databaseId;
 
+    /**
+     * @return Resource ID of the database to store job metadata in.
+     * 
+     */
     public Output<String> databaseId() {
         return this.databaseId;
     }
@@ -35,6 +39,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName")
     private @Nullable Output<String> jobAgentName;
 
+    /**
+     * @return The name of the job agent to be created or updated.
+     * 
+     */
     public Optional<Output<String>> jobAgentName() {
         return Optional.ofNullable(this.jobAgentName);
     }
@@ -46,6 +54,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -79,6 +99,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The name and tier of the SKU.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -90,6 +114,10 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,65 +152,149 @@ public final class JobAgentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobAgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseId Resource ID of the database to store job metadata in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseId(Output<String> databaseId) {
             $.databaseId = databaseId;
             return this;
         }
 
+        /**
+         * @param databaseId Resource ID of the database to store job metadata in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseId(String databaseId) {
             return databaseId(Output.of(databaseId));
         }
 
+        /**
+         * @param jobAgentName The name of the job agent to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(@Nullable Output<String> jobAgentName) {
             $.jobAgentName = jobAgentName;
             return this;
         }
 
+        /**
+         * @param jobAgentName The name of the job agent to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(String jobAgentName) {
             return jobAgentName(Output.of(jobAgentName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param sku The name and tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The name and tier of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

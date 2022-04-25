@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class CertificatePropertiesResponse {
-    /**
-     * base-64 representation of X509 certificate .cer file or just .pem file content.
-     * 
-     */
+        /**
+         * @return base-64 representation of X509 certificate .cer file or just .pem file content.
+         * 
+         */
     private final String certificate;
-    /**
-     * The certificate&#39;s creation date and time.
-     * 
-     */
+        /**
+         * @return The certificate&#39;s creation date and time.
+         * 
+         */
     private final String created;
-    /**
-     * The certificate&#39;s expiration date and time.
-     * 
-     */
+        /**
+         * @return The certificate&#39;s expiration date and time.
+         * 
+         */
     private final String expiry;
-    /**
-     * Determines whether certificate has been verified.
-     * 
-     */
+        /**
+         * @return Determines whether certificate has been verified.
+         * 
+         */
     private final Boolean isVerified;
-    /**
-     * The certificate&#39;s subject name.
-     * 
-     */
+        /**
+         * @return The certificate&#39;s subject name.
+         * 
+         */
     private final String subject;
-    /**
-     * The certificate&#39;s thumbprint.
-     * 
-     */
+        /**
+         * @return The certificate&#39;s thumbprint.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * The certificate&#39;s last update date and time.
-     * 
-     */
+        /**
+         * @return The certificate&#39;s last update date and time.
+         * 
+         */
     private final String updated;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class CertificatePropertiesResponse {
     }
 
     /**
-     * base-64 representation of X509 certificate .cer file or just .pem file content.
+     * @return base-64 representation of X509 certificate .cer file or just .pem file content.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * The certificate&#39;s creation date and time.
+     * @return The certificate&#39;s creation date and time.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * The certificate&#39;s expiration date and time.
+     * @return The certificate&#39;s expiration date and time.
      * 
-    */
+     */
     public String expiry() {
         return this.expiry;
     }
     /**
-     * Determines whether certificate has been verified.
+     * @return Determines whether certificate has been verified.
      * 
-    */
+     */
     public Boolean isVerified() {
         return this.isVerified;
     }
     /**
-     * The certificate&#39;s subject name.
+     * @return The certificate&#39;s subject name.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * The certificate&#39;s thumbprint.
+     * @return The certificate&#39;s thumbprint.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * The certificate&#39;s last update date and time.
+     * @return The certificate&#39;s last update date and time.
      * 
-    */
+     */
     public String updated() {
         return this.updated;
     }

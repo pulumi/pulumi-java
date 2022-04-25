@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectToTargetSqlMITaskInputResponse {
-    /**
-     * Connection information for target SQL Server
-     * 
-     */
+        /**
+         * @return Connection information for target SQL Server
+         * 
+         */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConnectToTargetSqlMITaskInputResponse {
     }
 
     /**
-     * Connection information for target SQL Server
+     * @return Connection information for target SQL Server
      * 
-    */
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

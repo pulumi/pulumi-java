@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InMagePolicyDetailsResponse {
-    /**
-     * The app consistent snapshot frequency in minutes.
-     * 
-     */
+        /**
+         * @return The app consistent snapshot frequency in minutes.
+         * 
+         */
     private final @Nullable Integer appConsistentFrequencyInMinutes;
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;InMage&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;InMage&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * A value indicating whether multi-VM sync has to be enabled.
-     * 
-     */
+        /**
+         * @return A value indicating whether multi-VM sync has to be enabled.
+         * 
+         */
     private final @Nullable String multiVmSyncStatus;
-    /**
-     * The duration in minutes until which the recovery points need to be stored.
-     * 
-     */
+        /**
+         * @return The duration in minutes until which the recovery points need to be stored.
+         * 
+         */
     private final @Nullable Integer recoveryPointHistory;
-    /**
-     * The recovery point threshold in minutes.
-     * 
-     */
+        /**
+         * @return The recovery point threshold in minutes.
+         * 
+         */
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class InMagePolicyDetailsResponse {
     }
 
     /**
-     * The app consistent snapshot frequency in minutes.
+     * @return The app consistent snapshot frequency in minutes.
      * 
-    */
+     */
     public Optional<Integer> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;InMage&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * A value indicating whether multi-VM sync has to be enabled.
+     * @return A value indicating whether multi-VM sync has to be enabled.
      * 
-    */
+     */
     public Optional<String> multiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
-     * The duration in minutes until which the recovery points need to be stored.
+     * @return The duration in minutes until which the recovery points need to be stored.
      * 
-    */
+     */
     public Optional<Integer> recoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
     /**
-     * The recovery point threshold in minutes.
+     * @return The recovery point threshold in minutes.
      * 
-    */
+     */
     public Optional<Integer> recoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }

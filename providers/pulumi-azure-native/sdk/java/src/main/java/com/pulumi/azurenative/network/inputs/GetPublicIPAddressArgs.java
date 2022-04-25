@@ -21,6 +21,10 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
     @Import(name="publicIpAddressName", required=true)
     private String publicIpAddressName;
 
+    /**
+     * @return The name of the public IP address.
+     * 
+     */
     public String publicIpAddressName() {
         return this.publicIpAddressName;
     }
@@ -43,6 +51,10 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
             $ = new GetPublicIPAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param publicIpAddressName The name of the public IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIpAddressName(String publicIpAddressName) {
             $.publicIpAddressName = publicIpAddressName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
-    /**
-     * The ID of the private endpoint connection.
-     * 
-     */
+        /**
+         * @return The ID of the private endpoint connection.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the private endpoint connection.
-     * 
-     */
+        /**
+         * @return The name of the private endpoint connection.
+         * 
+         */
     private final String name;
-    /**
-     * The resource of private endpoint.
-     * 
-     */
+        /**
+         * @return The resource of private endpoint.
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * A collection of information about the state of the connection between service consumer and provider.
-     * 
-     */
+        /**
+         * @return A collection of information about the state of the connection between service consumer and provider.
+         * 
+         */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * The current provisioning state.
-     * 
-     */
+        /**
+         * @return The current provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * The ID of the private endpoint connection.
+     * @return The ID of the private endpoint connection.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the private endpoint connection.
+     * @return The name of the private endpoint connection.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource of private endpoint.
+     * @return The resource of private endpoint.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * A collection of information about the state of the connection between service consumer and provider.
+     * @return A collection of information about the state of the connection between service consumer and provider.
      * 
-    */
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
-     * The current provisioning state.
+     * @return The current provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

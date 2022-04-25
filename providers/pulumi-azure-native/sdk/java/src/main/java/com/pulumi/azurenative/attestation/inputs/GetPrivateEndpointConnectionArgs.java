@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return The name of the private endpoint connection associated with the Azure resource
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="providerName", required=true)
     private String providerName;
 
+    /**
+     * @return The name of the attestation provider.
+     * 
+     */
     public String providerName() {
         return this.providerName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
             $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection associated with the Azure resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param providerName The name of the attestation provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

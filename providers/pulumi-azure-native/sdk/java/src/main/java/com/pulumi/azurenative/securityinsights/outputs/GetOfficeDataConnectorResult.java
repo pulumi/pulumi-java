@@ -12,41 +12,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOfficeDataConnectorResult {
-    /**
-     * The available data types for the connector.
-     * 
-     */
+        /**
+         * @return The available data types for the connector.
+         * 
+         */
     private final @Nullable OfficeDataConnectorDataTypesResponse dataTypes;
-    /**
-     * Etag of the azure resource
-     * 
-     */
+        /**
+         * @return Etag of the azure resource
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The kind of the data connector
-     * Expected value is &#39;Office365&#39;.
-     * 
-     */
+        /**
+         * @return The kind of the data connector
+         * Expected value is &#39;Office365&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * The tenant id to connect to, and get the data from.
-     * 
-     */
+        /**
+         * @return The tenant id to connect to, and get the data from.
+         * 
+         */
     private final @Nullable String tenantId;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -68,52 +68,52 @@ public final class GetOfficeDataConnectorResult {
     }
 
     /**
-     * The available data types for the connector.
+     * @return The available data types for the connector.
      * 
-    */
+     */
     public Optional<OfficeDataConnectorDataTypesResponse> dataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the data connector
+     * @return The kind of the data connector
      * Expected value is &#39;Office365&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The tenant id to connect to, and get the data from.
+     * @return The tenant id to connect to, and get the data from.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

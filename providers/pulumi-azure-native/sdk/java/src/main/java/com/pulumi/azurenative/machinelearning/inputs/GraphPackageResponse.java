@@ -30,6 +30,10 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="edges")
     private @Nullable List<GraphEdgeResponse> edges;
 
+    /**
+     * @return The list of edges making up the graph.
+     * 
+     */
     public Optional<List<GraphEdgeResponse>> edges() {
         return Optional.ofNullable(this.edges);
     }
@@ -41,6 +45,10 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="graphParameters")
     private @Nullable Map<String,GraphParameterResponse> graphParameters;
 
+    /**
+     * @return The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+     * 
+     */
     public Optional<Map<String,GraphParameterResponse>> graphParameters() {
         return Optional.ofNullable(this.graphParameters);
     }
@@ -52,6 +60,10 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nodes")
     private @Nullable Map<String,GraphNodeResponse> nodes;
 
+    /**
+     * @return The set of nodes making up the graph, provided as a nodeId to GraphNode map
+     * 
+     */
     public Optional<Map<String,GraphNodeResponse>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
@@ -82,20 +94,44 @@ public final class GraphPackageResponse extends com.pulumi.resources.InvokeArgs 
             $ = new GraphPackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param edges The list of edges making up the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edges(@Nullable List<GraphEdgeResponse> edges) {
             $.edges = edges;
             return this;
         }
 
+        /**
+         * @param edges The list of edges making up the graph.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edges(GraphEdgeResponse... edges) {
             return edges(List.of(edges));
         }
 
+        /**
+         * @param graphParameters The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphParameters(@Nullable Map<String,GraphParameterResponse> graphParameters) {
             $.graphParameters = graphParameters;
             return this;
         }
 
+        /**
+         * @param nodes The set of nodes making up the graph, provided as a nodeId to GraphNode map
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(@Nullable Map<String,GraphNodeResponse> nodes) {
             $.nodes = nodes;
             return this;

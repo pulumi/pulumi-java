@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTriggerResult {
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * Trigger Kind.
-     * 
-     */
+        /**
+         * @return Trigger Kind.
+         * 
+         */
     private final String kind;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * Trigger in DataBoxEdge Resource
-     * 
-     */
+        /**
+         * @return Trigger in DataBoxEdge Resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetTriggerResult {
     }
 
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Trigger Kind.
+     * @return Trigger Kind.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Trigger in DataBoxEdge Resource
+     * @return Trigger in DataBoxEdge Resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

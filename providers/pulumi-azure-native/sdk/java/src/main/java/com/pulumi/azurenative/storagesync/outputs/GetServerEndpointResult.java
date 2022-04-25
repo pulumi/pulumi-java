@@ -15,110 +15,110 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServerEndpointResult {
-    /**
-     * Cloud Tiering.
-     * 
-     */
+        /**
+         * @return Cloud Tiering.
+         * 
+         */
     private final @Nullable String cloudTiering;
-    /**
-     * Cloud tiering status. Only populated if cloud tiering is enabled.
-     * 
-     */
+        /**
+         * @return Cloud tiering status. Only populated if cloud tiering is enabled.
+         * 
+         */
     private final ServerEndpointCloudTieringStatusResponse cloudTieringStatus;
-    /**
-     * Friendly Name
-     * 
-     */
+        /**
+         * @return Friendly Name
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Policy for how namespace and files are recalled during FastDr.
-     * 
-     */
+        /**
+         * @return Policy for how namespace and files are recalled during FastDr.
+         * 
+         */
     private final @Nullable String initialDownloadPolicy;
-    /**
-     * Resource Last Operation Name
-     * 
-     */
+        /**
+         * @return Resource Last Operation Name
+         * 
+         */
     private final String lastOperationName;
-    /**
-     * ServerEndpoint lastWorkflowId
-     * 
-     */
+        /**
+         * @return ServerEndpoint lastWorkflowId
+         * 
+         */
     private final String lastWorkflowId;
-    /**
-     * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
-     * 
-     */
+        /**
+         * @return Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
+         * 
+         */
     private final @Nullable String localCacheMode;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Offline data transfer
-     * 
-     */
+        /**
+         * @return Offline data transfer
+         * 
+         */
     private final @Nullable String offlineDataTransfer;
-    /**
-     * Offline data transfer share name
-     * 
-     */
+        /**
+         * @return Offline data transfer share name
+         * 
+         */
     private final @Nullable String offlineDataTransferShareName;
-    /**
-     * Offline data transfer storage account resource ID
-     * 
-     */
+        /**
+         * @return Offline data transfer storage account resource ID
+         * 
+         */
     private final String offlineDataTransferStorageAccountResourceId;
-    /**
-     * Offline data transfer storage account tenant ID
-     * 
-     */
+        /**
+         * @return Offline data transfer storage account tenant ID
+         * 
+         */
     private final String offlineDataTransferStorageAccountTenantId;
-    /**
-     * ServerEndpoint Provisioning State
-     * 
-     */
+        /**
+         * @return ServerEndpoint Provisioning State
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Recall status. Only populated if cloud tiering is enabled.
-     * 
-     */
+        /**
+         * @return Recall status. Only populated if cloud tiering is enabled.
+         * 
+         */
     private final ServerEndpointRecallStatusResponse recallStatus;
-    /**
-     * Server Local path.
-     * 
-     */
+        /**
+         * @return Server Local path.
+         * 
+         */
     private final @Nullable String serverLocalPath;
-    /**
-     * Server Resource Id.
-     * 
-     */
+        /**
+         * @return Server Resource Id.
+         * 
+         */
     private final @Nullable String serverResourceId;
-    /**
-     * Server Endpoint sync status
-     * 
-     */
+        /**
+         * @return Server Endpoint sync status
+         * 
+         */
     private final ServerEndpointSyncStatusResponse syncStatus;
-    /**
-     * Tier files older than days.
-     * 
-     */
+        /**
+         * @return Tier files older than days.
+         * 
+         */
     private final @Nullable Integer tierFilesOlderThanDays;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Level of free space to be maintained by Cloud Tiering if it is enabled.
-     * 
-     */
+        /**
+         * @return Level of free space to be maintained by Cloud Tiering if it is enabled.
+         * 
+         */
     private final @Nullable Integer volumeFreeSpacePercent;
 
     @CustomType.Constructor
@@ -168,149 +168,149 @@ public final class GetServerEndpointResult {
     }
 
     /**
-     * Cloud Tiering.
+     * @return Cloud Tiering.
      * 
-    */
+     */
     public Optional<String> cloudTiering() {
         return Optional.ofNullable(this.cloudTiering);
     }
     /**
-     * Cloud tiering status. Only populated if cloud tiering is enabled.
+     * @return Cloud tiering status. Only populated if cloud tiering is enabled.
      * 
-    */
+     */
     public ServerEndpointCloudTieringStatusResponse cloudTieringStatus() {
         return this.cloudTieringStatus;
     }
     /**
-     * Friendly Name
+     * @return Friendly Name
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Policy for how namespace and files are recalled during FastDr.
+     * @return Policy for how namespace and files are recalled during FastDr.
      * 
-    */
+     */
     public Optional<String> initialDownloadPolicy() {
         return Optional.ofNullable(this.initialDownloadPolicy);
     }
     /**
-     * Resource Last Operation Name
+     * @return Resource Last Operation Name
      * 
-    */
+     */
     public String lastOperationName() {
         return this.lastOperationName;
     }
     /**
-     * ServerEndpoint lastWorkflowId
+     * @return ServerEndpoint lastWorkflowId
      * 
-    */
+     */
     public String lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
-     * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
+     * @return Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
      * 
-    */
+     */
     public Optional<String> localCacheMode() {
         return Optional.ofNullable(this.localCacheMode);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Offline data transfer
+     * @return Offline data transfer
      * 
-    */
+     */
     public Optional<String> offlineDataTransfer() {
         return Optional.ofNullable(this.offlineDataTransfer);
     }
     /**
-     * Offline data transfer share name
+     * @return Offline data transfer share name
      * 
-    */
+     */
     public Optional<String> offlineDataTransferShareName() {
         return Optional.ofNullable(this.offlineDataTransferShareName);
     }
     /**
-     * Offline data transfer storage account resource ID
+     * @return Offline data transfer storage account resource ID
      * 
-    */
+     */
     public String offlineDataTransferStorageAccountResourceId() {
         return this.offlineDataTransferStorageAccountResourceId;
     }
     /**
-     * Offline data transfer storage account tenant ID
+     * @return Offline data transfer storage account tenant ID
      * 
-    */
+     */
     public String offlineDataTransferStorageAccountTenantId() {
         return this.offlineDataTransferStorageAccountTenantId;
     }
     /**
-     * ServerEndpoint Provisioning State
+     * @return ServerEndpoint Provisioning State
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Recall status. Only populated if cloud tiering is enabled.
+     * @return Recall status. Only populated if cloud tiering is enabled.
      * 
-    */
+     */
     public ServerEndpointRecallStatusResponse recallStatus() {
         return this.recallStatus;
     }
     /**
-     * Server Local path.
+     * @return Server Local path.
      * 
-    */
+     */
     public Optional<String> serverLocalPath() {
         return Optional.ofNullable(this.serverLocalPath);
     }
     /**
-     * Server Resource Id.
+     * @return Server Resource Id.
      * 
-    */
+     */
     public Optional<String> serverResourceId() {
         return Optional.ofNullable(this.serverResourceId);
     }
     /**
-     * Server Endpoint sync status
+     * @return Server Endpoint sync status
      * 
-    */
+     */
     public ServerEndpointSyncStatusResponse syncStatus() {
         return this.syncStatus;
     }
     /**
-     * Tier files older than days.
+     * @return Tier files older than days.
      * 
-    */
+     */
     public Optional<Integer> tierFilesOlderThanDays() {
         return Optional.ofNullable(this.tierFilesOlderThanDays);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Level of free space to be maintained by Cloud Tiering if it is enabled.
+     * @return Level of free space to be maintained by Cloud Tiering if it is enabled.
      * 
-    */
+     */
     public Optional<Integer> volumeFreeSpacePercent() {
         return Optional.ofNullable(this.volumeFreeSpacePercent);
     }

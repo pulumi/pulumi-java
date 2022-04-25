@@ -28,6 +28,10 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
     @Import(name="galleries")
     private @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
+    /**
+     * @return Workbook galleries supported by the template.
+     * 
+     */
     public Optional<Output<List<WorkbookTemplateGalleryArgs>>> galleries() {
         return Optional.ofNullable(this.galleries);
     }
@@ -39,6 +43,10 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
     @Import(name="templateData")
     private @Nullable Output<Object> templateData;
 
+    /**
+     * @return Valid JSON object containing workbook template payload.
+     * 
+     */
     public Optional<Output<Object>> templateData() {
         return Optional.ofNullable(this.templateData);
     }
@@ -68,24 +76,54 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
             $ = new WorkbookTemplateLocalizedGalleryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleries Workbook galleries supported by the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleries(@Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries) {
             $.galleries = galleries;
             return this;
         }
 
+        /**
+         * @param galleries Workbook galleries supported by the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleries(List<WorkbookTemplateGalleryArgs> galleries) {
             return galleries(Output.of(galleries));
         }
 
+        /**
+         * @param galleries Workbook galleries supported by the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleries(WorkbookTemplateGalleryArgs... galleries) {
             return galleries(List.of(galleries));
         }
 
+        /**
+         * @param templateData Valid JSON object containing workbook template payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateData(@Nullable Output<Object> templateData) {
             $.templateData = templateData;
             return this;
         }
 
+        /**
+         * @param templateData Valid JSON object containing workbook template payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateData(Object templateData) {
             return templateData(Output.of(templateData));
         }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PrivateLinkServiceConnectionStatePropertyResponse {
-    /**
-     * The actions required for private link service connection.
-     * 
-     */
+        /**
+         * @return The actions required for private link service connection.
+         * 
+         */
     private final String actionsRequired;
-    /**
-     * The private link service connection description.
-     * 
-     */
+        /**
+         * @return The private link service connection description.
+         * 
+         */
     private final String description;
-    /**
-     * The private link service connection status.
-     * 
-     */
+        /**
+         * @return The private link service connection status.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse {
     }
 
     /**
-     * The actions required for private link service connection.
+     * @return The actions required for private link service connection.
      * 
-    */
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
-     * The private link service connection description.
+     * @return The private link service connection description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The private link service connection status.
+     * @return The private link service connection status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

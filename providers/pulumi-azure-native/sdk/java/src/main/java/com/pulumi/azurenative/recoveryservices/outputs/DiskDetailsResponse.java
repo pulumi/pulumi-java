@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DiskDetailsResponse {
-    /**
-     * The hard disk max size in MB.
-     * 
-     */
+        /**
+         * @return The hard disk max size in MB.
+         * 
+         */
     private final @Nullable Double maxSizeMB;
-    /**
-     * The VHD Id.
-     * 
-     */
+        /**
+         * @return The VHD Id.
+         * 
+         */
     private final @Nullable String vhdId;
-    /**
-     * The VHD name.
-     * 
-     */
+        /**
+         * @return The VHD name.
+         * 
+         */
     private final @Nullable String vhdName;
-    /**
-     * The type of the volume.
-     * 
-     */
+        /**
+         * @return The type of the volume.
+         * 
+         */
     private final @Nullable String vhdType;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class DiskDetailsResponse {
     }
 
     /**
-     * The hard disk max size in MB.
+     * @return The hard disk max size in MB.
      * 
-    */
+     */
     public Optional<Double> maxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
     /**
-     * The VHD Id.
+     * @return The VHD Id.
      * 
-    */
+     */
     public Optional<String> vhdId() {
         return Optional.ofNullable(this.vhdId);
     }
     /**
-     * The VHD name.
+     * @return The VHD name.
      * 
-    */
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
     /**
-     * The type of the volume.
+     * @return The type of the volume.
      * 
-    */
+     */
     public Optional<String> vhdType() {
         return Optional.ofNullable(this.vhdType);
     }

@@ -9,40 +9,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ElasticCloudDeploymentResponse {
-    /**
-     * Associated Azure subscription Id for the elastic deployment.
-     * 
-     */
+        /**
+         * @return Associated Azure subscription Id for the elastic deployment.
+         * 
+         */
     private final String azureSubscriptionId;
-    /**
-     * Elastic deployment Id
-     * 
-     */
+        /**
+         * @return Elastic deployment Id
+         * 
+         */
     private final String deploymentId;
-    /**
-     * Region where Deployment at Elastic side took place.
-     * 
-     */
+        /**
+         * @return Region where Deployment at Elastic side took place.
+         * 
+         */
     private final String elasticsearchRegion;
-    /**
-     * Elasticsearch ingestion endpoint of the Elastic deployment.
-     * 
-     */
+        /**
+         * @return Elasticsearch ingestion endpoint of the Elastic deployment.
+         * 
+         */
     private final String elasticsearchServiceUrl;
-    /**
-     * Kibana endpoint of the Elastic deployment.
-     * 
-     */
+        /**
+         * @return Kibana endpoint of the Elastic deployment.
+         * 
+         */
     private final String kibanaServiceUrl;
-    /**
-     * Kibana dashboard sso URL of the Elastic deployment.
-     * 
-     */
+        /**
+         * @return Kibana dashboard sso URL of the Elastic deployment.
+         * 
+         */
     private final String kibanaSsoUrl;
-    /**
-     * Elastic deployment name
-     * 
-     */
+        /**
+         * @return Elastic deployment name
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -64,51 +64,51 @@ public final class ElasticCloudDeploymentResponse {
     }
 
     /**
-     * Associated Azure subscription Id for the elastic deployment.
+     * @return Associated Azure subscription Id for the elastic deployment.
      * 
-    */
+     */
     public String azureSubscriptionId() {
         return this.azureSubscriptionId;
     }
     /**
-     * Elastic deployment Id
+     * @return Elastic deployment Id
      * 
-    */
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
     /**
-     * Region where Deployment at Elastic side took place.
+     * @return Region where Deployment at Elastic side took place.
      * 
-    */
+     */
     public String elasticsearchRegion() {
         return this.elasticsearchRegion;
     }
     /**
-     * Elasticsearch ingestion endpoint of the Elastic deployment.
+     * @return Elasticsearch ingestion endpoint of the Elastic deployment.
      * 
-    */
+     */
     public String elasticsearchServiceUrl() {
         return this.elasticsearchServiceUrl;
     }
     /**
-     * Kibana endpoint of the Elastic deployment.
+     * @return Kibana endpoint of the Elastic deployment.
      * 
-    */
+     */
     public String kibanaServiceUrl() {
         return this.kibanaServiceUrl;
     }
     /**
-     * Kibana dashboard sso URL of the Elastic deployment.
+     * @return Kibana dashboard sso URL of the Elastic deployment.
      * 
-    */
+     */
     public String kibanaSsoUrl() {
         return this.kibanaSsoUrl;
     }
     /**
-     * Elastic deployment name
+     * @return Elastic deployment name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

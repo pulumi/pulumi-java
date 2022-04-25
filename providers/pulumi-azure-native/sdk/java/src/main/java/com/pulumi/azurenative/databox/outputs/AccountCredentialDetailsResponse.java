@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AccountCredentialDetailsResponse {
-    /**
-     * Connection string of the account endpoint to use the account as a storage endpoint on the device.
-     * 
-     */
+        /**
+         * @return Connection string of the account endpoint to use the account as a storage endpoint on the device.
+         * 
+         */
     private final String accountConnectionString;
-    /**
-     * Name of the account.
-     * 
-     */
+        /**
+         * @return Name of the account.
+         * 
+         */
     private final String accountName;
-    /**
-     * Type of the account.
-     * 
-     */
+        /**
+         * @return Type of the account.
+         * 
+         */
     private final String dataAccountType;
-    /**
-     * Per share level unencrypted access credentials.
-     * 
-     */
+        /**
+         * @return Per share level unencrypted access credentials.
+         * 
+         */
     private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class AccountCredentialDetailsResponse {
     }
 
     /**
-     * Connection string of the account endpoint to use the account as a storage endpoint on the device.
+     * @return Connection string of the account endpoint to use the account as a storage endpoint on the device.
      * 
-    */
+     */
     public String accountConnectionString() {
         return this.accountConnectionString;
     }
     /**
-     * Name of the account.
+     * @return Name of the account.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * Type of the account.
+     * @return Type of the account.
      * 
-    */
+     */
     public String dataAccountType() {
         return this.dataAccountType;
     }
     /**
-     * Per share level unencrypted access credentials.
+     * @return Per share level unencrypted access credentials.
      * 
-    */
+     */
     public List<ShareCredentialDetailsResponse> shareCredentialDetails() {
         return this.shareCredentialDetails;
     }

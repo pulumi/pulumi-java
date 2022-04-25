@@ -10,15 +10,15 @@ import java.util.Objects;
 @CustomType
 public final class JitSchedulingPolicyResponse {
     private final String duration;
-    /**
-     * The start time of the request.
-     * 
-     */
+        /**
+         * @return The start time of the request.
+         * 
+         */
     private final String startTime;
-    /**
-     * The type of JIT schedule.
-     * 
-     */
+        /**
+         * @return The type of JIT schedule.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -35,16 +35,16 @@ public final class JitSchedulingPolicyResponse {
         return this.duration;
     }
     /**
-     * The start time of the request.
+     * @return The start time of the request.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The type of JIT schedule.
+     * @return The type of JIT schedule.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

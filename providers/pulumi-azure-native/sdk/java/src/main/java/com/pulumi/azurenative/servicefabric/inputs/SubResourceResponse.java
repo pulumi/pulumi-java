@@ -25,6 +25,10 @@ public final class SubResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Azure resource identifier.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class SubResourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SubResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Azure resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

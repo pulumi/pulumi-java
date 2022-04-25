@@ -27,6 +27,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Uri of KeyVault
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -38,6 +42,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="key")
     private @Nullable Output<KeyPropertiesArgs> key;
 
+    /**
+     * @return Identity of the secret that includes name and version.
+     * 
+     */
     public Optional<Output<KeyPropertiesArgs>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -67,20 +75,44 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Uri of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Uri of KeyVault
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param key Identity of the secret that includes name and version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<KeyPropertiesArgs> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Identity of the secret that includes name and version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(KeyPropertiesArgs key) {
             return key(Output.of(key));
         }

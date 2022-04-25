@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetResourceGroupResult {
-    /**
-     * The ID of the resource group.
-     * 
-     */
+        /**
+         * @return The ID of the resource group.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
-     * 
-     */
+        /**
+         * @return The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+         * 
+         */
     private final String location;
-    /**
-     * The ID of the resource that manages this resource group.
-     * 
-     */
+        /**
+         * @return The ID of the resource that manages this resource group.
+         * 
+         */
     private final @Nullable String managedBy;
-    /**
-     * The name of the resource group.
-     * 
-     */
+        /**
+         * @return The name of the resource group.
+         * 
+         */
     private final String name;
-    /**
-     * The resource group properties.
-     * 
-     */
+        /**
+         * @return The resource group properties.
+         * 
+         */
     private final ResourceGroupPropertiesResponse properties;
-    /**
-     * The tags attached to the resource group.
-     * 
-     */
+        /**
+         * @return The tags attached to the resource group.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource group.
-     * 
-     */
+        /**
+         * @return The type of the resource group.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class GetResourceGroupResult {
     }
 
     /**
-     * The ID of the resource group.
+     * @return The ID of the resource group.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+     * @return The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The ID of the resource that manages this resource group.
+     * @return The ID of the resource that manages this resource group.
      * 
-    */
+     */
     public Optional<String> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
-     * The name of the resource group.
+     * @return The name of the resource group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource group properties.
+     * @return The resource group properties.
      * 
-    */
+     */
     public ResourceGroupPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The tags attached to the resource group.
+     * @return The tags attached to the resource group.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource group.
+     * @return The type of the resource group.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

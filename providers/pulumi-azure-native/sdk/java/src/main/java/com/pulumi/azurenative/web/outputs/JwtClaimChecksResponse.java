@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JwtClaimChecksResponse {
-    /**
-     * The list of the allowed client applications.
-     * 
-     */
+        /**
+         * @return The list of the allowed client applications.
+         * 
+         */
     private final @Nullable List<String> allowedClientApplications;
-    /**
-     * The list of the allowed groups.
-     * 
-     */
+        /**
+         * @return The list of the allowed groups.
+         * 
+         */
     private final @Nullable List<String> allowedGroups;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class JwtClaimChecksResponse {
     }
 
     /**
-     * The list of the allowed client applications.
+     * @return The list of the allowed client applications.
      * 
-    */
+     */
     public List<String> allowedClientApplications() {
         return this.allowedClientApplications == null ? List.of() : this.allowedClientApplications;
     }
     /**
-     * The list of the allowed groups.
+     * @return The list of the allowed groups.
      * 
-    */
+     */
     public List<String> allowedGroups() {
         return this.allowedGroups == null ? List.of() : this.allowedGroups;
     }

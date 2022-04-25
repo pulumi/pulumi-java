@@ -22,6 +22,10 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -33,6 +37,10 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceId", required=true)
     private Output<String> workspaceId;
 
+    /**
+     * @return The full Azure ID of the workspace to save the data in
+     * 
+     */
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
@@ -44,6 +52,10 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceSettingName")
     private @Nullable Output<String> workspaceSettingName;
 
+    /**
+     * @return Name of the security setting
+     * 
+     */
     public Optional<Output<String>> workspaceSettingName() {
         return Optional.ofNullable(this.workspaceSettingName);
     }
@@ -74,29 +86,65 @@ public final class WorkspaceSettingArgs extends com.pulumi.resources.ResourceArg
             $ = new WorkspaceSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param workspaceId The full Azure ID of the workspace to save the data in
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The full Azure ID of the workspace to save the data in
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }
 
+        /**
+         * @param workspaceSettingName Name of the security setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSettingName(@Nullable Output<String> workspaceSettingName) {
             $.workspaceSettingName = workspaceSettingName;
             return this;
         }
 
+        /**
+         * @param workspaceSettingName Name of the security setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceSettingName(String workspaceSettingName) {
             return workspaceSettingName(Output.of(workspaceSettingName));
         }

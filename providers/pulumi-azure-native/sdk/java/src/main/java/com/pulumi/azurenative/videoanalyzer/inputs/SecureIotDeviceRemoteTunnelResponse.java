@@ -24,6 +24,10 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
     @Import(name="deviceId", required=true)
     private String deviceId;
 
+    /**
+     * @return The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+     * 
+     */
     public String deviceId() {
         return this.deviceId;
     }
@@ -35,6 +39,10 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
     @Import(name="iotHubName", required=true)
     private String iotHubName;
 
+    /**
+     * @return Name of the IoT Hub.
+     * 
+     */
     public String iotHubName() {
         return this.iotHubName;
     }
@@ -47,6 +55,11 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,16 +90,35 @@ public final class SecureIotDeviceRemoteTunnelResponse extends com.pulumi.resour
             $ = new SecureIotDeviceRemoteTunnelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceId The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param iotHubName Name of the IoT Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotHubName(String iotHubName) {
             $.iotHubName = iotHubName;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.SecureIotDeviceRemoteTunnel&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

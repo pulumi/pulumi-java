@@ -26,6 +26,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerInstanceId", required=true)
     private String containerInstanceId;
 
+    /**
+     * @return ACI resource Id.
+     * 
+     */
     public String containerInstanceId() {
         return this.containerInstanceId;
     }
@@ -37,6 +41,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End time of the script execution.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -48,6 +56,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="error")
     private @Nullable ErrorResponseResponse error;
 
+    /**
+     * @return Error that is relayed from the script execution.
+     * 
+     */
     public Optional<ErrorResponseResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -59,6 +71,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="expirationTime", required=true)
     private String expirationTime;
 
+    /**
+     * @return Time the deployment script resource will expire.
+     * 
+     */
     public String expirationTime() {
         return this.expirationTime;
     }
@@ -70,6 +86,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the script execution.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -81,6 +101,10 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="storageAccountId", required=true)
     private String storageAccountId;
 
+    /**
+     * @return Storage account resource Id.
+     * 
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }
@@ -114,31 +138,67 @@ public final class ScriptStatusResponse extends com.pulumi.resources.InvokeArgs 
             $ = new ScriptStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerInstanceId ACI resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerInstanceId(String containerInstanceId) {
             $.containerInstanceId = containerInstanceId;
             return this;
         }
 
+        /**
+         * @param endTime End time of the script execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param error Error that is relayed from the script execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable ErrorResponseResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param expirationTime Time the deployment script resource will expire.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the script execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param storageAccountId Storage account resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;

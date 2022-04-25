@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EntityReferenceResponse {
-    /**
-     * The name of this referenced entity.
-     * 
-     */
+        /**
+         * @return The name of this referenced entity.
+         * 
+         */
     private final @Nullable String referenceName;
-    /**
-     * The type of this referenced entity.
-     * 
-     */
+        /**
+         * @return The type of this referenced entity.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class EntityReferenceResponse {
     }
 
     /**
-     * The name of this referenced entity.
+     * @return The name of this referenced entity.
      * 
-    */
+     */
     public Optional<String> referenceName() {
         return Optional.ofNullable(this.referenceName);
     }
     /**
-     * The type of this referenced entity.
+     * @return The type of this referenced entity.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

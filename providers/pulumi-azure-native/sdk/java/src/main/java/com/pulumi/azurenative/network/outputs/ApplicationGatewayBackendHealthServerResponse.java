@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationGatewayBackendHealthServerResponse {
-    /**
-     * IP address or FQDN of backend server.
-     * 
-     */
+        /**
+         * @return IP address or FQDN of backend server.
+         * 
+         */
     private final @Nullable String address;
-    /**
-     * Health of backend server.
-     * 
-     */
+        /**
+         * @return Health of backend server.
+         * 
+         */
     private final @Nullable String health;
-    /**
-     * Health Probe Log.
-     * 
-     */
+        /**
+         * @return Health Probe Log.
+         * 
+         */
     private final @Nullable String healthProbeLog;
-    /**
-     * Reference to IP configuration of backend server.
-     * 
-     */
+        /**
+         * @return Reference to IP configuration of backend server.
+         * 
+         */
     private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ApplicationGatewayBackendHealthServerResponse {
     }
 
     /**
-     * IP address or FQDN of backend server.
+     * @return IP address or FQDN of backend server.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * Health of backend server.
+     * @return Health of backend server.
      * 
-    */
+     */
     public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
     /**
-     * Health Probe Log.
+     * @return Health Probe Log.
      * 
-    */
+     */
     public Optional<String> healthProbeLog() {
         return Optional.ofNullable(this.healthProbeLog);
     }
     /**
-     * Reference to IP configuration of backend server.
+     * @return Reference to IP configuration of backend server.
      * 
-    */
+     */
     public Optional<NetworkInterfaceIPConfigurationResponse> ipConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }

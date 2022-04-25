@@ -21,125 +21,125 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The cluster data ingestion URI.
-     * 
-     */
+        /**
+         * @return The cluster data ingestion URI.
+         * 
+         */
     private final String dataIngestionUri;
-    /**
-     * A boolean value that indicates if the cluster&#39;s disks are encrypted.
-     * 
-     */
+        /**
+         * @return A boolean value that indicates if the cluster&#39;s disks are encrypted.
+         * 
+         */
     private final @Nullable Boolean enableDiskEncryption;
-    /**
-     * A boolean value that indicates if double encryption is enabled.
-     * 
-     */
+        /**
+         * @return A boolean value that indicates if double encryption is enabled.
+         * 
+         */
     private final @Nullable Boolean enableDoubleEncryption;
-    /**
-     * A boolean value that indicates if the purge operations are enabled.
-     * 
-     */
+        /**
+         * @return A boolean value that indicates if the purge operations are enabled.
+         * 
+         */
     private final @Nullable Boolean enablePurge;
-    /**
-     * A boolean value that indicates if the streaming ingest is enabled.
-     * 
-     */
+        /**
+         * @return A boolean value that indicates if the streaming ingest is enabled.
+         * 
+         */
     private final @Nullable Boolean enableStreamingIngest;
-    /**
-     * The engine type
-     * 
-     */
+        /**
+         * @return The engine type
+         * 
+         */
     private final @Nullable String engineType;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the cluster, if configured.
-     * 
-     */
+        /**
+         * @return The identity of the cluster, if configured.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * KeyVault properties for the cluster encryption.
-     * 
-     */
+        /**
+         * @return KeyVault properties for the cluster encryption.
+         * 
+         */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
-    /**
-     * List of the cluster&#39;s language extensions.
-     * 
-     */
+        /**
+         * @return List of the cluster&#39;s language extensions.
+         * 
+         */
     private final LanguageExtensionsListResponse languageExtensions;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Optimized auto scale definition.
-     * 
-     */
+        /**
+         * @return Optimized auto scale definition.
+         * 
+         */
     private final @Nullable OptimizedAutoscaleResponse optimizedAutoscale;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The SKU of the cluster.
-     * 
-     */
+        /**
+         * @return The SKU of the cluster.
+         * 
+         */
     private final AzureSkuResponse sku;
-    /**
-     * The state of the resource.
-     * 
-     */
+        /**
+         * @return The state of the resource.
+         * 
+         */
     private final String state;
-    /**
-     * The reason for the cluster&#39;s current state.
-     * 
-     */
+        /**
+         * @return The reason for the cluster&#39;s current state.
+         * 
+         */
     private final String stateReason;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The cluster&#39;s external tenants.
-     * 
-     */
+        /**
+         * @return The cluster&#39;s external tenants.
+         * 
+         */
     private final @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The cluster URI.
-     * 
-     */
+        /**
+         * @return The cluster URI.
+         * 
+         */
     private final String uri;
-    /**
-     * Virtual network definition.
-     * 
-     */
+        /**
+         * @return Virtual network definition.
+         * 
+         */
     private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
-    /**
-     * The availability zones of the cluster.
-     * 
-     */
+        /**
+         * @return The availability zones of the cluster.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -195,170 +195,170 @@ public final class GetClusterResult {
     }
 
     /**
-     * The cluster data ingestion URI.
+     * @return The cluster data ingestion URI.
      * 
-    */
+     */
     public String dataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
-     * A boolean value that indicates if the cluster&#39;s disks are encrypted.
+     * @return A boolean value that indicates if the cluster&#39;s disks are encrypted.
      * 
-    */
+     */
     public Optional<Boolean> enableDiskEncryption() {
         return Optional.ofNullable(this.enableDiskEncryption);
     }
     /**
-     * A boolean value that indicates if double encryption is enabled.
+     * @return A boolean value that indicates if double encryption is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableDoubleEncryption() {
         return Optional.ofNullable(this.enableDoubleEncryption);
     }
     /**
-     * A boolean value that indicates if the purge operations are enabled.
+     * @return A boolean value that indicates if the purge operations are enabled.
      * 
-    */
+     */
     public Optional<Boolean> enablePurge() {
         return Optional.ofNullable(this.enablePurge);
     }
     /**
-     * A boolean value that indicates if the streaming ingest is enabled.
+     * @return A boolean value that indicates if the streaming ingest is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableStreamingIngest() {
         return Optional.ofNullable(this.enableStreamingIngest);
     }
     /**
-     * The engine type
+     * @return The engine type
      * 
-    */
+     */
     public Optional<String> engineType() {
         return Optional.ofNullable(this.engineType);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the cluster, if configured.
+     * @return The identity of the cluster, if configured.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * KeyVault properties for the cluster encryption.
+     * @return KeyVault properties for the cluster encryption.
      * 
-    */
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
-     * List of the cluster&#39;s language extensions.
+     * @return List of the cluster&#39;s language extensions.
      * 
-    */
+     */
     public LanguageExtensionsListResponse languageExtensions() {
         return this.languageExtensions;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Optimized auto scale definition.
+     * @return Optimized auto scale definition.
      * 
-    */
+     */
     public Optional<OptimizedAutoscaleResponse> optimizedAutoscale() {
         return Optional.ofNullable(this.optimizedAutoscale);
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the cluster.
+     * @return The SKU of the cluster.
      * 
-    */
+     */
     public AzureSkuResponse sku() {
         return this.sku;
     }
     /**
-     * The state of the resource.
+     * @return The state of the resource.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The reason for the cluster&#39;s current state.
+     * @return The reason for the cluster&#39;s current state.
      * 
-    */
+     */
     public String stateReason() {
         return this.stateReason;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The cluster&#39;s external tenants.
+     * @return The cluster&#39;s external tenants.
      * 
-    */
+     */
     public List<TrustedExternalTenantResponse> trustedExternalTenants() {
         return this.trustedExternalTenants == null ? List.of() : this.trustedExternalTenants;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The cluster URI.
+     * @return The cluster URI.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * Virtual network definition.
+     * @return Virtual network definition.
      * 
-    */
+     */
     public Optional<VirtualNetworkConfigurationResponse> virtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
     /**
-     * The availability zones of the cluster.
+     * @return The availability zones of the cluster.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

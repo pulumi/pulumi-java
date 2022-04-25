@@ -31,6 +31,11 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name for the data source.
+     * This name should be unique across all data sources (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -43,6 +48,11 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
     @Import(name="streams")
     private @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
 
+    /**
+     * @return List of streams that this data source will be sent to.
+     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     * 
+     */
     public Optional<Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -54,6 +64,10 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
     @Import(name="xPathQueries")
     private @Nullable Output<List<String>> xPathQueries;
 
+    /**
+     * @return A list of Windows Event Log queries in XPATH format.
+     * 
+     */
     public Optional<Output<List<String>>> xPathQueries() {
         return Optional.ofNullable(this.xPathQueries);
     }
@@ -84,37 +98,90 @@ public final class WindowsEventLogDataSourceArgs extends com.pulumi.resources.Re
             $ = new WindowsEventLogDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(List<Either<String,KnownWindowsEventLogDataSourceStreams>> streams) {
             return streams(Output.of(streams));
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(Either<String,KnownWindowsEventLogDataSourceStreams>... streams) {
             return streams(List.of(streams));
         }
 
+        /**
+         * @param xPathQueries A list of Windows Event Log queries in XPATH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPathQueries(@Nullable Output<List<String>> xPathQueries) {
             $.xPathQueries = xPathQueries;
             return this;
         }
 
+        /**
+         * @param xPathQueries A list of Windows Event Log queries in XPATH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPathQueries(List<String> xPathQueries) {
             return xPathQueries(Output.of(xPathQueries));
         }
 
+        /**
+         * @param xPathQueries A list of Windows Event Log queries in XPATH format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xPathQueries(String... xPathQueries) {
             return xPathQueries(List.of(xPathQueries));
         }

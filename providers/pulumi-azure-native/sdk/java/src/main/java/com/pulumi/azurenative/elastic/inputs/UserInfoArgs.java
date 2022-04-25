@@ -27,6 +27,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="companyInfo")
     private @Nullable Output<CompanyInfoArgs> companyInfo;
 
+    /**
+     * @return Company information of the user to be passed to partners.
+     * 
+     */
     public Optional<Output<CompanyInfoArgs>> companyInfo() {
         return Optional.ofNullable(this.companyInfo);
     }
@@ -38,6 +42,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="companyName")
     private @Nullable Output<String> companyName;
 
+    /**
+     * @return Company name of the user
+     * 
+     */
     public Optional<Output<String>> companyName() {
         return Optional.ofNullable(this.companyName);
     }
@@ -49,6 +57,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="emailAddress")
     private @Nullable Output<String> emailAddress;
 
+    /**
+     * @return Email of the user used by Elastic for contacting them if needed
+     * 
+     */
     public Optional<Output<String>> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -60,6 +72,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
     private @Nullable Output<String> firstName;
 
+    /**
+     * @return First name of the user
+     * 
+     */
     public Optional<Output<String>> firstName() {
         return Optional.ofNullable(this.firstName);
     }
@@ -71,6 +87,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
     private @Nullable Output<String> lastName;
 
+    /**
+     * @return Last name of the user
+     * 
+     */
     public Optional<Output<String>> lastName() {
         return Optional.ofNullable(this.lastName);
     }
@@ -103,47 +123,107 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param companyInfo Company information of the user to be passed to partners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyInfo(@Nullable Output<CompanyInfoArgs> companyInfo) {
             $.companyInfo = companyInfo;
             return this;
         }
 
+        /**
+         * @param companyInfo Company information of the user to be passed to partners.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyInfo(CompanyInfoArgs companyInfo) {
             return companyInfo(Output.of(companyInfo));
         }
 
+        /**
+         * @param companyName Company name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(@Nullable Output<String> companyName) {
             $.companyName = companyName;
             return this;
         }
 
+        /**
+         * @param companyName Company name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(String companyName) {
             return companyName(Output.of(companyName));
         }
 
+        /**
+         * @param emailAddress Email of the user used by Elastic for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress Email of the user used by Elastic for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }
 
+        /**
+         * @param firstName First name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(@Nullable Output<String> firstName) {
             $.firstName = firstName;
             return this;
         }
 
+        /**
+         * @param firstName First name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstName(String firstName) {
             return firstName(Output.of(firstName));
         }
 
+        /**
+         * @param lastName Last name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(@Nullable Output<String> lastName) {
             $.lastName = lastName;
             return this;
         }
 
+        /**
+         * @param lastName Last name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastName(String lastName) {
             return lastName(Output.of(lastName));
         }

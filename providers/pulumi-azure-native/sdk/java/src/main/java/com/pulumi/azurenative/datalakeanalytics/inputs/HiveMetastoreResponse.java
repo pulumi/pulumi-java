@@ -19,6 +19,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return The databaseName for the Hive MetaStore
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -30,6 +34,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -41,6 +49,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -52,6 +64,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="nestedResourceProvisioningState", required=true)
     private String nestedResourceProvisioningState;
 
+    /**
+     * @return The current state of the NestedResource
+     * 
+     */
     public String nestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
     }
@@ -63,6 +79,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return The password for the Hive MetaStore
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -74,6 +94,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="runtimeVersion", required=true)
     private String runtimeVersion;
 
+    /**
+     * @return The runtimeVersion for the Hive MetaStore
+     * 
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
@@ -85,6 +109,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="serverUri", required=true)
     private String serverUri;
 
+    /**
+     * @return The serverUri for the Hive MetaStore
+     * 
+     */
     public String serverUri() {
         return this.serverUri;
     }
@@ -96,6 +124,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -107,6 +139,10 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The userName for the Hive MetaStore
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -143,46 +179,100 @@ public final class HiveMetastoreResponse extends com.pulumi.resources.InvokeArgs
             $ = new HiveMetastoreResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The databaseName for the Hive MetaStore
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nestedResourceProvisioningState The current state of the NestedResource
+         * 
+         * @return builder
+         * 
+         */
         public Builder nestedResourceProvisioningState(String nestedResourceProvisioningState) {
             $.nestedResourceProvisioningState = nestedResourceProvisioningState;
             return this;
         }
 
+        /**
+         * @param password The password for the Hive MetaStore
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param runtimeVersion The runtimeVersion for the Hive MetaStore
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param serverUri The serverUri for the Hive MetaStore
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverUri(String serverUri) {
             $.serverUri = serverUri;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName The userName for the Hive MetaStore
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

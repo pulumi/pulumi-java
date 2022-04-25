@@ -16,85 +16,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PropertyDefinitionResponse {
-    /**
-     * Array value separator for properties with isArray set.
-     * 
-     */
+        /**
+         * @return Array value separator for properties with isArray set.
+         * 
+         */
     private final @Nullable String arrayValueSeparator;
-    /**
-     * This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
-     * 
-     */
+        /**
+         * @return This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+         * 
+         */
     private final List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules;
-    /**
-     * Describes valid values for an enum property.
-     * 
-     */
+        /**
+         * @return Describes valid values for an enum property.
+         * 
+         */
     private final @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues;
-    /**
-     * Name of the property.
-     * 
-     */
+        /**
+         * @return Name of the property.
+         * 
+         */
     private final String fieldName;
-    /**
-     * Type of the property.
-     * 
-     */
+        /**
+         * @return Type of the property.
+         * 
+         */
     private final String fieldType;
-    /**
-     * Indicates if the property is actually an array of the fieldType above on the data api.
-     * 
-     */
+        /**
+         * @return Indicates if the property is actually an array of the fieldType above on the data api.
+         * 
+         */
     private final @Nullable Boolean isArray;
-    /**
-     * Whether property is available in graph or not.
-     * 
-     */
+        /**
+         * @return Whether property is available in graph or not.
+         * 
+         */
     private final @Nullable Boolean isAvailableInGraph;
-    /**
-     * Indicates if the property is an enum.
-     * 
-     */
+        /**
+         * @return Indicates if the property is an enum.
+         * 
+         */
     private final @Nullable Boolean isEnum;
-    /**
-     * Indicates if the property is an flag enum.
-     * 
-     */
+        /**
+         * @return Indicates if the property is an flag enum.
+         * 
+         */
     private final @Nullable Boolean isFlagEnum;
-    /**
-     * Whether the property is an Image.
-     * 
-     */
+        /**
+         * @return Whether the property is an Image.
+         * 
+         */
     private final @Nullable Boolean isImage;
-    /**
-     * Whether the property is a localized string.
-     * 
-     */
+        /**
+         * @return Whether the property is a localized string.
+         * 
+         */
     private final @Nullable Boolean isLocalizedString;
-    /**
-     * Whether the property is a name or a part of name.
-     * 
-     */
+        /**
+         * @return Whether the property is a name or a part of name.
+         * 
+         */
     private final @Nullable Boolean isName;
-    /**
-     * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
-     * 
-     */
+        /**
+         * @return Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+         * 
+         */
     private final @Nullable Boolean isRequired;
-    /**
-     * Max length of string. Used only if type is string.
-     * 
-     */
+        /**
+         * @return Max length of string. Used only if type is string.
+         * 
+         */
     private final @Nullable Integer maxLength;
-    /**
-     * The ID associated with the property.
-     * 
-     */
+        /**
+         * @return The ID associated with the property.
+         * 
+         */
     private final @Nullable String propertyId;
-    /**
-     * URL encoded schema.org item prop link for the property.
-     * 
-     */
+        /**
+         * @return URL encoded schema.org item prop link for the property.
+         * 
+         */
     private final @Nullable String schemaItemPropLink;
 
     @CustomType.Constructor
@@ -134,114 +134,114 @@ public final class PropertyDefinitionResponse {
     }
 
     /**
-     * Array value separator for properties with isArray set.
+     * @return Array value separator for properties with isArray set.
      * 
-    */
+     */
     public Optional<String> arrayValueSeparator() {
         return Optional.ofNullable(this.arrayValueSeparator);
     }
     /**
-     * This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
+     * @return This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
      * 
-    */
+     */
     public List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules() {
         return this.dataSourcePrecedenceRules;
     }
     /**
-     * Describes valid values for an enum property.
+     * @return Describes valid values for an enum property.
      * 
-    */
+     */
     public List<ProfileEnumValidValuesFormatResponse> enumValidValues() {
         return this.enumValidValues == null ? List.of() : this.enumValidValues;
     }
     /**
-     * Name of the property.
+     * @return Name of the property.
      * 
-    */
+     */
     public String fieldName() {
         return this.fieldName;
     }
     /**
-     * Type of the property.
+     * @return Type of the property.
      * 
-    */
+     */
     public String fieldType() {
         return this.fieldType;
     }
     /**
-     * Indicates if the property is actually an array of the fieldType above on the data api.
+     * @return Indicates if the property is actually an array of the fieldType above on the data api.
      * 
-    */
+     */
     public Optional<Boolean> isArray() {
         return Optional.ofNullable(this.isArray);
     }
     /**
-     * Whether property is available in graph or not.
+     * @return Whether property is available in graph or not.
      * 
-    */
+     */
     public Optional<Boolean> isAvailableInGraph() {
         return Optional.ofNullable(this.isAvailableInGraph);
     }
     /**
-     * Indicates if the property is an enum.
+     * @return Indicates if the property is an enum.
      * 
-    */
+     */
     public Optional<Boolean> isEnum() {
         return Optional.ofNullable(this.isEnum);
     }
     /**
-     * Indicates if the property is an flag enum.
+     * @return Indicates if the property is an flag enum.
      * 
-    */
+     */
     public Optional<Boolean> isFlagEnum() {
         return Optional.ofNullable(this.isFlagEnum);
     }
     /**
-     * Whether the property is an Image.
+     * @return Whether the property is an Image.
      * 
-    */
+     */
     public Optional<Boolean> isImage() {
         return Optional.ofNullable(this.isImage);
     }
     /**
-     * Whether the property is a localized string.
+     * @return Whether the property is a localized string.
      * 
-    */
+     */
     public Optional<Boolean> isLocalizedString() {
         return Optional.ofNullable(this.isLocalizedString);
     }
     /**
-     * Whether the property is a name or a part of name.
+     * @return Whether the property is a name or a part of name.
      * 
-    */
+     */
     public Optional<Boolean> isName() {
         return Optional.ofNullable(this.isName);
     }
     /**
-     * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+     * @return Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
      * 
-    */
+     */
     public Optional<Boolean> isRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
-     * Max length of string. Used only if type is string.
+     * @return Max length of string. Used only if type is string.
      * 
-    */
+     */
     public Optional<Integer> maxLength() {
         return Optional.ofNullable(this.maxLength);
     }
     /**
-     * The ID associated with the property.
+     * @return The ID associated with the property.
      * 
-    */
+     */
     public Optional<String> propertyId() {
         return Optional.ofNullable(this.propertyId);
     }
     /**
-     * URL encoded schema.org item prop link for the property.
+     * @return URL encoded schema.org item prop link for the property.
      * 
-    */
+     */
     public Optional<String> schemaItemPropLink() {
         return Optional.ofNullable(this.schemaItemPropLink);
     }

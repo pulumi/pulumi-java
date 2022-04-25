@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LinkedServiceReferenceResponse {
-    /**
-     * Arguments for LinkedService.
-     * 
-     */
+        /**
+         * @return Arguments for LinkedService.
+         * 
+         */
     private final @Nullable Map<String,Object> parameters;
-    /**
-     * Reference LinkedService name.
-     * 
-     */
+        /**
+         * @return Reference LinkedService name.
+         * 
+         */
     private final String referenceName;
-    /**
-     * Linked service reference type.
-     * 
-     */
+        /**
+         * @return Linked service reference type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class LinkedServiceReferenceResponse {
     }
 
     /**
-     * Arguments for LinkedService.
+     * @return Arguments for LinkedService.
      * 
-    */
+     */
     public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Reference LinkedService name.
+     * @return Reference LinkedService name.
      * 
-    */
+     */
     public String referenceName() {
         return this.referenceName;
     }
     /**
-     * Linked service reference type.
+     * @return Linked service reference type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

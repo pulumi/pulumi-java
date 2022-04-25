@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TypedErrorInfoResponse {
-    /**
-     * The scenario specific error details.
-     * 
-     */
+        /**
+         * @return The scenario specific error details.
+         * 
+         */
     private final Object info;
-    /**
-     * The type of included error details.
-     * 
-     */
+        /**
+         * @return The type of included error details.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class TypedErrorInfoResponse {
     }
 
     /**
-     * The scenario specific error details.
+     * @return The scenario specific error details.
      * 
-    */
+     */
     public Object info() {
         return this.info;
     }
     /**
-     * The type of included error details.
+     * @return The type of included error details.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

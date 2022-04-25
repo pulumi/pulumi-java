@@ -23,6 +23,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorName", required=true)
     private Output<String> monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public Output<String> monitorName() {
         return this.monitorName;
     }
@@ -34,6 +38,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the monitoring tag rules.
+     * 
+     */
     public Optional<Output<MonitoringTagRulesPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the Elastic resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
     private @Nullable Output<String> ruleSetName;
 
+    /**
+     * @return Tag Rule Set resource name
+     * 
+     */
     public Optional<Output<String>> ruleSetName() {
         return Optional.ofNullable(this.ruleSetName);
     }
@@ -87,38 +103,86 @@ public final class TagRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(Output<String> monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             return monitorName(Output.of(monitorName));
         }
 
+        /**
+         * @param properties Properties of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<MonitoringTagRulesPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the monitoring tag rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(MonitoringTagRulesPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the Elastic resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the Elastic resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleSetName Tag Rule Set resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             $.ruleSetName = ruleSetName;
             return this;
         }
 
+        /**
+         * @param ruleSetName Tag Rule Set resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(String ruleSetName) {
             return ruleSetName(Output.of(ruleSetName));
         }

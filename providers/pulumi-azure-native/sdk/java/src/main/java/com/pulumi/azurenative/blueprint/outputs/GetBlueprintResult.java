@@ -16,60 +16,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBlueprintResult {
-    /**
-     * Multi-line explain this resource.
-     * 
-     */
+        /**
+         * @return Multi-line explain this resource.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * One-liner string explain this resource.
-     * 
-     */
+        /**
+         * @return One-liner string explain this resource.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * String Id used to locate any resource on Azure.
-     * 
-     */
+        /**
+         * @return String Id used to locate any resource on Azure.
+         * 
+         */
     private final String id;
-    /**
-     * Layout view of the blueprint definition for UI reference.
-     * 
-     */
+        /**
+         * @return Layout view of the blueprint definition for UI reference.
+         * 
+         */
     private final Object layout;
-    /**
-     * Name of this resource.
-     * 
-     */
+        /**
+         * @return Name of this resource.
+         * 
+         */
     private final String name;
-    /**
-     * Parameters required by this blueprint definition.
-     * 
-     */
+        /**
+         * @return Parameters required by this blueprint definition.
+         * 
+         */
     private final @Nullable Map<String,ParameterDefinitionResponse> parameters;
-    /**
-     * Resource group placeholders defined by this blueprint definition.
-     * 
-     */
+        /**
+         * @return Resource group placeholders defined by this blueprint definition.
+         * 
+         */
     private final @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups;
-    /**
-     * Status of the blueprint. This field is readonly.
-     * 
-     */
+        /**
+         * @return Status of the blueprint. This field is readonly.
+         * 
+         */
     private final BlueprintStatusResponse status;
-    /**
-     * The scope where this blueprint definition can be assigned.
-     * 
-     */
+        /**
+         * @return The scope where this blueprint definition can be assigned.
+         * 
+         */
     private final String targetScope;
-    /**
-     * Type of this resource.
-     * 
-     */
+        /**
+         * @return Type of this resource.
+         * 
+         */
     private final String type;
-    /**
-     * Published versions of this blueprint definition.
-     * 
-     */
+        /**
+         * @return Published versions of this blueprint definition.
+         * 
+         */
     private final @Nullable Object versions;
 
     @CustomType.Constructor
@@ -99,79 +99,79 @@ public final class GetBlueprintResult {
     }
 
     /**
-     * Multi-line explain this resource.
+     * @return Multi-line explain this resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * One-liner string explain this resource.
+     * @return One-liner string explain this resource.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Layout view of the blueprint definition for UI reference.
+     * @return Layout view of the blueprint definition for UI reference.
      * 
-    */
+     */
     public Object layout() {
         return this.layout;
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Parameters required by this blueprint definition.
+     * @return Parameters required by this blueprint definition.
      * 
-    */
+     */
     public Map<String,ParameterDefinitionResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Resource group placeholders defined by this blueprint definition.
+     * @return Resource group placeholders defined by this blueprint definition.
      * 
-    */
+     */
     public Map<String,ResourceGroupDefinitionResponse> resourceGroups() {
         return this.resourceGroups == null ? Map.of() : this.resourceGroups;
     }
     /**
-     * Status of the blueprint. This field is readonly.
+     * @return Status of the blueprint. This field is readonly.
      * 
-    */
+     */
     public BlueprintStatusResponse status() {
         return this.status;
     }
     /**
-     * The scope where this blueprint definition can be assigned.
+     * @return The scope where this blueprint definition can be assigned.
      * 
-    */
+     */
     public String targetScope() {
         return this.targetScope;
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Published versions of this blueprint definition.
+     * @return Published versions of this blueprint definition.
      * 
-    */
+     */
     public Optional<Object> versions() {
         return Optional.ofNullable(this.versions);
     }

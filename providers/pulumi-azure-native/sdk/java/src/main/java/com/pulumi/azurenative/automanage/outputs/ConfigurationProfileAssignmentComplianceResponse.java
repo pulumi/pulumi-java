@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfigurationProfileAssignmentComplianceResponse {
-    /**
-     * The state of compliance, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The state of compliance, which only appears in the response.
+         * 
+         */
     private final String updateStatus;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
     }
 
     /**
-     * The state of compliance, which only appears in the response.
+     * @return The state of compliance, which only appears in the response.
      * 
-    */
+     */
     public String updateStatus() {
         return this.updateStatus;
     }

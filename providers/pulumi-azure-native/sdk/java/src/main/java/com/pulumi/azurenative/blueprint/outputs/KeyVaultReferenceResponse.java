@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class KeyVaultReferenceResponse {
-    /**
-     * Azure resource ID of the Key Vault.
-     * 
-     */
+        /**
+         * @return Azure resource ID of the Key Vault.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class KeyVaultReferenceResponse {
     }
 
     /**
-     * Azure resource ID of the Key Vault.
+     * @return Azure resource ID of the Key Vault.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

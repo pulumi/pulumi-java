@@ -16,35 +16,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoHealTriggersResponse {
-    /**
-     * A rule based on private bytes.
-     * 
-     */
+        /**
+         * @return A rule based on private bytes.
+         * 
+         */
     private final @Nullable Integer privateBytesInKB;
-    /**
-     * A rule based on total requests.
-     * 
-     */
+        /**
+         * @return A rule based on total requests.
+         * 
+         */
     private final @Nullable RequestsBasedTriggerResponse requests;
-    /**
-     * A rule based on request execution time.
-     * 
-     */
+        /**
+         * @return A rule based on request execution time.
+         * 
+         */
     private final @Nullable SlowRequestsBasedTriggerResponse slowRequests;
-    /**
-     * A rule based on multiple Slow Requests Rule with path
-     * 
-     */
+        /**
+         * @return A rule based on multiple Slow Requests Rule with path
+         * 
+         */
     private final @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath;
-    /**
-     * A rule based on status codes.
-     * 
-     */
+        /**
+         * @return A rule based on status codes.
+         * 
+         */
     private final @Nullable List<StatusCodesBasedTriggerResponse> statusCodes;
-    /**
-     * A rule based on status codes ranges.
-     * 
-     */
+        /**
+         * @return A rule based on status codes ranges.
+         * 
+         */
     private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
     @CustomType.Constructor
@@ -64,44 +64,44 @@ public final class AutoHealTriggersResponse {
     }
 
     /**
-     * A rule based on private bytes.
+     * @return A rule based on private bytes.
      * 
-    */
+     */
     public Optional<Integer> privateBytesInKB() {
         return Optional.ofNullable(this.privateBytesInKB);
     }
     /**
-     * A rule based on total requests.
+     * @return A rule based on total requests.
      * 
-    */
+     */
     public Optional<RequestsBasedTriggerResponse> requests() {
         return Optional.ofNullable(this.requests);
     }
     /**
-     * A rule based on request execution time.
+     * @return A rule based on request execution time.
      * 
-    */
+     */
     public Optional<SlowRequestsBasedTriggerResponse> slowRequests() {
         return Optional.ofNullable(this.slowRequests);
     }
     /**
-     * A rule based on multiple Slow Requests Rule with path
+     * @return A rule based on multiple Slow Requests Rule with path
      * 
-    */
+     */
     public List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? List.of() : this.slowRequestsWithPath;
     }
     /**
-     * A rule based on status codes.
+     * @return A rule based on status codes.
      * 
-    */
+     */
     public List<StatusCodesBasedTriggerResponse> statusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
     /**
-     * A rule based on status codes ranges.
+     * @return A rule based on status codes ranges.
      * 
-    */
+     */
     public List<StatusCodesRangeBasedTriggerResponse> statusCodesRange() {
         return this.statusCodesRange == null ? List.of() : this.statusCodesRange;
     }

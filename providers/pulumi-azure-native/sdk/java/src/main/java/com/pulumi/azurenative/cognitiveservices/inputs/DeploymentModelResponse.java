@@ -25,6 +25,10 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return Deployment model format.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -36,6 +40,10 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Deployment model name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Deployment model version.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -77,16 +89,34 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
             $ = new DeploymentModelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param format Deployment model format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param name Deployment model name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version Deployment model version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

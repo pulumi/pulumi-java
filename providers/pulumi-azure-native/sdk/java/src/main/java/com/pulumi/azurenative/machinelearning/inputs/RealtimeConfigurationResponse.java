@@ -25,6 +25,10 @@ public final class RealtimeConfigurationResponse extends com.pulumi.resources.In
     @Import(name="maxConcurrentCalls")
     private @Nullable Integer maxConcurrentCalls;
 
+    /**
+     * @return Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+     * 
+     */
     public Optional<Integer> maxConcurrentCalls() {
         return Optional.ofNullable(this.maxConcurrentCalls);
     }
@@ -53,6 +57,12 @@ public final class RealtimeConfigurationResponse extends com.pulumi.resources.In
             $ = new RealtimeConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConcurrentCalls Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
             $.maxConcurrentCalls = maxConcurrentCalls;
             return this;

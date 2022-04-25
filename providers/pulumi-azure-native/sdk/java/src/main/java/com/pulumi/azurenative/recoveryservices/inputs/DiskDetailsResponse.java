@@ -26,6 +26,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="maxSizeMB")
     private @Nullable Double maxSizeMB;
 
+    /**
+     * @return The hard disk max size in MB.
+     * 
+     */
     public Optional<Double> maxSizeMB() {
         return Optional.ofNullable(this.maxSizeMB);
     }
@@ -37,6 +41,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vhdId")
     private @Nullable String vhdId;
 
+    /**
+     * @return The VHD Id.
+     * 
+     */
     public Optional<String> vhdId() {
         return Optional.ofNullable(this.vhdId);
     }
@@ -48,6 +56,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vhdName")
     private @Nullable String vhdName;
 
+    /**
+     * @return The VHD name.
+     * 
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }
@@ -59,6 +71,10 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vhdType")
     private @Nullable String vhdType;
 
+    /**
+     * @return The type of the volume.
+     * 
+     */
     public Optional<String> vhdType() {
         return Optional.ofNullable(this.vhdType);
     }
@@ -90,21 +106,45 @@ public final class DiskDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSizeMB The hard disk max size in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSizeMB(@Nullable Double maxSizeMB) {
             $.maxSizeMB = maxSizeMB;
             return this;
         }
 
+        /**
+         * @param vhdId The VHD Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdId(@Nullable String vhdId) {
             $.vhdId = vhdId;
             return this;
         }
 
+        /**
+         * @param vhdName The VHD name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdName(@Nullable String vhdName) {
             $.vhdName = vhdName;
             return this;
         }
 
+        /**
+         * @param vhdType The type of the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhdType(@Nullable String vhdType) {
             $.vhdType = vhdType;
             return this;

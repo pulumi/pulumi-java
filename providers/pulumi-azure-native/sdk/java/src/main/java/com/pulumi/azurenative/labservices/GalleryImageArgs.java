@@ -24,6 +24,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageName")
     private @Nullable Output<String> galleryImageName;
 
+    /**
+     * @return The name of the gallery Image.
+     * 
+     */
     public Optional<Output<String>> galleryImageName() {
         return Optional.ofNullable(this.galleryImageName);
     }
@@ -35,6 +39,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Indicates whether this gallery image is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -46,6 +54,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isOverride")
     private @Nullable Output<Boolean> isOverride;
 
+    /**
+     * @return Indicates whether this gallery has been overridden for this lab account
+     * 
+     */
     public Optional<Output<Boolean>> isOverride() {
         return Optional.ofNullable(this.isOverride);
     }
@@ -57,6 +69,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isPlanAuthorized")
     private @Nullable Output<Boolean> isPlanAuthorized;
 
+    /**
+     * @return Indicates if the plan has been authorized for programmatic deployment.
+     * 
+     */
     public Optional<Output<Boolean>> isPlanAuthorized() {
         return Optional.ofNullable(this.isPlanAuthorized);
     }
@@ -68,6 +84,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labAccountName", required=true)
     private Output<String> labAccountName;
 
+    /**
+     * @return The name of the lab Account.
+     * 
+     */
     public Output<String> labAccountName() {
         return this.labAccountName;
     }
@@ -79,6 +99,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -90,6 +114,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -101,6 +129,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,6 +144,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -123,6 +159,10 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uniqueIdentifier")
     private @Nullable Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     * 
+     */
     public Optional<Output<String>> uniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }
@@ -160,92 +200,212 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GalleryImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleryImageName The name of the gallery Image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageName(@Nullable Output<String> galleryImageName) {
             $.galleryImageName = galleryImageName;
             return this;
         }
 
+        /**
+         * @param galleryImageName The name of the gallery Image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageName(String galleryImageName) {
             return galleryImageName(Output.of(galleryImageName));
         }
 
+        /**
+         * @param isEnabled Indicates whether this gallery image is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Indicates whether this gallery image is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param isOverride Indicates whether this gallery has been overridden for this lab account
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOverride(@Nullable Output<Boolean> isOverride) {
             $.isOverride = isOverride;
             return this;
         }
 
+        /**
+         * @param isOverride Indicates whether this gallery has been overridden for this lab account
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOverride(Boolean isOverride) {
             return isOverride(Output.of(isOverride));
         }
 
+        /**
+         * @param isPlanAuthorized Indicates if the plan has been authorized for programmatic deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
             $.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
 
+        /**
+         * @param isPlanAuthorized Indicates if the plan has been authorized for programmatic deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPlanAuthorized(Boolean isPlanAuthorized) {
             return isPlanAuthorized(Output.of(isPlanAuthorized));
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(Output<String> labAccountName) {
             $.labAccountName = labAccountName;
             return this;
         }
 
+        /**
+         * @param labAccountName The name of the lab Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labAccountName(String labAccountName) {
             return labAccountName(Output.of(labAccountName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param provisioningState The provisioning status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning status of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param uniqueIdentifier The unique immutable identifier of a resource (Guid).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             $.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
+        /**
+         * @param uniqueIdentifier The unique immutable identifier of a resource (Guid).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uniqueIdentifier(String uniqueIdentifier) {
             return uniqueIdentifier(Output.of(uniqueIdentifier));
         }

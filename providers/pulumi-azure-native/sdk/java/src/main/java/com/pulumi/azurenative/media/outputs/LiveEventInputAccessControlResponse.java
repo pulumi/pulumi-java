@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LiveEventInputAccessControlResponse {
-    /**
-     * The IP access control properties.
-     * 
-     */
+        /**
+         * @return The IP access control properties.
+         * 
+         */
     private final @Nullable IPAccessControlResponse ip;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class LiveEventInputAccessControlResponse {
     }
 
     /**
-     * The IP access control properties.
+     * @return The IP access control properties.
      * 
-    */
+     */
     public Optional<IPAccessControlResponse> ip() {
         return Optional.ofNullable(this.ip);
     }

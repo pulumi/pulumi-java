@@ -22,6 +22,10 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -33,6 +37,10 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
     @Import(name="sourceDeviceName", required=true)
     private String sourceDeviceName;
 
+    /**
+     * @return The source device name on which failover is performed.
+     * 
+     */
     public String sourceDeviceName() {
         return this.sourceDeviceName;
     }
@@ -55,6 +67,10 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
     @Import(name="volumeContainers")
     private @Nullable List<String> volumeContainers;
 
+    /**
+     * @return The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+     * 
+     */
     public Optional<List<String>> volumeContainers() {
         return Optional.ofNullable(this.volumeContainers);
     }
@@ -86,26 +102,56 @@ public final class ListDeviceFailoverTarsArgs extends com.pulumi.resources.Invok
             $ = new ListDeviceFailoverTarsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sourceDeviceName The source device name on which failover is performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceDeviceName(String sourceDeviceName) {
             $.sourceDeviceName = sourceDeviceName;
             return this;
         }
 
+        /**
+         * @param volumeContainers The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainers(@Nullable List<String> volumeContainers) {
             $.volumeContainers = volumeContainers;
             return this;
         }
 
+        /**
+         * @param volumeContainers The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainers(String... volumeContainers) {
             return volumeContainers(List.of(volumeContainers));
         }

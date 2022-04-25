@@ -10,45 +10,45 @@ import java.util.Objects;
 
 @CustomType
 public final class IpsecPolicyResponse {
-    /**
-     * The DH Group used in IKE Phase 1 for initial SA.
-     * 
-     */
+        /**
+         * @return The DH Group used in IKE Phase 1 for initial SA.
+         * 
+         */
     private final String dhGroup;
-    /**
-     * The IKE encryption algorithm (IKE phase 2).
-     * 
-     */
+        /**
+         * @return The IKE encryption algorithm (IKE phase 2).
+         * 
+         */
     private final String ikeEncryption;
-    /**
-     * The IKE integrity algorithm (IKE phase 2).
-     * 
-     */
+        /**
+         * @return The IKE integrity algorithm (IKE phase 2).
+         * 
+         */
     private final String ikeIntegrity;
-    /**
-     * The IPSec encryption algorithm (IKE phase 1).
-     * 
-     */
+        /**
+         * @return The IPSec encryption algorithm (IKE phase 1).
+         * 
+         */
     private final String ipsecEncryption;
-    /**
-     * The IPSec integrity algorithm (IKE phase 1).
-     * 
-     */
+        /**
+         * @return The IPSec integrity algorithm (IKE phase 1).
+         * 
+         */
     private final String ipsecIntegrity;
-    /**
-     * The Pfs Group used in IKE Phase 2 for new child SA.
-     * 
-     */
+        /**
+         * @return The Pfs Group used in IKE Phase 2 for new child SA.
+         * 
+         */
     private final String pfsGroup;
-    /**
-     * The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
-     * 
-     */
+        /**
+         * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+         * 
+         */
     private final Integer saDataSizeKilobytes;
-    /**
-     * The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
-     * 
-     */
+        /**
+         * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+         * 
+         */
     private final Integer saLifeTimeSeconds;
 
     @CustomType.Constructor
@@ -72,58 +72,58 @@ public final class IpsecPolicyResponse {
     }
 
     /**
-     * The DH Group used in IKE Phase 1 for initial SA.
+     * @return The DH Group used in IKE Phase 1 for initial SA.
      * 
-    */
+     */
     public String dhGroup() {
         return this.dhGroup;
     }
     /**
-     * The IKE encryption algorithm (IKE phase 2).
+     * @return The IKE encryption algorithm (IKE phase 2).
      * 
-    */
+     */
     public String ikeEncryption() {
         return this.ikeEncryption;
     }
     /**
-     * The IKE integrity algorithm (IKE phase 2).
+     * @return The IKE integrity algorithm (IKE phase 2).
      * 
-    */
+     */
     public String ikeIntegrity() {
         return this.ikeIntegrity;
     }
     /**
-     * The IPSec encryption algorithm (IKE phase 1).
+     * @return The IPSec encryption algorithm (IKE phase 1).
      * 
-    */
+     */
     public String ipsecEncryption() {
         return this.ipsecEncryption;
     }
     /**
-     * The IPSec integrity algorithm (IKE phase 1).
+     * @return The IPSec integrity algorithm (IKE phase 1).
      * 
-    */
+     */
     public String ipsecIntegrity() {
         return this.ipsecIntegrity;
     }
     /**
-     * The Pfs Group used in IKE Phase 2 for new child SA.
+     * @return The Pfs Group used in IKE Phase 2 for new child SA.
      * 
-    */
+     */
     public String pfsGroup() {
         return this.pfsGroup;
     }
     /**
-     * The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+     * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
      * 
-    */
+     */
     public Integer saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
     /**
-     * The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+     * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
      * 
-    */
+     */
     public Integer saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }

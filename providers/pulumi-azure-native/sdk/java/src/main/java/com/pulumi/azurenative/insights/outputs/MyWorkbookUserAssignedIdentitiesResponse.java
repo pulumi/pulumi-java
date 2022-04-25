@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MyWorkbookUserAssignedIdentitiesResponse {
-    /**
-     * The principal ID of resource identity.
-     * 
-     */
+        /**
+         * @return The principal ID of resource identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant ID of resource.
-     * 
-     */
+        /**
+         * @return The tenant ID of resource.
+         * 
+         */
     private final String tenantId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

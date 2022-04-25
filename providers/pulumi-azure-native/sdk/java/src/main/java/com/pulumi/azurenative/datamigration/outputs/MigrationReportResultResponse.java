@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrationReportResultResponse {
-    /**
-     * Migration validation result identifier
-     * 
-     */
+        /**
+         * @return Migration validation result identifier
+         * 
+         */
     private final String id;
-    /**
-     * The url of the report.
-     * 
-     */
+        /**
+         * @return The url of the report.
+         * 
+         */
     private final String reportUrl;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class MigrationReportResultResponse {
     }
 
     /**
-     * Migration validation result identifier
+     * @return Migration validation result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The url of the report.
+     * @return The url of the report.
      * 
-    */
+     */
     public String reportUrl() {
         return this.reportUrl;
     }

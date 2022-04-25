@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
-    /**
-     * A collection of DeliveryAttributeMapping
-     * 
-     */
+        /**
+         * @return A collection of DeliveryAttributeMapping
+         * 
+         */
     private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value;
 
     @CustomType.Constructor
@@ -25,9 +25,9 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
     }
 
     /**
-     * A collection of DeliveryAttributeMapping
+     * @return A collection of DeliveryAttributeMapping
      * 
-    */
+     */
     public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value() {
         return this.value == null ? List.of() : this.value;
     }

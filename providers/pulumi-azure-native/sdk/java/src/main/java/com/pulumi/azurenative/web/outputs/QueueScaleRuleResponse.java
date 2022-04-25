@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class QueueScaleRuleResponse {
-    /**
-     * Authentication secrets for the queue scale rule.
-     * 
-     */
+        /**
+         * @return Authentication secrets for the queue scale rule.
+         * 
+         */
     private final @Nullable List<ScaleRuleAuthResponse> auth;
-    /**
-     * Queue length.
-     * 
-     */
+        /**
+         * @return Queue length.
+         * 
+         */
     private final @Nullable Integer queueLength;
-    /**
-     * Queue name.
-     * 
-     */
+        /**
+         * @return Queue name.
+         * 
+         */
     private final @Nullable String queueName;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class QueueScaleRuleResponse {
     }
 
     /**
-     * Authentication secrets for the queue scale rule.
+     * @return Authentication secrets for the queue scale rule.
      * 
-    */
+     */
     public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
-     * Queue length.
+     * @return Queue length.
      * 
-    */
+     */
     public Optional<Integer> queueLength() {
         return Optional.ofNullable(this.queueLength);
     }
     /**
-     * Queue name.
+     * @return Queue name.
      * 
-    */
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }

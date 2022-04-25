@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SoaRecordResponse {
-    /**
-     * The email contact for this SOA record.
-     * 
-     */
+        /**
+         * @return The email contact for this SOA record.
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * The expire time for this SOA record.
-     * 
-     */
+        /**
+         * @return The expire time for this SOA record.
+         * 
+         */
     private final @Nullable Double expireTime;
-    /**
-     * The domain name of the authoritative name server for this SOA record.
-     * 
-     */
+        /**
+         * @return The domain name of the authoritative name server for this SOA record.
+         * 
+         */
     private final @Nullable String host;
-    /**
-     * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
-     * 
-     */
+        /**
+         * @return The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
+         * 
+         */
     private final @Nullable Double minimumTtl;
-    /**
-     * The refresh value for this SOA record.
-     * 
-     */
+        /**
+         * @return The refresh value for this SOA record.
+         * 
+         */
     private final @Nullable Double refreshTime;
-    /**
-     * The retry time for this SOA record.
-     * 
-     */
+        /**
+         * @return The retry time for this SOA record.
+         * 
+         */
     private final @Nullable Double retryTime;
-    /**
-     * The serial number for this SOA record.
-     * 
-     */
+        /**
+         * @return The serial number for this SOA record.
+         * 
+         */
     private final @Nullable Double serialNumber;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class SoaRecordResponse {
     }
 
     /**
-     * The email contact for this SOA record.
+     * @return The email contact for this SOA record.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The expire time for this SOA record.
+     * @return The expire time for this SOA record.
      * 
-    */
+     */
     public Optional<Double> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
     /**
-     * The domain name of the authoritative name server for this SOA record.
+     * @return The domain name of the authoritative name server for this SOA record.
      * 
-    */
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
+     * @return The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
      * 
-    */
+     */
     public Optional<Double> minimumTtl() {
         return Optional.ofNullable(this.minimumTtl);
     }
     /**
-     * The refresh value for this SOA record.
+     * @return The refresh value for this SOA record.
      * 
-    */
+     */
     public Optional<Double> refreshTime() {
         return Optional.ofNullable(this.refreshTime);
     }
     /**
-     * The retry time for this SOA record.
+     * @return The retry time for this SOA record.
      * 
-    */
+     */
     public Optional<Double> retryTime() {
         return Optional.ofNullable(this.retryTime);
     }
     /**
-     * The serial number for this SOA record.
+     * @return The serial number for this SOA record.
      * 
-    */
+     */
     public Optional<Double> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }

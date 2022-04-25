@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumeFailoverMetadataResponse {
-    /**
-     * The date at which the snapshot was taken.
-     * 
-     */
+        /**
+         * @return The date at which the snapshot was taken.
+         * 
+         */
     private final @Nullable String backupCreatedDate;
-    /**
-     * The path ID of the backup-element for this volume, inside the backup set.
-     * 
-     */
+        /**
+         * @return The path ID of the backup-element for this volume, inside the backup set.
+         * 
+         */
     private final @Nullable String backupElementId;
-    /**
-     * The path ID of the backup set.
-     * 
-     */
+        /**
+         * @return The path ID of the backup set.
+         * 
+         */
     private final @Nullable String backupId;
-    /**
-     * The path ID of the backup policy using which the snapshot was taken.
-     * 
-     */
+        /**
+         * @return The path ID of the backup policy using which the snapshot was taken.
+         * 
+         */
     private final @Nullable String backupPolicyId;
-    /**
-     * The size of the volume in bytes at the time the snapshot was taken.
-     * 
-     */
+        /**
+         * @return The size of the volume in bytes at the time the snapshot was taken.
+         * 
+         */
     private final @Nullable Double sizeInBytes;
-    /**
-     * The path ID of the volume.
-     * 
-     */
+        /**
+         * @return The path ID of the volume.
+         * 
+         */
     private final @Nullable String volumeId;
-    /**
-     * The type of the volume.
-     * 
-     */
+        /**
+         * @return The type of the volume.
+         * 
+         */
     private final @Nullable String volumeType;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class VolumeFailoverMetadataResponse {
     }
 
     /**
-     * The date at which the snapshot was taken.
+     * @return The date at which the snapshot was taken.
      * 
-    */
+     */
     public Optional<String> backupCreatedDate() {
         return Optional.ofNullable(this.backupCreatedDate);
     }
     /**
-     * The path ID of the backup-element for this volume, inside the backup set.
+     * @return The path ID of the backup-element for this volume, inside the backup set.
      * 
-    */
+     */
     public Optional<String> backupElementId() {
         return Optional.ofNullable(this.backupElementId);
     }
     /**
-     * The path ID of the backup set.
+     * @return The path ID of the backup set.
      * 
-    */
+     */
     public Optional<String> backupId() {
         return Optional.ofNullable(this.backupId);
     }
     /**
-     * The path ID of the backup policy using which the snapshot was taken.
+     * @return The path ID of the backup policy using which the snapshot was taken.
      * 
-    */
+     */
     public Optional<String> backupPolicyId() {
         return Optional.ofNullable(this.backupPolicyId);
     }
     /**
-     * The size of the volume in bytes at the time the snapshot was taken.
+     * @return The size of the volume in bytes at the time the snapshot was taken.
      * 
-    */
+     */
     public Optional<Double> sizeInBytes() {
         return Optional.ofNullable(this.sizeInBytes);
     }
     /**
-     * The path ID of the volume.
+     * @return The path ID of the volume.
      * 
-    */
+     */
     public Optional<String> volumeId() {
         return Optional.ofNullable(this.volumeId);
     }
     /**
-     * The type of the volume.
+     * @return The type of the volume.
      * 
-    */
+     */
     public Optional<String> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

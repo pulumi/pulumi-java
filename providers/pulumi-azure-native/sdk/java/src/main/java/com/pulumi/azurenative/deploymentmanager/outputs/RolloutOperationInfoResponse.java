@@ -12,30 +12,30 @@ import java.util.Objects;
 
 @CustomType
 public final class RolloutOperationInfoResponse {
-    /**
-     * The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
-     * 
-     */
+        /**
+         * @return The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
+         * 
+         */
     private final String endTime;
-    /**
-     * The detailed error information for any failure.
-     * 
-     */
+        /**
+         * @return The detailed error information for any failure.
+         * 
+         */
     private final CloudErrorBodyResponse error;
-    /**
-     * The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
-     * 
-     */
+        /**
+         * @return The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
+         * 
+         */
     private final Integer retryAttempt;
-    /**
-     * True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
-     * 
-     */
+        /**
+         * @return True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
+         * 
+         */
     private final Boolean skipSucceededOnRetry;
-    /**
-     * The start time of the rollout in UTC.
-     * 
-     */
+        /**
+         * @return The start time of the rollout in UTC.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class RolloutOperationInfoResponse {
     }
 
     /**
-     * The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
+     * @return The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The detailed error information for any failure.
+     * @return The detailed error information for any failure.
      * 
-    */
+     */
     public CloudErrorBodyResponse error() {
         return this.error;
     }
     /**
-     * The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
+     * @return The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
      * 
-    */
+     */
     public Integer retryAttempt() {
         return this.retryAttempt;
     }
     /**
-     * True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
+     * @return True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
      * 
-    */
+     */
     public Boolean skipSucceededOnRetry() {
         return this.skipSucceededOnRetry;
     }
     /**
-     * The start time of the rollout in UTC.
+     * @return The start time of the rollout in UTC.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -26,34 +26,34 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventSubscriptionFilterResponse {
-    /**
-     * An array of advanced filters that are used for filtering event subscriptions.
-     * 
-     */
+        /**
+         * @return An array of advanced filters that are used for filtering event subscriptions.
+         * 
+         */
     private final @Nullable List<Object> advancedFilters;
-    /**
-     * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
-     * 
-     */
+        /**
+         * @return A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+         * 
+         */
     private final @Nullable List<String> includedEventTypes;
-    /**
-     * Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
-     * should be compared in a case sensitive manner.
-     * 
-     */
+        /**
+         * @return Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+         * should be compared in a case sensitive manner.
+         * 
+         */
     private final @Nullable Boolean isSubjectCaseSensitive;
-    /**
-     * An optional string to filter events for an event subscription based on a resource path prefix.
-     * The format of this depends on the publisher of the events.
-     * Wildcard characters are not supported in this path.
-     * 
-     */
+        /**
+         * @return An optional string to filter events for an event subscription based on a resource path prefix.
+         * The format of this depends on the publisher of the events.
+         * Wildcard characters are not supported in this path.
+         * 
+         */
     private final @Nullable String subjectBeginsWith;
-    /**
-     * An optional string to filter events for an event subscription based on a resource path suffix.
-     * Wildcard characters are not supported in this path.
-     * 
-     */
+        /**
+         * @return An optional string to filter events for an event subscription based on a resource path suffix.
+         * Wildcard characters are not supported in this path.
+         * 
+         */
     private final @Nullable String subjectEndsWith;
 
     @CustomType.Constructor
@@ -71,41 +71,41 @@ public final class EventSubscriptionFilterResponse {
     }
 
     /**
-     * An array of advanced filters that are used for filtering event subscriptions.
+     * @return An array of advanced filters that are used for filtering event subscriptions.
      * 
-    */
+     */
     public List<Object> advancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
     }
     /**
-     * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+     * @return A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
      * 
-    */
+     */
     public List<String> includedEventTypes() {
         return this.includedEventTypes == null ? List.of() : this.includedEventTypes;
     }
     /**
-     * Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+     * @return Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
      * should be compared in a case sensitive manner.
      * 
-    */
+     */
     public Optional<Boolean> isSubjectCaseSensitive() {
         return Optional.ofNullable(this.isSubjectCaseSensitive);
     }
     /**
-     * An optional string to filter events for an event subscription based on a resource path prefix.
+     * @return An optional string to filter events for an event subscription based on a resource path prefix.
      * The format of this depends on the publisher of the events.
      * Wildcard characters are not supported in this path.
      * 
-    */
+     */
     public Optional<String> subjectBeginsWith() {
         return Optional.ofNullable(this.subjectBeginsWith);
     }
     /**
-     * An optional string to filter events for an event subscription based on a resource path suffix.
+     * @return An optional string to filter events for an event subscription based on a resource path suffix.
      * Wildcard characters are not supported in this path.
      * 
-    */
+     */
     public Optional<String> subjectEndsWith() {
         return Optional.ofNullable(this.subjectEndsWith);
     }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VaultPropertiesResponseEncryption {
-    /**
-     * Enabling/Disabling the Double Encryption state
-     * 
-     */
+        /**
+         * @return Enabling/Disabling the Double Encryption state
+         * 
+         */
     private final @Nullable String infrastructureEncryption;
-    /**
-     * The details of the identity used for CMK
-     * 
-     */
+        /**
+         * @return The details of the identity used for CMK
+         * 
+         */
     private final @Nullable CmkKekIdentityResponse kekIdentity;
-    /**
-     * The properties of the Key Vault which hosts CMK
-     * 
-     */
+        /**
+         * @return The properties of the Key Vault which hosts CMK
+         * 
+         */
     private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class VaultPropertiesResponseEncryption {
     }
 
     /**
-     * Enabling/Disabling the Double Encryption state
+     * @return Enabling/Disabling the Double Encryption state
      * 
-    */
+     */
     public Optional<String> infrastructureEncryption() {
         return Optional.ofNullable(this.infrastructureEncryption);
     }
     /**
-     * The details of the identity used for CMK
+     * @return The details of the identity used for CMK
      * 
-    */
+     */
     public Optional<CmkKekIdentityResponse> kekIdentity() {
         return Optional.ofNullable(this.kekIdentity);
     }
     /**
-     * The properties of the Key Vault which hosts CMK
+     * @return The properties of the Key Vault which hosts CMK
      * 
-    */
+     */
     public Optional<CmkKeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }

@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HttpScaleRuleResponse {
-    /**
-     * Authentication secrets for the custom scale rule.
-     * 
-     */
+        /**
+         * @return Authentication secrets for the custom scale rule.
+         * 
+         */
     private final @Nullable List<ScaleRuleAuthResponse> auth;
-    /**
-     * Metadata properties to describe http scale rule.
-     * 
-     */
+        /**
+         * @return Metadata properties to describe http scale rule.
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class HttpScaleRuleResponse {
     }
 
     /**
-     * Authentication secrets for the custom scale rule.
+     * @return Authentication secrets for the custom scale rule.
      * 
-    */
+     */
     public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
-     * Metadata properties to describe http scale rule.
+     * @return Metadata properties to describe http scale rule.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }

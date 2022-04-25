@@ -26,6 +26,10 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
     @Import(name="batchSize")
     private @Nullable Integer batchSize;
 
+    /**
+     * @return The batch size in bytes.
+     * 
+     */
     public Optional<Integer> batchSize() {
         return Optional.ofNullable(this.batchSize);
     }
@@ -37,6 +41,10 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
     @Import(name="messageCount")
     private @Nullable Integer messageCount;
 
+    /**
+     * @return The message count.
+     * 
+     */
     public Optional<Integer> messageCount() {
         return Optional.ofNullable(this.messageCount);
     }
@@ -48,6 +56,10 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
     @Import(name="recurrence")
     private @Nullable WorkflowTriggerRecurrenceResponse recurrence;
 
+    /**
+     * @return The recurrence.
+     * 
+     */
     public Optional<WorkflowTriggerRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -78,16 +90,34 @@ public final class BatchReleaseCriteriaResponse extends com.pulumi.resources.Inv
             $ = new BatchReleaseCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param batchSize The batch size in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchSize(@Nullable Integer batchSize) {
             $.batchSize = batchSize;
             return this;
         }
 
+        /**
+         * @param messageCount The message count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageCount(@Nullable Integer messageCount) {
             $.messageCount = messageCount;
             return this;
         }
 
+        /**
+         * @param recurrence The recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable WorkflowTriggerRecurrenceResponse recurrence) {
             $.recurrence = recurrence;
             return this;

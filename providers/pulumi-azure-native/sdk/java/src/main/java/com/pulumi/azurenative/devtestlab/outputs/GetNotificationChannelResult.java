@@ -14,70 +14,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNotificationChannelResult {
-    /**
-     * The creation date of the notification channel.
-     * 
-     */
+        /**
+         * @return The creation date of the notification channel.
+         * 
+         */
     private final String createdDate;
-    /**
-     * Description of notification.
-     * 
-     */
+        /**
+         * @return Description of notification.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
-     * 
-     */
+        /**
+         * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+         * 
+         */
     private final @Nullable String emailRecipient;
-    /**
-     * The list of event for which this notification is enabled.
-     * 
-     */
+        /**
+         * @return The list of event for which this notification is enabled.
+         * 
+         */
     private final @Nullable List<EventResponse> events;
-    /**
-     * The identifier of the resource.
-     * 
-     */
+        /**
+         * @return The identifier of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource.
-     * 
-     */
+        /**
+         * @return The location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The locale to use when sending a notification (fallback for unsupported languages is EN).
-     * 
-     */
+        /**
+         * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
+         * 
+         */
     private final @Nullable String notificationLocale;
-    /**
-     * The provisioning status of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning status of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     * 
-     */
+        /**
+         * @return The unique immutable identifier of a resource (Guid).
+         * 
+         */
     private final String uniqueIdentifier;
-    /**
-     * The webhook URL to send notifications to.
-     * 
-     */
+        /**
+         * @return The webhook URL to send notifications to.
+         * 
+         */
     private final @Nullable String webHookUrl;
 
     @CustomType.Constructor
@@ -111,93 +111,93 @@ public final class GetNotificationChannelResult {
     }
 
     /**
-     * The creation date of the notification channel.
+     * @return The creation date of the notification channel.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * Description of notification.
+     * @return Description of notification.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
-    */
+     */
     public Optional<String> emailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
     /**
-     * The list of event for which this notification is enabled.
+     * @return The list of event for which this notification is enabled.
      * 
-    */
+     */
     public List<EventResponse> events() {
         return this.events == null ? List.of() : this.events;
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The locale to use when sending a notification (fallback for unsupported languages is EN).
+     * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
-    */
+     */
     public Optional<String> notificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
-     * The webhook URL to send notifications to.
+     * @return The webhook URL to send notifications to.
      * 
-    */
+     */
     public Optional<String> webHookUrl() {
         return Optional.ofNullable(this.webHookUrl);
     }

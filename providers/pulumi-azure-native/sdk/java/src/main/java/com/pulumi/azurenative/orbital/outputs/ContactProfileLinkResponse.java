@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContactProfileLinkResponse {
-    /**
-     * Contact Profile Link Channel
-     * 
-     */
+        /**
+         * @return Contact Profile Link Channel
+         * 
+         */
     private final List<ContactProfileLinkChannelResponse> channels;
-    /**
-     * Direction (uplink or downlink)
-     * 
-     */
+        /**
+         * @return Direction (uplink or downlink)
+         * 
+         */
     private final String direction;
-    /**
-     * Effective Isotropic Radiated Power (EIRP) in dBW.
-     * 
-     */
+        /**
+         * @return Effective Isotropic Radiated Power (EIRP) in dBW.
+         * 
+         */
     private final @Nullable Double eirpdBW;
-    /**
-     * Gain To Noise Temperature in db/K.
-     * 
-     */
+        /**
+         * @return Gain To Noise Temperature in db/K.
+         * 
+         */
     private final @Nullable Double gainOverTemperature;
-    /**
-     * polarization. eg (RHCP, LHCP)
-     * 
-     */
+        /**
+         * @return polarization. eg (RHCP, LHCP)
+         * 
+         */
     private final String polarization;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class ContactProfileLinkResponse {
     }
 
     /**
-     * Contact Profile Link Channel
+     * @return Contact Profile Link Channel
      * 
-    */
+     */
     public List<ContactProfileLinkChannelResponse> channels() {
         return this.channels;
     }
     /**
-     * Direction (uplink or downlink)
+     * @return Direction (uplink or downlink)
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * Effective Isotropic Radiated Power (EIRP) in dBW.
+     * @return Effective Isotropic Radiated Power (EIRP) in dBW.
      * 
-    */
+     */
     public Optional<Double> eirpdBW() {
         return Optional.ofNullable(this.eirpdBW);
     }
     /**
-     * Gain To Noise Temperature in db/K.
+     * @return Gain To Noise Temperature in db/K.
      * 
-    */
+     */
     public Optional<Double> gainOverTemperature() {
         return Optional.ofNullable(this.gainOverTemperature);
     }
     /**
-     * polarization. eg (RHCP, LHCP)
+     * @return polarization. eg (RHCP, LHCP)
      * 
-    */
+     */
     public String polarization() {
         return this.polarization;
     }

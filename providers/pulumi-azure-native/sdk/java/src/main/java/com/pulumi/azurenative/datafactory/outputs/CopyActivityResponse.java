@@ -157,126 +157,126 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CopyActivityResponse {
-    /**
-     * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object dataIntegrationUnits;
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object enableSkipIncompatibleRow;
-    /**
-     * Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object enableStaging;
-    /**
-     * List of inputs for the activity.
-     * 
-     */
+        /**
+         * @return List of inputs for the activity.
+         * 
+         */
     private final @Nullable List<DatasetReferenceResponse> inputs;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Log settings customer needs provide when enabling log.
-     * 
-     */
+        /**
+         * @return Log settings customer needs provide when enabling log.
+         * 
+         */
     private final @Nullable LogSettingsResponse logSettings;
-    /**
-     * (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
-     * 
-     */
+        /**
+         * @return (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
+         * 
+         */
     private final @Nullable LogStorageSettingsResponse logStorageSettings;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * List of outputs for the activity.
-     * 
-     */
+        /**
+         * @return List of outputs for the activity.
+         * 
+         */
     private final @Nullable List<DatasetReferenceResponse> outputs;
-    /**
-     * Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object parallelCopies;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * Preserve rules.
-     * 
-     */
+        /**
+         * @return Preserve rules.
+         * 
+         */
     private final @Nullable List<Object> preserve;
-    /**
-     * Preserve Rules.
-     * 
-     */
+        /**
+         * @return Preserve Rules.
+         * 
+         */
     private final @Nullable List<Object> preserveRules;
-    /**
-     * Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
-     * 
-     */
+        /**
+         * @return Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
+         * 
+         */
     private final @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings;
-    /**
-     * Copy activity sink.
-     * 
-     */
+        /**
+         * @return Copy activity sink.
+         * 
+         */
     private final Object sink;
-    /**
-     * Specify the fault tolerance for data consistency.
-     * 
-     */
+        /**
+         * @return Specify the fault tolerance for data consistency.
+         * 
+         */
     private final @Nullable SkipErrorFileResponse skipErrorFile;
-    /**
-     * Copy activity source.
-     * 
-     */
+        /**
+         * @return Copy activity source.
+         * 
+         */
     private final Object source;
-    /**
-     * Specifies interim staging settings when EnableStaging is true.
-     * 
-     */
+        /**
+         * @return Specifies interim staging settings when EnableStaging is true.
+         * 
+         */
     private final @Nullable StagingSettingsResponse stagingSettings;
-    /**
-     * Copy activity translator. If not specified, tabular translator is used.
-     * 
-     */
+        /**
+         * @return Copy activity translator. If not specified, tabular translator is used.
+         * 
+         */
     private final @Nullable Object translator;
-    /**
-     * Type of activity.
-     * Expected value is &#39;Copy&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;Copy&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
-    /**
-     * Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object validateDataConsistency;
 
     @CustomType.Constructor
@@ -332,171 +332,171 @@ public final class CopyActivityResponse {
     }
 
     /**
-     * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> dataIntegrationUnits() {
         return Optional.ofNullable(this.dataIntegrationUnits);
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to skip incompatible row. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableSkipIncompatibleRow() {
         return Optional.ofNullable(this.enableSkipIncompatibleRow);
     }
     /**
-     * Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to copy data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableStaging() {
         return Optional.ofNullable(this.enableStaging);
     }
     /**
-     * List of inputs for the activity.
+     * @return List of inputs for the activity.
      * 
-    */
+     */
     public List<DatasetReferenceResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Log settings customer needs provide when enabling log.
+     * @return Log settings customer needs provide when enabling log.
      * 
-    */
+     */
     public Optional<LogSettingsResponse> logSettings() {
         return Optional.ofNullable(this.logSettings);
     }
     /**
-     * (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
+     * @return (Deprecated. Please use LogSettings) Log storage settings customer need to provide when enabling session log.
      * 
-    */
+     */
     public Optional<LogStorageSettingsResponse> logStorageSettings() {
         return Optional.ofNullable(this.logStorageSettings);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of outputs for the activity.
+     * @return List of outputs for the activity.
      * 
-    */
+     */
     public List<DatasetReferenceResponse> outputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
     /**
-     * Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Maximum number of concurrent sessions opened on the source or sink to avoid overloading the data store. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> parallelCopies() {
         return Optional.ofNullable(this.parallelCopies);
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Preserve rules.
+     * @return Preserve rules.
      * 
-    */
+     */
     public List<Object> preserve() {
         return this.preserve == null ? List.of() : this.preserve;
     }
     /**
-     * Preserve Rules.
+     * @return Preserve Rules.
      * 
-    */
+     */
     public List<Object> preserveRules() {
         return this.preserveRules == null ? List.of() : this.preserveRules;
     }
     /**
-     * Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
+     * @return Redirect incompatible row settings when EnableSkipIncompatibleRow is true.
      * 
-    */
+     */
     public Optional<RedirectIncompatibleRowSettingsResponse> redirectIncompatibleRowSettings() {
         return Optional.ofNullable(this.redirectIncompatibleRowSettings);
     }
     /**
-     * Copy activity sink.
+     * @return Copy activity sink.
      * 
-    */
+     */
     public Object sink() {
         return this.sink;
     }
     /**
-     * Specify the fault tolerance for data consistency.
+     * @return Specify the fault tolerance for data consistency.
      * 
-    */
+     */
     public Optional<SkipErrorFileResponse> skipErrorFile() {
         return Optional.ofNullable(this.skipErrorFile);
     }
     /**
-     * Copy activity source.
+     * @return Copy activity source.
      * 
-    */
+     */
     public Object source() {
         return this.source;
     }
     /**
-     * Specifies interim staging settings when EnableStaging is true.
+     * @return Specifies interim staging settings when EnableStaging is true.
      * 
-    */
+     */
     public Optional<StagingSettingsResponse> stagingSettings() {
         return Optional.ofNullable(this.stagingSettings);
     }
     /**
-     * Copy activity translator. If not specified, tabular translator is used.
+     * @return Copy activity translator. If not specified, tabular translator is used.
      * 
-    */
+     */
     public Optional<Object> translator() {
         return Optional.ofNullable(this.translator);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Copy&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
-     * Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to enable Data Consistency validation. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> validateDataConsistency() {
         return Optional.ofNullable(this.validateDataConsistency);
     }

@@ -14,41 +14,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncodedTaskStepResponse {
-    /**
-     * List of base image dependencies for a step.
-     * 
-     */
+        /**
+         * @return List of base image dependencies for a step.
+         * 
+         */
     private final List<BaseImageDependencyResponse> baseImageDependencies;
-    /**
-     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
-     * 
-     */
+        /**
+         * @return The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+         * 
+         */
     private final @Nullable String contextAccessToken;
-    /**
-     * The URL(absolute or relative) of the source context for the task step.
-     * 
-     */
+        /**
+         * @return The URL(absolute or relative) of the source context for the task step.
+         * 
+         */
     private final @Nullable String contextPath;
-    /**
-     * Base64 encoded value of the template/definition file content.
-     * 
-     */
+        /**
+         * @return Base64 encoded value of the template/definition file content.
+         * 
+         */
     private final String encodedTaskContent;
-    /**
-     * Base64 encoded value of the parameters/values file content.
-     * 
-     */
+        /**
+         * @return Base64 encoded value of the parameters/values file content.
+         * 
+         */
     private final @Nullable String encodedValuesContent;
-    /**
-     * The type of the step.
-     * Expected value is &#39;EncodedTask&#39;.
-     * 
-     */
+        /**
+         * @return The type of the step.
+         * Expected value is &#39;EncodedTask&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The collection of overridable values that can be passed when running a task.
-     * 
-     */
+        /**
+         * @return The collection of overridable values that can be passed when running a task.
+         * 
+         */
     private final @Nullable List<SetValueResponse> values;
 
     @CustomType.Constructor
@@ -70,52 +70,52 @@ public final class EncodedTaskStepResponse {
     }
 
     /**
-     * List of base image dependencies for a step.
+     * @return List of base image dependencies for a step.
      * 
-    */
+     */
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
     /**
-     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     * @return The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
-    */
+     */
     public Optional<String> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
     /**
-     * The URL(absolute or relative) of the source context for the task step.
+     * @return The URL(absolute or relative) of the source context for the task step.
      * 
-    */
+     */
     public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
     /**
-     * Base64 encoded value of the template/definition file content.
+     * @return Base64 encoded value of the template/definition file content.
      * 
-    */
+     */
     public String encodedTaskContent() {
         return this.encodedTaskContent;
     }
     /**
-     * Base64 encoded value of the parameters/values file content.
+     * @return Base64 encoded value of the parameters/values file content.
      * 
-    */
+     */
     public Optional<String> encodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
     /**
-     * The type of the step.
+     * @return The type of the step.
      * Expected value is &#39;EncodedTask&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The collection of overridable values that can be passed when running a task.
+     * @return The collection of overridable values that can be passed when running a task.
      * 
-    */
+     */
     public List<SetValueResponse> values() {
         return this.values == null ? List.of() : this.values;
     }

@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class EdifactProcessingSettingsResponse {
-    /**
-     * The value indicating whether to create empty xml tags for trailing separators.
-     * 
-     */
+        /**
+         * @return The value indicating whether to create empty xml tags for trailing separators.
+         * 
+         */
     private final Boolean createEmptyXmlTagsForTrailingSeparators;
-    /**
-     * The value indicating whether to mask security information.
-     * 
-     */
+        /**
+         * @return The value indicating whether to mask security information.
+         * 
+         */
     private final Boolean maskSecurityInfo;
-    /**
-     * The value indicating whether to preserve interchange.
-     * 
-     */
+        /**
+         * @return The value indicating whether to preserve interchange.
+         * 
+         */
     private final Boolean preserveInterchange;
-    /**
-     * The value indicating whether to suspend interchange on error.
-     * 
-     */
+        /**
+         * @return The value indicating whether to suspend interchange on error.
+         * 
+         */
     private final Boolean suspendInterchangeOnError;
-    /**
-     * The value indicating whether to use dot as decimal separator.
-     * 
-     */
+        /**
+         * @return The value indicating whether to use dot as decimal separator.
+         * 
+         */
     private final Boolean useDotAsDecimalSeparator;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class EdifactProcessingSettingsResponse {
     }
 
     /**
-     * The value indicating whether to create empty xml tags for trailing separators.
+     * @return The value indicating whether to create empty xml tags for trailing separators.
      * 
-    */
+     */
     public Boolean createEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
     /**
-     * The value indicating whether to mask security information.
+     * @return The value indicating whether to mask security information.
      * 
-    */
+     */
     public Boolean maskSecurityInfo() {
         return this.maskSecurityInfo;
     }
     /**
-     * The value indicating whether to preserve interchange.
+     * @return The value indicating whether to preserve interchange.
      * 
-    */
+     */
     public Boolean preserveInterchange() {
         return this.preserveInterchange;
     }
     /**
-     * The value indicating whether to suspend interchange on error.
+     * @return The value indicating whether to suspend interchange on error.
      * 
-    */
+     */
     public Boolean suspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
     /**
-     * The value indicating whether to use dot as decimal separator.
+     * @return The value indicating whether to use dot as decimal separator.
      * 
-    */
+     */
     public Boolean useDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }

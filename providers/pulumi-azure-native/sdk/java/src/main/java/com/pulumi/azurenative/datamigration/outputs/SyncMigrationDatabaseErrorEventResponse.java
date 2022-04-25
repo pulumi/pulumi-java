@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SyncMigrationDatabaseErrorEventResponse {
-    /**
-     * Event text.
-     * 
-     */
+        /**
+         * @return Event text.
+         * 
+         */
     private final String eventText;
-    /**
-     * Event type.
-     * 
-     */
+        /**
+         * @return Event type.
+         * 
+         */
     private final String eventTypeString;
-    /**
-     * String value of timestamp.
-     * 
-     */
+        /**
+         * @return String value of timestamp.
+         * 
+         */
     private final String timestampString;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class SyncMigrationDatabaseErrorEventResponse {
     }
 
     /**
-     * Event text.
+     * @return Event text.
      * 
-    */
+     */
     public String eventText() {
         return this.eventText;
     }
     /**
-     * Event type.
+     * @return Event type.
      * 
-    */
+     */
     public String eventTypeString() {
         return this.eventTypeString;
     }
     /**
-     * String value of timestamp.
+     * @return String value of timestamp.
      * 
-    */
+     */
     public String timestampString() {
         return this.timestampString;
     }

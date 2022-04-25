@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerGroupResponseInstanceView {
-    /**
-     * The events of this container group.
-     * 
-     */
+        /**
+         * @return The events of this container group.
+         * 
+         */
     private final List<EventResponse> events;
-    /**
-     * The state of the container group. Only valid in response.
-     * 
-     */
+        /**
+         * @return The state of the container group. Only valid in response.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ContainerGroupResponseInstanceView {
     }
 
     /**
-     * The events of this container group.
+     * @return The events of this container group.
      * 
-    */
+     */
     public List<EventResponse> events() {
         return this.events;
     }
     /**
-     * The state of the container group. Only valid in response.
+     * @return The state of the container group. Only valid in response.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetContentItemResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the content item.
-     * 
-     */
+        /**
+         * @return Properties of the content item.
+         * 
+         */
     private final Object properties;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetContentItemResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the content item.
+     * @return Properties of the content item.
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

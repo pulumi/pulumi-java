@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachineScaleSetExtensionProfileResponse {
-    /**
-     * The virtual machine scale set child extension resources.
-     * 
-     */
+        /**
+         * @return The virtual machine scale set child extension resources.
+         * 
+         */
     private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
-    /**
-     * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
-     * 
-     */
+        /**
+         * @return Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+         * 
+         */
     private final @Nullable String extensionsTimeBudget;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class VirtualMachineScaleSetExtensionProfileResponse {
     }
 
     /**
-     * The virtual machine scale set child extension resources.
+     * @return The virtual machine scale set child extension resources.
      * 
-    */
+     */
     public List<VirtualMachineScaleSetExtensionResponse> extensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
     /**
-     * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
+     * @return Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). &lt;br&gt;&lt;br&gt; Minimum api-version: 2020-06-01
      * 
-    */
+     */
     public Optional<String> extensionsTimeBudget() {
         return Optional.ofNullable(this.extensionsTimeBudget);
     }

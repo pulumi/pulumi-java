@@ -19,6 +19,10 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
     @Import(name="customerSubscriptionName", required=true)
     private String customerSubscriptionName;
 
+    /**
+     * @return Name of the product.
+     * 
+     */
     public String customerSubscriptionName() {
         return this.customerSubscriptionName;
     }
@@ -30,6 +34,10 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
     @Import(name="registrationName", required=true)
     private String registrationName;
 
+    /**
+     * @return Name of the Azure Stack registration.
+     * 
+     */
     public String registrationName() {
         return this.registrationName;
     }
@@ -41,6 +49,10 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -71,16 +83,34 @@ public final class GetCustomerSubscriptionArgs extends com.pulumi.resources.Invo
             $ = new GetCustomerSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerSubscriptionName Name of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSubscriptionName(String customerSubscriptionName) {
             $.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(String registrationName) {
             $.registrationName = registrationName;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;

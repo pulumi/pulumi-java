@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProductsResult {
-    /**
-     * URI to the next page.
-     * 
-     */
+        /**
+         * @return URI to the next page.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * List of products.
-     * 
-     */
+        /**
+         * @return List of products.
+         * 
+         */
     private final @Nullable List<ProductResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class GetProductsResult {
     }
 
     /**
-     * URI to the next page.
+     * @return URI to the next page.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * List of products.
+     * @return List of products.
      * 
-    */
+     */
     public List<ProductResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

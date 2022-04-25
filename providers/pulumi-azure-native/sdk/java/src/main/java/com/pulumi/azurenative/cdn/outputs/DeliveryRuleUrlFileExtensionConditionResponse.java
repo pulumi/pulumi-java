@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class DeliveryRuleUrlFileExtensionConditionResponse {
-    /**
-     * The name of the condition for the delivery rule.
-     * Expected value is &#39;UrlFileExtension&#39;.
-     * 
-     */
+        /**
+         * @return The name of the condition for the delivery rule.
+         * Expected value is &#39;UrlFileExtension&#39;.
+         * 
+         */
     private final String name;
-    /**
-     * Defines the parameters for the condition.
-     * 
-     */
+        /**
+         * @return Defines the parameters for the condition.
+         * 
+         */
     private final UrlFileExtensionMatchConditionParametersResponse parameters;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
     }
 
     /**
-     * The name of the condition for the delivery rule.
+     * @return The name of the condition for the delivery rule.
      * Expected value is &#39;UrlFileExtension&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the condition.
+     * @return Defines the parameters for the condition.
      * 
-    */
+     */
     public UrlFileExtensionMatchConditionParametersResponse parameters() {
         return this.parameters;
     }

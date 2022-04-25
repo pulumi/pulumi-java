@@ -11,22 +11,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImportPipelineSourcePropertiesResponse {
-    /**
-     * They key vault secret uri to obtain the source storage SAS token.
-     * 
-     */
+        /**
+         * @return They key vault secret uri to obtain the source storage SAS token.
+         * 
+         */
     private final String keyVaultUri;
-    /**
-     * The type of source for the import pipeline.
-     * 
-     */
+        /**
+         * @return The type of source for the import pipeline.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The source uri of the import pipeline.
-     * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
-     * When &#39;AzureStorageBlobContainer&#39;: &#34;https://accountName.blob.core.windows.net/containerName&#34;
-     * 
-     */
+        /**
+         * @return The source uri of the import pipeline.
+         * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
+         * When &#39;AzureStorageBlobContainer&#39;: &#34;https://accountName.blob.core.windows.net/containerName&#34;
+         * 
+         */
     private final @Nullable String uri;
 
     @CustomType.Constructor
@@ -40,25 +40,25 @@ public final class ImportPipelineSourcePropertiesResponse {
     }
 
     /**
-     * They key vault secret uri to obtain the source storage SAS token.
+     * @return They key vault secret uri to obtain the source storage SAS token.
      * 
-    */
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
     /**
-     * The type of source for the import pipeline.
+     * @return The type of source for the import pipeline.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The source uri of the import pipeline.
+     * @return The source uri of the import pipeline.
      * When &#39;AzureStorageBlob&#39;: &#34;https://accountName.blob.core.windows.net/containerName/blobName&#34;
      * When &#39;AzureStorageBlobContainer&#39;: &#34;https://accountName.blob.core.windows.net/containerName&#34;
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

@@ -16,70 +16,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetJitRequestResult {
-    /**
-     * The parent application id.
-     * 
-     */
+        /**
+         * @return The parent application id.
+         * 
+         */
     private final String applicationResourceId;
-    /**
-     * The client entity that created the JIT request.
-     * 
-     */
+        /**
+         * @return The client entity that created the JIT request.
+         * 
+         */
     private final ApplicationClientDetailsResponse createdBy;
-    /**
-     * Resource ID
-     * 
-     */
+        /**
+         * @return Resource ID
+         * 
+         */
     private final String id;
-    /**
-     * The JIT authorization policies.
-     * 
-     */
+        /**
+         * @return The JIT authorization policies.
+         * 
+         */
     private final List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies;
-    /**
-     * The JIT request state.
-     * 
-     */
+        /**
+         * @return The JIT request state.
+         * 
+         */
     private final String jitRequestState;
-    /**
-     * The JIT request properties.
-     * 
-     */
+        /**
+         * @return The JIT request properties.
+         * 
+         */
     private final JitSchedulingPolicyResponse jitSchedulingPolicy;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The JIT request provisioning state.
-     * 
-     */
+        /**
+         * @return The JIT request provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The publisher tenant id.
-     * 
-     */
+        /**
+         * @return The publisher tenant id.
+         * 
+         */
     private final String publisherTenantId;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * The client entity that last updated the JIT request.
-     * 
-     */
+        /**
+         * @return The client entity that last updated the JIT request.
+         * 
+         */
     private final ApplicationClientDetailsResponse updatedBy;
 
     @CustomType.Constructor
@@ -113,93 +113,93 @@ public final class GetJitRequestResult {
     }
 
     /**
-     * The parent application id.
+     * @return The parent application id.
      * 
-    */
+     */
     public String applicationResourceId() {
         return this.applicationResourceId;
     }
     /**
-     * The client entity that created the JIT request.
+     * @return The client entity that created the JIT request.
      * 
-    */
+     */
     public ApplicationClientDetailsResponse createdBy() {
         return this.createdBy;
     }
     /**
-     * Resource ID
+     * @return Resource ID
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The JIT authorization policies.
+     * @return The JIT authorization policies.
      * 
-    */
+     */
     public List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
     /**
-     * The JIT request state.
+     * @return The JIT request state.
      * 
-    */
+     */
     public String jitRequestState() {
         return this.jitRequestState;
     }
     /**
-     * The JIT request properties.
+     * @return The JIT request properties.
      * 
-    */
+     */
     public JitSchedulingPolicyResponse jitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The JIT request provisioning state.
+     * @return The JIT request provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The publisher tenant id.
+     * @return The publisher tenant id.
      * 
-    */
+     */
     public String publisherTenantId() {
         return this.publisherTenantId;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The client entity that last updated the JIT request.
+     * @return The client entity that last updated the JIT request.
      * 
-    */
+     */
     public ApplicationClientDetailsResponse updatedBy() {
         return this.updatedBy;
     }

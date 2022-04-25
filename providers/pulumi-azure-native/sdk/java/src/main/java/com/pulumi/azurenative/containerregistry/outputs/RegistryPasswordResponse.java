@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegistryPasswordResponse {
-    /**
-     * The password name.
-     * 
-     */
+        /**
+         * @return The password name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The password value.
-     * 
-     */
+        /**
+         * @return The password value.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class RegistryPasswordResponse {
     }
 
     /**
-     * The password name.
+     * @return The password name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The password value.
+     * @return The password value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

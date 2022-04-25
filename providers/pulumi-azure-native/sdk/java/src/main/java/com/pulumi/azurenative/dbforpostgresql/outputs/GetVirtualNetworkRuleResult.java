@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualNetworkRuleResult {
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
-     * 
-     */
+        /**
+         * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
+         * 
+         */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Virtual Network Rule State
-     * 
-     */
+        /**
+         * @return Virtual Network Rule State
+         * 
+         */
     private final String state;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The ARM resource id of the virtual network subnet.
-     * 
-     */
+        /**
+         * @return The ARM resource id of the virtual network subnet.
+         * 
+         */
     private final String virtualNetworkSubnetId;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetVirtualNetworkRuleResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Create firewall rule before the virtual network has vnet service endpoint enabled.
+     * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
-    */
+     */
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Virtual Network Rule State
+     * @return Virtual Network Rule State
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The ARM resource id of the virtual network subnet.
+     * @return The ARM resource id of the virtual network subnet.
      * 
-    */
+     */
     public String virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }

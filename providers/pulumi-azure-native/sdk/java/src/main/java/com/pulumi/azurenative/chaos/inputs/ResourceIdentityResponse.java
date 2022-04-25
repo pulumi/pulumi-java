@@ -23,6 +23,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return GUID that represents the principal ID of this resource identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return GUID that represents the tenant ID of this resource identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -45,6 +53,10 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return String of the resource identity type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class ResourceIdentityResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId GUID that represents the principal ID of this resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId GUID that represents the tenant ID of this resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type String of the resource identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

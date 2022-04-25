@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplicationNotificationPolicyResponse {
-    /**
-     * The managed application notification endpoint.
-     * 
-     */
+        /**
+         * @return The managed application notification endpoint.
+         * 
+         */
     private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ApplicationNotificationPolicyResponse {
     }
 
     /**
-     * The managed application notification endpoint.
+     * @return The managed application notification endpoint.
      * 
-    */
+     */
     public List<ApplicationNotificationEndpointResponse> notificationEndpoints() {
         return this.notificationEndpoints;
     }

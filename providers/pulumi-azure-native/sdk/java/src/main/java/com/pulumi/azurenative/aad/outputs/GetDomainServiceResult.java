@@ -21,115 +21,115 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDomainServiceResult {
-    /**
-     * Deployment Id
-     * 
-     */
+        /**
+         * @return Deployment Id
+         * 
+         */
     private final String deploymentId;
-    /**
-     * Domain Configuration Type
-     * 
-     */
+        /**
+         * @return Domain Configuration Type
+         * 
+         */
     private final @Nullable String domainConfigurationType;
-    /**
-     * The name of the Azure domain that the user would like to deploy Domain Services to.
-     * 
-     */
+        /**
+         * @return The name of the Azure domain that the user would like to deploy Domain Services to.
+         * 
+         */
     private final @Nullable String domainName;
-    /**
-     * DomainSecurity Settings
-     * 
-     */
+        /**
+         * @return DomainSecurity Settings
+         * 
+         */
     private final @Nullable DomainSecuritySettingsResponse domainSecuritySettings;
-    /**
-     * Resource etag
-     * 
-     */
+        /**
+         * @return Resource etag
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Enabled or Disabled flag to turn on Group-based filtered sync
-     * 
-     */
+        /**
+         * @return Enabled or Disabled flag to turn on Group-based filtered sync
+         * 
+         */
     private final @Nullable String filteredSync;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Secure LDAP Settings
-     * 
-     */
+        /**
+         * @return Secure LDAP Settings
+         * 
+         */
     private final @Nullable LdapsSettingsResponse ldapsSettings;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Migration Properties
-     * 
-     */
+        /**
+         * @return Migration Properties
+         * 
+         */
     private final MigrationPropertiesResponse migrationProperties;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Notification Settings
-     * 
-     */
+        /**
+         * @return Notification Settings
+         * 
+         */
     private final @Nullable NotificationSettingsResponse notificationSettings;
-    /**
-     * the current deployment or provisioning state, which only appears in the response.
-     * 
-     */
+        /**
+         * @return the current deployment or provisioning state, which only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * List of ReplicaSets
-     * 
-     */
+        /**
+         * @return List of ReplicaSets
+         * 
+         */
     private final @Nullable List<ReplicaSetResponse> replicaSets;
-    /**
-     * Resource Forest Settings
-     * 
-     */
+        /**
+         * @return Resource Forest Settings
+         * 
+         */
     private final @Nullable ResourceForestSettingsResponse resourceForestSettings;
-    /**
-     * Sku Type
-     * 
-     */
+        /**
+         * @return Sku Type
+         * 
+         */
     private final @Nullable String sku;
-    /**
-     * SyncOwner ReplicaSet Id
-     * 
-     */
+        /**
+         * @return SyncOwner ReplicaSet Id
+         * 
+         */
     private final String syncOwner;
-    /**
-     * The system meta data relating to this resource.
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure Active Directory Tenant Id
-     * 
-     */
+        /**
+         * @return Azure Active Directory Tenant Id
+         * 
+         */
     private final String tenantId;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Data Model Version
-     * 
-     */
+        /**
+         * @return Data Model Version
+         * 
+         */
     private final Integer version;
 
     @CustomType.Constructor
@@ -181,156 +181,156 @@ public final class GetDomainServiceResult {
     }
 
     /**
-     * Deployment Id
+     * @return Deployment Id
      * 
-    */
+     */
     public String deploymentId() {
         return this.deploymentId;
     }
     /**
-     * Domain Configuration Type
+     * @return Domain Configuration Type
      * 
-    */
+     */
     public Optional<String> domainConfigurationType() {
         return Optional.ofNullable(this.domainConfigurationType);
     }
     /**
-     * The name of the Azure domain that the user would like to deploy Domain Services to.
+     * @return The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
-    */
+     */
     public Optional<String> domainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
-     * DomainSecurity Settings
+     * @return DomainSecurity Settings
      * 
-    */
+     */
     public Optional<DomainSecuritySettingsResponse> domainSecuritySettings() {
         return Optional.ofNullable(this.domainSecuritySettings);
     }
     /**
-     * Resource etag
+     * @return Resource etag
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Enabled or Disabled flag to turn on Group-based filtered sync
+     * @return Enabled or Disabled flag to turn on Group-based filtered sync
      * 
-    */
+     */
     public Optional<String> filteredSync() {
         return Optional.ofNullable(this.filteredSync);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Secure LDAP Settings
+     * @return Secure LDAP Settings
      * 
-    */
+     */
     public Optional<LdapsSettingsResponse> ldapsSettings() {
         return Optional.ofNullable(this.ldapsSettings);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Migration Properties
+     * @return Migration Properties
      * 
-    */
+     */
     public MigrationPropertiesResponse migrationProperties() {
         return this.migrationProperties;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Notification Settings
+     * @return Notification Settings
      * 
-    */
+     */
     public Optional<NotificationSettingsResponse> notificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
     /**
-     * the current deployment or provisioning state, which only appears in the response.
+     * @return the current deployment or provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * List of ReplicaSets
+     * @return List of ReplicaSets
      * 
-    */
+     */
     public List<ReplicaSetResponse> replicaSets() {
         return this.replicaSets == null ? List.of() : this.replicaSets;
     }
     /**
-     * Resource Forest Settings
+     * @return Resource Forest Settings
      * 
-    */
+     */
     public Optional<ResourceForestSettingsResponse> resourceForestSettings() {
         return Optional.ofNullable(this.resourceForestSettings);
     }
     /**
-     * Sku Type
+     * @return Sku Type
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * SyncOwner ReplicaSet Id
+     * @return SyncOwner ReplicaSet Id
      * 
-    */
+     */
     public String syncOwner() {
         return this.syncOwner;
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure Active Directory Tenant Id
+     * @return Azure Active Directory Tenant Id
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Data Model Version
+     * @return Data Model Version
      * 
-    */
+     */
     public Integer version() {
         return this.version;
     }

@@ -35,6 +35,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName", required=true)
     private Output<String> applicationName;
 
+    /**
+     * @return The name of the application resource.
+     * 
+     */
     public Output<String> applicationName() {
         return this.applicationName;
     }
@@ -46,6 +50,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the cluster resource.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -57,6 +65,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="correlationScheme")
     private @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
+    /**
+     * @return A list that describes the correlation of the service with other services.
+     * 
+     */
     public Optional<Output<List<ServiceCorrelationDescriptionArgs>>> correlationScheme() {
         return Optional.ofNullable(this.correlationScheme);
     }
@@ -68,6 +80,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultMoveCost")
     private @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
 
+    /**
+     * @return Specifies the move cost for the service.
+     * 
+     */
     public Optional<Output<Either<String,MoveCost>>> defaultMoveCost() {
         return Optional.ofNullable(this.defaultMoveCost);
     }
@@ -79,6 +95,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -90,6 +110,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionDescription")
     private @Nullable Output<Object> partitionDescription;
 
+    /**
+     * @return Describes how the service is partitioned.
+     * 
+     */
     public Optional<Output<Object>> partitionDescription() {
         return Optional.ofNullable(this.partitionDescription);
     }
@@ -101,6 +125,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="placementConstraints")
     private @Nullable Output<String> placementConstraints;
 
+    /**
+     * @return The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
+     * 
+     */
     public Optional<Output<String>> placementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
@@ -112,6 +140,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -123,6 +155,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceDnsName")
     private @Nullable Output<String> serviceDnsName;
 
+    /**
+     * @return Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
+     * 
+     */
     public Optional<Output<String>> serviceDnsName() {
         return Optional.ofNullable(this.serviceDnsName);
     }
@@ -134,6 +170,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceKind", required=true)
     private Output<Either<String,ServiceKind>> serviceKind;
 
+    /**
+     * @return The kind of service (Stateless or Stateful).
+     * 
+     */
     public Output<Either<String,ServiceKind>> serviceKind() {
         return this.serviceKind;
     }
@@ -145,6 +185,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceLoadMetrics")
     private @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
+    /**
+     * @return The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+     * 
+     */
     public Optional<Output<List<ServiceLoadMetricDescriptionArgs>>> serviceLoadMetrics() {
         return Optional.ofNullable(this.serviceLoadMetrics);
     }
@@ -156,6 +200,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the service resource in the format of {applicationName}~{serviceName}.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -167,6 +215,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="servicePackageActivationMode")
     private @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
+    /**
+     * @return The activation Mode of the service package
+     * 
+     */
     public Optional<Output<Either<String,ArmServicePackageActivationMode>>> servicePackageActivationMode() {
         return Optional.ofNullable(this.servicePackageActivationMode);
     }
@@ -178,6 +230,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="servicePlacementPolicies")
     private @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
+    /**
+     * @return A list that describes the correlation of the service with other services.
+     * 
+     */
     public Optional<Output<List<ServicePlacementPolicyDescriptionArgs>>> servicePlacementPolicies() {
         return Optional.ofNullable(this.servicePlacementPolicies);
     }
@@ -189,6 +245,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceTypeName")
     private @Nullable Output<String> serviceTypeName;
 
+    /**
+     * @return The name of the service type
+     * 
+     */
     public Optional<Output<String>> serviceTypeName() {
         return Optional.ofNullable(this.serviceTypeName);
     }
@@ -200,6 +260,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Azure resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -243,182 +307,428 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationName The name of the application resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the application resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param correlationScheme A list that describes the correlation of the service with other services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationScheme(@Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
             $.correlationScheme = correlationScheme;
             return this;
         }
 
+        /**
+         * @param correlationScheme A list that describes the correlation of the service with other services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationScheme(List<ServiceCorrelationDescriptionArgs> correlationScheme) {
             return correlationScheme(Output.of(correlationScheme));
         }
 
+        /**
+         * @param correlationScheme A list that describes the correlation of the service with other services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationScheme(ServiceCorrelationDescriptionArgs... correlationScheme) {
             return correlationScheme(List.of(correlationScheme));
         }
 
+        /**
+         * @param defaultMoveCost Specifies the move cost for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMoveCost(@Nullable Output<Either<String,MoveCost>> defaultMoveCost) {
             $.defaultMoveCost = defaultMoveCost;
             return this;
         }
 
+        /**
+         * @param defaultMoveCost Specifies the move cost for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMoveCost(Either<String,MoveCost> defaultMoveCost) {
             return defaultMoveCost(Output.of(defaultMoveCost));
         }
 
+        /**
+         * @param defaultMoveCost Specifies the move cost for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMoveCost(String defaultMoveCost) {
             return defaultMoveCost(Either.ofLeft(defaultMoveCost));
         }
 
+        /**
+         * @param defaultMoveCost Specifies the move cost for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMoveCost(MoveCost defaultMoveCost) {
             return defaultMoveCost(Either.ofRight(defaultMoveCost));
         }
 
+        /**
+         * @param location It will be deprecated in New API, resource location depends on the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location It will be deprecated in New API, resource location depends on the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param partitionDescription Describes how the service is partitioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionDescription(@Nullable Output<Object> partitionDescription) {
             $.partitionDescription = partitionDescription;
             return this;
         }
 
+        /**
+         * @param partitionDescription Describes how the service is partitioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionDescription(Object partitionDescription) {
             return partitionDescription(Output.of(partitionDescription));
         }
 
+        /**
+         * @param placementConstraints The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(@Nullable Output<String> placementConstraints) {
             $.placementConstraints = placementConstraints;
             return this;
         }
 
+        /**
+         * @param placementConstraints The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: &#34;NodeColor == blue)&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placementConstraints(String placementConstraints) {
             return placementConstraints(Output.of(placementConstraints));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceDnsName Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDnsName(@Nullable Output<String> serviceDnsName) {
             $.serviceDnsName = serviceDnsName;
             return this;
         }
 
+        /**
+         * @param serviceDnsName Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceDnsName(String serviceDnsName) {
             return serviceDnsName(Output.of(serviceDnsName));
         }
 
+        /**
+         * @param serviceKind The kind of service (Stateless or Stateful).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceKind(Output<Either<String,ServiceKind>> serviceKind) {
             $.serviceKind = serviceKind;
             return this;
         }
 
+        /**
+         * @param serviceKind The kind of service (Stateless or Stateful).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceKind(Either<String,ServiceKind> serviceKind) {
             return serviceKind(Output.of(serviceKind));
         }
 
+        /**
+         * @param serviceKind The kind of service (Stateless or Stateful).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceKind(String serviceKind) {
             return serviceKind(Either.ofLeft(serviceKind));
         }
 
+        /**
+         * @param serviceKind The kind of service (Stateless or Stateful).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceKind(ServiceKind serviceKind) {
             return serviceKind(Either.ofRight(serviceKind));
         }
 
+        /**
+         * @param serviceLoadMetrics The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLoadMetrics(@Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
             $.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
 
+        /**
+         * @param serviceLoadMetrics The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLoadMetrics(List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
             return serviceLoadMetrics(Output.of(serviceLoadMetrics));
         }
 
+        /**
+         * @param serviceLoadMetrics The service load metrics is given as an array of ServiceLoadMetricDescription objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceLoadMetrics(ServiceLoadMetricDescriptionArgs... serviceLoadMetrics) {
             return serviceLoadMetrics(List.of(serviceLoadMetrics));
         }
 
+        /**
+         * @param serviceName The name of the service resource in the format of {applicationName}~{serviceName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service resource in the format of {applicationName}~{serviceName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param servicePackageActivationMode The activation Mode of the service package
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePackageActivationMode(@Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
             $.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
 
+        /**
+         * @param servicePackageActivationMode The activation Mode of the service package
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePackageActivationMode(Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
             return servicePackageActivationMode(Output.of(servicePackageActivationMode));
         }
 
+        /**
+         * @param servicePackageActivationMode The activation Mode of the service package
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePackageActivationMode(String servicePackageActivationMode) {
             return servicePackageActivationMode(Either.ofLeft(servicePackageActivationMode));
         }
 
+        /**
+         * @param servicePackageActivationMode The activation Mode of the service package
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePackageActivationMode(ArmServicePackageActivationMode servicePackageActivationMode) {
             return servicePackageActivationMode(Either.ofRight(servicePackageActivationMode));
         }
 
+        /**
+         * @param servicePlacementPolicies A list that describes the correlation of the service with other services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePlacementPolicies(@Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
             $.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
 
+        /**
+         * @param servicePlacementPolicies A list that describes the correlation of the service with other services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePlacementPolicies(List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
             return servicePlacementPolicies(Output.of(servicePlacementPolicies));
         }
 
+        /**
+         * @param servicePlacementPolicies A list that describes the correlation of the service with other services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePlacementPolicies(ServicePlacementPolicyDescriptionArgs... servicePlacementPolicies) {
             return servicePlacementPolicies(List.of(servicePlacementPolicies));
         }
 
+        /**
+         * @param serviceTypeName The name of the service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeName(@Nullable Output<String> serviceTypeName) {
             $.serviceTypeName = serviceTypeName;
             return this;
         }
 
+        /**
+         * @param serviceTypeName The name of the service type
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeName(String serviceTypeName) {
             return serviceTypeName(Output.of(serviceTypeName));
         }
 
+        /**
+         * @param tags Azure resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Azure resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

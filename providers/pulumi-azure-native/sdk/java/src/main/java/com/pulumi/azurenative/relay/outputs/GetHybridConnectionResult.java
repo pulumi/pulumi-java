@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHybridConnectionResult {
-    /**
-     * The time the hybrid connection was created.
-     * 
-     */
+        /**
+         * @return The time the hybrid connection was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
-     * 
-     */
+        /**
+         * @return The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
+         * 
+         */
     private final Integer listenerCount;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
-     * 
-     */
+        /**
+         * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+         * 
+         */
     private final @Nullable Boolean requiresClientAuthorization;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The time the namespace was updated.
-     * 
-     */
+        /**
+         * @return The time the namespace was updated.
+         * 
+         */
     private final String updatedAt;
-    /**
-     * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
-     * 
-     */
+        /**
+         * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+         * 
+         */
     private final @Nullable String userMetadata;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetHybridConnectionResult {
     }
 
     /**
-     * The time the hybrid connection was created.
+     * @return The time the hybrid connection was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
+     * @return The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
      * 
-    */
+     */
     public Integer listenerCount() {
         return this.listenerCount;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+     * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
      * 
-    */
+     */
     public Optional<Boolean> requiresClientAuthorization() {
         return Optional.ofNullable(this.requiresClientAuthorization);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The time the namespace was updated.
+     * @return The time the namespace was updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }
     /**
-     * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+     * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
-    */
+     */
     public Optional<String> userMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }

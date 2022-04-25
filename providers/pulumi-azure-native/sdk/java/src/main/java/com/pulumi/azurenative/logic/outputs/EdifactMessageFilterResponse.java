@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class EdifactMessageFilterResponse {
-    /**
-     * The message filter type.
-     * 
-     */
+        /**
+         * @return The message filter type.
+         * 
+         */
     private final String messageFilterType;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class EdifactMessageFilterResponse {
     }
 
     /**
-     * The message filter type.
+     * @return The message filter type.
      * 
-    */
+     */
     public String messageFilterType() {
         return this.messageFilterType;
     }

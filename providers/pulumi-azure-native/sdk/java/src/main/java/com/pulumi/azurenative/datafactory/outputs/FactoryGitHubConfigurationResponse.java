@@ -12,51 +12,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FactoryGitHubConfigurationResponse {
-    /**
-     * Account name.
-     * 
-     */
+        /**
+         * @return Account name.
+         * 
+         */
     private final String accountName;
-    /**
-     * GitHub bring your own app client id.
-     * 
-     */
+        /**
+         * @return GitHub bring your own app client id.
+         * 
+         */
     private final @Nullable String clientId;
-    /**
-     * GitHub bring your own app client secret information.
-     * 
-     */
+        /**
+         * @return GitHub bring your own app client secret information.
+         * 
+         */
     private final @Nullable GitHubClientSecretResponse clientSecret;
-    /**
-     * Collaboration branch.
-     * 
-     */
+        /**
+         * @return Collaboration branch.
+         * 
+         */
     private final String collaborationBranch;
-    /**
-     * GitHub Enterprise host name. For example: https://github.mydomain.com
-     * 
-     */
+        /**
+         * @return GitHub Enterprise host name. For example: https://github.mydomain.com
+         * 
+         */
     private final @Nullable String hostName;
-    /**
-     * Last commit id.
-     * 
-     */
+        /**
+         * @return Last commit id.
+         * 
+         */
     private final @Nullable String lastCommitId;
-    /**
-     * Repository name.
-     * 
-     */
+        /**
+         * @return Repository name.
+         * 
+         */
     private final String repositoryName;
-    /**
-     * Root folder.
-     * 
-     */
+        /**
+         * @return Root folder.
+         * 
+         */
     private final String rootFolder;
-    /**
-     * Type of repo configuration.
-     * Expected value is &#39;FactoryGitHubConfiguration&#39;.
-     * 
-     */
+        /**
+         * @return Type of repo configuration.
+         * Expected value is &#39;FactoryGitHubConfiguration&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -82,66 +82,66 @@ public final class FactoryGitHubConfigurationResponse {
     }
 
     /**
-     * Account name.
+     * @return Account name.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * GitHub bring your own app client id.
+     * @return GitHub bring your own app client id.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * GitHub bring your own app client secret information.
+     * @return GitHub bring your own app client secret information.
      * 
-    */
+     */
     public Optional<GitHubClientSecretResponse> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * Collaboration branch.
+     * @return Collaboration branch.
      * 
-    */
+     */
     public String collaborationBranch() {
         return this.collaborationBranch;
     }
     /**
-     * GitHub Enterprise host name. For example: https://github.mydomain.com
+     * @return GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
-    */
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * Last commit id.
+     * @return Last commit id.
      * 
-    */
+     */
     public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
-     * Repository name.
+     * @return Repository name.
      * 
-    */
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
     /**
-     * Root folder.
+     * @return Root folder.
      * 
-    */
+     */
     public String rootFolder() {
         return this.rootFolder;
     }
     /**
-     * Type of repo configuration.
+     * @return Type of repo configuration.
      * Expected value is &#39;FactoryGitHubConfiguration&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

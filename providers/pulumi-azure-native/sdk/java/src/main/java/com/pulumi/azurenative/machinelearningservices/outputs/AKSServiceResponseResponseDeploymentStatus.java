@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AKSServiceResponseResponseDeploymentStatus {
-    /**
-     * The number of available replicas.
-     * 
-     */
+        /**
+         * @return The number of available replicas.
+         * 
+         */
     private final @Nullable Integer availableReplicas;
-    /**
-     * The desired number of replicas.
-     * 
-     */
+        /**
+         * @return The desired number of replicas.
+         * 
+         */
     private final @Nullable Integer desiredReplicas;
-    /**
-     * The error details.
-     * 
-     */
+        /**
+         * @return The error details.
+         * 
+         */
     private final @Nullable AKSReplicaStatusResponseError error;
-    /**
-     * The number of updated replicas.
-     * 
-     */
+        /**
+         * @return The number of updated replicas.
+         * 
+         */
     private final @Nullable Integer updatedReplicas;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class AKSServiceResponseResponseDeploymentStatus {
     }
 
     /**
-     * The number of available replicas.
+     * @return The number of available replicas.
      * 
-    */
+     */
     public Optional<Integer> availableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
-     * The desired number of replicas.
+     * @return The desired number of replicas.
      * 
-    */
+     */
     public Optional<Integer> desiredReplicas() {
         return Optional.ofNullable(this.desiredReplicas);
     }
     /**
-     * The error details.
+     * @return The error details.
      * 
-    */
+     */
     public Optional<AKSReplicaStatusResponseError> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * The number of updated replicas.
+     * @return The number of updated replicas.
      * 
-    */
+     */
     public Optional<Integer> updatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);
     }

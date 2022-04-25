@@ -18,80 +18,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VaultPropertiesResponse {
-    /**
-     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
-     * 
-     */
+        /**
+         * @return An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+         * 
+         */
     private final @Nullable List<AccessPolicyEntryResponse> accessPolicies;
-    /**
-     * Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
-     * 
-     */
+        /**
+         * @return Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
+         * 
+         */
     private final @Nullable Boolean enablePurgeProtection;
-    /**
-     * Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
-     * 
-     */
+        /**
+         * @return Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
+         * 
+         */
     private final @Nullable Boolean enableRbacAuthorization;
-    /**
-     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
-     * 
-     */
+        /**
+         * @return Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+         * 
+         */
     private final @Nullable Boolean enableSoftDelete;
-    /**
-     * Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
-     * 
-     */
+        /**
+         * @return Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+         * 
+         */
     private final @Nullable Boolean enabledForDeployment;
-    /**
-     * Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-     * 
-     */
+        /**
+         * @return Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+         * 
+         */
     private final @Nullable Boolean enabledForDiskEncryption;
-    /**
-     * Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
-     * 
-     */
+        /**
+         * @return Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
+         * 
+         */
     private final @Nullable Boolean enabledForTemplateDeployment;
-    /**
-     * The resource id of HSM Pool.
-     * 
-     */
+        /**
+         * @return The resource id of HSM Pool.
+         * 
+         */
     private final String hsmPoolResourceId;
-    /**
-     * Rules governing the accessibility of the key vault from specific network locations.
-     * 
-     */
+        /**
+         * @return Rules governing the accessibility of the key vault from specific network locations.
+         * 
+         */
     private final @Nullable NetworkRuleSetResponse networkAcls;
-    /**
-     * List of private endpoint connections associated with the key vault.
-     * 
-     */
+        /**
+         * @return List of private endpoint connections associated with the key vault.
+         * 
+         */
     private final List<PrivateEndpointConnectionItemResponse> privateEndpointConnections;
-    /**
-     * Provisioning state of the vault.
-     * 
-     */
+        /**
+         * @return Provisioning state of the vault.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * SKU details
-     * 
-     */
+        /**
+         * @return SKU details
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
-     * 
-     */
+        /**
+         * @return softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+         * 
+         */
     private final @Nullable Integer softDeleteRetentionInDays;
-    /**
-     * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
-     * 
-     */
+        /**
+         * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The URI of the vault for performing operations on keys and secrets. This property is readonly
-     * 
-     */
+        /**
+         * @return The URI of the vault for performing operations on keys and secrets. This property is readonly
+         * 
+         */
     private final @Nullable String vaultUri;
 
     @CustomType.Constructor
@@ -129,107 +129,107 @@ public final class VaultPropertiesResponse {
     }
 
     /**
-     * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
+     * @return An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault&#39;s tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
      * 
-    */
+     */
     public List<AccessPolicyEntryResponse> accessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
     /**
-     * Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
+     * @return Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
      * 
-    */
+     */
     public Optional<Boolean> enablePurgeProtection() {
         return Optional.ofNullable(this.enablePurgeProtection);
     }
     /**
-     * Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
+     * @return Property that controls how data actions are authorized. When true, the key vault will use Role Based Access Control (RBAC) for authorization of data actions, and the access policies specified in vault properties will be  ignored. When false, the key vault will use the access policies specified in vault properties, and any policy stored on Azure Resource Manager will be ignored. If null or not specified, the vault is created with the default value of false. Note that management actions are always authorized with RBAC.
      * 
-    */
+     */
     public Optional<Boolean> enableRbacAuthorization() {
         return Optional.ofNullable(this.enableRbacAuthorization);
     }
     /**
-     * Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
+     * @return Property to specify whether the &#39;soft delete&#39; functionality is enabled for this key vault. If it&#39;s not set to any value(true or false) when creating new key vault, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
-    */
+     */
     public Optional<Boolean> enableSoftDelete() {
         return Optional.ofNullable(this.enableSoftDelete);
     }
     /**
-     * Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+     * @return Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
      * 
-    */
+     */
     public Optional<Boolean> enabledForDeployment() {
         return Optional.ofNullable(this.enabledForDeployment);
     }
     /**
-     * Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+     * @return Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
      * 
-    */
+     */
     public Optional<Boolean> enabledForDiskEncryption() {
         return Optional.ofNullable(this.enabledForDiskEncryption);
     }
     /**
-     * Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
+     * @return Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
      * 
-    */
+     */
     public Optional<Boolean> enabledForTemplateDeployment() {
         return Optional.ofNullable(this.enabledForTemplateDeployment);
     }
     /**
-     * The resource id of HSM Pool.
+     * @return The resource id of HSM Pool.
      * 
-    */
+     */
     public String hsmPoolResourceId() {
         return this.hsmPoolResourceId;
     }
     /**
-     * Rules governing the accessibility of the key vault from specific network locations.
+     * @return Rules governing the accessibility of the key vault from specific network locations.
      * 
-    */
+     */
     public Optional<NetworkRuleSetResponse> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
     /**
-     * List of private endpoint connections associated with the key vault.
+     * @return List of private endpoint connections associated with the key vault.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionItemResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Provisioning state of the vault.
+     * @return Provisioning state of the vault.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * SKU details
+     * @return SKU details
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * softDelete data retention days. It accepts &gt;=7 and &lt;=90.
+     * @return softDelete data retention days. It accepts &gt;=7 and &lt;=90.
      * 
-    */
+     */
     public Optional<Integer> softDeleteRetentionInDays() {
         return Optional.ofNullable(this.softDeleteRetentionInDays);
     }
     /**
-     * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+     * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The URI of the vault for performing operations on keys and secrets. This property is readonly
+     * @return The URI of the vault for performing operations on keys and secrets. This property is readonly
      * 
-    */
+     */
     public Optional<String> vaultUri() {
         return Optional.ofNullable(this.vaultUri);
     }

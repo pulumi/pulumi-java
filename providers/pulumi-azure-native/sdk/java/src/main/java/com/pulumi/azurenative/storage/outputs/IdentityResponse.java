@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IdentityResponse {
-    /**
-     * The principal ID of resource identity.
-     * 
-     */
+        /**
+         * @return The principal ID of resource identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant ID of resource.
-     * 
-     */
+        /**
+         * @return The tenant ID of resource.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The identity type.
-     * 
-     */
+        /**
+         * @return The identity type.
+         * 
+         */
     private final String type;
-    /**
-     * Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
-     * 
-     */
+        /**
+         * @return Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
+         * 
+         */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class IdentityResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
+     * @return Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

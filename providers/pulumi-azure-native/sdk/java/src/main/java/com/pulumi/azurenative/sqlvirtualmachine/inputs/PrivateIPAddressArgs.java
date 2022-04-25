@@ -26,6 +26,10 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
+    /**
+     * @return Private IP address bound to the availability group listener.
+     * 
+     */
     public Optional<Output<String>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -37,6 +41,10 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetResourceId")
     private @Nullable Output<String> subnetResourceId;
 
+    /**
+     * @return Subnet used to include private IP.
+     * 
+     */
     public Optional<Output<String>> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
@@ -66,20 +74,44 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
             $ = new PrivateIPAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress Private IP address bound to the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress Private IP address bound to the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(String ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param subnetResourceId Subnet used to include private IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
             $.subnetResourceId = subnetResourceId;
             return this;
         }
 
+        /**
+         * @param subnetResourceId Subnet used to include private IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetResourceId(String subnetResourceId) {
             return subnetResourceId(Output.of(subnetResourceId));
         }

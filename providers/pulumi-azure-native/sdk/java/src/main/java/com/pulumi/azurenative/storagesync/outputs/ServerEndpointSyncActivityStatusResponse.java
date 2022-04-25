@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ServerEndpointSyncActivityStatusResponse {
-    /**
-     * Applied bytes
-     * 
-     */
+        /**
+         * @return Applied bytes
+         * 
+         */
     private final Double appliedBytes;
-    /**
-     * Applied item count.
-     * 
-     */
+        /**
+         * @return Applied item count.
+         * 
+         */
     private final Double appliedItemCount;
-    /**
-     * Per item error count
-     * 
-     */
+        /**
+         * @return Per item error count
+         * 
+         */
     private final Double perItemErrorCount;
-    /**
-     * Sync mode
-     * 
-     */
+        /**
+         * @return Sync mode
+         * 
+         */
     private final String syncMode;
-    /**
-     * Timestamp when properties were updated
-     * 
-     */
+        /**
+         * @return Timestamp when properties were updated
+         * 
+         */
     private final String timestamp;
-    /**
-     * Total bytes (if available)
-     * 
-     */
+        /**
+         * @return Total bytes (if available)
+         * 
+         */
     private final Double totalBytes;
-    /**
-     * Total item count (if available)
-     * 
-     */
+        /**
+         * @return Total item count (if available)
+         * 
+         */
     private final Double totalItemCount;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class ServerEndpointSyncActivityStatusResponse {
     }
 
     /**
-     * Applied bytes
+     * @return Applied bytes
      * 
-    */
+     */
     public Double appliedBytes() {
         return this.appliedBytes;
     }
     /**
-     * Applied item count.
+     * @return Applied item count.
      * 
-    */
+     */
     public Double appliedItemCount() {
         return this.appliedItemCount;
     }
     /**
-     * Per item error count
+     * @return Per item error count
      * 
-    */
+     */
     public Double perItemErrorCount() {
         return this.perItemErrorCount;
     }
     /**
-     * Sync mode
+     * @return Sync mode
      * 
-    */
+     */
     public String syncMode() {
         return this.syncMode;
     }
     /**
-     * Timestamp when properties were updated
+     * @return Timestamp when properties were updated
      * 
-    */
+     */
     public String timestamp() {
         return this.timestamp;
     }
     /**
-     * Total bytes (if available)
+     * @return Total bytes (if available)
      * 
-    */
+     */
     public Double totalBytes() {
         return this.totalBytes;
     }
     /**
-     * Total item count (if available)
+     * @return Total item count (if available)
      * 
-    */
+     */
     public Double totalItemCount() {
         return this.totalItemCount;
     }

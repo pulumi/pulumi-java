@@ -25,6 +25,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of notification.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="emailRecipient")
     private @Nullable Output<String> emailRecipient;
 
+    /**
+     * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     * 
+     */
     public Optional<Output<String>> emailRecipient() {
         return Optional.ofNullable(this.emailRecipient);
     }
@@ -47,6 +55,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="events")
     private @Nullable Output<List<EventArgs>> events;
 
+    /**
+     * @return The list of event for which this notification is enabled.
+     * 
+     */
     public Optional<Output<List<EventArgs>>> events() {
         return Optional.ofNullable(this.events);
     }
@@ -58,6 +70,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -69,6 +85,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -80,6 +100,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the notification channel.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -91,6 +115,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="notificationLocale")
     private @Nullable Output<String> notificationLocale;
 
+    /**
+     * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
+     * 
+     */
     public Optional<Output<String>> notificationLocale() {
         return Optional.ofNullable(this.notificationLocale);
     }
@@ -102,6 +130,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,6 +145,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,6 +160,10 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
     @Import(name="webHookUrl")
     private @Nullable Output<String> webHookUrl;
 
+    /**
+     * @return The webhook URL to send notifications to.
+     * 
+     */
     public Optional<Output<String>> webHookUrl() {
         return Optional.ofNullable(this.webHookUrl);
     }
@@ -161,96 +201,222 @@ public final class NotificationChannelArgs extends com.pulumi.resources.Resource
             $ = new NotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param emailRecipient The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailRecipient(@Nullable Output<String> emailRecipient) {
             $.emailRecipient = emailRecipient;
             return this;
         }
 
+        /**
+         * @param emailRecipient The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailRecipient(String emailRecipient) {
             return emailRecipient(Output.of(emailRecipient));
         }
 
+        /**
+         * @param events The list of event for which this notification is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(@Nullable Output<List<EventArgs>> events) {
             $.events = events;
             return this;
         }
 
+        /**
+         * @param events The list of event for which this notification is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(List<EventArgs> events) {
             return events(Output.of(events));
         }
 
+        /**
+         * @param events The list of event for which this notification is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder events(EventArgs... events) {
             return events(List.of(events));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The name of the notification channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the notification channel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param notificationLocale The locale to use when sending a notification (fallback for unsupported languages is EN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationLocale(@Nullable Output<String> notificationLocale) {
             $.notificationLocale = notificationLocale;
             return this;
         }
 
+        /**
+         * @param notificationLocale The locale to use when sending a notification (fallback for unsupported languages is EN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationLocale(String notificationLocale) {
             return notificationLocale(Output.of(notificationLocale));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param webHookUrl The webhook URL to send notifications to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookUrl(@Nullable Output<String> webHookUrl) {
             $.webHookUrl = webHookUrl;
             return this;
         }
 
+        /**
+         * @param webHookUrl The webhook URL to send notifications to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webHookUrl(String webHookUrl) {
             return webHookUrl(Output.of(webHookUrl));
         }

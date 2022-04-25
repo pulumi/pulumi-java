@@ -28,6 +28,10 @@ public final class ProfileEnumValidValuesFormatArgs extends com.pulumi.resources
     @Import(name="localizedValueNames")
     private @Nullable Output<Map<String,String>> localizedValueNames;
 
+    /**
+     * @return Localized names of the enum member.
+     * 
+     */
     public Optional<Output<Map<String,String>>> localizedValueNames() {
         return Optional.ofNullable(this.localizedValueNames);
     }
@@ -39,6 +43,10 @@ public final class ProfileEnumValidValuesFormatArgs extends com.pulumi.resources
     @Import(name="value")
     private @Nullable Output<Integer> value;
 
+    /**
+     * @return The integer value of the enum member.
+     * 
+     */
     public Optional<Output<Integer>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -68,20 +76,44 @@ public final class ProfileEnumValidValuesFormatArgs extends com.pulumi.resources
             $ = new ProfileEnumValidValuesFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localizedValueNames Localized names of the enum member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localizedValueNames(@Nullable Output<Map<String,String>> localizedValueNames) {
             $.localizedValueNames = localizedValueNames;
             return this;
         }
 
+        /**
+         * @param localizedValueNames Localized names of the enum member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localizedValueNames(Map<String,String> localizedValueNames) {
             return localizedValueNames(Output.of(localizedValueNames));
         }
 
+        /**
+         * @param value The integer value of the enum member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Integer> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The integer value of the enum member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Integer value) {
             return value(Output.of(value));
         }

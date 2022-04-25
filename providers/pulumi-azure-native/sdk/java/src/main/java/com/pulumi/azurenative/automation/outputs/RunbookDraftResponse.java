@@ -16,35 +16,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RunbookDraftResponse {
-    /**
-     * Gets or sets the creation time of the runbook draft.
-     * 
-     */
+        /**
+         * @return Gets or sets the creation time of the runbook draft.
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * Gets or sets the draft runbook content link.
-     * 
-     */
+        /**
+         * @return Gets or sets the draft runbook content link.
+         * 
+         */
     private final @Nullable ContentLinkResponse draftContentLink;
-    /**
-     * Gets or sets whether runbook is in edit mode.
-     * 
-     */
+        /**
+         * @return Gets or sets whether runbook is in edit mode.
+         * 
+         */
     private final @Nullable Boolean inEdit;
-    /**
-     * Gets or sets the last modified time of the runbook draft.
-     * 
-     */
+        /**
+         * @return Gets or sets the last modified time of the runbook draft.
+         * 
+         */
     private final @Nullable String lastModifiedTime;
-    /**
-     * Gets or sets the runbook output types.
-     * 
-     */
+        /**
+         * @return Gets or sets the runbook output types.
+         * 
+         */
     private final @Nullable List<String> outputTypes;
-    /**
-     * Gets or sets the runbook draft parameters.
-     * 
-     */
+        /**
+         * @return Gets or sets the runbook draft parameters.
+         * 
+         */
     private final @Nullable Map<String,RunbookParameterResponse> parameters;
 
     @CustomType.Constructor
@@ -64,44 +64,44 @@ public final class RunbookDraftResponse {
     }
 
     /**
-     * Gets or sets the creation time of the runbook draft.
+     * @return Gets or sets the creation time of the runbook draft.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * Gets or sets the draft runbook content link.
+     * @return Gets or sets the draft runbook content link.
      * 
-    */
+     */
     public Optional<ContentLinkResponse> draftContentLink() {
         return Optional.ofNullable(this.draftContentLink);
     }
     /**
-     * Gets or sets whether runbook is in edit mode.
+     * @return Gets or sets whether runbook is in edit mode.
      * 
-    */
+     */
     public Optional<Boolean> inEdit() {
         return Optional.ofNullable(this.inEdit);
     }
     /**
-     * Gets or sets the last modified time of the runbook draft.
+     * @return Gets or sets the last modified time of the runbook draft.
      * 
-    */
+     */
     public Optional<String> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
-     * Gets or sets the runbook output types.
+     * @return Gets or sets the runbook output types.
      * 
-    */
+     */
     public List<String> outputTypes() {
         return this.outputTypes == null ? List.of() : this.outputTypes;
     }
     /**
-     * Gets or sets the runbook draft parameters.
+     * @return Gets or sets the runbook draft parameters.
      * 
-    */
+     */
     public Map<String,RunbookParameterResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }

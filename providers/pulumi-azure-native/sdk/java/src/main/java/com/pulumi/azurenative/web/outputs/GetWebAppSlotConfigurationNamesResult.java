@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebAppSlotConfigurationNamesResult {
-    /**
-     * List of application settings names.
-     * 
-     */
+        /**
+         * @return List of application settings names.
+         * 
+         */
     private final @Nullable List<String> appSettingNames;
-    /**
-     * List of external Azure storage account identifiers.
-     * 
-     */
+        /**
+         * @return List of external Azure storage account identifiers.
+         * 
+         */
     private final @Nullable List<String> azureStorageConfigNames;
-    /**
-     * List of connection string names.
-     * 
-     */
+        /**
+         * @return List of connection string names.
+         * 
+         */
     private final @Nullable List<String> connectionStringNames;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetWebAppSlotConfigurationNamesResult {
     }
 
     /**
-     * List of application settings names.
+     * @return List of application settings names.
      * 
-    */
+     */
     public List<String> appSettingNames() {
         return this.appSettingNames == null ? List.of() : this.appSettingNames;
     }
     /**
-     * List of external Azure storage account identifiers.
+     * @return List of external Azure storage account identifiers.
      * 
-    */
+     */
     public List<String> azureStorageConfigNames() {
         return this.azureStorageConfigNames == null ? List.of() : this.azureStorageConfigNames;
     }
     /**
-     * List of connection string names.
+     * @return List of connection string names.
      * 
-    */
+     */
     public List<String> connectionStringNames() {
         return this.connectionStringNames == null ? List.of() : this.connectionStringNames;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

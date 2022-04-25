@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssignmentPropertiesResponseAdditionalData {
-    /**
-     * Exemption category of this assignment
-     * 
-     */
+        /**
+         * @return Exemption category of this assignment
+         * 
+         */
     private final @Nullable String exemptionCategory;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AssignmentPropertiesResponseAdditionalData {
     }
 
     /**
-     * Exemption category of this assignment
+     * @return Exemption category of this assignment
      * 
-    */
+     */
     public Optional<String> exemptionCategory() {
         return Optional.ofNullable(this.exemptionCategory);
     }

@@ -26,6 +26,10 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="expiryDate")
     private @Nullable Output<String> expiryDate;
 
+    /**
+     * @return expiration date of service principal secret
+     * 
+     */
     public Optional<Output<String>> expiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
@@ -37,6 +41,10 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="parameterNameInStore")
     private @Nullable Output<String> parameterNameInStore;
 
+    /**
+     * @return name of secret resource in parameter store
+     * 
+     */
     public Optional<Output<String>> parameterNameInStore() {
         return Optional.ofNullable(this.parameterNameInStore);
     }
@@ -48,6 +56,10 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="parameterStoreRegion")
     private @Nullable Output<String> parameterStoreRegion;
 
+    /**
+     * @return region of parameter store where secret is kept
+     * 
+     */
     public Optional<Output<String>> parameterStoreRegion() {
         return Optional.ofNullable(this.parameterStoreRegion);
     }
@@ -78,29 +90,65 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
             $ = new DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiryDate expiration date of service principal secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDate(@Nullable Output<String> expiryDate) {
             $.expiryDate = expiryDate;
             return this;
         }
 
+        /**
+         * @param expiryDate expiration date of service principal secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDate(String expiryDate) {
             return expiryDate(Output.of(expiryDate));
         }
 
+        /**
+         * @param parameterNameInStore name of secret resource in parameter store
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameInStore(@Nullable Output<String> parameterNameInStore) {
             $.parameterNameInStore = parameterNameInStore;
             return this;
         }
 
+        /**
+         * @param parameterNameInStore name of secret resource in parameter store
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameInStore(String parameterNameInStore) {
             return parameterNameInStore(Output.of(parameterNameInStore));
         }
 
+        /**
+         * @param parameterStoreRegion region of parameter store where secret is kept
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterStoreRegion(@Nullable Output<String> parameterStoreRegion) {
             $.parameterStoreRegion = parameterStoreRegion;
             return this;
         }
 
+        /**
+         * @param parameterStoreRegion region of parameter store where secret is kept
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterStoreRegion(String parameterStoreRegion) {
             return parameterStoreRegion(Output.of(parameterStoreRegion));
         }

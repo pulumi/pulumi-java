@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SiteMachineKeyResponse {
-    /**
-     * Algorithm used for decryption.
-     * 
-     */
+        /**
+         * @return Algorithm used for decryption.
+         * 
+         */
     private final @Nullable String decryption;
-    /**
-     * Decryption key.
-     * 
-     */
+        /**
+         * @return Decryption key.
+         * 
+         */
     private final @Nullable String decryptionKey;
-    /**
-     * MachineKey validation.
-     * 
-     */
+        /**
+         * @return MachineKey validation.
+         * 
+         */
     private final @Nullable String validation;
-    /**
-     * Validation key.
-     * 
-     */
+        /**
+         * @return Validation key.
+         * 
+         */
     private final @Nullable String validationKey;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class SiteMachineKeyResponse {
     }
 
     /**
-     * Algorithm used for decryption.
+     * @return Algorithm used for decryption.
      * 
-    */
+     */
     public Optional<String> decryption() {
         return Optional.ofNullable(this.decryption);
     }
     /**
-     * Decryption key.
+     * @return Decryption key.
      * 
-    */
+     */
     public Optional<String> decryptionKey() {
         return Optional.ofNullable(this.decryptionKey);
     }
     /**
-     * MachineKey validation.
+     * @return MachineKey validation.
      * 
-    */
+     */
     public Optional<String> validation() {
         return Optional.ofNullable(this.validation);
     }
     /**
-     * Validation key.
+     * @return Validation key.
      * 
-    */
+     */
     public Optional<String> validationKey() {
         return Optional.ofNullable(this.validationKey);
     }

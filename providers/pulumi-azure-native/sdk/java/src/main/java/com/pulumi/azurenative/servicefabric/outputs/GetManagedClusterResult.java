@@ -19,120 +19,120 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetManagedClusterResult {
-    /**
-     * client certificates for the cluster.
-     * 
-     */
+        /**
+         * @return client certificates for the cluster.
+         * 
+         */
     private final @Nullable List<String> addonFeatures;
-    /**
-     * vm admin user password.
-     * 
-     */
+        /**
+         * @return vm admin user password.
+         * 
+         */
     private final @Nullable String adminPassword;
-    /**
-     * vm admin user name.
-     * 
-     */
+        /**
+         * @return vm admin user name.
+         * 
+         */
     private final String adminUserName;
-    /**
-     * Azure active directory.
-     * 
-     */
+        /**
+         * @return Azure active directory.
+         * 
+         */
     private final @Nullable AzureActiveDirectoryResponse azureActiveDirectory;
-    /**
-     * The port used for client connections to the cluster.
-     * 
-     */
+        /**
+         * @return The port used for client connections to the cluster.
+         * 
+         */
     private final @Nullable Integer clientConnectionPort;
-    /**
-     * client certificates for the cluster.
-     * 
-     */
+        /**
+         * @return client certificates for the cluster.
+         * 
+         */
     private final @Nullable List<ClientCertificateResponse> clients;
-    /**
-     * The cluster certificate thumbprint used node to node communication.
-     * 
-     */
+        /**
+         * @return The cluster certificate thumbprint used node to node communication.
+         * 
+         */
     private final String clusterCertificateThumbprint;
-    /**
-     * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
-     * 
-     */
+        /**
+         * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
+         * 
+         */
     private final @Nullable String clusterCodeVersion;
-    /**
-     * A service generated unique identifier for the cluster resource.
-     * 
-     */
+        /**
+         * @return A service generated unique identifier for the cluster resource.
+         * 
+         */
     private final String clusterId;
-    /**
-     * The current state of the cluster.
-     * 
-     */
+        /**
+         * @return The current state of the cluster.
+         * 
+         */
     private final String clusterState;
-    /**
-     * The cluster dns name.
-     * 
-     */
+        /**
+         * @return The cluster dns name.
+         * 
+         */
     private final String dnsName;
-    /**
-     * Azure resource etag.
-     * 
-     */
+        /**
+         * @return Azure resource etag.
+         * 
+         */
     private final String etag;
-    /**
-     * The list of custom fabric settings to configure the cluster.
-     * 
-     */
+        /**
+         * @return The list of custom fabric settings to configure the cluster.
+         * 
+         */
     private final @Nullable List<SettingsSectionDescriptionResponse> fabricSettings;
-    /**
-     * the cluster Fully qualified domain name.
-     * 
-     */
+        /**
+         * @return the cluster Fully qualified domain name.
+         * 
+         */
     private final String fqdn;
-    /**
-     * The port used for http connections to the cluster.
-     * 
-     */
+        /**
+         * @return The port used for http connections to the cluster.
+         * 
+         */
     private final @Nullable Integer httpGatewayConnectionPort;
-    /**
-     * Azure resource identifier.
-     * 
-     */
+        /**
+         * @return Azure resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * Describes load balancing rules.
-     * 
-     */
+        /**
+         * @return Describes load balancing rules.
+         * 
+         */
     private final @Nullable List<LoadBalancingRuleResponse> loadBalancingRules;
-    /**
-     * Azure resource location.
-     * 
-     */
+        /**
+         * @return Azure resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Azure resource name.
-     * 
-     */
+        /**
+         * @return Azure resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the managed cluster resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the managed cluster resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The sku of the managed cluster
-     * 
-     */
+        /**
+         * @return The sku of the managed cluster
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Azure resource tags.
-     * 
-     */
+        /**
+         * @return Azure resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure resource type.
-     * 
-     */
+        /**
+         * @return Azure resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -186,163 +186,163 @@ public final class GetManagedClusterResult {
     }
 
     /**
-     * client certificates for the cluster.
+     * @return client certificates for the cluster.
      * 
-    */
+     */
     public List<String> addonFeatures() {
         return this.addonFeatures == null ? List.of() : this.addonFeatures;
     }
     /**
-     * vm admin user password.
+     * @return vm admin user password.
      * 
-    */
+     */
     public Optional<String> adminPassword() {
         return Optional.ofNullable(this.adminPassword);
     }
     /**
-     * vm admin user name.
+     * @return vm admin user name.
      * 
-    */
+     */
     public String adminUserName() {
         return this.adminUserName;
     }
     /**
-     * Azure active directory.
+     * @return Azure active directory.
      * 
-    */
+     */
     public Optional<AzureActiveDirectoryResponse> azureActiveDirectory() {
         return Optional.ofNullable(this.azureActiveDirectory);
     }
     /**
-     * The port used for client connections to the cluster.
+     * @return The port used for client connections to the cluster.
      * 
-    */
+     */
     public Optional<Integer> clientConnectionPort() {
         return Optional.ofNullable(this.clientConnectionPort);
     }
     /**
-     * client certificates for the cluster.
+     * @return client certificates for the cluster.
      * 
-    */
+     */
     public List<ClientCertificateResponse> clients() {
         return this.clients == null ? List.of() : this.clients;
     }
     /**
-     * The cluster certificate thumbprint used node to node communication.
+     * @return The cluster certificate thumbprint used node to node communication.
      * 
-    */
+     */
     public String clusterCertificateThumbprint() {
         return this.clusterCertificateThumbprint;
     }
     /**
-     * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
+     * @return The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to &#39;Manual&#39;. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
-    */
+     */
     public Optional<String> clusterCodeVersion() {
         return Optional.ofNullable(this.clusterCodeVersion);
     }
     /**
-     * A service generated unique identifier for the cluster resource.
+     * @return A service generated unique identifier for the cluster resource.
      * 
-    */
+     */
     public String clusterId() {
         return this.clusterId;
     }
     /**
-     * The current state of the cluster.
+     * @return The current state of the cluster.
      * 
-    */
+     */
     public String clusterState() {
         return this.clusterState;
     }
     /**
-     * The cluster dns name.
+     * @return The cluster dns name.
      * 
-    */
+     */
     public String dnsName() {
         return this.dnsName;
     }
     /**
-     * Azure resource etag.
+     * @return Azure resource etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The list of custom fabric settings to configure the cluster.
+     * @return The list of custom fabric settings to configure the cluster.
      * 
-    */
+     */
     public List<SettingsSectionDescriptionResponse> fabricSettings() {
         return this.fabricSettings == null ? List.of() : this.fabricSettings;
     }
     /**
-     * the cluster Fully qualified domain name.
+     * @return the cluster Fully qualified domain name.
      * 
-    */
+     */
     public String fqdn() {
         return this.fqdn;
     }
     /**
-     * The port used for http connections to the cluster.
+     * @return The port used for http connections to the cluster.
      * 
-    */
+     */
     public Optional<Integer> httpGatewayConnectionPort() {
         return Optional.ofNullable(this.httpGatewayConnectionPort);
     }
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Describes load balancing rules.
+     * @return Describes load balancing rules.
      * 
-    */
+     */
     public List<LoadBalancingRuleResponse> loadBalancingRules() {
         return this.loadBalancingRules == null ? List.of() : this.loadBalancingRules;
     }
     /**
-     * Azure resource location.
+     * @return Azure resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the managed cluster resource.
+     * @return The provisioning state of the managed cluster resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The sku of the managed cluster
+     * @return The sku of the managed cluster
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Azure resource tags.
+     * @return Azure resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

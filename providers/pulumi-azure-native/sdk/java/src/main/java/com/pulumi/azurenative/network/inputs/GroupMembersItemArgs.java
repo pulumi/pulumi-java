@@ -26,6 +26,10 @@ public final class GroupMembersItemArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource Id.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -54,11 +58,23 @@ public final class GroupMembersItemArgs extends com.pulumi.resources.ResourceArg
             $ = new GroupMembersItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

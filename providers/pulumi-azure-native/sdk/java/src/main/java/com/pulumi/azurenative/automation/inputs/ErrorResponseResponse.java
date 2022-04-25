@@ -25,6 +25,10 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Error code
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Error message indicating why the operation failed.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -65,11 +73,23 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
             $ = new ErrorResponseResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Error code
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param message Error message indicating why the operation failed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;

@@ -23,6 +23,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aliasName")
     private @Nullable Output<String> aliasName;
 
+    /**
+     * @return Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+     * 
+     */
     public Optional<Output<String>> aliasName() {
         return Optional.ofNullable(this.aliasName);
     }
@@ -34,6 +38,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<PutAliasRequestPropertiesArgs> properties;
 
+    /**
+     * @return Put alias request properties.
+     * 
+     */
     public Output<PutAliasRequestPropertiesArgs> properties() {
         return this.properties;
     }
@@ -63,20 +71,44 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasName Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasName(@Nullable Output<String> aliasName) {
             $.aliasName = aliasName;
             return this;
         }
 
+        /**
+         * @param aliasName Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasName(String aliasName) {
             return aliasName(Output.of(aliasName));
         }
 
+        /**
+         * @param properties Put alias request properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<PutAliasRequestPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Put alias request properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PutAliasRequestPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

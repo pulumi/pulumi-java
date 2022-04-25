@@ -25,6 +25,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
     @Import(name="expectedValue")
     private @Nullable String expectedValue;
 
+    /**
+     * @return The expected value.
+     * 
+     */
     public Optional<String> expectedValue() {
         return Optional.ofNullable(this.expectedValue);
     }
@@ -36,6 +40,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
     @Import(name="operator")
     private @Nullable String operator;
 
+    /**
+     * @return A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+     * 
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
@@ -47,6 +55,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
     @Import(name="propertyJPath")
     private @Nullable String propertyJPath;
 
+    /**
+     * @return The JPath of the entity model property that should be checked.
+     * 
+     */
     public Optional<String> propertyJPath() {
         return Optional.ofNullable(this.propertyJPath);
     }
@@ -58,6 +70,10 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
     @Import(name="propertyType")
     private @Nullable String propertyType;
 
+    /**
+     * @return The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+     * 
+     */
     public Optional<String> propertyType() {
         return Optional.ofNullable(this.propertyType);
     }
@@ -89,21 +105,45 @@ public final class AutomationTriggeringRuleResponse extends com.pulumi.resources
             $ = new AutomationTriggeringRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expectedValue The expected value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expectedValue(@Nullable String expectedValue) {
             $.expectedValue = expectedValue;
             return this;
         }
 
+        /**
+         * @param operator A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(@Nullable String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param propertyJPath The JPath of the entity model property that should be checked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyJPath(@Nullable String propertyJPath) {
             $.propertyJPath = propertyJPath;
             return this;
         }
 
+        /**
+         * @param propertyType The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyType(@Nullable String propertyType) {
             $.propertyType = propertyType;
             return this;

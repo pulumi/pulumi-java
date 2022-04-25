@@ -26,6 +26,10 @@ public final class FirewallPolicyTransportSecurityArgs extends com.pulumi.resour
     @Import(name="certificateAuthority")
     private @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
 
+    /**
+     * @return The CA used for intermediate CA generation.
+     * 
+     */
     public Optional<Output<FirewallPolicyCertificateAuthorityArgs>> certificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }
@@ -54,11 +58,23 @@ public final class FirewallPolicyTransportSecurityArgs extends com.pulumi.resour
             $ = new FirewallPolicyTransportSecurityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthority The CA used for intermediate CA generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(@Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
             $.certificateAuthority = certificateAuthority;
             return this;
         }
 
+        /**
+         * @param certificateAuthority The CA used for intermediate CA generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthority(FirewallPolicyCertificateAuthorityArgs certificateAuthority) {
             return certificateAuthority(Output.of(certificateAuthority));
         }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertificateConfigurationResponse {
-    /**
-     * Certificate information.
-     * 
-     */
+        /**
+         * @return Certificate information.
+         * 
+         */
     private final @Nullable CertificateInformationResponse certificate;
-    /**
-     * Certificate Password.
-     * 
-     */
+        /**
+         * @return Certificate Password.
+         * 
+         */
     private final @Nullable String certificatePassword;
-    /**
-     * Base64 Encoded certificate.
-     * 
-     */
+        /**
+         * @return Base64 Encoded certificate.
+         * 
+         */
     private final @Nullable String encodedCertificate;
-    /**
-     * The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
-     * 
-     */
+        /**
+         * @return The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
+         * 
+         */
     private final String storeName;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class CertificateConfigurationResponse {
     }
 
     /**
-     * Certificate information.
+     * @return Certificate information.
      * 
-    */
+     */
     public Optional<CertificateInformationResponse> certificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
-     * Certificate Password.
+     * @return Certificate Password.
      * 
-    */
+     */
     public Optional<String> certificatePassword() {
         return Optional.ofNullable(this.certificatePassword);
     }
     /**
-     * Base64 Encoded certificate.
+     * @return Base64 Encoded certificate.
      * 
-    */
+     */
     public Optional<String> encodedCertificate() {
         return Optional.ofNullable(this.encodedCertificate);
     }
     /**
-     * The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
+     * @return The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and CertificateAuthority are valid locations.
      * 
-    */
+     */
     public String storeName() {
         return this.storeName;
     }

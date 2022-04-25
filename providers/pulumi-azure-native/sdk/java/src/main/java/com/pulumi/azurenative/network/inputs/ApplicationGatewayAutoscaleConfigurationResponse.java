@@ -25,6 +25,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends com.
     @Import(name="maxCapacity")
     private @Nullable Integer maxCapacity;
 
+    /**
+     * @return Upper bound on number of Application Gateway capacity.
+     * 
+     */
     public Optional<Integer> maxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends com.
     @Import(name="minCapacity", required=true)
     private Integer minCapacity;
 
+    /**
+     * @return Lower bound on number of Application Gateway capacity.
+     * 
+     */
     public Integer minCapacity() {
         return this.minCapacity;
     }
@@ -65,11 +73,23 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends com.
             $ = new ApplicationGatewayAutoscaleConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxCapacity Upper bound on number of Application Gateway capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
             $.maxCapacity = maxCapacity;
             return this;
         }
 
+        /**
+         * @param minCapacity Lower bound on number of Application Gateway capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCapacity(Integer minCapacity) {
             $.minCapacity = minCapacity;
             return this;

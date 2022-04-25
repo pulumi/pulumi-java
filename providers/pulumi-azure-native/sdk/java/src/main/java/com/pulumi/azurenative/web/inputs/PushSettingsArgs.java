@@ -27,6 +27,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dynamicTagsJson")
     private @Nullable Output<String> dynamicTagsJson;
 
+    /**
+     * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+     * 
+     */
     public Optional<Output<String>> dynamicTagsJson() {
         return Optional.ofNullable(this.dynamicTagsJson);
     }
@@ -38,6 +42,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isPushEnabled", required=true)
     private Output<Boolean> isPushEnabled;
 
+    /**
+     * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
+     * 
+     */
     public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
     }
@@ -49,6 +57,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind of resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -60,6 +72,10 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagWhitelistJson")
     private @Nullable Output<String> tagWhitelistJson;
 
+    /**
+     * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+     * 
+     */
     public Optional<Output<String>> tagWhitelistJson() {
         return Optional.ofNullable(this.tagWhitelistJson);
     }
@@ -74,6 +90,13 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagsRequiringAuth")
     private @Nullable Output<String> tagsRequiringAuth;
 
+    /**
+     * @return Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+     * Tags can consist of alphanumeric characters and the following:
+     * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
+     * Validation should be performed at the PushRequestHandler.
+     * 
+     */
     public Optional<Output<String>> tagsRequiringAuth() {
         return Optional.ofNullable(this.tagsRequiringAuth);
     }
@@ -106,47 +129,113 @@ public final class PushSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PushSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dynamicTagsJson Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicTagsJson(@Nullable Output<String> dynamicTagsJson) {
             $.dynamicTagsJson = dynamicTagsJson;
             return this;
         }
 
+        /**
+         * @param dynamicTagsJson Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dynamicTagsJson(String dynamicTagsJson) {
             return dynamicTagsJson(Output.of(dynamicTagsJson));
         }
 
+        /**
+         * @param isPushEnabled Gets or sets a flag indicating whether the Push endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(Output<Boolean> isPushEnabled) {
             $.isPushEnabled = isPushEnabled;
             return this;
         }
 
+        /**
+         * @param isPushEnabled Gets or sets a flag indicating whether the Push endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(Boolean isPushEnabled) {
             return isPushEnabled(Output.of(isPushEnabled));
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param tagWhitelistJson Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagWhitelistJson(@Nullable Output<String> tagWhitelistJson) {
             $.tagWhitelistJson = tagWhitelistJson;
             return this;
         }
 
+        /**
+         * @param tagWhitelistJson Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagWhitelistJson(String tagWhitelistJson) {
             return tagWhitelistJson(Output.of(tagWhitelistJson));
         }
 
+        /**
+         * @param tagsRequiringAuth Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+         * Tags can consist of alphanumeric characters and the following:
+         * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
+         * Validation should be performed at the PushRequestHandler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsRequiringAuth(@Nullable Output<String> tagsRequiringAuth) {
             $.tagsRequiringAuth = tagsRequiringAuth;
             return this;
         }
 
+        /**
+         * @param tagsRequiringAuth Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+         * Tags can consist of alphanumeric characters and the following:
+         * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
+         * Validation should be performed at the PushRequestHandler.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagsRequiringAuth(String tagsRequiringAuth) {
             return tagsRequiringAuth(Output.of(tagsRequiringAuth));
         }

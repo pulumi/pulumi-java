@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IPRangeResponse {
-    /**
-     * The IP address.
-     * 
-     */
+        /**
+         * @return The IP address.
+         * 
+         */
     private final @Nullable String address;
-    /**
-     * The friendly name for the IP address range.
-     * 
-     */
+        /**
+         * @return The friendly name for the IP address range.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The subnet mask prefix length (see CIDR notation).
-     * 
-     */
+        /**
+         * @return The subnet mask prefix length (see CIDR notation).
+         * 
+         */
     private final @Nullable Integer subnetPrefixLength;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class IPRangeResponse {
     }
 
     /**
-     * The IP address.
+     * @return The IP address.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * The friendly name for the IP address range.
+     * @return The friendly name for the IP address range.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The subnet mask prefix length (see CIDR notation).
+     * @return The subnet mask prefix length (see CIDR notation).
      * 
-    */
+     */
     public Optional<Integer> subnetPrefixLength() {
         return Optional.ofNullable(this.subnetPrefixLength);
     }

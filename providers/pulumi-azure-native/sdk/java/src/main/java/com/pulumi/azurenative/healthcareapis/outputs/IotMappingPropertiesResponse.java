@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IotMappingPropertiesResponse {
-    /**
-     * The mapping.
-     * 
-     */
+        /**
+         * @return The mapping.
+         * 
+         */
     private final @Nullable Object content;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class IotMappingPropertiesResponse {
     }
 
     /**
-     * The mapping.
+     * @return The mapping.
      * 
-    */
+     */
     public Optional<Object> content() {
         return Optional.ofNullable(this.content);
     }

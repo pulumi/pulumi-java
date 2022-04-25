@@ -30,6 +30,12 @@ public final class CredentialsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customRegistries")
     private @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
 
+    /**
+     * @return Describes the credential parameters for accessing other custom registries. The key
+     * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+     * the value of the item will be the registry credentials for accessing the registry.
+     * 
+     */
     public Optional<Map<String,CustomRegistryCredentialsResponse>> customRegistries() {
         return Optional.ofNullable(this.customRegistries);
     }
@@ -41,6 +47,10 @@ public final class CredentialsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceRegistry")
     private @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
+    /**
+     * @return Describes the credential parameters for accessing the source registry.
+     * 
+     */
     public Optional<SourceRegistryCredentialsResponse> sourceRegistry() {
         return Optional.ofNullable(this.sourceRegistry);
     }
@@ -70,11 +80,25 @@ public final class CredentialsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRegistries Describes the credential parameters for accessing other custom registries. The key
+         * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+         * the value of the item will be the registry credentials for accessing the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries) {
             $.customRegistries = customRegistries;
             return this;
         }
 
+        /**
+         * @param sourceRegistry Describes the credential parameters for accessing the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
             $.sourceRegistry = sourceRegistry;
             return this;

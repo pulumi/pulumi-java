@@ -26,6 +26,10 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
+    /**
+     * @return The IP of the cluster API server (immutable).
+     * 
+     */
     public Optional<Output<String>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -37,6 +41,10 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The URL to access the cluster API server (immutable).
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -48,6 +56,10 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
     @Import(name="visibility")
     private @Nullable Output<String> visibility;
 
+    /**
+     * @return API server visibility (immutable).
+     * 
+     */
     public Optional<Output<String>> visibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -78,29 +90,65 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
             $ = new APIServerProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip The IP of the cluster API server (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip The IP of the cluster API server (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param url The URL to access the cluster API server (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL to access the cluster API server (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param visibility API server visibility (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable Output<String> visibility) {
             $.visibility = visibility;
             return this;
         }
 
+        /**
+         * @param visibility API server visibility (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(String visibility) {
             return visibility(Output.of(visibility));
         }

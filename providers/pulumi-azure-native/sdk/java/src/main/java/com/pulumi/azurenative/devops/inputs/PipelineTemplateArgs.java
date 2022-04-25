@@ -27,6 +27,10 @@ public final class PipelineTemplateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Unique identifier of the pipeline template.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class PipelineTemplateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Dictionary of input parameters used in the pipeline template.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -67,20 +75,44 @@ public final class PipelineTemplateArgs extends com.pulumi.resources.ResourceArg
             $ = new PipelineTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Unique identifier of the pipeline template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique identifier of the pipeline template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param parameters Dictionary of input parameters used in the pipeline template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Dictionary of input parameters used in the pipeline template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }

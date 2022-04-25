@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkInterfaceResourceSettingsResponse {
-    /**
-     * Gets or sets a value indicating whether accelerated networking is enabled.
-     * 
-     */
+        /**
+         * @return Gets or sets a value indicating whether accelerated networking is enabled.
+         * 
+         */
     private final @Nullable Boolean enableAcceleratedNetworking;
-    /**
-     * Gets or sets the IP configurations of the NIC.
-     * 
-     */
+        /**
+         * @return Gets or sets the IP configurations of the NIC.
+         * 
+         */
     private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
-     * 
-     */
+        /**
+         * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
+         * 
+         */
     private final String resourceType;
-    /**
-     * Gets or sets the target Resource name.
-     * 
-     */
+        /**
+         * @return Gets or sets the target Resource name.
+         * 
+         */
     private final String targetResourceName;
 
     @CustomType.Constructor
@@ -49,31 +49,31 @@ public final class NetworkInterfaceResourceSettingsResponse {
     }
 
     /**
-     * Gets or sets a value indicating whether accelerated networking is enabled.
+     * @return Gets or sets a value indicating whether accelerated networking is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
     /**
-     * Gets or sets the IP configurations of the NIC.
+     * @return Gets or sets the IP configurations of the NIC.
      * 
-    */
+     */
     public List<NicIpConfigurationResourceSettingsResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Network/networkInterfaces&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }

@@ -17,50 +17,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkFunctionRoleConfigurationResponse {
-    /**
-     * Specifies the custom settings for the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the custom settings for the virtual machine.
+         * 
+         */
     private final @Nullable CustomProfileResponse customProfile;
-    /**
-     * The network interface configurations.
-     * 
-     */
+        /**
+         * @return The network interface configurations.
+         * 
+         */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
-    /**
-     * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
-     * 
-     */
+        /**
+         * @return Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
+         * 
+         */
     private final @Nullable OsProfileResponse osProfile;
-    /**
-     * The name of the network function role.
-     * 
-     */
+        /**
+         * @return The name of the network function role.
+         * 
+         */
     private final @Nullable String roleName;
-    /**
-     * Role type.
-     * 
-     */
+        /**
+         * @return Role type.
+         * 
+         */
     private final @Nullable String roleType;
-    /**
-     * Specifies the storage settings for the virtual machine disks.
-     * 
-     */
+        /**
+         * @return Specifies the storage settings for the virtual machine disks.
+         * 
+         */
     private final @Nullable StorageProfileResponse storageProfile;
-    /**
-     * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
-     * 
-     */
+        /**
+         * @return The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
+         * 
+         */
     private final @Nullable Object userDataParameters;
-    /**
-     * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
-     * 
-     */
+        /**
+         * @return The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
+         * 
+         */
     private final @Nullable Object userDataTemplate;
-    /**
-     * The size of the virtual machine.
-     * 
-     */
+        /**
+         * @return The size of the virtual machine.
+         * 
+         */
     private final @Nullable String virtualMachineSize;
 
     @CustomType.Constructor
@@ -86,65 +86,65 @@ public final class NetworkFunctionRoleConfigurationResponse {
     }
 
     /**
-     * Specifies the custom settings for the virtual machine.
+     * @return Specifies the custom settings for the virtual machine.
      * 
-    */
+     */
     public Optional<CustomProfileResponse> customProfile() {
         return Optional.ofNullable(this.customProfile);
     }
     /**
-     * The network interface configurations.
+     * @return The network interface configurations.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
-     * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
+     * @return Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
      * 
-    */
+     */
     public Optional<OsProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * The name of the network function role.
+     * @return The name of the network function role.
      * 
-    */
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
     /**
-     * Role type.
+     * @return Role type.
      * 
-    */
+     */
     public Optional<String> roleType() {
         return Optional.ofNullable(this.roleType);
     }
     /**
-     * Specifies the storage settings for the virtual machine disks.
+     * @return Specifies the storage settings for the virtual machine disks.
      * 
-    */
+     */
     public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
+     * @return The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
      * 
-    */
+     */
     public Optional<Object> userDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }
     /**
-     * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
+     * @return The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
      * 
-    */
+     */
     public Optional<Object> userDataTemplate() {
         return Optional.ofNullable(this.userDataTemplate);
     }
     /**
-     * The size of the virtual machine.
+     * @return The size of the virtual machine.
      * 
-    */
+     */
     public Optional<String> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }

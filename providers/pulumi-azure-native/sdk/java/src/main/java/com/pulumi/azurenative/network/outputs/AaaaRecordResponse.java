@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AaaaRecordResponse {
-    /**
-     * The IPv6 address of this AAAA record.
-     * 
-     */
+        /**
+         * @return The IPv6 address of this AAAA record.
+         * 
+         */
     private final @Nullable String ipv6Address;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AaaaRecordResponse {
     }
 
     /**
-     * The IPv6 address of this AAAA record.
+     * @return The IPv6 address of this AAAA record.
      * 
-    */
+     */
     public Optional<String> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }

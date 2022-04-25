@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class CopyOnExpiryOptionResponse {
-    /**
-     * Type of the specific object - used for deserializing
-     * Expected value is &#39;CopyOnExpiryOption&#39;.
-     * 
-     */
+        /**
+         * @return Type of the specific object - used for deserializing
+         * Expected value is &#39;CopyOnExpiryOption&#39;.
+         * 
+         */
     private final String objectType;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class CopyOnExpiryOptionResponse {
     }
 
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;CopyOnExpiryOption&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }

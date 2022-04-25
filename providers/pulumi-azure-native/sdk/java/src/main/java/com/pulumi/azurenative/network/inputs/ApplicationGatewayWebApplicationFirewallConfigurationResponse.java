@@ -30,6 +30,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="disabledRuleGroups")
     private @Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups;
 
+    /**
+     * @return The disabled rule groups.
+     * 
+     */
     public Optional<List<ApplicationGatewayFirewallDisabledRuleGroupResponse>> disabledRuleGroups() {
         return Optional.ofNullable(this.disabledRuleGroups);
     }
@@ -41,6 +45,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="enabled", required=true)
     private Boolean enabled;
 
+    /**
+     * @return Whether the web application firewall is enabled or not.
+     * 
+     */
     public Boolean enabled() {
         return this.enabled;
     }
@@ -52,6 +60,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="exclusions")
     private @Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions;
 
+    /**
+     * @return The exclusion list.
+     * 
+     */
     public Optional<List<ApplicationGatewayFirewallExclusionResponse>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -63,6 +75,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="fileUploadLimitInMb")
     private @Nullable Integer fileUploadLimitInMb;
 
+    /**
+     * @return Maximum file upload size in Mb for WAF.
+     * 
+     */
     public Optional<Integer> fileUploadLimitInMb() {
         return Optional.ofNullable(this.fileUploadLimitInMb);
     }
@@ -74,6 +90,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="firewallMode", required=true)
     private String firewallMode;
 
+    /**
+     * @return Web application firewall mode.
+     * 
+     */
     public String firewallMode() {
         return this.firewallMode;
     }
@@ -85,6 +105,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="maxRequestBodySize")
     private @Nullable Integer maxRequestBodySize;
 
+    /**
+     * @return Maximum request body size for WAF.
+     * 
+     */
     public Optional<Integer> maxRequestBodySize() {
         return Optional.ofNullable(this.maxRequestBodySize);
     }
@@ -96,6 +120,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="maxRequestBodySizeInKb")
     private @Nullable Integer maxRequestBodySizeInKb;
 
+    /**
+     * @return Maximum request body size in Kb for WAF.
+     * 
+     */
     public Optional<Integer> maxRequestBodySizeInKb() {
         return Optional.ofNullable(this.maxRequestBodySizeInKb);
     }
@@ -107,6 +135,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="requestBodyCheck")
     private @Nullable Boolean requestBodyCheck;
 
+    /**
+     * @return Whether allow WAF to check request Body.
+     * 
+     */
     public Optional<Boolean> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
@@ -118,6 +150,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="ruleSetType", required=true)
     private String ruleSetType;
 
+    /**
+     * @return The type of the web application firewall rule set. Possible values are: &#39;OWASP&#39;.
+     * 
+     */
     public String ruleSetType() {
         return this.ruleSetType;
     }
@@ -129,6 +165,10 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
     @Import(name="ruleSetVersion", required=true)
     private String ruleSetVersion;
 
+    /**
+     * @return The version of the rule set type.
+     * 
+     */
     public String ruleSetVersion() {
         return this.ruleSetVersion;
     }
@@ -166,59 +206,131 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationResponse
             $ = new ApplicationGatewayWebApplicationFirewallConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disabledRuleGroups The disabled rule groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledRuleGroups(@Nullable List<ApplicationGatewayFirewallDisabledRuleGroupResponse> disabledRuleGroups) {
             $.disabledRuleGroups = disabledRuleGroups;
             return this;
         }
 
+        /**
+         * @param disabledRuleGroups The disabled rule groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledRuleGroups(ApplicationGatewayFirewallDisabledRuleGroupResponse... disabledRuleGroups) {
             return disabledRuleGroups(List.of(disabledRuleGroups));
         }
 
+        /**
+         * @param enabled Whether the web application firewall is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param exclusions The exclusion list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable List<ApplicationGatewayFirewallExclusionResponse> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions The exclusion list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(ApplicationGatewayFirewallExclusionResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param fileUploadLimitInMb Maximum file upload size in Mb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             $.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
+        /**
+         * @param firewallMode Web application firewall mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallMode(String firewallMode) {
             $.firewallMode = firewallMode;
             return this;
         }
 
+        /**
+         * @param maxRequestBodySize Maximum request body size for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestBodySize(@Nullable Integer maxRequestBodySize) {
             $.maxRequestBodySize = maxRequestBodySize;
             return this;
         }
 
+        /**
+         * @param maxRequestBodySizeInKb Maximum request body size in Kb for WAF.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             $.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
+        /**
+         * @param requestBodyCheck Whether allow WAF to check request Body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             $.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
+        /**
+         * @param ruleSetType The type of the web application firewall rule set. Possible values are: &#39;OWASP&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetType(String ruleSetType) {
             $.ruleSetType = ruleSetType;
             return this;
         }
 
+        /**
+         * @param ruleSetVersion The version of the rule set type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetVersion(String ruleSetVersion) {
             $.ruleSetVersion = ruleSetVersion;
             return this;

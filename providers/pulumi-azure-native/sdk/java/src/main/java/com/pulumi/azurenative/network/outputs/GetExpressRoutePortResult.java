@@ -18,95 +18,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetExpressRoutePortResult {
-    /**
-     * Date of the physical port allocation to be used in Letter of Authorization.
-     * 
-     */
+        /**
+         * @return Date of the physical port allocation to be used in Letter of Authorization.
+         * 
+         */
     private final String allocationDate;
-    /**
-     * Bandwidth of procured ports in Gbps.
-     * 
-     */
+        /**
+         * @return Bandwidth of procured ports in Gbps.
+         * 
+         */
     private final @Nullable Integer bandwidthInGbps;
-    /**
-     * Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
-     * 
-     */
+        /**
+         * @return Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
+         * 
+         */
     private final List<SubResourceResponse> circuits;
-    /**
-     * Encapsulation method on physical ports.
-     * 
-     */
+        /**
+         * @return Encapsulation method on physical ports.
+         * 
+         */
     private final @Nullable String encapsulation;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Ether type of the physical port.
-     * 
-     */
+        /**
+         * @return Ether type of the physical port.
+         * 
+         */
     private final String etherType;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The identity of ExpressRoutePort, if configured.
-     * 
-     */
+        /**
+         * @return The identity of ExpressRoutePort, if configured.
+         * 
+         */
     private final @Nullable ManagedServiceIdentityResponse identity;
-    /**
-     * The set of physical links of the ExpressRoutePort resource.
-     * 
-     */
+        /**
+         * @return The set of physical links of the ExpressRoutePort resource.
+         * 
+         */
     private final @Nullable List<ExpressRouteLinkResponse> links;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Maximum transmission unit of the physical port pair(s).
-     * 
-     */
+        /**
+         * @return Maximum transmission unit of the physical port pair(s).
+         * 
+         */
     private final String mtu;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The name of the peering location that the ExpressRoutePort is mapped to physically.
-     * 
-     */
+        /**
+         * @return The name of the peering location that the ExpressRoutePort is mapped to physically.
+         * 
+         */
     private final @Nullable String peeringLocation;
-    /**
-     * Aggregate Gbps of associated circuit bandwidths.
-     * 
-     */
+        /**
+         * @return Aggregate Gbps of associated circuit bandwidths.
+         * 
+         */
     private final Double provisionedBandwidthInGbps;
-    /**
-     * The provisioning state of the express route port resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the express route port resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource GUID property of the express route port resource.
-     * 
-     */
+        /**
+         * @return The resource GUID property of the express route port resource.
+         * 
+         */
     private final String resourceGuid;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -150,128 +150,128 @@ public final class GetExpressRoutePortResult {
     }
 
     /**
-     * Date of the physical port allocation to be used in Letter of Authorization.
+     * @return Date of the physical port allocation to be used in Letter of Authorization.
      * 
-    */
+     */
     public String allocationDate() {
         return this.allocationDate;
     }
     /**
-     * Bandwidth of procured ports in Gbps.
+     * @return Bandwidth of procured ports in Gbps.
      * 
-    */
+     */
     public Optional<Integer> bandwidthInGbps() {
         return Optional.ofNullable(this.bandwidthInGbps);
     }
     /**
-     * Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
+     * @return Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
      * 
-    */
+     */
     public List<SubResourceResponse> circuits() {
         return this.circuits;
     }
     /**
-     * Encapsulation method on physical ports.
+     * @return Encapsulation method on physical ports.
      * 
-    */
+     */
     public Optional<String> encapsulation() {
         return Optional.ofNullable(this.encapsulation);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Ether type of the physical port.
+     * @return Ether type of the physical port.
      * 
-    */
+     */
     public String etherType() {
         return this.etherType;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The identity of ExpressRoutePort, if configured.
+     * @return The identity of ExpressRoutePort, if configured.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The set of physical links of the ExpressRoutePort resource.
+     * @return The set of physical links of the ExpressRoutePort resource.
      * 
-    */
+     */
     public List<ExpressRouteLinkResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Maximum transmission unit of the physical port pair(s).
+     * @return Maximum transmission unit of the physical port pair(s).
      * 
-    */
+     */
     public String mtu() {
         return this.mtu;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name of the peering location that the ExpressRoutePort is mapped to physically.
+     * @return The name of the peering location that the ExpressRoutePort is mapped to physically.
      * 
-    */
+     */
     public Optional<String> peeringLocation() {
         return Optional.ofNullable(this.peeringLocation);
     }
     /**
-     * Aggregate Gbps of associated circuit bandwidths.
+     * @return Aggregate Gbps of associated circuit bandwidths.
      * 
-    */
+     */
     public Double provisionedBandwidthInGbps() {
         return this.provisionedBandwidthInGbps;
     }
     /**
-     * The provisioning state of the express route port resource.
+     * @return The provisioning state of the express route port resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the express route port resource.
+     * @return The resource GUID property of the express route port resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

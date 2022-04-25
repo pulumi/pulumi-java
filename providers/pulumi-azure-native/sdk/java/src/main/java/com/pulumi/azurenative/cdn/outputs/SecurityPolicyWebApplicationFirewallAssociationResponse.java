@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
-    /**
-     * List of domains.
-     * 
-     */
+        /**
+         * @return List of domains.
+         * 
+         */
     private final @Nullable List<ResourceReferenceResponse> domains;
-    /**
-     * List of paths
-     * 
-     */
+        /**
+         * @return List of paths
+         * 
+         */
     private final @Nullable List<String> patternsToMatch;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
     }
 
     /**
-     * List of domains.
+     * @return List of domains.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> domains() {
         return this.domains == null ? List.of() : this.domains;
     }
     /**
-     * List of paths
+     * @return List of paths
      * 
-    */
+     */
     public List<String> patternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }

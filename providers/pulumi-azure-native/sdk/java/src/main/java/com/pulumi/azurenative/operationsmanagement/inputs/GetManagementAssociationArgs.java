@@ -19,6 +19,10 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="managementAssociationName", required=true)
     private String managementAssociationName;
 
+    /**
+     * @return User ManagementAssociation Name.
+     * 
+     */
     public String managementAssociationName() {
         return this.managementAssociationName;
     }
@@ -30,6 +34,10 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="providerName", required=true)
     private String providerName;
 
+    /**
+     * @return Provider name for the parent resource.
+     * 
+     */
     public String providerName() {
         return this.providerName;
     }
@@ -41,6 +49,10 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to get. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return Parent resource name.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -63,6 +79,10 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Resource type for the parent resource
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -95,26 +115,56 @@ public final class GetManagementAssociationArgs extends com.pulumi.resources.Inv
             $ = new GetManagementAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementAssociationName User ManagementAssociation Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementAssociationName(String managementAssociationName) {
             $.managementAssociationName = managementAssociationName;
             return this;
         }
 
+        /**
+         * @param providerName Provider name for the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName Parent resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType Resource type for the parent resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

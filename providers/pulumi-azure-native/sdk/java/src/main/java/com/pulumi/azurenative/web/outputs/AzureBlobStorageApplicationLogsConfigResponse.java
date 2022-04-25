@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureBlobStorageApplicationLogsConfigResponse {
-    /**
-     * Log level.
-     * 
-     */
+        /**
+         * @return Log level.
+         * 
+         */
     private final @Nullable String level;
-    /**
-     * Retention in days.
-     * Remove blobs older than X days.
-     * 0 or lower means no retention.
-     * 
-     */
+        /**
+         * @return Retention in days.
+         * Remove blobs older than X days.
+         * 0 or lower means no retention.
+         * 
+         */
     private final @Nullable Integer retentionInDays;
-    /**
-     * SAS url to a azure blob container with read/write/list/delete permissions.
-     * 
-     */
+        /**
+         * @return SAS url to a azure blob container with read/write/list/delete permissions.
+         * 
+         */
     private final @Nullable String sasUrl;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
     }
 
     /**
-     * Log level.
+     * @return Log level.
      * 
-    */
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
-     * Retention in days.
+     * @return Retention in days.
      * Remove blobs older than X days.
      * 0 or lower means no retention.
      * 
-    */
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
-     * SAS url to a azure blob container with read/write/list/delete permissions.
+     * @return SAS url to a azure blob container with read/write/list/delete permissions.
      * 
-    */
+     */
     public Optional<String> sasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }

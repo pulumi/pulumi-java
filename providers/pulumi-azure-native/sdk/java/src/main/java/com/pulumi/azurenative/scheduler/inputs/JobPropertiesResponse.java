@@ -24,6 +24,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="action")
     private @Nullable JobActionResponse action;
 
+    /**
+     * @return Gets or sets the job action.
+     * 
+     */
     public Optional<JobActionResponse> action() {
         return Optional.ofNullable(this.action);
     }
@@ -35,6 +39,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="recurrence")
     private @Nullable JobRecurrenceResponse recurrence;
 
+    /**
+     * @return Gets or sets the job recurrence.
+     * 
+     */
     public Optional<JobRecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -46,6 +54,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Gets or sets the job start time.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -57,6 +69,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Gets or set the job state.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -68,6 +84,10 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="status", required=true)
     private JobStatusResponse status;
 
+    /**
+     * @return Gets the job status.
+     * 
+     */
     public JobStatusResponse status() {
         return this.status;
     }
@@ -100,26 +120,56 @@ public final class JobPropertiesResponse extends com.pulumi.resources.InvokeArgs
             $ = new JobPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Gets or sets the job action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable JobActionResponse action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param recurrence Gets or sets the job recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable JobRecurrenceResponse recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param startTime Gets or sets the job start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state Gets or set the job state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param status Gets the job status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(JobStatusResponse status) {
             $.status = status;
             return this;

@@ -27,6 +27,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
     @Import(name="privateIPAddress")
     private @Nullable Output<String> privateIPAddress;
 
+    /**
+     * @return The virtual network private IP address of the IP configuration.
+     * 
+     */
     public Optional<Output<String>> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -38,6 +42,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
     @Import(name="publicIPAddress")
     private @Nullable Output<SubResourceArgs> publicIPAddress;
 
+    /**
+     * @return The reference to the public ip address resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -49,6 +57,10 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
     @Import(name="subnet")
     private @Nullable Output<SubResourceArgs> subnet;
 
+    /**
+     * @return The reference to the virtual network subnet resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -79,29 +91,65 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesArgs extends com
             $ = new LoadBalancerFrontendIPConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateIPAddress The virtual network private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddress The virtual network private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             return privateIPAddress(Output.of(privateIPAddress));
         }
 
+        /**
+         * @param publicIPAddress The reference to the public ip address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPAddress The reference to the public ip address resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
             return publicIPAddress(Output.of(publicIPAddress));
         }
 
+        /**
+         * @param subnet The reference to the virtual network subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the virtual network subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubResourceArgs subnet) {
             return subnet(Output.of(subnet));
         }

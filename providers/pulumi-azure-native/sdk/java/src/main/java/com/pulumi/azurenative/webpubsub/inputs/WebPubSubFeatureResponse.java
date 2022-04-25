@@ -29,6 +29,13 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
     @Import(name="flag", required=true)
     private String flag;
 
+    /**
+     * @return FeatureFlags is the supported features of Azure SignalR service.
+     *  - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+     *  - EnableMessagingLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+     *  - EnableLiveTrace: Live Trace allows you to know what&#39;s happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: &#34;true&#34;/&#34;false&#34;, to enable/disable live trace feature.
+     * 
+     */
     public String flag() {
         return this.flag;
     }
@@ -40,6 +47,10 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Optional properties related to this feature.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -51,6 +62,10 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -81,16 +96,37 @@ public final class WebPubSubFeatureResponse extends com.pulumi.resources.InvokeA
             $ = new WebPubSubFeatureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flag FeatureFlags is the supported features of Azure SignalR service.
+         *  - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         *  - EnableMessagingLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         *  - EnableLiveTrace: Live Trace allows you to know what&#39;s happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: &#34;true&#34;/&#34;false&#34;, to enable/disable live trace feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(String flag) {
             $.flag = flag;
             return this;
         }
 
+        /**
+         * @param properties Optional properties related to this feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param value Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TestResponse {
-    /**
-     * The commands used in the test.
-     * 
-     */
+        /**
+         * @return The commands used in the test.
+         * 
+         */
     private final List<CommandResponse> commands;
-    /**
-     * Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
-     * 
-     */
+        /**
+         * @return Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+         * 
+         */
     private final @Nullable Boolean isActive;
-    /**
-     * The type of the test.
-     * 
-     */
+        /**
+         * @return The type of the test.
+         * 
+         */
     private final String testType;
-    /**
-     * The status of the validation run of the package.
-     * 
-     */
+        /**
+         * @return The status of the validation run of the package.
+         * 
+         */
     private final String validationRunStatus;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class TestResponse {
     }
 
     /**
-     * The commands used in the test.
+     * @return The commands used in the test.
      * 
-    */
+     */
     public List<CommandResponse> commands() {
         return this.commands;
     }
     /**
-     * Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
+     * @return Indicates if this test is active.It doesn&#39;t schedule test for not active Test.
      * 
-    */
+     */
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
     /**
-     * The type of the test.
+     * @return The type of the test.
      * 
-    */
+     */
     public String testType() {
         return this.testType;
     }
     /**
-     * The status of the validation run of the package.
+     * @return The status of the validation run of the package.
      * 
-    */
+     */
     public String validationRunStatus() {
         return this.validationRunStatus;
     }

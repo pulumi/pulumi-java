@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GatewayApiRouteResponse {
-    /**
-     * A description, will be applied to methods in the generated OpenAPI documentation.
-     * 
-     */
+        /**
+         * @return A description, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * To modify the request before sending it to the target endpoint, or the received response.
-     * 
-     */
+        /**
+         * @return To modify the request before sending it to the target endpoint, or the received response.
+         * 
+         */
     private final @Nullable List<String> filters;
-    /**
-     * Route processing order.
-     * 
-     */
+        /**
+         * @return Route processing order.
+         * 
+         */
     private final @Nullable Integer order;
-    /**
-     * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
-     * 
-     */
+        /**
+         * @return A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+         * 
+         */
     private final @Nullable List<String> predicates;
-    /**
-     * Enable sso validation.
-     * 
-     */
+        /**
+         * @return Enable sso validation.
+         * 
+         */
     private final @Nullable Boolean ssoEnabled;
-    /**
-     * Classification tags, will be applied to methods in the generated OpenAPI documentation.
-     * 
-     */
+        /**
+         * @return Classification tags, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         */
     private final @Nullable List<String> tags;
-    /**
-     * A title, will be applied to methods in the generated OpenAPI documentation.
-     * 
-     */
+        /**
+         * @return A title, will be applied to methods in the generated OpenAPI documentation.
+         * 
+         */
     private final @Nullable String title;
-    /**
-     * Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
-     * 
-     */
+        /**
+         * @return Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
+         * 
+         */
     private final @Nullable Boolean tokenRelay;
-    /**
-     * Full uri, will override `appName`.
-     * 
-     */
+        /**
+         * @return Full uri, will override `appName`.
+         * 
+         */
     private final @Nullable String uri;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GatewayApiRouteResponse {
     }
 
     /**
-     * A description, will be applied to methods in the generated OpenAPI documentation.
+     * @return A description, will be applied to methods in the generated OpenAPI documentation.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * To modify the request before sending it to the target endpoint, or the received response.
+     * @return To modify the request before sending it to the target endpoint, or the received response.
      * 
-    */
+     */
     public List<String> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
-     * Route processing order.
+     * @return Route processing order.
      * 
-    */
+     */
     public Optional<Integer> order() {
         return Optional.ofNullable(this.order);
     }
     /**
-     * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
+     * @return A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
      * 
-    */
+     */
     public List<String> predicates() {
         return this.predicates == null ? List.of() : this.predicates;
     }
     /**
-     * Enable sso validation.
+     * @return Enable sso validation.
      * 
-    */
+     */
     public Optional<Boolean> ssoEnabled() {
         return Optional.ofNullable(this.ssoEnabled);
     }
     /**
-     * Classification tags, will be applied to methods in the generated OpenAPI documentation.
+     * @return Classification tags, will be applied to methods in the generated OpenAPI documentation.
      * 
-    */
+     */
     public List<String> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * A title, will be applied to methods in the generated OpenAPI documentation.
+     * @return A title, will be applied to methods in the generated OpenAPI documentation.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
+     * @return Pass currently-authenticated user&#39;s identity token to application service, default is &#39;false&#39;
      * 
-    */
+     */
     public Optional<Boolean> tokenRelay() {
         return Optional.ofNullable(this.tokenRelay);
     }
     /**
-     * Full uri, will override `appName`.
+     * @return Full uri, will override `appName`.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

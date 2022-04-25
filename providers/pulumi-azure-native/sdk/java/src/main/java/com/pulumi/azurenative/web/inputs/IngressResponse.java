@@ -30,6 +30,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowInsecure")
     private @Nullable Boolean allowInsecure;
 
+    /**
+     * @return Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+     * 
+     */
     public Optional<Boolean> allowInsecure() {
         return Optional.ofNullable(this.allowInsecure);
     }
@@ -41,6 +45,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="external")
     private @Nullable Boolean external;
 
+    /**
+     * @return Bool indicating if app exposes an external http endpoint
+     * 
+     */
     public Optional<Boolean> external() {
         return Optional.ofNullable(this.external);
     }
@@ -52,6 +60,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="fqdn", required=true)
     private String fqdn;
 
+    /**
+     * @return Hostname.
+     * 
+     */
     public String fqdn() {
         return this.fqdn;
     }
@@ -63,6 +75,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetPort")
     private @Nullable Integer targetPort;
 
+    /**
+     * @return Target Port in containers for traffic from ingress
+     * 
+     */
     public Optional<Integer> targetPort() {
         return Optional.ofNullable(this.targetPort);
     }
@@ -81,6 +97,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="transport")
     private @Nullable String transport;
 
+    /**
+     * @return Ingress transport protocol
+     * 
+     */
     public Optional<String> transport() {
         return Optional.ofNullable(this.transport);
     }
@@ -114,21 +134,45 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IngressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowInsecure Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             $.allowInsecure = allowInsecure;
             return this;
         }
 
+        /**
+         * @param external Bool indicating if app exposes an external http endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder external(@Nullable Boolean external) {
             $.external = external;
             return this;
         }
 
+        /**
+         * @param fqdn Hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdn(String fqdn) {
             $.fqdn = fqdn;
             return this;
         }
 
+        /**
+         * @param targetPort Target Port in containers for traffic from ingress
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPort(@Nullable Integer targetPort) {
             $.targetPort = targetPort;
             return this;
@@ -143,6 +187,12 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
             return traffic(List.of(traffic));
         }
 
+        /**
+         * @param transport Ingress transport protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(@Nullable String transport) {
             $.transport = transport;
             return this;

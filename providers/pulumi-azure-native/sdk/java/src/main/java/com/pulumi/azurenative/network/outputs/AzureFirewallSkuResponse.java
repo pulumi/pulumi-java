@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFirewallSkuResponse {
-    /**
-     * Name of an Azure Firewall SKU.
-     * 
-     */
+        /**
+         * @return Name of an Azure Firewall SKU.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Tier of an Azure Firewall.
-     * 
-     */
+        /**
+         * @return Tier of an Azure Firewall.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AzureFirewallSkuResponse {
     }
 
     /**
-     * Name of an Azure Firewall SKU.
+     * @return Name of an Azure Firewall SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tier of an Azure Firewall.
+     * @return Tier of an Azure Firewall.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

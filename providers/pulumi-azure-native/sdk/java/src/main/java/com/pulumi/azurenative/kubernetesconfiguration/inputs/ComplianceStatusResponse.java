@@ -25,6 +25,10 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="complianceState", required=true)
     private String complianceState;
 
+    /**
+     * @return The compliance state of the configuration.
+     * 
+     */
     public String complianceState() {
         return this.complianceState;
     }
@@ -36,6 +40,10 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="lastConfigApplied")
     private @Nullable String lastConfigApplied;
 
+    /**
+     * @return Datetime the configuration was last applied.
+     * 
+     */
     public Optional<String> lastConfigApplied() {
         return Optional.ofNullable(this.lastConfigApplied);
     }
@@ -47,6 +55,10 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Message from when the configuration was applied.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -58,6 +70,10 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
     @Import(name="messageLevel")
     private @Nullable String messageLevel;
 
+    /**
+     * @return Level of the message.
+     * 
+     */
     public Optional<String> messageLevel() {
         return Optional.ofNullable(this.messageLevel);
     }
@@ -89,21 +105,45 @@ public final class ComplianceStatusResponse extends com.pulumi.resources.InvokeA
             $ = new ComplianceStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param complianceState The compliance state of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceState(String complianceState) {
             $.complianceState = complianceState;
             return this;
         }
 
+        /**
+         * @param lastConfigApplied Datetime the configuration was last applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConfigApplied(@Nullable String lastConfigApplied) {
             $.lastConfigApplied = lastConfigApplied;
             return this;
         }
 
+        /**
+         * @param message Message from when the configuration was applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param messageLevel Level of the message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageLevel(@Nullable String messageLevel) {
             $.messageLevel = messageLevel;
             return this;

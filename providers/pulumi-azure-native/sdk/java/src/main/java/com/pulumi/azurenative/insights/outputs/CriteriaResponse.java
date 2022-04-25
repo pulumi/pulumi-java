@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CriteriaResponse {
-    /**
-     * List of Dimensions for creating metric
-     * 
-     */
+        /**
+         * @return List of Dimensions for creating metric
+         * 
+         */
     private final @Nullable List<DimensionResponse> dimensions;
-    /**
-     * Name of the metric
-     * 
-     */
+        /**
+         * @return Name of the metric
+         * 
+         */
     private final String metricName;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class CriteriaResponse {
     }
 
     /**
-     * List of Dimensions for creating metric
+     * @return List of Dimensions for creating metric
      * 
-    */
+     */
     public List<DimensionResponse> dimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
-     * Name of the metric
+     * @return Name of the metric
      * 
-    */
+     */
     public String metricName() {
         return this.metricName;
     }

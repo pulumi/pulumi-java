@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionSettingPropertiesResponse {
-    /**
-     * Client Id associated with the Connection Setting.
-     * 
-     */
+        /**
+         * @return Client Id associated with the Connection Setting.
+         * 
+         */
     private final @Nullable String clientId;
-    /**
-     * Client Secret associated with the Connection Setting
-     * 
-     */
+        /**
+         * @return Client Secret associated with the Connection Setting
+         * 
+         */
     private final @Nullable String clientSecret;
-    /**
-     * Id associated with the Connection Setting.
-     * 
-     */
+        /**
+         * @return Id associated with the Connection Setting.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Name associated with the Connection Setting.
-     * 
-     */
+        /**
+         * @return Name associated with the Connection Setting.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Service Provider Parameters associated with the Connection Setting
-     * 
-     */
+        /**
+         * @return Service Provider Parameters associated with the Connection Setting
+         * 
+         */
     private final @Nullable List<ConnectionSettingParameterResponse> parameters;
-    /**
-     * Provisioning state of the resource
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Scopes associated with the Connection Setting
-     * 
-     */
+        /**
+         * @return Scopes associated with the Connection Setting
+         * 
+         */
     private final @Nullable String scopes;
-    /**
-     * Service Provider Display Name associated with the Connection Setting
-     * 
-     */
+        /**
+         * @return Service Provider Display Name associated with the Connection Setting
+         * 
+         */
     private final @Nullable String serviceProviderDisplayName;
-    /**
-     * Service Provider Id associated with the Connection Setting
-     * 
-     */
+        /**
+         * @return Service Provider Id associated with the Connection Setting
+         * 
+         */
     private final @Nullable String serviceProviderId;
-    /**
-     * Setting Id set by the service for the Connection Setting.
-     * 
-     */
+        /**
+         * @return Setting Id set by the service for the Connection Setting.
+         * 
+         */
     private final String settingId;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class ConnectionSettingPropertiesResponse {
     }
 
     /**
-     * Client Id associated with the Connection Setting.
+     * @return Client Id associated with the Connection Setting.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * Client Secret associated with the Connection Setting
+     * @return Client Secret associated with the Connection Setting
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * Id associated with the Connection Setting.
+     * @return Id associated with the Connection Setting.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name associated with the Connection Setting.
+     * @return Name associated with the Connection Setting.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Service Provider Parameters associated with the Connection Setting
+     * @return Service Provider Parameters associated with the Connection Setting
      * 
-    */
+     */
     public List<ConnectionSettingParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * Provisioning state of the resource
+     * @return Provisioning state of the resource
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Scopes associated with the Connection Setting
+     * @return Scopes associated with the Connection Setting
      * 
-    */
+     */
     public Optional<String> scopes() {
         return Optional.ofNullable(this.scopes);
     }
     /**
-     * Service Provider Display Name associated with the Connection Setting
+     * @return Service Provider Display Name associated with the Connection Setting
      * 
-    */
+     */
     public Optional<String> serviceProviderDisplayName() {
         return Optional.ofNullable(this.serviceProviderDisplayName);
     }
     /**
-     * Service Provider Id associated with the Connection Setting
+     * @return Service Provider Id associated with the Connection Setting
      * 
-    */
+     */
     public Optional<String> serviceProviderId() {
         return Optional.ofNullable(this.serviceProviderId);
     }
     /**
-     * Setting Id set by the service for the Connection Setting.
+     * @return Setting Id set by the service for the Connection Setting.
      * 
-    */
+     */
     public String settingId() {
         return this.settingId;
     }

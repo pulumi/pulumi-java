@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class JobOutputResponse {
-    /**
-     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
-     * 
-     */
+        /**
+         * @return ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
+         * 
+         */
     private final String datastoreId;
-    /**
-     * Path within the datastore to the job logs and artifacts.
-     * 
-     */
+        /**
+         * @return Path within the datastore to the job logs and artifacts.
+         * 
+         */
     private final String path;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class JobOutputResponse {
     }
 
     /**
-     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
+     * @return ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container (&#34;azureml&#34;) in the workspace&#39;s storage account.
      * 
-    */
+     */
     public String datastoreId() {
         return this.datastoreId;
     }
     /**
-     * Path within the datastore to the job logs and artifacts.
+     * @return Path within the datastore to the job logs and artifacts.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SecurityAssessmentPartnerDataResponse {
-    /**
-     * Name of the company of the partner
-     * 
-     */
+        /**
+         * @return Name of the company of the partner
+         * 
+         */
     private final String partnerName;
-    /**
-     * secret to authenticate the partner - write only
-     * 
-     */
+        /**
+         * @return secret to authenticate the partner - write only
+         * 
+         */
     private final String secret;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SecurityAssessmentPartnerDataResponse {
     }
 
     /**
-     * Name of the company of the partner
+     * @return Name of the company of the partner
      * 
-    */
+     */
     public String partnerName() {
         return this.partnerName;
     }
     /**
-     * secret to authenticate the partner - write only
+     * @return secret to authenticate the partner - write only
      * 
-    */
+     */
     public String secret() {
         return this.secret;
     }

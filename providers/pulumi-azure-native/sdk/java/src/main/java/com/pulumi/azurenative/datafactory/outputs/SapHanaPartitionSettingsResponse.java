@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SapHanaPartitionSettingsResponse {
-    /**
-     * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionColumnName;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SapHanaPartitionSettingsResponse {
     }
 
     /**
-     * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     * @return The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }

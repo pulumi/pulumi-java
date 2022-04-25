@@ -11,55 +11,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class X12EnvelopeOverrideResponse {
-    /**
-     * The date format.
-     * 
-     */
+        /**
+         * @return The date format.
+         * 
+         */
     private final String dateFormat;
-    /**
-     * The functional identifier code.
-     * 
-     */
+        /**
+         * @return The functional identifier code.
+         * 
+         */
     private final @Nullable String functionalIdentifierCode;
-    /**
-     * The header version.
-     * 
-     */
+        /**
+         * @return The header version.
+         * 
+         */
     private final String headerVersion;
-    /**
-     * The message id on which this envelope settings has to be applied.
-     * 
-     */
+        /**
+         * @return The message id on which this envelope settings has to be applied.
+         * 
+         */
     private final String messageId;
-    /**
-     * The protocol version on which this envelope settings has to be applied.
-     * 
-     */
+        /**
+         * @return The protocol version on which this envelope settings has to be applied.
+         * 
+         */
     private final String protocolVersion;
-    /**
-     * The receiver application id.
-     * 
-     */
+        /**
+         * @return The receiver application id.
+         * 
+         */
     private final String receiverApplicationId;
-    /**
-     * The responsible agency code.
-     * 
-     */
+        /**
+         * @return The responsible agency code.
+         * 
+         */
     private final String responsibleAgencyCode;
-    /**
-     * The sender application id.
-     * 
-     */
+        /**
+         * @return The sender application id.
+         * 
+         */
     private final String senderApplicationId;
-    /**
-     * The target namespace on which this envelope settings has to be applied.
-     * 
-     */
+        /**
+         * @return The target namespace on which this envelope settings has to be applied.
+         * 
+         */
     private final String targetNamespace;
-    /**
-     * The time format.
-     * 
-     */
+        /**
+         * @return The time format.
+         * 
+         */
     private final String timeFormat;
 
     @CustomType.Constructor
@@ -87,72 +87,72 @@ public final class X12EnvelopeOverrideResponse {
     }
 
     /**
-     * The date format.
+     * @return The date format.
      * 
-    */
+     */
     public String dateFormat() {
         return this.dateFormat;
     }
     /**
-     * The functional identifier code.
+     * @return The functional identifier code.
      * 
-    */
+     */
     public Optional<String> functionalIdentifierCode() {
         return Optional.ofNullable(this.functionalIdentifierCode);
     }
     /**
-     * The header version.
+     * @return The header version.
      * 
-    */
+     */
     public String headerVersion() {
         return this.headerVersion;
     }
     /**
-     * The message id on which this envelope settings has to be applied.
+     * @return The message id on which this envelope settings has to be applied.
      * 
-    */
+     */
     public String messageId() {
         return this.messageId;
     }
     /**
-     * The protocol version on which this envelope settings has to be applied.
+     * @return The protocol version on which this envelope settings has to be applied.
      * 
-    */
+     */
     public String protocolVersion() {
         return this.protocolVersion;
     }
     /**
-     * The receiver application id.
+     * @return The receiver application id.
      * 
-    */
+     */
     public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
     /**
-     * The responsible agency code.
+     * @return The responsible agency code.
      * 
-    */
+     */
     public String responsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
     /**
-     * The sender application id.
+     * @return The sender application id.
      * 
-    */
+     */
     public String senderApplicationId() {
         return this.senderApplicationId;
     }
     /**
-     * The target namespace on which this envelope settings has to be applied.
+     * @return The target namespace on which this envelope settings has to be applied.
      * 
-    */
+     */
     public String targetNamespace() {
         return this.targetNamespace;
     }
     /**
-     * The time format.
+     * @return The time format.
      * 
-    */
+     */
     public String timeFormat() {
         return this.timeFormat;
     }

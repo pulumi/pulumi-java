@@ -13,76 +13,76 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIotHubDataConnectionResult {
-    /**
-     * The iot hub consumer group.
-     * 
-     */
+        /**
+         * @return The iot hub consumer group.
+         * 
+         */
     private final String consumerGroup;
-    /**
-     * The data format of the message. Optionally the data format can be added to each message.
-     * 
-     */
+        /**
+         * @return The data format of the message. Optionally the data format can be added to each message.
+         * 
+         */
     private final @Nullable String dataFormat;
-    /**
-     * System properties of the iot hub
-     * 
-     */
+        /**
+         * @return System properties of the iot hub
+         * 
+         */
     private final @Nullable List<String> eventSystemProperties;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The resource ID of the Iot hub to be used to create a data connection.
-     * 
-     */
+        /**
+         * @return The resource ID of the Iot hub to be used to create a data connection.
+         * 
+         */
     private final String iotHubResourceId;
-    /**
-     * Kind of the endpoint for the data connection
-     * Expected value is &#39;IotHub&#39;.
-     * 
-     */
+        /**
+         * @return Kind of the endpoint for the data connection
+         * Expected value is &#39;IotHub&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
-     * 
-     */
+        /**
+         * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+         * 
+         */
     private final @Nullable String mappingRuleName;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The name of the share access policy
-     * 
-     */
+        /**
+         * @return The name of the share access policy
+         * 
+         */
     private final String sharedAccessPolicyName;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The table where the data should be ingested. Optionally the table information can be added to each message.
-     * 
-     */
+        /**
+         * @return The table where the data should be ingested. Optionally the table information can be added to each message.
+         * 
+         */
     private final @Nullable String tableName;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -118,101 +118,101 @@ public final class GetIotHubDataConnectionResult {
     }
 
     /**
-     * The iot hub consumer group.
+     * @return The iot hub consumer group.
      * 
-    */
+     */
     public String consumerGroup() {
         return this.consumerGroup;
     }
     /**
-     * The data format of the message. Optionally the data format can be added to each message.
+     * @return The data format of the message. Optionally the data format can be added to each message.
      * 
-    */
+     */
     public Optional<String> dataFormat() {
         return Optional.ofNullable(this.dataFormat);
     }
     /**
-     * System properties of the iot hub
+     * @return System properties of the iot hub
      * 
-    */
+     */
     public List<String> eventSystemProperties() {
         return this.eventSystemProperties == null ? List.of() : this.eventSystemProperties;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource ID of the Iot hub to be used to create a data connection.
+     * @return The resource ID of the Iot hub to be used to create a data connection.
      * 
-    */
+     */
     public String iotHubResourceId() {
         return this.iotHubResourceId;
     }
     /**
-     * Kind of the endpoint for the data connection
+     * @return Kind of the endpoint for the data connection
      * Expected value is &#39;IotHub&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     * @return The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
-    */
+     */
     public Optional<String> mappingRuleName() {
         return Optional.ofNullable(this.mappingRuleName);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The name of the share access policy
+     * @return The name of the share access policy
      * 
-    */
+     */
     public String sharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     * @return The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
-    */
+     */
     public Optional<String> tableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

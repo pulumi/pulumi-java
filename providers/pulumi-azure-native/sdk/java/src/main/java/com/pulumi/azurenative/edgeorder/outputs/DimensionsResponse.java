@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class DimensionsResponse {
-    /**
-     * Depth of the device.
-     * 
-     */
+        /**
+         * @return Depth of the device.
+         * 
+         */
     private final Double depth;
-    /**
-     * Height of the device.
-     * 
-     */
+        /**
+         * @return Height of the device.
+         * 
+         */
     private final Double height;
-    /**
-     * Length of the device.
-     * 
-     */
+        /**
+         * @return Length of the device.
+         * 
+         */
     private final Double length;
-    /**
-     * Unit for the dimensions of length, height and width.
-     * 
-     */
+        /**
+         * @return Unit for the dimensions of length, height and width.
+         * 
+         */
     private final String lengthHeightUnit;
-    /**
-     * Weight of the device.
-     * 
-     */
+        /**
+         * @return Weight of the device.
+         * 
+         */
     private final Double weight;
-    /**
-     * Unit for the dimensions of weight.
-     * 
-     */
+        /**
+         * @return Unit for the dimensions of weight.
+         * 
+         */
     private final String weightUnit;
-    /**
-     * Width of the device.
-     * 
-     */
+        /**
+         * @return Width of the device.
+         * 
+         */
     private final Double width;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class DimensionsResponse {
     }
 
     /**
-     * Depth of the device.
+     * @return Depth of the device.
      * 
-    */
+     */
     public Double depth() {
         return this.depth;
     }
     /**
-     * Height of the device.
+     * @return Height of the device.
      * 
-    */
+     */
     public Double height() {
         return this.height;
     }
     /**
-     * Length of the device.
+     * @return Length of the device.
      * 
-    */
+     */
     public Double length() {
         return this.length;
     }
     /**
-     * Unit for the dimensions of length, height and width.
+     * @return Unit for the dimensions of length, height and width.
      * 
-    */
+     */
     public String lengthHeightUnit() {
         return this.lengthHeightUnit;
     }
     /**
-     * Weight of the device.
+     * @return Weight of the device.
      * 
-    */
+     */
     public Double weight() {
         return this.weight;
     }
     /**
-     * Unit for the dimensions of weight.
+     * @return Unit for the dimensions of weight.
      * 
-    */
+     */
     public String weightUnit() {
         return this.weightUnit;
     }
     /**
-     * Width of the device.
+     * @return Width of the device.
      * 
-    */
+     */
     public Double width() {
         return this.width;
     }

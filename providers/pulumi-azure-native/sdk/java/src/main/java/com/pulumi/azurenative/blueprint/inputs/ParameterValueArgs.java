@@ -27,6 +27,10 @@ public final class ParameterValueArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="reference")
     private @Nullable Output<SecretValueReferenceArgs> reference;
 
+    /**
+     * @return Parameter value as reference type.
+     * 
+     */
     public Optional<Output<SecretValueReferenceArgs>> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -38,6 +42,10 @@ public final class ParameterValueArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value")
     private @Nullable Output<Object> value;
 
+    /**
+     * @return Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+     * 
+     */
     public Optional<Output<Object>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class ParameterValueArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ParameterValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reference Parameter value as reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reference(@Nullable Output<SecretValueReferenceArgs> reference) {
             $.reference = reference;
             return this;
         }
 
+        /**
+         * @param reference Parameter value as reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reference(SecretValueReferenceArgs reference) {
             return reference(Output.of(reference));
         }
 
+        /**
+         * @param value Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

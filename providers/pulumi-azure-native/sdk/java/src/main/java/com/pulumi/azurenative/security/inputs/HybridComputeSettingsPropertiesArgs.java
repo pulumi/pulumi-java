@@ -30,6 +30,10 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="autoProvision", required=true)
     private Output<Either<String,AutoProvision>> autoProvision;
 
+    /**
+     * @return Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+     * 
+     */
     public Output<Either<String,AutoProvision>> autoProvision() {
         return this.autoProvision;
     }
@@ -41,6 +45,10 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="proxyServer")
     private @Nullable Output<ProxyServerPropertiesArgs> proxyServer;
 
+    /**
+     * @return For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+     * 
+     */
     public Optional<Output<ProxyServerPropertiesArgs>> proxyServer() {
         return Optional.ofNullable(this.proxyServer);
     }
@@ -52,6 +60,10 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The location where the metadata of machines will be stored
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -63,6 +75,10 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="resourceGroupName")
     private @Nullable Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+     * 
+     */
     public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -74,6 +90,10 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
     @Import(name="servicePrincipal")
     private @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
+    /**
+     * @return An object to access resources that are secured by an Azure AD tenant.
+     * 
+     */
     public Optional<Output<ServicePrincipalPropertiesArgs>> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
@@ -106,55 +126,127 @@ public final class HybridComputeSettingsPropertiesArgs extends com.pulumi.resour
             $ = new HybridComputeSettingsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoProvision Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvision(Output<Either<String,AutoProvision>> autoProvision) {
             $.autoProvision = autoProvision;
             return this;
         }
 
+        /**
+         * @param autoProvision Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvision(Either<String,AutoProvision> autoProvision) {
             return autoProvision(Output.of(autoProvision));
         }
 
+        /**
+         * @param autoProvision Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvision(String autoProvision) {
             return autoProvision(Either.ofLeft(autoProvision));
         }
 
+        /**
+         * @param autoProvision Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvision(AutoProvision autoProvision) {
             return autoProvision(Either.ofRight(autoProvision));
         }
 
+        /**
+         * @param proxyServer For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyServer(@Nullable Output<ProxyServerPropertiesArgs> proxyServer) {
             $.proxyServer = proxyServer;
             return this;
         }
 
+        /**
+         * @param proxyServer For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proxyServer(ProxyServerPropertiesArgs proxyServer) {
             return proxyServer(Output.of(proxyServer));
         }
 
+        /**
+         * @param region The location where the metadata of machines will be stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The location where the metadata of machines will be stored
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param servicePrincipal An object to access resources that are secured by an Azure AD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;
         }
 
+        /**
+         * @param servicePrincipal An object to access resources that are secured by an Azure AD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(ServicePrincipalPropertiesArgs servicePrincipal) {
             return servicePrincipal(Output.of(servicePrincipal));
         }

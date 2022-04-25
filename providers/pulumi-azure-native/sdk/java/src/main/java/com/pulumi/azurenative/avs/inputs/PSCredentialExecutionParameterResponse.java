@@ -26,6 +26,10 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The parameter name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return password for login
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,11 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of execution parameter
+     * Expected value is &#39;Credential&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,6 +73,10 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return username for login
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -91,21 +108,46 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
             $ = new PSCredentialExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param password password for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;Credential&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param username username for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

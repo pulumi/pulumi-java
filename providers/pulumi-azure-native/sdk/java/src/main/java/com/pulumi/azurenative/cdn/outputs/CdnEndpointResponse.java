@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CdnEndpointResponse {
-    /**
-     * ARM Resource ID string.
-     * 
-     */
+        /**
+         * @return ARM Resource ID string.
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CdnEndpointResponse {
     }
 
     /**
-     * ARM Resource ID string.
+     * @return ARM Resource ID string.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

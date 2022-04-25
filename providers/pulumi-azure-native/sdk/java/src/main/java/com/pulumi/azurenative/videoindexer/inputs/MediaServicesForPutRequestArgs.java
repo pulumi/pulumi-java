@@ -26,6 +26,10 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The media services resource id
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -37,6 +41,10 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
     @Import(name="userAssignedIdentity")
     private @Nullable Output<String> userAssignedIdentity;
 
+    /**
+     * @return The user assigned identity to be used to grant permissions
+     * 
+     */
     public Optional<Output<String>> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -66,20 +74,44 @@ public final class MediaServicesForPutRequestArgs extends com.pulumi.resources.R
             $ = new MediaServicesForPutRequestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The media services resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The media services resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned identity to be used to grant permissions
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned identity to be used to grant permissions
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             return userAssignedIdentity(Output.of(userAssignedIdentity));
         }

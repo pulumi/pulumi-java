@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceBusAuthenticationResponse {
-    /**
-     * Gets or sets the SAS key.
-     * 
-     */
+        /**
+         * @return Gets or sets the SAS key.
+         * 
+         */
     private final @Nullable String sasKey;
-    /**
-     * Gets or sets the SAS key name.
-     * 
-     */
+        /**
+         * @return Gets or sets the SAS key name.
+         * 
+         */
     private final @Nullable String sasKeyName;
-    /**
-     * Gets or sets the authentication type.
-     * 
-     */
+        /**
+         * @return Gets or sets the authentication type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ServiceBusAuthenticationResponse {
     }
 
     /**
-     * Gets or sets the SAS key.
+     * @return Gets or sets the SAS key.
      * 
-    */
+     */
     public Optional<String> sasKey() {
         return Optional.ofNullable(this.sasKey);
     }
     /**
-     * Gets or sets the SAS key name.
+     * @return Gets or sets the SAS key name.
      * 
-    */
+     */
     public Optional<String> sasKeyName() {
         return Optional.ofNullable(this.sasKeyName);
     }
     /**
-     * Gets or sets the authentication type.
+     * @return Gets or sets the authentication type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkRuleSetResponse {
-    /**
-     * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
-     * 
-     */
+        /**
+         * @return The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+         * 
+         */
     private final @Nullable String defaultAction;
-    /**
-     * The list of IP address rules.
-     * 
-     */
+        /**
+         * @return The list of IP address rules.
+         * 
+         */
     private final @Nullable List<IpRuleResponse> ipRules;
-    /**
-     * The list of virtual network rules.
-     * 
-     */
+        /**
+         * @return The list of virtual network rules.
+         * 
+         */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class NetworkRuleSetResponse {
     }
 
     /**
-     * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+     * @return The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
      * 
-    */
+     */
     public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
-     * The list of IP address rules.
+     * @return The list of IP address rules.
      * 
-    */
+     */
     public List<IpRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
-     * The list of virtual network rules.
+     * @return The list of virtual network rules.
      * 
-    */
+     */
     public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

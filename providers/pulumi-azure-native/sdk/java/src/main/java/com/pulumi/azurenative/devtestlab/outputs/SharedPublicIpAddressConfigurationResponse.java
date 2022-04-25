@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SharedPublicIpAddressConfigurationResponse {
-    /**
-     * The incoming NAT rules
-     * 
-     */
+        /**
+         * @return The incoming NAT rules
+         * 
+         */
     private final @Nullable List<InboundNatRuleResponse> inboundNatRules;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SharedPublicIpAddressConfigurationResponse {
     }
 
     /**
-     * The incoming NAT rules
+     * @return The incoming NAT rules
      * 
-    */
+     */
     public List<InboundNatRuleResponse> inboundNatRules() {
         return this.inboundNatRules == null ? List.of() : this.inboundNatRules;
     }

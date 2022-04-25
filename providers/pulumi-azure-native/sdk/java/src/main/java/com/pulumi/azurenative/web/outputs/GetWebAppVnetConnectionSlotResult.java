@@ -14,61 +14,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebAppVnetConnectionSlotResult {
-    /**
-     * A certificate file (.cer) blob containing the public key of the private key used to authenticate a
-     * Point-To-Site VPN connection.
-     * 
-     */
+        /**
+         * @return A certificate file (.cer) blob containing the public key of the private key used to authenticate a
+         * Point-To-Site VPN connection.
+         * 
+         */
     private final @Nullable String certBlob;
-    /**
-     * The client certificate thumbprint.
-     * 
-     */
+        /**
+         * @return The client certificate thumbprint.
+         * 
+         */
     private final String certThumbprint;
-    /**
-     * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
-     * 
-     */
+        /**
+         * @return DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
+         * 
+         */
     private final @Nullable String dnsServers;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Flag that is used to denote if this is VNET injection
-     * 
-     */
+        /**
+         * @return Flag that is used to denote if this is VNET injection
+         * 
+         */
     private final @Nullable Boolean isSwift;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         */
     private final Boolean resyncRequired;
-    /**
-     * The routes that this Virtual Network connection uses.
-     * 
-     */
+        /**
+         * @return The routes that this Virtual Network connection uses.
+         * 
+         */
     private final List<VnetRouteResponse> routes;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The Virtual Network&#39;s resource ID.
-     * 
-     */
+        /**
+         * @return The Virtual Network&#39;s resource ID.
+         * 
+         */
     private final @Nullable String vnetResourceId;
 
     @CustomType.Constructor
@@ -98,80 +98,80 @@ public final class GetWebAppVnetConnectionSlotResult {
     }
 
     /**
-     * A certificate file (.cer) blob containing the public key of the private key used to authenticate a
+     * @return A certificate file (.cer) blob containing the public key of the private key used to authenticate a
      * Point-To-Site VPN connection.
      * 
-    */
+     */
     public Optional<String> certBlob() {
         return Optional.ofNullable(this.certBlob);
     }
     /**
-     * The client certificate thumbprint.
+     * @return The client certificate thumbprint.
      * 
-    */
+     */
     public String certThumbprint() {
         return this.certThumbprint;
     }
     /**
-     * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
+     * @return DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
-    */
+     */
     public Optional<String> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Flag that is used to denote if this is VNET injection
+     * @return Flag that is used to denote if this is VNET injection
      * 
-    */
+     */
     public Optional<Boolean> isSwift() {
         return Optional.ofNullable(this.isSwift);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if a resync is required; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Boolean resyncRequired() {
         return this.resyncRequired;
     }
     /**
-     * The routes that this Virtual Network connection uses.
+     * @return The routes that this Virtual Network connection uses.
      * 
-    */
+     */
     public List<VnetRouteResponse> routes() {
         return this.routes;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Virtual Network&#39;s resource ID.
+     * @return The Virtual Network&#39;s resource ID.
      * 
-    */
+     */
     public Optional<String> vnetResourceId() {
         return Optional.ofNullable(this.vnetResourceId);
     }

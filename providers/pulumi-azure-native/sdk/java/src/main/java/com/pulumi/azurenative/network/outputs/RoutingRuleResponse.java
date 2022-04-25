@@ -17,60 +17,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RoutingRuleResponse {
-    /**
-     * Protocol schemes to match for this rule
-     * 
-     */
+        /**
+         * @return Protocol schemes to match for this rule
+         * 
+         */
     private final @Nullable List<String> acceptedProtocols;
-    /**
-     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
-     * 
-     */
+        /**
+         * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         */
     private final @Nullable String enabledState;
-    /**
-     * Frontend endpoints associated with this rule
-     * 
-     */
+        /**
+         * @return Frontend endpoints associated with this rule
+         * 
+         */
     private final @Nullable List<SubResourceResponse> frontendEndpoints;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The route patterns of the rule.
-     * 
-     */
+        /**
+         * @return The route patterns of the rule.
+         * 
+         */
     private final @Nullable List<String> patternsToMatch;
-    /**
-     * Resource status.
-     * 
-     */
+        /**
+         * @return Resource status.
+         * 
+         */
     private final String resourceState;
-    /**
-     * A reference to the routing configuration.
-     * 
-     */
+        /**
+         * @return A reference to the routing configuration.
+         * 
+         */
     private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
-    /**
-     * A reference to a specific Rules Engine Configuration to apply to this route.
-     * 
-     */
+        /**
+         * @return A reference to a specific Rules Engine Configuration to apply to this route.
+         * 
+         */
     private final @Nullable SubResourceResponse rulesEngine;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Defines the Web Application Firewall policy for each routing rule (if applicable)
-     * 
-     */
+        /**
+         * @return Defines the Web Application Firewall policy for each routing rule (if applicable)
+         * 
+         */
     private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     @CustomType.Constructor
@@ -100,79 +100,79 @@ public final class RoutingRuleResponse {
     }
 
     /**
-     * Protocol schemes to match for this rule
+     * @return Protocol schemes to match for this rule
      * 
-    */
+     */
     public List<String> acceptedProtocols() {
         return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * Frontend endpoints associated with this rule
+     * @return Frontend endpoints associated with this rule
      * 
-    */
+     */
     public List<SubResourceResponse> frontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The route patterns of the rule.
+     * @return The route patterns of the rule.
      * 
-    */
+     */
     public List<String> patternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * A reference to the routing configuration.
+     * @return A reference to the routing configuration.
      * 
-    */
+     */
     public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> routeConfiguration() {
         return Optional.ofNullable(this.routeConfiguration);
     }
     /**
-     * A reference to a specific Rules Engine Configuration to apply to this route.
+     * @return A reference to a specific Rules Engine Configuration to apply to this route.
      * 
-    */
+     */
     public Optional<SubResourceResponse> rulesEngine() {
         return Optional.ofNullable(this.rulesEngine);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Defines the Web Application Firewall policy for each routing rule (if applicable)
+     * @return Defines the Web Application Firewall policy for each routing rule (if applicable)
      * 
-    */
+     */
     public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> webApplicationFirewallPolicyLink() {
         return Optional.ofNullable(this.webApplicationFirewallPolicyLink);
     }

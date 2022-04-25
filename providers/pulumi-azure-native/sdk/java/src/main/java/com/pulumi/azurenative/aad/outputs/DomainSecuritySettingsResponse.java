@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DomainSecuritySettingsResponse {
-    /**
-     * A flag to determine whether or not KerberosArmoring is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not KerberosArmoring is enabled or disabled.
+         * 
+         */
     private final @Nullable String kerberosArmoring;
-    /**
-     * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+         * 
+         */
     private final @Nullable String kerberosRc4Encryption;
-    /**
-     * A flag to determine whether or not NtlmV1 is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not NtlmV1 is enabled or disabled.
+         * 
+         */
     private final @Nullable String ntlmV1;
-    /**
-     * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+         * 
+         */
     private final @Nullable String syncKerberosPasswords;
-    /**
-     * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+         * 
+         */
     private final @Nullable String syncNtlmPasswords;
-    /**
-     * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+         * 
+         */
     private final @Nullable String syncOnPremPasswords;
-    /**
-     * A flag to determine whether or not TlsV1 is enabled or disabled.
-     * 
-     */
+        /**
+         * @return A flag to determine whether or not TlsV1 is enabled or disabled.
+         * 
+         */
     private final @Nullable String tlsV1;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class DomainSecuritySettingsResponse {
     }
 
     /**
-     * A flag to determine whether or not KerberosArmoring is enabled or disabled.
+     * @return A flag to determine whether or not KerberosArmoring is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> kerberosArmoring() {
         return Optional.ofNullable(this.kerberosArmoring);
     }
     /**
-     * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+     * @return A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> kerberosRc4Encryption() {
         return Optional.ofNullable(this.kerberosRc4Encryption);
     }
     /**
-     * A flag to determine whether or not NtlmV1 is enabled or disabled.
+     * @return A flag to determine whether or not NtlmV1 is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> ntlmV1() {
         return Optional.ofNullable(this.ntlmV1);
     }
     /**
-     * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+     * @return A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> syncKerberosPasswords() {
         return Optional.ofNullable(this.syncKerberosPasswords);
     }
     /**
-     * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+     * @return A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> syncNtlmPasswords() {
         return Optional.ofNullable(this.syncNtlmPasswords);
     }
     /**
-     * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+     * @return A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> syncOnPremPasswords() {
         return Optional.ofNullable(this.syncOnPremPasswords);
     }
     /**
-     * A flag to determine whether or not TlsV1 is enabled or disabled.
+     * @return A flag to determine whether or not TlsV1 is enabled or disabled.
      * 
-    */
+     */
     public Optional<String> tlsV1() {
         return Optional.ofNullable(this.tlsV1);
     }

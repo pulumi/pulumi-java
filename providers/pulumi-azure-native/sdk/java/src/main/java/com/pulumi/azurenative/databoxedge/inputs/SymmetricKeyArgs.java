@@ -26,6 +26,10 @@ public final class SymmetricKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionString")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
+    /**
+     * @return Connection string based on the symmetric key.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -54,11 +58,23 @@ public final class SymmetricKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SymmetricKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionString Connection string based on the symmetric key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<AsymmetricEncryptedSecretArgs> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Connection string based on the symmetric key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(AsymmetricEncryptedSecretArgs connectionString) {
             return connectionString(Output.of(connectionString));
         }

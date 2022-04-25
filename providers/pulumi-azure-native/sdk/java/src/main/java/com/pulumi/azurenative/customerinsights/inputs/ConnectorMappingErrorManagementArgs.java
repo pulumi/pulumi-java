@@ -27,6 +27,10 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
     @Import(name="errorLimit")
     private @Nullable Output<Integer> errorLimit;
 
+    /**
+     * @return The error limit allowed while importing data.
+     * 
+     */
     public Optional<Output<Integer>> errorLimit() {
         return Optional.ofNullable(this.errorLimit);
     }
@@ -38,6 +42,10 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
     @Import(name="errorManagementType", required=true)
     private Output<ErrorManagementTypes> errorManagementType;
 
+    /**
+     * @return The type of error management to use for the mapping.
+     * 
+     */
     public Output<ErrorManagementTypes> errorManagementType() {
         return this.errorManagementType;
     }
@@ -67,20 +75,44 @@ public final class ConnectorMappingErrorManagementArgs extends com.pulumi.resour
             $ = new ConnectorMappingErrorManagementArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorLimit The error limit allowed while importing data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLimit(@Nullable Output<Integer> errorLimit) {
             $.errorLimit = errorLimit;
             return this;
         }
 
+        /**
+         * @param errorLimit The error limit allowed while importing data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLimit(Integer errorLimit) {
             return errorLimit(Output.of(errorLimit));
         }
 
+        /**
+         * @param errorManagementType The type of error management to use for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManagementType(Output<ErrorManagementTypes> errorManagementType) {
             $.errorManagementType = errorManagementType;
             return this;
         }
 
+        /**
+         * @param errorManagementType The type of error management to use for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManagementType(ErrorManagementTypes errorManagementType) {
             return errorManagementType(Output.of(errorManagementType));
         }

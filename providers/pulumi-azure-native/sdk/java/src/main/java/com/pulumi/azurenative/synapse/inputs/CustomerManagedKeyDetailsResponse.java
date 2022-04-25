@@ -26,6 +26,10 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
     @Import(name="key")
     private @Nullable WorkspaceKeyDetailsResponse key;
 
+    /**
+     * @return The key object of the workspace
+     * 
+     */
     public Optional<WorkspaceKeyDetailsResponse> key() {
         return Optional.ofNullable(this.key);
     }
@@ -37,6 +41,10 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The customer managed key status on the workspace
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -66,11 +74,23 @@ public final class CustomerManagedKeyDetailsResponse extends com.pulumi.resource
             $ = new CustomerManagedKeyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key object of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable WorkspaceKeyDetailsResponse key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param status The customer managed key status on the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

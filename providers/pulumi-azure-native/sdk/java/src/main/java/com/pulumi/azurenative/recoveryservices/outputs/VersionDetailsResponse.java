@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VersionDetailsResponse {
-    /**
-     * Version expiry date.
-     * 
-     */
+        /**
+         * @return Version expiry date.
+         * 
+         */
     private final @Nullable String expiryDate;
-    /**
-     * A value indicating whether security update required.
-     * 
-     */
+        /**
+         * @return A value indicating whether security update required.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * The agent version.
-     * 
-     */
+        /**
+         * @return The agent version.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class VersionDetailsResponse {
     }
 
     /**
-     * Version expiry date.
+     * @return Version expiry date.
      * 
-    */
+     */
     public Optional<String> expiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
-     * A value indicating whether security update required.
+     * @return A value indicating whether security update required.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The agent version.
+     * @return The agent version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

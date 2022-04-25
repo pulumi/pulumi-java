@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TestBaseAccountSKUCapabilityResponse {
-    /**
-     * An invariant to describe the feature, such as &#39;SLA&#39;.
-     * 
-     */
+        /**
+         * @return An invariant to describe the feature, such as &#39;SLA&#39;.
+         * 
+         */
     private final String name;
-    /**
-     * An invariant if the feature is measured by quantity, such as 99.9%.
-     * 
-     */
+        /**
+         * @return An invariant if the feature is measured by quantity, such as 99.9%.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TestBaseAccountSKUCapabilityResponse {
     }
 
     /**
-     * An invariant to describe the feature, such as &#39;SLA&#39;.
+     * @return An invariant to describe the feature, such as &#39;SLA&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * An invariant if the feature is measured by quantity, such as 99.9%.
+     * @return An invariant if the feature is measured by quantity, such as 99.9%.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

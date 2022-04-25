@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiResourceMetadataResponse {
-    /**
-     * The api type.
-     * 
-     */
+        /**
+         * @return The api type.
+         * 
+         */
     private final @Nullable String apiType;
-    /**
-     * The brand color.
-     * 
-     */
+        /**
+         * @return The brand color.
+         * 
+         */
     private final @Nullable String brandColor;
-    /**
-     * The connection type.
-     * 
-     */
+        /**
+         * @return The connection type.
+         * 
+         */
     private final @Nullable String connectionType;
-    /**
-     * The connector deployment parameters metadata.
-     * 
-     */
+        /**
+         * @return The connector deployment parameters metadata.
+         * 
+         */
     private final @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters;
-    /**
-     * The hide key.
-     * 
-     */
+        /**
+         * @return The hide key.
+         * 
+         */
     private final @Nullable String hideKey;
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * The source.
-     * 
-     */
+        /**
+         * @return The source.
+         * 
+         */
     private final @Nullable String source;
-    /**
-     * The tags.
-     * 
-     */
+        /**
+         * @return The tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The WSDL import method.
-     * 
-     */
+        /**
+         * @return The WSDL import method.
+         * 
+         */
     private final @Nullable String wsdlImportMethod;
-    /**
-     * The WSDL service.
-     * 
-     */
+        /**
+         * @return The WSDL service.
+         * 
+         */
     private final @Nullable WsdlServiceResponse wsdlService;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class ApiResourceMetadataResponse {
     }
 
     /**
-     * The api type.
+     * @return The api type.
      * 
-    */
+     */
     public Optional<String> apiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
-     * The brand color.
+     * @return The brand color.
      * 
-    */
+     */
     public Optional<String> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
     /**
-     * The connection type.
+     * @return The connection type.
      * 
-    */
+     */
     public Optional<String> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
-     * The connector deployment parameters metadata.
+     * @return The connector deployment parameters metadata.
      * 
-    */
+     */
     public Optional<ApiDeploymentParameterMetadataSetResponse> deploymentParameters() {
         return Optional.ofNullable(this.deploymentParameters);
     }
     /**
-     * The hide key.
+     * @return The hide key.
      * 
-    */
+     */
     public Optional<String> hideKey() {
         return Optional.ofNullable(this.hideKey);
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The source.
+     * @return The source.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The tags.
+     * @return The tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The WSDL import method.
+     * @return The WSDL import method.
      * 
-    */
+     */
     public Optional<String> wsdlImportMethod() {
         return Optional.ofNullable(this.wsdlImportMethod);
     }
     /**
-     * The WSDL service.
+     * @return The WSDL service.
      * 
-    */
+     */
     public Optional<WsdlServiceResponse> wsdlService() {
         return Optional.ofNullable(this.wsdlService);
     }

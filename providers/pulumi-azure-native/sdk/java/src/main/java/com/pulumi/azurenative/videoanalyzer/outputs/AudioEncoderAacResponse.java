@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AudioEncoderAacResponse {
-    /**
-     * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
-     * 
-     */
+        /**
+         * @return Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+         * 
+         */
     private final @Nullable String bitrateKbps;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class AudioEncoderAacResponse {
     }
 
     /**
-     * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+     * @return Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
      * 
-    */
+     */
     public Optional<String> bitrateKbps() {
         return Optional.ofNullable(this.bitrateKbps);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.AudioEncoderAac&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,30 +11,30 @@ import java.util.Objects;
 @CustomType
 public final class GetRuleSetResult {
     private final String deploymentStatus;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning status
-     * 
-     */
+        /**
+         * @return Provisioning status
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Read only system data
-     * 
-     */
+        /**
+         * @return Read only system data
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -57,37 +57,37 @@ public final class GetRuleSetResult {
         return this.deploymentStatus;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

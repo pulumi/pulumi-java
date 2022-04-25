@@ -25,6 +25,10 @@ public final class NetworkPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="privateLink")
     private @Nullable String privateLink;
 
+    /**
+     * @return Indicates whether or not private link is enabled.
+     * 
+     */
     public Optional<String> privateLink() {
         return Optional.ofNullable(this.privateLink);
     }
@@ -36,6 +40,10 @@ public final class NetworkPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceProviderConnection")
     private @Nullable String resourceProviderConnection;
 
+    /**
+     * @return The direction for the resource provider connection.
+     * 
+     */
     public Optional<String> resourceProviderConnection() {
         return Optional.ofNullable(this.resourceProviderConnection);
     }
@@ -65,11 +73,23 @@ public final class NetworkPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new NetworkPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateLink Indicates whether or not private link is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLink(@Nullable String privateLink) {
             $.privateLink = privateLink;
             return this;
         }
 
+        /**
+         * @param resourceProviderConnection The direction for the resource provider connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderConnection(@Nullable String resourceProviderConnection) {
             $.resourceProviderConnection = resourceProviderConnection;
             return this;

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataMaskingResponse {
-    /**
-     * Masking settings for headers
-     * 
-     */
+        /**
+         * @return Masking settings for headers
+         * 
+         */
     private final @Nullable List<DataMaskingEntityResponse> headers;
-    /**
-     * Masking settings for Url query parameters
-     * 
-     */
+        /**
+         * @return Masking settings for Url query parameters
+         * 
+         */
     private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DataMaskingResponse {
     }
 
     /**
-     * Masking settings for headers
+     * @return Masking settings for headers
      * 
-    */
+     */
     public List<DataMaskingEntityResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
-     * Masking settings for Url query parameters
+     * @return Masking settings for Url query parameters
      * 
-    */
+     */
     public List<DataMaskingEntityResponse> queryParams() {
         return this.queryParams == null ? List.of() : this.queryParams;
     }

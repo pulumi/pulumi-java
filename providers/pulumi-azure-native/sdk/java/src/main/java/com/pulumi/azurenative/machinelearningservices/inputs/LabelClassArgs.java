@@ -27,6 +27,10 @@ public final class LabelClassArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the label class.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -38,6 +42,10 @@ public final class LabelClassArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subclasses")
     private @Nullable Output<Map<String,LabelClassArgs>> subclasses;
 
+    /**
+     * @return Dictionary of subclasses of the label class.
+     * 
+     */
     public Optional<Output<Map<String,LabelClassArgs>>> subclasses() {
         return Optional.ofNullable(this.subclasses);
     }
@@ -67,20 +75,44 @@ public final class LabelClassArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LabelClassArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the label class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the label class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param subclasses Dictionary of subclasses of the label class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subclasses(@Nullable Output<Map<String,LabelClassArgs>> subclasses) {
             $.subclasses = subclasses;
             return this;
         }
 
+        /**
+         * @param subclasses Dictionary of subclasses of the label class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subclasses(Map<String,LabelClassArgs> subclasses) {
             return subclasses(Output.of(subclasses));
         }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScheduledEventsProfileResponse {
-    /**
-     * Specifies Terminate Scheduled Event related configurations.
-     * 
-     */
+        /**
+         * @return Specifies Terminate Scheduled Event related configurations.
+         * 
+         */
     private final @Nullable TerminateNotificationProfileResponse terminateNotificationProfile;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ScheduledEventsProfileResponse {
     }
 
     /**
-     * Specifies Terminate Scheduled Event related configurations.
+     * @return Specifies Terminate Scheduled Event related configurations.
      * 
-    */
+     */
     public Optional<TerminateNotificationProfileResponse> terminateNotificationProfile() {
         return Optional.ofNullable(this.terminateNotificationProfile);
     }

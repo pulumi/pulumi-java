@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportScheduleResponse {
-    /**
-     * The schedule recurrence.
-     * 
-     */
+        /**
+         * @return The schedule recurrence.
+         * 
+         */
     private final String recurrence;
-    /**
-     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
-     * 
-     */
+        /**
+         * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+         * 
+         */
     private final @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
-    /**
-     * The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
-     * 
-     */
+        /**
+         * @return The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
+         * 
+         */
     private final @Nullable String status;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ReportScheduleResponse {
     }
 
     /**
-     * The schedule recurrence.
+     * @return The schedule recurrence.
      * 
-    */
+     */
     public String recurrence() {
         return this.recurrence;
     }
     /**
-     * Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
      * 
-    */
+     */
     public Optional<ReportRecurrencePeriodResponse> recurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
     /**
-     * The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
+     * @return The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

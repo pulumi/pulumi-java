@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SchemaComparisonValidationResultResponse {
-    /**
-     * List of schema differences between the source and target databases
-     * 
-     */
+        /**
+         * @return List of schema differences between the source and target databases
+         * 
+         */
     private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
-    /**
-     * Count of source database objects
-     * 
-     */
+        /**
+         * @return Count of source database objects
+         * 
+         */
     private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
-    /**
-     * Count of target database objects
-     * 
-     */
+        /**
+         * @return Count of target database objects
+         * 
+         */
     private final @Nullable Map<String,Double> targetDatabaseObjectCount;
-    /**
-     * List of errors that happened while performing schema compare validation
-     * 
-     */
+        /**
+         * @return List of errors that happened while performing schema compare validation
+         * 
+         */
     private final ValidationErrorResponse validationErrors;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class SchemaComparisonValidationResultResponse {
     }
 
     /**
-     * List of schema differences between the source and target databases
+     * @return List of schema differences between the source and target databases
      * 
-    */
+     */
     public SchemaComparisonValidationResultTypeResponse schemaDifferences() {
         return this.schemaDifferences;
     }
     /**
-     * Count of source database objects
+     * @return Count of source database objects
      * 
-    */
+     */
     public Map<String,Double> sourceDatabaseObjectCount() {
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
     }
     /**
-     * Count of target database objects
+     * @return Count of target database objects
      * 
-    */
+     */
     public Map<String,Double> targetDatabaseObjectCount() {
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
     }
     /**
-     * List of errors that happened while performing schema compare validation
+     * @return List of errors that happened while performing schema compare validation
      * 
-    */
+     */
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }

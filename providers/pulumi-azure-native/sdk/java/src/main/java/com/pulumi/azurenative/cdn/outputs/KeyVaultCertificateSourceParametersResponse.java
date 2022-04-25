@@ -11,41 +11,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultCertificateSourceParametersResponse {
-    /**
-     * Describes the action that shall be taken when the certificate is removed from Key Vault.
-     * 
-     */
+        /**
+         * @return Describes the action that shall be taken when the certificate is removed from Key Vault.
+         * 
+         */
     private final String deleteRule;
     private final String odataType;
-    /**
-     * Resource group of the user&#39;s Key Vault containing the SSL certificate
-     * 
-     */
+        /**
+         * @return Resource group of the user&#39;s Key Vault containing the SSL certificate
+         * 
+         */
     private final String resourceGroupName;
-    /**
-     * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
-     * 
-     */
+        /**
+         * @return The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+         * 
+         */
     private final String secretName;
-    /**
-     * The version(GUID) of Key Vault Secret in Key Vault.
-     * 
-     */
+        /**
+         * @return The version(GUID) of Key Vault Secret in Key Vault.
+         * 
+         */
     private final @Nullable String secretVersion;
-    /**
-     * Subscription Id of the user&#39;s Key Vault containing the SSL certificate
-     * 
-     */
+        /**
+         * @return Subscription Id of the user&#39;s Key Vault containing the SSL certificate
+         * 
+         */
     private final String subscriptionId;
-    /**
-     * Describes the action that shall be taken when the certificate is updated in Key Vault.
-     * 
-     */
+        /**
+         * @return Describes the action that shall be taken when the certificate is updated in Key Vault.
+         * 
+         */
     private final String updateRule;
-    /**
-     * The name of the user&#39;s Key Vault containing the SSL certificate
-     * 
-     */
+        /**
+         * @return The name of the user&#39;s Key Vault containing the SSL certificate
+         * 
+         */
     private final String vaultName;
 
     @CustomType.Constructor
@@ -69,9 +69,9 @@ public final class KeyVaultCertificateSourceParametersResponse {
     }
 
     /**
-     * Describes the action that shall be taken when the certificate is removed from Key Vault.
+     * @return Describes the action that shall be taken when the certificate is removed from Key Vault.
      * 
-    */
+     */
     public String deleteRule() {
         return this.deleteRule;
     }
@@ -79,44 +79,44 @@ public final class KeyVaultCertificateSourceParametersResponse {
         return this.odataType;
     }
     /**
-     * Resource group of the user&#39;s Key Vault containing the SSL certificate
+     * @return Resource group of the user&#39;s Key Vault containing the SSL certificate
      * 
-    */
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
-     * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+     * @return The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
      * 
-    */
+     */
     public String secretName() {
         return this.secretName;
     }
     /**
-     * The version(GUID) of Key Vault Secret in Key Vault.
+     * @return The version(GUID) of Key Vault Secret in Key Vault.
      * 
-    */
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
-     * Subscription Id of the user&#39;s Key Vault containing the SSL certificate
+     * @return Subscription Id of the user&#39;s Key Vault containing the SSL certificate
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * Describes the action that shall be taken when the certificate is updated in Key Vault.
+     * @return Describes the action that shall be taken when the certificate is updated in Key Vault.
      * 
-    */
+     */
     public String updateRule() {
         return this.updateRule;
     }
     /**
-     * The name of the user&#39;s Key Vault containing the SSL certificate
+     * @return The name of the user&#39;s Key Vault containing the SSL certificate
      * 
-    */
+     */
     public String vaultName() {
         return this.vaultName;
     }

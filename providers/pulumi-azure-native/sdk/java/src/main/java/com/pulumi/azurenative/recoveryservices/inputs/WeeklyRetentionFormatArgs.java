@@ -28,6 +28,10 @@ public final class WeeklyRetentionFormatArgs extends com.pulumi.resources.Resour
     @Import(name="daysOfTheWeek")
     private @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
 
+    /**
+     * @return List of days of the week.
+     * 
+     */
     public Optional<Output<List<DayOfWeek>>> daysOfTheWeek() {
         return Optional.ofNullable(this.daysOfTheWeek);
     }
@@ -39,6 +43,10 @@ public final class WeeklyRetentionFormatArgs extends com.pulumi.resources.Resour
     @Import(name="weeksOfTheMonth")
     private @Nullable Output<List<WeekOfMonth>> weeksOfTheMonth;
 
+    /**
+     * @return List of weeks of month.
+     * 
+     */
     public Optional<Output<List<WeekOfMonth>>> weeksOfTheMonth() {
         return Optional.ofNullable(this.weeksOfTheMonth);
     }
@@ -68,28 +76,64 @@ public final class WeeklyRetentionFormatArgs extends com.pulumi.resources.Resour
             $ = new WeeklyRetentionFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param daysOfTheWeek List of days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(@Nullable Output<List<DayOfWeek>> daysOfTheWeek) {
             $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
+        /**
+         * @param daysOfTheWeek List of days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(List<DayOfWeek> daysOfTheWeek) {
             return daysOfTheWeek(Output.of(daysOfTheWeek));
         }
 
+        /**
+         * @param daysOfTheWeek List of days of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder daysOfTheWeek(DayOfWeek... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
 
+        /**
+         * @param weeksOfTheMonth List of weeks of month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(@Nullable Output<List<WeekOfMonth>> weeksOfTheMonth) {
             $.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
 
+        /**
+         * @param weeksOfTheMonth List of weeks of month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(List<WeekOfMonth> weeksOfTheMonth) {
             return weeksOfTheMonth(Output.of(weeksOfTheMonth));
         }
 
+        /**
+         * @param weeksOfTheMonth List of weeks of month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeksOfTheMonth(WeekOfMonth... weeksOfTheMonth) {
             return weeksOfTheMonth(List.of(weeksOfTheMonth));
         }

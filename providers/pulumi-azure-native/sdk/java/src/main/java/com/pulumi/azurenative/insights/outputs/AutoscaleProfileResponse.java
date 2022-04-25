@@ -16,30 +16,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoscaleProfileResponse {
-    /**
-     * the number of instances that can be used during this profile.
-     * 
-     */
+        /**
+         * @return the number of instances that can be used during this profile.
+         * 
+         */
     private final ScaleCapacityResponse capacity;
-    /**
-     * the specific date-time for the profile. This element is not used if the Recurrence element is used.
-     * 
-     */
+        /**
+         * @return the specific date-time for the profile. This element is not used if the Recurrence element is used.
+         * 
+         */
     private final @Nullable TimeWindowResponse fixedDate;
-    /**
-     * the name of the profile.
-     * 
-     */
+        /**
+         * @return the name of the profile.
+         * 
+         */
     private final String name;
-    /**
-     * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
-     * 
-     */
+        /**
+         * @return the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+         * 
+         */
     private final @Nullable RecurrenceResponse recurrence;
-    /**
-     * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
-     * 
-     */
+        /**
+         * @return the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+         * 
+         */
     private final List<ScaleRuleResponse> rules;
 
     @CustomType.Constructor
@@ -57,37 +57,37 @@ public final class AutoscaleProfileResponse {
     }
 
     /**
-     * the number of instances that can be used during this profile.
+     * @return the number of instances that can be used during this profile.
      * 
-    */
+     */
     public ScaleCapacityResponse capacity() {
         return this.capacity;
     }
     /**
-     * the specific date-time for the profile. This element is not used if the Recurrence element is used.
+     * @return the specific date-time for the profile. This element is not used if the Recurrence element is used.
      * 
-    */
+     */
     public Optional<TimeWindowResponse> fixedDate() {
         return Optional.ofNullable(this.fixedDate);
     }
     /**
-     * the name of the profile.
+     * @return the name of the profile.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+     * @return the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
      * 
-    */
+     */
     public Optional<RecurrenceResponse> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
     /**
-     * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+     * @return the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
      * 
-    */
+     */
     public List<ScaleRuleResponse> rules() {
         return this.rules;
     }

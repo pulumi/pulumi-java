@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImmutabilityPolicyPropertiesResponse {
-    /**
-     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
-     * 
-     */
+        /**
+         * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+         * 
+         */
     private final @Nullable Boolean allowProtectedAppendWrites;
-    /**
-     * ImmutabilityPolicy Etag.
-     * 
-     */
+        /**
+         * @return ImmutabilityPolicy Etag.
+         * 
+         */
     private final String etag;
-    /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
-     * 
-     */
+        /**
+         * @return The immutability period for the blobs in the container since the policy creation, in days.
+         * 
+         */
     private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
-    /**
-     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
-     * 
-     */
+        /**
+         * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+         * 
+         */
     private final String state;
-    /**
-     * The ImmutabilityPolicy update history of the blob container.
-     * 
-     */
+        /**
+         * @return The ImmutabilityPolicy update history of the blob container.
+         * 
+         */
     private final List<UpdateHistoryPropertyResponse> updateHistory;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class ImmutabilityPolicyPropertiesResponse {
     }
 
     /**
-     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
-    */
+     */
     public Optional<Boolean> allowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
     /**
-     * ImmutabilityPolicy Etag.
+     * @return ImmutabilityPolicy Etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The immutability period for the blobs in the container since the policy creation, in days.
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
      * 
-    */
+     */
     public Optional<Integer> immutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
     /**
-     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The ImmutabilityPolicy update history of the blob container.
+     * @return The ImmutabilityPolicy update history of the blob container.
      * 
-    */
+     */
     public List<UpdateHistoryPropertyResponse> updateHistory() {
         return this.updateHistory;
     }

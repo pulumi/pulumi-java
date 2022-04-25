@@ -28,6 +28,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="appNetworkResourceGroup")
     private @Nullable String appNetworkResourceGroup;
 
+    /**
+     * @return Name of the resource group containing network resources of Azure Spring Cloud Apps
+     * 
+     */
     public Optional<String> appNetworkResourceGroup() {
         return Optional.ofNullable(this.appNetworkResourceGroup);
     }
@@ -39,6 +43,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="appSubnetId")
     private @Nullable String appSubnetId;
 
+    /**
+     * @return Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+     * 
+     */
     public Optional<String> appSubnetId() {
         return Optional.ofNullable(this.appSubnetId);
     }
@@ -50,6 +58,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="outboundIPs", required=true)
     private NetworkProfileResponseOutboundIPs outboundIPs;
 
+    /**
+     * @return Desired outbound IP resources for Azure Spring Cloud instance.
+     * 
+     */
     public NetworkProfileResponseOutboundIPs outboundIPs() {
         return this.outboundIPs;
     }
@@ -61,6 +73,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="requiredTraffics", required=true)
     private List<RequiredTrafficResponse> requiredTraffics;
 
+    /**
+     * @return Required inbound or outbound traffics for Azure Spring Cloud instance.
+     * 
+     */
     public List<RequiredTrafficResponse> requiredTraffics() {
         return this.requiredTraffics;
     }
@@ -72,6 +88,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceCidr")
     private @Nullable String serviceCidr;
 
+    /**
+     * @return Azure Spring Cloud service reserved CIDR
+     * 
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -83,6 +103,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceRuntimeNetworkResourceGroup")
     private @Nullable String serviceRuntimeNetworkResourceGroup;
 
+    /**
+     * @return Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+     * 
+     */
     public Optional<String> serviceRuntimeNetworkResourceGroup() {
         return Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
@@ -94,6 +118,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="serviceRuntimeSubnetId")
     private @Nullable String serviceRuntimeSubnetId;
 
+    /**
+     * @return Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+     * 
+     */
     public Optional<String> serviceRuntimeSubnetId() {
         return Optional.ofNullable(this.serviceRuntimeSubnetId);
     }
@@ -128,40 +156,88 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appNetworkResourceGroup Name of the resource group containing network resources of Azure Spring Cloud Apps
+         * 
+         * @return builder
+         * 
+         */
         public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
             $.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
 
+        /**
+         * @param appSubnetId Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+         * 
+         * @return builder
+         * 
+         */
         public Builder appSubnetId(@Nullable String appSubnetId) {
             $.appSubnetId = appSubnetId;
             return this;
         }
 
+        /**
+         * @param outboundIPs Desired outbound IP resources for Azure Spring Cloud instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
             $.outboundIPs = outboundIPs;
             return this;
         }
 
+        /**
+         * @param requiredTraffics Required inbound or outbound traffics for Azure Spring Cloud instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
             $.requiredTraffics = requiredTraffics;
             return this;
         }
 
+        /**
+         * @param requiredTraffics Required inbound or outbound traffics for Azure Spring Cloud instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiredTraffics(RequiredTrafficResponse... requiredTraffics) {
             return requiredTraffics(List.of(requiredTraffics));
         }
 
+        /**
+         * @param serviceCidr Azure Spring Cloud service reserved CIDR
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(@Nullable String serviceCidr) {
             $.serviceCidr = serviceCidr;
             return this;
         }
 
+        /**
+         * @param serviceRuntimeNetworkResourceGroup Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
             $.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
 
+        /**
+         * @param serviceRuntimeSubnetId Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
             $.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;

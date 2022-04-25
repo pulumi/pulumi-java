@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualHubRouteResponse {
-    /**
-     * List of all addressPrefixes.
-     * 
-     */
+        /**
+         * @return List of all addressPrefixes.
+         * 
+         */
     private final @Nullable List<String> addressPrefixes;
-    /**
-     * NextHop ip address.
-     * 
-     */
+        /**
+         * @return NextHop ip address.
+         * 
+         */
     private final @Nullable String nextHopIpAddress;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class VirtualHubRouteResponse {
     }
 
     /**
-     * List of all addressPrefixes.
+     * @return List of all addressPrefixes.
      * 
-    */
+     */
     public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
-     * NextHop ip address.
+     * @return NextHop ip address.
      * 
-    */
+     */
     public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }

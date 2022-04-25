@@ -12,65 +12,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetManagedDatabaseResult {
-    /**
-     * Collation of the metadata catalog.
-     * 
-     */
+        /**
+         * @return Collation of the metadata catalog.
+         * 
+         */
     private final @Nullable String catalogCollation;
-    /**
-     * Collation of the managed database.
-     * 
-     */
+        /**
+         * @return Collation of the managed database.
+         * 
+         */
     private final @Nullable String collation;
-    /**
-     * Creation date of the database.
-     * 
-     */
+        /**
+         * @return Creation date of the database.
+         * 
+         */
     private final String creationDate;
-    /**
-     * Geo paired region.
-     * 
-     */
+        /**
+         * @return Geo paired region.
+         * 
+         */
     private final String defaultSecondaryLocation;
-    /**
-     * Earliest restore point in time for point in time restore.
-     * 
-     */
+        /**
+         * @return Earliest restore point in time for point in time restore.
+         * 
+         */
     private final String earliestRestorePoint;
-    /**
-     * Instance Failover Group resource identifier that this managed database belongs to.
-     * 
-     */
+        /**
+         * @return Instance Failover Group resource identifier that this managed database belongs to.
+         * 
+         */
     private final String failoverGroupId;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Status of the database.
-     * 
-     */
+        /**
+         * @return Status of the database.
+         * 
+         */
     private final String status;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -102,86 +102,86 @@ public final class GetManagedDatabaseResult {
     }
 
     /**
-     * Collation of the metadata catalog.
+     * @return Collation of the metadata catalog.
      * 
-    */
+     */
     public Optional<String> catalogCollation() {
         return Optional.ofNullable(this.catalogCollation);
     }
     /**
-     * Collation of the managed database.
+     * @return Collation of the managed database.
      * 
-    */
+     */
     public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
-     * Creation date of the database.
+     * @return Creation date of the database.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * Geo paired region.
+     * @return Geo paired region.
      * 
-    */
+     */
     public String defaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
     /**
-     * Earliest restore point in time for point in time restore.
+     * @return Earliest restore point in time for point in time restore.
      * 
-    */
+     */
     public String earliestRestorePoint() {
         return this.earliestRestorePoint;
     }
     /**
-     * Instance Failover Group resource identifier that this managed database belongs to.
+     * @return Instance Failover Group resource identifier that this managed database belongs to.
      * 
-    */
+     */
     public String failoverGroupId() {
         return this.failoverGroupId;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the database.
+     * @return Status of the database.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceInputOutputSpecificationResponse {
-    /**
-     * The description of the Swagger schema.
-     * 
-     */
+        /**
+         * @return The description of the Swagger schema.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
-     * 
-     */
+        /**
+         * @return Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+         * 
+         */
     private final Map<String,TableSpecificationResponse> properties;
-    /**
-     * The title of your Swagger schema.
-     * 
-     */
+        /**
+         * @return The title of your Swagger schema.
+         * 
+         */
     private final @Nullable String title;
-    /**
-     * The type of the entity described in swagger. Always &#39;object&#39;.
-     * 
-     */
+        /**
+         * @return The type of the entity described in swagger. Always &#39;object&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class ServiceInputOutputSpecificationResponse {
     }
 
     /**
-     * The description of the Swagger schema.
+     * @return The description of the Swagger schema.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
+     * @return Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
      * 
-    */
+     */
     public Map<String,TableSpecificationResponse> properties() {
         return this.properties;
     }
     /**
-     * The title of your Swagger schema.
+     * @return The title of your Swagger schema.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * The type of the entity described in swagger. Always &#39;object&#39;.
+     * @return The type of the entity described in swagger. Always &#39;object&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

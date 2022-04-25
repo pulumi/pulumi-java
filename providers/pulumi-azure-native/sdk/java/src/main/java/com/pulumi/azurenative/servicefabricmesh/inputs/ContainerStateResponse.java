@@ -25,6 +25,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="detailStatus")
     private @Nullable String detailStatus;
 
+    /**
+     * @return Human-readable status of this state.
+     * 
+     */
     public Optional<String> detailStatus() {
         return Optional.ofNullable(this.detailStatus);
     }
@@ -36,6 +40,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exitCode")
     private @Nullable String exitCode;
 
+    /**
+     * @return The container exit code.
+     * 
+     */
     public Optional<String> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
@@ -47,6 +55,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="finishTime")
     private @Nullable String finishTime;
 
+    /**
+     * @return Date/time when the container state finished.
+     * 
+     */
     public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
@@ -58,6 +70,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Date/time when the container state started.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -69,6 +85,10 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return The state of this container
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -101,26 +121,56 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
             $ = new ContainerStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detailStatus Human-readable status of this state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailStatus(@Nullable String detailStatus) {
             $.detailStatus = detailStatus;
             return this;
         }
 
+        /**
+         * @param exitCode The container exit code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exitCode(@Nullable String exitCode) {
             $.exitCode = exitCode;
             return this;
         }
 
+        /**
+         * @param finishTime Date/time when the container state finished.
+         * 
+         * @return builder
+         * 
+         */
         public Builder finishTime(@Nullable String finishTime) {
             $.finishTime = finishTime;
             return this;
         }
 
+        /**
+         * @param startTime Date/time when the container state started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state The state of this container
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

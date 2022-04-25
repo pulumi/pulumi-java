@@ -26,6 +26,10 @@ public final class FunctionInputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -37,6 +41,10 @@ public final class FunctionInputResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="isConfigurationParameter")
     private @Nullable Boolean isConfigurationParameter;
 
+    /**
+     * @return A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+     * 
+     */
     public Optional<Boolean> isConfigurationParameter() {
         return Optional.ofNullable(this.isConfigurationParameter);
     }
@@ -66,11 +74,23 @@ public final class FunctionInputResponse extends com.pulumi.resources.InvokeArgs
             $ = new FunctionInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param isConfigurationParameter A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
             $.isConfigurationParameter = isConfigurationParameter;
             return this;

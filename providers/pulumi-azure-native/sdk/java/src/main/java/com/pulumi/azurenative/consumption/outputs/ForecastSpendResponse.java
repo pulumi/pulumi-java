@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ForecastSpendResponse {
-    /**
-     * The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
-     * 
-     */
+        /**
+         * @return The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
+         * 
+         */
     private final Double amount;
-    /**
-     * The unit of measure for the budget amount.
-     * 
-     */
+        /**
+         * @return The unit of measure for the budget amount.
+         * 
+         */
     private final String unit;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ForecastSpendResponse {
     }
 
     /**
-     * The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
+     * @return The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
      * 
-    */
+     */
     public Double amount() {
         return this.amount;
     }
     /**
-     * The unit of measure for the budget amount.
+     * @return The unit of measure for the budget amount.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }

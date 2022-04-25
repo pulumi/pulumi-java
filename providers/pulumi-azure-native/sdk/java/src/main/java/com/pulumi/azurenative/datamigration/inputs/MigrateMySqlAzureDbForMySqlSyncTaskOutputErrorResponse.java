@@ -21,6 +21,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
     @Import(name="error", required=true)
     private ReportableExceptionResponse error;
 
+    /**
+     * @return Migration error
+     * 
+     */
     public ReportableExceptionResponse error() {
         return this.error;
     }
@@ -32,6 +36,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -44,6 +52,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;ErrorOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -74,16 +87,35 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse extend
             $ = new MigrateMySqlAzureDbForMySqlSyncTaskOutputErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Migration error
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ReportableExceptionResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;ErrorOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;

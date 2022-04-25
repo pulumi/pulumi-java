@@ -12,40 +12,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetAccountResult {
-    /**
-     * The fully qualified Maps Account resource identifier.
-     * 
-     */
+        /**
+         * @return The fully qualified Maps Account resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource.
-     * 
-     */
+        /**
+         * @return The location of the resource.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the Maps Account, which is unique within a Resource Group.
-     * 
-     */
+        /**
+         * @return The name of the Maps Account, which is unique within a Resource Group.
+         * 
+         */
     private final String name;
-    /**
-     * The map account properties.
-     * 
-     */
+        /**
+         * @return The map account properties.
+         * 
+         */
     private final MapsAccountPropertiesResponse properties;
-    /**
-     * The SKU of this account.
-     * 
-     */
+        /**
+         * @return The SKU of this account.
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
-     * 
-     */
+        /**
+         * @return Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+         * 
+         */
     private final Map<String,String> tags;
-    /**
-     * Azure resource type.
-     * 
-     */
+        /**
+         * @return Azure resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetAccountResult {
     }
 
     /**
-     * The fully qualified Maps Account resource identifier.
+     * @return The fully qualified Maps Account resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the Maps Account, which is unique within a Resource Group.
+     * @return The name of the Maps Account, which is unique within a Resource Group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The map account properties.
+     * @return The map account properties.
      * 
-    */
+     */
     public MapsAccountPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The SKU of this account.
+     * @return The SKU of this account.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+     * @return Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Azure resource type.
+     * @return Azure resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

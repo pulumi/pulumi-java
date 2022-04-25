@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementPolicyDefinitionResponse {
-    /**
-     * An object that defines the action set.
-     * 
-     */
+        /**
+         * @return An object that defines the action set.
+         * 
+         */
     private final ManagementPolicyActionResponse actions;
-    /**
-     * An object that defines the filter set.
-     * 
-     */
+        /**
+         * @return An object that defines the filter set.
+         * 
+         */
     private final @Nullable ManagementPolicyFilterResponse filters;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ManagementPolicyDefinitionResponse {
     }
 
     /**
-     * An object that defines the action set.
+     * @return An object that defines the action set.
      * 
-    */
+     */
     public ManagementPolicyActionResponse actions() {
         return this.actions;
     }
     /**
-     * An object that defines the filter set.
+     * @return An object that defines the filter set.
      * 
-    */
+     */
     public Optional<ManagementPolicyFilterResponse> filters() {
         return Optional.ofNullable(this.filters);
     }

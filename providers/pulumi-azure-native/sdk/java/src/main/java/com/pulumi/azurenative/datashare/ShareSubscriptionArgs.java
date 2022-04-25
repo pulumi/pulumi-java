@@ -22,6 +22,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -33,6 +37,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="expirationDate")
     private @Nullable Output<String> expirationDate;
 
+    /**
+     * @return The expiration date of the share subscription.
+     * 
+     */
     public Optional<Output<String>> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
@@ -44,6 +52,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="invitationId", required=true)
     private Output<String> invitationId;
 
+    /**
+     * @return The invitation id.
+     * 
+     */
     public Output<String> invitationId() {
         return this.invitationId;
     }
@@ -55,6 +67,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="shareSubscriptionName")
     private @Nullable Output<String> shareSubscriptionName;
 
+    /**
+     * @return The name of the shareSubscription.
+     * 
+     */
     public Optional<Output<String>> shareSubscriptionName() {
         return Optional.ofNullable(this.shareSubscriptionName);
     }
@@ -77,6 +97,10 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="sourceShareLocation", required=true)
     private Output<String> sourceShareLocation;
 
+    /**
+     * @return Source share location.
+     * 
+     */
     public Output<String> sourceShareLocation() {
         return this.sourceShareLocation;
     }
@@ -110,56 +134,128 @@ public final class ShareSubscriptionArgs extends com.pulumi.resources.ResourceAr
             $ = new ShareSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param expirationDate The expiration date of the share subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param expirationDate The expiration date of the share subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             return expirationDate(Output.of(expirationDate));
         }
 
+        /**
+         * @param invitationId The invitation id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationId(Output<String> invitationId) {
             $.invitationId = invitationId;
             return this;
         }
 
+        /**
+         * @param invitationId The invitation id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationId(String invitationId) {
             return invitationId(Output.of(invitationId));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(@Nullable Output<String> shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
 
+        /**
+         * @param sourceShareLocation Source share location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceShareLocation(Output<String> sourceShareLocation) {
             $.sourceShareLocation = sourceShareLocation;
             return this;
         }
 
+        /**
+         * @param sourceShareLocation Source share location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceShareLocation(String sourceShareLocation) {
             return sourceShareLocation(Output.of(sourceShareLocation));
         }

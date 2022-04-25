@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListEASubscriptionListMigrationDatePostResult {
-    /**
-     * Is subscription in the grand fatherable subscription list.
-     * 
-     */
+        /**
+         * @return Is subscription in the grand fatherable subscription list.
+         * 
+         */
     private final @Nullable Boolean isGrandFatherableSubscription;
-    /**
-     * Time to start using new pricing model.
-     * 
-     */
+        /**
+         * @return Time to start using new pricing model.
+         * 
+         */
     private final @Nullable String optedInDate;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ListEASubscriptionListMigrationDatePostResult {
     }
 
     /**
-     * Is subscription in the grand fatherable subscription list.
+     * @return Is subscription in the grand fatherable subscription list.
      * 
-    */
+     */
     public Optional<Boolean> isGrandFatherableSubscription() {
         return Optional.ofNullable(this.isGrandFatherableSubscription);
     }
     /**
-     * Time to start using new pricing model.
+     * @return Time to start using new pricing model.
      * 
-    */
+     */
     public Optional<String> optedInDate() {
         return Optional.ofNullable(this.optedInDate);
     }

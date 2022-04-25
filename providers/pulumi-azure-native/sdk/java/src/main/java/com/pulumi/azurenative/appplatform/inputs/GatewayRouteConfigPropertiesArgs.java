@@ -28,6 +28,10 @@ public final class GatewayRouteConfigPropertiesArgs extends com.pulumi.resources
     @Import(name="appResourceId")
     private @Nullable Output<String> appResourceId;
 
+    /**
+     * @return The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+     * 
+     */
     public Optional<Output<String>> appResourceId() {
         return Optional.ofNullable(this.appResourceId);
     }
@@ -39,6 +43,10 @@ public final class GatewayRouteConfigPropertiesArgs extends com.pulumi.resources
     @Import(name="routes")
     private @Nullable Output<List<GatewayApiRouteArgs>> routes;
 
+    /**
+     * @return Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+     * 
+     */
     public Optional<Output<List<GatewayApiRouteArgs>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -68,24 +76,54 @@ public final class GatewayRouteConfigPropertiesArgs extends com.pulumi.resources
             $ = new GatewayRouteConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appResourceId The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appResourceId(@Nullable Output<String> appResourceId) {
             $.appResourceId = appResourceId;
             return this;
         }
 
+        /**
+         * @param appResourceId The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appResourceId(String appResourceId) {
             return appResourceId(Output.of(appResourceId));
         }
 
+        /**
+         * @param routes Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<GatewayApiRouteArgs>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<GatewayApiRouteArgs> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(GatewayApiRouteArgs... routes) {
             return routes(List.of(routes));
         }

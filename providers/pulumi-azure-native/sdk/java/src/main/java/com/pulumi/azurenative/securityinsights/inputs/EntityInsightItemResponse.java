@@ -28,6 +28,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="chartQueryResults")
     private @Nullable List<InsightsTableResultResponse> chartQueryResults;
 
+    /**
+     * @return Query results for table insights query.
+     * 
+     */
     public Optional<List<InsightsTableResultResponse>> chartQueryResults() {
         return Optional.ofNullable(this.chartQueryResults);
     }
@@ -39,6 +43,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="queryId")
     private @Nullable String queryId;
 
+    /**
+     * @return The query id of the insight
+     * 
+     */
     public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }
@@ -50,6 +58,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="queryTimeInterval")
     private @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
 
+    /**
+     * @return The Time interval that the query actually executed on.
+     * 
+     */
     public Optional<EntityInsightItemResponseQueryTimeInterval> queryTimeInterval() {
         return Optional.ofNullable(this.queryTimeInterval);
     }
@@ -61,6 +73,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
     @Import(name="tableQueryResults")
     private @Nullable InsightsTableResultResponse tableQueryResults;
 
+    /**
+     * @return Query results for table insights query.
+     * 
+     */
     public Optional<InsightsTableResultResponse> tableQueryResults() {
         return Optional.ofNullable(this.tableQueryResults);
     }
@@ -92,25 +108,55 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
             $ = new EntityInsightItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chartQueryResults Query results for table insights query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartQueryResults(@Nullable List<InsightsTableResultResponse> chartQueryResults) {
             $.chartQueryResults = chartQueryResults;
             return this;
         }
 
+        /**
+         * @param chartQueryResults Query results for table insights query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartQueryResults(InsightsTableResultResponse... chartQueryResults) {
             return chartQueryResults(List.of(chartQueryResults));
         }
 
+        /**
+         * @param queryId The query id of the insight
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryId(@Nullable String queryId) {
             $.queryId = queryId;
             return this;
         }
 
+        /**
+         * @param queryTimeInterval The Time interval that the query actually executed on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeInterval(@Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval) {
             $.queryTimeInterval = queryTimeInterval;
             return this;
         }
 
+        /**
+         * @param tableQueryResults Query results for table insights query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableQueryResults(@Nullable InsightsTableResultResponse tableQueryResults) {
             $.tableQueryResults = tableQueryResults;
             return this;

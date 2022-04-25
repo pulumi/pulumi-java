@@ -14,33 +14,33 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PipelineRunRequestResponse {
-    /**
-     * List of source artifacts to be transferred by the pipeline.
-     * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
-     * Specify an image by tag (&#39;hello-world:latest&#39;).
-     * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
-     * 
-     */
+        /**
+         * @return List of source artifacts to be transferred by the pipeline.
+         * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
+         * Specify an image by tag (&#39;hello-world:latest&#39;).
+         * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
+         * 
+         */
     private final @Nullable List<String> artifacts;
-    /**
-     * The digest of the tar used to transfer the artifacts.
-     * 
-     */
+        /**
+         * @return The digest of the tar used to transfer the artifacts.
+         * 
+         */
     private final @Nullable String catalogDigest;
-    /**
-     * The resource ID of the pipeline to run.
-     * 
-     */
+        /**
+         * @return The resource ID of the pipeline to run.
+         * 
+         */
     private final @Nullable String pipelineResourceId;
-    /**
-     * The source properties of the pipeline run.
-     * 
-     */
+        /**
+         * @return The source properties of the pipeline run.
+         * 
+         */
     private final @Nullable PipelineRunSourcePropertiesResponse source;
-    /**
-     * The target properties of the pipeline run.
-     * 
-     */
+        /**
+         * @return The target properties of the pipeline run.
+         * 
+         */
     private final @Nullable PipelineRunTargetPropertiesResponse target;
 
     @CustomType.Constructor
@@ -58,40 +58,40 @@ public final class PipelineRunRequestResponse {
     }
 
     /**
-     * List of source artifacts to be transferred by the pipeline.
+     * @return List of source artifacts to be transferred by the pipeline.
      * Specify an image by repository (&#39;hello-world&#39;). This will use the &#39;latest&#39; tag.
      * Specify an image by tag (&#39;hello-world:latest&#39;).
      * Specify an image by sha256-based manifest digest (&#39;hello-world@sha256:abc123&#39;).
      * 
-    */
+     */
     public List<String> artifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
     }
     /**
-     * The digest of the tar used to transfer the artifacts.
+     * @return The digest of the tar used to transfer the artifacts.
      * 
-    */
+     */
     public Optional<String> catalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
     /**
-     * The resource ID of the pipeline to run.
+     * @return The resource ID of the pipeline to run.
      * 
-    */
+     */
     public Optional<String> pipelineResourceId() {
         return Optional.ofNullable(this.pipelineResourceId);
     }
     /**
-     * The source properties of the pipeline run.
+     * @return The source properties of the pipeline run.
      * 
-    */
+     */
     public Optional<PipelineRunSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * The target properties of the pipeline run.
+     * @return The target properties of the pipeline run.
      * 
-    */
+     */
     public Optional<PipelineRunTargetPropertiesResponse> target() {
         return Optional.ofNullable(this.target);
     }

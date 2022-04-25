@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetGatewayResult {
-    /**
-     * Gateway description
-     * 
-     */
+        /**
+         * @return Gateway description
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Gateway location.
-     * 
-     */
+        /**
+         * @return Gateway location.
+         * 
+         */
     private final @Nullable ResourceLocationDataContractResponse locationData;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class GetGatewayResult {
     }
 
     /**
-     * Gateway description
+     * @return Gateway description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gateway location.
+     * @return Gateway location.
      * 
-    */
+     */
     public Optional<ResourceLocationDataContractResponse> locationData() {
         return Optional.ofNullable(this.locationData);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

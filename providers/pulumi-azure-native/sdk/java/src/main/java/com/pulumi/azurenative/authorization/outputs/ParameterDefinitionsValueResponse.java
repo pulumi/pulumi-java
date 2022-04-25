@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ParameterDefinitionsValueResponse {
-    /**
-     * The allowed values for the parameter.
-     * 
-     */
+        /**
+         * @return The allowed values for the parameter.
+         * 
+         */
     private final @Nullable List<Object> allowedValues;
-    /**
-     * The default value for the parameter if no value is provided.
-     * 
-     */
+        /**
+         * @return The default value for the parameter if no value is provided.
+         * 
+         */
     private final @Nullable Object defaultValue;
-    /**
-     * General metadata for the parameter.
-     * 
-     */
+        /**
+         * @return General metadata for the parameter.
+         * 
+         */
     private final @Nullable ParameterDefinitionsValueResponseMetadata metadata;
-    /**
-     * The data type of the parameter.
-     * 
-     */
+        /**
+         * @return The data type of the parameter.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class ParameterDefinitionsValueResponse {
     }
 
     /**
-     * The allowed values for the parameter.
+     * @return The allowed values for the parameter.
      * 
-    */
+     */
     public List<Object> allowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
     /**
-     * The default value for the parameter if no value is provided.
+     * @return The default value for the parameter if no value is provided.
      * 
-    */
+     */
     public Optional<Object> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * General metadata for the parameter.
+     * @return General metadata for the parameter.
      * 
-    */
+     */
     public Optional<ParameterDefinitionsValueResponseMetadata> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The data type of the parameter.
+     * @return The data type of the parameter.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

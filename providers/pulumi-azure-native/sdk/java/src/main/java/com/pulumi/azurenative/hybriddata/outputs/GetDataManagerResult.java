@@ -13,43 +13,43 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDataManagerResult {
-    /**
-     * Etag of the Resource.
-     * 
-     */
+        /**
+         * @return Etag of the Resource.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * The Resource Id.
-     * 
-     */
+        /**
+         * @return The Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-     * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-     * region is specified on update the request will succeed.
-     * 
-     */
+        /**
+         * @return The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+         * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+         * region is specified on update the request will succeed.
+         * 
+         */
     private final String location;
-    /**
-     * The Resource Name.
-     * 
-     */
+        /**
+         * @return The Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * The sku type.
-     * 
-     */
+        /**
+         * @return The sku type.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
-     * (across resource groups).
-     * 
-     */
+        /**
+         * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
+         * (across resource groups).
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The Resource type.
-     * 
-     */
+        /**
+         * @return The Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -71,54 +71,54 @@ public final class GetDataManagerResult {
     }
 
     /**
-     * Etag of the Resource.
+     * @return Etag of the Resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The Resource Id.
+     * @return The Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+     * @return The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
      * US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
      * region is specified on update the request will succeed.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The Resource Name.
+     * @return The Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The sku type.
+     * @return The sku type.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
+     * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
      * (across resource groups).
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The Resource type.
+     * @return The Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

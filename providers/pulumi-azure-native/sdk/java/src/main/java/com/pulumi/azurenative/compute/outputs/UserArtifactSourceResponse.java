@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserArtifactSourceResponse {
-    /**
-     * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
-     * 
-     */
+        /**
+         * @return Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+         * 
+         */
     private final @Nullable String defaultConfigurationLink;
-    /**
-     * Required. The mediaLink of the artifact, must be a readable storage page blob.
-     * 
-     */
+        /**
+         * @return Required. The mediaLink of the artifact, must be a readable storage page blob.
+         * 
+         */
     private final String mediaLink;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class UserArtifactSourceResponse {
     }
 
     /**
-     * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
+     * @return Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
      * 
-    */
+     */
     public Optional<String> defaultConfigurationLink() {
         return Optional.ofNullable(this.defaultConfigurationLink);
     }
     /**
-     * Required. The mediaLink of the artifact, must be a readable storage page blob.
+     * @return Required. The mediaLink of the artifact, must be a readable storage page blob.
      * 
-    */
+     */
     public String mediaLink() {
         return this.mediaLink;
     }

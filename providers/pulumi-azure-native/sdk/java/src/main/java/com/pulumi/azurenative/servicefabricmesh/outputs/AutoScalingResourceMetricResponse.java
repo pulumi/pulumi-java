@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class AutoScalingResourceMetricResponse {
-    /**
-     * Enumerates the metrics that are used for triggering auto scaling.
-     * Expected value is &#39;Resource&#39;.
-     * 
-     */
+        /**
+         * @return Enumerates the metrics that are used for triggering auto scaling.
+         * Expected value is &#39;Resource&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the resource.
-     * 
-     */
+        /**
+         * @return Name of the resource.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class AutoScalingResourceMetricResponse {
     }
 
     /**
-     * Enumerates the metrics that are used for triggering auto scaling.
+     * @return Enumerates the metrics that are used for triggering auto scaling.
      * Expected value is &#39;Resource&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

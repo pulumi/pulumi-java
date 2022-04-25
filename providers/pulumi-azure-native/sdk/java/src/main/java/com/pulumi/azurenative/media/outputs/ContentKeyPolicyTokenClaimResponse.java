@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContentKeyPolicyTokenClaimResponse {
-    /**
-     * Token claim type.
-     * 
-     */
+        /**
+         * @return Token claim type.
+         * 
+         */
     private final @Nullable String claimType;
-    /**
-     * Token claim value.
-     * 
-     */
+        /**
+         * @return Token claim value.
+         * 
+         */
     private final @Nullable String claimValue;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ContentKeyPolicyTokenClaimResponse {
     }
 
     /**
-     * Token claim type.
+     * @return Token claim type.
      * 
-    */
+     */
     public Optional<String> claimType() {
         return Optional.ofNullable(this.claimType);
     }
     /**
-     * Token claim value.
+     * @return Token claim value.
      * 
-    */
+     */
     public Optional<String> claimValue() {
         return Optional.ofNullable(this.claimValue);
     }

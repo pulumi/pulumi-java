@@ -24,6 +24,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body")
     private @Nullable Output<String> body;
 
+    /**
+     * @return Email Template Body. This should be a valid XDocument
+     * 
+     */
     public Optional<Output<String>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -35,6 +39,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the Email Template.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
 
+    /**
+     * @return Email Template Parameter values.
+     * 
+     */
     public Optional<Output<List<EmailTemplateParametersContractPropertiesArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -57,6 +69,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -79,6 +99,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subject")
     private @Nullable Output<String> subject;
 
+    /**
+     * @return Subject of the Template.
+     * 
+     */
     public Optional<Output<String>> subject() {
         return Optional.ofNullable(this.subject);
     }
@@ -90,6 +114,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="templateName")
     private @Nullable Output<String> templateName;
 
+    /**
+     * @return Email Template Name Identifier.
+     * 
+     */
     public Optional<Output<String>> templateName() {
         return Optional.ofNullable(this.templateName);
     }
@@ -101,6 +129,10 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Title of the Template.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -136,78 +168,180 @@ public final class EmailTemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EmailTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Email Template Body. This should be a valid XDocument
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Email Template Body. This should be a valid XDocument
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param description Description of the Email Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the Email Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param parameters Email Template Parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Email Template Parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<EmailTemplateParametersContractPropertiesArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Email Template Parameter values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(EmailTemplateParametersContractPropertiesArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param subject Subject of the Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(@Nullable Output<String> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Subject of the Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param templateName Email Template Name Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(@Nullable Output<String> templateName) {
             $.templateName = templateName;
             return this;
         }
 
+        /**
+         * @param templateName Email Template Name Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder templateName(String templateName) {
             return templateName(Output.of(templateName));
         }
 
+        /**
+         * @param title Title of the Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Title of the Template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

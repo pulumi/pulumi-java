@@ -27,6 +27,10 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="days")
     private @Nullable Integer days;
 
+    /**
+     * @return The number of days to retain an untagged manifest after which it gets purged.
+     * 
+     */
     public Optional<Integer> days() {
         return Optional.ofNullable(this.days);
     }
@@ -38,6 +42,10 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastUpdatedTime", required=true)
     private String lastUpdatedTime;
 
+    /**
+     * @return The timestamp when the policy was last updated.
+     * 
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
@@ -49,6 +57,10 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The value that indicates whether the policy is enabled or not.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -79,16 +91,34 @@ public final class RetentionPolicyResponse extends com.pulumi.resources.InvokeAr
             $ = new RetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param days The number of days to retain an untagged manifest after which it gets purged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder days(@Nullable Integer days) {
             $.days = days;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The timestamp when the policy was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param status The value that indicates whether the policy is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

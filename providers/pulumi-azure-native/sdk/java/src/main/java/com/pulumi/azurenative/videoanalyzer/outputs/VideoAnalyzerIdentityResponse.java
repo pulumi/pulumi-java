@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VideoAnalyzerIdentityResponse {
-    /**
-     * The identity type.
-     * 
-     */
+        /**
+         * @return The identity type.
+         * 
+         */
     private final String type;
-    /**
-     * The User Assigned Managed Identities.
-     * 
-     */
+        /**
+         * @return The User Assigned Managed Identities.
+         * 
+         */
     private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class VideoAnalyzerIdentityResponse {
     }
 
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The User Assigned Managed Identities.
+     * @return The User Assigned Managed Identities.
      * 
-    */
+     */
     public Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

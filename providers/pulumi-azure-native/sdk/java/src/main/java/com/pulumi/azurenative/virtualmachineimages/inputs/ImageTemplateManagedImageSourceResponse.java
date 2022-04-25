@@ -24,6 +24,10 @@ public final class ImageTemplateManagedImageSourceResponse extends com.pulumi.re
     @Import(name="imageId", required=true)
     private String imageId;
 
+    /**
+     * @return ARM resource id of the managed image in customer subscription
+     * 
+     */
     public String imageId() {
         return this.imageId;
     }
@@ -36,6 +40,11 @@ public final class ImageTemplateManagedImageSourceResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Specifies the type of source image you want to start with.
+     * Expected value is &#39;ManagedImage&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -65,11 +74,24 @@ public final class ImageTemplateManagedImageSourceResponse extends com.pulumi.re
             $ = new ImageTemplateManagedImageSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageId ARM resource id of the managed image in customer subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;ManagedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

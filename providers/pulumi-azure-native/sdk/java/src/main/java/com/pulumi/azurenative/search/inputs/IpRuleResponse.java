@@ -25,6 +25,10 @@ public final class IpRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -53,6 +57,12 @@ public final class IpRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IpRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24) to be allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HealthAlertActionResponse {
-    /**
-     * the id of the action group to use.
-     * 
-     */
+        /**
+         * @return the id of the action group to use.
+         * 
+         */
     private final @Nullable String actionGroupId;
-    /**
-     * The properties of a webhook object.
-     * 
-     */
+        /**
+         * @return The properties of a webhook object.
+         * 
+         */
     private final @Nullable Map<String,String> webHookProperties;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class HealthAlertActionResponse {
     }
 
     /**
-     * the id of the action group to use.
+     * @return the id of the action group to use.
      * 
-    */
+     */
     public Optional<String> actionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
     /**
-     * The properties of a webhook object.
+     * @return The properties of a webhook object.
      * 
-    */
+     */
     public Map<String,String> webHookProperties() {
         return this.webHookProperties == null ? Map.of() : this.webHookProperties;
     }

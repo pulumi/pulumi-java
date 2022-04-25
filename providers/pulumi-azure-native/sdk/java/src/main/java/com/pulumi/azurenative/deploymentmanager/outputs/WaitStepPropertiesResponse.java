@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class WaitStepPropertiesResponse {
-    /**
-     * The Wait attributes
-     * 
-     */
+        /**
+         * @return The Wait attributes
+         * 
+         */
     private final WaitStepAttributesResponse attributes;
-    /**
-     * The type of step.
-     * Expected value is &#39;Wait&#39;.
-     * 
-     */
+        /**
+         * @return The type of step.
+         * Expected value is &#39;Wait&#39;.
+         * 
+         */
     private final String stepType;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class WaitStepPropertiesResponse {
     }
 
     /**
-     * The Wait attributes
+     * @return The Wait attributes
      * 
-    */
+     */
     public WaitStepAttributesResponse attributes() {
         return this.attributes;
     }
     /**
-     * The type of step.
+     * @return The type of step.
      * Expected value is &#39;Wait&#39;.
      * 
-    */
+     */
     public String stepType() {
         return this.stepType;
     }

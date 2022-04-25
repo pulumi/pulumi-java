@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectorCollectionInfoResponse {
-    /**
-     * Error information of last collection
-     * 
-     */
+        /**
+         * @return Error information of last collection
+         * 
+         */
     private final @Nullable ConnectorCollectionErrorInfoResponse error;
-    /**
-     * Last time the data acquisition process initiated connecting to the external provider
-     * 
-     */
+        /**
+         * @return Last time the data acquisition process initiated connecting to the external provider
+         * 
+         */
     private final String lastChecked;
-    /**
-     * Last time the external data was updated into Azure
-     * 
-     */
+        /**
+         * @return Last time the external data was updated into Azure
+         * 
+         */
     private final String lastUpdated;
-    /**
-     * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
-     * 
-     */
+        /**
+         * @return Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+         * 
+         */
     private final String sourceLastUpdated;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ConnectorCollectionInfoResponse {
     }
 
     /**
-     * Error information of last collection
+     * @return Error information of last collection
      * 
-    */
+     */
     public Optional<ConnectorCollectionErrorInfoResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Last time the data acquisition process initiated connecting to the external provider
+     * @return Last time the data acquisition process initiated connecting to the external provider
      * 
-    */
+     */
     public String lastChecked() {
         return this.lastChecked;
     }
     /**
-     * Last time the external data was updated into Azure
+     * @return Last time the external data was updated into Azure
      * 
-    */
+     */
     public String lastUpdated() {
         return this.lastUpdated;
     }
     /**
-     * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+     * @return Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
      * 
-    */
+     */
     public String sourceLastUpdated() {
         return this.sourceLastUpdated;
     }

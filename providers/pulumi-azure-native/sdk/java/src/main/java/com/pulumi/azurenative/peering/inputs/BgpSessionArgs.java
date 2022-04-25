@@ -27,6 +27,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPrefixesAdvertisedV4")
     private @Nullable Output<Integer> maxPrefixesAdvertisedV4;
 
+    /**
+     * @return The maximum number of prefixes advertised over the IPv4 session.
+     * 
+     */
     public Optional<Output<Integer>> maxPrefixesAdvertisedV4() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV4);
     }
@@ -38,6 +42,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxPrefixesAdvertisedV6")
     private @Nullable Output<Integer> maxPrefixesAdvertisedV6;
 
+    /**
+     * @return The maximum number of prefixes advertised over the IPv6 session.
+     * 
+     */
     public Optional<Output<Integer>> maxPrefixesAdvertisedV6() {
         return Optional.ofNullable(this.maxPrefixesAdvertisedV6);
     }
@@ -49,6 +57,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="md5AuthenticationKey")
     private @Nullable Output<String> md5AuthenticationKey;
 
+    /**
+     * @return The MD5 authentication key of the session.
+     * 
+     */
     public Optional<Output<String>> md5AuthenticationKey() {
         return Optional.ofNullable(this.md5AuthenticationKey);
     }
@@ -60,6 +72,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="microsoftSessionIPv4Address")
     private @Nullable Output<String> microsoftSessionIPv4Address;
 
+    /**
+     * @return The IPv4 session address on Microsoft&#39;s end.
+     * 
+     */
     public Optional<Output<String>> microsoftSessionIPv4Address() {
         return Optional.ofNullable(this.microsoftSessionIPv4Address);
     }
@@ -71,6 +87,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="microsoftSessionIPv6Address")
     private @Nullable Output<String> microsoftSessionIPv6Address;
 
+    /**
+     * @return The IPv6 session address on Microsoft&#39;s end.
+     * 
+     */
     public Optional<Output<String>> microsoftSessionIPv6Address() {
         return Optional.ofNullable(this.microsoftSessionIPv6Address);
     }
@@ -82,6 +102,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerSessionIPv4Address")
     private @Nullable Output<String> peerSessionIPv4Address;
 
+    /**
+     * @return The IPv4 session address on peer&#39;s end.
+     * 
+     */
     public Optional<Output<String>> peerSessionIPv4Address() {
         return Optional.ofNullable(this.peerSessionIPv4Address);
     }
@@ -93,6 +117,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerSessionIPv6Address")
     private @Nullable Output<String> peerSessionIPv6Address;
 
+    /**
+     * @return The IPv6 session address on peer&#39;s end.
+     * 
+     */
     public Optional<Output<String>> peerSessionIPv6Address() {
         return Optional.ofNullable(this.peerSessionIPv6Address);
     }
@@ -104,6 +132,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionPrefixV4")
     private @Nullable Output<String> sessionPrefixV4;
 
+    /**
+     * @return The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+     * 
+     */
     public Optional<Output<String>> sessionPrefixV4() {
         return Optional.ofNullable(this.sessionPrefixV4);
     }
@@ -115,6 +147,10 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionPrefixV6")
     private @Nullable Output<String> sessionPrefixV6;
 
+    /**
+     * @return The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+     * 
+     */
     public Optional<Output<String>> sessionPrefixV6() {
         return Optional.ofNullable(this.sessionPrefixV6);
     }
@@ -151,83 +187,191 @@ public final class BgpSessionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BgpSessionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxPrefixesAdvertisedV4 The maximum number of prefixes advertised over the IPv4 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrefixesAdvertisedV4(@Nullable Output<Integer> maxPrefixesAdvertisedV4) {
             $.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
             return this;
         }
 
+        /**
+         * @param maxPrefixesAdvertisedV4 The maximum number of prefixes advertised over the IPv4 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrefixesAdvertisedV4(Integer maxPrefixesAdvertisedV4) {
             return maxPrefixesAdvertisedV4(Output.of(maxPrefixesAdvertisedV4));
         }
 
+        /**
+         * @param maxPrefixesAdvertisedV6 The maximum number of prefixes advertised over the IPv6 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrefixesAdvertisedV6(@Nullable Output<Integer> maxPrefixesAdvertisedV6) {
             $.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
             return this;
         }
 
+        /**
+         * @param maxPrefixesAdvertisedV6 The maximum number of prefixes advertised over the IPv6 session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPrefixesAdvertisedV6(Integer maxPrefixesAdvertisedV6) {
             return maxPrefixesAdvertisedV6(Output.of(maxPrefixesAdvertisedV6));
         }
 
+        /**
+         * @param md5AuthenticationKey The MD5 authentication key of the session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKey(@Nullable Output<String> md5AuthenticationKey) {
             $.md5AuthenticationKey = md5AuthenticationKey;
             return this;
         }
 
+        /**
+         * @param md5AuthenticationKey The MD5 authentication key of the session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder md5AuthenticationKey(String md5AuthenticationKey) {
             return md5AuthenticationKey(Output.of(md5AuthenticationKey));
         }
 
+        /**
+         * @param microsoftSessionIPv4Address The IPv4 session address on Microsoft&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftSessionIPv4Address(@Nullable Output<String> microsoftSessionIPv4Address) {
             $.microsoftSessionIPv4Address = microsoftSessionIPv4Address;
             return this;
         }
 
+        /**
+         * @param microsoftSessionIPv4Address The IPv4 session address on Microsoft&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftSessionIPv4Address(String microsoftSessionIPv4Address) {
             return microsoftSessionIPv4Address(Output.of(microsoftSessionIPv4Address));
         }
 
+        /**
+         * @param microsoftSessionIPv6Address The IPv6 session address on Microsoft&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftSessionIPv6Address(@Nullable Output<String> microsoftSessionIPv6Address) {
             $.microsoftSessionIPv6Address = microsoftSessionIPv6Address;
             return this;
         }
 
+        /**
+         * @param microsoftSessionIPv6Address The IPv6 session address on Microsoft&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftSessionIPv6Address(String microsoftSessionIPv6Address) {
             return microsoftSessionIPv6Address(Output.of(microsoftSessionIPv6Address));
         }
 
+        /**
+         * @param peerSessionIPv4Address The IPv4 session address on peer&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerSessionIPv4Address(@Nullable Output<String> peerSessionIPv4Address) {
             $.peerSessionIPv4Address = peerSessionIPv4Address;
             return this;
         }
 
+        /**
+         * @param peerSessionIPv4Address The IPv4 session address on peer&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerSessionIPv4Address(String peerSessionIPv4Address) {
             return peerSessionIPv4Address(Output.of(peerSessionIPv4Address));
         }
 
+        /**
+         * @param peerSessionIPv6Address The IPv6 session address on peer&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerSessionIPv6Address(@Nullable Output<String> peerSessionIPv6Address) {
             $.peerSessionIPv6Address = peerSessionIPv6Address;
             return this;
         }
 
+        /**
+         * @param peerSessionIPv6Address The IPv6 session address on peer&#39;s end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerSessionIPv6Address(String peerSessionIPv6Address) {
             return peerSessionIPv6Address(Output.of(peerSessionIPv6Address));
         }
 
+        /**
+         * @param sessionPrefixV4 The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPrefixV4(@Nullable Output<String> sessionPrefixV4) {
             $.sessionPrefixV4 = sessionPrefixV4;
             return this;
         }
 
+        /**
+         * @param sessionPrefixV4 The IPv4 prefix that contains both ends&#39; IPv4 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPrefixV4(String sessionPrefixV4) {
             return sessionPrefixV4(Output.of(sessionPrefixV4));
         }
 
+        /**
+         * @param sessionPrefixV6 The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPrefixV6(@Nullable Output<String> sessionPrefixV6) {
             $.sessionPrefixV6 = sessionPrefixV6;
             return this;
         }
 
+        /**
+         * @param sessionPrefixV6 The IPv6 prefix that contains both ends&#39; IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionPrefixV6(String sessionPrefixV6) {
             return sessionPrefixV6(Output.of(sessionPrefixV6));
         }

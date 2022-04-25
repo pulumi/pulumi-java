@@ -14,80 +14,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetkustoPoolResult {
-    /**
-     * The Kusto Pool data ingestion URI.
-     * 
-     */
+        /**
+         * @return The Kusto Pool data ingestion URI.
+         * 
+         */
     private final String dataIngestionUri;
-    /**
-     * The engine type
-     * 
-     */
+        /**
+         * @return The engine type
+         * 
+         */
     private final @Nullable String engineType;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The SKU of the kusto pool.
-     * 
-     */
+        /**
+         * @return The SKU of the kusto pool.
+         * 
+         */
     private final AzureSkuResponse sku;
-    /**
-     * The state of the resource.
-     * 
-     */
+        /**
+         * @return The state of the resource.
+         * 
+         */
     private final String state;
-    /**
-     * The reason for the Kusto Pool&#39;s current state.
-     * 
-     */
+        /**
+         * @return The reason for the Kusto Pool&#39;s current state.
+         * 
+         */
     private final String stateReason;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The Kusto Pool URI.
-     * 
-     */
+        /**
+         * @return The Kusto Pool URI.
+         * 
+         */
     private final String uri;
-    /**
-     * The workspace unique identifier.
-     * 
-     */
+        /**
+         * @return The workspace unique identifier.
+         * 
+         */
     private final @Nullable String workspaceUid;
 
     @CustomType.Constructor
@@ -125,107 +125,107 @@ public final class GetkustoPoolResult {
     }
 
     /**
-     * The Kusto Pool data ingestion URI.
+     * @return The Kusto Pool data ingestion URI.
      * 
-    */
+     */
     public String dataIngestionUri() {
         return this.dataIngestionUri;
     }
     /**
-     * The engine type
+     * @return The engine type
      * 
-    */
+     */
     public Optional<String> engineType() {
         return Optional.ofNullable(this.engineType);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the kusto pool.
+     * @return The SKU of the kusto pool.
      * 
-    */
+     */
     public AzureSkuResponse sku() {
         return this.sku;
     }
     /**
-     * The state of the resource.
+     * @return The state of the resource.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The reason for the Kusto Pool&#39;s current state.
+     * @return The reason for the Kusto Pool&#39;s current state.
      * 
-    */
+     */
     public String stateReason() {
         return this.stateReason;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Kusto Pool URI.
+     * @return The Kusto Pool URI.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * The workspace unique identifier.
+     * @return The workspace unique identifier.
      * 
-    */
+     */
     public Optional<String> workspaceUid() {
         return Optional.ofNullable(this.workspaceUid);
     }

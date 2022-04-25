@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GuestOSNICCustomizationResponse {
-    /**
-     * IP address allocation method
-     * 
-     */
+        /**
+         * @return IP address allocation method
+         * 
+         */
     private final @Nullable String allocation;
-    /**
-     * List of dns servers to use
-     * 
-     */
+        /**
+         * @return List of dns servers to use
+         * 
+         */
     private final @Nullable List<String> dnsServers;
-    /**
-     * Gateway addresses assigned to nic
-     * 
-     */
+        /**
+         * @return Gateway addresses assigned to nic
+         * 
+         */
     private final @Nullable List<String> gateway;
-    /**
-     * Static ip address for nic
-     * 
-     */
+        /**
+         * @return Static ip address for nic
+         * 
+         */
     private final @Nullable String ipAddress;
-    /**
-     * Network mask for nic
-     * 
-     */
+        /**
+         * @return Network mask for nic
+         * 
+         */
     private final @Nullable String mask;
-    /**
-     * primary WINS server for Windows
-     * 
-     */
+        /**
+         * @return primary WINS server for Windows
+         * 
+         */
     private final @Nullable String primaryWinsServer;
-    /**
-     * secondary WINS server for Windows
-     * 
-     */
+        /**
+         * @return secondary WINS server for Windows
+         * 
+         */
     private final @Nullable String secondaryWinsServer;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GuestOSNICCustomizationResponse {
     }
 
     /**
-     * IP address allocation method
+     * @return IP address allocation method
      * 
-    */
+     */
     public Optional<String> allocation() {
         return Optional.ofNullable(this.allocation);
     }
     /**
-     * List of dns servers to use
+     * @return List of dns servers to use
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
-     * Gateway addresses assigned to nic
+     * @return Gateway addresses assigned to nic
      * 
-    */
+     */
     public List<String> gateway() {
         return this.gateway == null ? List.of() : this.gateway;
     }
     /**
-     * Static ip address for nic
+     * @return Static ip address for nic
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * Network mask for nic
+     * @return Network mask for nic
      * 
-    */
+     */
     public Optional<String> mask() {
         return Optional.ofNullable(this.mask);
     }
     /**
-     * primary WINS server for Windows
+     * @return primary WINS server for Windows
      * 
-    */
+     */
     public Optional<String> primaryWinsServer() {
         return Optional.ofNullable(this.primaryWinsServer);
     }
     /**
-     * secondary WINS server for Windows
+     * @return secondary WINS server for Windows
      * 
-    */
+     */
     public Optional<String> secondaryWinsServer() {
         return Optional.ofNullable(this.secondaryWinsServer);
     }

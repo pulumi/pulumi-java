@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InquiryInfoResponse {
-    /**
-     * Error Details if the Status is non-success.
-     * 
-     */
+        /**
+         * @return Error Details if the Status is non-success.
+         * 
+         */
     private final @Nullable ErrorDetailResponse errorDetail;
-    /**
-     * Inquiry Details which will have workload specific details.
-     * For e.g. - For SQL and oracle this will contain different details.
-     * 
-     */
+        /**
+         * @return Inquiry Details which will have workload specific details.
+         * For e.g. - For SQL and oracle this will contain different details.
+         * 
+         */
     private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
-    /**
-     * Inquiry Status for this container such as
-     * InProgress | Failed | Succeeded
-     * 
-     */
+        /**
+         * @return Inquiry Status for this container such as
+         * InProgress | Failed | Succeeded
+         * 
+         */
     private final @Nullable String status;
 
     @CustomType.Constructor
@@ -43,25 +43,25 @@ public final class InquiryInfoResponse {
     }
 
     /**
-     * Error Details if the Status is non-success.
+     * @return Error Details if the Status is non-success.
      * 
-    */
+     */
     public Optional<ErrorDetailResponse> errorDetail() {
         return Optional.ofNullable(this.errorDetail);
     }
     /**
-     * Inquiry Details which will have workload specific details.
+     * @return Inquiry Details which will have workload specific details.
      * For e.g. - For SQL and oracle this will contain different details.
      * 
-    */
+     */
     public List<WorkloadInquiryDetailsResponse> inquiryDetails() {
         return this.inquiryDetails == null ? List.of() : this.inquiryDetails;
     }
     /**
-     * Inquiry Status for this container such as
+     * @return Inquiry Status for this container such as
      * InProgress | Failed | Succeeded
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

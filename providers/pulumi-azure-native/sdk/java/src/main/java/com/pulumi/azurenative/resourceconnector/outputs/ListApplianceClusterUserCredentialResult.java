@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListApplianceClusterUserCredentialResult {
-    /**
-     * Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
-     * 
-     */
+        /**
+         * @return Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
+         * 
+         */
     private final HybridConnectionConfigResponse hybridConnectionConfig;
-    /**
-     * The list of appliance kubeconfigs.
-     * 
-     */
+        /**
+         * @return The list of appliance kubeconfigs.
+         * 
+         */
     private final List<ApplianceCredentialKubeconfigResponse> kubeconfigs;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListApplianceClusterUserCredentialResult {
     }
 
     /**
-     * Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
+     * @return Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
      * 
-    */
+     */
     public HybridConnectionConfigResponse hybridConnectionConfig() {
         return this.hybridConnectionConfig;
     }
     /**
-     * The list of appliance kubeconfigs.
+     * @return The list of appliance kubeconfigs.
      * 
-    */
+     */
     public List<ApplianceCredentialKubeconfigResponse> kubeconfigs() {
         return this.kubeconfigs;
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HttpRouteMatchRuleResponse {
-    /**
-     * headers and their values to match in request.
-     * 
-     */
+        /**
+         * @return headers and their values to match in request.
+         * 
+         */
     private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
-    /**
-     * Path to match for routing.
-     * 
-     */
+        /**
+         * @return Path to match for routing.
+         * 
+         */
     private final HttpRouteMatchPathResponse path;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class HttpRouteMatchRuleResponse {
     }
 
     /**
-     * headers and their values to match in request.
+     * @return headers and their values to match in request.
      * 
-    */
+     */
     public List<HttpRouteMatchHeaderResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
-     * Path to match for routing.
+     * @return Path to match for routing.
      * 
-    */
+     */
     public HttpRouteMatchPathResponse path() {
         return this.path;
     }

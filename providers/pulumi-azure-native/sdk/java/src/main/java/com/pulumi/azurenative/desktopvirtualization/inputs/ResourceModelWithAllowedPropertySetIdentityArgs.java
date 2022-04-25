@@ -22,6 +22,10 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends com.p
     @Import(name="type")
     private @Nullable Output<ResourceIdentityType> type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Optional<Output<ResourceIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -50,11 +54,23 @@ public final class ResourceModelWithAllowedPropertySetIdentityArgs extends com.p
             $ = new ResourceModelWithAllowedPropertySetIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

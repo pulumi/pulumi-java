@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HttpSettingsResponse {
-    /**
-     * The configuration settings of a forward proxy used to make the requests.
-     * 
-     */
+        /**
+         * @return The configuration settings of a forward proxy used to make the requests.
+         * 
+         */
     private final @Nullable ForwardProxyResponse forwardProxy;
-    /**
-     * &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Boolean requireHttps;
-    /**
-     * The configuration settings of the paths HTTP requests.
-     * 
-     */
+        /**
+         * @return The configuration settings of the paths HTTP requests.
+         * 
+         */
     private final @Nullable HttpSettingsRoutesResponse routes;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class HttpSettingsResponse {
     }
 
     /**
-     * The configuration settings of a forward proxy used to make the requests.
+     * @return The configuration settings of a forward proxy used to make the requests.
      * 
-    */
+     */
     public Optional<ForwardProxyResponse> forwardProxy() {
         return Optional.ofNullable(this.forwardProxy);
     }
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> requireHttps() {
         return Optional.ofNullable(this.requireHttps);
     }
     /**
-     * The configuration settings of the paths HTTP requests.
+     * @return The configuration settings of the paths HTTP requests.
      * 
-    */
+     */
     public Optional<HttpSettingsRoutesResponse> routes() {
         return Optional.ofNullable(this.routes);
     }

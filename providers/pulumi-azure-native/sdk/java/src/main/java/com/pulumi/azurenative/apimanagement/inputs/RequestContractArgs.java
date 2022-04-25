@@ -29,6 +29,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Operation request description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="headers")
     private @Nullable Output<List<ParameterContractArgs>> headers;
 
+    /**
+     * @return Collection of operation request headers.
+     * 
+     */
     public Optional<Output<List<ParameterContractArgs>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -51,6 +59,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="queryParameters")
     private @Nullable Output<List<ParameterContractArgs>> queryParameters;
 
+    /**
+     * @return Collection of operation request query parameters.
+     * 
+     */
     public Optional<Output<List<ParameterContractArgs>>> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
@@ -62,6 +74,10 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="representations")
     private @Nullable Output<List<RepresentationContractArgs>> representations;
 
+    /**
+     * @return Collection of operation request representations.
+     * 
+     */
     public Optional<Output<List<RepresentationContractArgs>>> representations() {
         return Optional.ofNullable(this.representations);
     }
@@ -93,50 +109,116 @@ public final class RequestContractArgs extends com.pulumi.resources.ResourceArgs
             $ = new RequestContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Operation request description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Operation request description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param headers Collection of operation request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Collection of operation request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<ParameterContractArgs> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers Collection of operation request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(ParameterContractArgs... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param queryParameters Collection of operation request query parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(@Nullable Output<List<ParameterContractArgs>> queryParameters) {
             $.queryParameters = queryParameters;
             return this;
         }
 
+        /**
+         * @param queryParameters Collection of operation request query parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(List<ParameterContractArgs> queryParameters) {
             return queryParameters(Output.of(queryParameters));
         }
 
+        /**
+         * @param queryParameters Collection of operation request query parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(ParameterContractArgs... queryParameters) {
             return queryParameters(List.of(queryParameters));
         }
 
+        /**
+         * @param representations Collection of operation request representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
             $.representations = representations;
             return this;
         }
 
+        /**
+         * @param representations Collection of operation request representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(List<RepresentationContractArgs> representations) {
             return representations(Output.of(representations));
         }
 
+        /**
+         * @param representations Collection of operation request representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(RepresentationContractArgs... representations) {
             return representations(List.of(representations));
         }

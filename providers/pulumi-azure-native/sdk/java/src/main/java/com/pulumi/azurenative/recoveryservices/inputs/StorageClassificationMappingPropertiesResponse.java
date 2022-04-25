@@ -25,6 +25,10 @@ public final class StorageClassificationMappingPropertiesResponse extends com.pu
     @Import(name="targetStorageClassificationId")
     private @Nullable String targetStorageClassificationId;
 
+    /**
+     * @return Target storage object Id.
+     * 
+     */
     public Optional<String> targetStorageClassificationId() {
         return Optional.ofNullable(this.targetStorageClassificationId);
     }
@@ -53,6 +57,12 @@ public final class StorageClassificationMappingPropertiesResponse extends com.pu
             $ = new StorageClassificationMappingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetStorageClassificationId Target storage object Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
             $.targetStorageClassificationId = targetStorageClassificationId;
             return this;

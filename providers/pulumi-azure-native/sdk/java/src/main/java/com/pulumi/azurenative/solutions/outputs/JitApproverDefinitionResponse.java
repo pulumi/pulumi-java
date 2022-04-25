@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JitApproverDefinitionResponse {
-    /**
-     * The approver display name.
-     * 
-     */
+        /**
+         * @return The approver display name.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The approver service principal Id.
-     * 
-     */
+        /**
+         * @return The approver service principal Id.
+         * 
+         */
     private final String id;
-    /**
-     * The approver type.
-     * 
-     */
+        /**
+         * @return The approver type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class JitApproverDefinitionResponse {
     }
 
     /**
-     * The approver display name.
+     * @return The approver display name.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The approver service principal Id.
+     * @return The approver service principal Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The approver type.
+     * @return The approver type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

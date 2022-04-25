@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PartnerRegionInfoResponse {
-    /**
-     * Geo location of the partner managed instances.
-     * 
-     */
+        /**
+         * @return Geo location of the partner managed instances.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Replication role of the partner managed instances.
-     * 
-     */
+        /**
+         * @return Replication role of the partner managed instances.
+         * 
+         */
     private final String replicationRole;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PartnerRegionInfoResponse {
     }
 
     /**
-     * Geo location of the partner managed instances.
+     * @return Geo location of the partner managed instances.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Replication role of the partner managed instances.
+     * @return Replication role of the partner managed instances.
      * 
-    */
+     */
     public String replicationRole() {
         return this.replicationRole;
     }

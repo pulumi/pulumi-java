@@ -25,6 +25,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefix")
     private @Nullable Output<String> addressPrefix;
 
+    /**
+     * @return The destination CIDR to which the route applies.
+     * 
+     */
     public Optional<Output<String>> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -36,6 +40,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hasBgpOverride")
     private @Nullable Output<Boolean> hasBgpOverride;
 
+    /**
+     * @return A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+     * 
+     */
     public Optional<Output<Boolean>> hasBgpOverride() {
         return Optional.ofNullable(this.hasBgpOverride);
     }
@@ -47,6 +55,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -58,6 +70,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,6 +85,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIpAddress")
     private @Nullable Output<String> nextHopIpAddress;
 
+    /**
+     * @return The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+     * 
+     */
     public Optional<Output<String>> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -80,6 +100,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextHopType", required=true)
     private Output<Either<String,RouteNextHopType>> nextHopType;
 
+    /**
+     * @return The type of Azure hop the packet should be sent to.
+     * 
+     */
     public Output<Either<String,RouteNextHopType>> nextHopType() {
         return this.nextHopType;
     }
@@ -91,6 +115,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -102,6 +130,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeName")
     private @Nullable Output<String> routeName;
 
+    /**
+     * @return The name of the route.
+     * 
+     */
     public Optional<Output<String>> routeName() {
         return Optional.ofNullable(this.routeName);
     }
@@ -113,6 +145,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeTableName", required=true)
     private Output<String> routeTableName;
 
+    /**
+     * @return The name of the route table.
+     * 
+     */
     public Output<String> routeTableName() {
         return this.routeTableName;
     }
@@ -124,6 +160,10 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -161,100 +201,232 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix The destination CIDR to which the route applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param addressPrefix The destination CIDR to which the route applies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(String addressPrefix) {
             return addressPrefix(Output.of(addressPrefix));
         }
 
+        /**
+         * @param hasBgpOverride A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasBgpOverride(@Nullable Output<Boolean> hasBgpOverride) {
             $.hasBgpOverride = hasBgpOverride;
             return this;
         }
 
+        /**
+         * @param hasBgpOverride A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasBgpOverride(Boolean hasBgpOverride) {
             return hasBgpOverride(Output.of(hasBgpOverride));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nextHopIpAddress The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
+        /**
+         * @param nextHopIpAddress The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(String nextHopIpAddress) {
             return nextHopIpAddress(Output.of(nextHopIpAddress));
         }
 
+        /**
+         * @param nextHopType The type of Azure hop the packet should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(Output<Either<String,RouteNextHopType>> nextHopType) {
             $.nextHopType = nextHopType;
             return this;
         }
 
+        /**
+         * @param nextHopType The type of Azure hop the packet should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(Either<String,RouteNextHopType> nextHopType) {
             return nextHopType(Output.of(nextHopType));
         }
 
+        /**
+         * @param nextHopType The type of Azure hop the packet should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(String nextHopType) {
             return nextHopType(Either.ofLeft(nextHopType));
         }
 
+        /**
+         * @param nextHopType The type of Azure hop the packet should be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopType(RouteNextHopType nextHopType) {
             return nextHopType(Either.ofRight(nextHopType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routeName The name of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(@Nullable Output<String> routeName) {
             $.routeName = routeName;
             return this;
         }
 
+        /**
+         * @param routeName The name of the route.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeName(String routeName) {
             return routeName(Output.of(routeName));
         }
 
+        /**
+         * @param routeTableName The name of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(Output<String> routeTableName) {
             $.routeTableName = routeTableName;
             return this;
         }
 
+        /**
+         * @param routeTableName The name of the route table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(String routeTableName) {
             return routeTableName(Output.of(routeTableName));
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

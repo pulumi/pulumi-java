@@ -26,6 +26,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="oldestRecoveryPoint")
     private @Nullable String oldestRecoveryPoint;
 
+    /**
+     * @return The oldest backup copy available for this item in the service.
+     * 
+     */
     public Optional<String> oldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
@@ -37,6 +41,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="policyState")
     private @Nullable String policyState;
 
+    /**
+     * @return Indicates consistency of policy object and policy applied to this backup item.
+     * 
+     */
     public Optional<String> policyState() {
         return Optional.ofNullable(this.policyState);
     }
@@ -48,6 +56,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="recoveryPointCount")
     private @Nullable Integer recoveryPointCount;
 
+    /**
+     * @return Number of available backup copies associated with this backup item.
+     * 
+     */
     public Optional<Integer> recoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
@@ -59,6 +71,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="resourceState", required=true)
     private String resourceState;
 
+    /**
+     * @return Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
+     * 
+     */
     public String resourceState() {
         return this.resourceState;
     }
@@ -70,6 +86,10 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
     @Import(name="resourceStateSyncTime", required=true)
     private String resourceStateSyncTime;
 
+    /**
+     * @return The resource state sync time for this backup item.
+     * 
+     */
     public String resourceStateSyncTime() {
         return this.resourceStateSyncTime;
     }
@@ -102,26 +122,56 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse extends com.p
             $ = new AzureFileshareProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oldestRecoveryPoint The oldest backup copy available for this item in the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
+        /**
+         * @param policyState Indicates consistency of policy object and policy applied to this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyState(@Nullable String policyState) {
             $.policyState = policyState;
             return this;
         }
 
+        /**
+         * @param recoveryPointCount Number of available backup copies associated with this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             $.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
+        /**
+         * @param resourceState Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceState(String resourceState) {
             $.resourceState = resourceState;
             return this;
         }
 
+        /**
+         * @param resourceStateSyncTime The resource state sync time for this backup item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceStateSyncTime(String resourceStateSyncTime) {
             $.resourceStateSyncTime = resourceStateSyncTime;
             return this;

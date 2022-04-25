@@ -22,6 +22,10 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
     @Import(name="targetResources")
     private @Nullable List<SubResource> targetResources;
 
+    /**
+     * @return A list of references to azure resources for which referencing dns records need to be queried.
+     * 
+     */
     public Optional<List<SubResource>> targetResources() {
         return Optional.ofNullable(this.targetResources);
     }
@@ -50,11 +54,23 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
             $ = new GetDnsResourceReferenceByTarResourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetResources A list of references to azure resources for which referencing dns records need to be queried.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(@Nullable List<SubResource> targetResources) {
             $.targetResources = targetResources;
             return this;
         }
 
+        /**
+         * @param targetResources A list of references to azure resources for which referencing dns records need to be queried.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResources(SubResource... targetResources) {
             return targetResources(List.of(targetResources));
         }

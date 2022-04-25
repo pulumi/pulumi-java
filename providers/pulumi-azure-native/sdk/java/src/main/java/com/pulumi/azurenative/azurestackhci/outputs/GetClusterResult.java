@@ -14,115 +14,115 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * App id of cluster AAD identity.
-     * 
-     */
+        /**
+         * @return App id of cluster AAD identity.
+         * 
+         */
     private final String aadClientId;
-    /**
-     * Tenant id of cluster AAD identity.
-     * 
-     */
+        /**
+         * @return Tenant id of cluster AAD identity.
+         * 
+         */
     private final String aadTenantId;
-    /**
-     * Type of billing applied to the resource.
-     * 
-     */
+        /**
+         * @return Type of billing applied to the resource.
+         * 
+         */
     private final String billingModel;
-    /**
-     * Unique, immutable resource id.
-     * 
-     */
+        /**
+         * @return Unique, immutable resource id.
+         * 
+         */
     private final String cloudId;
-    /**
-     * The timestamp of resource creation (UTC).
-     * 
-     */
+        /**
+         * @return The timestamp of resource creation (UTC).
+         * 
+         */
     private final @Nullable String createdAt;
-    /**
-     * The identity that created the resource.
-     * 
-     */
+        /**
+         * @return The identity that created the resource.
+         * 
+         */
     private final @Nullable String createdBy;
-    /**
-     * The type of identity that created the resource.
-     * 
-     */
+        /**
+         * @return The type of identity that created the resource.
+         * 
+         */
     private final @Nullable String createdByType;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Most recent billing meter timestamp.
-     * 
-     */
+        /**
+         * @return Most recent billing meter timestamp.
+         * 
+         */
     private final String lastBillingTimestamp;
-    /**
-     * The timestamp of resource last modification (UTC)
-     * 
-     */
+        /**
+         * @return The timestamp of resource last modification (UTC)
+         * 
+         */
     private final @Nullable String lastModifiedAt;
-    /**
-     * The identity that last modified the resource.
-     * 
-     */
+        /**
+         * @return The identity that last modified the resource.
+         * 
+         */
     private final @Nullable String lastModifiedBy;
-    /**
-     * The type of identity that last modified the resource.
-     * 
-     */
+        /**
+         * @return The type of identity that last modified the resource.
+         * 
+         */
     private final @Nullable String lastModifiedByType;
-    /**
-     * Most recent cluster sync timestamp.
-     * 
-     */
+        /**
+         * @return Most recent cluster sync timestamp.
+         * 
+         */
     private final String lastSyncTimestamp;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * First cluster sync timestamp.
-     * 
-     */
+        /**
+         * @return First cluster sync timestamp.
+         * 
+         */
     private final String registrationTimestamp;
-    /**
-     * Properties reported by cluster agent.
-     * 
-     */
+        /**
+         * @return Properties reported by cluster agent.
+         * 
+         */
     private final @Nullable ClusterReportedPropertiesResponse reportedProperties;
-    /**
-     * Status of the cluster agent.
-     * 
-     */
+        /**
+         * @return Status of the cluster agent.
+         * 
+         */
     private final String status;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Number of days remaining in the trial period.
-     * 
-     */
+        /**
+         * @return Number of days remaining in the trial period.
+         * 
+         */
     private final Double trialDaysRemaining;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -174,156 +174,156 @@ public final class GetClusterResult {
     }
 
     /**
-     * App id of cluster AAD identity.
+     * @return App id of cluster AAD identity.
      * 
-    */
+     */
     public String aadClientId() {
         return this.aadClientId;
     }
     /**
-     * Tenant id of cluster AAD identity.
+     * @return Tenant id of cluster AAD identity.
      * 
-    */
+     */
     public String aadTenantId() {
         return this.aadTenantId;
     }
     /**
-     * Type of billing applied to the resource.
+     * @return Type of billing applied to the resource.
      * 
-    */
+     */
     public String billingModel() {
         return this.billingModel;
     }
     /**
-     * Unique, immutable resource id.
+     * @return Unique, immutable resource id.
      * 
-    */
+     */
     public String cloudId() {
         return this.cloudId;
     }
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Most recent billing meter timestamp.
+     * @return Most recent billing meter timestamp.
      * 
-    */
+     */
     public String lastBillingTimestamp() {
         return this.lastBillingTimestamp;
     }
     /**
-     * The timestamp of resource last modification (UTC)
+     * @return The timestamp of resource last modification (UTC)
      * 
-    */
+     */
     public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
-     * Most recent cluster sync timestamp.
+     * @return Most recent cluster sync timestamp.
      * 
-    */
+     */
     public String lastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * First cluster sync timestamp.
+     * @return First cluster sync timestamp.
      * 
-    */
+     */
     public String registrationTimestamp() {
         return this.registrationTimestamp;
     }
     /**
-     * Properties reported by cluster agent.
+     * @return Properties reported by cluster agent.
      * 
-    */
+     */
     public Optional<ClusterReportedPropertiesResponse> reportedProperties() {
         return Optional.ofNullable(this.reportedProperties);
     }
     /**
-     * Status of the cluster agent.
+     * @return Status of the cluster agent.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Number of days remaining in the trial period.
+     * @return Number of days remaining in the trial period.
      * 
-    */
+     */
     public Double trialDaysRemaining() {
         return this.trialDaysRemaining;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

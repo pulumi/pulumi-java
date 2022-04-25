@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CloudServiceRoleProfilePropertiesResponse {
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Describes the cloud service role sku.
-     * 
-     */
+        /**
+         * @return Describes the cloud service role sku.
+         * 
+         */
     private final @Nullable CloudServiceRoleSkuResponse sku;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class CloudServiceRoleProfilePropertiesResponse {
     }
 
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Describes the cloud service role sku.
+     * @return Describes the cloud service role sku.
      * 
-    */
+     */
     public Optional<CloudServiceRoleSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }

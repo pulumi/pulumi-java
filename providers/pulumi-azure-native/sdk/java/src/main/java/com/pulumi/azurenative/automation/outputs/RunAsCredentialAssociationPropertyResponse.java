@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RunAsCredentialAssociationPropertyResponse {
-    /**
-     * Gets or sets the name of the credential.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the credential.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RunAsCredentialAssociationPropertyResponse {
     }
 
     /**
-     * Gets or sets the name of the credential.
+     * @return Gets or sets the name of the credential.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

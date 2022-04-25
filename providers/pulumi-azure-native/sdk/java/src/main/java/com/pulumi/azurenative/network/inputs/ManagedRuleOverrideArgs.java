@@ -28,6 +28,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="ruleId", required=true)
     private Output<String> ruleId;
 
+    /**
+     * @return Identifier for the managed rule.
+     * 
+     */
     public Output<String> ruleId() {
         return this.ruleId;
     }
@@ -39,6 +43,10 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="state")
     private @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
 
+    /**
+     * @return The state of the managed rule. Defaults to Disabled if not specified.
+     * 
+     */
     public Optional<Output<Either<String,ManagedRuleEnabledState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -68,28 +76,64 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
             $ = new ManagedRuleOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Identifier for the managed rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param state The state of the managed rule. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,ManagedRuleEnabledState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the managed rule. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,ManagedRuleEnabledState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state of the managed rule. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state of the managed rule. Defaults to Disabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ManagedRuleEnabledState state) {
             return state(Either.ofRight(state));
         }

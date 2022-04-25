@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListUpgradableVersionDetailsResult {
-    /**
-     * Current version of the elastic monitor
-     * 
-     */
+        /**
+         * @return Current version of the elastic monitor
+         * 
+         */
     private final @Nullable String currentVersion;
-    /**
-     * Stack Versions that this version can upgrade to
-     * 
-     */
+        /**
+         * @return Stack Versions that this version can upgrade to
+         * 
+         */
     private final @Nullable List<String> upgradableVersions;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ListUpgradableVersionDetailsResult {
     }
 
     /**
-     * Current version of the elastic monitor
+     * @return Current version of the elastic monitor
      * 
-    */
+     */
     public Optional<String> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
     /**
-     * Stack Versions that this version can upgrade to
+     * @return Stack Versions that this version can upgrade to
      * 
-    */
+     */
     public List<String> upgradableVersions() {
         return this.upgradableVersions == null ? List.of() : this.upgradableVersions;
     }

@@ -26,6 +26,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
     @Import(name="primarybytesIn")
     private @Nullable Output<Double> primarybytesIn;
 
+    /**
+     * @return The Primary BytesIn of the peering.
+     * 
+     */
     public Optional<Output<Double>> primarybytesIn() {
         return Optional.ofNullable(this.primarybytesIn);
     }
@@ -37,6 +41,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
     @Import(name="primarybytesOut")
     private @Nullable Output<Double> primarybytesOut;
 
+    /**
+     * @return The primary BytesOut of the peering.
+     * 
+     */
     public Optional<Output<Double>> primarybytesOut() {
         return Optional.ofNullable(this.primarybytesOut);
     }
@@ -48,6 +56,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
     @Import(name="secondarybytesIn")
     private @Nullable Output<Double> secondarybytesIn;
 
+    /**
+     * @return The secondary BytesIn of the peering.
+     * 
+     */
     public Optional<Output<Double>> secondarybytesIn() {
         return Optional.ofNullable(this.secondarybytesIn);
     }
@@ -59,6 +71,10 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
     @Import(name="secondarybytesOut")
     private @Nullable Output<Double> secondarybytesOut;
 
+    /**
+     * @return The secondary BytesOut of the peering.
+     * 
+     */
     public Optional<Output<Double>> secondarybytesOut() {
         return Optional.ofNullable(this.secondarybytesOut);
     }
@@ -90,38 +106,86 @@ public final class ExpressRouteCircuitStatsArgs extends com.pulumi.resources.Res
             $ = new ExpressRouteCircuitStatsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primarybytesIn The Primary BytesIn of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarybytesIn(@Nullable Output<Double> primarybytesIn) {
             $.primarybytesIn = primarybytesIn;
             return this;
         }
 
+        /**
+         * @param primarybytesIn The Primary BytesIn of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarybytesIn(Double primarybytesIn) {
             return primarybytesIn(Output.of(primarybytesIn));
         }
 
+        /**
+         * @param primarybytesOut The primary BytesOut of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarybytesOut(@Nullable Output<Double> primarybytesOut) {
             $.primarybytesOut = primarybytesOut;
             return this;
         }
 
+        /**
+         * @param primarybytesOut The primary BytesOut of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primarybytesOut(Double primarybytesOut) {
             return primarybytesOut(Output.of(primarybytesOut));
         }
 
+        /**
+         * @param secondarybytesIn The secondary BytesIn of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarybytesIn(@Nullable Output<Double> secondarybytesIn) {
             $.secondarybytesIn = secondarybytesIn;
             return this;
         }
 
+        /**
+         * @param secondarybytesIn The secondary BytesIn of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarybytesIn(Double secondarybytesIn) {
             return secondarybytesIn(Output.of(secondarybytesIn));
         }
 
+        /**
+         * @param secondarybytesOut The secondary BytesOut of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarybytesOut(@Nullable Output<Double> secondarybytesOut) {
             $.secondarybytesOut = secondarybytesOut;
             return this;
         }
 
+        /**
+         * @param secondarybytesOut The secondary BytesOut of the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondarybytesOut(Double secondarybytesOut) {
             return secondarybytesOut(Output.of(secondarybytesOut));
         }

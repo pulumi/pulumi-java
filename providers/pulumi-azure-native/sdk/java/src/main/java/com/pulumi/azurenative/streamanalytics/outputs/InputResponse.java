@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InputResponse {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class InputResponse {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
+     * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> properties() {
         return Optional.ofNullable(this.properties);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

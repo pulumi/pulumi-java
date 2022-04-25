@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MySqlConnectionInfoResponse {
-    /**
-     * Password credential.
-     * 
-     */
+        /**
+         * @return Password credential.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * Port for Server
-     * 
-     */
+        /**
+         * @return Port for Server
+         * 
+         */
     private final Integer port;
-    /**
-     * Name of the server
-     * 
-     */
+        /**
+         * @return Name of the server
+         * 
+         */
     private final String serverName;
-    /**
-     * Type of connection info
-     * Expected value is &#39;MySqlConnectionInfo&#39;.
-     * 
-     */
+        /**
+         * @return Type of connection info
+         * Expected value is &#39;MySqlConnectionInfo&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * User name
-     * 
-     */
+        /**
+         * @return User name
+         * 
+         */
     private final @Nullable String userName;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class MySqlConnectionInfoResponse {
     }
 
     /**
-     * Password credential.
+     * @return Password credential.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Port for Server
+     * @return Port for Server
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * Name of the server
+     * @return Name of the server
      * 
-    */
+     */
     public String serverName() {
         return this.serverName;
     }
     /**
-     * Type of connection info
+     * @return Type of connection info
      * Expected value is &#39;MySqlConnectionInfo&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * User name
+     * @return User name
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

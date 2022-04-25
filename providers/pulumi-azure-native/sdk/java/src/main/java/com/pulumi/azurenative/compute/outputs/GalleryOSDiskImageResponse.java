@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GalleryOSDiskImageResponse {
-    /**
-     * The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
-     * 
-     */
+        /**
+         * @return The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+         * 
+         */
     private final @Nullable String hostCaching;
-    /**
-     * This property indicates the size of the VHD to be created.
-     * 
-     */
+        /**
+         * @return This property indicates the size of the VHD to be created.
+         * 
+         */
     private final Integer sizeInGB;
-    /**
-     * The gallery artifact version source.
-     * 
-     */
+        /**
+         * @return The gallery artifact version source.
+         * 
+         */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class GalleryOSDiskImageResponse {
     }
 
     /**
-     * The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+     * @return The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
      * 
-    */
+     */
     public Optional<String> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
     /**
-     * This property indicates the size of the VHD to be created.
+     * @return This property indicates the size of the VHD to be created.
      * 
-    */
+     */
     public Integer sizeInGB() {
         return this.sizeInGB;
     }
     /**
-     * The gallery artifact version source.
+     * @return The gallery artifact version source.
      * 
-    */
+     */
     public Optional<GalleryArtifactVersionSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }

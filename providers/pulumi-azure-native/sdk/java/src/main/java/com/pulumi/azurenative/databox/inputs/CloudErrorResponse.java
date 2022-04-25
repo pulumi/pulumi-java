@@ -27,6 +27,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="additionalInfo", required=true)
     private List<AdditionalErrorInfoResponse> additionalInfo;
 
+    /**
+     * @return Cloud error additional info.
+     * 
+     */
     public List<AdditionalErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
@@ -38,6 +42,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Cloud error code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -49,6 +57,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="details", required=true)
     private List<CloudErrorResponse> details;
 
+    /**
+     * @return Cloud error details.
+     * 
+     */
     public List<CloudErrorResponse> details() {
         return this.details;
     }
@@ -60,6 +72,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return Cloud error message.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -71,6 +87,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return Cloud error target.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -103,34 +123,76 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CloudErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalInfo Cloud error additional info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(List<AdditionalErrorInfoResponse> additionalInfo) {
             $.additionalInfo = additionalInfo;
             return this;
         }
 
+        /**
+         * @param additionalInfo Cloud error additional info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInfo(AdditionalErrorInfoResponse... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
 
+        /**
+         * @param code Cloud error code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details Cloud error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(List<CloudErrorResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Cloud error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(CloudErrorResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param message Cloud error message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param target Cloud error target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

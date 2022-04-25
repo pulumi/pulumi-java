@@ -9,46 +9,46 @@ import java.util.Objects;
 
 @CustomType
 public final class ActivityTimelineItemResponse {
-    /**
-     * The grouping bucket end time.
-     * 
-     */
+        /**
+         * @return The grouping bucket end time.
+         * 
+         */
     private final String bucketEndTimeUTC;
-    /**
-     * The grouping bucket start time.
-     * 
-     */
+        /**
+         * @return The grouping bucket start time.
+         * 
+         */
     private final String bucketStartTimeUTC;
-    /**
-     * The activity timeline content.
-     * 
-     */
+        /**
+         * @return The activity timeline content.
+         * 
+         */
     private final String content;
-    /**
-     * The time of the first activity in the grouping bucket.
-     * 
-     */
+        /**
+         * @return The time of the first activity in the grouping bucket.
+         * 
+         */
     private final String firstActivityTimeUTC;
-    /**
-     * The entity query kind
-     * Expected value is &#39;Activity&#39;.
-     * 
-     */
+        /**
+         * @return The entity query kind
+         * Expected value is &#39;Activity&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * The time of the last activity in the grouping bucket.
-     * 
-     */
+        /**
+         * @return The time of the last activity in the grouping bucket.
+         * 
+         */
     private final String lastActivityTimeUTC;
-    /**
-     * The activity query id.
-     * 
-     */
+        /**
+         * @return The activity query id.
+         * 
+         */
     private final String queryId;
-    /**
-     * The activity timeline title.
-     * 
-     */
+        /**
+         * @return The activity timeline title.
+         * 
+         */
     private final String title;
 
     @CustomType.Constructor
@@ -72,59 +72,59 @@ public final class ActivityTimelineItemResponse {
     }
 
     /**
-     * The grouping bucket end time.
+     * @return The grouping bucket end time.
      * 
-    */
+     */
     public String bucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
     }
     /**
-     * The grouping bucket start time.
+     * @return The grouping bucket start time.
      * 
-    */
+     */
     public String bucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
     }
     /**
-     * The activity timeline content.
+     * @return The activity timeline content.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * The time of the first activity in the grouping bucket.
+     * @return The time of the first activity in the grouping bucket.
      * 
-    */
+     */
     public String firstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
     }
     /**
-     * The entity query kind
+     * @return The entity query kind
      * Expected value is &#39;Activity&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The time of the last activity in the grouping bucket.
+     * @return The time of the last activity in the grouping bucket.
      * 
-    */
+     */
     public String lastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
     }
     /**
-     * The activity query id.
+     * @return The activity query id.
      * 
-    */
+     */
     public String queryId() {
         return this.queryId;
     }
     /**
-     * The activity timeline title.
+     * @return The activity timeline title.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }

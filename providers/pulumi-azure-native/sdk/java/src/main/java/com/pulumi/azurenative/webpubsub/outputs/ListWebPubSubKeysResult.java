@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListWebPubSubKeysResult {
-    /**
-     * Connection string constructed via the primaryKey
-     * 
-     */
+        /**
+         * @return Connection string constructed via the primaryKey
+         * 
+         */
     private final @Nullable String primaryConnectionString;
-    /**
-     * The primary access key.
-     * 
-     */
+        /**
+         * @return The primary access key.
+         * 
+         */
     private final @Nullable String primaryKey;
-    /**
-     * Connection string constructed via the secondaryKey
-     * 
-     */
+        /**
+         * @return Connection string constructed via the secondaryKey
+         * 
+         */
     private final @Nullable String secondaryConnectionString;
-    /**
-     * The secondary access key.
-     * 
-     */
+        /**
+         * @return The secondary access key.
+         * 
+         */
     private final @Nullable String secondaryKey;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class ListWebPubSubKeysResult {
     }
 
     /**
-     * Connection string constructed via the primaryKey
+     * @return Connection string constructed via the primaryKey
      * 
-    */
+     */
     public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
-     * The primary access key.
+     * @return The primary access key.
      * 
-    */
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
-     * Connection string constructed via the secondaryKey
+     * @return Connection string constructed via the secondaryKey
      * 
-    */
+     */
     public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
-     * The secondary access key.
+     * @return The secondary access key.
      * 
-    */
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

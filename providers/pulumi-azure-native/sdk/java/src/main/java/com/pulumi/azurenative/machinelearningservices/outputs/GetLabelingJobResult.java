@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLabelingJobResult {
-    /**
-     * The resource URL of the entity (not URL encoded).
-     * 
-     */
+        /**
+         * @return The resource URL of the entity (not URL encoded).
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource entity.
-     * 
-     */
+        /**
+         * @return The name of the resource entity.
+         * 
+         */
     private final String name;
-    /**
-     * Definition of a labeling job.
-     * 
-     */
+        /**
+         * @return Definition of a labeling job.
+         * 
+         */
     private final LabelingJobPropertiesResponse properties;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The resource provider and type.
-     * 
-     */
+        /**
+         * @return The resource provider and type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class GetLabelingJobResult {
     }
 
     /**
-     * The resource URL of the entity (not URL encoded).
+     * @return The resource URL of the entity (not URL encoded).
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource entity.
+     * @return The name of the resource entity.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Definition of a labeling job.
+     * @return Definition of a labeling job.
      * 
-    */
+     */
     public LabelingJobPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The resource provider and type.
+     * @return The resource provider and type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

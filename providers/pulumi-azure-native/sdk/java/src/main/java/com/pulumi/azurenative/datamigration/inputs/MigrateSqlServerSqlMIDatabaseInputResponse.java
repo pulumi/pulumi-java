@@ -27,6 +27,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends com.pulumi
     @Import(name="backupFilePaths")
     private @Nullable List<String> backupFilePaths;
 
+    /**
+     * @return The list of backup files to be used in case of existing backups.
+     * 
+     */
     public Optional<List<String>> backupFilePaths() {
         return Optional.ofNullable(this.backupFilePaths);
     }
@@ -38,6 +42,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends com.pulumi
     @Import(name="backupFileShare")
     private @Nullable FileShareResponse backupFileShare;
 
+    /**
+     * @return Backup file share information for backing up this database.
+     * 
+     */
     public Optional<FileShareResponse> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
@@ -49,6 +57,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends com.pulumi
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,6 +72,10 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends com.pulumi
     @Import(name="restoreDatabaseName", required=true)
     private String restoreDatabaseName;
 
+    /**
+     * @return Name of the database at destination
+     * 
+     */
     public String restoreDatabaseName() {
         return this.restoreDatabaseName;
     }
@@ -91,25 +107,55 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse extends com.pulumi
             $ = new MigrateSqlServerSqlMIDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupFilePaths The list of backup files to be used in case of existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
             $.backupFilePaths = backupFilePaths;
             return this;
         }
 
+        /**
+         * @param backupFilePaths The list of backup files to be used in case of existing backups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFilePaths(String... backupFilePaths) {
             return backupFilePaths(List.of(backupFilePaths));
         }
 
+        /**
+         * @param backupFileShare Backup file share information for backing up this database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restoreDatabaseName Name of the database at destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDatabaseName(String restoreDatabaseName) {
             $.restoreDatabaseName = restoreDatabaseName;
             return this;

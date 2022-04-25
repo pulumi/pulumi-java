@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SubnetResponse {
-    /**
-     * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
-     * 
-     */
+        /**
+         * @return The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+         * 
+         */
     private final @Nullable String allowPublicIp;
-    /**
-     * The name of the subnet as seen in the lab.
-     * 
-     */
+        /**
+         * @return The name of the subnet as seen in the lab.
+         * 
+         */
     private final @Nullable String labSubnetName;
-    /**
-     * The resource ID of the subnet.
-     * 
-     */
+        /**
+         * @return The resource ID of the subnet.
+         * 
+         */
     private final @Nullable String resourceId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SubnetResponse {
     }
 
     /**
-     * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+     * @return The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
      * 
-    */
+     */
     public Optional<String> allowPublicIp() {
         return Optional.ofNullable(this.allowPublicIp);
     }
     /**
-     * The name of the subnet as seen in the lab.
+     * @return The name of the subnet as seen in the lab.
      * 
-    */
+     */
     public Optional<String> labSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
     /**
-     * The resource ID of the subnet.
+     * @return The resource ID of the subnet.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

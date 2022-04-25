@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VmUptimeResponse {
-    /**
-     * Number of days in a month for VM uptime.
-     * 
-     */
+        /**
+         * @return Number of days in a month for VM uptime.
+         * 
+         */
     private final @Nullable Double daysPerMonth;
-    /**
-     * Number of hours per day for VM uptime.
-     * 
-     */
+        /**
+         * @return Number of hours per day for VM uptime.
+         * 
+         */
     private final @Nullable Double hoursPerDay;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class VmUptimeResponse {
     }
 
     /**
-     * Number of days in a month for VM uptime.
+     * @return Number of days in a month for VM uptime.
      * 
-    */
+     */
     public Optional<Double> daysPerMonth() {
         return Optional.ofNullable(this.daysPerMonth);
     }
     /**
-     * Number of hours per day for VM uptime.
+     * @return Number of hours per day for VM uptime.
      * 
-    */
+     */
     public Optional<Double> hoursPerDay() {
         return Optional.ofNullable(this.hoursPerDay);
     }

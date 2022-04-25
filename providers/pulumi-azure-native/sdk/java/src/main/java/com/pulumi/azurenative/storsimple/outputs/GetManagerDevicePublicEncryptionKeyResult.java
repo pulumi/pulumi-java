@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetManagerDevicePublicEncryptionKeyResult {
-    /**
-     * The key.
-     * 
-     */
+        /**
+         * @return The key.
+         * 
+         */
     private final String key;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
     }
 
     /**
-     * The key.
+     * @return The key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }

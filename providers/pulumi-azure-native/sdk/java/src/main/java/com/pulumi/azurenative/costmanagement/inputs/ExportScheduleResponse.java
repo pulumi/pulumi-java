@@ -26,6 +26,10 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recurrence")
     private @Nullable String recurrence;
 
+    /**
+     * @return The schedule recurrence.
+     * 
+     */
     public Optional<String> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -37,6 +41,10 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recurrencePeriod")
     private @Nullable ExportRecurrencePeriodResponse recurrencePeriod;
 
+    /**
+     * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * 
+     */
     public Optional<ExportRecurrencePeriodResponse> recurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
@@ -48,6 +56,10 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,16 +90,34 @@ public final class ExportScheduleResponse extends com.pulumi.resources.InvokeArg
             $ = new ExportScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrence The schedule recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable String recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrencePeriod Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrencePeriod(@Nullable ExportRecurrencePeriodResponse recurrencePeriod) {
             $.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
+        /**
+         * @param status The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

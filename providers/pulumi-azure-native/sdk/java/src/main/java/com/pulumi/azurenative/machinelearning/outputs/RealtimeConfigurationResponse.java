@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RealtimeConfigurationResponse {
-    /**
-     * Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
-     * 
-     */
+        /**
+         * @return Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+         * 
+         */
     private final @Nullable Integer maxConcurrentCalls;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RealtimeConfigurationResponse {
     }
 
     /**
-     * Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+     * @return Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
      * 
-    */
+     */
     public Optional<Integer> maxConcurrentCalls() {
         return Optional.ofNullable(this.maxConcurrentCalls);
     }

@@ -13,51 +13,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationRuleConditionResponse {
-    /**
-     * Description of the rule condition.
-     * 
-     */
+        /**
+         * @return Description of the rule condition.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * List of destination IP addresses or Service Tags.
-     * 
-     */
+        /**
+         * @return List of destination IP addresses or Service Tags.
+         * 
+         */
     private final @Nullable List<String> destinationAddresses;
-    /**
-     * List of FQDN Tags for this rule condition.
-     * 
-     */
+        /**
+         * @return List of FQDN Tags for this rule condition.
+         * 
+         */
     private final @Nullable List<String> fqdnTags;
-    /**
-     * Name of the rule condition.
-     * 
-     */
+        /**
+         * @return Name of the rule condition.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Array of Application Protocols.
-     * 
-     */
+        /**
+         * @return Array of Application Protocols.
+         * 
+         */
     private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
-    /**
-     * Rule Condition Type.
-     * Expected value is &#39;ApplicationRuleCondition&#39;.
-     * 
-     */
+        /**
+         * @return Rule Condition Type.
+         * Expected value is &#39;ApplicationRuleCondition&#39;.
+         * 
+         */
     private final String ruleConditionType;
-    /**
-     * List of source IP addresses for this rule.
-     * 
-     */
+        /**
+         * @return List of source IP addresses for this rule.
+         * 
+         */
     private final @Nullable List<String> sourceAddresses;
-    /**
-     * List of source IpGroups for this rule.
-     * 
-     */
+        /**
+         * @return List of source IpGroups for this rule.
+         * 
+         */
     private final @Nullable List<String> sourceIpGroups;
-    /**
-     * List of FQDNs for this rule condition.
-     * 
-     */
+        /**
+         * @return List of FQDNs for this rule condition.
+         * 
+         */
     private final @Nullable List<String> targetFqdns;
 
     @CustomType.Constructor
@@ -83,66 +83,66 @@ public final class ApplicationRuleConditionResponse {
     }
 
     /**
-     * Description of the rule condition.
+     * @return Description of the rule condition.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of destination IP addresses or Service Tags.
+     * @return List of destination IP addresses or Service Tags.
      * 
-    */
+     */
     public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
-     * List of FQDN Tags for this rule condition.
+     * @return List of FQDN Tags for this rule condition.
      * 
-    */
+     */
     public List<String> fqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
     /**
-     * Name of the rule condition.
+     * @return Name of the rule condition.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Array of Application Protocols.
+     * @return Array of Application Protocols.
      * 
-    */
+     */
     public List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
-     * Rule Condition Type.
+     * @return Rule Condition Type.
      * Expected value is &#39;ApplicationRuleCondition&#39;.
      * 
-    */
+     */
     public String ruleConditionType() {
         return this.ruleConditionType;
     }
     /**
-     * List of source IP addresses for this rule.
+     * @return List of source IP addresses for this rule.
      * 
-    */
+     */
     public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
-    */
+     */
     public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
-     * List of FQDNs for this rule condition.
+     * @return List of FQDNs for this rule condition.
      * 
-    */
+     */
     public List<String> targetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }

@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceAssociationLinkResponse {
-    /**
-     * If true, the resource can be deleted.
-     * 
-     */
+        /**
+         * @return If true, the resource can be deleted.
+         * 
+         */
     private final @Nullable Boolean allowDelete;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Link to the external resource.
-     * 
-     */
+        /**
+         * @return Link to the external resource.
+         * 
+         */
     private final @Nullable String link;
-    /**
-     * Resource type of the linked resource.
-     * 
-     */
+        /**
+         * @return Resource type of the linked resource.
+         * 
+         */
     private final @Nullable String linkedResourceType;
-    /**
-     * A list of locations.
-     * 
-     */
+        /**
+         * @return A list of locations.
+         * 
+         */
     private final @Nullable List<String> locations;
-    /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the service association link resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the service association link resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class ServiceAssociationLinkResponse {
     }
 
     /**
-     * If true, the resource can be deleted.
+     * @return If true, the resource can be deleted.
      * 
-    */
+     */
     public Optional<Boolean> allowDelete() {
         return Optional.ofNullable(this.allowDelete);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Link to the external resource.
+     * @return Link to the external resource.
      * 
-    */
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
     /**
-     * Resource type of the linked resource.
+     * @return Resource type of the linked resource.
      * 
-    */
+     */
     public Optional<String> linkedResourceType() {
         return Optional.ofNullable(this.linkedResourceType);
     }
     /**
-     * A list of locations.
+     * @return A list of locations.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the service association link resource.
+     * @return The provisioning state of the service association link resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

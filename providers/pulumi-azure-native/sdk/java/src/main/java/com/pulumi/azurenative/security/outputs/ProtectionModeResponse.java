@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProtectionModeResponse {
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     * 
-     */
+        /**
+         * @return The application control policy enforcement/protection mode of the machine group
+         * 
+         */
     private final @Nullable String exe;
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     * 
-     */
+        /**
+         * @return The application control policy enforcement/protection mode of the machine group
+         * 
+         */
     private final @Nullable String executable;
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     * 
-     */
+        /**
+         * @return The application control policy enforcement/protection mode of the machine group
+         * 
+         */
     private final @Nullable String msi;
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     * 
-     */
+        /**
+         * @return The application control policy enforcement/protection mode of the machine group
+         * 
+         */
     private final @Nullable String script;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class ProtectionModeResponse {
     }
 
     /**
-     * The application control policy enforcement/protection mode of the machine group
+     * @return The application control policy enforcement/protection mode of the machine group
      * 
-    */
+     */
     public Optional<String> exe() {
         return Optional.ofNullable(this.exe);
     }
     /**
-     * The application control policy enforcement/protection mode of the machine group
+     * @return The application control policy enforcement/protection mode of the machine group
      * 
-    */
+     */
     public Optional<String> executable() {
         return Optional.ofNullable(this.executable);
     }
     /**
-     * The application control policy enforcement/protection mode of the machine group
+     * @return The application control policy enforcement/protection mode of the machine group
      * 
-    */
+     */
     public Optional<String> msi() {
         return Optional.ofNullable(this.msi);
     }
     /**
-     * The application control policy enforcement/protection mode of the machine group
+     * @return The application control policy enforcement/protection mode of the machine group
      * 
-    */
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }

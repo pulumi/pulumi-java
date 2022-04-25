@@ -17,46 +17,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContentKeyPolicyTokenRestrictionResponse {
-    /**
-     * A list of alternative verification keys.
-     * 
-     */
+        /**
+         * @return A list of alternative verification keys.
+         * 
+         */
     private final @Nullable List<Object> alternateVerificationKeys;
-    /**
-     * The audience for the token.
-     * 
-     */
+        /**
+         * @return The audience for the token.
+         * 
+         */
     private final String audience;
-    /**
-     * The token issuer.
-     * 
-     */
+        /**
+         * @return The token issuer.
+         * 
+         */
     private final String issuer;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * The OpenID connect discovery document.
-     * 
-     */
+        /**
+         * @return The OpenID connect discovery document.
+         * 
+         */
     private final @Nullable String openIdConnectDiscoveryDocument;
-    /**
-     * The primary verification key.
-     * 
-     */
+        /**
+         * @return The primary verification key.
+         * 
+         */
     private final Object primaryVerificationKey;
-    /**
-     * A list of required token claims.
-     * 
-     */
+        /**
+         * @return A list of required token claims.
+         * 
+         */
     private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
-    /**
-     * The type of token.
-     * 
-     */
+        /**
+         * @return The type of token.
+         * 
+         */
     private final String restrictionTokenType;
 
     @CustomType.Constructor
@@ -80,59 +80,59 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
     }
 
     /**
-     * A list of alternative verification keys.
+     * @return A list of alternative verification keys.
      * 
-    */
+     */
     public List<Object> alternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
     }
     /**
-     * The audience for the token.
+     * @return The audience for the token.
      * 
-    */
+     */
     public String audience() {
         return this.audience;
     }
     /**
-     * The token issuer.
+     * @return The token issuer.
      * 
-    */
+     */
     public String issuer() {
         return this.issuer;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyTokenRestriction&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The OpenID connect discovery document.
+     * @return The OpenID connect discovery document.
      * 
-    */
+     */
     public Optional<String> openIdConnectDiscoveryDocument() {
         return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
     /**
-     * The primary verification key.
+     * @return The primary verification key.
      * 
-    */
+     */
     public Object primaryVerificationKey() {
         return this.primaryVerificationKey;
     }
     /**
-     * A list of required token claims.
+     * @return A list of required token claims.
      * 
-    */
+     */
     public List<ContentKeyPolicyTokenClaimResponse> requiredClaims() {
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
     }
     /**
-     * The type of token.
+     * @return The type of token.
      * 
-    */
+     */
     public String restrictionTokenType() {
         return this.restrictionTokenType;
     }

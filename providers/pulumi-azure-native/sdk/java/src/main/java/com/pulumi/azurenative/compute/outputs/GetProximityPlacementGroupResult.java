@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProximityPlacementGroupResult {
-    /**
-     * A list of references to all availability sets in the proximity placement group.
-     * 
-     */
+        /**
+         * @return A list of references to all availability sets in the proximity placement group.
+         * 
+         */
     private final List<SubResourceWithColocationStatusResponse> availabilitySets;
-    /**
-     * Describes colocation status of the Proximity Placement Group.
-     * 
-     */
+        /**
+         * @return Describes colocation status of the Proximity Placement Group.
+         * 
+         */
     private final @Nullable InstanceViewStatusResponse colocationStatus;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
-     * 
-     */
+        /**
+         * @return Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+         * 
+         */
     private final @Nullable String proximityPlacementGroupType;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * A list of references to all virtual machine scale sets in the proximity placement group.
-     * 
-     */
+        /**
+         * @return A list of references to all virtual machine scale sets in the proximity placement group.
+         * 
+         */
     private final List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets;
-    /**
-     * A list of references to all virtual machines in the proximity placement group.
-     * 
-     */
+        /**
+         * @return A list of references to all virtual machines in the proximity placement group.
+         * 
+         */
     private final List<SubResourceWithColocationStatusResponse> virtualMachines;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetProximityPlacementGroupResult {
     }
 
     /**
-     * A list of references to all availability sets in the proximity placement group.
+     * @return A list of references to all availability sets in the proximity placement group.
      * 
-    */
+     */
     public List<SubResourceWithColocationStatusResponse> availabilitySets() {
         return this.availabilitySets;
     }
     /**
-     * Describes colocation status of the Proximity Placement Group.
+     * @return Describes colocation status of the Proximity Placement Group.
      * 
-    */
+     */
     public Optional<InstanceViewStatusResponse> colocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
+     * @return Specifies the type of the proximity placement group. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Standard** : Co-locate resources within an Azure region or Availability Zone. &lt;br&gt;&lt;br&gt; **Ultra** : For future use.
      * 
-    */
+     */
     public Optional<String> proximityPlacementGroupType() {
         return Optional.ofNullable(this.proximityPlacementGroupType);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of references to all virtual machine scale sets in the proximity placement group.
+     * @return A list of references to all virtual machine scale sets in the proximity placement group.
      * 
-    */
+     */
     public List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets() {
         return this.virtualMachineScaleSets;
     }
     /**
-     * A list of references to all virtual machines in the proximity placement group.
+     * @return A list of references to all virtual machines in the proximity placement group.
      * 
-    */
+     */
     public List<SubResourceWithColocationStatusResponse> virtualMachines() {
         return this.virtualMachines;
     }

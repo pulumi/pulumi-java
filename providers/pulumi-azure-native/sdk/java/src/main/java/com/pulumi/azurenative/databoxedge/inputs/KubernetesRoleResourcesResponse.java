@@ -27,6 +27,10 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
     @Import(name="compute", required=true)
     private KubernetesRoleComputeResponse compute;
 
+    /**
+     * @return Kubernetes role compute resource
+     * 
+     */
     public KubernetesRoleComputeResponse compute() {
         return this.compute;
     }
@@ -38,6 +42,10 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
     @Import(name="network", required=true)
     private KubernetesRoleNetworkResponse network;
 
+    /**
+     * @return Kubernetes role network resource
+     * 
+     */
     public KubernetesRoleNetworkResponse network() {
         return this.network;
     }
@@ -49,6 +57,10 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
     @Import(name="storage")
     private @Nullable KubernetesRoleStorageResponse storage;
 
+    /**
+     * @return Kubernetes role storage resource
+     * 
+     */
     public Optional<KubernetesRoleStorageResponse> storage() {
         return Optional.ofNullable(this.storage);
     }
@@ -79,16 +91,34 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
             $ = new KubernetesRoleResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compute Kubernetes role compute resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(KubernetesRoleComputeResponse compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param network Kubernetes role network resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(KubernetesRoleNetworkResponse network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param storage Kubernetes role storage resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(@Nullable KubernetesRoleStorageResponse storage) {
             $.storage = storage;
             return this;

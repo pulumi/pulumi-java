@@ -18,95 +18,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetFluxConfigurationResult {
-    /**
-     * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
-     * 
-     */
+        /**
+         * @return Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
+         * 
+         */
     private final String complianceState;
-    /**
-     * Key-value pairs of protected configuration settings for the configuration
-     * 
-     */
+        /**
+         * @return Key-value pairs of protected configuration settings for the configuration
+         * 
+         */
     private final @Nullable Map<String,String> configurationProtectedSettings;
-    /**
-     * Error message returned to the user in the case of provisioning failure.
-     * 
-     */
+        /**
+         * @return Error message returned to the user in the case of provisioning failure.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * Parameters to reconcile to the GitRepository source kind type.
-     * 
-     */
+        /**
+         * @return Parameters to reconcile to the GitRepository source kind type.
+         * 
+         */
     private final @Nullable GitRepositoryDefinitionResponse gitRepository;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
-     * 
-     */
+        /**
+         * @return Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+         * 
+         */
     private final @Nullable Map<String,KustomizationDefinitionResponse> kustomizations;
-    /**
-     * Datetime the fluxConfiguration last synced its source on the cluster.
-     * 
-     */
+        /**
+         * @return Datetime the fluxConfiguration last synced its source on the cluster.
+         * 
+         */
     private final String lastSourceSyncedAt;
-    /**
-     * Branch and SHA of the last source commit synced with the cluster.
-     * 
-     */
+        /**
+         * @return Branch and SHA of the last source commit synced with the cluster.
+         * 
+         */
     private final String lastSourceSyncedCommitId;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
-     * 
-     */
+        /**
+         * @return The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * Status of the creation of the fluxConfiguration.
-     * 
-     */
+        /**
+         * @return Status of the creation of the fluxConfiguration.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
-     * 
-     */
+        /**
+         * @return Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
+         * 
+         */
     private final String repositoryPublicKey;
-    /**
-     * Scope at which the operator will be installed.
-     * 
-     */
+        /**
+         * @return Scope at which the operator will be installed.
+         * 
+         */
     private final @Nullable String scope;
-    /**
-     * Source Kind to pull the configuration data from.
-     * 
-     */
+        /**
+         * @return Source Kind to pull the configuration data from.
+         * 
+         */
     private final @Nullable String sourceKind;
-    /**
-     * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
-     * 
-     */
+        /**
+         * @return Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
+         * 
+         */
     private final List<ObjectStatusDefinitionResponse> statuses;
-    /**
-     * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
-     * 
-     */
+        /**
+         * @return Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+         * 
+         */
     private final @Nullable Boolean suspend;
-    /**
-     * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
-     * 
-     */
+        /**
+         * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -150,128 +150,128 @@ public final class GetFluxConfigurationResult {
     }
 
     /**
-     * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
+     * @return Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
      * 
-    */
+     */
     public String complianceState() {
         return this.complianceState;
     }
     /**
-     * Key-value pairs of protected configuration settings for the configuration
+     * @return Key-value pairs of protected configuration settings for the configuration
      * 
-    */
+     */
     public Map<String,String> configurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Map.of() : this.configurationProtectedSettings;
     }
     /**
-     * Error message returned to the user in the case of provisioning failure.
+     * @return Error message returned to the user in the case of provisioning failure.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * Parameters to reconcile to the GitRepository source kind type.
+     * @return Parameters to reconcile to the GitRepository source kind type.
      * 
-    */
+     */
     public Optional<GitRepositoryDefinitionResponse> gitRepository() {
         return Optional.ofNullable(this.gitRepository);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+     * @return Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
-    */
+     */
     public Map<String,KustomizationDefinitionResponse> kustomizations() {
         return this.kustomizations == null ? Map.of() : this.kustomizations;
     }
     /**
-     * Datetime the fluxConfiguration last synced its source on the cluster.
+     * @return Datetime the fluxConfiguration last synced its source on the cluster.
      * 
-    */
+     */
     public String lastSourceSyncedAt() {
         return this.lastSourceSyncedAt;
     }
     /**
-     * Branch and SHA of the last source commit synced with the cluster.
+     * @return Branch and SHA of the last source commit synced with the cluster.
      * 
-    */
+     */
     public String lastSourceSyncedCommitId() {
         return this.lastSourceSyncedCommitId;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+     * @return The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * Status of the creation of the fluxConfiguration.
+     * @return Status of the creation of the fluxConfiguration.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
+     * @return Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
      * 
-    */
+     */
     public String repositoryPublicKey() {
         return this.repositoryPublicKey;
     }
     /**
-     * Scope at which the operator will be installed.
+     * @return Scope at which the operator will be installed.
      * 
-    */
+     */
     public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
-     * Source Kind to pull the configuration data from.
+     * @return Source Kind to pull the configuration data from.
      * 
-    */
+     */
     public Optional<String> sourceKind() {
         return Optional.ofNullable(this.sourceKind);
     }
     /**
-     * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
+     * @return Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
      * 
-    */
+     */
     public List<ObjectStatusDefinitionResponse> statuses() {
         return this.statuses;
     }
     /**
-     * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+     * @return Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
-    */
+     */
     public Optional<Boolean> suspend() {
         return Optional.ofNullable(this.suspend);
     }
     /**
-     * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
+     * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

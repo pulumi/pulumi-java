@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExchangeConnectionResponse {
-    /**
-     * The BGP session associated with the connection.
-     * 
-     */
+        /**
+         * @return The BGP session associated with the connection.
+         * 
+         */
     private final @Nullable BgpSessionResponse bgpSession;
-    /**
-     * The unique identifier (GUID) for the connection.
-     * 
-     */
+        /**
+         * @return The unique identifier (GUID) for the connection.
+         * 
+         */
     private final @Nullable String connectionIdentifier;
-    /**
-     * The state of the connection.
-     * 
-     */
+        /**
+         * @return The state of the connection.
+         * 
+         */
     private final String connectionState;
-    /**
-     * The error message related to the connection state, if any.
-     * 
-     */
+        /**
+         * @return The error message related to the connection state, if any.
+         * 
+         */
     private final String errorMessage;
-    /**
-     * The PeeringDB.com ID of the facility at which the connection has to be set up.
-     * 
-     */
+        /**
+         * @return The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         */
     private final @Nullable Integer peeringDBFacilityId;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class ExchangeConnectionResponse {
     }
 
     /**
-     * The BGP session associated with the connection.
+     * @return The BGP session associated with the connection.
      * 
-    */
+     */
     public Optional<BgpSessionResponse> bgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
     /**
-     * The unique identifier (GUID) for the connection.
+     * @return The unique identifier (GUID) for the connection.
      * 
-    */
+     */
     public Optional<String> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
     /**
-     * The state of the connection.
+     * @return The state of the connection.
      * 
-    */
+     */
     public String connectionState() {
         return this.connectionState;
     }
     /**
-     * The error message related to the connection state, if any.
+     * @return The error message related to the connection state, if any.
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * @return The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
-    */
+     */
     public Optional<Integer> peeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }

@@ -26,6 +26,10 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recurrence", required=true)
     private String recurrence;
 
+    /**
+     * @return The schedule recurrence.
+     * 
+     */
     public String recurrence() {
         return this.recurrence;
     }
@@ -37,6 +41,10 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="recurrencePeriod")
     private @Nullable ReportRecurrencePeriodResponse recurrencePeriod;
 
+    /**
+     * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * 
+     */
     public Optional<ReportRecurrencePeriodResponse> recurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
@@ -48,6 +56,10 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,16 +90,34 @@ public final class ReportScheduleResponse extends com.pulumi.resources.InvokeArg
             $ = new ReportScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrence The schedule recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(String recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrencePeriod Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrencePeriod(@Nullable ReportRecurrencePeriodResponse recurrencePeriod) {
             $.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
+        /**
+         * @param status The status of the schedule. Whether active or not. If inactive, the report&#39;s scheduled execution is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

@@ -26,6 +26,10 @@ public final class DnsResourceReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="dnsResources")
     private @Nullable List<SubResourceResponse> dnsResources;
 
+    /**
+     * @return A list of dns Records
+     * 
+     */
     public Optional<List<SubResourceResponse>> dnsResources() {
         return Optional.ofNullable(this.dnsResources);
     }
@@ -37,6 +41,10 @@ public final class DnsResourceReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="targetResource")
     private @Nullable SubResourceResponse targetResource;
 
+    /**
+     * @return A reference to an azure resource from where the dns resource value is taken.
+     * 
+     */
     public Optional<SubResourceResponse> targetResource() {
         return Optional.ofNullable(this.targetResource);
     }
@@ -66,15 +74,33 @@ public final class DnsResourceReferenceResponse extends com.pulumi.resources.Inv
             $ = new DnsResourceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsResources A list of dns Records
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsResources(@Nullable List<SubResourceResponse> dnsResources) {
             $.dnsResources = dnsResources;
             return this;
         }
 
+        /**
+         * @param dnsResources A list of dns Records
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsResources(SubResourceResponse... dnsResources) {
             return dnsResources(List.of(dnsResources));
         }
 
+        /**
+         * @param targetResource A reference to an azure resource from where the dns resource value is taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResource(@Nullable SubResourceResponse targetResource) {
             $.targetResource = targetResource;
             return this;

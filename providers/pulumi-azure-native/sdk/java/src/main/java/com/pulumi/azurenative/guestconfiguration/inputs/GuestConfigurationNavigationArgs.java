@@ -32,6 +32,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="assignmentType")
     private @Nullable Output<Either<String,AssignmentType>> assignmentType;
 
+    /**
+     * @return Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+     * 
+     */
     public Optional<Output<Either<String,AssignmentType>>> assignmentType() {
         return Optional.ofNullable(this.assignmentType);
     }
@@ -43,6 +47,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="configurationParameter")
     private @Nullable Output<List<ConfigurationParameterArgs>> configurationParameter;
 
+    /**
+     * @return The configuration parameters for the guest configuration.
+     * 
+     */
     public Optional<Output<List<ConfigurationParameterArgs>>> configurationParameter() {
         return Optional.ofNullable(this.configurationParameter);
     }
@@ -54,6 +62,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="configurationProtectedParameter")
     private @Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter;
 
+    /**
+     * @return The protected configuration parameters for the guest configuration.
+     * 
+     */
     public Optional<Output<List<ConfigurationParameterArgs>>> configurationProtectedParameter() {
         return Optional.ofNullable(this.configurationProtectedParameter);
     }
@@ -65,6 +77,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="configurationSetting")
     private @Nullable Output<ConfigurationSettingArgs> configurationSetting;
 
+    /**
+     * @return The configuration setting for the guest configuration.
+     * 
+     */
     public Optional<Output<ConfigurationSettingArgs>> configurationSetting() {
         return Optional.ofNullable(this.configurationSetting);
     }
@@ -76,6 +92,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="contentHash")
     private @Nullable Output<String> contentHash;
 
+    /**
+     * @return Combined hash of the guest configuration package and configuration parameters.
+     * 
+     */
     public Optional<Output<String>> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
@@ -87,6 +107,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="contentUri")
     private @Nullable Output<String> contentUri;
 
+    /**
+     * @return Uri of the storage where guest configuration package is uploaded.
+     * 
+     */
     public Optional<Output<String>> contentUri() {
         return Optional.ofNullable(this.contentUri);
     }
@@ -98,6 +122,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="kind")
     private @Nullable Output<Either<String,Kind>> kind;
 
+    /**
+     * @return Kind of the guest configuration. For example:DSC
+     * 
+     */
     public Optional<Output<Either<String,Kind>>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -109,6 +137,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the guest configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -120,6 +152,10 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version of the guest configuration.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -156,107 +192,251 @@ public final class GuestConfigurationNavigationArgs extends com.pulumi.resources
             $ = new GuestConfigurationNavigationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignmentType Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentType(@Nullable Output<Either<String,AssignmentType>> assignmentType) {
             $.assignmentType = assignmentType;
             return this;
         }
 
+        /**
+         * @param assignmentType Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentType(Either<String,AssignmentType> assignmentType) {
             return assignmentType(Output.of(assignmentType));
         }
 
+        /**
+         * @param assignmentType Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentType(String assignmentType) {
             return assignmentType(Either.ofLeft(assignmentType));
         }
 
+        /**
+         * @param assignmentType Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignmentType(AssignmentType assignmentType) {
             return assignmentType(Either.ofRight(assignmentType));
         }
 
+        /**
+         * @param configurationParameter The configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationParameter) {
             $.configurationParameter = configurationParameter;
             return this;
         }
 
+        /**
+         * @param configurationParameter The configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationParameter(List<ConfigurationParameterArgs> configurationParameter) {
             return configurationParameter(Output.of(configurationParameter));
         }
 
+        /**
+         * @param configurationParameter The configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationParameter(ConfigurationParameterArgs... configurationParameter) {
             return configurationParameter(List.of(configurationParameter));
         }
 
+        /**
+         * @param configurationProtectedParameter The protected configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedParameter(@Nullable Output<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
             $.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
 
+        /**
+         * @param configurationProtectedParameter The protected configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedParameter(List<ConfigurationParameterArgs> configurationProtectedParameter) {
             return configurationProtectedParameter(Output.of(configurationProtectedParameter));
         }
 
+        /**
+         * @param configurationProtectedParameter The protected configuration parameters for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationProtectedParameter(ConfigurationParameterArgs... configurationProtectedParameter) {
             return configurationProtectedParameter(List.of(configurationProtectedParameter));
         }
 
+        /**
+         * @param configurationSetting The configuration setting for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationSetting(@Nullable Output<ConfigurationSettingArgs> configurationSetting) {
             $.configurationSetting = configurationSetting;
             return this;
         }
 
+        /**
+         * @param configurationSetting The configuration setting for the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationSetting(ConfigurationSettingArgs configurationSetting) {
             return configurationSetting(Output.of(configurationSetting));
         }
 
+        /**
+         * @param contentHash Combined hash of the guest configuration package and configuration parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(@Nullable Output<String> contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param contentHash Combined hash of the guest configuration package and configuration parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(String contentHash) {
             return contentHash(Output.of(contentHash));
         }
 
+        /**
+         * @param contentUri Uri of the storage where guest configuration package is uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentUri(@Nullable Output<String> contentUri) {
             $.contentUri = contentUri;
             return this;
         }
 
+        /**
+         * @param contentUri Uri of the storage where guest configuration package is uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentUri(String contentUri) {
             return contentUri(Output.of(contentUri));
         }
 
+        /**
+         * @param kind Kind of the guest configuration. For example:DSC
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the guest configuration. For example:DSC
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Kind of the guest configuration. For example:DSC
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Kind of the guest configuration. For example:DSC
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param name Name of the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param version Version of the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the guest configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

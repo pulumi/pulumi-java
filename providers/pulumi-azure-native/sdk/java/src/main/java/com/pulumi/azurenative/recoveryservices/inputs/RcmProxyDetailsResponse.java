@@ -25,6 +25,10 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return The health of the RCM proxy.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -36,6 +40,10 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="healthErrors", required=true)
     private List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return The health errors.
+     * 
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
@@ -47,6 +55,10 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The RCM proxy Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -58,6 +70,10 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="lastHeartbeatUtc", required=true)
     private String lastHeartbeatUtc;
 
+    /**
+     * @return The last heartbeat received from the RCM proxy.
+     * 
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
@@ -69,6 +85,10 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The RCM proxy name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The RCM proxy version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -113,35 +137,77 @@ public final class RcmProxyDetailsResponse extends com.pulumi.resources.InvokeAr
             $ = new RcmProxyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param health The health of the RCM proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param id The RCM proxy Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastHeartbeatUtc The last heartbeat received from the RCM proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
 
+        /**
+         * @param name The RCM proxy name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The RCM proxy version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

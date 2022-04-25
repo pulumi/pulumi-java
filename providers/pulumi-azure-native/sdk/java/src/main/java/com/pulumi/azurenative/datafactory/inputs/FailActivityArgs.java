@@ -31,6 +31,10 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -42,6 +46,10 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -53,6 +61,10 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errorCode", required=true)
     private Output<Object> errorCode;
 
+    /**
+     * @return The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> errorCode() {
         return this.errorCode;
     }
@@ -64,6 +76,10 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="message", required=true)
     private Output<Object> message;
 
+    /**
+     * @return The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> message() {
         return this.message;
     }
@@ -75,6 +91,10 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -87,6 +107,11 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Fail&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -98,6 +123,10 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -132,73 +161,171 @@ public final class FailActivityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FailActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param errorCode The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(Output<Object> errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorCode The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(Object errorCode) {
             return errorCode(Output.of(errorCode));
         }
 
+        /**
+         * @param message The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(Output<Object> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(Object message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Fail&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Fail&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

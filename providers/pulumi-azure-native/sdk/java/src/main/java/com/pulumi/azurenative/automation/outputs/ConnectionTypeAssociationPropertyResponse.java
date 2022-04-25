@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionTypeAssociationPropertyResponse {
-    /**
-     * Gets or sets the name of the connection type.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the connection type.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ConnectionTypeAssociationPropertyResponse {
     }
 
     /**
-     * Gets or sets the name of the connection type.
+     * @return Gets or sets the name of the connection type.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

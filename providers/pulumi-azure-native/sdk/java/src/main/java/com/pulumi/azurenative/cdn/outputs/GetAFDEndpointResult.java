@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAFDEndpointResult {
     private final String deploymentStatus;
-    /**
-     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
-     * 
-     */
+        /**
+         * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         */
     private final @Nullable String enabledState;
-    /**
-     * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
-     * 
-     */
+        /**
+         * @return The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
+         * 
+         */
     private final String hostName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
-     * 
-     */
+        /**
+         * @return Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
+         * 
+         */
     private final @Nullable Integer originResponseTimeoutSeconds;
-    /**
-     * Provisioning status
-     * 
-     */
+        /**
+         * @return Provisioning status
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Read only system data
-     * 
-     */
+        /**
+         * @return Read only system data
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -96,72 +96,72 @@ public final class GetAFDEndpointResult {
         return this.deploymentStatus;
     }
     /**
-     * Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Whether to enable use of this rule. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
+     * @return The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
+     * @return Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
      * 
-    */
+     */
     public Optional<Integer> originResponseTimeoutSeconds() {
         return Optional.ofNullable(this.originResponseTimeoutSeconds);
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -20,126 +20,126 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureDatabricksLinkedServiceResponse {
-    /**
-     * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object authentication;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The credential reference containing authentication information.
-     * 
-     */
+        /**
+         * @return The credential reference containing authentication information.
+         * 
+         */
     private final @Nullable CredentialReferenceResponse credential;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object domain;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object existingClusterId;
-    /**
-     * The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object instancePoolId;
-    /**
-     * Additional tags for cluster resources. This property is ignored in instance pool configurations.
-     * 
-     */
+        /**
+         * @return Additional tags for cluster resources. This property is ignored in instance pool configurations.
+         * 
+         */
     private final @Nullable Map<String,Object> newClusterCustomTags;
-    /**
-     * The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object newClusterDriverNodeType;
-    /**
-     * Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object newClusterEnableElasticDisk;
-    /**
-     * User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
-     * 
-     */
+        /**
+         * @return User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         */
     private final @Nullable Object newClusterInitScripts;
-    /**
-     * Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object newClusterLogDestination;
-    /**
-     * The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object newClusterNodeType;
-    /**
-     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object newClusterNumOfWorker;
-    /**
-     * A set of optional, user-specified Spark configuration key-value pairs.
-     * 
-     */
+        /**
+         * @return A set of optional, user-specified Spark configuration key-value pairs.
+         * 
+         */
     private final @Nullable Map<String,Object> newClusterSparkConf;
-    /**
-     * A set of optional, user-specified Spark environment variables key-value pairs.
-     * 
-     */
+        /**
+         * @return A set of optional, user-specified Spark environment variables key-value pairs.
+         * 
+         */
     private final @Nullable Map<String,Object> newClusterSparkEnvVars;
-    /**
-     * If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object newClusterVersion;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object policyId;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;AzureDatabricks&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;AzureDatabricks&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object workspaceResourceId;
 
     @CustomType.Constructor
@@ -195,171 +195,171 @@ public final class AzureDatabricksLinkedServiceResponse {
     }
 
     /**
-     * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+     * @return Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     * @return Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     * @return &lt;REGION&gt;.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object domain() {
         return this.domain;
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+     * @return The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> existingClusterId() {
         return Optional.ofNullable(this.existingClusterId);
     }
     /**
-     * The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+     * @return The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> instancePoolId() {
         return Optional.ofNullable(this.instancePoolId);
     }
     /**
-     * Additional tags for cluster resources. This property is ignored in instance pool configurations.
+     * @return Additional tags for cluster resources. This property is ignored in instance pool configurations.
      * 
-    */
+     */
     public Map<String,Object> newClusterCustomTags() {
         return this.newClusterCustomTags == null ? Map.of() : this.newClusterCustomTags;
     }
     /**
-     * The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+     * @return The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> newClusterDriverNodeType() {
         return Optional.ofNullable(this.newClusterDriverNodeType);
     }
     /**
-     * Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+     * @return Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> newClusterEnableElasticDisk() {
         return Optional.ofNullable(this.newClusterEnableElasticDisk);
     }
     /**
-     * User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+     * @return User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
      * 
-    */
+     */
     public Optional<Object> newClusterInitScripts() {
         return Optional.ofNullable(this.newClusterInitScripts);
     }
     /**
-     * Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+     * @return Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> newClusterLogDestination() {
         return Optional.ofNullable(this.newClusterLogDestination);
     }
     /**
-     * The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+     * @return The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> newClusterNodeType() {
         return Optional.ofNullable(this.newClusterNodeType);
     }
     /**
-     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+     * @return If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like &#39;1&#39; means numOfWorker is 1 or &#39;1:10&#39; means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as &#39;2&#39;. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> newClusterNumOfWorker() {
         return Optional.ofNullable(this.newClusterNumOfWorker);
     }
     /**
-     * A set of optional, user-specified Spark configuration key-value pairs.
+     * @return A set of optional, user-specified Spark configuration key-value pairs.
      * 
-    */
+     */
     public Map<String,Object> newClusterSparkConf() {
         return this.newClusterSparkConf == null ? Map.of() : this.newClusterSparkConf;
     }
     /**
-     * A set of optional, user-specified Spark environment variables key-value pairs.
+     * @return A set of optional, user-specified Spark environment variables key-value pairs.
      * 
-    */
+     */
     public Map<String,Object> newClusterSparkEnvVars() {
         return this.newClusterSparkEnvVars == null ? Map.of() : this.newClusterSparkEnvVars;
     }
     /**
-     * If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+     * @return If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> newClusterVersion() {
         return Optional.ofNullable(this.newClusterVersion);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+     * @return The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AzureDatabricks&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     * @return Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }

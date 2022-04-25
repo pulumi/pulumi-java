@@ -26,6 +26,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
     @Import(name="imageName")
     private @Nullable Output<String> imageName;
 
+    /**
+     * @return The image name for the build.
+     * 
+     */
     public Optional<Output<String>> imageName() {
         return Optional.ofNullable(this.imageName);
     }
@@ -37,6 +41,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return The password used to upload the image to the container registry.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -48,6 +56,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
     @Import(name="serverUrl")
     private @Nullable Output<String> serverUrl;
 
+    /**
+     * @return The server URL for the container registry where the build will be hosted.
+     * 
+     */
     public Optional<Output<String>> serverUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
@@ -59,6 +71,10 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return The username used to upload the image to the container registry.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -90,38 +106,86 @@ public final class GitHubActionContainerConfigurationArgs extends com.pulumi.res
             $ = new GitHubActionContainerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageName The image name for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(@Nullable Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName The image name for the build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }
 
+        /**
+         * @param password The password used to upload the image to the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password used to upload the image to the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param serverUrl The server URL for the container registry where the build will be hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverUrl(@Nullable Output<String> serverUrl) {
             $.serverUrl = serverUrl;
             return this;
         }
 
+        /**
+         * @param serverUrl The server URL for the container registry where the build will be hosted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverUrl(String serverUrl) {
             return serverUrl(Output.of(serverUrl));
         }
 
+        /**
+         * @param username The username used to upload the image to the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The username used to upload the image to the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

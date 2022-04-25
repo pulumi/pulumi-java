@@ -34,6 +34,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="dnsServiceIP")
     private @Nullable Output<String> dnsServiceIP;
 
+    /**
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * 
+     */
     public Optional<Output<String>> dnsServiceIP() {
         return Optional.ofNullable(this.dnsServiceIP);
     }
@@ -45,6 +49,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="dockerBridgeCidr")
     private @Nullable Output<String> dockerBridgeCidr;
 
+    /**
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * 
+     */
     public Optional<Output<String>> dockerBridgeCidr() {
         return Optional.ofNullable(this.dockerBridgeCidr);
     }
@@ -56,6 +64,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="loadBalancerProfile")
     private @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
 
+    /**
+     * @return Profile of the cluster load balancer.
+     * 
+     */
     public Optional<Output<ManagedClusterLoadBalancerProfileArgs>> loadBalancerProfile() {
         return Optional.ofNullable(this.loadBalancerProfile);
     }
@@ -67,6 +79,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="loadBalancerSku")
     private @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku;
 
+    /**
+     * @return The load balancer sku for the managed cluster.
+     * 
+     */
     public Optional<Output<Either<String,LoadBalancerSku>>> loadBalancerSku() {
         return Optional.ofNullable(this.loadBalancerSku);
     }
@@ -78,6 +94,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="networkMode")
     private @Nullable Output<Either<String,NetworkMode>> networkMode;
 
+    /**
+     * @return Network mode used for building Kubernetes network.
+     * 
+     */
     public Optional<Output<Either<String,NetworkMode>>> networkMode() {
         return Optional.ofNullable(this.networkMode);
     }
@@ -89,6 +109,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="networkPlugin")
     private @Nullable Output<Either<String,NetworkPlugin>> networkPlugin;
 
+    /**
+     * @return Network plugin used for building Kubernetes network.
+     * 
+     */
     public Optional<Output<Either<String,NetworkPlugin>>> networkPlugin() {
         return Optional.ofNullable(this.networkPlugin);
     }
@@ -100,6 +124,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="networkPolicy")
     private @Nullable Output<Either<String,NetworkPolicy>> networkPolicy;
 
+    /**
+     * @return Network policy used for building Kubernetes network.
+     * 
+     */
     public Optional<Output<Either<String,NetworkPolicy>>> networkPolicy() {
         return Optional.ofNullable(this.networkPolicy);
     }
@@ -111,6 +139,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="outboundType")
     private @Nullable Output<Either<String,OutboundType>> outboundType;
 
+    /**
+     * @return The outbound (egress) routing method.
+     * 
+     */
     public Optional<Output<Either<String,OutboundType>>> outboundType() {
         return Optional.ofNullable(this.outboundType);
     }
@@ -122,6 +154,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="podCidr")
     private @Nullable Output<String> podCidr;
 
+    /**
+     * @return A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+     * 
+     */
     public Optional<Output<String>> podCidr() {
         return Optional.ofNullable(this.podCidr);
     }
@@ -133,6 +169,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
     @Import(name="serviceCidr")
     private @Nullable Output<String> serviceCidr;
 
+    /**
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * 
+     */
     public Optional<Output<String>> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -170,132 +210,312 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
             $ = new ContainerServiceNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServiceIP An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIP(@Nullable Output<String> dnsServiceIP) {
             $.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
+        /**
+         * @param dnsServiceIP An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIP(String dnsServiceIP) {
             return dnsServiceIP(Output.of(dnsServiceIP));
         }
 
+        /**
+         * @param dockerBridgeCidr A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerBridgeCidr(@Nullable Output<String> dockerBridgeCidr) {
             $.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
+        /**
+         * @param dockerBridgeCidr A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerBridgeCidr(String dockerBridgeCidr) {
             return dockerBridgeCidr(Output.of(dockerBridgeCidr));
         }
 
+        /**
+         * @param loadBalancerProfile Profile of the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerProfile(@Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile) {
             $.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
 
+        /**
+         * @param loadBalancerProfile Profile of the cluster load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerProfile(ManagedClusterLoadBalancerProfileArgs loadBalancerProfile) {
             return loadBalancerProfile(Output.of(loadBalancerProfile));
         }
 
+        /**
+         * @param loadBalancerSku The load balancer sku for the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSku(@Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku) {
             $.loadBalancerSku = loadBalancerSku;
             return this;
         }
 
+        /**
+         * @param loadBalancerSku The load balancer sku for the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSku(Either<String,LoadBalancerSku> loadBalancerSku) {
             return loadBalancerSku(Output.of(loadBalancerSku));
         }
 
+        /**
+         * @param loadBalancerSku The load balancer sku for the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSku(String loadBalancerSku) {
             return loadBalancerSku(Either.ofLeft(loadBalancerSku));
         }
 
+        /**
+         * @param loadBalancerSku The load balancer sku for the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerSku(LoadBalancerSku loadBalancerSku) {
             return loadBalancerSku(Either.ofRight(loadBalancerSku));
         }
 
+        /**
+         * @param networkMode Network mode used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(@Nullable Output<Either<String,NetworkMode>> networkMode) {
             $.networkMode = networkMode;
             return this;
         }
 
+        /**
+         * @param networkMode Network mode used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(Either<String,NetworkMode> networkMode) {
             return networkMode(Output.of(networkMode));
         }
 
+        /**
+         * @param networkMode Network mode used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(String networkMode) {
             return networkMode(Either.ofLeft(networkMode));
         }
 
+        /**
+         * @param networkMode Network mode used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkMode(NetworkMode networkMode) {
             return networkMode(Either.ofRight(networkMode));
         }
 
+        /**
+         * @param networkPlugin Network plugin used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPlugin(@Nullable Output<Either<String,NetworkPlugin>> networkPlugin) {
             $.networkPlugin = networkPlugin;
             return this;
         }
 
+        /**
+         * @param networkPlugin Network plugin used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPlugin(Either<String,NetworkPlugin> networkPlugin) {
             return networkPlugin(Output.of(networkPlugin));
         }
 
+        /**
+         * @param networkPlugin Network plugin used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPlugin(String networkPlugin) {
             return networkPlugin(Either.ofLeft(networkPlugin));
         }
 
+        /**
+         * @param networkPlugin Network plugin used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPlugin(NetworkPlugin networkPlugin) {
             return networkPlugin(Either.ofRight(networkPlugin));
         }
 
+        /**
+         * @param networkPolicy Network policy used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(@Nullable Output<Either<String,NetworkPolicy>> networkPolicy) {
             $.networkPolicy = networkPolicy;
             return this;
         }
 
+        /**
+         * @param networkPolicy Network policy used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(Either<String,NetworkPolicy> networkPolicy) {
             return networkPolicy(Output.of(networkPolicy));
         }
 
+        /**
+         * @param networkPolicy Network policy used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(String networkPolicy) {
             return networkPolicy(Either.ofLeft(networkPolicy));
         }
 
+        /**
+         * @param networkPolicy Network policy used for building Kubernetes network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicy(NetworkPolicy networkPolicy) {
             return networkPolicy(Either.ofRight(networkPolicy));
         }
 
+        /**
+         * @param outboundType The outbound (egress) routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundType(@Nullable Output<Either<String,OutboundType>> outboundType) {
             $.outboundType = outboundType;
             return this;
         }
 
+        /**
+         * @param outboundType The outbound (egress) routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundType(Either<String,OutboundType> outboundType) {
             return outboundType(Output.of(outboundType));
         }
 
+        /**
+         * @param outboundType The outbound (egress) routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundType(String outboundType) {
             return outboundType(Either.ofLeft(outboundType));
         }
 
+        /**
+         * @param outboundType The outbound (egress) routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundType(OutboundType outboundType) {
             return outboundType(Either.ofRight(outboundType));
         }
 
+        /**
+         * @param podCidr A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCidr(@Nullable Output<String> podCidr) {
             $.podCidr = podCidr;
             return this;
         }
 
+        /**
+         * @param podCidr A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCidr(String podCidr) {
             return podCidr(Output.of(podCidr));
         }
 
+        /**
+         * @param serviceCidr A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             $.serviceCidr = serviceCidr;
             return this;
         }
 
+        /**
+         * @param serviceCidr A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(String serviceCidr) {
             return serviceCidr(Output.of(serviceCidr));
         }

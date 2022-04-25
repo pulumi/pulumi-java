@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEntityInsightsResult {
-    /**
-     * The metadata from the get insights operation results.
-     * 
-     */
+        /**
+         * @return The metadata from the get insights operation results.
+         * 
+         */
     private final @Nullable GetInsightsResultsMetadataResponse metaData;
-    /**
-     * The insights result values.
-     * 
-     */
+        /**
+         * @return The insights result values.
+         * 
+         */
     private final @Nullable List<EntityInsightItemResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class GetEntityInsightsResult {
     }
 
     /**
-     * The metadata from the get insights operation results.
+     * @return The metadata from the get insights operation results.
      * 
-    */
+     */
     public Optional<GetInsightsResultsMetadataResponse> metaData() {
         return Optional.ofNullable(this.metaData);
     }
     /**
-     * The insights result values.
+     * @return The insights result values.
      * 
-    */
+     */
     public List<EntityInsightItemResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

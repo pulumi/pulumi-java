@@ -25,6 +25,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="identityClientId")
     private @Nullable String identityClientId;
 
+    /**
+     * @return The client id of the identity which will be used to access key vault.
+     * 
+     */
     public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
@@ -36,6 +40,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyIdentifier")
     private @Nullable String keyIdentifier;
 
+    /**
+     * @return The URI of the key vault key used to encrypt data.
+     * 
+     */
     public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -65,11 +73,23 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityClientId The client id of the identity which will be used to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(@Nullable String identityClientId) {
             $.identityClientId = identityClientId;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The URI of the key vault key used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;

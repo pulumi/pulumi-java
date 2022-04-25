@@ -11,21 +11,21 @@ import java.util.Objects;
 
 @CustomType
 public final class ListMachineLearningComputeNodesResult {
-    /**
-     * The type of compute
-     * Expected value is &#39;AmlCompute&#39;.
-     * 
-     */
+        /**
+         * @return The type of compute
+         * Expected value is &#39;AmlCompute&#39;.
+         * 
+         */
     private final String computeType;
-    /**
-     * The continuation token.
-     * 
-     */
+        /**
+         * @return The continuation token.
+         * 
+         */
     private final String nextLink;
-    /**
-     * The collection of returned AmlCompute nodes details.
-     * 
-     */
+        /**
+         * @return The collection of returned AmlCompute nodes details.
+         * 
+         */
     private final List<AmlComputeNodeInformationResponse> nodes;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class ListMachineLearningComputeNodesResult {
     }
 
     /**
-     * The type of compute
+     * @return The type of compute
      * Expected value is &#39;AmlCompute&#39;.
      * 
-    */
+     */
     public String computeType() {
         return this.computeType;
     }
     /**
-     * The continuation token.
+     * @return The continuation token.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * The collection of returned AmlCompute nodes details.
+     * @return The collection of returned AmlCompute nodes details.
      * 
-    */
+     */
     public List<AmlComputeNodeInformationResponse> nodes() {
         return this.nodes;
     }

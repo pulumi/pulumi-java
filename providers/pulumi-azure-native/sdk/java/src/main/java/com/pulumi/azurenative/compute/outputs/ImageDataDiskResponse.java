@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageDataDiskResponse {
-    /**
-     * The Virtual Hard Disk.
-     * 
-     */
+        /**
+         * @return The Virtual Hard Disk.
+         * 
+         */
     private final @Nullable String blobUri;
-    /**
-     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
-     */
+        /**
+         * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         */
     private final @Nullable String caching;
-    /**
-     * Specifies the customer managed disk encryption set resource id for the managed image disk.
-     * 
-     */
+        /**
+         * @return Specifies the customer managed disk encryption set resource id for the managed image disk.
+         * 
+         */
     private final @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet;
-    /**
-     * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
-     * 
-     */
+        /**
+         * @return Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         */
     private final @Nullable Integer diskSizeGB;
-    /**
-     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
-     */
+        /**
+         * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         */
     private final Integer lun;
-    /**
-     * The managedDisk.
-     * 
-     */
+        /**
+         * @return The managedDisk.
+         * 
+         */
     private final @Nullable SubResourceResponse managedDisk;
-    /**
-     * The snapshot.
-     * 
-     */
+        /**
+         * @return The snapshot.
+         * 
+         */
     private final @Nullable SubResourceResponse snapshot;
-    /**
-     * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
-     * 
-     */
+        /**
+         * @return Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         */
     private final @Nullable String storageAccountType;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class ImageDataDiskResponse {
     }
 
     /**
-     * The Virtual Hard Disk.
+     * @return The Virtual Hard Disk.
      * 
-    */
+     */
     public Optional<String> blobUri() {
         return Optional.ofNullable(this.blobUri);
     }
     /**
-     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
-    */
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
-     * Specifies the customer managed disk encryption set resource id for the managed image disk.
+     * @return Specifies the customer managed disk encryption set resource id for the managed image disk.
      * 
-    */
+     */
     public Optional<DiskEncryptionSetParametersResponse> diskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
     /**
-     * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * @return Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
-    */
+     */
     public Integer lun() {
         return this.lun;
     }
     /**
-     * The managedDisk.
+     * @return The managedDisk.
      * 
-    */
+     */
     public Optional<SubResourceResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
-     * The snapshot.
+     * @return The snapshot.
      * 
-    */
+     */
     public Optional<SubResourceResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
-     * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+     * @return Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
      * 
-    */
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }

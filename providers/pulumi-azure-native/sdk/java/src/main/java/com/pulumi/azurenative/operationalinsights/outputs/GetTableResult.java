@@ -17,75 +17,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTableResult {
-    /**
-     * The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
-     * 
-     */
+        /**
+         * @return The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
+         * 
+         */
     private final Integer archiveRetentionInDays;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The timestamp that table plan was last modified (UTC).
-     * 
-     */
+        /**
+         * @return The timestamp that table plan was last modified (UTC).
+         * 
+         */
     private final String lastPlanModifiedDate;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The table plan.
-     * 
-     */
+        /**
+         * @return The table plan.
+         * 
+         */
     private final @Nullable String plan;
-    /**
-     * Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
-     * 
-     */
+        /**
+         * @return Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Parameters of the restore operation that initiated this table.
-     * 
-     */
+        /**
+         * @return Parameters of the restore operation that initiated this table.
+         * 
+         */
     private final @Nullable RestoredLogsResponse restoredLogs;
-    /**
-     * Search job execution statistics.
-     * 
-     */
+        /**
+         * @return Search job execution statistics.
+         * 
+         */
     private final @Nullable ResultStatisticsResponse resultStatistics;
-    /**
-     * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
-     * 
-     */
+        /**
+         * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+         * 
+         */
     private final @Nullable Integer retentionInDays;
-    /**
-     * Table schema.
-     * 
-     */
+        /**
+         * @return Table schema.
+         * 
+         */
     private final @Nullable SchemaResponse schema;
-    /**
-     * Parameters of the search job that initiated this table.
-     * 
-     */
+        /**
+         * @return Parameters of the search job that initiated this table.
+         * 
+         */
     private final @Nullable SearchResultsResponse searchResults;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
-     * 
-     */
+        /**
+         * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+         * 
+         */
     private final @Nullable Integer totalRetentionInDays;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -121,100 +121,100 @@ public final class GetTableResult {
     }
 
     /**
-     * The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
+     * @return The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
      * 
-    */
+     */
     public Integer archiveRetentionInDays() {
         return this.archiveRetentionInDays;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The timestamp that table plan was last modified (UTC).
+     * @return The timestamp that table plan was last modified (UTC).
      * 
-    */
+     */
     public String lastPlanModifiedDate() {
         return this.lastPlanModifiedDate;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The table plan.
+     * @return The table plan.
      * 
-    */
+     */
     public Optional<String> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
+     * @return Table&#39;s current provisioning state. If set to &#39;updating&#39;, indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Parameters of the restore operation that initiated this table.
+     * @return Parameters of the restore operation that initiated this table.
      * 
-    */
+     */
     public Optional<RestoredLogsResponse> restoredLogs() {
         return Optional.ofNullable(this.restoredLogs);
     }
     /**
-     * Search job execution statistics.
+     * @return Search job execution statistics.
      * 
-    */
+     */
     public Optional<ResultStatisticsResponse> resultStatistics() {
         return Optional.ofNullable(this.resultStatistics);
     }
     /**
-     * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
+     * @return The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
      * 
-    */
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
-     * Table schema.
+     * @return Table schema.
      * 
-    */
+     */
     public Optional<SchemaResponse> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Parameters of the search job that initiated this table.
+     * @return Parameters of the search job that initiated this table.
      * 
-    */
+     */
     public Optional<SearchResultsResponse> searchResults() {
         return Optional.ofNullable(this.searchResults);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
+     * @return The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
      * 
-    */
+     */
     public Optional<Integer> totalRetentionInDays() {
         return Optional.ofNullable(this.totalRetentionInDays);
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

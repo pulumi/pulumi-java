@@ -27,6 +27,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="automationAccountId", required=true)
     private String automationAccountId;
 
+    /**
+     * @return The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+     * 
+     */
     public String automationAccountId() {
         return this.automationAccountId;
     }
@@ -38,6 +42,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="isGlobalRunbook", required=true)
     private Boolean isGlobalRunbook;
 
+    /**
+     * @return Indicates whether this instance is global runbook.
+     * 
+     */
     public Boolean isGlobalRunbook() {
         return this.isGlobalRunbook;
     }
@@ -49,6 +57,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Indicates name of the webhook.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="runbookName", required=true)
     private String runbookName;
 
+    /**
+     * @return The name for this runbook.
+     * 
+     */
     public String runbookName() {
         return this.runbookName;
     }
@@ -71,6 +87,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="serviceUri")
     private @Nullable String serviceUri;
 
+    /**
+     * @return The URI where webhooks should be sent.
+     * 
+     */
     public Optional<String> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -82,6 +102,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="useCommonAlertSchema")
     private @Nullable Boolean useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -93,6 +117,10 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
     @Import(name="webhookResourceId", required=true)
     private String webhookResourceId;
 
+    /**
+     * @return The resource id for webhook linked to this runbook.
+     * 
+     */
     public String webhookResourceId() {
         return this.webhookResourceId;
     }
@@ -127,36 +155,78 @@ public final class AutomationRunbookReceiverResponse extends com.pulumi.resource
             $ = new AutomationRunbookReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountId The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountId(String automationAccountId) {
             $.automationAccountId = automationAccountId;
             return this;
         }
 
+        /**
+         * @param isGlobalRunbook Indicates whether this instance is global runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
             $.isGlobalRunbook = isGlobalRunbook;
             return this;
         }
 
+        /**
+         * @param name Indicates name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param runbookName The name for this runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbookName(String runbookName) {
             $.runbookName = runbookName;
             return this;
         }
 
+        /**
+         * @param serviceUri The URI where webhooks should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(@Nullable String serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
+        /**
+         * @param webhookResourceId The resource id for webhook linked to this runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookResourceId(String webhookResourceId) {
             $.webhookResourceId = webhookResourceId;
             return this;

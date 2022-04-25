@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ComputeVmPropertiesResponse {
-    /**
-     * Gets data disks blob uri for the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets data disks blob uri for the virtual machine.
+         * 
+         */
     private final @Nullable List<String> dataDiskIds;
-    /**
-     * Gets all data disks attached to the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets all data disks attached to the virtual machine.
+         * 
+         */
     private final @Nullable List<ComputeDataDiskResponse> dataDisks;
-    /**
-     * Gets the network interface ID of the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets the network interface ID of the virtual machine.
+         * 
+         */
     private final @Nullable String networkInterfaceId;
-    /**
-     * Gets OS disk blob uri for the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets OS disk blob uri for the virtual machine.
+         * 
+         */
     private final @Nullable String osDiskId;
-    /**
-     * Gets the OS type of the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets the OS type of the virtual machine.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * Gets the statuses of the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets the statuses of the virtual machine.
+         * 
+         */
     private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
-    /**
-     * Gets the size of the virtual machine.
-     * 
-     */
+        /**
+         * @return Gets the size of the virtual machine.
+         * 
+         */
     private final @Nullable String vmSize;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class ComputeVmPropertiesResponse {
     }
 
     /**
-     * Gets data disks blob uri for the virtual machine.
+     * @return Gets data disks blob uri for the virtual machine.
      * 
-    */
+     */
     public List<String> dataDiskIds() {
         return this.dataDiskIds == null ? List.of() : this.dataDiskIds;
     }
     /**
-     * Gets all data disks attached to the virtual machine.
+     * @return Gets all data disks attached to the virtual machine.
      * 
-    */
+     */
     public List<ComputeDataDiskResponse> dataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
-     * Gets the network interface ID of the virtual machine.
+     * @return Gets the network interface ID of the virtual machine.
      * 
-    */
+     */
     public Optional<String> networkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
     /**
-     * Gets OS disk blob uri for the virtual machine.
+     * @return Gets OS disk blob uri for the virtual machine.
      * 
-    */
+     */
     public Optional<String> osDiskId() {
         return Optional.ofNullable(this.osDiskId);
     }
     /**
-     * Gets the OS type of the virtual machine.
+     * @return Gets the OS type of the virtual machine.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Gets the statuses of the virtual machine.
+     * @return Gets the statuses of the virtual machine.
      * 
-    */
+     */
     public List<ComputeVmInstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
-     * Gets the size of the virtual machine.
+     * @return Gets the size of the virtual machine.
      * 
-    */
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }

@@ -19,6 +19,10 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostPoolName", required=true)
     private String hostPoolName;
 
+    /**
+     * @return The name of the host pool within the specified resource group
+     * 
+     */
     public String hostPoolName() {
         return this.hostPoolName;
     }
@@ -30,6 +34,10 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="msixPackageFullName", required=true)
     private String msixPackageFullName;
 
+    /**
+     * @return The version specific package full name of the MSIX package within specified hostpool
+     * 
+     */
     public String msixPackageFullName() {
         return this.msixPackageFullName;
     }
@@ -41,6 +49,10 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetMSIXPackageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMSIXPackageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostPoolName The name of the host pool within the specified resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolName(String hostPoolName) {
             $.hostPoolName = hostPoolName;
             return this;
         }
 
+        /**
+         * @param msixPackageFullName The version specific package full name of the MSIX package within specified hostpool
+         * 
+         * @return builder
+         * 
+         */
         public Builder msixPackageFullName(String msixPackageFullName) {
             $.msixPackageFullName = msixPackageFullName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionStatusDefinitionResponse {
-    /**
-     * Connection error
-     * 
-     */
+        /**
+         * @return Connection error
+         * 
+         */
     private final @Nullable ConnectionErrorResponse error;
-    /**
-     * The gateway status
-     * 
-     */
+        /**
+         * @return The gateway status
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * Target of the error
-     * 
-     */
+        /**
+         * @return Target of the error
+         * 
+         */
     private final @Nullable String target;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ConnectionStatusDefinitionResponse {
     }
 
     /**
-     * Connection error
+     * @return Connection error
      * 
-    */
+     */
     public Optional<ConnectionErrorResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * The gateway status
+     * @return The gateway status
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Target of the error
+     * @return Target of the error
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

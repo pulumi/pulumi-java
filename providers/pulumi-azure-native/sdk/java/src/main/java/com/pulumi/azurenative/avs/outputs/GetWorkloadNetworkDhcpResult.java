@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkloadNetworkDhcpResult {
-    /**
-     * Type of DHCP: SERVER or RELAY.
-     * 
-     */
+        /**
+         * @return Type of DHCP: SERVER or RELAY.
+         * 
+         */
     private final String dhcpType;
-    /**
-     * Display name of the DHCP entity.
-     * 
-     */
+        /**
+         * @return Display name of the DHCP entity.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state
-     * 
-     */
+        /**
+         * @return The provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * NSX revision number.
-     * 
-     */
+        /**
+         * @return NSX revision number.
+         * 
+         */
     private final @Nullable Double revision;
-    /**
-     * NSX Segments consuming DHCP.
-     * 
-     */
+        /**
+         * @return NSX Segments consuming DHCP.
+         * 
+         */
     private final List<String> segments;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetWorkloadNetworkDhcpResult {
     }
 
     /**
-     * Type of DHCP: SERVER or RELAY.
+     * @return Type of DHCP: SERVER or RELAY.
      * 
-    */
+     */
     public String dhcpType() {
         return this.dhcpType;
     }
     /**
-     * Display name of the DHCP entity.
+     * @return Display name of the DHCP entity.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
-    */
+     */
     public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * NSX Segments consuming DHCP.
+     * @return NSX Segments consuming DHCP.
      * 
-    */
+     */
     public List<String> segments() {
         return this.segments;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

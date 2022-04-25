@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageTemplateLastRunStatusResponse {
-    /**
-     * End time of the last run (UTC)
-     * 
-     */
+        /**
+         * @return End time of the last run (UTC)
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * Verbose information about the last run state
-     * 
-     */
+        /**
+         * @return Verbose information about the last run state
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * State of the last run
-     * 
-     */
+        /**
+         * @return State of the last run
+         * 
+         */
     private final @Nullable String runState;
-    /**
-     * Sub-state of the last run
-     * 
-     */
+        /**
+         * @return Sub-state of the last run
+         * 
+         */
     private final @Nullable String runSubState;
-    /**
-     * Start time of the last run (UTC)
-     * 
-     */
+        /**
+         * @return Start time of the last run (UTC)
+         * 
+         */
     private final @Nullable String startTime;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ImageTemplateLastRunStatusResponse {
     }
 
     /**
-     * End time of the last run (UTC)
+     * @return End time of the last run (UTC)
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Verbose information about the last run state
+     * @return Verbose information about the last run state
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * State of the last run
+     * @return State of the last run
      * 
-    */
+     */
     public Optional<String> runState() {
         return Optional.ofNullable(this.runState);
     }
     /**
-     * Sub-state of the last run
+     * @return Sub-state of the last run
      * 
-    */
+     */
     public Optional<String> runSubState() {
         return Optional.ofNullable(this.runSubState);
     }
     /**
-     * Start time of the last run (UTC)
+     * @return Start time of the last run (UTC)
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }

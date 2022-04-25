@@ -30,6 +30,10 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="considerWarningAsError")
     private @Nullable Boolean considerWarningAsError;
 
+    /**
+     * @return Indicates whether warnings are treated with the same severity as errors.
+     * 
+     */
     public Optional<Boolean> considerWarningAsError() {
         return Optional.ofNullable(this.considerWarningAsError);
     }
@@ -41,6 +45,10 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="defaultServiceTypeHealthPolicy")
     private @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
+    /**
+     * @return The health policy used by default to evaluate the health of a service type.
+     * 
+     */
     public Optional<ArmServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
@@ -55,6 +63,13 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="maxPercentUnhealthyDeployedApplications")
     private @Nullable Integer maxPercentUnhealthyDeployedApplications;
 
+    /**
+     * @return The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
+     * The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
+     * This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
+     * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+     * 
+     */
     public Optional<Integer> maxPercentUnhealthyDeployedApplications() {
         return Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
     }
@@ -66,6 +81,10 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
     @Import(name="serviceTypeHealthPolicyMap")
     private @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
+    /**
+     * @return The map with service type health policy per service type name. The map is empty by default.
+     * 
+     */
     public Optional<Map<String,ArmServiceTypeHealthPolicyResponse>> serviceTypeHealthPolicyMap() {
         return Optional.ofNullable(this.serviceTypeHealthPolicyMap);
     }
@@ -97,21 +116,48 @@ public final class ArmApplicationHealthPolicyResponse extends com.pulumi.resourc
             $ = new ArmApplicationHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param considerWarningAsError Indicates whether warnings are treated with the same severity as errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
             $.considerWarningAsError = considerWarningAsError;
             return this;
         }
 
+        /**
+         * @param defaultServiceTypeHealthPolicy The health policy used by default to evaluate the health of a service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
             $.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
+        /**
+         * @param maxPercentUnhealthyDeployedApplications The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
+         * The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
+         * This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
+         * The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
             $.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
             return this;
         }
 
+        /**
+         * @param serviceTypeHealthPolicyMap The map with service type health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
             $.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;

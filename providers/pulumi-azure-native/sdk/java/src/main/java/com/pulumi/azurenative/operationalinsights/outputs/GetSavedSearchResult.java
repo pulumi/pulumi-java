@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSavedSearchResult {
-    /**
-     * The category of the saved search. This helps the user to find a saved search faster.
-     * 
-     */
+        /**
+         * @return The category of the saved search. This helps the user to find a saved search faster.
+         * 
+         */
     private final String category;
-    /**
-     * Saved search display name.
-     * 
-     */
+        /**
+         * @return Saved search display name.
+         * 
+         */
     private final String displayName;
-    /**
-     * The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
-     * 
-     */
+        /**
+         * @return The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * The function alias if query serves as a function.
-     * 
-     */
+        /**
+         * @return The function alias if query serves as a function.
+         * 
+         */
     private final @Nullable String functionAlias;
-    /**
-     * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
-     * 
-     */
+        /**
+         * @return The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+         * 
+         */
     private final @Nullable String functionParameters;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The query expression for the saved search.
-     * 
-     */
+        /**
+         * @return The query expression for the saved search.
+         * 
+         */
     private final String query;
-    /**
-     * The tags attached to the saved search.
-     * 
-     */
+        /**
+         * @return The tags attached to the saved search.
+         * 
+         */
     private final @Nullable List<TagResponse> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The version number of the query language. The current version is 2 and is the default.
-     * 
-     */
+        /**
+         * @return The version number of the query language. The current version is 2 and is the default.
+         * 
+         */
     private final @Nullable Double version;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetSavedSearchResult {
     }
 
     /**
-     * The category of the saved search. This helps the user to find a saved search faster.
+     * @return The category of the saved search. This helps the user to find a saved search faster.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * Saved search display name.
+     * @return Saved search display name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
+     * @return The ETag of the saved search. To override an existing saved search, use &#34;*&#34; or specify the current Etag
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The function alias if query serves as a function.
+     * @return The function alias if query serves as a function.
      * 
-    */
+     */
     public Optional<String> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
     /**
-     * The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
+     * @return The optional function parameters if query serves as a function. Value should be in the following format: &#39;param-name1:type1 = default_value1, param-name2:type2 = default_value2&#39;. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
-    */
+     */
     public Optional<String> functionParameters() {
         return Optional.ofNullable(this.functionParameters);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The query expression for the saved search.
+     * @return The query expression for the saved search.
      * 
-    */
+     */
     public String query() {
         return this.query;
     }
     /**
-     * The tags attached to the saved search.
+     * @return The tags attached to the saved search.
      * 
-    */
+     */
     public List<TagResponse> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The version number of the query language. The current version is 2 and is the default.
+     * @return The version number of the query language. The current version is 2 and is the default.
      * 
-    */
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }

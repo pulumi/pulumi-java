@@ -20,55 +20,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAssessmentResult {
-    /**
-     * Additional data regarding the assessment
-     * 
-     */
+        /**
+         * @return Additional data regarding the assessment
+         * 
+         */
     private final @Nullable Map<String,String> additionalData;
-    /**
-     * User friendly display name of the assessment
-     * 
-     */
+        /**
+         * @return User friendly display name of the assessment
+         * 
+         */
     private final String displayName;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Links relevant to the assessment
-     * 
-     */
+        /**
+         * @return Links relevant to the assessment
+         * 
+         */
     private final AssessmentLinksResponse links;
-    /**
-     * Describes properties of an assessment metadata.
-     * 
-     */
+        /**
+         * @return Describes properties of an assessment metadata.
+         * 
+         */
     private final @Nullable SecurityAssessmentMetadataPropertiesResponse metadata;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Data regarding 3rd party partner integration
-     * 
-     */
+        /**
+         * @return Data regarding 3rd party partner integration
+         * 
+         */
     private final @Nullable SecurityAssessmentPartnerDataResponse partnersData;
-    /**
-     * Details of the resource that was assessed
-     * 
-     */
+        /**
+         * @return Details of the resource that was assessed
+         * 
+         */
     private final Object resourceDetails;
-    /**
-     * The result of the assessment
-     * 
-     */
+        /**
+         * @return The result of the assessment
+         * 
+         */
     private final AssessmentStatusResponse status;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -96,72 +96,72 @@ public final class GetAssessmentResult {
     }
 
     /**
-     * Additional data regarding the assessment
+     * @return Additional data regarding the assessment
      * 
-    */
+     */
     public Map<String,String> additionalData() {
         return this.additionalData == null ? Map.of() : this.additionalData;
     }
     /**
-     * User friendly display name of the assessment
+     * @return User friendly display name of the assessment
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Links relevant to the assessment
+     * @return Links relevant to the assessment
      * 
-    */
+     */
     public AssessmentLinksResponse links() {
         return this.links;
     }
     /**
-     * Describes properties of an assessment metadata.
+     * @return Describes properties of an assessment metadata.
      * 
-    */
+     */
     public Optional<SecurityAssessmentMetadataPropertiesResponse> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Data regarding 3rd party partner integration
+     * @return Data regarding 3rd party partner integration
      * 
-    */
+     */
     public Optional<SecurityAssessmentPartnerDataResponse> partnersData() {
         return Optional.ofNullable(this.partnersData);
     }
     /**
-     * Details of the resource that was assessed
+     * @return Details of the resource that was assessed
      * 
-    */
+     */
     public Object resourceDetails() {
         return this.resourceDetails;
     }
     /**
-     * The result of the assessment
+     * @return The result of the assessment
      * 
-    */
+     */
     public AssessmentStatusResponse status() {
         return this.status;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

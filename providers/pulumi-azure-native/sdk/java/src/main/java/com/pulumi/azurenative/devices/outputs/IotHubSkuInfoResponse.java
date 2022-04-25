@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IotHubSkuInfoResponse {
-    /**
-     * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
-     * 
-     */
+        /**
+         * @return The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+         * 
+         */
     private final @Nullable Double capacity;
-    /**
-     * The name of the SKU.
-     * 
-     */
+        /**
+         * @return The name of the SKU.
+         * 
+         */
     private final String name;
-    /**
-     * The billing tier for the IoT hub.
-     * 
-     */
+        /**
+         * @return The billing tier for the IoT hub.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class IotHubSkuInfoResponse {
     }
 
     /**
-     * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+     * @return The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
      * 
-    */
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The name of the SKU.
+     * @return The name of the SKU.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The billing tier for the IoT hub.
+     * @return The billing tier for the IoT hub.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

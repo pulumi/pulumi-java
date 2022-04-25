@@ -22,6 +22,10 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
     @Import(name="remediationName", required=true)
     private String remediationName;
 
+    /**
+     * @return The name of the remediation.
+     * 
+     */
     public String remediationName() {
         return this.remediationName;
     }
@@ -33,6 +37,10 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -44,6 +52,10 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
     @Import(name="top")
     private @Nullable Integer top;
 
+    /**
+     * @return Maximum number of records to return.
+     * 
+     */
     public Optional<Integer> top() {
         return Optional.ofNullable(this.top);
     }
@@ -74,16 +86,34 @@ public final class ListRemediationDeploymentsAtResourceArgs extends com.pulumi.r
             $ = new ListRemediationDeploymentsAtResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param remediationName The name of the remediation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remediationName(String remediationName) {
             $.remediationName = remediationName;
             return this;
         }
 
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param top Maximum number of records to return.
+         * 
+         * @return builder
+         * 
+         */
         public Builder top(@Nullable Integer top) {
             $.top = top;
             return this;

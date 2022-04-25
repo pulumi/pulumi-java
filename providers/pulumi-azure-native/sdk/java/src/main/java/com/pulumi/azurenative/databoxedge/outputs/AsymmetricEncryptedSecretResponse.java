@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AsymmetricEncryptedSecretResponse {
-    /**
-     * The algorithm used to encrypt &#34;Value&#34;.
-     * 
-     */
+        /**
+         * @return The algorithm used to encrypt &#34;Value&#34;.
+         * 
+         */
     private final String encryptionAlgorithm;
-    /**
-     * Thumbprint certificate used to encrypt \&#34;Value\&#34;. If the value is unencrypted, it will be null.
-     * 
-     */
+        /**
+         * @return Thumbprint certificate used to encrypt \&#34;Value\&#34;. If the value is unencrypted, it will be null.
+         * 
+         */
     private final @Nullable String encryptionCertThumbprint;
-    /**
-     * The value of the secret.
-     * 
-     */
+        /**
+         * @return The value of the secret.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AsymmetricEncryptedSecretResponse {
     }
 
     /**
-     * The algorithm used to encrypt &#34;Value&#34;.
+     * @return The algorithm used to encrypt &#34;Value&#34;.
      * 
-    */
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
-     * Thumbprint certificate used to encrypt \&#34;Value\&#34;. If the value is unencrypted, it will be null.
+     * @return Thumbprint certificate used to encrypt \&#34;Value\&#34;. If the value is unencrypted, it will be null.
      * 
-    */
+     */
     public Optional<String> encryptionCertThumbprint() {
         return Optional.ofNullable(this.encryptionCertThumbprint);
     }
     /**
-     * The value of the secret.
+     * @return The value of the secret.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

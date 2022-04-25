@@ -23,6 +23,10 @@ public final class QueryPackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class QueryPackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryPackName")
     private @Nullable Output<String> queryPackName;
 
+    /**
+     * @return The name of the Log Analytics QueryPack resource.
+     * 
+     */
     public Optional<Output<String>> queryPackName() {
         return Optional.ofNullable(this.queryPackName);
     }
@@ -45,6 +53,10 @@ public final class QueryPackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class QueryPackArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class QueryPackArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QueryPackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPackName(@Nullable Output<String> queryPackName) {
             $.queryPackName = queryPackName;
             return this;
         }
 
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPackName(String queryPackName) {
             return queryPackName(Output.of(queryPackName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

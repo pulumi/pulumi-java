@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetOrganizationResult {
-    /**
-     * The creation time of the resource.
-     * 
-     */
+        /**
+         * @return The creation time of the resource.
+         * 
+         */
     private final String createdTime;
-    /**
-     * The ARM id of the resource.
-     * 
-     */
+        /**
+         * @return The ARM id of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * Location of Organization resource
-     * 
-     */
+        /**
+         * @return Location of Organization resource
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Confluent offer detail
-     * 
-     */
+        /**
+         * @return Confluent offer detail
+         * 
+         */
     private final @Nullable OrganizationResourcePropertiesResponseOfferDetail offerDetail;
-    /**
-     * Id of the Confluent organization.
-     * 
-     */
+        /**
+         * @return Id of the Confluent organization.
+         * 
+         */
     private final String organizationId;
-    /**
-     * Provision states for confluent RP
-     * 
-     */
+        /**
+         * @return Provision states for confluent RP
+         * 
+         */
     private final String provisioningState;
-    /**
-     * SSO url for the Confluent organization.
-     * 
-     */
+        /**
+         * @return SSO url for the Confluent organization.
+         * 
+         */
     private final String ssoUrl;
-    /**
-     * Organization resource tags
-     * 
-     */
+        /**
+         * @return Organization resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * Subscriber detail
-     * 
-     */
+        /**
+         * @return Subscriber detail
+         * 
+         */
     private final @Nullable OrganizationResourcePropertiesResponseUserDetail userDetail;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetOrganizationResult {
     }
 
     /**
-     * The creation time of the resource.
+     * @return The creation time of the resource.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The ARM id of the resource.
+     * @return The ARM id of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of Organization resource
+     * @return Location of Organization resource
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Confluent offer detail
+     * @return Confluent offer detail
      * 
-    */
+     */
     public Optional<OrganizationResourcePropertiesResponseOfferDetail> offerDetail() {
         return Optional.ofNullable(this.offerDetail);
     }
     /**
-     * Id of the Confluent organization.
+     * @return Id of the Confluent organization.
      * 
-    */
+     */
     public String organizationId() {
         return this.organizationId;
     }
     /**
-     * Provision states for confluent RP
+     * @return Provision states for confluent RP
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * SSO url for the Confluent organization.
+     * @return SSO url for the Confluent organization.
      * 
-    */
+     */
     public String ssoUrl() {
         return this.ssoUrl;
     }
     /**
-     * Organization resource tags
+     * @return Organization resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Subscriber detail
+     * @return Subscriber detail
      * 
-    */
+     */
     public Optional<OrganizationResourcePropertiesResponseUserDetail> userDetail() {
         return Optional.ofNullable(this.userDetail);
     }

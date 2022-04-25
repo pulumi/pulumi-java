@@ -24,6 +24,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Unique Azure Resource ID of the Managed Disk.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Unique Azure Resource ID of the Managed Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Unique Azure Resource ID of the Managed Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

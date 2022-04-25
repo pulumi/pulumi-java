@@ -14,60 +14,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccountResult {
-    /**
-     * Time at which the account was created.
-     * 
-     */
+        /**
+         * @return Time at which the account was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * The resource id of the azure resource
-     * 
-     */
+        /**
+         * @return The resource id of the azure resource
+         * 
+         */
     private final String id;
-    /**
-     * Identity Info on the Account
-     * 
-     */
+        /**
+         * @return Identity Info on the Account
+         * 
+         */
     private final IdentityResponse identity;
-    /**
-     * Location of the azure resource.
-     * 
-     */
+        /**
+         * @return Location of the azure resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Name of the azure resource
-     * 
-     */
+        /**
+         * @return Name of the azure resource
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state of the Account
-     * 
-     */
+        /**
+         * @return Provisioning state of the Account
+         * 
+         */
     private final String provisioningState;
-    /**
-     * System Data of the Azure resource.
-     * 
-     */
+        /**
+         * @return System Data of the Azure resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Tags on the azure resource.
-     * 
-     */
+        /**
+         * @return Tags on the azure resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of the azure resource
-     * 
-     */
+        /**
+         * @return Type of the azure resource
+         * 
+         */
     private final String type;
-    /**
-     * Email of the user who created the resource
-     * 
-     */
+        /**
+         * @return Email of the user who created the resource
+         * 
+         */
     private final String userEmail;
-    /**
-     * Name of the user who created the resource
-     * 
-     */
+        /**
+         * @return Name of the user who created the resource
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -97,79 +97,79 @@ public final class GetAccountResult {
     }
 
     /**
-     * Time at which the account was created.
+     * @return Time at which the account was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity Info on the Account
+     * @return Identity Info on the Account
      * 
-    */
+     */
     public IdentityResponse identity() {
         return this.identity;
     }
     /**
-     * Location of the azure resource.
+     * @return Location of the azure resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the Account
+     * @return Provisioning state of the Account
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags on the azure resource.
+     * @return Tags on the azure resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Email of the user who created the resource
+     * @return Email of the user who created the resource
      * 
-    */
+     */
     public String userEmail() {
         return this.userEmail;
     }
     /**
-     * Name of the user who created the resource
+     * @return Name of the user who created the resource
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

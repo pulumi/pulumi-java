@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EnvironmentVarResponse {
-    /**
-     * Environment variable name.
-     * 
-     */
+        /**
+         * @return Environment variable name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Name of the Container App secret from which to pull the environment variable value.
-     * 
-     */
+        /**
+         * @return Name of the Container App secret from which to pull the environment variable value.
+         * 
+         */
     private final @Nullable String secretRef;
-    /**
-     * Non-secret environment variable value.
-     * 
-     */
+        /**
+         * @return Non-secret environment variable value.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class EnvironmentVarResponse {
     }
 
     /**
-     * Environment variable name.
+     * @return Environment variable name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Name of the Container App secret from which to pull the environment variable value.
+     * @return Name of the Container App secret from which to pull the environment variable value.
      * 
-    */
+     */
     public Optional<String> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
-     * Non-secret environment variable value.
+     * @return Non-secret environment variable value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -18,95 +18,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNetworkVirtualApplianceResult {
-    /**
-     * Address Prefix.
-     * 
-     */
+        /**
+         * @return Address Prefix.
+         * 
+         */
     private final String addressPrefix;
-    /**
-     * BootStrapConfigurationBlobs storage URLs.
-     * 
-     */
+        /**
+         * @return BootStrapConfigurationBlobs storage URLs.
+         * 
+         */
     private final @Nullable List<String> bootStrapConfigurationBlobs;
-    /**
-     * CloudInitConfiguration string in plain text.
-     * 
-     */
+        /**
+         * @return CloudInitConfiguration string in plain text.
+         * 
+         */
     private final @Nullable String cloudInitConfiguration;
-    /**
-     * CloudInitConfigurationBlob storage URLs.
-     * 
-     */
+        /**
+         * @return CloudInitConfigurationBlob storage URLs.
+         * 
+         */
     private final @Nullable List<String> cloudInitConfigurationBlobs;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The service principal that has read access to cloud-init and config blob.
-     * 
-     */
+        /**
+         * @return The service principal that has read access to cloud-init and config blob.
+         * 
+         */
     private final @Nullable ManagedServiceIdentityResponse identity;
-    /**
-     * List of references to InboundSecurityRules.
-     * 
-     */
+        /**
+         * @return List of references to InboundSecurityRules.
+         * 
+         */
     private final List<SubResourceResponse> inboundSecurityRules;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Network Virtual Appliance SKU.
-     * 
-     */
+        /**
+         * @return Network Virtual Appliance SKU.
+         * 
+         */
     private final @Nullable VirtualApplianceSkuPropertiesResponse nvaSku;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * VirtualAppliance ASN.
-     * 
-     */
+        /**
+         * @return VirtualAppliance ASN.
+         * 
+         */
     private final @Nullable Double virtualApplianceAsn;
-    /**
-     * List of Virtual Appliance Network Interfaces.
-     * 
-     */
+        /**
+         * @return List of Virtual Appliance Network Interfaces.
+         * 
+         */
     private final List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics;
-    /**
-     * List of references to VirtualApplianceSite.
-     * 
-     */
+        /**
+         * @return List of references to VirtualApplianceSite.
+         * 
+         */
     private final List<SubResourceResponse> virtualApplianceSites;
-    /**
-     * The Virtual Hub where Network Virtual Appliance is being deployed.
-     * 
-     */
+        /**
+         * @return The Virtual Hub where Network Virtual Appliance is being deployed.
+         * 
+         */
     private final @Nullable SubResourceResponse virtualHub;
 
     @CustomType.Constructor
@@ -150,128 +150,128 @@ public final class GetNetworkVirtualApplianceResult {
     }
 
     /**
-     * Address Prefix.
+     * @return Address Prefix.
      * 
-    */
+     */
     public String addressPrefix() {
         return this.addressPrefix;
     }
     /**
-     * BootStrapConfigurationBlobs storage URLs.
+     * @return BootStrapConfigurationBlobs storage URLs.
      * 
-    */
+     */
     public List<String> bootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs == null ? List.of() : this.bootStrapConfigurationBlobs;
     }
     /**
-     * CloudInitConfiguration string in plain text.
+     * @return CloudInitConfiguration string in plain text.
      * 
-    */
+     */
     public Optional<String> cloudInitConfiguration() {
         return Optional.ofNullable(this.cloudInitConfiguration);
     }
     /**
-     * CloudInitConfigurationBlob storage URLs.
+     * @return CloudInitConfigurationBlob storage URLs.
      * 
-    */
+     */
     public List<String> cloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs == null ? List.of() : this.cloudInitConfigurationBlobs;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The service principal that has read access to cloud-init and config blob.
+     * @return The service principal that has read access to cloud-init and config blob.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * List of references to InboundSecurityRules.
+     * @return List of references to InboundSecurityRules.
      * 
-    */
+     */
     public List<SubResourceResponse> inboundSecurityRules() {
         return this.inboundSecurityRules;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network Virtual Appliance SKU.
+     * @return Network Virtual Appliance SKU.
      * 
-    */
+     */
     public Optional<VirtualApplianceSkuPropertiesResponse> nvaSku() {
         return Optional.ofNullable(this.nvaSku);
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * VirtualAppliance ASN.
+     * @return VirtualAppliance ASN.
      * 
-    */
+     */
     public Optional<Double> virtualApplianceAsn() {
         return Optional.ofNullable(this.virtualApplianceAsn);
     }
     /**
-     * List of Virtual Appliance Network Interfaces.
+     * @return List of Virtual Appliance Network Interfaces.
      * 
-    */
+     */
     public List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics() {
         return this.virtualApplianceNics;
     }
     /**
-     * List of references to VirtualApplianceSite.
+     * @return List of references to VirtualApplianceSite.
      * 
-    */
+     */
     public List<SubResourceResponse> virtualApplianceSites() {
         return this.virtualApplianceSites;
     }
     /**
-     * The Virtual Hub where Network Virtual Appliance is being deployed.
+     * @return The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }

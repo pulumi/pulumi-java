@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceViewStatusResponse {
-    /**
-     * The status code.
-     * 
-     */
+        /**
+         * @return The status code.
+         * 
+         */
     private final @Nullable String code;
-    /**
-     * The short localizable label for the status.
-     * 
-     */
+        /**
+         * @return The short localizable label for the status.
+         * 
+         */
     private final @Nullable String displayStatus;
-    /**
-     * The level code.
-     * 
-     */
+        /**
+         * @return The level code.
+         * 
+         */
     private final @Nullable String level;
-    /**
-     * The detailed status message, including for alerts and error messages.
-     * 
-     */
+        /**
+         * @return The detailed status message, including for alerts and error messages.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * The time of the status.
-     * 
-     */
+        /**
+         * @return The time of the status.
+         * 
+         */
     private final @Nullable String time;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class InstanceViewStatusResponse {
     }
 
     /**
-     * The status code.
+     * @return The status code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * The short localizable label for the status.
+     * @return The short localizable label for the status.
      * 
-    */
+     */
     public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
     /**
-     * The level code.
+     * @return The level code.
      * 
-    */
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
     /**
-     * The detailed status message, including for alerts and error messages.
+     * @return The detailed status message, including for alerts and error messages.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * The time of the status.
+     * @return The time of the status.
      * 
-    */
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }

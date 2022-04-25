@@ -25,6 +25,10 @@ public final class NsRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="nsdname")
     private @Nullable String nsdname;
 
+    /**
+     * @return The name server name for this NS record.
+     * 
+     */
     public Optional<String> nsdname() {
         return Optional.ofNullable(this.nsdname);
     }
@@ -53,6 +57,12 @@ public final class NsRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new NsRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nsdname The name server name for this NS record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nsdname(@Nullable String nsdname) {
             $.nsdname = nsdname;
             return this;

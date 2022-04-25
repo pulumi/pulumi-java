@@ -11,21 +11,21 @@ import java.util.Objects;
 
 @CustomType
 public final class NamedPartitionSchemeDescriptionResponse {
-    /**
-     * The number of partitions.
-     * 
-     */
+        /**
+         * @return The number of partitions.
+         * 
+         */
     private final Integer count;
-    /**
-     * Array of size specified by the ‘count’ parameter, for the names of the partitions.
-     * 
-     */
+        /**
+         * @return Array of size specified by the ‘count’ parameter, for the names of the partitions.
+         * 
+         */
     private final List<String> names;
-    /**
-     * Enumerates the ways that a service can be partitioned.
-     * Expected value is &#39;Named&#39;.
-     * 
-     */
+        /**
+         * @return Enumerates the ways that a service can be partitioned.
+         * Expected value is &#39;Named&#39;.
+         * 
+         */
     private final String partitionScheme;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class NamedPartitionSchemeDescriptionResponse {
     }
 
     /**
-     * The number of partitions.
+     * @return The number of partitions.
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * Array of size specified by the ‘count’ parameter, for the names of the partitions.
+     * @return Array of size specified by the ‘count’ parameter, for the names of the partitions.
      * 
-    */
+     */
     public List<String> names() {
         return this.names;
     }
     /**
-     * Enumerates the ways that a service can be partitioned.
+     * @return Enumerates the ways that a service can be partitioned.
      * Expected value is &#39;Named&#39;.
      * 
-    */
+     */
     public String partitionScheme() {
         return this.partitionScheme;
     }

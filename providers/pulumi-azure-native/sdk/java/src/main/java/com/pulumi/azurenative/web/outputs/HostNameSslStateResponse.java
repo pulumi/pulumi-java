@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HostNameSslStateResponse {
-    /**
-     * Indicates whether the hostname is a standard or repository hostname.
-     * 
-     */
+        /**
+         * @return Indicates whether the hostname is a standard or repository hostname.
+         * 
+         */
     private final @Nullable String hostType;
-    /**
-     * Hostname.
-     * 
-     */
+        /**
+         * @return Hostname.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * SSL type.
-     * 
-     */
+        /**
+         * @return SSL type.
+         * 
+         */
     private final @Nullable String sslState;
-    /**
-     * SSL certificate thumbprint.
-     * 
-     */
+        /**
+         * @return SSL certificate thumbprint.
+         * 
+         */
     private final @Nullable String thumbprint;
-    /**
-     * Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
-     * 
-     */
+        /**
+         * @return Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+         * 
+         */
     private final @Nullable Boolean toUpdate;
-    /**
-     * Virtual IP address assigned to the hostname if IP based SSL is enabled.
-     * 
-     */
+        /**
+         * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
+         * 
+         */
     private final @Nullable String virtualIP;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class HostNameSslStateResponse {
     }
 
     /**
-     * Indicates whether the hostname is a standard or repository hostname.
+     * @return Indicates whether the hostname is a standard or repository hostname.
      * 
-    */
+     */
     public Optional<String> hostType() {
         return Optional.ofNullable(this.hostType);
     }
     /**
-     * Hostname.
+     * @return Hostname.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * SSL type.
+     * @return SSL type.
      * 
-    */
+     */
     public Optional<String> sslState() {
         return Optional.ofNullable(this.sslState);
     }
     /**
-     * SSL certificate thumbprint.
+     * @return SSL certificate thumbprint.
      * 
-    */
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
-     * Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+     * @return Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
      * 
-    */
+     */
     public Optional<Boolean> toUpdate() {
         return Optional.ofNullable(this.toUpdate);
     }
     /**
-     * Virtual IP address assigned to the hostname if IP based SSL is enabled.
+     * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
-    */
+     */
     public Optional<String> virtualIP() {
         return Optional.ofNullable(this.virtualIP);
     }

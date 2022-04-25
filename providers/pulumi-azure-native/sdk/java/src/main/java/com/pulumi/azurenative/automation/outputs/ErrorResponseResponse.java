@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ErrorResponseResponse {
-    /**
-     * Error code
-     * 
-     */
+        /**
+         * @return Error code
+         * 
+         */
     private final @Nullable String code;
-    /**
-     * Error message indicating why the operation failed.
-     * 
-     */
+        /**
+         * @return Error message indicating why the operation failed.
+         * 
+         */
     private final @Nullable String message;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ErrorResponseResponse {
     }
 
     /**
-     * Error code
+     * @return Error code
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Error message indicating why the operation failed.
+     * @return Error message indicating why the operation failed.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

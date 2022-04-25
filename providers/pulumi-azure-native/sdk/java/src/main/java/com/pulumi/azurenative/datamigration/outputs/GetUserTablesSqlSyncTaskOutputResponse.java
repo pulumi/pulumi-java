@@ -13,25 +13,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetUserTablesSqlSyncTaskOutputResponse {
-    /**
-     * Mapping from database name to list of source tables
-     * 
-     */
+        /**
+         * @return Mapping from database name to list of source tables
+         * 
+         */
     private final Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
-    /**
-     * Mapping from database name to list of target tables
-     * 
-     */
+        /**
+         * @return Mapping from database name to list of target tables
+         * 
+         */
     private final Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
-    /**
-     * Mapping from database name to list of validation errors
-     * 
-     */
+        /**
+         * @return Mapping from database name to list of validation errors
+         * 
+         */
     private final Map<String,List<String>> tableValidationErrors;
-    /**
-     * Validation errors
-     * 
-     */
+        /**
+         * @return Validation errors
+         * 
+         */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
     }
 
     /**
-     * Mapping from database name to list of source tables
+     * @return Mapping from database name to list of source tables
      * 
-    */
+     */
     public Map<String,List<DatabaseTableResponse>> databasesToSourceTables() {
         return this.databasesToSourceTables;
     }
     /**
-     * Mapping from database name to list of target tables
+     * @return Mapping from database name to list of target tables
      * 
-    */
+     */
     public Map<String,List<DatabaseTableResponse>> databasesToTargetTables() {
         return this.databasesToTargetTables;
     }
     /**
-     * Mapping from database name to list of validation errors
+     * @return Mapping from database name to list of validation errors
      * 
-    */
+     */
     public Map<String,List<String>> tableValidationErrors() {
         return this.tableValidationErrors;
     }
     /**
-     * Validation errors
+     * @return Validation errors
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

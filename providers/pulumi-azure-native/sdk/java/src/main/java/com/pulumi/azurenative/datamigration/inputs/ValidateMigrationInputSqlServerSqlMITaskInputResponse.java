@@ -30,6 +30,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="backupBlobShare", required=true)
     private BlobShareResponse backupBlobShare;
 
+    /**
+     * @return SAS URI of Azure Storage Account Container to be used for storing backup files.
+     * 
+     */
     public BlobShareResponse backupBlobShare() {
         return this.backupBlobShare;
     }
@@ -41,6 +45,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="backupFileShare")
     private @Nullable FileShareResponse backupFileShare;
 
+    /**
+     * @return Backup file share information for all selected databases.
+     * 
+     */
     public Optional<FileShareResponse> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
@@ -52,6 +60,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="backupMode")
     private @Nullable String backupMode;
 
+    /**
+     * @return Backup Mode to specify whether to use existing backup or create new backup.
+     * 
+     */
     public Optional<String> backupMode() {
         return Optional.ofNullable(this.backupMode);
     }
@@ -63,6 +75,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="selectedDatabases", required=true)
     private List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -74,6 +90,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="selectedLogins")
     private @Nullable List<String> selectedLogins;
 
+    /**
+     * @return Logins to migrate
+     * 
+     */
     public Optional<List<String>> selectedLogins() {
         return Optional.ofNullable(this.selectedLogins);
     }
@@ -85,6 +105,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="sourceConnectionInfo", required=true)
     private SqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Information for connecting to source
+     * 
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -96,6 +120,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
     @Import(name="targetConnectionInfo", required=true)
     private SqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Information for connecting to target
+     * 
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -130,44 +158,98 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
             $ = new ValidateMigrationInputSqlServerSqlMITaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupBlobShare SAS URI of Azure Storage Account Container to be used for storing backup files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupBlobShare(BlobShareResponse backupBlobShare) {
             $.backupBlobShare = backupBlobShare;
             return this;
         }
 
+        /**
+         * @param backupFileShare Backup file share information for all selected databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param backupMode Backup Mode to specify whether to use existing backup or create new backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupMode(@Nullable String backupMode) {
             $.backupMode = backupMode;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param selectedLogins Logins to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             $.selectedLogins = selectedLogins;
             return this;
         }
 
+        /**
+         * @param selectedLogins Logins to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedLogins(String... selectedLogins) {
             return selectedLogins(List.of(selectedLogins));
         }
 
+        /**
+         * @param sourceConnectionInfo Information for connecting to source
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Information for connecting to target
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

@@ -24,6 +24,10 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional verbose description of the Transform.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="outputs", required=true)
     private Output<List<TransformOutputArgs>> outputs;
 
+    /**
+     * @return An array of one or more TransformOutputs that the Transform should generate.
+     * 
+     */
     public Output<List<TransformOutputArgs>> outputs() {
         return this.outputs;
     }
@@ -57,6 +69,10 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transformName")
     private @Nullable Output<String> transformName;
 
+    /**
+     * @return The Transform name.
+     * 
+     */
     public Optional<Output<String>> transformName() {
         return Optional.ofNullable(this.transformName);
     }
@@ -100,51 +120,117 @@ public final class TransformArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TransformArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param description An optional verbose description of the Transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional verbose description of the Transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param outputs An array of one or more TransformOutputs that the Transform should generate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(Output<List<TransformOutputArgs>> outputs) {
             $.outputs = outputs;
             return this;
         }
 
+        /**
+         * @param outputs An array of one or more TransformOutputs that the Transform should generate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(List<TransformOutputArgs> outputs) {
             return outputs(Output.of(outputs));
         }
 
+        /**
+         * @param outputs An array of one or more TransformOutputs that the Transform should generate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputs(TransformOutputArgs... outputs) {
             return outputs(List.of(outputs));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param transformName The Transform name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformName(@Nullable Output<String> transformName) {
             $.transformName = transformName;
             return this;
         }
 
+        /**
+         * @param transformName The Transform name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transformName(String transformName) {
             return transformName(Output.of(transformName));
         }

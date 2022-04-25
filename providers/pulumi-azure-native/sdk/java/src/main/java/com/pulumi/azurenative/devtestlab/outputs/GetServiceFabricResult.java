@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServiceFabricResult {
-    /**
-     * The applicable schedule for the virtual machine.
-     * 
-     */
+        /**
+         * @return The applicable schedule for the virtual machine.
+         * 
+         */
     private final ApplicableScheduleResponse applicableSchedule;
-    /**
-     * The resource id of the environment under which the service fabric resource is present
-     * 
-     */
+        /**
+         * @return The resource id of the environment under which the service fabric resource is present
+         * 
+         */
     private final @Nullable String environmentId;
-    /**
-     * The backing service fabric resource&#39;s id
-     * 
-     */
+        /**
+         * @return The backing service fabric resource&#39;s id
+         * 
+         */
     private final @Nullable String externalServiceFabricId;
-    /**
-     * The identifier of the resource.
-     * 
-     */
+        /**
+         * @return The identifier of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource.
-     * 
-     */
+        /**
+         * @return The location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning status of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning status of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     * 
-     */
+        /**
+         * @return The unique immutable identifier of a resource (Guid).
+         * 
+         */
     private final String uniqueIdentifier;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetServiceFabricResult {
     }
 
     /**
-     * The applicable schedule for the virtual machine.
+     * @return The applicable schedule for the virtual machine.
      * 
-    */
+     */
     public ApplicableScheduleResponse applicableSchedule() {
         return this.applicableSchedule;
     }
     /**
-     * The resource id of the environment under which the service fabric resource is present
+     * @return The resource id of the environment under which the service fabric resource is present
      * 
-    */
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
-     * The backing service fabric resource&#39;s id
+     * @return The backing service fabric resource&#39;s id
      * 
-    */
+     */
     public Optional<String> externalServiceFabricId() {
         return Optional.ofNullable(this.externalServiceFabricId);
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }

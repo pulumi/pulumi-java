@@ -30,6 +30,11 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the web table source.
+     * Expected value is &#39;Basic&#39;.
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -41,6 +46,10 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
     @Import(name="password", required=true)
     private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return The password for Basic authentication.
+     * 
+     */
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
@@ -52,6 +61,10 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
     @Import(name="url", required=true)
     private Output<Object> url;
 
+    /**
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> url() {
         return this.url;
     }
@@ -63,6 +76,10 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
     @Import(name="username", required=true)
     private Output<Object> username;
 
+    /**
+     * @return User name for Basic authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> username() {
         return this.username;
     }
@@ -94,46 +111,108 @@ public final class WebBasicAuthenticationArgs extends com.pulumi.resources.Resou
             $ = new WebBasicAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;Basic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;Basic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<Object> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param username User name for Basic authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<Object> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username User name for Basic authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Object username) {
             return username(Output.of(username));
         }

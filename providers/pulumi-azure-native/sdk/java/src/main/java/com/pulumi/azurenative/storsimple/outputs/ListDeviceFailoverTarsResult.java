@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListDeviceFailoverTarsResult {
-    /**
-     * The list of all the failover targets.
-     * 
-     */
+        /**
+         * @return The list of all the failover targets.
+         * 
+         */
     private final @Nullable List<FailoverTargetResponse> value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListDeviceFailoverTarsResult {
     }
 
     /**
-     * The list of all the failover targets.
+     * @return The list of all the failover targets.
      * 
-    */
+     */
     public List<FailoverTargetResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

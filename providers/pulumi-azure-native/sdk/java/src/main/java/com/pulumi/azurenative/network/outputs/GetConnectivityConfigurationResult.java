@@ -15,70 +15,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectivityConfigurationResult {
-    /**
-     * Groups for configuration
-     * 
-     */
+        /**
+         * @return Groups for configuration
+         * 
+         */
     private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
-    /**
-     * Connectivity topology type.
-     * 
-     */
+        /**
+         * @return Connectivity topology type.
+         * 
+         */
     private final String connectivityTopology;
-    /**
-     * Flag if need to remove current existing peerings.
-     * 
-     */
+        /**
+         * @return Flag if need to remove current existing peerings.
+         * 
+         */
     private final @Nullable String deleteExistingPeering;
-    /**
-     * A description of the connectivity configuration.
-     * 
-     */
+        /**
+         * @return A description of the connectivity configuration.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A friendly name for the resource.
-     * 
-     */
+        /**
+         * @return A friendly name for the resource.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * List of hubItems
-     * 
-     */
+        /**
+         * @return List of hubItems
+         * 
+         */
     private final @Nullable List<HubResponse> hubs;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Flag if global mesh is supported.
-     * 
-     */
+        /**
+         * @return Flag if global mesh is supported.
+         * 
+         */
     private final @Nullable String isGlobal;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the connectivity configuration resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the connectivity configuration resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The system metadata related to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata related to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -112,93 +112,93 @@ public final class GetConnectivityConfigurationResult {
     }
 
     /**
-     * Groups for configuration
+     * @return Groups for configuration
      * 
-    */
+     */
     public List<ConnectivityGroupItemResponse> appliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
     /**
-     * Connectivity topology type.
+     * @return Connectivity topology type.
      * 
-    */
+     */
     public String connectivityTopology() {
         return this.connectivityTopology;
     }
     /**
-     * Flag if need to remove current existing peerings.
+     * @return Flag if need to remove current existing peerings.
      * 
-    */
+     */
     public Optional<String> deleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
     /**
-     * A description of the connectivity configuration.
+     * @return A description of the connectivity configuration.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A friendly name for the resource.
+     * @return A friendly name for the resource.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * List of hubItems
+     * @return List of hubItems
      * 
-    */
+     */
     public List<HubResponse> hubs() {
         return this.hubs == null ? List.of() : this.hubs;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Flag if global mesh is supported.
+     * @return Flag if global mesh is supported.
      * 
-    */
+     */
     public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the connectivity configuration resource.
+     * @return The provisioning state of the connectivity configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

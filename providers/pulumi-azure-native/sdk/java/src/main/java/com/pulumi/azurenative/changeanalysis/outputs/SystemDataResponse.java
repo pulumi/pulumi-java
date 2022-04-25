@@ -9,35 +9,35 @@ import java.util.Objects;
 
 @CustomType
 public final class SystemDataResponse {
-    /**
-     * The timestamp of resource creation (UTC)
-     * 
-     */
+        /**
+         * @return The timestamp of resource creation (UTC)
+         * 
+         */
     private final String createdAt;
-    /**
-     * A string identifier for the identity that created the resource
-     * 
-     */
+        /**
+         * @return A string identifier for the identity that created the resource
+         * 
+         */
     private final String createdBy;
-    /**
-     * The type of identity that created the resource: user, application, managedIdentity, key
-     * 
-     */
+        /**
+         * @return The type of identity that created the resource: user, application, managedIdentity, key
+         * 
+         */
     private final String createdByType;
-    /**
-     * The timestamp of resource last modification (UTC)
-     * 
-     */
+        /**
+         * @return The timestamp of resource last modification (UTC)
+         * 
+         */
     private final String lastModifiedAt;
-    /**
-     * A string identifier for the identity that last modified the resource
-     * 
-     */
+        /**
+         * @return A string identifier for the identity that last modified the resource
+         * 
+         */
     private final String lastModifiedBy;
-    /**
-     * The type of identity that last modified the resource: user, application, managedIdentity, key
-     * 
-     */
+        /**
+         * @return The type of identity that last modified the resource: user, application, managedIdentity, key
+         * 
+         */
     private final String lastModifiedByType;
 
     @CustomType.Constructor
@@ -57,44 +57,44 @@ public final class SystemDataResponse {
     }
 
     /**
-     * The timestamp of resource creation (UTC)
+     * @return The timestamp of resource creation (UTC)
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * A string identifier for the identity that created the resource
+     * @return A string identifier for the identity that created the resource
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * The type of identity that created the resource: user, application, managedIdentity, key
+     * @return The type of identity that created the resource: user, application, managedIdentity, key
      * 
-    */
+     */
     public String createdByType() {
         return this.createdByType;
     }
     /**
-     * The timestamp of resource last modification (UTC)
+     * @return The timestamp of resource last modification (UTC)
      * 
-    */
+     */
     public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
-     * A string identifier for the identity that last modified the resource
+     * @return A string identifier for the identity that last modified the resource
      * 
-    */
+     */
     public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * The type of identity that last modified the resource: user, application, managedIdentity, key
+     * @return The type of identity that last modified the resource: user, application, managedIdentity, key
      * 
-    */
+     */
     public String lastModifiedByType() {
         return this.lastModifiedByType;
     }

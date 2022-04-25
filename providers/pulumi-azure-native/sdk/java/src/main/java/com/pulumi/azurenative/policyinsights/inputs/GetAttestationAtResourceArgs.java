@@ -19,6 +19,10 @@ public final class GetAttestationAtResourceArgs extends com.pulumi.resources.Inv
     @Import(name="attestationName", required=true)
     private String attestationName;
 
+    /**
+     * @return The name of the attestation.
+     * 
+     */
     public String attestationName() {
         return this.attestationName;
     }
@@ -30,6 +34,10 @@ public final class GetAttestationAtResourceArgs extends com.pulumi.resources.Inv
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -59,11 +67,23 @@ public final class GetAttestationAtResourceArgs extends com.pulumi.resources.Inv
             $ = new GetAttestationAtResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attestationName The name of the attestation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attestationName(String attestationName) {
             $.attestationName = attestationName;
             return this;
         }
 
+        /**
+         * @param resourceId Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

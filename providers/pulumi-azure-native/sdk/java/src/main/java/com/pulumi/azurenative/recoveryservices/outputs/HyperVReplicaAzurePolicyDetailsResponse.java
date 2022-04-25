@@ -12,41 +12,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HyperVReplicaAzurePolicyDetailsResponse {
-    /**
-     * The active storage account Id.
-     * 
-     */
+        /**
+         * @return The active storage account Id.
+         * 
+         */
     private final @Nullable String activeStorageAccountId;
-    /**
-     * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
-     * 
-     */
+        /**
+         * @return The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+         * 
+         */
     private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
-    /**
-     * A value indicating whether encryption is enabled for virtual machines in this cloud.
-     * 
-     */
+        /**
+         * @return A value indicating whether encryption is enabled for virtual machines in this cloud.
+         * 
+         */
     private final @Nullable String encryption;
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;HyperVReplicaAzure&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;HyperVReplicaAzure&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
-     * 
-     */
+        /**
+         * @return The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+         * 
+         */
     private final @Nullable String onlineReplicationStartTime;
-    /**
-     * The duration (in hours) to which point the recovery history needs to be maintained.
-     * 
-     */
+        /**
+         * @return The duration (in hours) to which point the recovery history needs to be maintained.
+         * 
+         */
     private final @Nullable Integer recoveryPointHistoryDurationInHours;
-    /**
-     * The replication interval.
-     * 
-     */
+        /**
+         * @return The replication interval.
+         * 
+         */
     private final @Nullable Integer replicationInterval;
 
     @CustomType.Constructor
@@ -68,52 +68,52 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
     }
 
     /**
-     * The active storage account Id.
+     * @return The active storage account Id.
      * 
-    */
+     */
     public Optional<String> activeStorageAccountId() {
         return Optional.ofNullable(this.activeStorageAccountId);
     }
     /**
-     * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
+     * @return The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
      * 
-    */
+     */
     public Optional<Integer> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
     /**
-     * A value indicating whether encryption is enabled for virtual machines in this cloud.
+     * @return A value indicating whether encryption is enabled for virtual machines in this cloud.
      * 
-    */
+     */
     public Optional<String> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;HyperVReplicaAzure&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
+     * @return The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
      * 
-    */
+     */
     public Optional<String> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
     /**
-     * The duration (in hours) to which point the recovery history needs to be maintained.
+     * @return The duration (in hours) to which point the recovery history needs to be maintained.
      * 
-    */
+     */
     public Optional<Integer> recoveryPointHistoryDurationInHours() {
         return Optional.ofNullable(this.recoveryPointHistoryDurationInHours);
     }
     /**
-     * The replication interval.
+     * @return The replication interval.
      * 
-    */
+     */
     public Optional<Integer> replicationInterval() {
         return Optional.ofNullable(this.replicationInterval);
     }

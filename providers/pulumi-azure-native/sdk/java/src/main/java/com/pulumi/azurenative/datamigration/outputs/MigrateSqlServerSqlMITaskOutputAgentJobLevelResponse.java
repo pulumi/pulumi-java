@@ -12,51 +12,51 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
-    /**
-     * Migration end time
-     * 
-     */
+        /**
+         * @return Migration end time
+         * 
+         */
     private final String endedOn;
-    /**
-     * Migration errors and warnings per job
-     * 
-     */
+        /**
+         * @return Migration errors and warnings per job
+         * 
+         */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * The state of the original Agent Job.
-     * 
-     */
+        /**
+         * @return The state of the original Agent Job.
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * Migration progress message
-     * 
-     */
+        /**
+         * @return Migration progress message
+         * 
+         */
     private final String message;
-    /**
-     * Agent Job name.
-     * 
-     */
+        /**
+         * @return Agent Job name.
+         * 
+         */
     private final String name;
-    /**
-     * Result type
-     * Expected value is &#39;AgentJobLevelOutput&#39;.
-     * 
-     */
+        /**
+         * @return Result type
+         * Expected value is &#39;AgentJobLevelOutput&#39;.
+         * 
+         */
     private final String resultType;
-    /**
-     * Migration start time
-     * 
-     */
+        /**
+         * @return Migration start time
+         * 
+         */
     private final String startedOn;
-    /**
-     * Current state of migration
-     * 
-     */
+        /**
+         * @return Current state of migration
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -82,66 +82,66 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
     }
 
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Migration errors and warnings per job
+     * @return Migration errors and warnings per job
      * 
-    */
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The state of the original Agent Job.
+     * @return The state of the original Agent Job.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Migration progress message
+     * @return Migration progress message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Agent Job name.
+     * @return Agent Job name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;AgentJobLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

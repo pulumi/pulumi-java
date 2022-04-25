@@ -24,6 +24,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -35,6 +39,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="sqlPoolName", required=true)
     private Output<String> sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -46,6 +54,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="status")
     private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
+    /**
+     * @return The status of the database transparent data encryption.
+     * 
+     */
     public Optional<Output<Either<String,TransparentDataEncryptionStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -57,6 +69,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="transparentDataEncryptionName")
     private @Nullable Output<String> transparentDataEncryptionName;
 
+    /**
+     * @return The name of the transparent data encryption configuration.
+     * 
+     */
     public Optional<Output<String>> transparentDataEncryptionName() {
         return Optional.ofNullable(this.transparentDataEncryptionName);
     }
@@ -68,6 +84,10 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -100,55 +120,127 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
             $ = new SqlPoolTransparentDataEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(Output<String> sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             return sqlPoolName(Output.of(sqlPoolName));
         }
 
+        /**
+         * @param status The status of the database transparent data encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the database transparent data encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,TransparentDataEncryptionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the database transparent data encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the database transparent data encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TransparentDataEncryptionStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param transparentDataEncryptionName The name of the transparent data encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
             $.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
 
+        /**
+         * @param transparentDataEncryptionName The name of the transparent data encryption configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
             return transparentDataEncryptionName(Output.of(transparentDataEncryptionName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

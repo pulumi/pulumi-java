@@ -28,6 +28,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuName>> name;
 
+    /**
+     * @return The Sku name.
+     * 
+     */
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
@@ -39,6 +43,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return The Sku tier.
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -68,28 +76,64 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier The Sku tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The Sku tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KeyVaultPropertiesResponse {
-    /**
-     * Name of the Key from KeyVault
-     * 
-     */
+        /**
+         * @return Name of the Key from KeyVault
+         * 
+         */
     private final @Nullable String keyName;
-    /**
-     * Uri of KeyVault
-     * 
-     */
+        /**
+         * @return Uri of KeyVault
+         * 
+         */
     private final @Nullable String keyVaultUri;
-    /**
-     * Version of the Key from KeyVault
-     * 
-     */
+        /**
+         * @return Version of the Key from KeyVault
+         * 
+         */
     private final @Nullable String keyVersion;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * Name of the Key from KeyVault
+     * @return Name of the Key from KeyVault
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * Uri of KeyVault
+     * @return Uri of KeyVault
      * 
-    */
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
-     * Version of the Key from KeyVault
+     * @return Version of the Key from KeyVault
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }

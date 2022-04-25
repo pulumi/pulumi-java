@@ -19,76 +19,76 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomActivityResponse {
-    /**
-     * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
-     * 
-     */
+        /**
+         * @return Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+         * 
+         */
     private final @Nullable Object autoUserSpecification;
-    /**
-     * Command for custom activity Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Command for custom activity Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object command;
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
-     * 
-     */
+        /**
+         * @return User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+         * 
+         */
     private final @Nullable Map<String,Object> extendedProperties;
-    /**
-     * Folder path for resource files Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Folder path for resource files Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object folderPath;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * Reference objects
-     * 
-     */
+        /**
+         * @return Reference objects
+         * 
+         */
     private final @Nullable CustomActivityReferenceObjectResponse referenceObjects;
-    /**
-     * Resource linked service reference.
-     * 
-     */
+        /**
+         * @return Resource linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse resourceLinkedService;
-    /**
-     * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
-     * 
-     */
+        /**
+         * @return The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
+         * 
+         */
     private final @Nullable Object retentionTimeInDays;
-    /**
-     * Type of activity.
-     * Expected value is &#39;Custom&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;Custom&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -124,101 +124,101 @@ public final class CustomActivityResponse {
     }
 
     /**
-     * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+     * @return Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
      * 
-    */
+     */
     public Optional<Object> autoUserSpecification() {
         return Optional.ofNullable(this.autoUserSpecification);
     }
     /**
-     * Command for custom activity Type: string (or Expression with resultType string).
+     * @return Command for custom activity Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object command() {
         return this.command;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+     * @return User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
      * 
-    */
+     */
     public Map<String,Object> extendedProperties() {
         return this.extendedProperties == null ? Map.of() : this.extendedProperties;
     }
     /**
-     * Folder path for resource files Type: string (or Expression with resultType string).
+     * @return Folder path for resource files Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Reference objects
+     * @return Reference objects
      * 
-    */
+     */
     public Optional<CustomActivityReferenceObjectResponse> referenceObjects() {
         return Optional.ofNullable(this.referenceObjects);
     }
     /**
-     * Resource linked service reference.
+     * @return Resource linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> resourceLinkedService() {
         return Optional.ofNullable(this.resourceLinkedService);
     }
     /**
-     * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
+     * @return The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
      * 
-    */
+     */
     public Optional<Object> retentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Custom&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

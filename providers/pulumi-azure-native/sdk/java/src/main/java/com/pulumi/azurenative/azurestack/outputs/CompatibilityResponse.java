@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CompatibilityResponse {
-    /**
-     * Full error message if any compatibility issues are found
-     * 
-     */
+        /**
+         * @return Full error message if any compatibility issues are found
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Tells if product is compatible with current device
-     * 
-     */
+        /**
+         * @return Tells if product is compatible with current device
+         * 
+         */
     private final @Nullable Boolean isCompatible;
-    /**
-     * List of all issues found
-     * 
-     */
+        /**
+         * @return List of all issues found
+         * 
+         */
     private final @Nullable List<String> issues;
-    /**
-     * Short error message if any compatibility issues are found
-     * 
-     */
+        /**
+         * @return Short error message if any compatibility issues are found
+         * 
+         */
     private final @Nullable String message;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class CompatibilityResponse {
     }
 
     /**
-     * Full error message if any compatibility issues are found
+     * @return Full error message if any compatibility issues are found
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Tells if product is compatible with current device
+     * @return Tells if product is compatible with current device
      * 
-    */
+     */
     public Optional<Boolean> isCompatible() {
         return Optional.ofNullable(this.isCompatible);
     }
     /**
-     * List of all issues found
+     * @return List of all issues found
      * 
-    */
+     */
     public List<String> issues() {
         return this.issues == null ? List.of() : this.issues;
     }
     /**
-     * Short error message if any compatibility issues are found
+     * @return Short error message if any compatibility issues are found
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

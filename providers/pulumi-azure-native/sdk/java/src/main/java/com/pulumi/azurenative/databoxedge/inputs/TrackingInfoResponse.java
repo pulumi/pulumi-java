@@ -25,6 +25,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="carrierName")
     private @Nullable String carrierName;
 
+    /**
+     * @return Name of the carrier used in the delivery.
+     * 
+     */
     public Optional<String> carrierName() {
         return Optional.ofNullable(this.carrierName);
     }
@@ -36,6 +40,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="serialNumber")
     private @Nullable String serialNumber;
 
+    /**
+     * @return Serial number of the device being tracked.
+     * 
+     */
     public Optional<String> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
@@ -47,6 +55,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="trackingId")
     private @Nullable String trackingId;
 
+    /**
+     * @return Tracking ID of the shipment.
+     * 
+     */
     public Optional<String> trackingId() {
         return Optional.ofNullable(this.trackingId);
     }
@@ -58,6 +70,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="trackingUrl")
     private @Nullable String trackingUrl;
 
+    /**
+     * @return Tracking URL of the shipment.
+     * 
+     */
     public Optional<String> trackingUrl() {
         return Optional.ofNullable(this.trackingUrl);
     }
@@ -89,21 +105,45 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TrackingInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param carrierName Name of the carrier used in the delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder carrierName(@Nullable String carrierName) {
             $.carrierName = carrierName;
             return this;
         }
 
+        /**
+         * @param serialNumber Serial number of the device being tracked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(@Nullable String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param trackingId Tracking ID of the shipment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingId(@Nullable String trackingId) {
             $.trackingId = trackingId;
             return this;
         }
 
+        /**
+         * @param trackingUrl Tracking URL of the shipment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackingUrl(@Nullable String trackingUrl) {
             $.trackingUrl = trackingUrl;
             return this;

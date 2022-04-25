@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerPartitionKeyResponse {
-    /**
-     * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
-     * 
-     */
+        /**
+         * @return Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * List of paths using which data within the container can be partitioned
-     * 
-     */
+        /**
+         * @return List of paths using which data within the container can be partitioned
+         * 
+         */
     private final @Nullable List<String> paths;
-    /**
-     * Indicates if the container is using a system generated partition key
-     * 
-     */
+        /**
+         * @return Indicates if the container is using a system generated partition key
+         * 
+         */
     private final Boolean systemKey;
-    /**
-     * Indicates the version of the partition key definition
-     * 
-     */
+        /**
+         * @return Indicates the version of the partition key definition
+         * 
+         */
     private final @Nullable Integer version;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class ContainerPartitionKeyResponse {
     }
 
     /**
-     * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+     * @return Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * List of paths using which data within the container can be partitioned
+     * @return List of paths using which data within the container can be partitioned
      * 
-    */
+     */
     public List<String> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
-     * Indicates if the container is using a system generated partition key
+     * @return Indicates if the container is using a system generated partition key
      * 
-    */
+     */
     public Boolean systemKey() {
         return this.systemKey;
     }
     /**
-     * Indicates the version of the partition key definition
+     * @return Indicates the version of the partition key definition
      * 
-    */
+     */
     public Optional<Integer> version() {
         return Optional.ofNullable(this.version);
     }

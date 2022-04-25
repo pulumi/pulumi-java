@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListConnectedClusterUserCredentialResult {
-    /**
-     * Contains the REP (rendezvous endpoint) and “Sender” access token.
-     * 
-     */
+        /**
+         * @return Contains the REP (rendezvous endpoint) and “Sender” access token.
+         * 
+         */
     private final HybridConnectionConfigResponse hybridConnectionConfig;
-    /**
-     * Base64-encoded Kubernetes configuration file.
-     * 
-     */
+        /**
+         * @return Base64-encoded Kubernetes configuration file.
+         * 
+         */
     private final List<CredentialResultResponse> kubeconfigs;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListConnectedClusterUserCredentialResult {
     }
 
     /**
-     * Contains the REP (rendezvous endpoint) and “Sender” access token.
+     * @return Contains the REP (rendezvous endpoint) and “Sender” access token.
      * 
-    */
+     */
     public HybridConnectionConfigResponse hybridConnectionConfig() {
         return this.hybridConnectionConfig;
     }
     /**
-     * Base64-encoded Kubernetes configuration file.
+     * @return Base64-encoded Kubernetes configuration file.
      * 
-    */
+     */
     public List<CredentialResultResponse> kubeconfigs() {
         return this.kubeconfigs;
     }

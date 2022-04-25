@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DnsSettingsResponse {
-    /**
-     * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
-     * 
-     */
+        /**
+         * @return Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+         * 
+         */
     private final @Nullable Boolean enableProxy;
-    /**
-     * FQDNs in Network Rules are supported when set to true.
-     * 
-     */
+        /**
+         * @return FQDNs in Network Rules are supported when set to true.
+         * 
+         */
     private final @Nullable Boolean requireProxyForNetworkRules;
-    /**
-     * List of Custom DNS Servers.
-     * 
-     */
+        /**
+         * @return List of Custom DNS Servers.
+         * 
+         */
     private final @Nullable List<String> servers;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class DnsSettingsResponse {
     }
 
     /**
-     * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
+     * @return Enable DNS Proxy on Firewalls attached to the Firewall Policy.
      * 
-    */
+     */
     public Optional<Boolean> enableProxy() {
         return Optional.ofNullable(this.enableProxy);
     }
     /**
-     * FQDNs in Network Rules are supported when set to true.
+     * @return FQDNs in Network Rules are supported when set to true.
      * 
-    */
+     */
     public Optional<Boolean> requireProxyForNetworkRules() {
         return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
     /**
-     * List of Custom DNS Servers.
+     * @return List of Custom DNS Servers.
      * 
-    */
+     */
     public List<String> servers() {
         return this.servers == null ? List.of() : this.servers;
     }

@@ -26,6 +26,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body", required=true)
     private Output<String> body;
 
+    /**
+     * @return Body of the query.
+     * 
+     */
     public Output<String> body() {
         return this.body;
     }
@@ -37,6 +41,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the query.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Unique display name for your query within the Query Pack.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -59,6 +71,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The id of a specific query defined in the Log Analytics QueryPack
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -70,6 +86,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Object> properties;
 
+    /**
+     * @return Additional properties that can be set for the query.
+     * 
+     */
     public Optional<Output<Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -81,6 +101,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryPackName", required=true)
     private Output<String> queryPackName;
 
+    /**
+     * @return The name of the Log Analytics QueryPack resource.
+     * 
+     */
     public Output<String> queryPackName() {
         return this.queryPackName;
     }
@@ -92,6 +116,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="related")
     private @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
+    /**
+     * @return The related metadata items for the function.
+     * 
+     */
     public Optional<Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs>> related() {
         return Optional.ofNullable(this.related);
     }
@@ -103,6 +131,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,List<String>>> tags;
 
+    /**
+     * @return Tags associated with the query.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -150,83 +186,191 @@ public final class QueryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QueryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Body of the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(Output<String> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Body of the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(String body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param description Description of the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Unique display name for your query within the Query Pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Unique display name for your query within the Query Pack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param id The id of a specific query defined in the Log Analytics QueryPack
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The id of a specific query defined in the Log Analytics QueryPack
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param properties Additional properties that can be set for the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Additional properties that can be set for the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPackName(Output<String> queryPackName) {
             $.queryPackName = queryPackName;
             return this;
         }
 
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPackName(String queryPackName) {
             return queryPackName(Output.of(queryPackName));
         }
 
+        /**
+         * @param related The related metadata items for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder related(@Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related) {
             $.related = related;
             return this;
         }
 
+        /**
+         * @param related The related metadata items for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder related(LogAnalyticsQueryPackQueryPropertiesRelatedArgs related) {
             return related(Output.of(related));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags associated with the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,List<String>> tags) {
             return tags(Output.of(tags));
         }

@@ -26,6 +26,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return Support contact email address.
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -37,6 +41,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instructions")
     private @Nullable Output<String> instructions;
 
+    /**
+     * @return Support instructions.
+     * 
+     */
     public Optional<Output<String>> instructions() {
         return Optional.ofNullable(this.instructions);
     }
@@ -48,6 +56,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="phone")
     private @Nullable Output<String> phone;
 
+    /**
+     * @return Support contact phone number.
+     * 
+     */
     public Optional<Output<String>> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -59,6 +71,10 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Support web address.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -90,38 +106,86 @@ public final class SupportInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SupportInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Support contact email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Support contact email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param instructions Support instructions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instructions(@Nullable Output<String> instructions) {
             $.instructions = instructions;
             return this;
         }
 
+        /**
+         * @param instructions Support instructions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instructions(String instructions) {
             return instructions(Output.of(instructions));
         }
 
+        /**
+         * @param phone Support contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable Output<String> phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param phone Support contact phone number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(String phone) {
             return phone(Output.of(phone));
         }
 
+        /**
+         * @param url Support web address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Support web address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

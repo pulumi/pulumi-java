@@ -17,72 +17,72 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTopicResult {
-    /**
-     * Endpoint for the topic.
-     * 
-     */
+        /**
+         * @return Endpoint for the topic.
+         * 
+         */
     private final String endpoint;
-    /**
-     * Fully qualified identifier of the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified identifier of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
-     * 
-     */
+        /**
+         * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         */
     private final @Nullable List<InboundIpRuleResponse> inboundIpRules;
-    /**
-     * This determines the format that Event Grid should expect for incoming events published to the topic.
-     * 
-     */
+        /**
+         * @return This determines the format that Event Grid should expect for incoming events published to the topic.
+         * 
+         */
     private final @Nullable String inputSchema;
-    /**
-     * This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
-     * 
-     */
+        /**
+         * @return This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
+         * 
+         */
     private final @Nullable JsonInputSchemaMappingResponse inputSchemaMapping;
-    /**
-     * Location of the resource.
-     * 
-     */
+        /**
+         * @return Location of the resource.
+         * 
+         */
     private final String location;
-    /**
-     * Metric resource id for the topic.
-     * 
-     */
+        /**
+         * @return Metric resource id for the topic.
+         * 
+         */
     private final String metricResourceId;
-    /**
-     * Name of the resource.
-     * 
-     */
+        /**
+         * @return Name of the resource.
+         * 
+         */
     private final String name;
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Provisioning state of the topic.
-     * 
-     */
+        /**
+         * @return Provisioning state of the topic.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * This determines if traffic is allowed over public network. By default it is enabled.
-     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
-     * 
-     */
+        /**
+         * @return This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
-    /**
-     * The system metadata relating to Topic resource.
-     * 
-     */
+        /**
+         * @return The system metadata relating to Topic resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Tags of the resource.
-     * 
-     */
+        /**
+         * @return Tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -118,58 +118,58 @@ public final class GetTopicResult {
     }
 
     /**
-     * Endpoint for the topic.
+     * @return Endpoint for the topic.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
-    */
+     */
     public List<InboundIpRuleResponse> inboundIpRules() {
         return this.inboundIpRules == null ? List.of() : this.inboundIpRules;
     }
     /**
-     * This determines the format that Event Grid should expect for incoming events published to the topic.
+     * @return This determines the format that Event Grid should expect for incoming events published to the topic.
      * 
-    */
+     */
     public Optional<String> inputSchema() {
         return Optional.ofNullable(this.inputSchema);
     }
     /**
-     * This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
+     * @return This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
      * 
-    */
+     */
     public Optional<JsonInputSchemaMappingResponse> inputSchemaMapping() {
         return Optional.ofNullable(this.inputSchemaMapping);
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Metric resource id for the topic.
+     * @return Metric resource id for the topic.
      * 
-    */
+     */
     public String metricResourceId() {
         return this.metricResourceId;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -177,38 +177,38 @@ public final class GetTopicResult {
         return this.privateEndpointConnections;
     }
     /**
-     * Provisioning state of the topic.
+     * @return Provisioning state of the topic.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * This determines if traffic is allowed over public network. By default it is enabled.
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules&#34; /&gt;
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * The system metadata relating to Topic resource.
+     * @return The system metadata relating to Topic resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags of the resource.
+     * @return Tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

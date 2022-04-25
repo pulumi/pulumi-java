@@ -13,55 +13,55 @@ import java.util.Objects;
 
 @CustomType
 public final class CommitmentPlanPropertiesResponse {
-    /**
-     * Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
-     * 
-     */
+        /**
+         * @return Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
+         * 
+         */
     private final Boolean chargeForOverage;
-    /**
-     * Indicates whether the commitment plan will incur a charge.
-     * 
-     */
+        /**
+         * @return Indicates whether the commitment plan will incur a charge.
+         * 
+         */
     private final Boolean chargeForPlan;
-    /**
-     * The date at which this commitment plan was created, in ISO 8601 format.
-     * 
-     */
+        /**
+         * @return The date at which this commitment plan was created, in ISO 8601 format.
+         * 
+         */
     private final String creationDate;
-    /**
-     * The included resource quantities this plan gives you.
-     * 
-     */
+        /**
+         * @return The included resource quantities this plan gives you.
+         * 
+         */
     private final Map<String,PlanQuantityResponse> includedQuantities;
-    /**
-     * The maximum number of commitment associations that can be children of this commitment plan.
-     * 
-     */
+        /**
+         * @return The maximum number of commitment associations that can be children of this commitment plan.
+         * 
+         */
     private final Integer maxAssociationLimit;
-    /**
-     * The maximum scale-out capacity for this commitment plan.
-     * 
-     */
+        /**
+         * @return The maximum scale-out capacity for this commitment plan.
+         * 
+         */
     private final Integer maxCapacityLimit;
-    /**
-     * The minimum scale-out capacity for this commitment plan.
-     * 
-     */
+        /**
+         * @return The minimum scale-out capacity for this commitment plan.
+         * 
+         */
     private final Integer minCapacityLimit;
-    /**
-     * The Azure meter which will be used to charge for this commitment plan.
-     * 
-     */
+        /**
+         * @return The Azure meter which will be used to charge for this commitment plan.
+         * 
+         */
     private final String planMeter;
-    /**
-     * The frequency at which this commitment plan&#39;s included quantities are refilled.
-     * 
-     */
+        /**
+         * @return The frequency at which this commitment plan&#39;s included quantities are refilled.
+         * 
+         */
     private final Integer refillFrequencyInDays;
-    /**
-     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
-     * 
-     */
+        /**
+         * @return Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
+         * 
+         */
     private final Boolean suspendPlanOnOverage;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class CommitmentPlanPropertiesResponse {
     }
 
     /**
-     * Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
+     * @return Indicates whether usage beyond the commitment plan&#39;s included quantities will be charged.
      * 
-    */
+     */
     public Boolean chargeForOverage() {
         return this.chargeForOverage;
     }
     /**
-     * Indicates whether the commitment plan will incur a charge.
+     * @return Indicates whether the commitment plan will incur a charge.
      * 
-    */
+     */
     public Boolean chargeForPlan() {
         return this.chargeForPlan;
     }
     /**
-     * The date at which this commitment plan was created, in ISO 8601 format.
+     * @return The date at which this commitment plan was created, in ISO 8601 format.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The included resource quantities this plan gives you.
+     * @return The included resource quantities this plan gives you.
      * 
-    */
+     */
     public Map<String,PlanQuantityResponse> includedQuantities() {
         return this.includedQuantities;
     }
     /**
-     * The maximum number of commitment associations that can be children of this commitment plan.
+     * @return The maximum number of commitment associations that can be children of this commitment plan.
      * 
-    */
+     */
     public Integer maxAssociationLimit() {
         return this.maxAssociationLimit;
     }
     /**
-     * The maximum scale-out capacity for this commitment plan.
+     * @return The maximum scale-out capacity for this commitment plan.
      * 
-    */
+     */
     public Integer maxCapacityLimit() {
         return this.maxCapacityLimit;
     }
     /**
-     * The minimum scale-out capacity for this commitment plan.
+     * @return The minimum scale-out capacity for this commitment plan.
      * 
-    */
+     */
     public Integer minCapacityLimit() {
         return this.minCapacityLimit;
     }
     /**
-     * The Azure meter which will be used to charge for this commitment plan.
+     * @return The Azure meter which will be used to charge for this commitment plan.
      * 
-    */
+     */
     public String planMeter() {
         return this.planMeter;
     }
     /**
-     * The frequency at which this commitment plan&#39;s included quantities are refilled.
+     * @return The frequency at which this commitment plan&#39;s included quantities are refilled.
      * 
-    */
+     */
     public Integer refillFrequencyInDays() {
         return this.refillFrequencyInDays;
     }
     /**
-     * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
+     * @return Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan&#39;s included quantities.
      * 
-    */
+     */
     public Boolean suspendPlanOnOverage() {
         return this.suspendPlanOnOverage;
     }

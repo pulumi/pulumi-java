@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CassandraSchemaResponse {
-    /**
-     * List of cluster key.
-     * 
-     */
+        /**
+         * @return List of cluster key.
+         * 
+         */
     private final @Nullable List<ClusterKeyResponse> clusterKeys;
-    /**
-     * List of Cassandra table columns.
-     * 
-     */
+        /**
+         * @return List of Cassandra table columns.
+         * 
+         */
     private final @Nullable List<ColumnResponse> columns;
-    /**
-     * List of partition key.
-     * 
-     */
+        /**
+         * @return List of partition key.
+         * 
+         */
     private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class CassandraSchemaResponse {
     }
 
     /**
-     * List of cluster key.
+     * @return List of cluster key.
      * 
-    */
+     */
     public List<ClusterKeyResponse> clusterKeys() {
         return this.clusterKeys == null ? List.of() : this.clusterKeys;
     }
     /**
-     * List of Cassandra table columns.
+     * @return List of Cassandra table columns.
      * 
-    */
+     */
     public List<ColumnResponse> columns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
-     * List of partition key.
+     * @return List of partition key.
      * 
-    */
+     */
     public List<CassandraPartitionKeyResponse> partitionKeys() {
         return this.partitionKeys == null ? List.of() : this.partitionKeys;
     }

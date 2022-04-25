@@ -23,6 +23,10 @@ public final class AssignmentReportResourceComplianceReasonResponse extends com.
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return Code for the compliance of the guest configuration assignment resource.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class AssignmentReportResourceComplianceReasonResponse extends com.
     @Import(name="phrase", required=true)
     private String phrase;
 
+    /**
+     * @return Reason for the compliance of the guest configuration assignment resource.
+     * 
+     */
     public String phrase() {
         return this.phrase;
     }
@@ -63,11 +71,23 @@ public final class AssignmentReportResourceComplianceReasonResponse extends com.
             $ = new AssignmentReportResourceComplianceReasonResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Code for the compliance of the guest configuration assignment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param phrase Reason for the compliance of the guest configuration assignment resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phrase(String phrase) {
             $.phrase = phrase;
             return this;

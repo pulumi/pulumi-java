@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachineRunCommandInstanceViewResponse {
-    /**
-     * Script end time.
-     * 
-     */
+        /**
+         * @return Script end time.
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * Script error stream.
-     * 
-     */
+        /**
+         * @return Script error stream.
+         * 
+         */
     private final @Nullable String error;
-    /**
-     * Communicate script configuration errors or execution messages.
-     * 
-     */
+        /**
+         * @return Communicate script configuration errors or execution messages.
+         * 
+         */
     private final @Nullable String executionMessage;
-    /**
-     * Script execution status.
-     * 
-     */
+        /**
+         * @return Script execution status.
+         * 
+         */
     private final @Nullable String executionState;
-    /**
-     * Exit code returned from script execution.
-     * 
-     */
+        /**
+         * @return Exit code returned from script execution.
+         * 
+         */
     private final @Nullable Integer exitCode;
-    /**
-     * Script output stream.
-     * 
-     */
+        /**
+         * @return Script output stream.
+         * 
+         */
     private final @Nullable String output;
-    /**
-     * Script start time.
-     * 
-     */
+        /**
+         * @return Script start time.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * The resource status information.
-     * 
-     */
+        /**
+         * @return The resource status information.
+         * 
+         */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
     }
 
     /**
-     * Script end time.
+     * @return Script end time.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Script error stream.
+     * @return Script error stream.
      * 
-    */
+     */
     public Optional<String> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Communicate script configuration errors or execution messages.
+     * @return Communicate script configuration errors or execution messages.
      * 
-    */
+     */
     public Optional<String> executionMessage() {
         return Optional.ofNullable(this.executionMessage);
     }
     /**
-     * Script execution status.
+     * @return Script execution status.
      * 
-    */
+     */
     public Optional<String> executionState() {
         return Optional.ofNullable(this.executionState);
     }
     /**
-     * Exit code returned from script execution.
+     * @return Exit code returned from script execution.
      * 
-    */
+     */
     public Optional<Integer> exitCode() {
         return Optional.ofNullable(this.exitCode);
     }
     /**
-     * Script output stream.
+     * @return Script output stream.
      * 
-    */
+     */
     public Optional<String> output() {
         return Optional.ofNullable(this.output);
     }
     /**
-     * Script start time.
+     * @return Script start time.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }

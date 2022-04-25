@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AdvancedScheduleMonthlyOccurrenceResponse {
-    /**
-     * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
-     * 
-     */
+        /**
+         * @return Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+         * 
+         */
     private final @Nullable String day;
-    /**
-     * Occurrence of the week within the month. Must be between 1 and 5
-     * 
-     */
+        /**
+         * @return Occurrence of the week within the month. Must be between 1 and 5
+         * 
+         */
     private final @Nullable Integer occurrence;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
     }
 
     /**
-     * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+     * @return Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
-    */
+     */
     public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
     /**
-     * Occurrence of the week within the month. Must be between 1 and 5
+     * @return Occurrence of the week within the month. Must be between 1 and 5
      * 
-    */
+     */
     public Optional<Integer> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }

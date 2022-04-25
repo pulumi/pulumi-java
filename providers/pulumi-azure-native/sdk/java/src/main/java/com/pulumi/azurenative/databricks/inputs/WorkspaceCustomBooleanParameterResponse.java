@@ -24,6 +24,10 @@ public final class WorkspaceCustomBooleanParameterResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of variable that this is
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -35,6 +39,10 @@ public final class WorkspaceCustomBooleanParameterResponse extends com.pulumi.re
     @Import(name="value", required=true)
     private Boolean value;
 
+    /**
+     * @return The value which should be used for this field.
+     * 
+     */
     public Boolean value() {
         return this.value;
     }
@@ -64,11 +72,23 @@ public final class WorkspaceCustomBooleanParameterResponse extends com.pulumi.re
             $ = new WorkspaceCustomBooleanParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of variable that this is
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Boolean value) {
             $.value = value;
             return this;

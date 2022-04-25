@@ -13,60 +13,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConfigurationServiceGitRepositoryResponse {
-    /**
-     * Public sshKey of git repository.
-     * 
-     */
+        /**
+         * @return Public sshKey of git repository.
+         * 
+         */
     private final @Nullable String hostKey;
-    /**
-     * SshKey algorithm of git repository.
-     * 
-     */
+        /**
+         * @return SshKey algorithm of git repository.
+         * 
+         */
     private final @Nullable String hostKeyAlgorithm;
-    /**
-     * Label of the repository
-     * 
-     */
+        /**
+         * @return Label of the repository
+         * 
+         */
     private final String label;
-    /**
-     * Name of the repository
-     * 
-     */
+        /**
+         * @return Name of the repository
+         * 
+         */
     private final String name;
-    /**
-     * Password of git repository basic auth.
-     * 
-     */
+        /**
+         * @return Password of git repository basic auth.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * Collection of patterns of the repository
-     * 
-     */
+        /**
+         * @return Collection of patterns of the repository
+         * 
+         */
     private final List<String> patterns;
-    /**
-     * Private sshKey algorithm of git repository.
-     * 
-     */
+        /**
+         * @return Private sshKey algorithm of git repository.
+         * 
+         */
     private final @Nullable String privateKey;
-    /**
-     * Searching path of the repository
-     * 
-     */
+        /**
+         * @return Searching path of the repository
+         * 
+         */
     private final @Nullable List<String> searchPaths;
-    /**
-     * Strict host key checking or not.
-     * 
-     */
+        /**
+         * @return Strict host key checking or not.
+         * 
+         */
     private final @Nullable Boolean strictHostKeyChecking;
-    /**
-     * URI of the repository
-     * 
-     */
+        /**
+         * @return URI of the repository
+         * 
+         */
     private final String uri;
-    /**
-     * Username of git repository basic auth.
-     * 
-     */
+        /**
+         * @return Username of git repository basic auth.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class ConfigurationServiceGitRepositoryResponse {
     }
 
     /**
-     * Public sshKey of git repository.
+     * @return Public sshKey of git repository.
      * 
-    */
+     */
     public Optional<String> hostKey() {
         return Optional.ofNullable(this.hostKey);
     }
     /**
-     * SshKey algorithm of git repository.
+     * @return SshKey algorithm of git repository.
      * 
-    */
+     */
     public Optional<String> hostKeyAlgorithm() {
         return Optional.ofNullable(this.hostKeyAlgorithm);
     }
     /**
-     * Label of the repository
+     * @return Label of the repository
      * 
-    */
+     */
     public String label() {
         return this.label;
     }
     /**
-     * Name of the repository
+     * @return Name of the repository
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Password of git repository basic auth.
+     * @return Password of git repository basic auth.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Collection of patterns of the repository
+     * @return Collection of patterns of the repository
      * 
-    */
+     */
     public List<String> patterns() {
         return this.patterns;
     }
     /**
-     * Private sshKey algorithm of git repository.
+     * @return Private sshKey algorithm of git repository.
      * 
-    */
+     */
     public Optional<String> privateKey() {
         return Optional.ofNullable(this.privateKey);
     }
     /**
-     * Searching path of the repository
+     * @return Searching path of the repository
      * 
-    */
+     */
     public List<String> searchPaths() {
         return this.searchPaths == null ? List.of() : this.searchPaths;
     }
     /**
-     * Strict host key checking or not.
+     * @return Strict host key checking or not.
      * 
-    */
+     */
     public Optional<Boolean> strictHostKeyChecking() {
         return Optional.ofNullable(this.strictHostKeyChecking);
     }
     /**
-     * URI of the repository
+     * @return URI of the repository
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * Username of git repository basic auth.
+     * @return Username of git repository basic auth.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

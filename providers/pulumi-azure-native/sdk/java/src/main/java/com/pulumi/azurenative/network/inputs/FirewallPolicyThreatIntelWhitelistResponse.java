@@ -26,6 +26,10 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends com.pulumi
     @Import(name="fqdns")
     private @Nullable List<String> fqdns;
 
+    /**
+     * @return List of FQDNs for the ThreatIntel Whitelist.
+     * 
+     */
     public Optional<List<String>> fqdns() {
         return Optional.ofNullable(this.fqdns);
     }
@@ -37,6 +41,10 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends com.pulumi
     @Import(name="ipAddresses")
     private @Nullable List<String> ipAddresses;
 
+    /**
+     * @return List of IP addresses for the ThreatIntel Whitelist.
+     * 
+     */
     public Optional<List<String>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -66,20 +74,44 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends com.pulumi
             $ = new FirewallPolicyThreatIntelWhitelistResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fqdns List of FQDNs for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(@Nullable List<String> fqdns) {
             $.fqdns = fqdns;
             return this;
         }
 
+        /**
+         * @param fqdns List of FQDNs for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
 
+        /**
+         * @param ipAddresses List of IP addresses for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses List of IP addresses for the ThreatIntel Whitelist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }

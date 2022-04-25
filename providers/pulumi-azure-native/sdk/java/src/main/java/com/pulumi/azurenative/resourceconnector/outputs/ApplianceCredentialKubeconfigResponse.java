@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplianceCredentialKubeconfigResponse {
-    /**
-     * Name which contains the role of the kubeconfig.
-     * 
-     */
+        /**
+         * @return Name which contains the role of the kubeconfig.
+         * 
+         */
     private final String name;
-    /**
-     * Contains the kubeconfig value.
-     * 
-     */
+        /**
+         * @return Contains the kubeconfig value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApplianceCredentialKubeconfigResponse {
     }
 
     /**
-     * Name which contains the role of the kubeconfig.
+     * @return Name which contains the role of the kubeconfig.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Contains the kubeconfig value.
+     * @return Contains the kubeconfig value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

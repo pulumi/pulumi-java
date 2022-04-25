@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class HealthMonitorResponse {
-    /**
-     * Health Monitor Details
-     * 
-     */
+        /**
+         * @return Health Monitor Details
+         * 
+         */
     private final String details;
-    /**
-     * Health Monitor Id
-     * 
-     */
+        /**
+         * @return Health Monitor Id
+         * 
+         */
     private final String id;
-    /**
-     * Health Monitor Name
-     * 
-     */
+        /**
+         * @return Health Monitor Name
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class HealthMonitorResponse {
     }
 
     /**
-     * Health Monitor Details
+     * @return Health Monitor Details
      * 
-    */
+     */
     public String details() {
         return this.details;
     }
     /**
-     * Health Monitor Id
+     * @return Health Monitor Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Health Monitor Name
+     * @return Health Monitor Name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

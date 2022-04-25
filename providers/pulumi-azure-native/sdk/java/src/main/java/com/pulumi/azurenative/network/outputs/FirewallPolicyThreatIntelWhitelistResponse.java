@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicyThreatIntelWhitelistResponse {
-    /**
-     * List of FQDNs for the ThreatIntel Whitelist.
-     * 
-     */
+        /**
+         * @return List of FQDNs for the ThreatIntel Whitelist.
+         * 
+         */
     private final @Nullable List<String> fqdns;
-    /**
-     * List of IP addresses for the ThreatIntel Whitelist.
-     * 
-     */
+        /**
+         * @return List of IP addresses for the ThreatIntel Whitelist.
+         * 
+         */
     private final @Nullable List<String> ipAddresses;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
     }
 
     /**
-     * List of FQDNs for the ThreatIntel Whitelist.
+     * @return List of FQDNs for the ThreatIntel Whitelist.
      * 
-    */
+     */
     public List<String> fqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
     }
     /**
-     * List of IP addresses for the ThreatIntel Whitelist.
+     * @return List of IP addresses for the ThreatIntel Whitelist.
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }

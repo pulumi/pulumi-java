@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTransformResult {
-    /**
-     * The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
-     * 
-     */
+        /**
+         * @return The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+         * 
+         */
     private final String created;
-    /**
-     * An optional verbose description of the Transform.
-     * 
-     */
+        /**
+         * @return An optional verbose description of the Transform.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
-     * 
-     */
+        /**
+         * @return The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+         * 
+         */
     private final String lastModified;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * An array of one or more TransformOutputs that the Transform should generate.
-     * 
-     */
+        /**
+         * @return An array of one or more TransformOutputs that the Transform should generate.
+         * 
+         */
     private final List<TransformOutputResponse> outputs;
-    /**
-     * The system metadata relating to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class GetTransformResult {
     }
 
     /**
-     * The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+     * @return The UTC date and time when the Transform was created, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * An optional verbose description of the Transform.
+     * @return An optional verbose description of the Transform.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
+     * @return The UTC date and time when the Transform was last updated, in &#39;YYYY-MM-DDThh:mm:ssZ&#39; format.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * An array of one or more TransformOutputs that the Transform should generate.
+     * @return An array of one or more TransformOutputs that the Transform should generate.
      * 
-    */
+     */
     public List<TransformOutputResponse> outputs() {
         return this.outputs;
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

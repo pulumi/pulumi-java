@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ScalingHostPoolReferenceResponse {
-    /**
-     * Arm path of referenced hostpool.
-     * 
-     */
+        /**
+         * @return Arm path of referenced hostpool.
+         * 
+         */
     private final @Nullable String hostPoolArmPath;
-    /**
-     * Is the scaling plan enabled for this hostpool.
-     * 
-     */
+        /**
+         * @return Is the scaling plan enabled for this hostpool.
+         * 
+         */
     private final @Nullable Boolean scalingPlanEnabled;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ScalingHostPoolReferenceResponse {
     }
 
     /**
-     * Arm path of referenced hostpool.
+     * @return Arm path of referenced hostpool.
      * 
-    */
+     */
     public Optional<String> hostPoolArmPath() {
         return Optional.ofNullable(this.hostPoolArmPath);
     }
     /**
-     * Is the scaling plan enabled for this hostpool.
+     * @return Is the scaling plan enabled for this hostpool.
      * 
-    */
+     */
     public Optional<Boolean> scalingPlanEnabled() {
         return Optional.ofNullable(this.scalingPlanEnabled);
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListTopicSharedAccessKeysResult {
-    /**
-     * Shared access key1 for the topic.
-     * 
-     */
+        /**
+         * @return Shared access key1 for the topic.
+         * 
+         */
     private final @Nullable String key1;
-    /**
-     * Shared access key2 for the topic.
-     * 
-     */
+        /**
+         * @return Shared access key2 for the topic.
+         * 
+         */
     private final @Nullable String key2;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListTopicSharedAccessKeysResult {
     }
 
     /**
-     * Shared access key1 for the topic.
+     * @return Shared access key1 for the topic.
      * 
-    */
+     */
     public Optional<String> key1() {
         return Optional.ofNullable(this.key1);
     }
     /**
-     * Shared access key2 for the topic.
+     * @return Shared access key2 for the topic.
      * 
-    */
+     */
     public Optional<String> key2() {
         return Optional.ofNullable(this.key2);
     }

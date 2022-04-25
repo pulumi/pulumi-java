@@ -14,41 +14,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetJitNetworkAccessPolicyResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Kind of the resource
-     * 
-     */
+        /**
+         * @return Kind of the resource
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Location where the resource is stored
-     * 
-     */
+        /**
+         * @return Location where the resource is stored
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Gets the provisioning state of the Just-in-Time policy.
-     * 
-     */
+        /**
+         * @return Gets the provisioning state of the Just-in-Time policy.
+         * 
+         */
     private final String provisioningState;
     private final @Nullable List<JitNetworkAccessRequestResponse> requests;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Configurations for Microsoft.Compute/virtualMachines resource type.
-     * 
-     */
+        /**
+         * @return Configurations for Microsoft.Compute/virtualMachines resource type.
+         * 
+         */
     private final List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines;
 
     @CustomType.Constructor
@@ -72,37 +72,37 @@ public final class GetJitNetworkAccessPolicyResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of the resource
+     * @return Kind of the resource
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Location where the resource is stored
+     * @return Location where the resource is stored
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the provisioning state of the Just-in-Time policy.
+     * @return Gets the provisioning state of the Just-in-Time policy.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -110,16 +110,16 @@ public final class GetJitNetworkAccessPolicyResult {
         return this.requests == null ? List.of() : this.requests;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Configurations for Microsoft.Compute/virtualMachines resource type.
+     * @return Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
-    */
+     */
     public List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines() {
         return this.virtualMachines;
     }

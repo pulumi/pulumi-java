@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkRuleSetResponse {
-    /**
-     * The default action of allow or deny when no other rules match.
-     * 
-     */
+        /**
+         * @return The default action of allow or deny when no other rules match.
+         * 
+         */
     private final String defaultAction;
-    /**
-     * The IP ACL rules.
-     * 
-     */
+        /**
+         * @return The IP ACL rules.
+         * 
+         */
     private final @Nullable List<IPRuleResponse> ipRules;
-    /**
-     * The virtual network rules.
-     * 
-     */
+        /**
+         * @return The virtual network rules.
+         * 
+         */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class NetworkRuleSetResponse {
     }
 
     /**
-     * The default action of allow or deny when no other rules match.
+     * @return The default action of allow or deny when no other rules match.
      * 
-    */
+     */
     public String defaultAction() {
         return this.defaultAction;
     }
     /**
-     * The IP ACL rules.
+     * @return The IP ACL rules.
      * 
-    */
+     */
     public List<IPRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
-     * The virtual network rules.
+     * @return The virtual network rules.
      * 
-    */
+     */
     public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

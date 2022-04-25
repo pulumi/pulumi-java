@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserInfoResponse {
-    /**
-     * Email of the user used by Logz for contacting them if needed
-     * 
-     */
+        /**
+         * @return Email of the user used by Logz for contacting them if needed
+         * 
+         */
     private final @Nullable String emailAddress;
-    /**
-     * First Name of the user
-     * 
-     */
+        /**
+         * @return First Name of the user
+         * 
+         */
     private final @Nullable String firstName;
-    /**
-     * Last Name of the user
-     * 
-     */
+        /**
+         * @return Last Name of the user
+         * 
+         */
     private final @Nullable String lastName;
-    /**
-     * Phone number of the user used by Logz for contacting them if needed
-     * 
-     */
+        /**
+         * @return Phone number of the user used by Logz for contacting them if needed
+         * 
+         */
     private final @Nullable String phoneNumber;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class UserInfoResponse {
     }
 
     /**
-     * Email of the user used by Logz for contacting them if needed
+     * @return Email of the user used by Logz for contacting them if needed
      * 
-    */
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
-     * First Name of the user
+     * @return First Name of the user
      * 
-    */
+     */
     public Optional<String> firstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
-     * Last Name of the user
+     * @return Last Name of the user
      * 
-    */
+     */
     public Optional<String> lastName() {
         return Optional.ofNullable(this.lastName);
     }
     /**
-     * Phone number of the user used by Logz for contacting them if needed
+     * @return Phone number of the user used by Logz for contacting them if needed
      * 
-    */
+     */
     public Optional<String> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }

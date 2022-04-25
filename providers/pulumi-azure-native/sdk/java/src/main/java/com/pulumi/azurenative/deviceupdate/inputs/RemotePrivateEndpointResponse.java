@@ -29,6 +29,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
     @Import(name="connectionDetails")
     private @Nullable List<ConnectionDetailsResponse> connectionDetails;
 
+    /**
+     * @return List of connection details.
+     * 
+     */
     public Optional<List<ConnectionDetailsResponse>> connectionDetails() {
         return Optional.ofNullable(this.connectionDetails);
     }
@@ -40,6 +44,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Remote endpoint resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
     @Import(name="manualPrivateLinkServiceConnections")
     private @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
+    /**
+     * @return List of private link service connections that need manual approval.
+     * 
+     */
     public Optional<List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections() {
         return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
@@ -62,6 +74,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
     @Import(name="privateLinkServiceConnections")
     private @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
+    /**
+     * @return List of automatically approved private link service connections.
+     * 
+     */
     public Optional<List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections() {
         return Optional.ofNullable(this.privateLinkServiceConnections);
     }
@@ -73,6 +89,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
     @Import(name="privateLinkServiceProxies")
     private @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
 
+    /**
+     * @return List of private link service proxies.
+     * 
+     */
     public Optional<List<PrivateLinkServiceProxyResponse>> privateLinkServiceProxies() {
         return Optional.ofNullable(this.privateLinkServiceProxies);
     }
@@ -84,6 +104,10 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
     @Import(name="vnetTrafficTag", required=true)
     private String vnetTrafficTag;
 
+    /**
+     * @return Virtual network traffic tag.
+     * 
+     */
     public String vnetTrafficTag() {
         return this.vnetTrafficTag;
     }
@@ -117,47 +141,107 @@ public final class RemotePrivateEndpointResponse extends com.pulumi.resources.In
             $ = new RemotePrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionDetails List of connection details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionDetails(@Nullable List<ConnectionDetailsResponse> connectionDetails) {
             $.connectionDetails = connectionDetails;
             return this;
         }
 
+        /**
+         * @param connectionDetails List of connection details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionDetails(ConnectionDetailsResponse... connectionDetails) {
             return connectionDetails(List.of(connectionDetails));
         }
 
+        /**
+         * @param id Remote endpoint resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections List of private link service connections that need manual approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param manualPrivateLinkServiceConnections List of private link service connections that need manual approval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionResponse... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
 
+        /**
+         * @param privateLinkServiceConnections List of automatically approved private link service connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
             $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnections List of automatically approved private link service connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionResponse... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
 
+        /**
+         * @param privateLinkServiceProxies List of private link service proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceProxies(@Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies) {
             $.privateLinkServiceProxies = privateLinkServiceProxies;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceProxies List of private link service proxies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceProxies(PrivateLinkServiceProxyResponse... privateLinkServiceProxies) {
             return privateLinkServiceProxies(List.of(privateLinkServiceProxies));
         }
 
+        /**
+         * @param vnetTrafficTag Virtual network traffic tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetTrafficTag(String vnetTrafficTag) {
             $.vnetTrafficTag = vnetTrafficTag;
             return this;

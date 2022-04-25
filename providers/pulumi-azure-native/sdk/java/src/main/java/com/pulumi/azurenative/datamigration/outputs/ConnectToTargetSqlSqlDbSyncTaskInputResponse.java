@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
-    /**
-     * Connection information for source SQL Server
-     * 
-     */
+        /**
+         * @return Connection information for source SQL Server
+         * 
+         */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
-    /**
-     * Connection information for target SQL DB
-     * 
-     */
+        /**
+         * @return Connection information for target SQL DB
+         * 
+         */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
     }
 
     /**
-     * Connection information for source SQL Server
+     * @return Connection information for source SQL Server
      * 
-    */
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Connection information for target SQL DB
+     * @return Connection information for target SQL DB
      * 
-    */
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

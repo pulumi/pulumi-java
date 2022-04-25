@@ -20,6 +20,10 @@ public final class PipelineSourceTriggerPropertiesResponse extends com.pulumi.re
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The current status of the source trigger.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -48,6 +52,12 @@ public final class PipelineSourceTriggerPropertiesResponse extends com.pulumi.re
             $ = new PipelineSourceTriggerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The current status of the source trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

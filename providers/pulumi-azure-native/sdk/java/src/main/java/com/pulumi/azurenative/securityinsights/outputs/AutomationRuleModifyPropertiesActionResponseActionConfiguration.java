@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutomationRuleModifyPropertiesActionResponseActionConfiguration {
-    /**
-     * The reason the incident was closed
-     * 
-     */
+        /**
+         * @return The reason the incident was closed
+         * 
+         */
     private final @Nullable String classification;
-    /**
-     * Describes the reason the incident was closed
-     * 
-     */
+        /**
+         * @return Describes the reason the incident was closed
+         * 
+         */
     private final @Nullable String classificationComment;
-    /**
-     * The classification reason to close the incident with
-     * 
-     */
+        /**
+         * @return The classification reason to close the incident with
+         * 
+         */
     private final @Nullable String classificationReason;
-    /**
-     * List of labels to add to the incident
-     * 
-     */
+        /**
+         * @return List of labels to add to the incident
+         * 
+         */
     private final @Nullable List<IncidentLabelResponse> labels;
-    /**
-     * Describes a user that the incident is assigned to
-     * 
-     */
+        /**
+         * @return Describes a user that the incident is assigned to
+         * 
+         */
     private final @Nullable IncidentOwnerInfoResponse owner;
-    /**
-     * The severity of the incident
-     * 
-     */
+        /**
+         * @return The severity of the incident
+         * 
+         */
     private final @Nullable String severity;
-    /**
-     * The status of the incident
-     * 
-     */
+        /**
+         * @return The status of the incident
+         * 
+         */
     private final @Nullable String status;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     }
 
     /**
-     * The reason the incident was closed
+     * @return The reason the incident was closed
      * 
-    */
+     */
     public Optional<String> classification() {
         return Optional.ofNullable(this.classification);
     }
     /**
-     * Describes the reason the incident was closed
+     * @return Describes the reason the incident was closed
      * 
-    */
+     */
     public Optional<String> classificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
     /**
-     * The classification reason to close the incident with
+     * @return The classification reason to close the incident with
      * 
-    */
+     */
     public Optional<String> classificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
     /**
-     * List of labels to add to the incident
+     * @return List of labels to add to the incident
      * 
-    */
+     */
     public List<IncidentLabelResponse> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * Describes a user that the incident is assigned to
+     * @return Describes a user that the incident is assigned to
      * 
-    */
+     */
     public Optional<IncidentOwnerInfoResponse> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
-     * The severity of the incident
+     * @return The severity of the incident
      * 
-    */
+     */
     public Optional<String> severity() {
         return Optional.ofNullable(this.severity);
     }
     /**
-     * The status of the incident
+     * @return The status of the incident
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

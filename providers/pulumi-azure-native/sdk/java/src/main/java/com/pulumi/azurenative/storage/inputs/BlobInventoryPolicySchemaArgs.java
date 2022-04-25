@@ -29,6 +29,10 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="destination", required=true)
     private Output<String> destination;
 
+    /**
+     * @return Container name where blob inventory files are stored. Must be pre-created.
+     * 
+     */
     public Output<String> destination() {
         return this.destination;
     }
@@ -40,6 +44,10 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Policy is enabled if set to true.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -51,6 +59,10 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="rules", required=true)
     private Output<List<BlobInventoryPolicyRuleArgs>> rules;
 
+    /**
+     * @return The storage account blob inventory policy rules. The rule is applied when it is enabled.
+     * 
+     */
     public Output<List<BlobInventoryPolicyRuleArgs>> rules() {
         return this.rules;
     }
@@ -62,6 +74,10 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
     private Output<Either<String,InventoryRuleType>> type;
 
+    /**
+     * @return The valid value is Inventory
+     * 
+     */
     public Output<Either<String,InventoryRuleType>> type() {
         return this.type;
     }
@@ -93,50 +109,116 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
             $ = new BlobInventoryPolicySchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Container name where blob inventory files are stored. Must be pre-created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Container name where blob inventory files are stored. Must be pre-created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param enabled Policy is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Policy is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param rules The storage account blob inventory policy rules. The rule is applied when it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<BlobInventoryPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The storage account blob inventory policy rules. The rule is applied when it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BlobInventoryPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The storage account blob inventory policy rules. The rule is applied when it is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BlobInventoryPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param type The valid value is Inventory
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,InventoryRuleType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The valid value is Inventory
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,InventoryRuleType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The valid value is Inventory
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The valid value is Inventory
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(InventoryRuleType type) {
             return type(Either.ofRight(type));
         }

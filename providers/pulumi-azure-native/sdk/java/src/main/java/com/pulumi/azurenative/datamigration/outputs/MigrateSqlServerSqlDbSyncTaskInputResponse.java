@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MigrateSqlServerSqlDbSyncTaskInputResponse {
-    /**
-     * Databases to migrate
-     * 
-     */
+        /**
+         * @return Databases to migrate
+         * 
+         */
     private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
-    /**
-     * Information for connecting to source
-     * 
-     */
+        /**
+         * @return Information for connecting to source
+         * 
+         */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
-    /**
-     * Information for connecting to target
-     * 
-     */
+        /**
+         * @return Information for connecting to target
+         * 
+         */
     private final SqlConnectionInfoResponse targetConnectionInfo;
-    /**
-     * Validation options
-     * 
-     */
+        /**
+         * @return Validation options
+         * 
+         */
     private final @Nullable MigrationValidationOptionsResponse validationOptions;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse {
     }
 
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
-    */
+     */
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
-     * Information for connecting to source
+     * @return Information for connecting to source
      * 
-    */
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Information for connecting to target
+     * @return Information for connecting to target
      * 
-    */
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
     /**
-     * Validation options
+     * @return Validation options
      * 
-    */
+     */
     public Optional<MigrationValidationOptionsResponse> validationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }

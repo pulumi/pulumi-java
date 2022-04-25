@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ListDeploymentInfoResult {
-    /**
-     * Disk capacity of the elasticsearch in Elastic cloud deployment.
-     * 
-     */
+        /**
+         * @return Disk capacity of the elasticsearch in Elastic cloud deployment.
+         * 
+         */
     private final String diskCapacity;
-    /**
-     * RAM capacity of the elasticsearch in Elastic cloud deployment.
-     * 
-     */
+        /**
+         * @return RAM capacity of the elasticsearch in Elastic cloud deployment.
+         * 
+         */
     private final String memoryCapacity;
-    /**
-     * The Elastic deployment status.
-     * 
-     */
+        /**
+         * @return The Elastic deployment status.
+         * 
+         */
     private final String status;
-    /**
-     * Version of the elasticsearch in Elastic cloud deployment.
-     * 
-     */
+        /**
+         * @return Version of the elasticsearch in Elastic cloud deployment.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class ListDeploymentInfoResult {
     }
 
     /**
-     * Disk capacity of the elasticsearch in Elastic cloud deployment.
+     * @return Disk capacity of the elasticsearch in Elastic cloud deployment.
      * 
-    */
+     */
     public String diskCapacity() {
         return this.diskCapacity;
     }
     /**
-     * RAM capacity of the elasticsearch in Elastic cloud deployment.
+     * @return RAM capacity of the elasticsearch in Elastic cloud deployment.
      * 
-    */
+     */
     public String memoryCapacity() {
         return this.memoryCapacity;
     }
     /**
-     * The Elastic deployment status.
+     * @return The Elastic deployment status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Version of the elasticsearch in Elastic cloud deployment.
+     * @return Version of the elasticsearch in Elastic cloud deployment.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

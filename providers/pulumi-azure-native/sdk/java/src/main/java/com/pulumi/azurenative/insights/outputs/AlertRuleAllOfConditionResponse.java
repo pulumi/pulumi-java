@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class AlertRuleAllOfConditionResponse {
-    /**
-     * The list of Activity Log Alert rule conditions.
-     * 
-     */
+        /**
+         * @return The list of Activity Log Alert rule conditions.
+         * 
+         */
     private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class AlertRuleAllOfConditionResponse {
     }
 
     /**
-     * The list of Activity Log Alert rule conditions.
+     * @return The list of Activity Log Alert rule conditions.
      * 
-    */
+     */
     public List<AlertRuleAnyOfOrLeafConditionResponse> allOf() {
         return this.allOf;
     }

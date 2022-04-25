@@ -19,95 +19,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkspaceResult {
-    /**
-     * Workspace creation date.
-     * 
-     */
+        /**
+         * @return Workspace creation date.
+         * 
+         */
     private final String createdDate;
-    /**
-     * This is a read-only property. Represents the ID associated with the workspace.
-     * 
-     */
+        /**
+         * @return This is a read-only property. Represents the ID associated with the workspace.
+         * 
+         */
     private final String customerId;
-    /**
-     * The ETag of the workspace.
-     * 
-     */
+        /**
+         * @return The ETag of the workspace.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * Workspace features.
-     * 
-     */
+        /**
+         * @return Workspace features.
+         * 
+         */
     private final @Nullable WorkspaceFeaturesResponse features;
-    /**
-     * Indicates whether customer managed storage is mandatory for query management.
-     * 
-     */
+        /**
+         * @return Indicates whether customer managed storage is mandatory for query management.
+         * 
+         */
     private final @Nullable Boolean forceCmkForQuery;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * Workspace modification date.
-     * 
-     */
+        /**
+         * @return Workspace modification date.
+         * 
+         */
     private final String modifiedDate;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * List of linked private link scope resources.
-     * 
-     */
+        /**
+         * @return List of linked private link scope resources.
+         * 
+         */
     private final List<PrivateLinkScopedResourceResponse> privateLinkScopedResources;
-    /**
-     * The provisioning state of the workspace.
-     * 
-     */
+        /**
+         * @return The provisioning state of the workspace.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * The network access type for accessing Log Analytics ingestion.
-     * 
-     */
+        /**
+         * @return The network access type for accessing Log Analytics ingestion.
+         * 
+         */
     private final @Nullable String publicNetworkAccessForIngestion;
-    /**
-     * The network access type for accessing Log Analytics query.
-     * 
-     */
+        /**
+         * @return The network access type for accessing Log Analytics query.
+         * 
+         */
     private final @Nullable String publicNetworkAccessForQuery;
-    /**
-     * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
-     * 
-     */
+        /**
+         * @return The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+         * 
+         */
     private final @Nullable Integer retentionInDays;
-    /**
-     * The SKU of the workspace.
-     * 
-     */
+        /**
+         * @return The SKU of the workspace.
+         * 
+         */
     private final @Nullable WorkspaceSkuResponse sku;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The daily volume cap for ingestion.
-     * 
-     */
+        /**
+         * @return The daily volume cap for ingestion.
+         * 
+         */
     private final @Nullable WorkspaceCappingResponse workspaceCapping;
 
     @CustomType.Constructor
@@ -151,128 +151,128 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * Workspace creation date.
+     * @return Workspace creation date.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * This is a read-only property. Represents the ID associated with the workspace.
+     * @return This is a read-only property. Represents the ID associated with the workspace.
      * 
-    */
+     */
     public String customerId() {
         return this.customerId;
     }
     /**
-     * The ETag of the workspace.
+     * @return The ETag of the workspace.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Workspace features.
+     * @return Workspace features.
      * 
-    */
+     */
     public Optional<WorkspaceFeaturesResponse> features() {
         return Optional.ofNullable(this.features);
     }
     /**
-     * Indicates whether customer managed storage is mandatory for query management.
+     * @return Indicates whether customer managed storage is mandatory for query management.
      * 
-    */
+     */
     public Optional<Boolean> forceCmkForQuery() {
         return Optional.ofNullable(this.forceCmkForQuery);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Workspace modification date.
+     * @return Workspace modification date.
      * 
-    */
+     */
     public String modifiedDate() {
         return this.modifiedDate;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of linked private link scope resources.
+     * @return List of linked private link scope resources.
      * 
-    */
+     */
     public List<PrivateLinkScopedResourceResponse> privateLinkScopedResources() {
         return this.privateLinkScopedResources;
     }
     /**
-     * The provisioning state of the workspace.
+     * @return The provisioning state of the workspace.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The network access type for accessing Log Analytics ingestion.
+     * @return The network access type for accessing Log Analytics ingestion.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccessForIngestion() {
         return Optional.ofNullable(this.publicNetworkAccessForIngestion);
     }
     /**
-     * The network access type for accessing Log Analytics query.
+     * @return The network access type for accessing Log Analytics query.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccessForQuery() {
         return Optional.ofNullable(this.publicNetworkAccessForQuery);
     }
     /**
-     * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+     * @return The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
      * 
-    */
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
-     * The SKU of the workspace.
+     * @return The SKU of the workspace.
      * 
-    */
+     */
     public Optional<WorkspaceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The daily volume cap for ingestion.
+     * @return The daily volume cap for ingestion.
      * 
-    */
+     */
     public Optional<WorkspaceCappingResponse> workspaceCapping() {
         return Optional.ofNullable(this.workspaceCapping);
     }

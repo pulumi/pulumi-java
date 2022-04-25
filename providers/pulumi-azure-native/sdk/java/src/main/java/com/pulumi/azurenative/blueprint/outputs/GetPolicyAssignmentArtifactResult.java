@@ -14,56 +14,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPolicyAssignmentArtifactResult {
-    /**
-     * Artifacts which need to be deployed before the specified artifact.
-     * 
-     */
+        /**
+         * @return Artifacts which need to be deployed before the specified artifact.
+         * 
+         */
     private final @Nullable List<String> dependsOn;
-    /**
-     * Multi-line explain this resource.
-     * 
-     */
+        /**
+         * @return Multi-line explain this resource.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * One-liner string explain this resource.
-     * 
-     */
+        /**
+         * @return One-liner string explain this resource.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * String Id used to locate any resource on Azure.
-     * 
-     */
+        /**
+         * @return String Id used to locate any resource on Azure.
+         * 
+         */
     private final String id;
-    /**
-     * Specifies the kind of blueprint artifact.
-     * Expected value is &#39;policyAssignment&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the kind of blueprint artifact.
+         * Expected value is &#39;policyAssignment&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of this resource.
-     * 
-     */
+        /**
+         * @return Name of this resource.
+         * 
+         */
     private final String name;
-    /**
-     * Parameter values for the policy definition.
-     * 
-     */
+        /**
+         * @return Parameter values for the policy definition.
+         * 
+         */
     private final Map<String,ParameterValueResponse> parameters;
-    /**
-     * Azure resource ID of the policy definition.
-     * 
-     */
+        /**
+         * @return Azure resource ID of the policy definition.
+         * 
+         */
     private final String policyDefinitionId;
-    /**
-     * Name of the resource group placeholder to which the policy will be assigned.
-     * 
-     */
+        /**
+         * @return Name of the resource group placeholder to which the policy will be assigned.
+         * 
+         */
     private final @Nullable String resourceGroup;
-    /**
-     * Type of this resource.
-     * 
-     */
+        /**
+         * @return Type of this resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,73 +91,73 @@ public final class GetPolicyAssignmentArtifactResult {
     }
 
     /**
-     * Artifacts which need to be deployed before the specified artifact.
+     * @return Artifacts which need to be deployed before the specified artifact.
      * 
-    */
+     */
     public List<String> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Multi-line explain this resource.
+     * @return Multi-line explain this resource.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * One-liner string explain this resource.
+     * @return One-liner string explain this resource.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Specifies the kind of blueprint artifact.
+     * @return Specifies the kind of blueprint artifact.
      * Expected value is &#39;policyAssignment&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Parameter values for the policy definition.
+     * @return Parameter values for the policy definition.
      * 
-    */
+     */
     public Map<String,ParameterValueResponse> parameters() {
         return this.parameters;
     }
     /**
-     * Azure resource ID of the policy definition.
+     * @return Azure resource ID of the policy definition.
      * 
-    */
+     */
     public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
-     * Name of the resource group placeholder to which the policy will be assigned.
+     * @return Name of the resource group placeholder to which the policy will be assigned.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

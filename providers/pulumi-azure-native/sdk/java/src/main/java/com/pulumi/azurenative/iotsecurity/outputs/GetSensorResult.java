@@ -13,75 +13,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSensorResult {
-    /**
-     * Last connectivity time of the IoT sensor
-     * 
-     */
+        /**
+         * @return Last connectivity time of the IoT sensor
+         * 
+         */
     private final String connectivityTime;
-    /**
-     * Dynamic mode status of the IoT sensor
-     * 
-     */
+        /**
+         * @return Dynamic mode status of the IoT sensor
+         * 
+         */
     private final Boolean dynamicLearning;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Learning mode status of the IoT sensor
-     * 
-     */
+        /**
+         * @return Learning mode status of the IoT sensor
+         * 
+         */
     private final Boolean learningMode;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Status of the IoT sensor
-     * 
-     */
+        /**
+         * @return Status of the IoT sensor
+         * 
+         */
     private final String sensorStatus;
-    /**
-     * Type of sensor
-     * 
-     */
+        /**
+         * @return Type of sensor
+         * 
+         */
     private final @Nullable String sensorType;
-    /**
-     * Version of the IoT sensor
-     * 
-     */
+        /**
+         * @return Version of the IoT sensor
+         * 
+         */
     private final String sensorVersion;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * TI Automatic mode status of the IoT sensor
-     * 
-     */
+        /**
+         * @return TI Automatic mode status of the IoT sensor
+         * 
+         */
     private final @Nullable Boolean tiAutomaticUpdates;
-    /**
-     * TI Status of the IoT sensor
-     * 
-     */
+        /**
+         * @return TI Status of the IoT sensor
+         * 
+         */
     private final String tiStatus;
-    /**
-     * TI Version of the IoT sensor
-     * 
-     */
+        /**
+         * @return TI Version of the IoT sensor
+         * 
+         */
     private final String tiVersion;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Zone of the IoT sensor
-     * 
-     */
+        /**
+         * @return Zone of the IoT sensor
+         * 
+         */
     private final @Nullable String zone;
 
     @CustomType.Constructor
@@ -117,100 +117,100 @@ public final class GetSensorResult {
     }
 
     /**
-     * Last connectivity time of the IoT sensor
+     * @return Last connectivity time of the IoT sensor
      * 
-    */
+     */
     public String connectivityTime() {
         return this.connectivityTime;
     }
     /**
-     * Dynamic mode status of the IoT sensor
+     * @return Dynamic mode status of the IoT sensor
      * 
-    */
+     */
     public Boolean dynamicLearning() {
         return this.dynamicLearning;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Learning mode status of the IoT sensor
+     * @return Learning mode status of the IoT sensor
      * 
-    */
+     */
     public Boolean learningMode() {
         return this.learningMode;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the IoT sensor
+     * @return Status of the IoT sensor
      * 
-    */
+     */
     public String sensorStatus() {
         return this.sensorStatus;
     }
     /**
-     * Type of sensor
+     * @return Type of sensor
      * 
-    */
+     */
     public Optional<String> sensorType() {
         return Optional.ofNullable(this.sensorType);
     }
     /**
-     * Version of the IoT sensor
+     * @return Version of the IoT sensor
      * 
-    */
+     */
     public String sensorVersion() {
         return this.sensorVersion;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * TI Automatic mode status of the IoT sensor
+     * @return TI Automatic mode status of the IoT sensor
      * 
-    */
+     */
     public Optional<Boolean> tiAutomaticUpdates() {
         return Optional.ofNullable(this.tiAutomaticUpdates);
     }
     /**
-     * TI Status of the IoT sensor
+     * @return TI Status of the IoT sensor
      * 
-    */
+     */
     public String tiStatus() {
         return this.tiStatus;
     }
     /**
-     * TI Version of the IoT sensor
+     * @return TI Version of the IoT sensor
      * 
-    */
+     */
     public String tiVersion() {
         return this.tiVersion;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Zone of the IoT sensor
+     * @return Zone of the IoT sensor
      * 
-    */
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }

@@ -28,6 +28,10 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="datasourceTypes", required=true)
     private List<String> datasourceTypes;
 
+    /**
+     * @return Type of datasource for the backup management
+     * 
+     */
     public List<String> datasourceTypes() {
         return this.datasourceTypes;
     }
@@ -39,6 +43,11 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return
+     * Expected value is &#39;BackupPolicy&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -50,6 +59,10 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="policyRules", required=true)
     private List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
+    /**
+     * @return Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+     * 
+     */
     public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules() {
         return this.policyRules;
     }
@@ -80,25 +93,56 @@ public final class BackupPolicyResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BackupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasourceTypes Type of datasource for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceTypes(List<String> datasourceTypes) {
             $.datasourceTypes = datasourceTypes;
             return this;
         }
 
+        /**
+         * @param datasourceTypes Type of datasource for the backup management
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceTypes(String... datasourceTypes) {
             return datasourceTypes(List.of(datasourceTypes));
         }
 
+        /**
+         * @param objectType
+         * Expected value is &#39;BackupPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param policyRules Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
             $.policyRules = policyRules;
             return this;
         }
 
+        /**
+         * @param policyRules Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyRules(Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>... policyRules) {
             return policyRules(List.of(policyRules));
         }

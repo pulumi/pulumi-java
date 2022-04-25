@@ -31,6 +31,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="actionGroups", required=true)
     private Output<ActionGroupsInformationArgs> actionGroups;
 
+    /**
+     * @return The alert rule actions.
+     * 
+     */
     public Output<ActionGroupsInformationArgs> actionGroups() {
         return this.actionGroups;
     }
@@ -42,6 +46,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="alertRuleName")
     private @Nullable Output<String> alertRuleName;
 
+    /**
+     * @return The name of the alert rule.
+     * 
+     */
     public Optional<Output<String>> alertRuleName() {
         return Optional.ofNullable(this.alertRuleName);
     }
@@ -53,6 +61,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The alert rule description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -64,6 +76,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="detector", required=true)
     private Output<DetectorArgs> detector;
 
+    /**
+     * @return The alert rule&#39;s detector.
+     * 
+     */
     public Output<DetectorArgs> detector() {
         return this.detector;
     }
@@ -75,6 +91,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="frequency", required=true)
     private Output<String> frequency;
 
+    /**
+     * @return The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
+     * 
+     */
     public Output<String> frequency() {
         return this.frequency;
     }
@@ -86,6 +106,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -97,6 +121,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +136,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="scope", required=true)
     private Output<List<String>> scope;
 
+    /**
+     * @return The alert rule resources scope.
+     * 
+     */
     public Output<List<String>> scope() {
         return this.scope;
     }
@@ -119,6 +151,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="severity", required=true)
     private Output<Either<String,Severity>> severity;
 
+    /**
+     * @return The alert rule severity.
+     * 
+     */
     public Output<Either<String,Severity>> severity() {
         return this.severity;
     }
@@ -130,6 +166,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="state", required=true)
     private Output<Either<String,AlertRuleState>> state;
 
+    /**
+     * @return The alert rule state.
+     * 
+     */
     public Output<Either<String,AlertRuleState>> state() {
         return this.state;
     }
@@ -141,6 +181,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +196,10 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
     @Import(name="throttling")
     private @Nullable Output<ThrottlingInformationArgs> throttling;
 
+    /**
+     * @return The alert rule throttling information.
+     * 
+     */
     public Optional<Output<ThrottlingInformationArgs>> throttling() {
         return Optional.ofNullable(this.throttling);
     }
@@ -191,130 +239,304 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
             $ = new SmartDetectorAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroups The alert rule actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(Output<ActionGroupsInformationArgs> actionGroups) {
             $.actionGroups = actionGroups;
             return this;
         }
 
+        /**
+         * @param actionGroups The alert rule actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroups(ActionGroupsInformationArgs actionGroups) {
             return actionGroups(Output.of(actionGroups));
         }
 
+        /**
+         * @param alertRuleName The name of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleName(@Nullable Output<String> alertRuleName) {
             $.alertRuleName = alertRuleName;
             return this;
         }
 
+        /**
+         * @param alertRuleName The name of the alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertRuleName(String alertRuleName) {
             return alertRuleName(Output.of(alertRuleName));
         }
 
+        /**
+         * @param description The alert rule description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The alert rule description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param detector The alert rule&#39;s detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detector(Output<DetectorArgs> detector) {
             $.detector = detector;
             return this;
         }
 
+        /**
+         * @param detector The alert rule&#39;s detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detector(DetectorArgs detector) {
             return detector(Output.of(detector));
         }
 
+        /**
+         * @param frequency The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(Output<String> frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param frequency The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             return frequency(Output.of(frequency));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scope The alert rule resources scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<List<String>> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The alert rule resources scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(List<String> scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scope The alert rule resources scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }
 
+        /**
+         * @param severity The alert rule severity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Either<String,Severity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The alert rule severity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,Severity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity The alert rule severity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity The alert rule severity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Severity severity) {
             return severity(Either.ofRight(severity));
         }
 
+        /**
+         * @param state The alert rule state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<Either<String,AlertRuleState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The alert rule state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,AlertRuleState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The alert rule state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The alert rule state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(AlertRuleState state) {
             return state(Either.ofRight(state));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param throttling The alert rule throttling information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttling(@Nullable Output<ThrottlingInformationArgs> throttling) {
             $.throttling = throttling;
             return this;
         }
 
+        /**
+         * @param throttling The alert rule throttling information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throttling(ThrottlingInformationArgs throttling) {
             return throttling(Output.of(throttling));
         }

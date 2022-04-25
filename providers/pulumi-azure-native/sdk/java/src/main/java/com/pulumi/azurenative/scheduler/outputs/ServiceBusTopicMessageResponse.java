@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceBusTopicMessageResponse {
-    /**
-     * Gets or sets the Service Bus authentication.
-     * 
-     */
+        /**
+         * @return Gets or sets the Service Bus authentication.
+         * 
+         */
     private final @Nullable ServiceBusAuthenticationResponse authentication;
-    /**
-     * Gets or sets the brokered message properties.
-     * 
-     */
+        /**
+         * @return Gets or sets the brokered message properties.
+         * 
+         */
     private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
-    /**
-     * Gets or sets the custom message properties.
-     * 
-     */
+        /**
+         * @return Gets or sets the custom message properties.
+         * 
+         */
     private final @Nullable Map<String,String> customMessageProperties;
-    /**
-     * Gets or sets the message.
-     * 
-     */
+        /**
+         * @return Gets or sets the message.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Gets or sets the namespace.
-     * 
-     */
+        /**
+         * @return Gets or sets the namespace.
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * Gets or sets the topic path.
-     * 
-     */
+        /**
+         * @return Gets or sets the topic path.
+         * 
+         */
     private final @Nullable String topicPath;
-    /**
-     * Gets or sets the transport type.
-     * 
-     */
+        /**
+         * @return Gets or sets the transport type.
+         * 
+         */
     private final @Nullable String transportType;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class ServiceBusTopicMessageResponse {
     }
 
     /**
-     * Gets or sets the Service Bus authentication.
+     * @return Gets or sets the Service Bus authentication.
      * 
-    */
+     */
     public Optional<ServiceBusAuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
-     * Gets or sets the brokered message properties.
+     * @return Gets or sets the brokered message properties.
      * 
-    */
+     */
     public Optional<ServiceBusBrokeredMessagePropertiesResponse> brokeredMessageProperties() {
         return Optional.ofNullable(this.brokeredMessageProperties);
     }
     /**
-     * Gets or sets the custom message properties.
+     * @return Gets or sets the custom message properties.
      * 
-    */
+     */
     public Map<String,String> customMessageProperties() {
         return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
     }
     /**
-     * Gets or sets the message.
+     * @return Gets or sets the message.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Gets or sets the namespace.
+     * @return Gets or sets the namespace.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * Gets or sets the topic path.
+     * @return Gets or sets the topic path.
      * 
-    */
+     */
     public Optional<String> topicPath() {
         return Optional.ofNullable(this.topicPath);
     }
     /**
-     * Gets or sets the transport type.
+     * @return Gets or sets the transport type.
      * 
-    */
+     */
     public Optional<String> transportType() {
         return Optional.ofNullable(this.transportType);
     }

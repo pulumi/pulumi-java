@@ -27,6 +27,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
     private Output<Either<String,SkuFamily>> family;
 
+    /**
+     * @return SKU family name
+     * 
+     */
     public Output<Either<String,SkuFamily>> family() {
         return this.family;
     }
@@ -38,6 +42,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<SkuName> name;
 
+    /**
+     * @return SKU name to specify whether the key vault is a standard vault or a premium vault.
+     * 
+     */
     public Output<SkuName> name() {
         return this.name;
     }
@@ -67,28 +75,64 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family SKU family name
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Output<Either<String,SkuFamily>> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family SKU family name
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Either<String,SkuFamily> family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param family SKU family name
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Either.ofLeft(family));
         }
 
+        /**
+         * @param family SKU family name
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(SkuFamily family) {
             return family(Either.ofRight(family));
         }
 
+        /**
+         * @param name SKU name to specify whether the key vault is a standard vault or a premium vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<SkuName> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name SKU name to specify whether the key vault is a standard vault or a premium vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Output.of(name));
         }

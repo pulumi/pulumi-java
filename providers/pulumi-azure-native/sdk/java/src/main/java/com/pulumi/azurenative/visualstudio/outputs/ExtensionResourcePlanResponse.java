@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExtensionResourcePlanResponse {
-    /**
-     * Name of the plan.
-     * 
-     */
+        /**
+         * @return Name of the plan.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Product name.
-     * 
-     */
+        /**
+         * @return Product name.
+         * 
+         */
     private final @Nullable String product;
-    /**
-     * Optional: the promotion code associated with the plan.
-     * 
-     */
+        /**
+         * @return Optional: the promotion code associated with the plan.
+         * 
+         */
     private final @Nullable String promotionCode;
-    /**
-     * Name of the extension publisher.
-     * 
-     */
+        /**
+         * @return Name of the extension publisher.
+         * 
+         */
     private final @Nullable String publisher;
-    /**
-     * A string that uniquely identifies the plan version.
-     * 
-     */
+        /**
+         * @return A string that uniquely identifies the plan version.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ExtensionResourcePlanResponse {
     }
 
     /**
-     * Name of the plan.
+     * @return Name of the plan.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Product name.
+     * @return Product name.
      * 
-    */
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
-     * Optional: the promotion code associated with the plan.
+     * @return Optional: the promotion code associated with the plan.
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * Name of the extension publisher.
+     * @return Name of the extension publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * A string that uniquely identifies the plan version.
+     * @return A string that uniquely identifies the plan version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

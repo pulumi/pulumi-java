@@ -13,80 +13,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLinkedSubscriptionResult {
-    /**
-     * The status of the remote management connection of the Azure Stack device.
-     * 
-     */
+        /**
+         * @return The status of the remote management connection of the Azure Stack device.
+         * 
+         */
     private final String deviceConnectionStatus;
-    /**
-     * The identifier of the Azure Stack device for remote management.
-     * 
-     */
+        /**
+         * @return The identifier of the Azure Stack device for remote management.
+         * 
+         */
     private final String deviceId;
-    /**
-     * The connection state of the Azure Stack device.
-     * 
-     */
+        /**
+         * @return The connection state of the Azure Stack device.
+         * 
+         */
     private final String deviceLinkState;
-    /**
-     * The object identifier associated with the Azure Stack device connecting to Azure.
-     * 
-     */
+        /**
+         * @return The object identifier associated with the Azure Stack device connecting to Azure.
+         * 
+         */
     private final String deviceObjectId;
-    /**
-     * The entity tag used for optimistic concurrency when modifying the resource.
-     * 
-     */
+        /**
+         * @return The entity tag used for optimistic concurrency when modifying the resource.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * ID of the resource.
-     * 
-     */
+        /**
+         * @return ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The kind of the resource.
-     * 
-     */
+        /**
+         * @return The kind of the resource.
+         * 
+         */
     private final String kind;
-    /**
-     * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
-     * 
-     */
+        /**
+         * @return The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
+         * 
+         */
     private final String lastConnectedTime;
-    /**
-     * The identifier associated with the device subscription.
-     * 
-     */
+        /**
+         * @return The identifier associated with the device subscription.
+         * 
+         */
     private final @Nullable String linkedSubscriptionId;
-    /**
-     * Location of the resource.
-     * 
-     */
+        /**
+         * @return Location of the resource.
+         * 
+         */
     private final String location;
-    /**
-     * Name of the resource.
-     * 
-     */
+        /**
+         * @return Name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The identifier associated with the device registration.
-     * 
-     */
+        /**
+         * @return The identifier associated with the device registration.
+         * 
+         */
     private final @Nullable String registrationResourceId;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Custom tags for the resource.
-     * 
-     */
+        /**
+         * @return Custom tags for the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of Resource.
-     * 
-     */
+        /**
+         * @return Type of Resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -124,107 +124,107 @@ public final class GetLinkedSubscriptionResult {
     }
 
     /**
-     * The status of the remote management connection of the Azure Stack device.
+     * @return The status of the remote management connection of the Azure Stack device.
      * 
-    */
+     */
     public String deviceConnectionStatus() {
         return this.deviceConnectionStatus;
     }
     /**
-     * The identifier of the Azure Stack device for remote management.
+     * @return The identifier of the Azure Stack device for remote management.
      * 
-    */
+     */
     public String deviceId() {
         return this.deviceId;
     }
     /**
-     * The connection state of the Azure Stack device.
+     * @return The connection state of the Azure Stack device.
      * 
-    */
+     */
     public String deviceLinkState() {
         return this.deviceLinkState;
     }
     /**
-     * The object identifier associated with the Azure Stack device connecting to Azure.
+     * @return The object identifier associated with the Azure Stack device connecting to Azure.
      * 
-    */
+     */
     public String deviceObjectId() {
         return this.deviceObjectId;
     }
     /**
-     * The entity tag used for optimistic concurrency when modifying the resource.
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * ID of the resource.
+     * @return ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the resource.
+     * @return The kind of the resource.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
+     * @return The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
      * 
-    */
+     */
     public String lastConnectedTime() {
         return this.lastConnectedTime;
     }
     /**
-     * The identifier associated with the device subscription.
+     * @return The identifier associated with the device subscription.
      * 
-    */
+     */
     public Optional<String> linkedSubscriptionId() {
         return Optional.ofNullable(this.linkedSubscriptionId);
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The identifier associated with the device registration.
+     * @return The identifier associated with the device registration.
      * 
-    */
+     */
     public Optional<String> registrationResourceId() {
         return Optional.ofNullable(this.registrationResourceId);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Custom tags for the resource.
+     * @return Custom tags for the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of Resource.
+     * @return Type of Resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

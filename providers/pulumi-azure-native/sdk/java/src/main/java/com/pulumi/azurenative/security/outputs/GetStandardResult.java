@@ -15,70 +15,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetStandardResult {
-    /**
-     * category of the standard provided
-     * 
-     */
+        /**
+         * @return category of the standard provided
+         * 
+         */
     private final @Nullable String category;
-    /**
-     * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
-     * 
-     */
+        /**
+         * @return List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+         * 
+         */
     private final @Nullable List<StandardComponentPropertiesResponse> components;
-    /**
-     * description of the standard
-     * 
-     */
+        /**
+         * @return description of the standard
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * display name of the standard, equivalent to the standardId
-     * 
-     */
+        /**
+         * @return display name of the standard, equivalent to the standardId
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Entity tag is used for comparing two or more entities from the same requested resource.
-     * 
-     */
+        /**
+         * @return Entity tag is used for comparing two or more entities from the same requested resource.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Kind of the resource
-     * 
-     */
+        /**
+         * @return Kind of the resource
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Location where the resource is stored
-     * 
-     */
+        /**
+         * @return Location where the resource is stored
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * standard type (Custom or BuiltIn only currently)
-     * 
-     */
+        /**
+         * @return standard type (Custom or BuiltIn only currently)
+         * 
+         */
     private final String standardType;
-    /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * A list of key value pairs that describe the resource.
-     * 
-     */
+        /**
+         * @return A list of key value pairs that describe the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -112,93 +112,93 @@ public final class GetStandardResult {
     }
 
     /**
-     * category of the standard provided
+     * @return category of the standard provided
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+     * @return List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
      * 
-    */
+     */
     public List<StandardComponentPropertiesResponse> components() {
         return this.components == null ? List.of() : this.components;
     }
     /**
-     * description of the standard
+     * @return description of the standard
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * display name of the standard, equivalent to the standardId
+     * @return display name of the standard, equivalent to the standardId
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Entity tag is used for comparing two or more entities from the same requested resource.
+     * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of the resource
+     * @return Kind of the resource
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Location where the resource is stored
+     * @return Location where the resource is stored
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * standard type (Custom or BuiltIn only currently)
+     * @return standard type (Custom or BuiltIn only currently)
      * 
-    */
+     */
     public String standardType() {
         return this.standardType;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * A list of key value pairs that describe the resource.
+     * @return A list of key value pairs that describe the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

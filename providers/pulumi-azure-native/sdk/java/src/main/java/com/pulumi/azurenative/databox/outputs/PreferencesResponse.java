@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PreferencesResponse {
-    /**
-     * Preferences related to the Encryption.
-     * 
-     */
+        /**
+         * @return Preferences related to the Encryption.
+         * 
+         */
     private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
-    /**
-     * Preferred data center region.
-     * 
-     */
+        /**
+         * @return Preferred data center region.
+         * 
+         */
     private final @Nullable List<String> preferredDataCenterRegion;
-    /**
-     * Preferences related to the shipment logistics of the sku.
-     * 
-     */
+        /**
+         * @return Preferences related to the shipment logistics of the sku.
+         * 
+         */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class PreferencesResponse {
     }
 
     /**
-     * Preferences related to the Encryption.
+     * @return Preferences related to the Encryption.
      * 
-    */
+     */
     public Optional<EncryptionPreferencesResponse> encryptionPreferences() {
         return Optional.ofNullable(this.encryptionPreferences);
     }
     /**
-     * Preferred data center region.
+     * @return Preferred data center region.
      * 
-    */
+     */
     public List<String> preferredDataCenterRegion() {
         return this.preferredDataCenterRegion == null ? List.of() : this.preferredDataCenterRegion;
     }
     /**
-     * Preferences related to the shipment logistics of the sku.
+     * @return Preferences related to the shipment logistics of the sku.
      * 
-    */
+     */
     public Optional<TransportPreferencesResponse> transportPreferences() {
         return Optional.ofNullable(this.transportPreferences);
     }

@@ -25,6 +25,10 @@ public final class VirtualDirectoryResponse extends com.pulumi.resources.InvokeA
     @Import(name="physicalPath")
     private @Nullable String physicalPath;
 
+    /**
+     * @return Physical path.
+     * 
+     */
     public Optional<String> physicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
@@ -36,6 +40,10 @@ public final class VirtualDirectoryResponse extends com.pulumi.resources.InvokeA
     @Import(name="virtualPath")
     private @Nullable String virtualPath;
 
+    /**
+     * @return Path to virtual application.
+     * 
+     */
     public Optional<String> virtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }
@@ -65,11 +73,23 @@ public final class VirtualDirectoryResponse extends com.pulumi.resources.InvokeA
             $ = new VirtualDirectoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param physicalPath Physical path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder physicalPath(@Nullable String physicalPath) {
             $.physicalPath = physicalPath;
             return this;
         }
 
+        /**
+         * @param virtualPath Path to virtual application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualPath(@Nullable String virtualPath) {
             $.virtualPath = virtualPath;
             return this;

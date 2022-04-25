@@ -15,60 +15,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPrivateStoreCollectionResult {
-    /**
-     * Indicating whether all subscriptions are selected (=true) or not (=false).
-     * 
-     */
+        /**
+         * @return Indicating whether all subscriptions are selected (=true) or not (=false).
+         * 
+         */
     private final @Nullable Boolean allSubscriptions;
-    /**
-     * Gets or sets the association with Commercial&#39;s Billing Account.
-     * 
-     */
+        /**
+         * @return Gets or sets the association with Commercial&#39;s Billing Account.
+         * 
+         */
     private final @Nullable String claim;
-    /**
-     * Gets collection Id.
-     * 
-     */
+        /**
+         * @return Gets collection Id.
+         * 
+         */
     private final String collectionId;
-    /**
-     * Gets or sets collection name.
-     * 
-     */
+        /**
+         * @return Gets or sets collection name.
+         * 
+         */
     private final @Nullable String collectionName;
-    /**
-     * Indicating whether the collection is enabled or disabled.
-     * 
-     */
+        /**
+         * @return Indicating whether the collection is enabled or disabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Gets the number of offers associated with the collection.
-     * 
-     */
+        /**
+         * @return Gets the number of offers associated with the collection.
+         * 
+         */
     private final Double numberOfOffers;
-    /**
-     * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
-     * 
-     */
+        /**
+         * @return Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+         * 
+         */
     private final @Nullable List<String> subscriptionsList;
-    /**
-     * Metadata pertaining to creation and last modification of the resource
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -98,79 +98,79 @@ public final class GetPrivateStoreCollectionResult {
     }
 
     /**
-     * Indicating whether all subscriptions are selected (=true) or not (=false).
+     * @return Indicating whether all subscriptions are selected (=true) or not (=false).
      * 
-    */
+     */
     public Optional<Boolean> allSubscriptions() {
         return Optional.ofNullable(this.allSubscriptions);
     }
     /**
-     * Gets or sets the association with Commercial&#39;s Billing Account.
+     * @return Gets or sets the association with Commercial&#39;s Billing Account.
      * 
-    */
+     */
     public Optional<String> claim() {
         return Optional.ofNullable(this.claim);
     }
     /**
-     * Gets collection Id.
+     * @return Gets collection Id.
      * 
-    */
+     */
     public String collectionId() {
         return this.collectionId;
     }
     /**
-     * Gets or sets collection name.
+     * @return Gets or sets collection name.
      * 
-    */
+     */
     public Optional<String> collectionName() {
         return Optional.ofNullable(this.collectionName);
     }
     /**
-     * Indicating whether the collection is enabled or disabled.
+     * @return Indicating whether the collection is enabled or disabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the number of offers associated with the collection.
+     * @return Gets the number of offers associated with the collection.
      * 
-    */
+     */
     public Double numberOfOffers() {
         return this.numberOfOffers;
     }
     /**
-     * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
+     * @return Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
      * 
-    */
+     */
     public List<String> subscriptionsList() {
         return this.subscriptionsList == null ? List.of() : this.subscriptionsList;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource
+     * @return Metadata pertaining to creation and last modification of the resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

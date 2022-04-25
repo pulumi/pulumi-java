@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class RcmProxyDetailsResponse {
-    /**
-     * The health of the RCM proxy.
-     * 
-     */
+        /**
+         * @return The health of the RCM proxy.
+         * 
+         */
     private final String health;
-    /**
-     * The health errors.
-     * 
-     */
+        /**
+         * @return The health errors.
+         * 
+         */
     private final List<HealthErrorResponse> healthErrors;
-    /**
-     * The RCM proxy Id.
-     * 
-     */
+        /**
+         * @return The RCM proxy Id.
+         * 
+         */
     private final String id;
-    /**
-     * The last heartbeat received from the RCM proxy.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the RCM proxy.
+         * 
+         */
     private final String lastHeartbeatUtc;
-    /**
-     * The RCM proxy name.
-     * 
-     */
+        /**
+         * @return The RCM proxy name.
+         * 
+         */
     private final String name;
-    /**
-     * The RCM proxy version.
-     * 
-     */
+        /**
+         * @return The RCM proxy version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class RcmProxyDetailsResponse {
     }
 
     /**
-     * The health of the RCM proxy.
+     * @return The health of the RCM proxy.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The health errors.
+     * @return The health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The RCM proxy Id.
+     * @return The RCM proxy Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last heartbeat received from the RCM proxy.
+     * @return The last heartbeat received from the RCM proxy.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The RCM proxy name.
+     * @return The RCM proxy name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The RCM proxy version.
+     * @return The RCM proxy version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

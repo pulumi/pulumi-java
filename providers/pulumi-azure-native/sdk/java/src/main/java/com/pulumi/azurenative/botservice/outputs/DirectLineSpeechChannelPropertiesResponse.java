@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DirectLineSpeechChannelPropertiesResponse {
-    /**
-     * The cognitive service region with this channel registration.
-     * 
-     */
+        /**
+         * @return The cognitive service region with this channel registration.
+         * 
+         */
     private final String cognitiveServiceRegion;
-    /**
-     * The cognitive service subscription key to use with this channel registration.
-     * 
-     */
+        /**
+         * @return The cognitive service subscription key to use with this channel registration.
+         * 
+         */
     private final String cognitiveServiceSubscriptionKey;
-    /**
-     * Custom voice deployment id (optional).
-     * 
-     */
+        /**
+         * @return Custom voice deployment id (optional).
+         * 
+         */
     private final @Nullable String customSpeechModelId;
-    /**
-     * Custom speech model id (optional).
-     * 
-     */
+        /**
+         * @return Custom speech model id (optional).
+         * 
+         */
     private final @Nullable String customVoiceDeploymentId;
-    /**
-     * Make this a default bot for chosen cognitive service account.
-     * 
-     */
+        /**
+         * @return Make this a default bot for chosen cognitive service account.
+         * 
+         */
     private final @Nullable Boolean isDefaultBotForCogSvcAccount;
-    /**
-     * Whether this channel is enabled or not.
-     * 
-     */
+        /**
+         * @return Whether this channel is enabled or not.
+         * 
+         */
     private final @Nullable Boolean isEnabled;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class DirectLineSpeechChannelPropertiesResponse {
     }
 
     /**
-     * The cognitive service region with this channel registration.
+     * @return The cognitive service region with this channel registration.
      * 
-    */
+     */
     public String cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
     /**
-     * The cognitive service subscription key to use with this channel registration.
+     * @return The cognitive service subscription key to use with this channel registration.
      * 
-    */
+     */
     public String cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
     /**
-     * Custom voice deployment id (optional).
+     * @return Custom voice deployment id (optional).
      * 
-    */
+     */
     public Optional<String> customSpeechModelId() {
         return Optional.ofNullable(this.customSpeechModelId);
     }
     /**
-     * Custom speech model id (optional).
+     * @return Custom speech model id (optional).
      * 
-    */
+     */
     public Optional<String> customVoiceDeploymentId() {
         return Optional.ofNullable(this.customVoiceDeploymentId);
     }
     /**
-     * Make this a default bot for chosen cognitive service account.
+     * @return Make this a default bot for chosen cognitive service account.
      * 
-    */
+     */
     public Optional<Boolean> isDefaultBotForCogSvcAccount() {
         return Optional.ofNullable(this.isDefaultBotForCogSvcAccount);
     }
     /**
-     * Whether this channel is enabled or not.
+     * @return Whether this channel is enabled or not.
      * 
-    */
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }

@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OutputDataBindingResponse {
-    /**
-     * ARM resource ID of the datastore where the data output will be stored.
-     * 
-     */
+        /**
+         * @return ARM resource ID of the datastore where the data output will be stored.
+         * 
+         */
     private final @Nullable String datastoreId;
-    /**
-     * Mechanism for data movement to datastore.
-     * 
-     */
+        /**
+         * @return Mechanism for data movement to datastore.
+         * 
+         */
     private final @Nullable String mode;
-    /**
-     * Location of data inside the container process.
-     * 
-     */
+        /**
+         * @return Location of data inside the container process.
+         * 
+         */
     private final @Nullable String pathOnCompute;
-    /**
-     * Path within the datastore to the data.
-     * 
-     */
+        /**
+         * @return Path within the datastore to the data.
+         * 
+         */
     private final @Nullable String pathOnDatastore;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class OutputDataBindingResponse {
     }
 
     /**
-     * ARM resource ID of the datastore where the data output will be stored.
+     * @return ARM resource ID of the datastore where the data output will be stored.
      * 
-    */
+     */
     public Optional<String> datastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
-     * Mechanism for data movement to datastore.
+     * @return Mechanism for data movement to datastore.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
     /**
-     * Location of data inside the container process.
+     * @return Location of data inside the container process.
      * 
-    */
+     */
     public Optional<String> pathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
     /**
-     * Path within the datastore to the data.
+     * @return Path within the datastore to the data.
      * 
-    */
+     */
     public Optional<String> pathOnDatastore() {
         return Optional.ofNullable(this.pathOnDatastore);
     }

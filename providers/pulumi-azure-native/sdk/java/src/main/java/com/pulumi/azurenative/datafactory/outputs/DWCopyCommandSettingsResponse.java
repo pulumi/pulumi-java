@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DWCopyCommandSettingsResponse {
-    /**
-     * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
-     * 
-     */
+        /**
+         * @return Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
+         * 
+         */
     private final @Nullable Map<String,String> additionalOptions;
-    /**
-     * Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
-     * 
-     */
+        /**
+         * @return Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+         * 
+         */
     private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class DWCopyCommandSettingsResponse {
     }
 
     /**
-     * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
+     * @return Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: &#34;additionalOptions&#34;: { &#34;MAXERRORS&#34;: &#34;1000&#34;, &#34;DATEFORMAT&#34;: &#34;&#39;ymd&#39;&#34; }
      * 
-    */
+     */
     public Map<String,String> additionalOptions() {
         return this.additionalOptions == null ? Map.of() : this.additionalOptions;
     }
     /**
-     * Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+     * @return Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
      * 
-    */
+     */
     public List<DWCopyCommandDefaultValueResponse> defaultValues() {
         return this.defaultValues == null ? List.of() : this.defaultValues;
     }

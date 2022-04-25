@@ -22,110 +22,110 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetJobResult {
-    /**
-     * Reason for cancellation.
-     * 
-     */
+        /**
+         * @return Reason for cancellation.
+         * 
+         */
     private final String cancellationReason;
-    /**
-     * Delivery Info of Job.
-     * 
-     */
+        /**
+         * @return Delivery Info of Job.
+         * 
+         */
     private final @Nullable JobDeliveryInfoResponse deliveryInfo;
-    /**
-     * Delivery type of Job.
-     * 
-     */
+        /**
+         * @return Delivery type of Job.
+         * 
+         */
     private final @Nullable String deliveryType;
-    /**
-     * Details of a job run. This field will only be sent for expand details filter.
-     * 
-     */
+        /**
+         * @return Details of a job run. This field will only be sent for expand details filter.
+         * 
+         */
     private final @Nullable Object details;
-    /**
-     * Top level error for the job.
-     * 
-     */
+        /**
+         * @return Top level error for the job.
+         * 
+         */
     private final CloudErrorResponse error;
-    /**
-     * Id of the object.
-     * 
-     */
+        /**
+         * @return Id of the object.
+         * 
+         */
     private final String id;
-    /**
-     * Msi identity of the resource
-     * 
-     */
+        /**
+         * @return Msi identity of the resource
+         * 
+         */
     private final @Nullable ResourceIdentityResponse identity;
-    /**
-     * Describes whether the job is cancellable or not.
-     * 
-     */
+        /**
+         * @return Describes whether the job is cancellable or not.
+         * 
+         */
     private final Boolean isCancellable;
-    /**
-     * Flag to indicate cancellation of scheduled job.
-     * 
-     */
+        /**
+         * @return Flag to indicate cancellation of scheduled job.
+         * 
+         */
     private final Boolean isCancellableWithoutFee;
-    /**
-     * Describes whether the job is deletable or not.
-     * 
-     */
+        /**
+         * @return Describes whether the job is deletable or not.
+         * 
+         */
     private final Boolean isDeletable;
-    /**
-     * Is Prepare To Ship Enabled on this job
-     * 
-     */
+        /**
+         * @return Is Prepare To Ship Enabled on this job
+         * 
+         */
     private final Boolean isPrepareToShipEnabled;
-    /**
-     * Describes whether the shipping address is editable or not.
-     * 
-     */
+        /**
+         * @return Describes whether the shipping address is editable or not.
+         * 
+         */
     private final Boolean isShippingAddressEditable;
-    /**
-     * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
-     * 
-     */
+        /**
+         * @return The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+         * 
+         */
     private final String location;
-    /**
-     * Name of the object.
-     * 
-     */
+        /**
+         * @return Name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * The sku type.
-     * 
-     */
+        /**
+         * @return The sku type.
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * Time at which the job was started in UTC ISO 8601 format.
-     * 
-     */
+        /**
+         * @return Time at which the job was started in UTC ISO 8601 format.
+         * 
+         */
     private final String startTime;
-    /**
-     * Name of the stage which is in progress.
-     * 
-     */
+        /**
+         * @return Name of the stage which is in progress.
+         * 
+         */
     private final String status;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
-     * 
-     */
+        /**
+         * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of the data transfer.
-     * 
-     */
+        /**
+         * @return Type of the data transfer.
+         * 
+         */
     private final String transferType;
-    /**
-     * Type of the object.
-     * 
-     */
+        /**
+         * @return Type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -175,149 +175,149 @@ public final class GetJobResult {
     }
 
     /**
-     * Reason for cancellation.
+     * @return Reason for cancellation.
      * 
-    */
+     */
     public String cancellationReason() {
         return this.cancellationReason;
     }
     /**
-     * Delivery Info of Job.
+     * @return Delivery Info of Job.
      * 
-    */
+     */
     public Optional<JobDeliveryInfoResponse> deliveryInfo() {
         return Optional.ofNullable(this.deliveryInfo);
     }
     /**
-     * Delivery type of Job.
+     * @return Delivery type of Job.
      * 
-    */
+     */
     public Optional<String> deliveryType() {
         return Optional.ofNullable(this.deliveryType);
     }
     /**
-     * Details of a job run. This field will only be sent for expand details filter.
+     * @return Details of a job run. This field will only be sent for expand details filter.
      * 
-    */
+     */
     public Optional<Object> details() {
         return Optional.ofNullable(this.details);
     }
     /**
-     * Top level error for the job.
+     * @return Top level error for the job.
      * 
-    */
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
     /**
-     * Id of the object.
+     * @return Id of the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Msi identity of the resource
+     * @return Msi identity of the resource
      * 
-    */
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Describes whether the job is cancellable or not.
+     * @return Describes whether the job is cancellable or not.
      * 
-    */
+     */
     public Boolean isCancellable() {
         return this.isCancellable;
     }
     /**
-     * Flag to indicate cancellation of scheduled job.
+     * @return Flag to indicate cancellation of scheduled job.
      * 
-    */
+     */
     public Boolean isCancellableWithoutFee() {
         return this.isCancellableWithoutFee;
     }
     /**
-     * Describes whether the job is deletable or not.
+     * @return Describes whether the job is deletable or not.
      * 
-    */
+     */
     public Boolean isDeletable() {
         return this.isDeletable;
     }
     /**
-     * Is Prepare To Ship Enabled on this job
+     * @return Is Prepare To Ship Enabled on this job
      * 
-    */
+     */
     public Boolean isPrepareToShipEnabled() {
         return this.isPrepareToShipEnabled;
     }
     /**
-     * Describes whether the shipping address is editable or not.
+     * @return Describes whether the shipping address is editable or not.
      * 
-    */
+     */
     public Boolean isShippingAddressEditable() {
         return this.isShippingAddressEditable;
     }
     /**
-     * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+     * @return The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the object.
+     * @return Name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The sku type.
+     * @return The sku type.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Time at which the job was started in UTC ISO 8601 format.
+     * @return Time at which the job was started in UTC ISO 8601 format.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Name of the stage which is in progress.
+     * @return Name of the stage which is in progress.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+     * @return The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of the data transfer.
+     * @return Type of the data transfer.
      * 
-    */
+     */
     public String transferType() {
         return this.transferType;
     }
     /**
-     * Type of the object.
+     * @return Type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -28,6 +28,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataDisks")
     private @Nullable List<DataDiskResponse> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add a data disk to a virtual machine.
+     * 
+     */
     public Optional<List<DataDiskResponse>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -39,6 +43,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="imageReference")
     private @Nullable ImageReferenceResponse imageReference;
 
+    /**
+     * @return The image reference properties.
+     * 
+     */
     public Optional<ImageReferenceResponse> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -50,6 +58,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="osDisk")
     private @Nullable OsDiskResponse osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machine.
+     * 
+     */
     public Optional<OsDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -80,20 +92,44 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(DataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param imageReference The image reference properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable OsDiskResponse osDisk) {
             $.osDisk = osDisk;
             return this;

@@ -19,86 +19,86 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SapOpenHubLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object clientId;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object language;
-    /**
-     * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object logonGroup;
-    /**
-     * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object messageServer;
-    /**
-     * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object messageServerService;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Password to access the SAP BW server where the open hub destination is located.
-     * 
-     */
+        /**
+         * @return Password to access the SAP BW server where the open hub destination is located.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object server;
-    /**
-     * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object systemId;
-    /**
-     * System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object systemNumber;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;SapOpenHub&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;SapOpenHub&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object userName;
 
     @CustomType.Constructor
@@ -138,115 +138,115 @@ public final class SapOpenHubLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+     * @return Client ID of the client on the BW system where the open hub destination is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
+     * @return Language of the BW system where the open hub destination is located. The default value is EN. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> language() {
         return Optional.ofNullable(this.language);
     }
     /**
-     * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+     * @return The Logon Group for the SAP System. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> logonGroup() {
         return Optional.ofNullable(this.logonGroup);
     }
     /**
-     * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+     * @return The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> messageServer() {
         return Optional.ofNullable(this.messageServer);
     }
     /**
-     * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+     * @return The service name or port number of the Message Server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> messageServerService() {
         return Optional.ofNullable(this.messageServerService);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password to access the SAP BW server where the open hub destination is located.
+     * @return Password to access the SAP BW server where the open hub destination is located.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).
+     * @return Host name of the SAP BW instance where the open hub destination is located. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> server() {
         return Optional.ofNullable(this.server);
     }
     /**
-     * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+     * @return SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> systemId() {
         return Optional.ofNullable(this.systemId);
     }
     /**
-     * System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+     * @return System number of the BW system where the open hub destination is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> systemNumber() {
         return Optional.ofNullable(this.systemNumber);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;SapOpenHub&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
+     * @return Username to access the SAP BW server where the open hub destination is located. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

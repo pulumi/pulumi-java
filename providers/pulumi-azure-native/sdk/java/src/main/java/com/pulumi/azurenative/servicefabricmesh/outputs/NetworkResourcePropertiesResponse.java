@@ -11,31 +11,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkResourcePropertiesResponse {
-    /**
-     * User readable description of the network.
-     * 
-     */
+        /**
+         * @return User readable description of the network.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The type of a Service Fabric container network.
-     * Expected value is &#39;NetworkResourceProperties&#39;.
-     * 
-     */
+        /**
+         * @return The type of a Service Fabric container network.
+         * Expected value is &#39;NetworkResourceProperties&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * State of the resource.
-     * 
-     */
+        /**
+         * @return State of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Status of the network.
-     * 
-     */
+        /**
+         * @return Status of the network.
+         * 
+         */
     private final String status;
-    /**
-     * Gives additional information about the current status of the network.
-     * 
-     */
+        /**
+         * @return Gives additional information about the current status of the network.
+         * 
+         */
     private final String statusDetails;
 
     @CustomType.Constructor
@@ -53,38 +53,38 @@ public final class NetworkResourcePropertiesResponse {
     }
 
     /**
-     * User readable description of the network.
+     * @return User readable description of the network.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The type of a Service Fabric container network.
+     * @return The type of a Service Fabric container network.
      * Expected value is &#39;NetworkResourceProperties&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * State of the resource.
+     * @return State of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Status of the network.
+     * @return Status of the network.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Gives additional information about the current status of the network.
+     * @return Gives additional information about the current status of the network.
      * 
-    */
+     */
     public String statusDetails() {
         return this.statusDetails;
     }

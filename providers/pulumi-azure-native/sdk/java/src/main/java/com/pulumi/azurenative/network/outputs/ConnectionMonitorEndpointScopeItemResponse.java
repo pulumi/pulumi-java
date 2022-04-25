@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionMonitorEndpointScopeItemResponse {
-    /**
-     * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
-     * 
-     */
+        /**
+         * @return The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
+         * 
+         */
     private final @Nullable String address;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ConnectionMonitorEndpointScopeItemResponse {
     }
 
     /**
-     * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
+     * @return The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }

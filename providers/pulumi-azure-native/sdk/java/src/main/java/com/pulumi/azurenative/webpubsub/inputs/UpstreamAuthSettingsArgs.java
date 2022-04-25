@@ -29,6 +29,10 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="managedIdentity")
     private @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
 
+    /**
+     * @return Managed identity settings for upstream.
+     * 
+     */
     public Optional<Output<ManagedIdentitySettingsArgs>> managedIdentity() {
         return Optional.ofNullable(this.managedIdentity);
     }
@@ -40,6 +44,10 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="type")
     private @Nullable Output<Either<String,UpstreamAuthType>> type;
 
+    /**
+     * @return Upstream auth type enum.
+     * 
+     */
     public Optional<Output<Either<String,UpstreamAuthType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -69,28 +77,64 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
             $ = new UpstreamAuthSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedIdentity Managed identity settings for upstream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedIdentity(@Nullable Output<ManagedIdentitySettingsArgs> managedIdentity) {
             $.managedIdentity = managedIdentity;
             return this;
         }
 
+        /**
+         * @param managedIdentity Managed identity settings for upstream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedIdentity(ManagedIdentitySettingsArgs managedIdentity) {
             return managedIdentity(Output.of(managedIdentity));
         }
 
+        /**
+         * @param type Upstream auth type enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,UpstreamAuthType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Upstream auth type enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,UpstreamAuthType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Upstream auth type enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Upstream auth type enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(UpstreamAuthType type) {
             return type(Either.ofRight(type));
         }

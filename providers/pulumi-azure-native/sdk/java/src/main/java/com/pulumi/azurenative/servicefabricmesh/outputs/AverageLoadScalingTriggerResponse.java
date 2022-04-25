@@ -12,31 +12,31 @@ import java.util.Objects;
 
 @CustomType
 public final class AverageLoadScalingTriggerResponse {
-    /**
-     * Enumerates the triggers for auto scaling.
-     * Expected value is &#39;AverageLoad&#39;.
-     * 
-     */
+        /**
+         * @return Enumerates the triggers for auto scaling.
+         * Expected value is &#39;AverageLoad&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Lower load threshold (if average load is below this threshold, service will scale down).
-     * 
-     */
+        /**
+         * @return Lower load threshold (if average load is below this threshold, service will scale down).
+         * 
+         */
     private final Double lowerLoadThreshold;
-    /**
-     * Description of the metric that is used for scaling.
-     * 
-     */
+        /**
+         * @return Description of the metric that is used for scaling.
+         * 
+         */
     private final AutoScalingResourceMetricResponse metric;
-    /**
-     * Scale interval that indicates how often will this trigger be checked.
-     * 
-     */
+        /**
+         * @return Scale interval that indicates how often will this trigger be checked.
+         * 
+         */
     private final Integer scaleIntervalInSeconds;
-    /**
-     * Upper load threshold (if average load is above this threshold, service will scale up).
-     * 
-     */
+        /**
+         * @return Upper load threshold (if average load is above this threshold, service will scale up).
+         * 
+         */
     private final Double upperLoadThreshold;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class AverageLoadScalingTriggerResponse {
     }
 
     /**
-     * Enumerates the triggers for auto scaling.
+     * @return Enumerates the triggers for auto scaling.
      * Expected value is &#39;AverageLoad&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Lower load threshold (if average load is below this threshold, service will scale down).
+     * @return Lower load threshold (if average load is below this threshold, service will scale down).
      * 
-    */
+     */
     public Double lowerLoadThreshold() {
         return this.lowerLoadThreshold;
     }
     /**
-     * Description of the metric that is used for scaling.
+     * @return Description of the metric that is used for scaling.
      * 
-    */
+     */
     public AutoScalingResourceMetricResponse metric() {
         return this.metric;
     }
     /**
-     * Scale interval that indicates how often will this trigger be checked.
+     * @return Scale interval that indicates how often will this trigger be checked.
      * 
-    */
+     */
     public Integer scaleIntervalInSeconds() {
         return this.scaleIntervalInSeconds;
     }
     /**
-     * Upper load threshold (if average load is above this threshold, service will scale up).
+     * @return Upper load threshold (if average load is above this threshold, service will scale up).
      * 
-    */
+     */
     public Double upperLoadThreshold() {
         return this.upperLoadThreshold;
     }

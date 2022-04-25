@@ -25,6 +25,10 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -47,6 +55,10 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -58,6 +70,10 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routeFilterName")
     private @Nullable Output<String> routeFilterName;
 
+    /**
+     * @return The name of the route filter.
+     * 
+     */
     public Optional<Output<String>> routeFilterName() {
         return Optional.ofNullable(this.routeFilterName);
     }
@@ -69,6 +85,10 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="rules")
     private @Nullable Output<List<RouteFilterRuleArgs>> rules;
 
+    /**
+     * @return Collection of RouteFilterRules contained within a route filter.
+     * 
+     */
     public Optional<Output<List<RouteFilterRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -80,6 +100,10 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -113,60 +137,138 @@ public final class RouteFilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RouteFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routeFilterName The name of the route filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterName(@Nullable Output<String> routeFilterName) {
             $.routeFilterName = routeFilterName;
             return this;
         }
 
+        /**
+         * @param routeFilterName The name of the route filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterName(String routeFilterName) {
             return routeFilterName(Output.of(routeFilterName));
         }
 
+        /**
+         * @param rules Collection of RouteFilterRules contained within a route filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<RouteFilterRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules Collection of RouteFilterRules contained within a route filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<RouteFilterRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules Collection of RouteFilterRules contained within a route filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(RouteFilterRuleArgs... rules) {
             return rules(List.of(rules));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

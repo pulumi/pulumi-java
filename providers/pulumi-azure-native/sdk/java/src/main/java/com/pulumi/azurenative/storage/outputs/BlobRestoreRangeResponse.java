@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class BlobRestoreRangeResponse {
-    /**
-     * Blob end range. This is exclusive. Empty means account end.
-     * 
-     */
+        /**
+         * @return Blob end range. This is exclusive. Empty means account end.
+         * 
+         */
     private final String endRange;
-    /**
-     * Blob start range. This is inclusive. Empty means account start.
-     * 
-     */
+        /**
+         * @return Blob start range. This is inclusive. Empty means account start.
+         * 
+         */
     private final String startRange;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class BlobRestoreRangeResponse {
     }
 
     /**
-     * Blob end range. This is exclusive. Empty means account end.
+     * @return Blob end range. This is exclusive. Empty means account end.
      * 
-    */
+     */
     public String endRange() {
         return this.endRange;
     }
     /**
-     * Blob start range. This is inclusive. Empty means account start.
+     * @return Blob start range. This is inclusive. Empty means account start.
      * 
-    */
+     */
     public String startRange() {
         return this.startRange;
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class KeyVaultReferenceResponse {
-    /**
-     * The resource ID of the Azure key vault associated with the Batch account.
-     * 
-     */
+        /**
+         * @return The resource ID of the Azure key vault associated with the Batch account.
+         * 
+         */
     private final String id;
-    /**
-     * The URL of the Azure key vault associated with the Batch account.
-     * 
-     */
+        /**
+         * @return The URL of the Azure key vault associated with the Batch account.
+         * 
+         */
     private final String url;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class KeyVaultReferenceResponse {
     }
 
     /**
-     * The resource ID of the Azure key vault associated with the Batch account.
+     * @return The resource ID of the Azure key vault associated with the Batch account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The URL of the Azure key vault associated with the Batch account.
+     * @return The URL of the Azure key vault associated with the Batch account.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }

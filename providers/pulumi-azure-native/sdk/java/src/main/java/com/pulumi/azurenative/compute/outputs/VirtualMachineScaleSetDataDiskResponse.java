@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachineScaleSetDataDiskResponse {
-    /**
-     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
-     * 
-     */
+        /**
+         * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         */
     private final @Nullable String caching;
-    /**
-     * The create option.
-     * 
-     */
+        /**
+         * @return The create option.
+         * 
+         */
     private final String createOption;
-    /**
-     * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
-     */
+        /**
+         * @return Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+         * 
+         */
     private final @Nullable Double diskIOPSReadWrite;
-    /**
-     * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
-     * 
-     */
+        /**
+         * @return Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+         * 
+         */
     private final @Nullable Double diskMBpsReadWrite;
-    /**
-     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
-     * 
-     */
+        /**
+         * @return Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         */
     private final @Nullable Integer diskSizeGB;
-    /**
-     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
-     * 
-     */
+        /**
+         * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         */
     private final Integer lun;
-    /**
-     * The managed disk parameters.
-     * 
-     */
+        /**
+         * @return The managed disk parameters.
+         * 
+         */
     private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
-    /**
-     * The disk name.
-     * 
-     */
+        /**
+         * @return The disk name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
-     * 
-     */
+        /**
+         * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
+         * 
+         */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class VirtualMachineScaleSetDataDiskResponse {
     }
 
     /**
-     * Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
-    */
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
     /**
-     * The create option.
+     * @return The create option.
      * 
-    */
+     */
     public String createOption() {
         return this.createOption;
     }
     /**
-     * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+     * @return Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
      * 
-    */
+     */
     public Optional<Double> diskIOPSReadWrite() {
         return Optional.ofNullable(this.diskIOPSReadWrite);
     }
     /**
-     * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
+     * @return Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
      * 
-    */
+     */
     public Optional<Double> diskMBpsReadWrite() {
         return Optional.ofNullable(this.diskMBpsReadWrite);
     }
     /**
-     * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * @return Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
-    */
+     */
     public Integer lun() {
         return this.lun;
     }
     /**
-     * The managed disk parameters.
+     * @return The managed disk parameters.
      * 
-    */
+     */
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
-    */
+     */
     public Optional<Boolean> writeAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }

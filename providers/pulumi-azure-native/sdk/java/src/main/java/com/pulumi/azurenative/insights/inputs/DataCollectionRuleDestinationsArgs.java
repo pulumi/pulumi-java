@@ -28,6 +28,10 @@ public final class DataCollectionRuleDestinationsArgs extends com.pulumi.resourc
     @Import(name="azureMonitorMetrics")
     private @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
 
+    /**
+     * @return Azure Monitor Metrics destination.
+     * 
+     */
     public Optional<Output<DestinationsSpecAzureMonitorMetricsArgs>> azureMonitorMetrics() {
         return Optional.ofNullable(this.azureMonitorMetrics);
     }
@@ -39,6 +43,10 @@ public final class DataCollectionRuleDestinationsArgs extends com.pulumi.resourc
     @Import(name="logAnalytics")
     private @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
+    /**
+     * @return List of Log Analytics destinations.
+     * 
+     */
     public Optional<Output<List<LogAnalyticsDestinationArgs>>> logAnalytics() {
         return Optional.ofNullable(this.logAnalytics);
     }
@@ -68,24 +76,54 @@ public final class DataCollectionRuleDestinationsArgs extends com.pulumi.resourc
             $ = new DataCollectionRuleDestinationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureMonitorMetrics Azure Monitor Metrics destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureMonitorMetrics(@Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics) {
             $.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
 
+        /**
+         * @param azureMonitorMetrics Azure Monitor Metrics destination.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureMonitorMetrics(DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
             return azureMonitorMetrics(Output.of(azureMonitorMetrics));
         }
 
+        /**
+         * @param logAnalytics List of Log Analytics destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(@Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics) {
             $.logAnalytics = logAnalytics;
             return this;
         }
 
+        /**
+         * @param logAnalytics List of Log Analytics destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(List<LogAnalyticsDestinationArgs> logAnalytics) {
             return logAnalytics(Output.of(logAnalytics));
         }
 
+        /**
+         * @param logAnalytics List of Log Analytics destinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalytics(LogAnalyticsDestinationArgs... logAnalytics) {
             return logAnalytics(List.of(logAnalytics));
         }

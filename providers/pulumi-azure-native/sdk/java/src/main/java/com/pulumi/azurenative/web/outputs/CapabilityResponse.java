@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CapabilityResponse {
-    /**
-     * Name of the SKU capability.
-     * 
-     */
+        /**
+         * @return Name of the SKU capability.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Reason of the SKU capability.
-     * 
-     */
+        /**
+         * @return Reason of the SKU capability.
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * Value of the SKU capability.
-     * 
-     */
+        /**
+         * @return Value of the SKU capability.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class CapabilityResponse {
     }
 
     /**
-     * Name of the SKU capability.
+     * @return Name of the SKU capability.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Reason of the SKU capability.
+     * @return Reason of the SKU capability.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Value of the SKU capability.
+     * @return Value of the SKU capability.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NotebookResourceInfoResponse {
     private final @Nullable String fqdn;
-    /**
-     * The error that occurs when preparing notebook.
-     * 
-     */
+        /**
+         * @return The error that occurs when preparing notebook.
+         * 
+         */
     private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
-    /**
-     * the data plane resourceId that used to initialize notebook component
-     * 
-     */
+        /**
+         * @return the data plane resourceId that used to initialize notebook component
+         * 
+         */
     private final @Nullable String resourceId;
 
     @CustomType.Constructor
@@ -38,16 +38,16 @@ public final class NotebookResourceInfoResponse {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * The error that occurs when preparing notebook.
+     * @return The error that occurs when preparing notebook.
      * 
-    */
+     */
     public Optional<NotebookPreparationErrorResponse> notebookPreparationError() {
         return Optional.ofNullable(this.notebookPreparationError);
     }
     /**
-     * the data plane resourceId that used to initialize notebook component
+     * @return the data plane resourceId that used to initialize notebook component
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

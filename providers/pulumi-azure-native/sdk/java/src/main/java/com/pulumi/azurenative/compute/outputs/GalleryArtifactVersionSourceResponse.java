@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GalleryArtifactVersionSourceResponse {
-    /**
-     * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
-     * 
-     */
+        /**
+         * @return The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
-     * 
-     */
+        /**
+         * @return The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+         * 
+         */
     private final @Nullable String uri;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GalleryArtifactVersionSourceResponse {
     }
 
     /**
-     * The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+     * @return The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+     * @return The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

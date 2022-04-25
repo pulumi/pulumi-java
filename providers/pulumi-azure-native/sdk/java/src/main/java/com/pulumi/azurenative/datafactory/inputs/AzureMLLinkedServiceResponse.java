@@ -34,6 +34,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="apiKey", required=true)
     private Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey;
 
+    /**
+     * @return The API key for accessing the Azure ML model endpoint.
+     * 
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey() {
         return this.apiKey;
     }
@@ -56,6 +64,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="authentication")
     private @Nullable Object authentication;
 
+    /**
+     * @return Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -67,6 +79,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -78,6 +94,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -89,6 +109,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -100,6 +124,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="mlEndpoint", required=true)
     private Object mlEndpoint;
 
+    /**
+     * @return The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object mlEndpoint() {
         return this.mlEndpoint;
     }
@@ -111,6 +139,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -122,6 +154,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="servicePrincipalId")
     private @Nullable Object servicePrincipalId;
 
+    /**
+     * @return The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -133,6 +169,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="servicePrincipalKey")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
+    /**
+     * @return The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -144,6 +184,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="tenant")
     private @Nullable Object tenant;
 
+    /**
+     * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -156,6 +200,11 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureML&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -167,6 +216,10 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
     @Import(name="updateResourceEndpoint")
     private @Nullable Object updateResourceEndpoint;
 
+    /**
+     * @return The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> updateResourceEndpoint() {
         return Optional.ofNullable(this.updateResourceEndpoint);
     }
@@ -207,86 +260,195 @@ public final class AzureMLLinkedServiceResponse extends com.pulumi.resources.Inv
             $ = new AzureMLLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param apiKey The API key for accessing the Azure ML model endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> apiKey) {
             $.apiKey = apiKey;
             return this;
         }
 
+        /**
+         * @param apiKey The API key for accessing the Azure ML model endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(AzureKeyVaultSecretReferenceResponse apiKey) {
             return apiKey(Either.ofLeft(apiKey));
         }
 
+        /**
+         * @param apiKey The API key for accessing the Azure ML model endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiKey(SecureStringResponse apiKey) {
             return apiKey(Either.ofRight(apiKey));
         }
 
+        /**
+         * @param authentication Type of authentication (Required to specify MSI) used to connect to AzureML. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Object authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param mlEndpoint The Batch Execution REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlEndpoint(Object mlEndpoint) {
             $.mlEndpoint = mlEndpoint;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId The ID of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key of the service principal used to authenticate against the ARM-based updateResourceEndpoint of an Azure ML Studio web service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param tenant The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(@Nullable Object tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureML&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param updateResourceEndpoint The Update Resource REST URL for an Azure ML Studio Web Service endpoint. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateResourceEndpoint(@Nullable Object updateResourceEndpoint) {
             $.updateResourceEndpoint = updateResourceEndpoint;
             return this;

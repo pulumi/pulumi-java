@@ -27,6 +27,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="delegatedRoleDefinitionIds")
     private @Nullable Output<List<String>> delegatedRoleDefinitionIds;
 
+    /**
+     * @return The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+     * 
+     */
     public Optional<Output<List<String>>> delegatedRoleDefinitionIds() {
         return Optional.ofNullable(this.delegatedRoleDefinitionIds);
     }
@@ -38,6 +42,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -49,6 +57,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principalIdDisplayName")
     private @Nullable Output<String> principalIdDisplayName;
 
+    /**
+     * @return Display name of the principal Id.
+     * 
+     */
     public Optional<Output<String>> principalIdDisplayName() {
         return Optional.ofNullable(this.principalIdDisplayName);
     }
@@ -60,6 +72,10 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleDefinitionId", required=true)
     private Output<String> roleDefinitionId;
 
+    /**
+     * @return The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+     * 
+     */
     public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -91,42 +107,96 @@ public final class AuthorizationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delegatedRoleDefinitionIds The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedRoleDefinitionIds(@Nullable Output<List<String>> delegatedRoleDefinitionIds) {
             $.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
 
+        /**
+         * @param delegatedRoleDefinitionIds The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedRoleDefinitionIds(List<String> delegatedRoleDefinitionIds) {
             return delegatedRoleDefinitionIds(Output.of(delegatedRoleDefinitionIds));
         }
 
+        /**
+         * @param delegatedRoleDefinitionIds The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delegatedRoleDefinitionIds(String... delegatedRoleDefinitionIds) {
             return delegatedRoleDefinitionIds(List.of(delegatedRoleDefinitionIds));
         }
 
+        /**
+         * @param principalId Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param principalIdDisplayName Display name of the principal Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalIdDisplayName(@Nullable Output<String> principalIdDisplayName) {
             $.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
 
+        /**
+         * @param principalIdDisplayName Display name of the principal Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalIdDisplayName(String principalIdDisplayName) {
             return principalIdDisplayName(Output.of(principalIdDisplayName));
         }
 
+        /**
+         * @param roleDefinitionId The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }

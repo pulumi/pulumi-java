@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrateSyncCompleteCommandOutputResponse {
-    /**
-     * List of errors that happened during the command execution
-     * 
-     */
+        /**
+         * @return List of errors that happened during the command execution
+         * 
+         */
     private final List<ReportableExceptionResponse> errors;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MigrateSyncCompleteCommandOutputResponse {
     }
 
     /**
-     * List of errors that happened during the command execution
+     * @return List of errors that happened during the command execution
      * 
-    */
+     */
     public List<ReportableExceptionResponse> errors() {
         return this.errors;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

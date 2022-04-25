@@ -12,24 +12,24 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FileSystemHttpLogsConfigResponse {
-    /**
-     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
-     * 
-     */
+        /**
+         * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Retention in days.
-     * Remove files older than X days.
-     * 0 or lower means no retention.
-     * 
-     */
+        /**
+         * @return Retention in days.
+         * Remove files older than X days.
+         * 0 or lower means no retention.
+         * 
+         */
     private final @Nullable Integer retentionInDays;
-    /**
-     * Maximum size in megabytes that http log files can use.
-     * When reached old log files will be removed to make space for new ones.
-     * Value can range between 25 and 100.
-     * 
-     */
+        /**
+         * @return Maximum size in megabytes that http log files can use.
+         * When reached old log files will be removed to make space for new ones.
+         * Value can range between 25 and 100.
+         * 
+         */
     private final @Nullable Integer retentionInMb;
 
     @CustomType.Constructor
@@ -43,27 +43,27 @@ public final class FileSystemHttpLogsConfigResponse {
     }
 
     /**
-     * True if configuration is enabled, false if it is disabled and null if configuration is not set.
+     * @return True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Retention in days.
+     * @return Retention in days.
      * Remove files older than X days.
      * 0 or lower means no retention.
      * 
-    */
+     */
     public Optional<Integer> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
     /**
-     * Maximum size in megabytes that http log files can use.
+     * @return Maximum size in megabytes that http log files can use.
      * When reached old log files will be removed to make space for new ones.
      * Value can range between 25 and 100.
      * 
-    */
+     */
     public Optional<Integer> retentionInMb() {
         return Optional.ofNullable(this.retentionInMb);
     }

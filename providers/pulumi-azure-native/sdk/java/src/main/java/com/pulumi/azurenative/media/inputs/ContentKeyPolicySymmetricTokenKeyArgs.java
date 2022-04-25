@@ -25,6 +25,10 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends com.pulumi.reso
     @Import(name="keyValue", required=true)
     private Output<String> keyValue;
 
+    /**
+     * @return The key value of the key
+     * 
+     */
     public Output<String> keyValue() {
         return this.keyValue;
     }
@@ -37,6 +41,11 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends com.pulumi.reso
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -66,20 +75,46 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends com.pulumi.reso
             $ = new ContentKeyPolicySymmetricTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyValue The key value of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(Output<String> keyValue) {
             $.keyValue = keyValue;
             return this;
         }
 
+        /**
+         * @param keyValue The key value of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(String keyValue) {
             return keyValue(Output.of(keyValue));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicySymmetricTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

@@ -13,60 +13,60 @@ import java.util.Objects;
 
 @CustomType
 public final class ListProductDetailsResult {
-    /**
-     * Specifies kind of compute role included in the package.
-     * 
-     */
+        /**
+         * @return Specifies kind of compute role included in the package.
+         * 
+         */
     private final String computeRole;
-    /**
-     * List of attached data disks.
-     * 
-     */
+        /**
+         * @return List of attached data disks.
+         * 
+         */
     private final List<DataDiskImageResponse> dataDiskImages;
-    /**
-     * The URI to the .azpkg file that provides information required for showing product in the gallery.
-     * 
-     */
+        /**
+         * @return The URI to the .azpkg file that provides information required for showing product in the gallery.
+         * 
+         */
     private final String galleryPackageBlobSasUri;
-    /**
-     * Specifies if product is a Virtual Machine Extension.
-     * 
-     */
+        /**
+         * @return Specifies if product is a Virtual Machine Extension.
+         * 
+         */
     private final Boolean isSystemExtension;
-    /**
-     * OS disk image used by product.
-     * 
-     */
+        /**
+         * @return OS disk image used by product.
+         * 
+         */
     private final OsDiskImageResponse osDiskImage;
-    /**
-     * Specifies the kind of the product (virtualMachine or virtualMachineExtension).
-     * 
-     */
+        /**
+         * @return Specifies the kind of the product (virtualMachine or virtualMachineExtension).
+         * 
+         */
     private final String productKind;
-    /**
-     * Indicates if specified product supports multiple extensions.
-     * 
-     */
+        /**
+         * @return Indicates if specified product supports multiple extensions.
+         * 
+         */
     private final Boolean supportMultipleExtensions;
-    /**
-     * The URI.
-     * 
-     */
+        /**
+         * @return The URI.
+         * 
+         */
     private final String uri;
-    /**
-     * Specifies product version.
-     * 
-     */
+        /**
+         * @return Specifies product version.
+         * 
+         */
     private final String version;
-    /**
-     * Specifies operating system used by the product.
-     * 
-     */
+        /**
+         * @return Specifies operating system used by the product.
+         * 
+         */
     private final String vmOsType;
-    /**
-     * Indicates if virtual machine Scale Set is enabled in the specified product.
-     * 
-     */
+        /**
+         * @return Indicates if virtual machine Scale Set is enabled in the specified product.
+         * 
+         */
     private final Boolean vmScaleSetEnabled;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class ListProductDetailsResult {
     }
 
     /**
-     * Specifies kind of compute role included in the package.
+     * @return Specifies kind of compute role included in the package.
      * 
-    */
+     */
     public String computeRole() {
         return this.computeRole;
     }
     /**
-     * List of attached data disks.
+     * @return List of attached data disks.
      * 
-    */
+     */
     public List<DataDiskImageResponse> dataDiskImages() {
         return this.dataDiskImages;
     }
     /**
-     * The URI to the .azpkg file that provides information required for showing product in the gallery.
+     * @return The URI to the .azpkg file that provides information required for showing product in the gallery.
      * 
-    */
+     */
     public String galleryPackageBlobSasUri() {
         return this.galleryPackageBlobSasUri;
     }
     /**
-     * Specifies if product is a Virtual Machine Extension.
+     * @return Specifies if product is a Virtual Machine Extension.
      * 
-    */
+     */
     public Boolean isSystemExtension() {
         return this.isSystemExtension;
     }
     /**
-     * OS disk image used by product.
+     * @return OS disk image used by product.
      * 
-    */
+     */
     public OsDiskImageResponse osDiskImage() {
         return this.osDiskImage;
     }
     /**
-     * Specifies the kind of the product (virtualMachine or virtualMachineExtension).
+     * @return Specifies the kind of the product (virtualMachine or virtualMachineExtension).
      * 
-    */
+     */
     public String productKind() {
         return this.productKind;
     }
     /**
-     * Indicates if specified product supports multiple extensions.
+     * @return Indicates if specified product supports multiple extensions.
      * 
-    */
+     */
     public Boolean supportMultipleExtensions() {
         return this.supportMultipleExtensions;
     }
     /**
-     * The URI.
+     * @return The URI.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }
     /**
-     * Specifies product version.
+     * @return Specifies product version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * Specifies operating system used by the product.
+     * @return Specifies operating system used by the product.
      * 
-    */
+     */
     public String vmOsType() {
         return this.vmOsType;
     }
     /**
-     * Indicates if virtual machine Scale Set is enabled in the specified product.
+     * @return Indicates if virtual machine Scale Set is enabled in the specified product.
      * 
-    */
+     */
     public Boolean vmScaleSetEnabled() {
         return this.vmScaleSetEnabled;
     }

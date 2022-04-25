@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserIdentityResponse {
-    /**
-     * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
-     * 
-     */
+        /**
+         * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         */
     private final @Nullable AutoUserSpecificationResponse autoUser;
-    /**
-     * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
-     * 
-     */
+        /**
+         * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+         * 
+         */
     private final @Nullable String userName;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class UserIdentityResponse {
     }
 
     /**
-     * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
      * 
-    */
+     */
     public Optional<AutoUserSpecificationResponse> autoUser() {
         return Optional.ofNullable(this.autoUser);
     }
     /**
-     * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     * @return The userName and autoUser properties are mutually exclusive; you must specify one but not both.
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UserAssignedIdentityResponse {
-    /**
-     * The client id of user assigned identity.
-     * 
-     */
+        /**
+         * @return The client id of user assigned identity.
+         * 
+         */
     private final String clientId;
-    /**
-     * The principal id of user assigned identity.
-     * 
-     */
+        /**
+         * @return The principal id of user assigned identity.
+         * 
+         */
     private final String principalId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class UserAssignedIdentityResponse {
     }
 
     /**
-     * The client id of user assigned identity.
+     * @return The client id of user assigned identity.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The principal id of user assigned identity.
+     * @return The principal id of user assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

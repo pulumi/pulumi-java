@@ -16,70 +16,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualNetworkResult {
-    /**
-     * The allowed subnets of the virtual network.
-     * 
-     */
+        /**
+         * @return The allowed subnets of the virtual network.
+         * 
+         */
     private final @Nullable List<SubnetResponse> allowedSubnets;
-    /**
-     * The creation date of the virtual network.
-     * 
-     */
+        /**
+         * @return The creation date of the virtual network.
+         * 
+         */
     private final String createdDate;
-    /**
-     * The description of the virtual network.
-     * 
-     */
+        /**
+         * @return The description of the virtual network.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The Microsoft.Network resource identifier of the virtual network.
-     * 
-     */
+        /**
+         * @return The Microsoft.Network resource identifier of the virtual network.
+         * 
+         */
     private final @Nullable String externalProviderResourceId;
-    /**
-     * The external subnet properties.
-     * 
-     */
+        /**
+         * @return The external subnet properties.
+         * 
+         */
     private final List<ExternalSubnetResponse> externalSubnets;
-    /**
-     * The identifier of the resource.
-     * 
-     */
+        /**
+         * @return The identifier of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource.
-     * 
-     */
+        /**
+         * @return The location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning status of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning status of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The subnet overrides of the virtual network.
-     * 
-     */
+        /**
+         * @return The subnet overrides of the virtual network.
+         * 
+         */
     private final @Nullable List<SubnetOverrideResponse> subnetOverrides;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     * 
-     */
+        /**
+         * @return The unique immutable identifier of a resource (Guid).
+         * 
+         */
     private final String uniqueIdentifier;
 
     @CustomType.Constructor
@@ -113,93 +113,93 @@ public final class GetVirtualNetworkResult {
     }
 
     /**
-     * The allowed subnets of the virtual network.
+     * @return The allowed subnets of the virtual network.
      * 
-    */
+     */
     public List<SubnetResponse> allowedSubnets() {
         return this.allowedSubnets == null ? List.of() : this.allowedSubnets;
     }
     /**
-     * The creation date of the virtual network.
+     * @return The creation date of the virtual network.
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * The description of the virtual network.
+     * @return The description of the virtual network.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The Microsoft.Network resource identifier of the virtual network.
+     * @return The Microsoft.Network resource identifier of the virtual network.
      * 
-    */
+     */
     public Optional<String> externalProviderResourceId() {
         return Optional.ofNullable(this.externalProviderResourceId);
     }
     /**
-     * The external subnet properties.
+     * @return The external subnet properties.
      * 
-    */
+     */
     public List<ExternalSubnetResponse> externalSubnets() {
         return this.externalSubnets;
     }
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The subnet overrides of the virtual network.
+     * @return The subnet overrides of the virtual network.
      * 
-    */
+     */
     public List<SubnetOverrideResponse> subnetOverrides() {
         return this.subnetOverrides == null ? List.of() : this.subnetOverrides;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }

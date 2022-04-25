@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
-    /**
-     * Errors associated with the BackupFolder path
-     * 
-     */
+        /**
+         * @return Errors associated with the BackupFolder path
+         * 
+         */
     private final List<ReportableExceptionResponse> backupFolderErrors;
-    /**
-     * Errors associated with backup share user name and password credentials
-     * 
-     */
+        /**
+         * @return Errors associated with backup share user name and password credentials
+         * 
+         */
     private final List<ReportableExceptionResponse> backupShareCredentialsErrors;
-    /**
-     * Errors associated with the storage account provided.
-     * 
-     */
+        /**
+         * @return Errors associated with the storage account provided.
+         * 
+         */
     private final List<ReportableExceptionResponse> backupStorageAccountErrors;
-    /**
-     * Information about backup files when existing backup mode is used.
-     * 
-     */
+        /**
+         * @return Information about backup files when existing backup mode is used.
+         * 
+         */
     private final @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
-    /**
-     * Errors associated with existing backup files.
-     * 
-     */
+        /**
+         * @return Errors associated with existing backup files.
+         * 
+         */
     private final List<ReportableExceptionResponse> existingBackupErrors;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * Name of database
-     * 
-     */
+        /**
+         * @return Name of database
+         * 
+         */
     private final String name;
-    /**
-     * Errors associated with the RestoreDatabaseName
-     * 
-     */
+        /**
+         * @return Errors associated with the RestoreDatabaseName
+         * 
+         */
     private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
     }
 
     /**
-     * Errors associated with the BackupFolder path
+     * @return Errors associated with the BackupFolder path
      * 
-    */
+     */
     public List<ReportableExceptionResponse> backupFolderErrors() {
         return this.backupFolderErrors;
     }
     /**
-     * Errors associated with backup share user name and password credentials
+     * @return Errors associated with backup share user name and password credentials
      * 
-    */
+     */
     public List<ReportableExceptionResponse> backupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
     /**
-     * Errors associated with the storage account provided.
+     * @return Errors associated with the storage account provided.
      * 
-    */
+     */
     public List<ReportableExceptionResponse> backupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
     /**
-     * Information about backup files when existing backup mode is used.
+     * @return Information about backup files when existing backup mode is used.
      * 
-    */
+     */
     public Optional<DatabaseBackupInfoResponse> databaseBackupInfo() {
         return Optional.ofNullable(this.databaseBackupInfo);
     }
     /**
-     * Errors associated with existing backup files.
+     * @return Errors associated with existing backup files.
      * 
-    */
+     */
     public List<ReportableExceptionResponse> existingBackupErrors() {
         return this.existingBackupErrors;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of database
+     * @return Name of database
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Errors associated with the RestoreDatabaseName
+     * @return Errors associated with the RestoreDatabaseName
      * 
-    */
+     */
     public List<ReportableExceptionResponse> restoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }

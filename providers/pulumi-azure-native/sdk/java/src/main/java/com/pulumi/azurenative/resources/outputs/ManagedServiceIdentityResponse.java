@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedServiceIdentityResponse {
-    /**
-     * ID of the Azure Active Directory.
-     * 
-     */
+        /**
+         * @return ID of the Azure Active Directory.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Type of the managed identity.
-     * 
-     */
+        /**
+         * @return Type of the managed identity.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
-     * 
-     */
+        /**
+         * @return The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+         * 
+         */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ManagedServiceIdentityResponse {
     }
 
     /**
-     * ID of the Azure Active Directory.
+     * @return ID of the Azure Active Directory.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Type of the managed identity.
+     * @return Type of the managed identity.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
+     * @return The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

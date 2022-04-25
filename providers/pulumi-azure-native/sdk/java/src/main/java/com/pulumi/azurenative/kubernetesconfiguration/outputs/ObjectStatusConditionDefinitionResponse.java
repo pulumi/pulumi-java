@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectStatusConditionDefinitionResponse {
-    /**
-     * Last time this status condition has changed
-     * 
-     */
+        /**
+         * @return Last time this status condition has changed
+         * 
+         */
     private final @Nullable String lastTransitionTime;
-    /**
-     * A more verbose description of the object status condition
-     * 
-     */
+        /**
+         * @return A more verbose description of the object status condition
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Reason for the specified status condition type status
-     * 
-     */
+        /**
+         * @return Reason for the specified status condition type status
+         * 
+         */
     private final @Nullable String reason;
-    /**
-     * Status of the Kubernetes object condition type
-     * 
-     */
+        /**
+         * @return Status of the Kubernetes object condition type
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * Object status condition type for this object
-     * 
-     */
+        /**
+         * @return Object status condition type for this object
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ObjectStatusConditionDefinitionResponse {
     }
 
     /**
-     * Last time this status condition has changed
+     * @return Last time this status condition has changed
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * A more verbose description of the object status condition
+     * @return A more verbose description of the object status condition
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Reason for the specified status condition type status
+     * @return Reason for the specified status condition type status
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status of the Kubernetes object condition type
+     * @return Status of the Kubernetes object condition type
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Object status condition type for this object
+     * @return Object status condition type for this object
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

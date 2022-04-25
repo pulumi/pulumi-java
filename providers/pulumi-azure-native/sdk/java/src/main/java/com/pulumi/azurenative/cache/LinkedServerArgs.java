@@ -23,6 +23,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedRedisCacheId", required=true)
     private Output<String> linkedRedisCacheId;
 
+    /**
+     * @return Fully qualified resourceId of the linked redis cache.
+     * 
+     */
     public Output<String> linkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
@@ -34,6 +38,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedRedisCacheLocation", required=true)
     private Output<String> linkedRedisCacheLocation;
 
+    /**
+     * @return Location of the linked redis cache.
+     * 
+     */
     public Output<String> linkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
@@ -45,6 +53,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedServerName")
     private @Nullable Output<String> linkedServerName;
 
+    /**
+     * @return The name of the linked server that is being added to the Redis cache.
+     * 
+     */
     public Optional<Output<String>> linkedServerName() {
         return Optional.ofNullable(this.linkedServerName);
     }
@@ -56,6 +68,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Redis cache.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -67,6 +83,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverRole", required=true)
     private Output<ReplicationRole> serverRole;
 
+    /**
+     * @return Role of the linked server.
+     * 
+     */
     public Output<ReplicationRole> serverRole() {
         return this.serverRole;
     }
@@ -111,56 +135,128 @@ public final class LinkedServerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkedServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedRedisCacheId Fully qualified resourceId of the linked redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedRedisCacheId(Output<String> linkedRedisCacheId) {
             $.linkedRedisCacheId = linkedRedisCacheId;
             return this;
         }
 
+        /**
+         * @param linkedRedisCacheId Fully qualified resourceId of the linked redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedRedisCacheId(String linkedRedisCacheId) {
             return linkedRedisCacheId(Output.of(linkedRedisCacheId));
         }
 
+        /**
+         * @param linkedRedisCacheLocation Location of the linked redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedRedisCacheLocation(Output<String> linkedRedisCacheLocation) {
             $.linkedRedisCacheLocation = linkedRedisCacheLocation;
             return this;
         }
 
+        /**
+         * @param linkedRedisCacheLocation Location of the linked redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
             return linkedRedisCacheLocation(Output.of(linkedRedisCacheLocation));
         }
 
+        /**
+         * @param linkedServerName The name of the linked server that is being added to the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServerName(@Nullable Output<String> linkedServerName) {
             $.linkedServerName = linkedServerName;
             return this;
         }
 
+        /**
+         * @param linkedServerName The name of the linked server that is being added to the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServerName(String linkedServerName) {
             return linkedServerName(Output.of(linkedServerName));
         }
 
+        /**
+         * @param name The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverRole Role of the linked server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverRole(Output<ReplicationRole> serverRole) {
             $.serverRole = serverRole;
             return this;
         }
 
+        /**
+         * @param serverRole Role of the linked server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverRole(ReplicationRole serverRole) {
             return serverRole(Output.of(serverRole));
         }

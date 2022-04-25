@@ -24,6 +24,10 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="groupMembers", required=true)
     private Output<List<ServerInfoArgs>> groupMembers;
 
+    /**
+     * @return Group members information for the server trust group.
+     * 
+     */
     public Output<List<ServerInfoArgs>> groupMembers() {
         return this.groupMembers;
     }
@@ -35,6 +39,10 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="locationName", required=true)
     private Output<String> locationName;
 
+    /**
+     * @return The name of the region where the resource is located.
+     * 
+     */
     public Output<String> locationName() {
         return this.locationName;
     }
@@ -46,6 +54,10 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serverTrustGroupName")
     private @Nullable Output<String> serverTrustGroupName;
 
+    /**
+     * @return The name of the server trust group.
+     * 
+     */
     public Optional<Output<String>> serverTrustGroupName() {
         return Optional.ofNullable(this.serverTrustGroupName);
     }
@@ -68,6 +84,10 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
     @Import(name="trustScopes", required=true)
     private Output<List<String>> trustScopes;
 
+    /**
+     * @return Trust scope of the server trust group.
+     * 
+     */
     public Output<List<String>> trustScopes() {
         return this.trustScopes;
     }
@@ -100,55 +120,127 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
             $ = new ServerTrustGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupMembers Group members information for the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembers(Output<List<ServerInfoArgs>> groupMembers) {
             $.groupMembers = groupMembers;
             return this;
         }
 
+        /**
+         * @param groupMembers Group members information for the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembers(List<ServerInfoArgs> groupMembers) {
             return groupMembers(Output.of(groupMembers));
         }
 
+        /**
+         * @param groupMembers Group members information for the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupMembers(ServerInfoArgs... groupMembers) {
             return groupMembers(List.of(groupMembers));
         }
 
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(Output<String> locationName) {
             $.locationName = locationName;
             return this;
         }
 
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(String locationName) {
             return locationName(Output.of(locationName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverTrustGroupName The name of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverTrustGroupName(@Nullable Output<String> serverTrustGroupName) {
             $.serverTrustGroupName = serverTrustGroupName;
             return this;
         }
 
+        /**
+         * @param serverTrustGroupName The name of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverTrustGroupName(String serverTrustGroupName) {
             return serverTrustGroupName(Output.of(serverTrustGroupName));
         }
 
+        /**
+         * @param trustScopes Trust scope of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustScopes(Output<List<String>> trustScopes) {
             $.trustScopes = trustScopes;
             return this;
         }
 
+        /**
+         * @param trustScopes Trust scope of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustScopes(List<String> trustScopes) {
             return trustScopes(Output.of(trustScopes));
         }
 
+        /**
+         * @param trustScopes Trust scope of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustScopes(String... trustScopes) {
             return trustScopes(List.of(trustScopes));
         }

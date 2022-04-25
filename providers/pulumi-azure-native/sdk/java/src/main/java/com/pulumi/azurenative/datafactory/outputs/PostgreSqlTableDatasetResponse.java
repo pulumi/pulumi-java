@@ -17,56 +17,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PostgreSqlTableDatasetResponse {
-    /**
-     * List of tags that can be used for describing the Dataset.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the Dataset.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * Dataset description.
-     * 
-     */
+        /**
+         * @return Dataset description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
-     */
+        /**
+         * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         */
     private final @Nullable DatasetResponseFolder folder;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Parameters for dataset.
-     * 
-     */
+        /**
+         * @return Parameters for dataset.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
-     */
+        /**
+         * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         */
     private final @Nullable Object schema;
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
-     */
+        /**
+         * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         */
     private final @Nullable Object structure;
-    /**
-     * The PostgreSQL table name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The PostgreSQL table name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object table;
-    /**
-     * This property will be retired. Please consider using schema + table properties instead.
-     * 
-     */
+        /**
+         * @return This property will be retired. Please consider using schema + table properties instead.
+         * 
+         */
     private final @Nullable Object tableName;
-    /**
-     * Type of dataset.
-     * Expected value is &#39;PostgreSqlTable&#39;.
-     * 
-     */
+        /**
+         * @return Type of dataset.
+         * Expected value is &#39;PostgreSqlTable&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -94,73 +94,73 @@ public final class PostgreSqlTableDatasetResponse {
     }
 
     /**
-     * List of tags that can be used for describing the Dataset.
+     * @return List of tags that can be used for describing the Dataset.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Dataset description.
+     * @return Dataset description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-    */
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * Parameters for dataset.
+     * @return Parameters for dataset.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-    */
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-    */
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
-     * The PostgreSQL table name. Type: string (or Expression with resultType string).
+     * @return The PostgreSQL table name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> table() {
         return Optional.ofNullable(this.table);
     }
     /**
-     * This property will be retired. Please consider using schema + table properties instead.
+     * @return This property will be retired. Please consider using schema + table properties instead.
      * 
-    */
+     */
     public Optional<Object> tableName() {
         return Optional.ofNullable(this.tableName);
     }
     /**
-     * Type of dataset.
+     * @return Type of dataset.
      * Expected value is &#39;PostgreSqlTable&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

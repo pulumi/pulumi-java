@@ -33,6 +33,11 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="condaFile")
     private @Nullable String condaFile;
 
+    /**
+     * @return Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
+     * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
+     * 
+     */
     public Optional<String> condaFile() {
         return Optional.ofNullable(this.condaFile);
     }
@@ -44,6 +49,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +64,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="docker")
     private @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
 
+    /**
+     * @return Configuration settings for Docker.
+     * 
+     */
     public Optional<Either<DockerBuildResponse,DockerImageResponse>> docker() {
         return Optional.ofNullable(this.docker);
     }
@@ -67,6 +80,11 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="environmentSpecificationType", required=true)
     private String environmentSpecificationType;
 
+    /**
+     * @return Environment specification is either user managed or curated by the Azure ML service
+     * &lt;see href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments&#34; /&gt;
+     * 
+     */
     public String environmentSpecificationType() {
         return this.environmentSpecificationType;
     }
@@ -78,6 +96,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="inferenceContainerProperties")
     private @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
 
+    /**
+     * @return Defines configuration specific to inference.
+     * 
+     */
     public Optional<InferenceContainerPropertiesResponse> inferenceContainerProperties() {
         return Optional.ofNullable(this.inferenceContainerProperties);
     }
@@ -89,6 +111,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="isAnonymous")
     private @Nullable Boolean isAnonymous;
 
+    /**
+     * @return If the name version are system generated (anonymous registration).
+     * 
+     */
     public Optional<Boolean> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
@@ -100,6 +126,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -111,6 +141,10 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -146,49 +180,111 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
             $ = new EnvironmentSpecificationVersionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param condaFile Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
+         * &lt;see href=&#34;https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder condaFile(@Nullable String condaFile) {
             $.condaFile = condaFile;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(@Nullable Either<DockerBuildResponse,DockerImageResponse> docker) {
             $.docker = docker;
             return this;
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(DockerBuildResponse docker) {
             return docker(Either.ofLeft(docker));
         }
 
+        /**
+         * @param docker Configuration settings for Docker.
+         * 
+         * @return builder
+         * 
+         */
         public Builder docker(DockerImageResponse docker) {
             return docker(Either.ofRight(docker));
         }
 
+        /**
+         * @param environmentSpecificationType Environment specification is either user managed or curated by the Azure ML service
+         * &lt;see href=&#34;https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentSpecificationType(String environmentSpecificationType) {
             $.environmentSpecificationType = environmentSpecificationType;
             return this;
         }
 
+        /**
+         * @param inferenceContainerProperties Defines configuration specific to inference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesResponse inferenceContainerProperties) {
             $.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
 
+        /**
+         * @param isAnonymous If the name version are system generated (anonymous registration).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             $.isAnonymous = isAnonymous;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoPatchingSettingsResponse {
-    /**
-     * Day of week to apply the patch on.
-     * 
-     */
+        /**
+         * @return Day of week to apply the patch on.
+         * 
+         */
     private final @Nullable String dayOfWeek;
-    /**
-     * Enable or disable autopatching on SQL virtual machine.
-     * 
-     */
+        /**
+         * @return Enable or disable autopatching on SQL virtual machine.
+         * 
+         */
     private final @Nullable Boolean enable;
-    /**
-     * Duration of patching.
-     * 
-     */
+        /**
+         * @return Duration of patching.
+         * 
+         */
     private final @Nullable Integer maintenanceWindowDuration;
-    /**
-     * Hour of the day when patching is initiated. Local VM time.
-     * 
-     */
+        /**
+         * @return Hour of the day when patching is initiated. Local VM time.
+         * 
+         */
     private final @Nullable Integer maintenanceWindowStartingHour;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class AutoPatchingSettingsResponse {
     }
 
     /**
-     * Day of week to apply the patch on.
+     * @return Day of week to apply the patch on.
      * 
-    */
+     */
     public Optional<String> dayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
     /**
-     * Enable or disable autopatching on SQL virtual machine.
+     * @return Enable or disable autopatching on SQL virtual machine.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * Duration of patching.
+     * @return Duration of patching.
      * 
-    */
+     */
     public Optional<Integer> maintenanceWindowDuration() {
         return Optional.ofNullable(this.maintenanceWindowDuration);
     }
     /**
-     * Hour of the day when patching is initiated. Local VM time.
+     * @return Hour of the day when patching is initiated. Local VM time.
      * 
-    */
+     */
     public Optional<Integer> maintenanceWindowStartingHour() {
         return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }

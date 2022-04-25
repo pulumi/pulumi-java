@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CertBasedSecurityPrincipalResponse {
-    /**
-     * Base64 encoded public key of the user cert (.pem or .cer)
-     * 
-     */
+        /**
+         * @return Base64 encoded public key of the user cert (.pem or .cer)
+         * 
+         */
     private final @Nullable String cert;
-    /**
-     * LedgerRole associated with the Security Principal of Ledger
-     * 
-     */
+        /**
+         * @return LedgerRole associated with the Security Principal of Ledger
+         * 
+         */
     private final @Nullable String ledgerRoleName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class CertBasedSecurityPrincipalResponse {
     }
 
     /**
-     * Base64 encoded public key of the user cert (.pem or .cer)
+     * @return Base64 encoded public key of the user cert (.pem or .cer)
      * 
-    */
+     */
     public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
     /**
-     * LedgerRole associated with the Security Principal of Ledger
+     * @return LedgerRole associated with the Security Principal of Ledger
      * 
-    */
+     */
     public Optional<String> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }

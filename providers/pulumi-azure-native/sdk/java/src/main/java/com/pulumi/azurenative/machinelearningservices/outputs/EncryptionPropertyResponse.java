@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncryptionPropertyResponse {
-    /**
-     * The identity that will be used to access the key vault for encryption at rest.
-     * 
-     */
+        /**
+         * @return The identity that will be used to access the key vault for encryption at rest.
+         * 
+         */
     private final @Nullable IdentityForCmkResponse identity;
-    /**
-     * Customer Key vault properties.
-     * 
-     */
+        /**
+         * @return Customer Key vault properties.
+         * 
+         */
     private final KeyVaultPropertiesResponse keyVaultProperties;
-    /**
-     * Indicates whether or not the encryption is enabled for the workspace.
-     * 
-     */
+        /**
+         * @return Indicates whether or not the encryption is enabled for the workspace.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class EncryptionPropertyResponse {
     }
 
     /**
-     * The identity that will be used to access the key vault for encryption at rest.
+     * @return The identity that will be used to access the key vault for encryption at rest.
      * 
-    */
+     */
     public Optional<IdentityForCmkResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Customer Key vault properties.
+     * @return Customer Key vault properties.
      * 
-    */
+     */
     public KeyVaultPropertiesResponse keyVaultProperties() {
         return this.keyVaultProperties;
     }
     /**
-     * Indicates whether or not the encryption is enabled for the workspace.
+     * @return Indicates whether or not the encryption is enabled for the workspace.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

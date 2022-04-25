@@ -19,6 +19,10 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
     @Import(name="departmentId", required=true)
     private String departmentId;
 
+    /**
+     * @return Department ID
+     * 
+     */
     public String departmentId() {
         return this.departmentId;
     }
@@ -30,6 +34,10 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
     @Import(name="reportName", required=true)
     private String reportName;
 
+    /**
+     * @return Report Name.
+     * 
+     */
     public String reportName() {
         return this.reportName;
     }
@@ -59,11 +67,23 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
             $ = new GetReportByDepartmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param departmentId Department ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder departmentId(String departmentId) {
             $.departmentId = departmentId;
             return this;
         }
 
+        /**
+         * @param reportName Report Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reportName(String reportName) {
             $.reportName = reportName;
             return this;

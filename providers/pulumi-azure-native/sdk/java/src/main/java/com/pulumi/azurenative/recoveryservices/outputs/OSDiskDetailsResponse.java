@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OSDiskDetailsResponse {
-    /**
-     * The type of the OS on the VM.
-     * 
-     */
+        /**
+         * @return The type of the OS on the VM.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * The id of the disk containing the OS.
-     * 
-     */
+        /**
+         * @return The id of the disk containing the OS.
+         * 
+         */
     private final @Nullable String osVhdId;
-    /**
-     * The OS disk VHD name.
-     * 
-     */
+        /**
+         * @return The OS disk VHD name.
+         * 
+         */
     private final @Nullable String vhdName;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class OSDiskDetailsResponse {
     }
 
     /**
-     * The type of the OS on the VM.
+     * @return The type of the OS on the VM.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * The id of the disk containing the OS.
+     * @return The id of the disk containing the OS.
      * 
-    */
+     */
     public Optional<String> osVhdId() {
         return Optional.ofNullable(this.osVhdId);
     }
     /**
-     * The OS disk VHD name.
+     * @return The OS disk VHD name.
      * 
-    */
+     */
     public Optional<String> vhdName() {
         return Optional.ofNullable(this.vhdName);
     }

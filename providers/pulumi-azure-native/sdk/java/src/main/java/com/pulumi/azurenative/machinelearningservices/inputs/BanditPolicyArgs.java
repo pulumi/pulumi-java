@@ -29,6 +29,10 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="delayEvaluation")
     private @Nullable Output<Integer> delayEvaluation;
 
+    /**
+     * @return Number of intervals by which to delay the first evaluation.
+     * 
+     */
     public Optional<Output<Integer>> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
@@ -40,6 +44,10 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="evaluationInterval")
     private @Nullable Output<Integer> evaluationInterval;
 
+    /**
+     * @return Interval (number of runs) between policy evaluations.
+     * 
+     */
     public Optional<Output<Integer>> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
@@ -51,6 +59,11 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyType", required=true)
     private Output<String> policyType;
 
+    /**
+     * @return
+     * Expected value is &#39;Bandit&#39;.
+     * 
+     */
     public Output<String> policyType() {
         return this.policyType;
     }
@@ -62,6 +75,10 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slackAmount")
     private @Nullable Output<Double> slackAmount;
 
+    /**
+     * @return Absolute distance allowed from the best performing run.
+     * 
+     */
     public Optional<Output<Double>> slackAmount() {
         return Optional.ofNullable(this.slackAmount);
     }
@@ -73,6 +90,10 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slackFactor")
     private @Nullable Output<Double> slackFactor;
 
+    /**
+     * @return Ratio of the allowed distance from the best performing run.
+     * 
+     */
     public Optional<Output<Double>> slackFactor() {
         return Optional.ofNullable(this.slackFactor);
     }
@@ -105,47 +126,109 @@ public final class BanditPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BanditPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delayEvaluation Number of intervals by which to delay the first evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayEvaluation(@Nullable Output<Integer> delayEvaluation) {
             $.delayEvaluation = delayEvaluation;
             return this;
         }
 
+        /**
+         * @param delayEvaluation Number of intervals by which to delay the first evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder delayEvaluation(Integer delayEvaluation) {
             return delayEvaluation(Output.of(delayEvaluation));
         }
 
+        /**
+         * @param evaluationInterval Interval (number of runs) between policy evaluations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
             $.evaluationInterval = evaluationInterval;
             return this;
         }
 
+        /**
+         * @param evaluationInterval Interval (number of runs) between policy evaluations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationInterval(Integer evaluationInterval) {
             return evaluationInterval(Output.of(evaluationInterval));
         }
 
+        /**
+         * @param policyType
+         * Expected value is &#39;Bandit&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(Output<String> policyType) {
             $.policyType = policyType;
             return this;
         }
 
+        /**
+         * @param policyType
+         * Expected value is &#39;Bandit&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(String policyType) {
             return policyType(Output.of(policyType));
         }
 
+        /**
+         * @param slackAmount Absolute distance allowed from the best performing run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slackAmount(@Nullable Output<Double> slackAmount) {
             $.slackAmount = slackAmount;
             return this;
         }
 
+        /**
+         * @param slackAmount Absolute distance allowed from the best performing run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slackAmount(Double slackAmount) {
             return slackAmount(Output.of(slackAmount));
         }
 
+        /**
+         * @param slackFactor Ratio of the allowed distance from the best performing run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slackFactor(@Nullable Output<Double> slackFactor) {
             $.slackFactor = slackFactor;
             return this;
         }
 
+        /**
+         * @param slackFactor Ratio of the allowed distance from the best performing run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slackFactor(Double slackFactor) {
             return slackFactor(Output.of(slackFactor));
         }

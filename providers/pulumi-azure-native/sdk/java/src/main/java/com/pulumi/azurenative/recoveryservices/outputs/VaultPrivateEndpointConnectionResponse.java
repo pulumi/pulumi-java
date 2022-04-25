@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class VaultPrivateEndpointConnectionResponse {
-    /**
-     * The Private Endpoint network resource that is linked to the Private Endpoint connection.
-     * 
-     */
+        /**
+         * @return The Private Endpoint network resource that is linked to the Private Endpoint connection.
+         * 
+         */
     private final PrivateEndpointResponse privateEndpoint;
-    /**
-     * Gets or sets private link service connection state.
-     * 
-     */
+        /**
+         * @return Gets or sets private link service connection state.
+         * 
+         */
     private final VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * Gets or sets provisioning state of the private endpoint connection.
-     * 
-     */
+        /**
+         * @return Gets or sets provisioning state of the private endpoint connection.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class VaultPrivateEndpointConnectionResponse {
     }
 
     /**
-     * The Private Endpoint network resource that is linked to the Private Endpoint connection.
+     * @return The Private Endpoint network resource that is linked to the Private Endpoint connection.
      * 
-    */
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * Gets or sets private link service connection state.
+     * @return Gets or sets private link service connection state.
      * 
-    */
+     */
     public VaultPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
-     * Gets or sets provisioning state of the private endpoint connection.
+     * @return Gets or sets provisioning state of the private endpoint connection.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

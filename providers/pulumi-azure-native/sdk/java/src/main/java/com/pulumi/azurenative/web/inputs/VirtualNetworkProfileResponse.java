@@ -25,6 +25,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource id of the Virtual Network.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -36,6 +40,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Virtual Network (read-only).
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="subnet")
     private @Nullable String subnet;
 
+    /**
+     * @return Subnet within the Virtual Network.
+     * 
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -58,6 +70,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type of the Virtual Network (read-only).
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -89,21 +105,45 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
             $ = new VirtualNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource id of the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the Virtual Network (read-only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param subnet Subnet within the Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable String subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Resource type of the Virtual Network (read-only).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

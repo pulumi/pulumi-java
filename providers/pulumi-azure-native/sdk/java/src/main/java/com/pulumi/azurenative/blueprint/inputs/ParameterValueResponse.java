@@ -26,6 +26,10 @@ public final class ParameterValueResponse extends com.pulumi.resources.InvokeArg
     @Import(name="reference")
     private @Nullable SecretValueReferenceResponse reference;
 
+    /**
+     * @return Parameter value as reference type.
+     * 
+     */
     public Optional<SecretValueReferenceResponse> reference() {
         return Optional.ofNullable(this.reference);
     }
@@ -37,6 +41,10 @@ public final class ParameterValueResponse extends com.pulumi.resources.InvokeArg
     @Import(name="value")
     private @Nullable Object value;
 
+    /**
+     * @return Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+     * 
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,11 +74,23 @@ public final class ParameterValueResponse extends com.pulumi.resources.InvokeArg
             $ = new ParameterValueResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param reference Parameter value as reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reference(@Nullable SecretValueReferenceResponse reference) {
             $.reference = reference;
             return this;
         }
 
+        /**
+         * @param value Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Object value) {
             $.value = value;
             return this;

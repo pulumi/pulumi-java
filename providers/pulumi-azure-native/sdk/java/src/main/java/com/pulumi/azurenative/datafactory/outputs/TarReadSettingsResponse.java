@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TarReadSettingsResponse {
-    /**
-     * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object preserveCompressionFileNameAsFolder;
-    /**
-     * The Compression setting type.
-     * Expected value is &#39;TarReadSettings&#39;.
-     * 
-     */
+        /**
+         * @return The Compression setting type.
+         * Expected value is &#39;TarReadSettings&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class TarReadSettingsResponse {
     }
 
     /**
-     * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+     * @return Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> preserveCompressionFileNameAsFolder() {
         return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
     /**
-     * The Compression setting type.
+     * @return The Compression setting type.
      * Expected value is &#39;TarReadSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

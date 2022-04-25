@@ -23,117 +23,117 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebPubSubResult {
-    /**
-     * The settings for event handler in webpubsub service.
-     * 
-     */
+        /**
+         * @return The settings for event handler in webpubsub service.
+         * 
+         */
     private final @Nullable EventHandlerSettingsResponse eventHandler;
-    /**
-     * The publicly accessible IP of the resource.
-     * 
-     */
+        /**
+         * @return The publicly accessible IP of the resource.
+         * 
+         */
     private final String externalIP;
-    /**
-     * List of the featureFlags.
-     * 
-     * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
-     * When a featureFlag is not explicitly set, its globally default value will be used
-     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
-     * 
-     */
+        /**
+         * @return List of the featureFlags.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, its globally default value will be used
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         */
     private final @Nullable List<WebPubSubFeatureResponse> features;
-    /**
-     * FQDN of the service instance.
-     * 
-     */
+        /**
+         * @return FQDN of the service instance.
+         * 
+         */
     private final String hostName;
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The managed identity response
-     * 
-     */
+        /**
+         * @return The managed identity response
+         * 
+         */
     private final @Nullable ManagedIdentityResponse identity;
-    /**
-     * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
-     * 
-     */
+        /**
+         * @return The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Network ACLs
-     * 
-     */
+        /**
+         * @return Network ACLs
+         * 
+         */
     private final @Nullable WebPubSubNetworkACLsResponse networkACLs;
-    /**
-     * Private endpoint connections to the resource.
-     * 
-     */
+        /**
+         * @return Private endpoint connections to the resource.
+         * 
+         */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Enable or disable public network access. Default to &#34;Enabled&#34;.
-     * When it&#39;s Enabled, network ACLs still apply.
-     * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
-     * 
-     */
+        /**
+         * @return Enable or disable public network access. Default to &#34;Enabled&#34;.
+         * When it&#39;s Enabled, network ACLs still apply.
+         * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
-    /**
-     * The publicly accessible port of the resource which is designed for browser/client side usage.
-     * 
-     */
+        /**
+         * @return The publicly accessible port of the resource which is designed for browser/client side usage.
+         * 
+         */
     private final Integer publicPort;
-    /**
-     * The publicly accessible port of the resource which is designed for customer server side usage.
-     * 
-     */
+        /**
+         * @return The publicly accessible port of the resource which is designed for customer server side usage.
+         * 
+         */
     private final Integer serverPort;
-    /**
-     * The list of shared private link resources.
-     * 
-     */
+        /**
+         * @return The list of shared private link resources.
+         * 
+         */
     private final List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources;
-    /**
-     * The billing information of the resource.(e.g. Free, Standard)
-     * 
-     */
+        /**
+         * @return The billing information of the resource.(e.g. Free, Standard)
+         * 
+         */
     private final @Nullable ResourceSkuResponse sku;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
-     */
+        /**
+         * @return Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * TLS settings.
-     * 
-     */
+        /**
+         * @return TLS settings.
+         * 
+         */
     private final @Nullable WebPubSubTlsSettingsResponse tls;
-    /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Version of the resource. Probably you need the same or higher version of client SDKs.
-     * 
-     */
+        /**
+         * @return Version of the resource. Probably you need the same or higher version of client SDKs.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -183,156 +183,156 @@ public final class GetWebPubSubResult {
     }
 
     /**
-     * The settings for event handler in webpubsub service.
+     * @return The settings for event handler in webpubsub service.
      * 
-    */
+     */
     public Optional<EventHandlerSettingsResponse> eventHandler() {
         return Optional.ofNullable(this.eventHandler);
     }
     /**
-     * The publicly accessible IP of the resource.
+     * @return The publicly accessible IP of the resource.
      * 
-    */
+     */
     public String externalIP() {
         return this.externalIP;
     }
     /**
-     * List of the featureFlags.
+     * @return List of the featureFlags.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, its globally default value will be used
      * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
-    */
+     */
     public List<WebPubSubFeatureResponse> features() {
         return this.features == null ? List.of() : this.features;
     }
     /**
-     * FQDN of the service instance.
+     * @return FQDN of the service instance.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The managed identity response
+     * @return The managed identity response
      * 
-    */
+     */
     public Optional<ManagedIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
+     * @return The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network ACLs
+     * @return Network ACLs
      * 
-    */
+     */
     public Optional<WebPubSubNetworkACLsResponse> networkACLs() {
         return Optional.ofNullable(this.networkACLs);
     }
     /**
-     * Private endpoint connections to the resource.
+     * @return Private endpoint connections to the resource.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Enable or disable public network access. Default to &#34;Enabled&#34;.
+     * @return Enable or disable public network access. Default to &#34;Enabled&#34;.
      * When it&#39;s Enabled, network ACLs still apply.
      * When it&#39;s Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * The publicly accessible port of the resource which is designed for browser/client side usage.
+     * @return The publicly accessible port of the resource which is designed for browser/client side usage.
      * 
-    */
+     */
     public Integer publicPort() {
         return this.publicPort;
     }
     /**
-     * The publicly accessible port of the resource which is designed for customer server side usage.
+     * @return The publicly accessible port of the resource which is designed for customer server side usage.
      * 
-    */
+     */
     public Integer serverPort() {
         return this.serverPort;
     }
     /**
-     * The list of shared private link resources.
+     * @return The list of shared private link resources.
      * 
-    */
+     */
     public List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
     /**
-     * The billing information of the resource.(e.g. Free, Standard)
+     * @return The billing information of the resource.(e.g. Free, Standard)
      * 
-    */
+     */
     public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * TLS settings.
+     * @return TLS settings.
      * 
-    */
+     */
     public Optional<WebPubSubTlsSettingsResponse> tls() {
         return Optional.ofNullable(this.tls);
     }
     /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the resource. Probably you need the same or higher version of client SDKs.
+     * @return Version of the resource. Probably you need the same or higher version of client SDKs.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

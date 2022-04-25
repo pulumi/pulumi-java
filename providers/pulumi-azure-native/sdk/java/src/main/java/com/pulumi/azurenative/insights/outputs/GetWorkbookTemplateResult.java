@@ -17,55 +17,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkbookTemplateResult {
-    /**
-     * Information about the author of the workbook template.
-     * 
-     */
+        /**
+         * @return Information about the author of the workbook template.
+         * 
+         */
     private final @Nullable String author;
-    /**
-     * Workbook galleries supported by the template.
-     * 
-     */
+        /**
+         * @return Workbook galleries supported by the template.
+         * 
+         */
     private final List<WorkbookTemplateGalleryResponse> galleries;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
-     * 
-     */
+        /**
+         * @return Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+         * 
+         */
     private final @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Azure resource name.
-     * 
-     */
+        /**
+         * @return Azure resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
-     * 
-     */
+        /**
+         * @return Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Valid JSON object containing workbook template payload.
-     * 
-     */
+        /**
+         * @return Valid JSON object containing workbook template payload.
+         * 
+         */
     private final Object templateData;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -93,72 +93,72 @@ public final class GetWorkbookTemplateResult {
     }
 
     /**
-     * Information about the author of the workbook template.
+     * @return Information about the author of the workbook template.
      * 
-    */
+     */
     public Optional<String> author() {
         return Optional.ofNullable(this.author);
     }
     /**
-     * Workbook galleries supported by the template.
+     * @return Workbook galleries supported by the template.
      * 
-    */
+     */
     public List<WorkbookTemplateGalleryResponse> galleries() {
         return this.galleries;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+     * @return Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
-    */
+     */
     public Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized() {
         return this.localized == null ? Map.of() : this.localized;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name.
+     * @return Azure resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
+     * @return Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Valid JSON object containing workbook template payload.
+     * @return Valid JSON object containing workbook template payload.
      * 
-    */
+     */
     public Object templateData() {
         return this.templateData;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

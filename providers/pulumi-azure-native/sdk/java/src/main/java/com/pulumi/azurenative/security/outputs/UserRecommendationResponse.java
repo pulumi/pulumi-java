@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserRecommendationResponse {
-    /**
-     * The recommendation action of the machine or rule
-     * 
-     */
+        /**
+         * @return The recommendation action of the machine or rule
+         * 
+         */
     private final @Nullable String recommendationAction;
-    /**
-     * Represents a user that is recommended to be allowed for a certain rule
-     * 
-     */
+        /**
+         * @return Represents a user that is recommended to be allowed for a certain rule
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class UserRecommendationResponse {
     }
 
     /**
-     * The recommendation action of the machine or rule
+     * @return The recommendation action of the machine or rule
      * 
-    */
+     */
     public Optional<String> recommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
     /**
-     * Represents a user that is recommended to be allowed for a certain rule
+     * @return Represents a user that is recommended to be allowed for a certain rule
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

@@ -23,6 +23,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="dataSetName")
     private @Nullable Output<String> dataSetName;
 
+    /**
+     * @return The name of the dataSet.
+     * 
+     */
     public Optional<Output<String>> dataSetName() {
         return Optional.ofNullable(this.dataSetName);
     }
@@ -45,6 +53,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="filePath", required=true)
     private Output<String> filePath;
 
+    /**
+     * @return File path within the file system.
+     * 
+     */
     public Output<String> filePath() {
         return this.filePath;
     }
@@ -56,6 +68,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="fileSystem", required=true)
     private Output<String> fileSystem;
 
+    /**
+     * @return File system to which the file belongs.
+     * 
+     */
     public Output<String> fileSystem() {
         return this.fileSystem;
     }
@@ -68,6 +84,11 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set.
+     * Expected value is &#39;AdlsGen2File&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -79,6 +100,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return Resource group of storage account
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -90,6 +115,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +130,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to add the data set to.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -112,6 +145,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="storageAccountName", required=true)
     private Output<String> storageAccountName;
 
+    /**
+     * @return Storage account name of the source data set
+     * 
+     */
     public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
@@ -123,6 +160,10 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Subscription id of storage account
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -160,92 +201,214 @@ public final class ADLSGen2FileDataSetArgs extends com.pulumi.resources.Resource
             $ = new ADLSGen2FileDataSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(@Nullable Output<String> dataSetName) {
             $.dataSetName = dataSetName;
             return this;
         }
 
+        /**
+         * @param dataSetName The name of the dataSet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSetName(String dataSetName) {
             return dataSetName(Output.of(dataSetName));
         }
 
+        /**
+         * @param filePath File path within the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(Output<String> filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param filePath File path within the file system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(String filePath) {
             return filePath(Output.of(filePath));
         }
 
+        /**
+         * @param fileSystem File system to which the file belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(Output<String> fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileSystem File system to which the file belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(String fileSystem) {
             return fileSystem(Output.of(fileSystem));
         }
 
+        /**
+         * @param kind Kind of data set.
+         * Expected value is &#39;AdlsGen2File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of data set.
+         * Expected value is &#39;AdlsGen2File&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroup Resource group of storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Resource group of storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to add the data set to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param storageAccountName Storage account name of the source data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(Output<String> storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;
         }
 
+        /**
+         * @param storageAccountName Storage account name of the source data set
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             return storageAccountName(Output.of(storageAccountName));
         }
 
+        /**
+         * @param subscriptionId Subscription id of storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription id of storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

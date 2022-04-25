@@ -27,6 +27,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedHeaders")
     private @Nullable Output<String> allowedHeaders;
 
+    /**
+     * @return The request headers that the origin domain may specify on the CORS request.
+     * 
+     */
     public Optional<Output<String>> allowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
@@ -38,6 +42,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedMethods")
     private @Nullable Output<String> allowedMethods;
 
+    /**
+     * @return The methods (HTTP request verbs) that the origin domain may use for a CORS request.
+     * 
+     */
     public Optional<Output<String>> allowedMethods() {
         return Optional.ofNullable(this.allowedMethods);
     }
@@ -49,6 +57,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowedOrigins", required=true)
     private Output<String> allowedOrigins;
 
+    /**
+     * @return The origin domains that are permitted to make a request against the service via CORS.
+     * 
+     */
     public Output<String> allowedOrigins() {
         return this.allowedOrigins;
     }
@@ -60,6 +72,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="exposedHeaders")
     private @Nullable Output<String> exposedHeaders;
 
+    /**
+     * @return The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
+     * 
+     */
     public Optional<Output<String>> exposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
@@ -71,6 +87,10 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxAgeInSeconds")
     private @Nullable Output<Double> maxAgeInSeconds;
 
+    /**
+     * @return The maximum amount time that a browser should cache the preflight OPTIONS request.
+     * 
+     */
     public Optional<Output<Double>> maxAgeInSeconds() {
         return Optional.ofNullable(this.maxAgeInSeconds);
     }
@@ -103,47 +123,107 @@ public final class CorsPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CorsPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedHeaders The request headers that the origin domain may specify on the CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(@Nullable Output<String> allowedHeaders) {
             $.allowedHeaders = allowedHeaders;
             return this;
         }
 
+        /**
+         * @param allowedHeaders The request headers that the origin domain may specify on the CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedHeaders(String allowedHeaders) {
             return allowedHeaders(Output.of(allowedHeaders));
         }
 
+        /**
+         * @param allowedMethods The methods (HTTP request verbs) that the origin domain may use for a CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(@Nullable Output<String> allowedMethods) {
             $.allowedMethods = allowedMethods;
             return this;
         }
 
+        /**
+         * @param allowedMethods The methods (HTTP request verbs) that the origin domain may use for a CORS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedMethods(String allowedMethods) {
             return allowedMethods(Output.of(allowedMethods));
         }
 
+        /**
+         * @param allowedOrigins The origin domains that are permitted to make a request against the service via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(Output<String> allowedOrigins) {
             $.allowedOrigins = allowedOrigins;
             return this;
         }
 
+        /**
+         * @param allowedOrigins The origin domains that are permitted to make a request against the service via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedOrigins(String allowedOrigins) {
             return allowedOrigins(Output.of(allowedOrigins));
         }
 
+        /**
+         * @param exposedHeaders The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(@Nullable Output<String> exposedHeaders) {
             $.exposedHeaders = exposedHeaders;
             return this;
         }
 
+        /**
+         * @param exposedHeaders The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exposedHeaders(String exposedHeaders) {
             return exposedHeaders(Output.of(exposedHeaders));
         }
 
+        /**
+         * @param maxAgeInSeconds The maximum amount time that a browser should cache the preflight OPTIONS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeInSeconds(@Nullable Output<Double> maxAgeInSeconds) {
             $.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
 
+        /**
+         * @param maxAgeInSeconds The maximum amount time that a browser should cache the preflight OPTIONS request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAgeInSeconds(Double maxAgeInSeconds) {
             return maxAgeInSeconds(Output.of(maxAgeInSeconds));
         }

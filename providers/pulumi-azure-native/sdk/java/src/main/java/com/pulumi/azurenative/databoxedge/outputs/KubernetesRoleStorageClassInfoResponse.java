@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KubernetesRoleStorageClassInfoResponse {
-    /**
-     * Storage class name.
-     * 
-     */
+        /**
+         * @return Storage class name.
+         * 
+         */
     private final String name;
-    /**
-     * If provisioned storage is posix compliant.
-     * 
-     */
+        /**
+         * @return If provisioned storage is posix compliant.
+         * 
+         */
     private final String posixCompliant;
-    /**
-     * Storage class type.
-     * 
-     */
+        /**
+         * @return Storage class type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class KubernetesRoleStorageClassInfoResponse {
     }
 
     /**
-     * Storage class name.
+     * @return Storage class name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If provisioned storage is posix compliant.
+     * @return If provisioned storage is posix compliant.
      * 
-    */
+     */
     public String posixCompliant() {
         return this.posixCompliant;
     }
     /**
-     * Storage class type.
+     * @return Storage class type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

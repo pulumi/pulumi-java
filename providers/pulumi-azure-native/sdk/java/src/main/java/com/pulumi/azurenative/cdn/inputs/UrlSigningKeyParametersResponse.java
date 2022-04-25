@@ -27,6 +27,10 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
     @Import(name="keyId", required=true)
     private String keyId;
 
+    /**
+     * @return Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+     * 
+     */
     public String keyId() {
         return this.keyId;
     }
@@ -38,6 +42,10 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
     @Import(name="secretSource", required=true)
     private ResourceReferenceResponse secretSource;
 
+    /**
+     * @return Resource reference to the KV secret
+     * 
+     */
     public ResourceReferenceResponse secretSource() {
         return this.secretSource;
     }
@@ -49,6 +57,10 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
     @Import(name="secretVersion")
     private @Nullable String secretVersion;
 
+    /**
+     * @return Version of the secret to be used
+     * 
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -61,6 +73,11 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the Secret to create.
+     * Expected value is &#39;UrlSigningKey&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,21 +109,46 @@ public final class UrlSigningKeyParametersResponse extends com.pulumi.resources.
             $ = new UrlSigningKeyParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyId Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyId(String keyId) {
             $.keyId = keyId;
             return this;
         }
 
+        /**
+         * @param secretSource Resource reference to the KV secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretSource(ResourceReferenceResponse secretSource) {
             $.secretSource = secretSource;
             return this;
         }
 
+        /**
+         * @param secretVersion Version of the secret to be used
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable String secretVersion) {
             $.secretVersion = secretVersion;
             return this;
         }
 
+        /**
+         * @param type The type of the Secret to create.
+         * Expected value is &#39;UrlSigningKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

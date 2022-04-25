@@ -9,40 +9,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ListNamespaceKeysResult {
-    /**
-     * Primary connection string of the alias if GEO DR is enabled
-     * 
-     */
+        /**
+         * @return Primary connection string of the alias if GEO DR is enabled
+         * 
+         */
     private final String aliasPrimaryConnectionString;
-    /**
-     * Secondary  connection string of the alias if GEO DR is enabled
-     * 
-     */
+        /**
+         * @return Secondary  connection string of the alias if GEO DR is enabled
+         * 
+         */
     private final String aliasSecondaryConnectionString;
-    /**
-     * A string that describes the AuthorizationRule.
-     * 
-     */
+        /**
+         * @return A string that describes the AuthorizationRule.
+         * 
+         */
     private final String keyName;
-    /**
-     * Primary connection string of the created namespace AuthorizationRule.
-     * 
-     */
+        /**
+         * @return Primary connection string of the created namespace AuthorizationRule.
+         * 
+         */
     private final String primaryConnectionString;
-    /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
-     */
+        /**
+         * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
+         * 
+         */
     private final String primaryKey;
-    /**
-     * Secondary connection string of the created namespace AuthorizationRule.
-     * 
-     */
+        /**
+         * @return Secondary connection string of the created namespace AuthorizationRule.
+         * 
+         */
     private final String secondaryConnectionString;
-    /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
-     * 
-     */
+        /**
+         * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
+         * 
+         */
     private final String secondaryKey;
 
     @CustomType.Constructor
@@ -64,51 +64,51 @@ public final class ListNamespaceKeysResult {
     }
 
     /**
-     * Primary connection string of the alias if GEO DR is enabled
+     * @return Primary connection string of the alias if GEO DR is enabled
      * 
-    */
+     */
     public String aliasPrimaryConnectionString() {
         return this.aliasPrimaryConnectionString;
     }
     /**
-     * Secondary  connection string of the alias if GEO DR is enabled
+     * @return Secondary  connection string of the alias if GEO DR is enabled
      * 
-    */
+     */
     public String aliasSecondaryConnectionString() {
         return this.aliasSecondaryConnectionString;
     }
     /**
-     * A string that describes the AuthorizationRule.
+     * @return A string that describes the AuthorizationRule.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * Primary connection string of the created namespace AuthorizationRule.
+     * @return Primary connection string of the created namespace AuthorizationRule.
      * 
-    */
+     */
     public String primaryConnectionString() {
         return this.primaryConnectionString;
     }
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * Secondary connection string of the created namespace AuthorizationRule.
+     * @return Secondary connection string of the created namespace AuthorizationRule.
      * 
-    */
+     */
     public String secondaryConnectionString() {
         return this.secondaryConnectionString;
     }
     /**
-     * A base64-encoded 256-bit primary key for signing and validating the SAS token.
+     * @return A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }

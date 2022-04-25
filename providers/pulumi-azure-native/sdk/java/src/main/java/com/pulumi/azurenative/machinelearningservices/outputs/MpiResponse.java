@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MpiResponse {
-    /**
-     * Enum to determine the job distribution type.
-     * Expected value is &#39;Mpi&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine the job distribution type.
+         * Expected value is &#39;Mpi&#39;.
+         * 
+         */
     private final String distributionType;
-    /**
-     * Number of processes per MPI node.
-     * 
-     */
+        /**
+         * @return Number of processes per MPI node.
+         * 
+         */
     private final @Nullable Integer processCountPerInstance;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class MpiResponse {
     }
 
     /**
-     * Enum to determine the job distribution type.
+     * @return Enum to determine the job distribution type.
      * Expected value is &#39;Mpi&#39;.
      * 
-    */
+     */
     public String distributionType() {
         return this.distributionType;
     }
     /**
-     * Number of processes per MPI node.
+     * @return Number of processes per MPI node.
      * 
-    */
+     */
     public Optional<Integer> processCountPerInstance() {
         return Optional.ofNullable(this.processCountPerInstance);
     }

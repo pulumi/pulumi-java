@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RemoteAddressMatchConditionParametersResponse {
-    /**
-     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
-     * 
-     */
+        /**
+         * @return Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         */
     private final @Nullable List<String> matchValues;
-    /**
-     * Describes if this is negate condition or not
-     * 
-     */
+        /**
+         * @return Describes if this is negate condition or not
+         * 
+         */
     private final @Nullable Boolean negateCondition;
     private final String odataType;
-    /**
-     * Describes operator to be matched
-     * 
-     */
+        /**
+         * @return Describes operator to be matched
+         * 
+         */
     private final String operator;
-    /**
-     * List of transforms
-     * 
-     */
+        /**
+         * @return List of transforms
+         * 
+         */
     private final @Nullable List<String> transforms;
 
     @CustomType.Constructor
@@ -50,16 +50,16 @@ public final class RemoteAddressMatchConditionParametersResponse {
     }
 
     /**
-     * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * @return Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
-    */
+     */
     public List<String> matchValues() {
         return this.matchValues == null ? List.of() : this.matchValues;
     }
     /**
-     * Describes if this is negate condition or not
+     * @return Describes if this is negate condition or not
      * 
-    */
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -67,16 +67,16 @@ public final class RemoteAddressMatchConditionParametersResponse {
         return this.odataType;
     }
     /**
-     * Describes operator to be matched
+     * @return Describes operator to be matched
      * 
-    */
+     */
     public String operator() {
         return this.operator;
     }
     /**
-     * List of transforms
+     * @return List of transforms
      * 
-    */
+     */
     public List<String> transforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

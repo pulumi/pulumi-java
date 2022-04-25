@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerAccountResponse {
-    /**
-     * The account name
-     * 
-     */
+        /**
+         * @return The account name
+         * 
+         */
     private final @Nullable String accountName;
-    /**
-     * The account password
-     * 
-     */
+        /**
+         * @return The account password
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * The account spn
-     * 
-     */
+        /**
+         * @return The account spn
+         * 
+         */
     private final @Nullable String spn;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ContainerAccountResponse {
     }
 
     /**
-     * The account name
+     * @return The account name
      * 
-    */
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
-     * The account password
+     * @return The account password
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The account spn
+     * @return The account spn
      * 
-    */
+     */
     public Optional<String> spn() {
         return Optional.ofNullable(this.spn);
     }

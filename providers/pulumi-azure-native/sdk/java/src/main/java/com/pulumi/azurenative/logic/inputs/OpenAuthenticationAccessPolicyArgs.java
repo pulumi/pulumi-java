@@ -30,6 +30,10 @@ public final class OpenAuthenticationAccessPolicyArgs extends com.pulumi.resourc
     @Import(name="claims")
     private @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
+    /**
+     * @return The access policy claims.
+     * 
+     */
     public Optional<Output<List<OpenAuthenticationPolicyClaimArgs>>> claims() {
         return Optional.ofNullable(this.claims);
     }
@@ -41,6 +45,10 @@ public final class OpenAuthenticationAccessPolicyArgs extends com.pulumi.resourc
     @Import(name="type")
     private @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
+    /**
+     * @return Type of provider for OAuth.
+     * 
+     */
     public Optional<Output<Either<String,OpenAuthenticationProviderType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -70,32 +78,74 @@ public final class OpenAuthenticationAccessPolicyArgs extends com.pulumi.resourc
             $ = new OpenAuthenticationAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param claims The access policy claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(@Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims) {
             $.claims = claims;
             return this;
         }
 
+        /**
+         * @param claims The access policy claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(List<OpenAuthenticationPolicyClaimArgs> claims) {
             return claims(Output.of(claims));
         }
 
+        /**
+         * @param claims The access policy claims.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(OpenAuthenticationPolicyClaimArgs... claims) {
             return claims(List.of(claims));
         }
 
+        /**
+         * @param type Type of provider for OAuth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,OpenAuthenticationProviderType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of provider for OAuth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,OpenAuthenticationProviderType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Type of provider for OAuth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Type of provider for OAuth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(OpenAuthenticationProviderType type) {
             return type(Either.ofRight(type));
         }

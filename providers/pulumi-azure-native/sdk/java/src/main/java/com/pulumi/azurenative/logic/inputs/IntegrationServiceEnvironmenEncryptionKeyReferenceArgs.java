@@ -27,6 +27,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return Gets the key name in the Key Vault.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -38,6 +42,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     @Import(name="keyVault")
     private @Nullable Output<ResourceReferenceArgs> keyVault;
 
+    /**
+     * @return The key vault reference.
+     * 
+     */
     public Optional<Output<ResourceReferenceArgs>> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
@@ -49,6 +57,10 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
     @Import(name="keyVersion")
     private @Nullable Output<String> keyVersion;
 
+    /**
+     * @return Gets the version of the key specified in the keyName property.
+     * 
+     */
     public Optional<Output<String>> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -79,29 +91,65 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
             $ = new IntegrationServiceEnvironmenEncryptionKeyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Gets the key name in the Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName Gets the key name in the Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(@Nullable Output<ResourceReferenceArgs> keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(ResourceReferenceArgs keyVault) {
             return keyVault(Output.of(keyVault));
         }
 
+        /**
+         * @param keyVersion Gets the version of the key specified in the keyName property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param keyVersion Gets the version of the key specified in the keyName property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             return keyVersion(Output.of(keyVersion));
         }

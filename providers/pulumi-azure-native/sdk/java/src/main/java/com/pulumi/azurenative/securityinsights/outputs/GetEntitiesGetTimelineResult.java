@@ -16,15 +16,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEntitiesGetTimelineResult {
-    /**
-     * The metadata from the timeline operation results.
-     * 
-     */
+        /**
+         * @return The metadata from the timeline operation results.
+         * 
+         */
     private final @Nullable TimelineResultsMetadataResponse metaData;
-    /**
-     * The timeline result values.
-     * 
-     */
+        /**
+         * @return The timeline result values.
+         * 
+         */
     private final @Nullable List<Object> value;
 
     @CustomType.Constructor
@@ -36,16 +36,16 @@ public final class GetEntitiesGetTimelineResult {
     }
 
     /**
-     * The metadata from the timeline operation results.
+     * @return The metadata from the timeline operation results.
      * 
-    */
+     */
     public Optional<TimelineResultsMetadataResponse> metaData() {
         return Optional.ofNullable(this.metaData);
     }
     /**
-     * The timeline result values.
+     * @return The timeline result values.
      * 
-    */
+     */
     public List<Object> value() {
         return this.value == null ? List.of() : this.value;
     }

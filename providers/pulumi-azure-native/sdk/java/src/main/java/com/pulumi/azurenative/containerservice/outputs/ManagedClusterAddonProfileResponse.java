@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterAddonProfileResponse {
-    /**
-     * Key-value pairs for configuring an add-on.
-     * 
-     */
+        /**
+         * @return Key-value pairs for configuring an add-on.
+         * 
+         */
     private final @Nullable Map<String,String> config;
-    /**
-     * Whether the add-on is enabled or not.
-     * 
-     */
+        /**
+         * @return Whether the add-on is enabled or not.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Information of user assigned identity used by this add-on.
-     * 
-     */
+        /**
+         * @return Information of user assigned identity used by this add-on.
+         * 
+         */
     private final ManagedClusterAddonProfileResponseIdentity identity;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ManagedClusterAddonProfileResponse {
     }
 
     /**
-     * Key-value pairs for configuring an add-on.
+     * @return Key-value pairs for configuring an add-on.
      * 
-    */
+     */
     public Map<String,String> config() {
         return this.config == null ? Map.of() : this.config;
     }
     /**
-     * Whether the add-on is enabled or not.
+     * @return Whether the add-on is enabled or not.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Information of user assigned identity used by this add-on.
+     * @return Information of user assigned identity used by this add-on.
      * 
-    */
+     */
     public ManagedClusterAddonProfileResponseIdentity identity() {
         return this.identity;
     }

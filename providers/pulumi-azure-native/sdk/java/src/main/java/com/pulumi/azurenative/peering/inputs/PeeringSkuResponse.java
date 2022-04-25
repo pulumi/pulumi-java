@@ -25,6 +25,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return The family of the peering SKU.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -36,6 +40,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the peering SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The size of the peering SKU.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -58,6 +70,10 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The tier of the peering SKU.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -89,21 +105,45 @@ public final class PeeringSkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PeeringSkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family The family of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name The name of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size The size of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tier The tier of the peering SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

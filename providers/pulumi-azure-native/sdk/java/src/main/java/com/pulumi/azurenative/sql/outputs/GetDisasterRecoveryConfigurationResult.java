@@ -9,60 +9,60 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDisasterRecoveryConfigurationResult {
-    /**
-     * Whether or not failover can be done automatically.
-     * 
-     */
+        /**
+         * @return Whether or not failover can be done automatically.
+         * 
+         */
     private final String autoFailover;
-    /**
-     * How aggressive the automatic failover should be.
-     * 
-     */
+        /**
+         * @return How aggressive the automatic failover should be.
+         * 
+         */
     private final String failoverPolicy;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Location of the server that contains this disaster recovery configuration.
-     * 
-     */
+        /**
+         * @return Location of the server that contains this disaster recovery configuration.
+         * 
+         */
     private final String location;
-    /**
-     * Logical name of the server.
-     * 
-     */
+        /**
+         * @return Logical name of the server.
+         * 
+         */
     private final String logicalServerName;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Logical name of the partner server.
-     * 
-     */
+        /**
+         * @return Logical name of the partner server.
+         * 
+         */
     private final String partnerLogicalServerName;
-    /**
-     * Id of the partner server.
-     * 
-     */
+        /**
+         * @return Id of the partner server.
+         * 
+         */
     private final String partnerServerId;
-    /**
-     * The role of the current server in the disaster recovery configuration.
-     * 
-     */
+        /**
+         * @return The role of the current server in the disaster recovery configuration.
+         * 
+         */
     private final String role;
-    /**
-     * The status of the disaster recovery configuration.
-     * 
-     */
+        /**
+         * @return The status of the disaster recovery configuration.
+         * 
+         */
     private final String status;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -92,79 +92,79 @@ public final class GetDisasterRecoveryConfigurationResult {
     }
 
     /**
-     * Whether or not failover can be done automatically.
+     * @return Whether or not failover can be done automatically.
      * 
-    */
+     */
     public String autoFailover() {
         return this.autoFailover;
     }
     /**
-     * How aggressive the automatic failover should be.
+     * @return How aggressive the automatic failover should be.
      * 
-    */
+     */
     public String failoverPolicy() {
         return this.failoverPolicy;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the server that contains this disaster recovery configuration.
+     * @return Location of the server that contains this disaster recovery configuration.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Logical name of the server.
+     * @return Logical name of the server.
      * 
-    */
+     */
     public String logicalServerName() {
         return this.logicalServerName;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Logical name of the partner server.
+     * @return Logical name of the partner server.
      * 
-    */
+     */
     public String partnerLogicalServerName() {
         return this.partnerLogicalServerName;
     }
     /**
-     * Id of the partner server.
+     * @return Id of the partner server.
      * 
-    */
+     */
     public String partnerServerId() {
         return this.partnerServerId;
     }
     /**
-     * The role of the current server in the disaster recovery configuration.
+     * @return The role of the current server in the disaster recovery configuration.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * The status of the disaster recovery configuration.
+     * @return The status of the disaster recovery configuration.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

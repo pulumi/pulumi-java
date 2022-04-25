@@ -15,56 +15,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BlobEventsTriggerResponse {
-    /**
-     * List of tags that can be used for describing the trigger.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the trigger.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-     * 
-     */
+        /**
+         * @return The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+         * 
+         */
     private final @Nullable String blobPathBeginsWith;
-    /**
-     * The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
-     * 
-     */
+        /**
+         * @return The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+         * 
+         */
     private final @Nullable String blobPathEndsWith;
-    /**
-     * Trigger description.
-     * 
-     */
+        /**
+         * @return Trigger description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The type of events that cause this trigger to fire.
-     * 
-     */
+        /**
+         * @return The type of events that cause this trigger to fire.
+         * 
+         */
     private final List<String> events;
-    /**
-     * If set to true, blobs with zero bytes will be ignored.
-     * 
-     */
+        /**
+         * @return If set to true, blobs with zero bytes will be ignored.
+         * 
+         */
     private final @Nullable Boolean ignoreEmptyBlobs;
-    /**
-     * Pipelines that need to be started.
-     * 
-     */
+        /**
+         * @return Pipelines that need to be started.
+         * 
+         */
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
-    /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
-     * 
-     */
+        /**
+         * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+         * 
+         */
     private final String runtimeState;
-    /**
-     * The ARM resource ID of the Storage Account.
-     * 
-     */
+        /**
+         * @return The ARM resource ID of the Storage Account.
+         * 
+         */
     private final String scope;
-    /**
-     * Trigger type.
-     * Expected value is &#39;BlobEventsTrigger&#39;.
-     * 
-     */
+        /**
+         * @return Trigger type.
+         * Expected value is &#39;BlobEventsTrigger&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -92,73 +92,73 @@ public final class BlobEventsTriggerResponse {
     }
 
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * @return The blob path must begin with the pattern provided for trigger to fire. For example, &#39;/records/blobs/december/&#39; will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
-    */
+     */
     public Optional<String> blobPathBeginsWith() {
         return Optional.ofNullable(this.blobPathBeginsWith);
     }
     /**
-     * The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
+     * @return The blob path must end with the pattern provided for trigger to fire. For example, &#39;december/boxes.csv&#39; will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
-    */
+     */
     public Optional<String> blobPathEndsWith() {
         return Optional.ofNullable(this.blobPathEndsWith);
     }
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The type of events that cause this trigger to fire.
+     * @return The type of events that cause this trigger to fire.
      * 
-    */
+     */
     public List<String> events() {
         return this.events;
     }
     /**
-     * If set to true, blobs with zero bytes will be ignored.
+     * @return If set to true, blobs with zero bytes will be ignored.
      * 
-    */
+     */
     public Optional<Boolean> ignoreEmptyBlobs() {
         return Optional.ofNullable(this.ignoreEmptyBlobs);
     }
     /**
-     * Pipelines that need to be started.
+     * @return Pipelines that need to be started.
      * 
-    */
+     */
     public List<TriggerPipelineReferenceResponse> pipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
     }
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-    */
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
     /**
-     * The ARM resource ID of the Storage Account.
+     * @return The ARM resource ID of the Storage Account.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;BlobEventsTrigger&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

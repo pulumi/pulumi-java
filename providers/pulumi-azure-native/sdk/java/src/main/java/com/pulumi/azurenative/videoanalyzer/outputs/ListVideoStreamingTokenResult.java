@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListVideoStreamingTokenResult {
-    /**
-     * The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
-     * 
-     */
+        /**
+         * @return The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
+         * 
+         */
     private final String expirationDate;
-    /**
-     * The streaming token value to be added to the video streaming URL as the value for a &#34;token&#34; query string parameter. The token is specific to a single video.
-     * 
-     */
+        /**
+         * @return The streaming token value to be added to the video streaming URL as the value for a &#34;token&#34; query string parameter. The token is specific to a single video.
+         * 
+         */
     private final String token;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ListVideoStreamingTokenResult {
     }
 
     /**
-     * The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
+     * @return The streaming token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * The streaming token value to be added to the video streaming URL as the value for a &#34;token&#34; query string parameter. The token is specific to a single video.
+     * @return The streaming token value to be added to the video streaming URL as the value for a &#34;token&#34; query string parameter. The token is specific to a single video.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

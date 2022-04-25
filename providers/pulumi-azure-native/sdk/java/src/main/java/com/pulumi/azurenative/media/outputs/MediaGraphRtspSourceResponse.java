@@ -12,26 +12,26 @@ import java.util.Objects;
 
 @CustomType
 public final class MediaGraphRtspSourceResponse {
-    /**
-     * RTSP endpoint of the stream being connected to.
-     * 
-     */
+        /**
+         * @return RTSP endpoint of the stream being connected to.
+         * 
+         */
     private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
-    /**
-     * Source name.
-     * 
-     */
+        /**
+         * @return Source name.
+         * 
+         */
     private final String name;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
-     * 
-     */
+        /**
+         * @return Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
+         * 
+         */
     private final String transport;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class MediaGraphRtspSourceResponse {
     }
 
     /**
-     * RTSP endpoint of the stream being connected to.
+     * @return RTSP endpoint of the stream being connected to.
      * 
-    */
+     */
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint() {
         return this.endpoint;
     }
     /**
-     * Source name.
+     * @return Source name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
+     * @return Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
      * 
-    */
+     */
     public String transport() {
         return this.transport;
     }

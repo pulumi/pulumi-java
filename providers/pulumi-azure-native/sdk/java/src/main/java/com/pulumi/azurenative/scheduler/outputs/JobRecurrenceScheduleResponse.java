@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobRecurrenceScheduleResponse {
-    /**
-     * Gets or sets the hours of the day that the job should execute at.
-     * 
-     */
+        /**
+         * @return Gets or sets the hours of the day that the job should execute at.
+         * 
+         */
     private final @Nullable List<Integer> hours;
-    /**
-     * Gets or sets the minutes of the hour that the job should execute at.
-     * 
-     */
+        /**
+         * @return Gets or sets the minutes of the hour that the job should execute at.
+         * 
+         */
     private final @Nullable List<Integer> minutes;
-    /**
-     * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
-     * 
-     */
+        /**
+         * @return Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+         * 
+         */
     private final @Nullable List<Integer> monthDays;
-    /**
-     * Gets or sets the occurrences of days within a month.
-     * 
-     */
+        /**
+         * @return Gets or sets the occurrences of days within a month.
+         * 
+         */
     private final @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
-    /**
-     * Gets or sets the days of the week that the job should execute on.
-     * 
-     */
+        /**
+         * @return Gets or sets the days of the week that the job should execute on.
+         * 
+         */
     private final @Nullable List<String> weekDays;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class JobRecurrenceScheduleResponse {
     }
 
     /**
-     * Gets or sets the hours of the day that the job should execute at.
+     * @return Gets or sets the hours of the day that the job should execute at.
      * 
-    */
+     */
     public List<Integer> hours() {
         return this.hours == null ? List.of() : this.hours;
     }
     /**
-     * Gets or sets the minutes of the hour that the job should execute at.
+     * @return Gets or sets the minutes of the hour that the job should execute at.
      * 
-    */
+     */
     public List<Integer> minutes() {
         return this.minutes == null ? List.of() : this.minutes;
     }
     /**
-     * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
+     * @return Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
      * 
-    */
+     */
     public List<Integer> monthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
-     * Gets or sets the occurrences of days within a month.
+     * @return Gets or sets the occurrences of days within a month.
      * 
-    */
+     */
     public List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
-     * Gets or sets the days of the week that the job should execute on.
+     * @return Gets or sets the days of the week that the job should execute on.
      * 
-    */
+     */
     public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }

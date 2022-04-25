@@ -23,6 +23,10 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -34,6 +38,10 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="geoBackupPolicyName")
     private @Nullable Output<String> geoBackupPolicyName;
 
+    /**
+     * @return The name of the geo backup policy.
+     * 
+     */
     public Optional<Output<String>> geoBackupPolicyName() {
         return Optional.ofNullable(this.geoBackupPolicyName);
     }
@@ -45,6 +53,10 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -67,6 +83,10 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="state", required=true)
     private Output<GeoBackupPolicyState> state;
 
+    /**
+     * @return The state of the geo backup policy.
+     * 
+     */
     public Output<GeoBackupPolicyState> state() {
         return this.state;
     }
@@ -99,47 +119,107 @@ public final class GeoBackupPolicyArgs extends com.pulumi.resources.ResourceArgs
             $ = new GeoBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param geoBackupPolicyName The name of the geo backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoBackupPolicyName(@Nullable Output<String> geoBackupPolicyName) {
             $.geoBackupPolicyName = geoBackupPolicyName;
             return this;
         }
 
+        /**
+         * @param geoBackupPolicyName The name of the geo backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoBackupPolicyName(String geoBackupPolicyName) {
             return geoBackupPolicyName(Output.of(geoBackupPolicyName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param state The state of the geo backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<GeoBackupPolicyState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of the geo backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(GeoBackupPolicyState state) {
             return state(Output.of(state));
         }

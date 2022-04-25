@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ObjectReplicationPolicyRuleResponse {
-    /**
-     * Required. Destination container name.
-     * 
-     */
+        /**
+         * @return Required. Destination container name.
+         * 
+         */
     private final String destinationContainer;
-    /**
-     * Optional. An object that defines the filter set.
-     * 
-     */
+        /**
+         * @return Optional. An object that defines the filter set.
+         * 
+         */
     private final @Nullable ObjectReplicationPolicyFilterResponse filters;
-    /**
-     * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
-     * 
-     */
+        /**
+         * @return Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+         * 
+         */
     private final @Nullable String ruleId;
-    /**
-     * Required. Source container name.
-     * 
-     */
+        /**
+         * @return Required. Source container name.
+         * 
+         */
     private final String sourceContainer;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ObjectReplicationPolicyRuleResponse {
     }
 
     /**
-     * Required. Destination container name.
+     * @return Required. Destination container name.
      * 
-    */
+     */
     public String destinationContainer() {
         return this.destinationContainer;
     }
     /**
-     * Optional. An object that defines the filter set.
+     * @return Optional. An object that defines the filter set.
      * 
-    */
+     */
     public Optional<ObjectReplicationPolicyFilterResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
     /**
-     * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
+     * @return Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
      * 
-    */
+     */
     public Optional<String> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
     /**
-     * Required. Source container name.
+     * @return Required. Source container name.
      * 
-    */
+     */
     public String sourceContainer() {
         return this.sourceContainer;
     }

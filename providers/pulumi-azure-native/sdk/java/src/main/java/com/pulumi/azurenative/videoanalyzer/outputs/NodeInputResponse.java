@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NodeInputResponse {
-    /**
-     * The name of the upstream node in the pipeline which output is used as input of the current node.
-     * 
-     */
+        /**
+         * @return The name of the upstream node in the pipeline which output is used as input of the current node.
+         * 
+         */
     private final String nodeName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class NodeInputResponse {
     }
 
     /**
-     * The name of the upstream node in the pipeline which output is used as input of the current node.
+     * @return The name of the upstream node in the pipeline which output is used as input of the current node.
      * 
-    */
+     */
     public String nodeName() {
         return this.nodeName;
     }

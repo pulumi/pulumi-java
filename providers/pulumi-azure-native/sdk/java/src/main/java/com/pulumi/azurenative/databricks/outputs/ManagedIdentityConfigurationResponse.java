@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedIdentityConfigurationResponse {
-    /**
-     * The objectId of the Managed Identity that is linked to the Managed Storage account.
-     * 
-     */
+        /**
+         * @return The objectId of the Managed Identity that is linked to the Managed Storage account.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant Id where the Managed Identity is created.
-     * 
-     */
+        /**
+         * @return The tenant Id where the Managed Identity is created.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of Identity created. It can be either SystemAssigned or UserAssigned.
-     * 
-     */
+        /**
+         * @return The type of Identity created. It can be either SystemAssigned or UserAssigned.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ManagedIdentityConfigurationResponse {
     }
 
     /**
-     * The objectId of the Managed Identity that is linked to the Managed Storage account.
+     * @return The objectId of the Managed Identity that is linked to the Managed Storage account.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant Id where the Managed Identity is created.
+     * @return The tenant Id where the Managed Identity is created.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of Identity created. It can be either SystemAssigned or UserAssigned.
+     * @return The type of Identity created. It can be either SystemAssigned or UserAssigned.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

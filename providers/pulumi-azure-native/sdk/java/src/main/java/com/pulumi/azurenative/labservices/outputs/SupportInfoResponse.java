@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SupportInfoResponse {
-    /**
-     * Support contact email address.
-     * 
-     */
+        /**
+         * @return Support contact email address.
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * Support instructions.
-     * 
-     */
+        /**
+         * @return Support instructions.
+         * 
+         */
     private final @Nullable String instructions;
-    /**
-     * Support contact phone number.
-     * 
-     */
+        /**
+         * @return Support contact phone number.
+         * 
+         */
     private final @Nullable String phone;
-    /**
-     * Support web address.
-     * 
-     */
+        /**
+         * @return Support web address.
+         * 
+         */
     private final @Nullable String url;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class SupportInfoResponse {
     }
 
     /**
-     * Support contact email address.
+     * @return Support contact email address.
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * Support instructions.
+     * @return Support instructions.
      * 
-    */
+     */
     public Optional<String> instructions() {
         return Optional.ofNullable(this.instructions);
     }
     /**
-     * Support contact phone number.
+     * @return Support contact phone number.
      * 
-    */
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
-     * Support web address.
+     * @return Support web address.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

@@ -19,6 +19,10 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="peeringName", required=true)
     private String peeringName;
 
+    /**
+     * @return The name of the workspace vNet peering.
+     * 
+     */
     public String peeringName() {
         return this.peeringName;
     }
@@ -30,6 +34,10 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetvNetPeeringArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetvNetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peeringName The name of the workspace vNet peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringName(String peeringName) {
             $.peeringName = peeringName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

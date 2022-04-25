@@ -28,6 +28,10 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
     @Import(name="healthProbe")
     private @Nullable ApiEntityReferenceResponse healthProbe;
 
+    /**
+     * @return A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}&#39;.
+     * 
+     */
     public Optional<ApiEntityReferenceResponse> healthProbe() {
         return Optional.ofNullable(this.healthProbe);
     }
@@ -39,6 +43,10 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
     @Import(name="networkApiVersion")
     private @Nullable String networkApiVersion;
 
+    /**
+     * @return specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+     * 
+     */
     public Optional<String> networkApiVersion() {
         return Optional.ofNullable(this.networkApiVersion);
     }
@@ -50,6 +58,10 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
     @Import(name="networkInterfaceConfigurations")
     private @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
+    /**
+     * @return The list of network configurations.
+     * 
+     */
     public Optional<List<VirtualMachineScaleSetNetworkConfigurationResponse>> networkInterfaceConfigurations() {
         return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
@@ -80,21 +92,45 @@ public final class VirtualMachineScaleSetNetworkProfileResponse extends com.pulu
             $ = new VirtualMachineScaleSetNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthProbe A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbe(@Nullable ApiEntityReferenceResponse healthProbe) {
             $.healthProbe = healthProbe;
             return this;
         }
 
+        /**
+         * @param networkApiVersion specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode &#39;Flexible&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkApiVersion(@Nullable String networkApiVersion) {
             $.networkApiVersion = networkApiVersion;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
+        /**
+         * @param networkInterfaceConfigurations The list of network configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceConfigurations(VirtualMachineScaleSetNetworkConfigurationResponse... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
         }

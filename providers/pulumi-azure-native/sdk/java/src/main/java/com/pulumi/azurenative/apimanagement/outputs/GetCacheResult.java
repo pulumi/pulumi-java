@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCacheResult {
-    /**
-     * Runtime connection string to cache
-     * 
-     */
+        /**
+         * @return Runtime connection string to cache
+         * 
+         */
     private final String connectionString;
-    /**
-     * Cache description
-     * 
-     */
+        /**
+         * @return Cache description
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Original uri of entity in external system cache points to
-     * 
-     */
+        /**
+         * @return Original uri of entity in external system cache points to
+         * 
+         */
     private final @Nullable String resourceId;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
-    /**
-     * Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
-     * 
-     */
+        /**
+         * @return Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
+         * 
+         */
     private final String useFromLocation;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetCacheResult {
     }
 
     /**
-     * Runtime connection string to cache
+     * @return Runtime connection string to cache
      * 
-    */
+     */
     public String connectionString() {
         return this.connectionString;
     }
     /**
-     * Cache description
+     * @return Cache description
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Original uri of entity in external system cache points to
+     * @return Original uri of entity in external system cache points to
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
+     * @return Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
      * 
-    */
+     */
     public String useFromLocation() {
         return this.useFromLocation;
     }

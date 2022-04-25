@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetResponseFolder {
-    /**
-     * The name of the folder that this Dataset is in.
-     * 
-     */
+        /**
+         * @return The name of the folder that this Dataset is in.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DatasetResponseFolder {
     }
 
     /**
-     * The name of the folder that this Dataset is in.
+     * @return The name of the folder that this Dataset is in.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

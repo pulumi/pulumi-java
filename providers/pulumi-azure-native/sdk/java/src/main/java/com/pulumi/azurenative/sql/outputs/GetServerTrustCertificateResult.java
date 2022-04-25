@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServerTrustCertificateResult {
-    /**
-     * The certificate name
-     * 
-     */
+        /**
+         * @return The certificate name
+         * 
+         */
     private final String certificateName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The certificate public blob
-     * 
-     */
+        /**
+         * @return The certificate public blob
+         * 
+         */
     private final @Nullable String publicBlob;
-    /**
-     * The certificate thumbprint
-     * 
-     */
+        /**
+         * @return The certificate thumbprint
+         * 
+         */
     private final String thumbprint;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetServerTrustCertificateResult {
     }
 
     /**
-     * The certificate name
+     * @return The certificate name
      * 
-    */
+     */
     public String certificateName() {
         return this.certificateName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The certificate public blob
+     * @return The certificate public blob
      * 
-    */
+     */
     public Optional<String> publicBlob() {
         return Optional.ofNullable(this.publicBlob);
     }
     /**
-     * The certificate thumbprint
+     * @return The certificate thumbprint
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

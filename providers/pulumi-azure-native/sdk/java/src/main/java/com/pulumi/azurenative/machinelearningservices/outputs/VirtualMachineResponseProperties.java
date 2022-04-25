@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachineResponseProperties {
-    /**
-     * Public IP address of the virtual machine.
-     * 
-     */
+        /**
+         * @return Public IP address of the virtual machine.
+         * 
+         */
     private final @Nullable String address;
-    /**
-     * Admin credentials for virtual machine
-     * 
-     */
+        /**
+         * @return Admin credentials for virtual machine
+         * 
+         */
     private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
-    /**
-     * Port open for ssh connections.
-     * 
-     */
+        /**
+         * @return Port open for ssh connections.
+         * 
+         */
     private final @Nullable Integer sshPort;
-    /**
-     * Virtual Machine size
-     * 
-     */
+        /**
+         * @return Virtual Machine size
+         * 
+         */
     private final @Nullable String virtualMachineSize;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class VirtualMachineResponseProperties {
     }
 
     /**
-     * Public IP address of the virtual machine.
+     * @return Public IP address of the virtual machine.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * Admin credentials for virtual machine
+     * @return Admin credentials for virtual machine
      * 
-    */
+     */
     public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
-     * Port open for ssh connections.
+     * @return Port open for ssh connections.
      * 
-    */
+     */
     public Optional<Integer> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
     /**
-     * Virtual Machine size
+     * @return Virtual Machine size
      * 
-    */
+     */
     public Optional<String> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }

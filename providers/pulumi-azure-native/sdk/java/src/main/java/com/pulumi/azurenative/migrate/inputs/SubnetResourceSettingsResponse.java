@@ -26,6 +26,10 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
     @Import(name="addressPrefix")
     private @Nullable String addressPrefix;
 
+    /**
+     * @return Gets or sets address prefix for the subnet.
+     * 
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -37,6 +41,10 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the Subnet name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
     @Import(name="networkSecurityGroup")
     private @Nullable NsgReferenceResponse networkSecurityGroup;
 
+    /**
+     * @return Defines reference to NSG.
+     * 
+     */
     public Optional<NsgReferenceResponse> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
@@ -78,16 +90,34 @@ public final class SubnetResourceSettingsResponse extends com.pulumi.resources.I
             $ = new SubnetResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix Gets or sets address prefix for the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable String addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the Subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroup Defines reference to NSG.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(@Nullable NsgReferenceResponse networkSecurityGroup) {
             $.networkSecurityGroup = networkSecurityGroup;
             return this;

@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInstanceFailoverGroupResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * List of managed instance pairs in the failover group.
-     * 
-     */
+        /**
+         * @return List of managed instance pairs in the failover group.
+         * 
+         */
     private final List<ManagedInstancePairInfoResponse> managedInstancePairs;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Partner region information for the failover group.
-     * 
-     */
+        /**
+         * @return Partner region information for the failover group.
+         * 
+         */
     private final List<PartnerRegionInfoResponse> partnerRegions;
-    /**
-     * Read-only endpoint of the failover group instance.
-     * 
-     */
+        /**
+         * @return Read-only endpoint of the failover group instance.
+         * 
+         */
     private final @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint;
-    /**
-     * Read-write endpoint of the failover group instance.
-     * 
-     */
+        /**
+         * @return Read-write endpoint of the failover group instance.
+         * 
+         */
     private final InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint;
-    /**
-     * Local replication role of the failover group instance.
-     * 
-     */
+        /**
+         * @return Local replication role of the failover group instance.
+         * 
+         */
     private final String replicationRole;
-    /**
-     * Replication state of the failover group instance.
-     * 
-     */
+        /**
+         * @return Replication state of the failover group instance.
+         * 
+         */
     private final String replicationState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -85,65 +85,65 @@ public final class GetInstanceFailoverGroupResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of managed instance pairs in the failover group.
+     * @return List of managed instance pairs in the failover group.
      * 
-    */
+     */
     public List<ManagedInstancePairInfoResponse> managedInstancePairs() {
         return this.managedInstancePairs;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Partner region information for the failover group.
+     * @return Partner region information for the failover group.
      * 
-    */
+     */
     public List<PartnerRegionInfoResponse> partnerRegions() {
         return this.partnerRegions;
     }
     /**
-     * Read-only endpoint of the failover group instance.
+     * @return Read-only endpoint of the failover group instance.
      * 
-    */
+     */
     public Optional<InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
     /**
-     * Read-write endpoint of the failover group instance.
+     * @return Read-write endpoint of the failover group instance.
      * 
-    */
+     */
     public InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
-     * Local replication role of the failover group instance.
+     * @return Local replication role of the failover group instance.
      * 
-    */
+     */
     public String replicationRole() {
         return this.replicationRole;
     }
     /**
-     * Replication state of the failover group instance.
+     * @return Replication state of the failover group instance.
      * 
-    */
+     */
     public String replicationState() {
         return this.replicationState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

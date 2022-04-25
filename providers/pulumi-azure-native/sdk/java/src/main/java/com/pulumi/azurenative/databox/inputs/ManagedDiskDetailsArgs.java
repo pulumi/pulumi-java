@@ -28,6 +28,11 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="dataAccountType", required=true)
     private Output<String> dataAccountType;
 
+    /**
+     * @return Account Type of the data to be transferred.
+     * Expected value is &#39;ManagedDisk&#39;.
+     * 
+     */
     public Output<String> dataAccountType() {
         return this.dataAccountType;
     }
@@ -39,6 +44,10 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupId", required=true)
     private Output<String> resourceGroupId;
 
+    /**
+     * @return Resource Group Id of the compute disks.
+     * 
+     */
     public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
@@ -50,6 +59,10 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="sharePassword")
     private @Nullable Output<String> sharePassword;
 
+    /**
+     * @return Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     * 
+     */
     public Optional<Output<String>> sharePassword() {
         return Optional.ofNullable(this.sharePassword);
     }
@@ -61,6 +74,10 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
     @Import(name="stagingStorageAccountId", required=true)
     private Output<String> stagingStorageAccountId;
 
+    /**
+     * @return Resource Id of the storage account that can be used to copy the vhd for staging.
+     * 
+     */
     public Output<String> stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
@@ -92,38 +109,88 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
             $ = new ManagedDiskDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataAccountType Account Type of the data to be transferred.
+         * Expected value is &#39;ManagedDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(Output<String> dataAccountType) {
             $.dataAccountType = dataAccountType;
             return this;
         }
 
+        /**
+         * @param dataAccountType Account Type of the data to be transferred.
+         * Expected value is &#39;ManagedDisk&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataAccountType(String dataAccountType) {
             return dataAccountType(Output.of(dataAccountType));
         }
 
+        /**
+         * @param resourceGroupId Resource Group Id of the compute disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(Output<String> resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param resourceGroupId Resource Group Id of the compute disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(String resourceGroupId) {
             return resourceGroupId(Output.of(resourceGroupId));
         }
 
+        /**
+         * @param sharePassword Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePassword(@Nullable Output<String> sharePassword) {
             $.sharePassword = sharePassword;
             return this;
         }
 
+        /**
+         * @param sharePassword Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePassword(String sharePassword) {
             return sharePassword(Output.of(sharePassword));
         }
 
+        /**
+         * @param stagingStorageAccountId Resource Id of the storage account that can be used to copy the vhd for staging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingStorageAccountId(Output<String> stagingStorageAccountId) {
             $.stagingStorageAccountId = stagingStorageAccountId;
             return this;
         }
 
+        /**
+         * @param stagingStorageAccountId Resource Id of the storage account that can be used to copy the vhd for staging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
             return stagingStorageAccountId(Output.of(stagingStorageAccountId));
         }

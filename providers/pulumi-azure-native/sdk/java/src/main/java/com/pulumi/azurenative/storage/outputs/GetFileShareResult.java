@@ -15,95 +15,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetFileShareResult {
-    /**
-     * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
-     * 
-     */
+        /**
+         * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+         * 
+         */
     private final @Nullable String accessTier;
-    /**
-     * Indicates the last modification time for share access tier.
-     * 
-     */
+        /**
+         * @return Indicates the last modification time for share access tier.
+         * 
+         */
     private final String accessTierChangeTime;
-    /**
-     * Indicates if there is a pending transition for access tier.
-     * 
-     */
+        /**
+         * @return Indicates if there is a pending transition for access tier.
+         * 
+         */
     private final String accessTierStatus;
-    /**
-     * Indicates whether the share was deleted.
-     * 
-     */
+        /**
+         * @return Indicates whether the share was deleted.
+         * 
+         */
     private final Boolean deleted;
-    /**
-     * The deleted time if the share was deleted.
-     * 
-     */
+        /**
+         * @return The deleted time if the share was deleted.
+         * 
+         */
     private final String deletedTime;
-    /**
-     * The authentication protocol that is used for the file share. Can only be specified when creating a share.
-     * 
-     */
+        /**
+         * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
+         * 
+         */
     private final @Nullable String enabledProtocols;
-    /**
-     * Resource Etag.
-     * 
-     */
+        /**
+         * @return Resource Etag.
+         * 
+         */
     private final String etag;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Returns the date and time the share was last modified.
-     * 
-     */
+        /**
+         * @return Returns the date and time the share was last modified.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * A name-value pair to associate with the share as metadata.
-     * 
-     */
+        /**
+         * @return A name-value pair to associate with the share as metadata.
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Remaining retention days for share that was soft deleted.
-     * 
-     */
+        /**
+         * @return Remaining retention days for share that was soft deleted.
+         * 
+         */
     private final Integer remainingRetentionDays;
-    /**
-     * The property is for NFS share only. The default is NoRootSquash.
-     * 
-     */
+        /**
+         * @return The property is for NFS share only. The default is NoRootSquash.
+         * 
+         */
     private final @Nullable String rootSquash;
-    /**
-     * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
-     * 
-     */
+        /**
+         * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+         * 
+         */
     private final @Nullable Integer shareQuota;
-    /**
-     * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
-     * 
-     */
+        /**
+         * @return The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
+         * 
+         */
     private final Double shareUsageBytes;
-    /**
-     * Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
-     * 
-     */
+        /**
+         * @return Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
+         * 
+         */
     private final String snapshotTime;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The version of the share.
-     * 
-     */
+        /**
+         * @return The version of the share.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -147,128 +147,128 @@ public final class GetFileShareResult {
     }
 
     /**
-     * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
+     * @return Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
      * 
-    */
+     */
     public Optional<String> accessTier() {
         return Optional.ofNullable(this.accessTier);
     }
     /**
-     * Indicates the last modification time for share access tier.
+     * @return Indicates the last modification time for share access tier.
      * 
-    */
+     */
     public String accessTierChangeTime() {
         return this.accessTierChangeTime;
     }
     /**
-     * Indicates if there is a pending transition for access tier.
+     * @return Indicates if there is a pending transition for access tier.
      * 
-    */
+     */
     public String accessTierStatus() {
         return this.accessTierStatus;
     }
     /**
-     * Indicates whether the share was deleted.
+     * @return Indicates whether the share was deleted.
      * 
-    */
+     */
     public Boolean deleted() {
         return this.deleted;
     }
     /**
-     * The deleted time if the share was deleted.
+     * @return The deleted time if the share was deleted.
      * 
-    */
+     */
     public String deletedTime() {
         return this.deletedTime;
     }
     /**
-     * The authentication protocol that is used for the file share. Can only be specified when creating a share.
+     * @return The authentication protocol that is used for the file share. Can only be specified when creating a share.
      * 
-    */
+     */
     public Optional<String> enabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }
     /**
-     * Resource Etag.
+     * @return Resource Etag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Returns the date and time the share was last modified.
+     * @return Returns the date and time the share was last modified.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * A name-value pair to associate with the share as metadata.
+     * @return A name-value pair to associate with the share as metadata.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Remaining retention days for share that was soft deleted.
+     * @return Remaining retention days for share that was soft deleted.
      * 
-    */
+     */
     public Integer remainingRetentionDays() {
         return this.remainingRetentionDays;
     }
     /**
-     * The property is for NFS share only. The default is NoRootSquash.
+     * @return The property is for NFS share only. The default is NoRootSquash.
      * 
-    */
+     */
     public Optional<String> rootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
     /**
-     * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
+     * @return The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
      * 
-    */
+     */
     public Optional<Integer> shareQuota() {
         return Optional.ofNullable(this.shareQuota);
     }
     /**
-     * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
+     * @return The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
      * 
-    */
+     */
     public Double shareUsageBytes() {
         return this.shareUsageBytes;
     }
     /**
-     * Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
+     * @return Creation time of share snapshot returned in the response of list shares with expand param &#34;snapshots&#34;.
      * 
-    */
+     */
     public String snapshotTime() {
         return this.snapshotTime;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The version of the share.
+     * @return The version of the share.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

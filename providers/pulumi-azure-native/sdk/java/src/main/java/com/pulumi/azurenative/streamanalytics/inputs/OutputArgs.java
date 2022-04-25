@@ -39,6 +39,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasource")
     private @Nullable Output<Object> datasource;
 
+    /**
+     * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Object>> datasource() {
         return Optional.ofNullable(this.datasource);
     }
@@ -50,6 +54,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +69,10 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serialization")
     private @Nullable Output<Object> serialization;
 
+    /**
+     * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<Output<Object>> serialization() {
         return Optional.ofNullable(this.serialization);
     }
@@ -91,29 +103,65 @@ public final class OutputArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OutputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasource Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasource(@Nullable Output<Object> datasource) {
             $.datasource = datasource;
             return this;
         }
 
+        /**
+         * @param datasource Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasource(Object datasource) {
             return datasource(Output.of(datasource));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param serialization Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialization(@Nullable Output<Object> serialization) {
             $.serialization = serialization;
             return this;
         }
 
+        /**
+         * @param serialization Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialization(Object serialization) {
             return serialization(Output.of(serialization));
         }

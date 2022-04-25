@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerAppSecretResponse {
-    /**
-     * Secret Name.
-     * 
-     */
+        /**
+         * @return Secret Name.
+         * 
+         */
     private final String name;
-    /**
-     * Secret Value.
-     * 
-     */
+        /**
+         * @return Secret Value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ContainerAppSecretResponse {
     }
 
     /**
-     * Secret Name.
+     * @return Secret Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Secret Value.
+     * @return Secret Value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

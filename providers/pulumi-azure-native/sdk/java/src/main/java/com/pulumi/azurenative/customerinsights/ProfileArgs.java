@@ -28,6 +28,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiEntitySetName")
     private @Nullable Output<String> apiEntitySetName;
 
+    /**
+     * @return The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+     * 
+     */
     public Optional<Output<String>> apiEntitySetName() {
         return Optional.ofNullable(this.apiEntitySetName);
     }
@@ -39,6 +43,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<Map<String,List<String>>> attributes;
 
+    /**
+     * @return The attributes for the Type.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -50,6 +58,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Localized descriptions for the property.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -61,6 +73,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Localized display names for the property.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -72,6 +88,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="entityType")
     private @Nullable Output<EntityTypes> entityType;
 
+    /**
+     * @return Type of entity.
+     * 
+     */
     public Optional<Output<EntityTypes>> entityType() {
         return Optional.ofNullable(this.entityType);
     }
@@ -83,6 +103,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fields")
     private @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
+    /**
+     * @return The properties of the Profile.
+     * 
+     */
     public Optional<Output<List<PropertyDefinitionArgs>>> fields() {
         return Optional.ofNullable(this.fields);
     }
@@ -94,6 +118,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -105,6 +133,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instancesCount")
     private @Nullable Output<Integer> instancesCount;
 
+    /**
+     * @return The instance count.
+     * 
+     */
     public Optional<Output<Integer>> instancesCount() {
         return Optional.ofNullable(this.instancesCount);
     }
@@ -116,6 +148,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="largeImage")
     private @Nullable Output<String> largeImage;
 
+    /**
+     * @return Large Image associated with the Property or EntityType.
+     * 
+     */
     public Optional<Output<String>> largeImage() {
         return Optional.ofNullable(this.largeImage);
     }
@@ -127,6 +163,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="localizedAttributes")
     private @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
 
+    /**
+     * @return Any custom localized attributes for the Type.
+     * 
+     */
     public Optional<Output<Map<String,Map<String,String>>>> localizedAttributes() {
         return Optional.ofNullable(this.localizedAttributes);
     }
@@ -138,6 +178,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediumImage")
     private @Nullable Output<String> mediumImage;
 
+    /**
+     * @return Medium Image associated with the Property or EntityType.
+     * 
+     */
     public Optional<Output<String>> mediumImage() {
         return Optional.ofNullable(this.mediumImage);
     }
@@ -149,6 +193,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName")
     private @Nullable Output<String> profileName;
 
+    /**
+     * @return The name of the profile.
+     * 
+     */
     public Optional<Output<String>> profileName() {
         return Optional.ofNullable(this.profileName);
     }
@@ -160,6 +208,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -171,6 +223,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaItemTypeLink")
     private @Nullable Output<String> schemaItemTypeLink;
 
+    /**
+     * @return The schema org link. This helps ACI identify and suggest semantic models.
+     * 
+     */
     public Optional<Output<String>> schemaItemTypeLink() {
         return Optional.ofNullable(this.schemaItemTypeLink);
     }
@@ -182,6 +238,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="smallImage")
     private @Nullable Output<String> smallImage;
 
+    /**
+     * @return Small Image associated with the Property or EntityType.
+     * 
+     */
     public Optional<Output<String>> smallImage() {
         return Optional.ofNullable(this.smallImage);
     }
@@ -193,6 +253,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="strongIds")
     private @Nullable Output<List<StrongIdArgs>> strongIds;
 
+    /**
+     * @return The strong IDs.
+     * 
+     */
     public Optional<Output<List<StrongIdArgs>>> strongIds() {
         return Optional.ofNullable(this.strongIds);
     }
@@ -204,6 +268,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timestampFieldName")
     private @Nullable Output<String> timestampFieldName;
 
+    /**
+     * @return The timestamp property name. Represents the time when the interaction or profile update happened.
+     * 
+     */
     public Optional<Output<String>> timestampFieldName() {
         return Optional.ofNullable(this.timestampFieldName);
     }
@@ -215,6 +283,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="typeName")
     private @Nullable Output<String> typeName;
 
+    /**
+     * @return The name of the entity.
+     * 
+     */
     public Optional<Output<String>> typeName() {
         return Optional.ofNullable(this.typeName);
     }
@@ -260,172 +332,400 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiEntitySetName The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiEntitySetName(@Nullable Output<String> apiEntitySetName) {
             $.apiEntitySetName = apiEntitySetName;
             return this;
         }
 
+        /**
+         * @param apiEntitySetName The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiEntitySetName(String apiEntitySetName) {
             return apiEntitySetName(Output.of(apiEntitySetName));
         }
 
+        /**
+         * @param attributes The attributes for the Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Map<String,List<String>>> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The attributes for the Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Map<String,List<String>> attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param description Localized descriptions for the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Localized descriptions for the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Localized display names for the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Localized display names for the property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param entityType Type of entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(@Nullable Output<EntityTypes> entityType) {
             $.entityType = entityType;
             return this;
         }
 
+        /**
+         * @param entityType Type of entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityType(EntityTypes entityType) {
             return entityType(Output.of(entityType));
         }
 
+        /**
+         * @param fields The properties of the Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
             $.fields = fields;
             return this;
         }
 
+        /**
+         * @param fields The properties of the Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(List<PropertyDefinitionArgs> fields) {
             return fields(Output.of(fields));
         }
 
+        /**
+         * @param fields The properties of the Profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fields(PropertyDefinitionArgs... fields) {
             return fields(List.of(fields));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param instancesCount The instance count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancesCount(@Nullable Output<Integer> instancesCount) {
             $.instancesCount = instancesCount;
             return this;
         }
 
+        /**
+         * @param instancesCount The instance count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instancesCount(Integer instancesCount) {
             return instancesCount(Output.of(instancesCount));
         }
 
+        /**
+         * @param largeImage Large Image associated with the Property or EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeImage(@Nullable Output<String> largeImage) {
             $.largeImage = largeImage;
             return this;
         }
 
+        /**
+         * @param largeImage Large Image associated with the Property or EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder largeImage(String largeImage) {
             return largeImage(Output.of(largeImage));
         }
 
+        /**
+         * @param localizedAttributes Any custom localized attributes for the Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localizedAttributes(@Nullable Output<Map<String,Map<String,String>>> localizedAttributes) {
             $.localizedAttributes = localizedAttributes;
             return this;
         }
 
+        /**
+         * @param localizedAttributes Any custom localized attributes for the Type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localizedAttributes(Map<String,Map<String,String>> localizedAttributes) {
             return localizedAttributes(Output.of(localizedAttributes));
         }
 
+        /**
+         * @param mediumImage Medium Image associated with the Property or EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediumImage(@Nullable Output<String> mediumImage) {
             $.mediumImage = mediumImage;
             return this;
         }
 
+        /**
+         * @param mediumImage Medium Image associated with the Property or EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediumImage(String mediumImage) {
             return mediumImage(Output.of(mediumImage));
         }
 
+        /**
+         * @param profileName The name of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(@Nullable Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName The name of the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaItemTypeLink The schema org link. This helps ACI identify and suggest semantic models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaItemTypeLink(@Nullable Output<String> schemaItemTypeLink) {
             $.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
 
+        /**
+         * @param schemaItemTypeLink The schema org link. This helps ACI identify and suggest semantic models.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaItemTypeLink(String schemaItemTypeLink) {
             return schemaItemTypeLink(Output.of(schemaItemTypeLink));
         }
 
+        /**
+         * @param smallImage Small Image associated with the Property or EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smallImage(@Nullable Output<String> smallImage) {
             $.smallImage = smallImage;
             return this;
         }
 
+        /**
+         * @param smallImage Small Image associated with the Property or EntityType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder smallImage(String smallImage) {
             return smallImage(Output.of(smallImage));
         }
 
+        /**
+         * @param strongIds The strong IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongIds(@Nullable Output<List<StrongIdArgs>> strongIds) {
             $.strongIds = strongIds;
             return this;
         }
 
+        /**
+         * @param strongIds The strong IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongIds(List<StrongIdArgs> strongIds) {
             return strongIds(Output.of(strongIds));
         }
 
+        /**
+         * @param strongIds The strong IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongIds(StrongIdArgs... strongIds) {
             return strongIds(List.of(strongIds));
         }
 
+        /**
+         * @param timestampFieldName The timestamp property name. Represents the time when the interaction or profile update happened.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampFieldName(@Nullable Output<String> timestampFieldName) {
             $.timestampFieldName = timestampFieldName;
             return this;
         }
 
+        /**
+         * @param timestampFieldName The timestamp property name. Represents the time when the interaction or profile update happened.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestampFieldName(String timestampFieldName) {
             return timestampFieldName(Output.of(timestampFieldName));
         }
 
+        /**
+         * @param typeName The name of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(@Nullable Output<String> typeName) {
             $.typeName = typeName;
             return this;
         }
 
+        /**
+         * @param typeName The name of the entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder typeName(String typeName) {
             return typeName(Output.of(typeName));
         }

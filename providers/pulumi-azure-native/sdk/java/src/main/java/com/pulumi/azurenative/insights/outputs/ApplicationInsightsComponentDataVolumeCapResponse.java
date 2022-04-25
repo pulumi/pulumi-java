@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationInsightsComponentDataVolumeCapResponse {
-    /**
-     * Daily data volume cap in GB.
-     * 
-     */
+        /**
+         * @return Daily data volume cap in GB.
+         * 
+         */
     private final @Nullable Double cap;
-    /**
-     * Maximum daily data volume cap that the user can set for this component.
-     * 
-     */
+        /**
+         * @return Maximum daily data volume cap that the user can set for this component.
+         * 
+         */
     private final Double maxHistoryCap;
-    /**
-     * Daily data volume cap UTC reset hour.
-     * 
-     */
+        /**
+         * @return Daily data volume cap UTC reset hour.
+         * 
+         */
     private final Integer resetTime;
-    /**
-     * Do not send a notification email when the daily data volume cap is met.
-     * 
-     */
+        /**
+         * @return Do not send a notification email when the daily data volume cap is met.
+         * 
+         */
     private final @Nullable Boolean stopSendNotificationWhenHitCap;
-    /**
-     * Reserved, not used for now.
-     * 
-     */
+        /**
+         * @return Reserved, not used for now.
+         * 
+         */
     private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
-    /**
-     * Reserved, not used for now.
-     * 
-     */
+        /**
+         * @return Reserved, not used for now.
+         * 
+         */
     private final @Nullable Integer warningThreshold;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
     }
 
     /**
-     * Daily data volume cap in GB.
+     * @return Daily data volume cap in GB.
      * 
-    */
+     */
     public Optional<Double> cap() {
         return Optional.ofNullable(this.cap);
     }
     /**
-     * Maximum daily data volume cap that the user can set for this component.
+     * @return Maximum daily data volume cap that the user can set for this component.
      * 
-    */
+     */
     public Double maxHistoryCap() {
         return this.maxHistoryCap;
     }
     /**
-     * Daily data volume cap UTC reset hour.
+     * @return Daily data volume cap UTC reset hour.
      * 
-    */
+     */
     public Integer resetTime() {
         return this.resetTime;
     }
     /**
-     * Do not send a notification email when the daily data volume cap is met.
+     * @return Do not send a notification email when the daily data volume cap is met.
      * 
-    */
+     */
     public Optional<Boolean> stopSendNotificationWhenHitCap() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
     /**
-     * Reserved, not used for now.
+     * @return Reserved, not used for now.
      * 
-    */
+     */
     public Optional<Boolean> stopSendNotificationWhenHitThreshold() {
         return Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
     /**
-     * Reserved, not used for now.
+     * @return Reserved, not used for now.
      * 
-    */
+     */
     public Optional<Integer> warningThreshold() {
         return Optional.ofNullable(this.warningThreshold);
     }

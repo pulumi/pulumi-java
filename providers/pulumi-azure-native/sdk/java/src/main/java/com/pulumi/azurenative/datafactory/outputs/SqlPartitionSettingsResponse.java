@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SqlPartitionSettingsResponse {
-    /**
-     * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionColumnName;
-    /**
-     * The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionLowerBound;
-    /**
-     * The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object partitionUpperBound;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SqlPartitionSettingsResponse {
     }
 
     /**
-     * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
+     * @return The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
     /**
-     * The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+     * @return The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
     /**
-     * The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
+     * @return The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> partitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FunctionInputResponse {
-    /**
-     * The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
-     * 
-     */
+        /**
+         * @return The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+         * 
+         */
     private final @Nullable String dataType;
-    /**
-     * A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
-     * 
-     */
+        /**
+         * @return A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+         * 
+         */
     private final @Nullable Boolean isConfigurationParameter;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class FunctionInputResponse {
     }
 
     /**
-     * The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     * @return The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
      * 
-    */
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
-     * A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+     * @return A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
      * 
-    */
+     */
     public Optional<Boolean> isConfigurationParameter() {
         return Optional.ofNullable(this.isConfigurationParameter);
     }

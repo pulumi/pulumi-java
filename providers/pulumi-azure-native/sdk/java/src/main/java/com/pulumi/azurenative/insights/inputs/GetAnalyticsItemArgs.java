@@ -21,6 +21,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The Id of a specific item defined in the Application Insights component
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -32,6 +36,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of a specific item defined in the Application Insights component
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -43,6 +51,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +66,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the Application Insights component resource.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -65,6 +81,10 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="scopePath", required=true)
     private String scopePath;
 
+    /**
+     * @return Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     * 
+     */
     public String scopePath() {
         return this.scopePath;
     }
@@ -97,26 +117,56 @@ public final class GetAnalyticsItemArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetAnalyticsItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The Id of a specific item defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of a specific item defined in the Application Insights component
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the Application Insights component resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param scopePath Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopePath(String scopePath) {
             $.scopePath = scopePath;
             return this;

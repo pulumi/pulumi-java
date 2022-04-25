@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContactDetailsResponse {
-    /**
-     * Contact name of the person.
-     * 
-     */
+        /**
+         * @return Contact name of the person.
+         * 
+         */
     private final String contactName;
-    /**
-     * List of Email-ids to be notified about job progress.
-     * 
-     */
+        /**
+         * @return List of Email-ids to be notified about job progress.
+         * 
+         */
     private final List<String> emailList;
-    /**
-     * Mobile number of the contact person.
-     * 
-     */
+        /**
+         * @return Mobile number of the contact person.
+         * 
+         */
     private final @Nullable String mobile;
-    /**
-     * Phone number of the contact person.
-     * 
-     */
+        /**
+         * @return Phone number of the contact person.
+         * 
+         */
     private final String phone;
-    /**
-     * Phone extension number of the contact person.
-     * 
-     */
+        /**
+         * @return Phone extension number of the contact person.
+         * 
+         */
     private final @Nullable String phoneExtension;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ContactDetailsResponse {
     }
 
     /**
-     * Contact name of the person.
+     * @return Contact name of the person.
      * 
-    */
+     */
     public String contactName() {
         return this.contactName;
     }
     /**
-     * List of Email-ids to be notified about job progress.
+     * @return List of Email-ids to be notified about job progress.
      * 
-    */
+     */
     public List<String> emailList() {
         return this.emailList;
     }
     /**
-     * Mobile number of the contact person.
+     * @return Mobile number of the contact person.
      * 
-    */
+     */
     public Optional<String> mobile() {
         return Optional.ofNullable(this.mobile);
     }
     /**
-     * Phone number of the contact person.
+     * @return Phone number of the contact person.
      * 
-    */
+     */
     public String phone() {
         return this.phone;
     }
     /**
-     * Phone extension number of the contact person.
+     * @return Phone extension number of the contact person.
      * 
-    */
+     */
     public Optional<String> phoneExtension() {
         return Optional.ofNullable(this.phoneExtension);
     }

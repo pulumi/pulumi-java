@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccountResult {
-    /**
-     * The ID of the resource
-     * 
-     */
+        /**
+         * @return The ID of the resource
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource
-     * 
-     */
+        /**
+         * @return The location of the resource
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The SKU of the resource
-     * 
-     */
+        /**
+         * @return The SKU of the resource
+         * 
+         */
     private final SKUResponse sku;
-    /**
-     * The tags of the resource
-     * 
-     */
+        /**
+         * @return The tags of the resource
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The fully qualified type of the resource
-     * 
-     */
+        /**
+         * @return The fully qualified type of the resource
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetAccountResult {
     }
 
     /**
-     * The ID of the resource
+     * @return The ID of the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource
+     * @return The location of the resource
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The SKU of the resource
+     * @return The SKU of the resource
      * 
-    */
+     */
     public SKUResponse sku() {
         return this.sku;
     }
     /**
-     * The tags of the resource
+     * @return The tags of the resource
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The fully qualified type of the resource
+     * @return The fully qualified type of the resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

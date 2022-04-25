@@ -26,6 +26,10 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
     @Import(name="dependencyName")
     private @Nullable Output<String> dependencyName;
 
+    /**
+     * @return Name of package dependency.
+     * 
+     */
     public Optional<Output<String>> dependencyName() {
         return Optional.ofNullable(this.dependencyName);
     }
@@ -37,6 +41,10 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
     @Import(name="minVersion")
     private @Nullable Output<String> minVersion;
 
+    /**
+     * @return Dependency version required.
+     * 
+     */
     public Optional<Output<String>> minVersion() {
         return Optional.ofNullable(this.minVersion);
     }
@@ -48,6 +56,10 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
     @Import(name="publisher")
     private @Nullable Output<String> publisher;
 
+    /**
+     * @return Name of dependency publisher.
+     * 
+     */
     public Optional<Output<String>> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -78,29 +90,65 @@ public final class MsixPackageDependenciesArgs extends com.pulumi.resources.Reso
             $ = new MsixPackageDependenciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependencyName Name of package dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyName(@Nullable Output<String> dependencyName) {
             $.dependencyName = dependencyName;
             return this;
         }
 
+        /**
+         * @param dependencyName Name of package dependency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyName(String dependencyName) {
             return dependencyName(Output.of(dependencyName));
         }
 
+        /**
+         * @param minVersion Dependency version required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minVersion(@Nullable Output<String> minVersion) {
             $.minVersion = minVersion;
             return this;
         }
 
+        /**
+         * @param minVersion Dependency version required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minVersion(String minVersion) {
             return minVersion(Output.of(minVersion));
         }
 
+        /**
+         * @param publisher Name of dependency publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable Output<String> publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param publisher Name of dependency publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             return publisher(Output.of(publisher));
         }

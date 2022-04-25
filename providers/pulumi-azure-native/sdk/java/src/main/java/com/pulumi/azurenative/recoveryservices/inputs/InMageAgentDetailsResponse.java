@@ -25,6 +25,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="agentExpiryDate")
     private @Nullable String agentExpiryDate;
 
+    /**
+     * @return Agent expiry date.
+     * 
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
@@ -36,6 +40,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="agentUpdateStatus")
     private @Nullable String agentUpdateStatus;
 
+    /**
+     * @return A value indicating whether installed agent needs to be updated.
+     * 
+     */
     public Optional<String> agentUpdateStatus() {
         return Optional.ofNullable(this.agentUpdateStatus);
     }
@@ -47,6 +55,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The agent version.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -58,6 +70,10 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="postUpdateRebootStatus")
     private @Nullable String postUpdateRebootStatus;
 
+    /**
+     * @return A value indicating whether reboot is required after update is applied.
+     * 
+     */
     public Optional<String> postUpdateRebootStatus() {
         return Optional.ofNullable(this.postUpdateRebootStatus);
     }
@@ -89,21 +105,45 @@ public final class InMageAgentDetailsResponse extends com.pulumi.resources.Invok
             $ = new InMageAgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentExpiryDate Agent expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             $.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
+        /**
+         * @param agentUpdateStatus A value indicating whether installed agent needs to be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentUpdateStatus(@Nullable String agentUpdateStatus) {
             $.agentUpdateStatus = agentUpdateStatus;
             return this;
         }
 
+        /**
+         * @param agentVersion The agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param postUpdateRebootStatus A value indicating whether reboot is required after update is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postUpdateRebootStatus(@Nullable String postUpdateRebootStatus) {
             $.postUpdateRebootStatus = postUpdateRebootStatus;
             return this;

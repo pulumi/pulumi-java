@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SiteAgentPropertiesResponse {
-    /**
-     * ID of the agent.
-     * 
-     */
+        /**
+         * @return ID of the agent.
+         * 
+         */
     private final String id;
-    /**
-     * Key vault ARM Id.
-     * 
-     */
+        /**
+         * @return Key vault ARM Id.
+         * 
+         */
     private final @Nullable String keyVaultId;
-    /**
-     * Key vault URI.
-     * 
-     */
+        /**
+         * @return Key vault URI.
+         * 
+         */
     private final @Nullable String keyVaultUri;
-    /**
-     * Last heartbeat time of the agent in UTC.
-     * 
-     */
+        /**
+         * @return Last heartbeat time of the agent in UTC.
+         * 
+         */
     private final String lastHeartBeatUtc;
-    /**
-     * Version of the agent.
-     * 
-     */
+        /**
+         * @return Version of the agent.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class SiteAgentPropertiesResponse {
     }
 
     /**
-     * ID of the agent.
+     * @return ID of the agent.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Key vault ARM Id.
+     * @return Key vault ARM Id.
      * 
-    */
+     */
     public Optional<String> keyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
     /**
-     * Key vault URI.
+     * @return Key vault URI.
      * 
-    */
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
-     * Last heartbeat time of the agent in UTC.
+     * @return Last heartbeat time of the agent in UTC.
      * 
-    */
+     */
     public String lastHeartBeatUtc() {
         return this.lastHeartBeatUtc;
     }
     /**
-     * Version of the agent.
+     * @return Version of the agent.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

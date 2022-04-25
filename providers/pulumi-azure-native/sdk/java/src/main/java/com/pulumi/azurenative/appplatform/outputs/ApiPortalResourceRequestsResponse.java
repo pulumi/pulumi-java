@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApiPortalResourceRequestsResponse {
-    /**
-     * Cpu allocated to each API portal instance
-     * 
-     */
+        /**
+         * @return Cpu allocated to each API portal instance
+         * 
+         */
     private final String cpu;
-    /**
-     * Memory allocated to each API portal instance
-     * 
-     */
+        /**
+         * @return Memory allocated to each API portal instance
+         * 
+         */
     private final String memory;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApiPortalResourceRequestsResponse {
     }
 
     /**
-     * Cpu allocated to each API portal instance
+     * @return Cpu allocated to each API portal instance
      * 
-    */
+     */
     public String cpu() {
         return this.cpu;
     }
     /**
-     * Memory allocated to each API portal instance
+     * @return Memory allocated to each API portal instance
      * 
-    */
+     */
     public String memory() {
         return this.memory;
     }

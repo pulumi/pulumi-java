@@ -12,66 +12,66 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReadOnlyFollowingDatabaseResult {
-    /**
-     * The name of the attached database configuration cluster
-     * 
-     */
+        /**
+         * @return The name of the attached database configuration cluster
+         * 
+         */
     private final String attachedDatabaseConfigurationName;
-    /**
-     * The time the data should be kept in cache for fast queries in TimeSpan.
-     * 
-     */
+        /**
+         * @return The time the data should be kept in cache for fast queries in TimeSpan.
+         * 
+         */
     private final @Nullable String hotCachePeriod;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Kind of the database
-     * Expected value is &#39;ReadOnlyFollowing&#39;.
-     * 
-     */
+        /**
+         * @return Kind of the database
+         * Expected value is &#39;ReadOnlyFollowing&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * The name of the leader cluster
-     * 
-     */
+        /**
+         * @return The name of the leader cluster
+         * 
+         */
     private final String leaderClusterResourceId;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The principals modification kind of the database
-     * 
-     */
+        /**
+         * @return The principals modification kind of the database
+         * 
+         */
     private final String principalsModificationKind;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The time the data should be kept before it stops being accessible to queries in TimeSpan.
-     * 
-     */
+        /**
+         * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
+         * 
+         */
     private final String softDeletePeriod;
-    /**
-     * The statistics of the database.
-     * 
-     */
+        /**
+         * @return The statistics of the database.
+         * 
+         */
     private final DatabaseStatisticsResponse statistics;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -103,87 +103,87 @@ public final class GetReadOnlyFollowingDatabaseResult {
     }
 
     /**
-     * The name of the attached database configuration cluster
+     * @return The name of the attached database configuration cluster
      * 
-    */
+     */
     public String attachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
     }
     /**
-     * The time the data should be kept in cache for fast queries in TimeSpan.
+     * @return The time the data should be kept in cache for fast queries in TimeSpan.
      * 
-    */
+     */
     public Optional<String> hotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of the database
+     * @return Kind of the database
      * Expected value is &#39;ReadOnlyFollowing&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The name of the leader cluster
+     * @return The name of the leader cluster
      * 
-    */
+     */
     public String leaderClusterResourceId() {
         return this.leaderClusterResourceId;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principals modification kind of the database
+     * @return The principals modification kind of the database
      * 
-    */
+     */
     public String principalsModificationKind() {
         return this.principalsModificationKind;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The time the data should be kept before it stops being accessible to queries in TimeSpan.
+     * @return The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
-    */
+     */
     public String softDeletePeriod() {
         return this.softDeletePeriod;
     }
     /**
-     * The statistics of the database.
+     * @return The statistics of the database.
      * 
-    */
+     */
     public DatabaseStatisticsResponse statistics() {
         return this.statistics;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

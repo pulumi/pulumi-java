@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TimelineResultsMetadataResponse {
-    /**
-     * timeline aggregation per kind
-     * 
-     */
+        /**
+         * @return timeline aggregation per kind
+         * 
+         */
     private final List<TimelineAggregationResponse> aggregations;
-    /**
-     * information about the failure queries
-     * 
-     */
+        /**
+         * @return information about the failure queries
+         * 
+         */
     private final @Nullable List<TimelineErrorResponse> errors;
-    /**
-     * the total items found for the timeline request
-     * 
-     */
+        /**
+         * @return the total items found for the timeline request
+         * 
+         */
     private final Integer totalCount;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class TimelineResultsMetadataResponse {
     }
 
     /**
-     * timeline aggregation per kind
+     * @return timeline aggregation per kind
      * 
-    */
+     */
     public List<TimelineAggregationResponse> aggregations() {
         return this.aggregations;
     }
     /**
-     * information about the failure queries
+     * @return information about the failure queries
      * 
-    */
+     */
     public List<TimelineErrorResponse> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
-     * the total items found for the timeline request
+     * @return the total items found for the timeline request
      * 
-    */
+     */
     public Integer totalCount() {
         return this.totalCount;
     }

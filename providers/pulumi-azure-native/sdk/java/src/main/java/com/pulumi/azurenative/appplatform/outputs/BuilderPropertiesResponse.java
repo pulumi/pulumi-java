@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BuilderPropertiesResponse {
-    /**
-     * Builder buildpack groups.
-     * 
-     */
+        /**
+         * @return Builder buildpack groups.
+         * 
+         */
     private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
-    /**
-     * Builder provision status.
-     * 
-     */
+        /**
+         * @return Builder provision status.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Builder cluster stack property.
-     * 
-     */
+        /**
+         * @return Builder cluster stack property.
+         * 
+         */
     private final @Nullable StackPropertiesResponse stack;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class BuilderPropertiesResponse {
     }
 
     /**
-     * Builder buildpack groups.
+     * @return Builder buildpack groups.
      * 
-    */
+     */
     public List<BuildpacksGroupPropertiesResponse> buildpackGroups() {
         return this.buildpackGroups == null ? List.of() : this.buildpackGroups;
     }
     /**
-     * Builder provision status.
+     * @return Builder provision status.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Builder cluster stack property.
+     * @return Builder cluster stack property.
      * 
-    */
+     */
     public Optional<StackPropertiesResponse> stack() {
         return Optional.ofNullable(this.stack);
     }

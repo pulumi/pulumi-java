@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConfigurationInfoResponse {
-    /**
-     * Name of the configuration.
-     * 
-     */
+        /**
+         * @return Name of the configuration.
+         * 
+         */
     private final String name;
-    /**
-     * Version of the configuration.
-     * 
-     */
+        /**
+         * @return Version of the configuration.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ConfigurationInfoResponse {
     }
 
     /**
-     * Name of the configuration.
+     * @return Name of the configuration.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Version of the configuration.
+     * @return Version of the configuration.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

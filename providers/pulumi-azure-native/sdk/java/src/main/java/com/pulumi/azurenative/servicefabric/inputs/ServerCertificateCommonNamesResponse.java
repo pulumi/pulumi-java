@@ -27,6 +27,10 @@ public final class ServerCertificateCommonNamesResponse extends com.pulumi.resou
     @Import(name="commonNames")
     private @Nullable List<ServerCertificateCommonNameResponse> commonNames;
 
+    /**
+     * @return The list of server certificates referenced by common name that are used to secure the cluster.
+     * 
+     */
     public Optional<List<ServerCertificateCommonNameResponse>> commonNames() {
         return Optional.ofNullable(this.commonNames);
     }
@@ -38,6 +42,10 @@ public final class ServerCertificateCommonNamesResponse extends com.pulumi.resou
     @Import(name="x509StoreName")
     private @Nullable String x509StoreName;
 
+    /**
+     * @return The local certificate store location.
+     * 
+     */
     public Optional<String> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
@@ -67,15 +75,33 @@ public final class ServerCertificateCommonNamesResponse extends com.pulumi.resou
             $ = new ServerCertificateCommonNamesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonNames The list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonNames(@Nullable List<ServerCertificateCommonNameResponse> commonNames) {
             $.commonNames = commonNames;
             return this;
         }
 
+        /**
+         * @param commonNames The list of server certificates referenced by common name that are used to secure the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonNames(ServerCertificateCommonNameResponse... commonNames) {
             return commonNames(List.of(commonNames));
         }
 
+        /**
+         * @param x509StoreName The local certificate store location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509StoreName(@Nullable String x509StoreName) {
             $.x509StoreName = x509StoreName;
             return this;

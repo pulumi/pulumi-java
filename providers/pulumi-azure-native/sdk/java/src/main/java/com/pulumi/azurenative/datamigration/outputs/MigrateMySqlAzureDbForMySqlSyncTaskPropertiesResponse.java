@@ -23,36 +23,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse {
-    /**
-     * Array of command properties.
-     * 
-     */
+        /**
+         * @return Array of command properties.
+         * 
+         */
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
-    /**
-     * Array of errors. This is ignored if submitted.
-     * 
-     */
+        /**
+         * @return Array of errors. This is ignored if submitted.
+         * 
+         */
     private final List<ODataErrorResponse> errors;
-    /**
-     * Task input
-     * 
-     */
+        /**
+         * @return Task input
+         * 
+         */
     private final @Nullable MigrateMySqlAzureDbForMySqlSyncTaskInputResponse input;
-    /**
-     * Task output. This is ignored if submitted.
-     * 
-     */
+        /**
+         * @return Task output. This is ignored if submitted.
+         * 
+         */
     private final List<Object> output;
-    /**
-     * The state of the task. This is ignored if submitted.
-     * 
-     */
+        /**
+         * @return The state of the task. This is ignored if submitted.
+         * 
+         */
     private final String state;
-    /**
-     * Task type.
-     * Expected value is &#39;Migrate.MySql.AzureDbForMySql.Sync&#39;.
-     * 
-     */
+        /**
+         * @return Task type.
+         * Expected value is &#39;Migrate.MySql.AzureDbForMySql.Sync&#39;.
+         * 
+         */
     private final String taskType;
 
     @CustomType.Constructor
@@ -72,45 +72,45 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse {
     }
 
     /**
-     * Array of command properties.
+     * @return Array of command properties.
      * 
-    */
+     */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
     }
     /**
-     * Array of errors. This is ignored if submitted.
+     * @return Array of errors. This is ignored if submitted.
      * 
-    */
+     */
     public List<ODataErrorResponse> errors() {
         return this.errors;
     }
     /**
-     * Task input
+     * @return Task input
      * 
-    */
+     */
     public Optional<MigrateMySqlAzureDbForMySqlSyncTaskInputResponse> input() {
         return Optional.ofNullable(this.input);
     }
     /**
-     * Task output. This is ignored if submitted.
+     * @return Task output. This is ignored if submitted.
      * 
-    */
+     */
     public List<Object> output() {
         return this.output;
     }
     /**
-     * The state of the task. This is ignored if submitted.
+     * @return The state of the task. This is ignored if submitted.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Task type.
+     * @return Task type.
      * Expected value is &#39;Migrate.MySql.AzureDbForMySql.Sync&#39;.
      * 
-    */
+     */
     public String taskType() {
         return this.taskType;
     }

@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SystemAssignedServiceIdentityResponse {
-    /**
-     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Type of managed service identity (either system assigned, or none).
-     * 
-     */
+        /**
+         * @return Type of managed service identity (either system assigned, or none).
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class SystemAssignedServiceIdentityResponse {
     }
 
     /**
-     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Type of managed service identity (either system assigned, or none).
+     * @return Type of managed service identity (either system assigned, or none).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

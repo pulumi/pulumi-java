@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PropertiesResponseEncryption {
-    /**
-     * Key vault properties.
-     * 
-     */
+        /**
+         * @return Key vault properties.
+         * 
+         */
     private final @Nullable KeyVaultPropertiesResponse keyVault;
-    /**
-     * The state of onboarding, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The state of onboarding, which only appears in the response.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class PropertiesResponseEncryption {
     }
 
     /**
-     * Key vault properties.
+     * @return Key vault properties.
      * 
-    */
+     */
     public Optional<KeyVaultPropertiesResponse> keyVault() {
         return Optional.ofNullable(this.keyVault);
     }
     /**
-     * The state of onboarding, which only appears in the response.
+     * @return The state of onboarding, which only appears in the response.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

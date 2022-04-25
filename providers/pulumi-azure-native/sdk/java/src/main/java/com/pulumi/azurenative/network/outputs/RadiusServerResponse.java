@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RadiusServerResponse {
-    /**
-     * The address of this radius server.
-     * 
-     */
+        /**
+         * @return The address of this radius server.
+         * 
+         */
     private final String radiusServerAddress;
-    /**
-     * The initial score assigned to this radius server.
-     * 
-     */
+        /**
+         * @return The initial score assigned to this radius server.
+         * 
+         */
     private final @Nullable Double radiusServerScore;
-    /**
-     * The secret used for this radius server.
-     * 
-     */
+        /**
+         * @return The secret used for this radius server.
+         * 
+         */
     private final @Nullable String radiusServerSecret;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class RadiusServerResponse {
     }
 
     /**
-     * The address of this radius server.
+     * @return The address of this radius server.
      * 
-    */
+     */
     public String radiusServerAddress() {
         return this.radiusServerAddress;
     }
     /**
-     * The initial score assigned to this radius server.
+     * @return The initial score assigned to this radius server.
      * 
-    */
+     */
     public Optional<Double> radiusServerScore() {
         return Optional.ofNullable(this.radiusServerScore);
     }
     /**
-     * The secret used for this radius server.
+     * @return The secret used for this radius server.
      * 
-    */
+     */
     public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }

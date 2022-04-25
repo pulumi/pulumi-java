@@ -29,6 +29,10 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
     @Import(name="diskEncryptionSet")
     private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
+    /**
+     * @return Specifies the customer managed disk encryption set resource id for the managed disk.
+     * 
+     */
     public Optional<Output<DiskEncryptionSetParametersArgs>> diskEncryptionSet() {
         return Optional.ofNullable(this.diskEncryptionSet);
     }
@@ -40,6 +44,10 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
     @Import(name="storageAccountType")
     private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
+    /**
+     * @return Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+     * 
+     */
     public Optional<Output<Either<String,StorageAccountTypes>>> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -81,37 +93,85 @@ public final class ManagedDiskParametersArgs extends com.pulumi.resources.Resour
             $ = new ManagedDiskParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSet Specifies the customer managed disk encryption set resource id for the managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
             $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSet Specifies the customer managed disk encryption set resource id for the managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSet(DiskEncryptionSetParametersArgs diskEncryptionSet) {
             return diskEncryptionSet(Output.of(diskEncryptionSet));
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(Either<String,StorageAccountTypes> storageAccountType) {
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(String storageAccountType) {
             return storageAccountType(Either.ofLeft(storageAccountType));
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(StorageAccountTypes storageAccountType) {
             return storageAccountType(Either.ofRight(storageAccountType));
         }

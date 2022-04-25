@@ -27,6 +27,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="filesNotSyncingErrors", required=true)
     private List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
 
+    /**
+     * @return Array of per-item errors coming from the last sync session.
+     * 
+     */
     public List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors() {
         return this.filesNotSyncingErrors;
     }
@@ -38,6 +42,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="lastSyncMode", required=true)
     private String lastSyncMode;
 
+    /**
+     * @return Sync mode
+     * 
+     */
     public String lastSyncMode() {
         return this.lastSyncMode;
     }
@@ -49,6 +57,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="lastSyncPerItemErrorCount", required=true)
     private Double lastSyncPerItemErrorCount;
 
+    /**
+     * @return Last sync per item error count.
+     * 
+     */
     public Double lastSyncPerItemErrorCount() {
         return this.lastSyncPerItemErrorCount;
     }
@@ -60,6 +72,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="lastSyncResult", required=true)
     private Integer lastSyncResult;
 
+    /**
+     * @return Last sync result (HResult)
+     * 
+     */
     public Integer lastSyncResult() {
         return this.lastSyncResult;
     }
@@ -71,6 +87,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="lastSyncSuccessTimestamp", required=true)
     private String lastSyncSuccessTimestamp;
 
+    /**
+     * @return Last sync success timestamp
+     * 
+     */
     public String lastSyncSuccessTimestamp() {
         return this.lastSyncSuccessTimestamp;
     }
@@ -82,6 +102,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="lastSyncTimestamp", required=true)
     private String lastSyncTimestamp;
 
+    /**
+     * @return Last sync timestamp
+     * 
+     */
     public String lastSyncTimestamp() {
         return this.lastSyncTimestamp;
     }
@@ -93,6 +117,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="persistentFilesNotSyncingCount", required=true)
     private Double persistentFilesNotSyncingCount;
 
+    /**
+     * @return Count of persistent files not syncing.
+     * 
+     */
     public Double persistentFilesNotSyncingCount() {
         return this.persistentFilesNotSyncingCount;
     }
@@ -104,6 +132,10 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
     @Import(name="transientFilesNotSyncingCount", required=true)
     private Double transientFilesNotSyncingCount;
 
+    /**
+     * @return Count of transient files not syncing.
+     * 
+     */
     public Double transientFilesNotSyncingCount() {
         return this.transientFilesNotSyncingCount;
     }
@@ -139,45 +171,99 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
             $ = new ServerEndpointSyncSessionStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filesNotSyncingErrors Array of per-item errors coming from the last sync session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesNotSyncingErrors(List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors) {
             $.filesNotSyncingErrors = filesNotSyncingErrors;
             return this;
         }
 
+        /**
+         * @param filesNotSyncingErrors Array of per-item errors coming from the last sync session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filesNotSyncingErrors(ServerEndpointFilesNotSyncingErrorResponse... filesNotSyncingErrors) {
             return filesNotSyncingErrors(List.of(filesNotSyncingErrors));
         }
 
+        /**
+         * @param lastSyncMode Sync mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncMode(String lastSyncMode) {
             $.lastSyncMode = lastSyncMode;
             return this;
         }
 
+        /**
+         * @param lastSyncPerItemErrorCount Last sync per item error count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncPerItemErrorCount(Double lastSyncPerItemErrorCount) {
             $.lastSyncPerItemErrorCount = lastSyncPerItemErrorCount;
             return this;
         }
 
+        /**
+         * @param lastSyncResult Last sync result (HResult)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncResult(Integer lastSyncResult) {
             $.lastSyncResult = lastSyncResult;
             return this;
         }
 
+        /**
+         * @param lastSyncSuccessTimestamp Last sync success timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncSuccessTimestamp(String lastSyncSuccessTimestamp) {
             $.lastSyncSuccessTimestamp = lastSyncSuccessTimestamp;
             return this;
         }
 
+        /**
+         * @param lastSyncTimestamp Last sync timestamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSyncTimestamp(String lastSyncTimestamp) {
             $.lastSyncTimestamp = lastSyncTimestamp;
             return this;
         }
 
+        /**
+         * @param persistentFilesNotSyncingCount Count of persistent files not syncing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentFilesNotSyncingCount(Double persistentFilesNotSyncingCount) {
             $.persistentFilesNotSyncingCount = persistentFilesNotSyncingCount;
             return this;
         }
 
+        /**
+         * @param transientFilesNotSyncingCount Count of transient files not syncing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transientFilesNotSyncingCount(Double transientFilesNotSyncingCount) {
             $.transientFilesNotSyncingCount = transientFilesNotSyncingCount;
             return this;

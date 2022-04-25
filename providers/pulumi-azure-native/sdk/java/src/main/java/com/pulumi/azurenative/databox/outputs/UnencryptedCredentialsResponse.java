@@ -13,15 +13,15 @@ import java.util.Objects;
 
 @CustomType
 public final class UnencryptedCredentialsResponse {
-    /**
-     * Name of the job.
-     * 
-     */
+        /**
+         * @return Name of the job.
+         * 
+         */
     private final String jobName;
-    /**
-     * Secrets related to this job.
-     * 
-     */
+        /**
+         * @return Secrets related to this job.
+         * 
+         */
     private final Object jobSecrets;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class UnencryptedCredentialsResponse {
     }
 
     /**
-     * Name of the job.
+     * @return Name of the job.
      * 
-    */
+     */
     public String jobName() {
         return this.jobName;
     }
     /**
-     * Secrets related to this job.
+     * @return Secrets related to this job.
      * 
-    */
+     */
     public Object jobSecrets() {
         return this.jobSecrets;
     }

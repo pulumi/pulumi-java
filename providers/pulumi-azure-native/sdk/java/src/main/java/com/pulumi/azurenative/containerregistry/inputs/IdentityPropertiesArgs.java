@@ -29,6 +29,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return The principal ID of resource identity.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -40,6 +44,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenant ID of resource.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -51,6 +59,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<ResourceIdentityType> type;
 
+    /**
+     * @return The identity type.
+     * 
+     */
     public Optional<Output<ResourceIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,6 +77,13 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the resource. The user identity
+     * dictionary key references will be ARM resource ids in the form:
+     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+     *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Output<Map<String,UserIdentityPropertiesArgs>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -96,38 +115,92 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new IdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal ID of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal ID of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param tenantId The tenant ID of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant ID of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The identity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity
+         * dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+         *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity
+         * dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+         *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

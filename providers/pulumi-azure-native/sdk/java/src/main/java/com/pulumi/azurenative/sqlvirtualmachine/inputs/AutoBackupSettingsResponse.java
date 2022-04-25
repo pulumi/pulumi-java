@@ -27,6 +27,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="backupScheduleType")
     private @Nullable String backupScheduleType;
 
+    /**
+     * @return Backup schedule type.
+     * 
+     */
     public Optional<String> backupScheduleType() {
         return Optional.ofNullable(this.backupScheduleType);
     }
@@ -38,6 +42,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="backupSystemDbs")
     private @Nullable Boolean backupSystemDbs;
 
+    /**
+     * @return Include or exclude system databases from auto backup.
+     * 
+     */
     public Optional<Boolean> backupSystemDbs() {
         return Optional.ofNullable(this.backupSystemDbs);
     }
@@ -49,6 +57,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="enable")
     private @Nullable Boolean enable;
 
+    /**
+     * @return Enable or disable autobackup on SQL virtual machine.
+     * 
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -60,6 +72,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="enableEncryption")
     private @Nullable Boolean enableEncryption;
 
+    /**
+     * @return Enable or disable encryption for backup on SQL virtual machine.
+     * 
+     */
     public Optional<Boolean> enableEncryption() {
         return Optional.ofNullable(this.enableEncryption);
     }
@@ -71,6 +87,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="fullBackupFrequency")
     private @Nullable String fullBackupFrequency;
 
+    /**
+     * @return Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+     * 
+     */
     public Optional<String> fullBackupFrequency() {
         return Optional.ofNullable(this.fullBackupFrequency);
     }
@@ -82,6 +102,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="fullBackupStartTime")
     private @Nullable Integer fullBackupStartTime;
 
+    /**
+     * @return Start time of a given day during which full backups can take place. 0-23 hours.
+     * 
+     */
     public Optional<Integer> fullBackupStartTime() {
         return Optional.ofNullable(this.fullBackupStartTime);
     }
@@ -93,6 +117,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="fullBackupWindowHours")
     private @Nullable Integer fullBackupWindowHours;
 
+    /**
+     * @return Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+     * 
+     */
     public Optional<Integer> fullBackupWindowHours() {
         return Optional.ofNullable(this.fullBackupWindowHours);
     }
@@ -104,6 +132,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="logBackupFrequency")
     private @Nullable Integer logBackupFrequency;
 
+    /**
+     * @return Frequency of log backups. 5-60 minutes.
+     * 
+     */
     public Optional<Integer> logBackupFrequency() {
         return Optional.ofNullable(this.logBackupFrequency);
     }
@@ -115,6 +147,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="retentionPeriod")
     private @Nullable Integer retentionPeriod;
 
+    /**
+     * @return Retention period of backup: 1-30 days.
+     * 
+     */
     public Optional<Integer> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
@@ -126,6 +162,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="storageAccountUrl")
     private @Nullable String storageAccountUrl;
 
+    /**
+     * @return Storage account url where backup will be taken to.
+     * 
+     */
     public Optional<String> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }
@@ -163,51 +203,111 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
             $ = new AutoBackupSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupScheduleType Backup schedule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupScheduleType(@Nullable String backupScheduleType) {
             $.backupScheduleType = backupScheduleType;
             return this;
         }
 
+        /**
+         * @param backupSystemDbs Include or exclude system databases from auto backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupSystemDbs(@Nullable Boolean backupSystemDbs) {
             $.backupSystemDbs = backupSystemDbs;
             return this;
         }
 
+        /**
+         * @param enable Enable or disable autobackup on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enableEncryption Enable or disable encryption for backup on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEncryption(@Nullable Boolean enableEncryption) {
             $.enableEncryption = enableEncryption;
             return this;
         }
 
+        /**
+         * @param fullBackupFrequency Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupFrequency(@Nullable String fullBackupFrequency) {
             $.fullBackupFrequency = fullBackupFrequency;
             return this;
         }
 
+        /**
+         * @param fullBackupStartTime Start time of a given day during which full backups can take place. 0-23 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupStartTime(@Nullable Integer fullBackupStartTime) {
             $.fullBackupStartTime = fullBackupStartTime;
             return this;
         }
 
+        /**
+         * @param fullBackupWindowHours Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullBackupWindowHours(@Nullable Integer fullBackupWindowHours) {
             $.fullBackupWindowHours = fullBackupWindowHours;
             return this;
         }
 
+        /**
+         * @param logBackupFrequency Frequency of log backups. 5-60 minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logBackupFrequency(@Nullable Integer logBackupFrequency) {
             $.logBackupFrequency = logBackupFrequency;
             return this;
         }
 
+        /**
+         * @param retentionPeriod Retention period of backup: 1-30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             $.retentionPeriod = retentionPeriod;
             return this;
         }
 
+        /**
+         * @param storageAccountUrl Storage account url where backup will be taken to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
             $.storageAccountUrl = storageAccountUrl;
             return this;

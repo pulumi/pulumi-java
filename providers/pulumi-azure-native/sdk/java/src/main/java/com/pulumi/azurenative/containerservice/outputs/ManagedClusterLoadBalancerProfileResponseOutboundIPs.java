@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs {
-    /**
-     * A list of public IP resources.
-     * 
-     */
+        /**
+         * @return A list of public IP resources.
+         * 
+         */
     private final @Nullable List<ResourceReferenceResponse> publicIPs;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs {
     }
 
     /**
-     * A list of public IP resources.
+     * @return A list of public IP resources.
      * 
-    */
+     */
     public List<ResourceReferenceResponse> publicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
     }

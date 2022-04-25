@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class SubResourceReadOnlyResponse {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class SubResourceReadOnlyResponse {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -27,6 +27,11 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -38,6 +43,10 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
     @Import(name="targetAvailabilitySetId")
     private @Nullable String targetAvailabilitySetId;
 
+    /**
+     * @return Gets or sets the target availability set id for virtual machines not in an availability set at source.
+     * 
+     */
     public Optional<String> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
@@ -49,6 +58,10 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
     @Import(name="targetAvailabilityZone")
     private @Nullable String targetAvailabilityZone;
 
+    /**
+     * @return Gets or sets the target availability zone.
+     * 
+     */
     public Optional<String> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
@@ -60,6 +73,10 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
     @Import(name="targetResourceName", required=true)
     private String targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
@@ -71,6 +88,10 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
     @Import(name="targetVmSize")
     private @Nullable String targetVmSize;
 
+    /**
+     * @return Gets or sets the target virtual machine size.
+     * 
+     */
     public Optional<String> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
@@ -103,26 +124,57 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
             $ = new VirtualMachineResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param targetAvailabilitySetId Gets or sets the target availability set id for virtual machines not in an availability set at source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone Gets or sets the target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetVmSize Gets or sets the target virtual machine size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(@Nullable String targetVmSize) {
             $.targetVmSize = targetVmSize;
             return this;

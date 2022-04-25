@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TimeSeriesIdPropertyResponse {
-    /**
-     * The name of the property.
-     * 
-     */
+        /**
+         * @return The name of the property.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The type of the property.
-     * 
-     */
+        /**
+         * @return The type of the property.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class TimeSeriesIdPropertyResponse {
     }
 
     /**
-     * The name of the property.
+     * @return The name of the property.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The type of the property.
+     * @return The type of the property.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

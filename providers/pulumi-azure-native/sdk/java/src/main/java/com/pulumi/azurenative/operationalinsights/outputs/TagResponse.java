@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TagResponse {
-    /**
-     * The tag name.
-     * 
-     */
+        /**
+         * @return The tag name.
+         * 
+         */
     private final String name;
-    /**
-     * The tag value.
-     * 
-     */
+        /**
+         * @return The tag value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TagResponse {
     }
 
     /**
-     * The tag name.
+     * @return The tag name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The tag value.
+     * @return The tag value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

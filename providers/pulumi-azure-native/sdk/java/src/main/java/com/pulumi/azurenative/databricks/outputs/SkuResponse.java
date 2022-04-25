@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The SKU name.
-     * 
-     */
+        /**
+         * @return The SKU name.
+         * 
+         */
     private final String name;
-    /**
-     * The SKU tier.
-     * 
-     */
+        /**
+         * @return The SKU tier.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The SKU name.
+     * @return The SKU name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The SKU tier.
+     * @return The SKU tier.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

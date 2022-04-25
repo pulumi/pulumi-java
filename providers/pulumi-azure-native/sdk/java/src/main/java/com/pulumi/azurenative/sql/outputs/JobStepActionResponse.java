@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobStepActionResponse {
-    /**
-     * The source of the action to execute.
-     * 
-     */
+        /**
+         * @return The source of the action to execute.
+         * 
+         */
     private final @Nullable String source;
-    /**
-     * Type of action being executed by the job step.
-     * 
-     */
+        /**
+         * @return Type of action being executed by the job step.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The action value, for example the text of the T-SQL script to execute.
-     * 
-     */
+        /**
+         * @return The action value, for example the text of the T-SQL script to execute.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class JobStepActionResponse {
     }
 
     /**
-     * The source of the action to execute.
+     * @return The source of the action to execute.
      * 
-    */
+     */
     public Optional<String> source() {
         return Optional.ofNullable(this.source);
     }
     /**
-     * Type of action being executed by the job step.
+     * @return Type of action being executed by the job step.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The action value, for example the text of the T-SQL script to execute.
+     * @return The action value, for example the text of the T-SQL script to execute.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

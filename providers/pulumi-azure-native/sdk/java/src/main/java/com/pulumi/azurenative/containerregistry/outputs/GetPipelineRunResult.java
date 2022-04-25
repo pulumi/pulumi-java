@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPipelineRunResult {
-    /**
-     * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
-     * 
-     */
+        /**
+         * @return How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
+         * 
+         */
     private final @Nullable String forceUpdateTag;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of a pipeline run.
-     * 
-     */
+        /**
+         * @return The provisioning state of a pipeline run.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The request parameters for a pipeline run.
-     * 
-     */
+        /**
+         * @return The request parameters for a pipeline run.
+         * 
+         */
     private final @Nullable PipelineRunRequestResponse request;
-    /**
-     * The response of a pipeline run.
-     * 
-     */
+        /**
+         * @return The response of a pipeline run.
+         * 
+         */
     private final PipelineRunResponseResponse response;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class GetPipelineRunResult {
     }
 
     /**
-     * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
+     * @return How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
      * 
-    */
+     */
     public Optional<String> forceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of a pipeline run.
+     * @return The provisioning state of a pipeline run.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The request parameters for a pipeline run.
+     * @return The request parameters for a pipeline run.
      * 
-    */
+     */
     public Optional<PipelineRunRequestResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
-     * The response of a pipeline run.
+     * @return The response of a pipeline run.
      * 
-    */
+     */
     public PipelineRunResponseResponse response() {
         return this.response;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

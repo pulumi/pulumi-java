@@ -23,6 +23,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="keyType")
     private @Nullable Either<String,KeyType> keyType;
 
+    /**
+     * @return The key type.
+     * 
+     */
     public Optional<Either<String,KeyType>> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -34,6 +38,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="notAfter")
     private @Nullable String notAfter;
 
+    /**
+     * @return The expiry time.
+     * 
+     */
     public Optional<String> notAfter() {
         return Optional.ofNullable(this.notAfter);
     }
@@ -45,6 +53,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="triggerName", required=true)
     private String triggerName;
 
+    /**
+     * @return The workflow trigger name.
+     * 
+     */
     public String triggerName() {
         return this.triggerName;
     }
@@ -67,6 +83,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="versionId", required=true)
     private String versionId;
 
+    /**
+     * @return The workflow versionId.
+     * 
+     */
     public String versionId() {
         return this.versionId;
     }
@@ -78,6 +98,10 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
     @Import(name="workflowName", required=true)
     private String workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public String workflowName() {
         return this.workflowName;
     }
@@ -111,39 +135,87 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends com.pulumi.
             $ = new ListWorkflowVersionTriggerCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(String keyType) {
             return keyType(Either.ofLeft(keyType));
         }
 
+        /**
+         * @param keyType The key type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(KeyType keyType) {
             return keyType(Either.ofRight(keyType));
         }
 
+        /**
+         * @param notAfter The expiry time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(@Nullable String notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param triggerName The workflow trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(String triggerName) {
             $.triggerName = triggerName;
             return this;
         }
 
+        /**
+         * @param versionId The workflow versionId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             $.versionId = versionId;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             $.workflowName = workflowName;
             return this;

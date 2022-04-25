@@ -11,36 +11,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleMetricDataSourceResponse {
-    /**
-     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     * 
-     */
+        /**
+         * @return the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+         * 
+         */
     private final @Nullable String legacyResourceId;
-    /**
-     * the name of the metric that defines what the rule monitors.
-     * 
-     */
+        /**
+         * @return the name of the metric that defines what the rule monitors.
+         * 
+         */
     private final @Nullable String metricName;
-    /**
-     * the namespace of the metric.
-     * 
-     */
+        /**
+         * @return the namespace of the metric.
+         * 
+         */
     private final @Nullable String metricNamespace;
-    /**
-     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
-     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
-     * 
-     */
+        /**
+         * @return specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * the location of the resource.
-     * 
-     */
+        /**
+         * @return the location of the resource.
+         * 
+         */
     private final @Nullable String resourceLocation;
-    /**
-     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
-     * 
-     */
+        /**
+         * @return the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+         * 
+         */
     private final @Nullable String resourceUri;
 
     @CustomType.Constructor
@@ -60,45 +60,45 @@ public final class RuleMetricDataSourceResponse {
     }
 
     /**
-     * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * @return the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
-    */
+     */
     public Optional<String> legacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
     /**
-     * the name of the metric that defines what the rule monitors.
+     * @return the name of the metric that defines what the rule monitors.
      * 
-    */
+     */
     public Optional<String> metricName() {
         return Optional.ofNullable(this.metricName);
     }
     /**
-     * the namespace of the metric.
+     * @return the namespace of the metric.
      * 
-    */
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
     /**
-     * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+     * @return specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
      * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * the location of the resource.
+     * @return the location of the resource.
      * 
-    */
+     */
     public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
     /**
-     * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * @return the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
-    */
+     */
     public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }

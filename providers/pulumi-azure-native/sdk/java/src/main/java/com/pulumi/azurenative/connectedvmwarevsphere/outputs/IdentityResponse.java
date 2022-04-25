@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class IdentityResponse {
-    /**
-     * The principal id of managed service identity.
-     * 
-     */
+        /**
+         * @return The principal id of managed service identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant of managed service identity.
-     * 
-     */
+        /**
+         * @return The tenant of managed service identity.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of managed service identity.
-     * 
-     */
+        /**
+         * @return The type of managed service identity.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class IdentityResponse {
     }
 
     /**
-     * The principal id of managed service identity.
+     * @return The principal id of managed service identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant of managed service identity.
+     * @return The tenant of managed service identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of managed service identity.
+     * @return The type of managed service identity.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

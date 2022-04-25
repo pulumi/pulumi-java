@@ -27,6 +27,10 @@ public final class PeriodicModeBackupPolicyResponse extends com.pulumi.resources
     @Import(name="periodicModeProperties")
     private @Nullable PeriodicModePropertiesResponse periodicModeProperties;
 
+    /**
+     * @return Configuration values for periodic mode backup
+     * 
+     */
     public Optional<PeriodicModePropertiesResponse> periodicModeProperties() {
         return Optional.ofNullable(this.periodicModeProperties);
     }
@@ -39,6 +43,11 @@ public final class PeriodicModeBackupPolicyResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Describes the mode of backups.
+     * Expected value is &#39;Periodic&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -68,11 +77,24 @@ public final class PeriodicModeBackupPolicyResponse extends com.pulumi.resources
             $ = new PeriodicModeBackupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param periodicModeProperties Configuration values for periodic mode backup
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodicModeProperties(@Nullable PeriodicModePropertiesResponse periodicModeProperties) {
             $.periodicModeProperties = periodicModeProperties;
             return this;
         }
 
+        /**
+         * @param type Describes the mode of backups.
+         * Expected value is &#39;Periodic&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

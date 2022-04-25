@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationLogsConfigResponse {
-    /**
-     * Application logs to blob storage configuration.
-     * 
-     */
+        /**
+         * @return Application logs to blob storage configuration.
+         * 
+         */
     private final @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage;
-    /**
-     * Application logs to azure table storage configuration.
-     * 
-     */
+        /**
+         * @return Application logs to azure table storage configuration.
+         * 
+         */
     private final @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage;
-    /**
-     * Application logs to file system configuration.
-     * 
-     */
+        /**
+         * @return Application logs to file system configuration.
+         * 
+         */
     private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ApplicationLogsConfigResponse {
     }
 
     /**
-     * Application logs to blob storage configuration.
+     * @return Application logs to blob storage configuration.
      * 
-    */
+     */
     public Optional<AzureBlobStorageApplicationLogsConfigResponse> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
-     * Application logs to azure table storage configuration.
+     * @return Application logs to azure table storage configuration.
      * 
-    */
+     */
     public Optional<AzureTableStorageApplicationLogsConfigResponse> azureTableStorage() {
         return Optional.ofNullable(this.azureTableStorage);
     }
     /**
-     * Application logs to file system configuration.
+     * @return Application logs to file system configuration.
      * 
-    */
+     */
     public Optional<FileSystemApplicationLogsConfigResponse> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }

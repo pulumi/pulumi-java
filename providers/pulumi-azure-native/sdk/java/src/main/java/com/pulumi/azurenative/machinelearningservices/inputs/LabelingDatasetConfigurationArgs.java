@@ -27,6 +27,10 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
     @Import(name="assetName", required=true)
     private Output<String> assetName;
 
+    /**
+     * @return Name of the data asset to perform labeling.
+     * 
+     */
     public Output<String> assetName() {
         return this.assetName;
     }
@@ -38,6 +42,10 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
     @Import(name="datasetVersion", required=true)
     private Output<String> datasetVersion;
 
+    /**
+     * @return AML dataset version.
+     * 
+     */
     public Output<String> datasetVersion() {
         return this.datasetVersion;
     }
@@ -49,6 +57,10 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
     @Import(name="enableIncrementalDatasetRefresh")
     private @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
 
+    /**
+     * @return Indicates whether to enable incremental dataset refresh.
+     * 
+     */
     public Optional<Output<Boolean>> enableIncrementalDatasetRefresh() {
         return Optional.ofNullable(this.enableIncrementalDatasetRefresh);
     }
@@ -79,29 +91,65 @@ public final class LabelingDatasetConfigurationArgs extends com.pulumi.resources
             $ = new LabelingDatasetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetName Name of the data asset to perform labeling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(Output<String> assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param assetName Name of the data asset to perform labeling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             return assetName(Output.of(assetName));
         }
 
+        /**
+         * @param datasetVersion AML dataset version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetVersion(Output<String> datasetVersion) {
             $.datasetVersion = datasetVersion;
             return this;
         }
 
+        /**
+         * @param datasetVersion AML dataset version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetVersion(String datasetVersion) {
             return datasetVersion(Output.of(datasetVersion));
         }
 
+        /**
+         * @param enableIncrementalDatasetRefresh Indicates whether to enable incremental dataset refresh.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIncrementalDatasetRefresh(@Nullable Output<Boolean> enableIncrementalDatasetRefresh) {
             $.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;
             return this;
         }
 
+        /**
+         * @param enableIncrementalDatasetRefresh Indicates whether to enable incremental dataset refresh.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIncrementalDatasetRefresh(Boolean enableIncrementalDatasetRefresh) {
             return enableIncrementalDatasetRefresh(Output.of(enableIncrementalDatasetRefresh));
         }

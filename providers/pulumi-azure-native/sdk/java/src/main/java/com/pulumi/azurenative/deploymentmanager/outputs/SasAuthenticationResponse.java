@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class SasAuthenticationResponse {
-    /**
-     * The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
-     * 
-     */
+        /**
+         * @return The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+         * 
+         */
     private final String sasUri;
-    /**
-     * The authentication type
-     * Expected value is &#39;Sas&#39;.
-     * 
-     */
+        /**
+         * @return The authentication type
+         * Expected value is &#39;Sas&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class SasAuthenticationResponse {
     }
 
     /**
-     * The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
+     * @return The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.
      * 
-    */
+     */
     public String sasUri() {
         return this.sasUri;
     }
     /**
-     * The authentication type
+     * @return The authentication type
      * Expected value is &#39;Sas&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

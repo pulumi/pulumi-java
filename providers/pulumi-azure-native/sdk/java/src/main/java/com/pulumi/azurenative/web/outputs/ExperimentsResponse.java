@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExperimentsResponse {
-    /**
-     * List of ramp-up rules.
-     * 
-     */
+        /**
+         * @return List of ramp-up rules.
+         * 
+         */
     private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ExperimentsResponse {
     }
 
     /**
-     * List of ramp-up rules.
+     * @return List of ramp-up rules.
      * 
-    */
+     */
     public List<RampUpRuleResponse> rampUpRules() {
         return this.rampUpRules == null ? List.of() : this.rampUpRules;
     }

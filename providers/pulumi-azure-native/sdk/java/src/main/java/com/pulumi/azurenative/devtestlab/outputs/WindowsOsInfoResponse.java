@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WindowsOsInfoResponse {
-    /**
-     * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
-     * 
-     */
+        /**
+         * @return The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+         * 
+         */
     private final @Nullable String windowsOsState;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class WindowsOsInfoResponse {
     }
 
     /**
-     * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
+     * @return The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
      * 
-    */
+     */
     public Optional<String> windowsOsState() {
         return Optional.ofNullable(this.windowsOsState);
     }

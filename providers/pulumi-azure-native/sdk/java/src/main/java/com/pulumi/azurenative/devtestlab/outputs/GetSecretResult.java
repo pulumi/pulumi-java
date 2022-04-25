@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSecretResult {
-    /**
-     * The identifier of the resource.
-     * 
-     */
+        /**
+         * @return The identifier of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource.
-     * 
-     */
+        /**
+         * @return The location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning status of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning status of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * The unique immutable identifier of a resource (Guid).
-     * 
-     */
+        /**
+         * @return The unique immutable identifier of a resource (Guid).
+         * 
+         */
     private final String uniqueIdentifier;
-    /**
-     * The value of the secret for secret creation.
-     * 
-     */
+        /**
+         * @return The value of the secret for secret creation.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetSecretResult {
     }
 
     /**
-     * The identifier of the resource.
+     * @return The identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
-     * The value of the secret for secret creation.
+     * @return The value of the secret for secret creation.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

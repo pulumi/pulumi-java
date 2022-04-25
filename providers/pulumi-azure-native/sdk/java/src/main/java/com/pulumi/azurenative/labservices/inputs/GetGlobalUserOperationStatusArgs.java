@@ -19,6 +19,10 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
     @Import(name="operationUrl", required=true)
     private String operationUrl;
 
+    /**
+     * @return The operation url of long running operation
+     * 
+     */
     public String operationUrl() {
         return this.operationUrl;
     }
@@ -30,6 +34,10 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -59,11 +67,23 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
             $ = new GetGlobalUserOperationStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationUrl The operation url of long running operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationUrl(String operationUrl) {
             $.operationUrl = operationUrl;
             return this;
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

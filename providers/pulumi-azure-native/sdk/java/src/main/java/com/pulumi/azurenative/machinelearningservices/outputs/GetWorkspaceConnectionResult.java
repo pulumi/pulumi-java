@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkspaceConnectionResult {
-    /**
-     * Authorization type of the workspace connection.
-     * 
-     */
+        /**
+         * @return Authorization type of the workspace connection.
+         * 
+         */
     private final @Nullable String authType;
-    /**
-     * Category of the workspace connection.
-     * 
-     */
+        /**
+         * @return Category of the workspace connection.
+         * 
+         */
     private final @Nullable String category;
-    /**
-     * ResourceId of the workspace connection.
-     * 
-     */
+        /**
+         * @return ResourceId of the workspace connection.
+         * 
+         */
     private final String id;
-    /**
-     * Friendly name of the workspace connection.
-     * 
-     */
+        /**
+         * @return Friendly name of the workspace connection.
+         * 
+         */
     private final String name;
-    /**
-     * Target of the workspace connection.
-     * 
-     */
+        /**
+         * @return Target of the workspace connection.
+         * 
+         */
     private final @Nullable String target;
-    /**
-     * Resource type of workspace connection.
-     * 
-     */
+        /**
+         * @return Resource type of workspace connection.
+         * 
+         */
     private final String type;
-    /**
-     * Value details of the workspace connection.
-     * 
-     */
+        /**
+         * @return Value details of the workspace connection.
+         * 
+         */
     private final @Nullable String value;
-    /**
-     * format for the workspace connection value
-     * 
-     */
+        /**
+         * @return format for the workspace connection value
+         * 
+         */
     private final @Nullable String valueFormat;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetWorkspaceConnectionResult {
     }
 
     /**
-     * Authorization type of the workspace connection.
+     * @return Authorization type of the workspace connection.
      * 
-    */
+     */
     public Optional<String> authType() {
         return Optional.ofNullable(this.authType);
     }
     /**
-     * Category of the workspace connection.
+     * @return Category of the workspace connection.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * ResourceId of the workspace connection.
+     * @return ResourceId of the workspace connection.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Friendly name of the workspace connection.
+     * @return Friendly name of the workspace connection.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Target of the workspace connection.
+     * @return Target of the workspace connection.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Resource type of workspace connection.
+     * @return Resource type of workspace connection.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value details of the workspace connection.
+     * @return Value details of the workspace connection.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
     /**
-     * format for the workspace connection value
+     * @return format for the workspace connection value
      * 
-    */
+     */
     public Optional<String> valueFormat() {
         return Optional.ofNullable(this.valueFormat);
     }

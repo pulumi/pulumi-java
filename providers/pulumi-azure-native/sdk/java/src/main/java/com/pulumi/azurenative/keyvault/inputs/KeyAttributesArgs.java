@@ -27,6 +27,10 @@ public final class KeyAttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether or not the object is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class KeyAttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expires")
     private @Nullable Output<Double> expires;
 
+    /**
+     * @return Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Output<Double>> expires() {
         return Optional.ofNullable(this.expires);
     }
@@ -49,6 +57,10 @@ public final class KeyAttributesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notBefore")
     private @Nullable Output<Double> notBefore;
 
+    /**
+     * @return Not before date in seconds since 1970-01-01T00:00:00Z.
+     * 
+     */
     public Optional<Output<Double>> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
@@ -79,29 +91,65 @@ public final class KeyAttributesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyAttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Determines whether or not the object is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Determines whether or not the object is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param expires Expiry date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expires(@Nullable Output<Double> expires) {
             $.expires = expires;
             return this;
         }
 
+        /**
+         * @param expires Expiry date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expires(Double expires) {
             return expires(Output.of(expires));
         }
 
+        /**
+         * @param notBefore Not before date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(@Nullable Output<Double> notBefore) {
             $.notBefore = notBefore;
             return this;
         }
 
+        /**
+         * @param notBefore Not before date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(Double notBefore) {
             return notBefore(Output.of(notBefore));
         }

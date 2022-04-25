@@ -17,75 +17,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPolicyAssignmentResult {
-    /**
-     * This message will be part of response in case of policy violation.
-     * 
-     */
+        /**
+         * @return This message will be part of response in case of policy violation.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The display name of the policy assignment.
-     * 
-     */
+        /**
+         * @return The display name of the policy assignment.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
-     * 
-     */
+        /**
+         * @return The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+         * 
+         */
     private final @Nullable String enforcementMode;
-    /**
-     * The ID of the policy assignment.
-     * 
-     */
+        /**
+         * @return The ID of the policy assignment.
+         * 
+         */
     private final String id;
-    /**
-     * The managed identity associated with the policy assignment.
-     * 
-     */
+        /**
+         * @return The managed identity associated with the policy assignment.
+         * 
+         */
     private final @Nullable IdentityResponse identity;
-    /**
-     * The location of the policy assignment. Only required when utilizing managed identity.
-     * 
-     */
+        /**
+         * @return The location of the policy assignment. Only required when utilizing managed identity.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
-     */
+        /**
+         * @return The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+         * 
+         */
     private final @Nullable Object metadata;
-    /**
-     * The name of the policy assignment.
-     * 
-     */
+        /**
+         * @return The name of the policy assignment.
+         * 
+         */
     private final String name;
-    /**
-     * The messages that describe why a resource is non-compliant with the policy.
-     * 
-     */
+        /**
+         * @return The messages that describe why a resource is non-compliant with the policy.
+         * 
+         */
     private final @Nullable List<NonComplianceMessageResponse> nonComplianceMessages;
-    /**
-     * The policy&#39;s excluded scopes.
-     * 
-     */
+        /**
+         * @return The policy&#39;s excluded scopes.
+         * 
+         */
     private final @Nullable List<String> notScopes;
-    /**
-     * The parameter values for the assigned policy rule. The keys are the parameter names.
-     * 
-     */
+        /**
+         * @return The parameter values for the assigned policy rule. The keys are the parameter names.
+         * 
+         */
     private final @Nullable Map<String,ParameterValuesValueResponse> parameters;
-    /**
-     * The ID of the policy definition or policy set definition being assigned.
-     * 
-     */
+        /**
+         * @return The ID of the policy definition or policy set definition being assigned.
+         * 
+         */
     private final @Nullable String policyDefinitionId;
-    /**
-     * The scope for the policy assignment.
-     * 
-     */
+        /**
+         * @return The scope for the policy assignment.
+         * 
+         */
     private final String scope;
-    /**
-     * The type of the policy assignment.
-     * 
-     */
+        /**
+         * @return The type of the policy assignment.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -121,100 +121,100 @@ public final class GetPolicyAssignmentResult {
     }
 
     /**
-     * This message will be part of response in case of policy violation.
+     * @return This message will be part of response in case of policy violation.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the policy assignment.
+     * @return The display name of the policy assignment.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
+     * @return The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
      * 
-    */
+     */
     public Optional<String> enforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
-     * The ID of the policy assignment.
+     * @return The ID of the policy assignment.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The managed identity associated with the policy assignment.
+     * @return The managed identity associated with the policy assignment.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The location of the policy assignment. Only required when utilizing managed identity.
+     * @return The location of the policy assignment. Only required when utilizing managed identity.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     * @return The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The name of the policy assignment.
+     * @return The name of the policy assignment.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The messages that describe why a resource is non-compliant with the policy.
+     * @return The messages that describe why a resource is non-compliant with the policy.
      * 
-    */
+     */
     public List<NonComplianceMessageResponse> nonComplianceMessages() {
         return this.nonComplianceMessages == null ? List.of() : this.nonComplianceMessages;
     }
     /**
-     * The policy&#39;s excluded scopes.
+     * @return The policy&#39;s excluded scopes.
      * 
-    */
+     */
     public List<String> notScopes() {
         return this.notScopes == null ? List.of() : this.notScopes;
     }
     /**
-     * The parameter values for the assigned policy rule. The keys are the parameter names.
+     * @return The parameter values for the assigned policy rule. The keys are the parameter names.
      * 
-    */
+     */
     public Map<String,ParameterValuesValueResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The ID of the policy definition or policy set definition being assigned.
+     * @return The ID of the policy definition or policy set definition being assigned.
      * 
-    */
+     */
     public Optional<String> policyDefinitionId() {
         return Optional.ofNullable(this.policyDefinitionId);
     }
     /**
-     * The scope for the policy assignment.
+     * @return The scope for the policy assignment.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * The type of the policy assignment.
+     * @return The type of the policy assignment.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

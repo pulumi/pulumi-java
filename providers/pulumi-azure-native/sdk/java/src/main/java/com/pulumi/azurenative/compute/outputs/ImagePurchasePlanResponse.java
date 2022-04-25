@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImagePurchasePlanResponse {
-    /**
-     * The plan ID.
-     * 
-     */
+        /**
+         * @return The plan ID.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The product ID.
-     * 
-     */
+        /**
+         * @return The product ID.
+         * 
+         */
     private final @Nullable String product;
-    /**
-     * The publisher ID.
-     * 
-     */
+        /**
+         * @return The publisher ID.
+         * 
+         */
     private final @Nullable String publisher;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ImagePurchasePlanResponse {
     }
 
     /**
-     * The plan ID.
+     * @return The plan ID.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The product ID.
+     * @return The product ID.
      * 
-    */
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
-     * The publisher ID.
+     * @return The publisher ID.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }

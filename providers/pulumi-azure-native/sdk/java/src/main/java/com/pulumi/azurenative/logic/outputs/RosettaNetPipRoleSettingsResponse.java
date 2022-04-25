@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RosettaNetPipRoleSettingsResponse {
-    /**
-     * The action name.
-     * 
-     */
+        /**
+         * @return The action name.
+         * 
+         */
     private final String action;
-    /**
-     * The RosettaNet ProcessConfiguration business document.
-     * 
-     */
+        /**
+         * @return The RosettaNet ProcessConfiguration business document.
+         * 
+         */
     private final RosettaNetPipBusinessDocumentResponse businessDocument;
-    /**
-     * The description.
-     * 
-     */
+        /**
+         * @return The description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The role name.
-     * 
-     */
+        /**
+         * @return The role name.
+         * 
+         */
     private final String role;
-    /**
-     * The RosettaNet ProcessConfiguration role type.
-     * 
-     */
+        /**
+         * @return The RosettaNet ProcessConfiguration role type.
+         * 
+         */
     private final String roleType;
-    /**
-     * The service name.
-     * 
-     */
+        /**
+         * @return The service name.
+         * 
+         */
     private final String service;
-    /**
-     * The service classification name.
-     * 
-     */
+        /**
+         * @return The service classification name.
+         * 
+         */
     private final String serviceClassification;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class RosettaNetPipRoleSettingsResponse {
     }
 
     /**
-     * The action name.
+     * @return The action name.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * The RosettaNet ProcessConfiguration business document.
+     * @return The RosettaNet ProcessConfiguration business document.
      * 
-    */
+     */
     public RosettaNetPipBusinessDocumentResponse businessDocument() {
         return this.businessDocument;
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The role name.
+     * @return The role name.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * The RosettaNet ProcessConfiguration role type.
+     * @return The RosettaNet ProcessConfiguration role type.
      * 
-    */
+     */
     public String roleType() {
         return this.roleType;
     }
     /**
-     * The service name.
+     * @return The service name.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }
     /**
-     * The service classification name.
+     * @return The service classification name.
      * 
-    */
+     */
     public String serviceClassification() {
         return this.serviceClassification;
     }

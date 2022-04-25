@@ -30,6 +30,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return Optional ETag.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -41,6 +45,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -52,6 +60,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="policyName")
     private @Nullable Output<String> policyName;
 
+    /**
+     * @return Backup policy to be created.
+     * 
+     */
     public Optional<Output<String>> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -63,6 +75,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="properties")
     private @Nullable Output<Object> properties;
 
+    /**
+     * @return ProtectionPolicyResource properties
+     * 
+     */
     public Optional<Output<Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -74,6 +90,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,6 +105,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -96,6 +120,10 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
     @Import(name="vaultName", required=true)
     private Output<String> vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> vaultName() {
         return this.vaultName;
     }
@@ -130,65 +158,149 @@ public final class ProtectionPolicyArgs extends com.pulumi.resources.ResourceArg
             $ = new ProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag Optional ETag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag Optional ETag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param policyName Backup policy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName Backup policy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param properties ProtectionPolicyResource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties ProtectionPolicyResource properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(Output<String> vaultName) {
             $.vaultName = vaultName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             return vaultName(Output.of(vaultName));
         }

@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackendServiceFabricClusterPropertiesResponse {
-    /**
-     * The client certificate id for the management endpoint.
-     * 
-     */
+        /**
+         * @return The client certificate id for the management endpoint.
+         * 
+         */
     private final @Nullable String clientCertificateId;
-    /**
-     * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
-     * 
-     */
+        /**
+         * @return The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+         * 
+         */
     private final @Nullable String clientCertificatethumbprint;
-    /**
-     * The cluster management endpoint.
-     * 
-     */
+        /**
+         * @return The cluster management endpoint.
+         * 
+         */
     private final List<String> managementEndpoints;
-    /**
-     * Maximum number of retries while attempting resolve the partition.
-     * 
-     */
+        /**
+         * @return Maximum number of retries while attempting resolve the partition.
+         * 
+         */
     private final @Nullable Integer maxPartitionResolutionRetries;
-    /**
-     * Thumbprints of certificates cluster management service uses for tls communication
-     * 
-     */
+        /**
+         * @return Thumbprints of certificates cluster management service uses for tls communication
+         * 
+         */
     private final @Nullable List<String> serverCertificateThumbprints;
-    /**
-     * Server X509 Certificate Names Collection
-     * 
-     */
+        /**
+         * @return Server X509 Certificate Names Collection
+         * 
+         */
     private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class BackendServiceFabricClusterPropertiesResponse {
     }
 
     /**
-     * The client certificate id for the management endpoint.
+     * @return The client certificate id for the management endpoint.
      * 
-    */
+     */
     public Optional<String> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
     /**
-     * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+     * @return The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
      * 
-    */
+     */
     public Optional<String> clientCertificatethumbprint() {
         return Optional.ofNullable(this.clientCertificatethumbprint);
     }
     /**
-     * The cluster management endpoint.
+     * @return The cluster management endpoint.
      * 
-    */
+     */
     public List<String> managementEndpoints() {
         return this.managementEndpoints;
     }
     /**
-     * Maximum number of retries while attempting resolve the partition.
+     * @return Maximum number of retries while attempting resolve the partition.
      * 
-    */
+     */
     public Optional<Integer> maxPartitionResolutionRetries() {
         return Optional.ofNullable(this.maxPartitionResolutionRetries);
     }
     /**
-     * Thumbprints of certificates cluster management service uses for tls communication
+     * @return Thumbprints of certificates cluster management service uses for tls communication
      * 
-    */
+     */
     public List<String> serverCertificateThumbprints() {
         return this.serverCertificateThumbprints == null ? List.of() : this.serverCertificateThumbprints;
     }
     /**
-     * Server X509 Certificate Names Collection
+     * @return Server X509 Certificate Names Collection
      * 
-    */
+     */
     public List<X509CertificateNameResponse> serverX509Names() {
         return this.serverX509Names == null ? List.of() : this.serverX509Names;
     }

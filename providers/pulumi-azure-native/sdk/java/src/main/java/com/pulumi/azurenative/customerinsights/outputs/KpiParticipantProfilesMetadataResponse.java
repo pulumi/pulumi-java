@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class KpiParticipantProfilesMetadataResponse {
-    /**
-     * Name of the type.
-     * 
-     */
+        /**
+         * @return Name of the type.
+         * 
+         */
     private final String typeName;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class KpiParticipantProfilesMetadataResponse {
     }
 
     /**
-     * Name of the type.
+     * @return Name of the type.
      * 
-    */
+     */
     public String typeName() {
         return this.typeName;
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The name.
-     * 
-     */
+        /**
+         * @return The name.
+         * 
+         */
     private final String name;
-    /**
-     * The reference to plan.
-     * 
-     */
+        /**
+         * @return The reference to plan.
+         * 
+         */
     private final @Nullable ResourceReferenceResponse plan;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The name.
+     * @return The name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The reference to plan.
+     * @return The reference to plan.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> plan() {
         return Optional.ofNullable(this.plan);
     }

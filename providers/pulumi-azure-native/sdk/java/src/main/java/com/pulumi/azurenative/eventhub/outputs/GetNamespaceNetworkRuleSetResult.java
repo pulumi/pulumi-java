@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNamespaceNetworkRuleSetResult {
-    /**
-     * Default Action for Network Rule Set
-     * 
-     */
+        /**
+         * @return Default Action for Network Rule Set
+         * 
+         */
     private final @Nullable String defaultAction;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * List of IpRules
-     * 
-     */
+        /**
+         * @return List of IpRules
+         * 
+         */
     private final @Nullable List<NWRuleSetIpRulesResponse> ipRules;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * List VirtualNetwork Rules
-     * 
-     */
+        /**
+         * @return List VirtualNetwork Rules
+         * 
+         */
     private final @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class GetNamespaceNetworkRuleSetResult {
     }
 
     /**
-     * Default Action for Network Rule Set
+     * @return Default Action for Network Rule Set
      * 
-    */
+     */
     public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of IpRules
+     * @return List of IpRules
      * 
-    */
+     */
     public List<NWRuleSetIpRulesResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * List VirtualNetwork Rules
+     * @return List VirtualNetwork Rules
      * 
-    */
+     */
     public List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

@@ -23,6 +23,10 @@ public final class ApplicationArtifactResponse extends com.pulumi.resources.Invo
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The managed application artifact name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ApplicationArtifactResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The managed application artifact type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -45,6 +53,10 @@ public final class ApplicationArtifactResponse extends com.pulumi.resources.Invo
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The managed application artifact blob uri.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -75,16 +87,34 @@ public final class ApplicationArtifactResponse extends com.pulumi.resources.Invo
             $ = new ApplicationArtifactResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The managed application artifact name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The managed application artifact type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param uri The managed application artifact blob uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

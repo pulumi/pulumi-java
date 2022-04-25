@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InnerErrorResponse {
-    /**
-     * The internal error message or exception dump.
-     * 
-     */
+        /**
+         * @return The internal error message or exception dump.
+         * 
+         */
     private final @Nullable String errordetail;
-    /**
-     * The exception type.
-     * 
-     */
+        /**
+         * @return The exception type.
+         * 
+         */
     private final @Nullable String exceptiontype;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class InnerErrorResponse {
     }
 
     /**
-     * The internal error message or exception dump.
+     * @return The internal error message or exception dump.
      * 
-    */
+     */
     public Optional<String> errordetail() {
         return Optional.ofNullable(this.errordetail);
     }
     /**
-     * The exception type.
+     * @return The exception type.
      * 
-    */
+     */
     public Optional<String> exceptiontype() {
         return Optional.ofNullable(this.exceptiontype);
     }

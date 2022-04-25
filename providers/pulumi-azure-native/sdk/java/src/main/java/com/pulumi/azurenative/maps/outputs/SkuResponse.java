@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The name of the SKU, in standard format (such as S0).
-     * 
-     */
+        /**
+         * @return The name of the SKU, in standard format (such as S0).
+         * 
+         */
     private final String name;
-    /**
-     * Gets the sku tier. This is based on the SKU name.
-     * 
-     */
+        /**
+         * @return Gets the sku tier. This is based on the SKU name.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The name of the SKU, in standard format (such as S0).
+     * @return The name of the SKU, in standard format (such as S0).
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the sku tier. This is based on the SKU name.
+     * @return Gets the sku tier. This is based on the SKU name.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

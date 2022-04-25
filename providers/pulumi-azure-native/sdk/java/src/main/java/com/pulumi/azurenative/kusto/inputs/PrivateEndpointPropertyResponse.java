@@ -23,6 +23,10 @@ public final class PrivateEndpointPropertyResponse extends com.pulumi.resources.
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource id of the private endpoint.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class PrivateEndpointPropertyResponse extends com.pulumi.resources.
             $ = new PrivateEndpointPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource id of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

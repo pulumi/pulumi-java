@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DiagnosticStoragePropertiesResponse {
-    /**
-     * Authentication Type
-     * 
-     */
+        /**
+         * @return Authentication Type
+         * 
+         */
     private final String authenticationType;
-    /**
-     * ConnectionString of the diagnostic storage account
-     * 
-     */
+        /**
+         * @return ConnectionString of the diagnostic storage account
+         * 
+         */
     private final @Nullable String connectionString;
-    /**
-     * ResourceId of the diagnostic storage account
-     * 
-     */
+        /**
+         * @return ResourceId of the diagnostic storage account
+         * 
+         */
     private final String resourceId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class DiagnosticStoragePropertiesResponse {
     }
 
     /**
-     * Authentication Type
+     * @return Authentication Type
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * ConnectionString of the diagnostic storage account
+     * @return ConnectionString of the diagnostic storage account
      * 
-    */
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * ResourceId of the diagnostic storage account
+     * @return ResourceId of the diagnostic storage account
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }

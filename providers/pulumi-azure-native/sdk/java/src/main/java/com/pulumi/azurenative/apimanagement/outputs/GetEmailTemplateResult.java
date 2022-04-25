@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEmailTemplateResult {
-    /**
-     * Email Template Body. This should be a valid XDocument
-     * 
-     */
+        /**
+         * @return Email Template Body. This should be a valid XDocument
+         * 
+         */
     private final String body;
-    /**
-     * Description of the Email Template.
-     * 
-     */
+        /**
+         * @return Description of the Email Template.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Whether the template is the default template provided by Api Management or has been edited.
-     * 
-     */
+        /**
+         * @return Whether the template is the default template provided by Api Management or has been edited.
+         * 
+         */
     private final Boolean isDefault;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Email Template Parameter values.
-     * 
-     */
+        /**
+         * @return Email Template Parameter values.
+         * 
+         */
     private final @Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters;
-    /**
-     * Subject of the Template.
-     * 
-     */
+        /**
+         * @return Subject of the Template.
+         * 
+         */
     private final String subject;
-    /**
-     * Title of the Template.
-     * 
-     */
+        /**
+         * @return Title of the Template.
+         * 
+         */
     private final @Nullable String title;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetEmailTemplateResult {
     }
 
     /**
-     * Email Template Body. This should be a valid XDocument
+     * @return Email Template Body. This should be a valid XDocument
      * 
-    */
+     */
     public String body() {
         return this.body;
     }
     /**
-     * Description of the Email Template.
+     * @return Description of the Email Template.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether the template is the default template provided by Api Management or has been edited.
+     * @return Whether the template is the default template provided by Api Management or has been edited.
      * 
-    */
+     */
     public Boolean isDefault() {
         return this.isDefault;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Email Template Parameter values.
+     * @return Email Template Parameter values.
      * 
-    */
+     */
     public List<EmailTemplateParametersContractPropertiesResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * Subject of the Template.
+     * @return Subject of the Template.
      * 
-    */
+     */
     public String subject() {
         return this.subject;
     }
     /**
-     * Title of the Template.
+     * @return Title of the Template.
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

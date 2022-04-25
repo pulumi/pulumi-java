@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceReferenceResponse {
-    /**
-     * The fully qualified resource Id.
-     * 
-     */
+        /**
+         * @return The fully qualified resource Id.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ResourceReferenceResponse {
     }
 
     /**
-     * The fully qualified resource Id.
+     * @return The fully qualified resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -27,6 +27,10 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
     @Import(name="exchange")
     private @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
 
+    /**
+     * @return Exchange data type connection.
+     * 
+     */
     public Optional<OfficeDataConnectorDataTypesResponseExchange> exchange() {
         return Optional.ofNullable(this.exchange);
     }
@@ -38,6 +42,10 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
     @Import(name="sharePoint")
     private @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
 
+    /**
+     * @return SharePoint data type connection.
+     * 
+     */
     public Optional<OfficeDataConnectorDataTypesResponseSharePoint> sharePoint() {
         return Optional.ofNullable(this.sharePoint);
     }
@@ -49,6 +57,10 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
     @Import(name="teams")
     private @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
+    /**
+     * @return Teams data type connection.
+     * 
+     */
     public Optional<OfficeDataConnectorDataTypesResponseTeams> teams() {
         return Optional.ofNullable(this.teams);
     }
@@ -79,16 +91,34 @@ public final class OfficeDataConnectorDataTypesResponse extends com.pulumi.resou
             $ = new OfficeDataConnectorDataTypesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exchange Exchange data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exchange(@Nullable OfficeDataConnectorDataTypesResponseExchange exchange) {
             $.exchange = exchange;
             return this;
         }
 
+        /**
+         * @param sharePoint SharePoint data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint) {
             $.sharePoint = sharePoint;
             return this;
         }
 
+        /**
+         * @param teams Teams data type connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder teams(@Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
             $.teams = teams;
             return this;

@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SasPolicyResponse {
-    /**
-     * The SAS expiration action. Can only be Log.
-     * 
-     */
+        /**
+         * @return The SAS expiration action. Can only be Log.
+         * 
+         */
     private final String expirationAction;
-    /**
-     * The SAS expiration period, DD.HH:MM:SS.
-     * 
-     */
+        /**
+         * @return The SAS expiration period, DD.HH:MM:SS.
+         * 
+         */
     private final String sasExpirationPeriod;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SasPolicyResponse {
     }
 
     /**
-     * The SAS expiration action. Can only be Log.
+     * @return The SAS expiration action. Can only be Log.
      * 
-    */
+     */
     public String expirationAction() {
         return this.expirationAction;
     }
     /**
-     * The SAS expiration period, DD.HH:MM:SS.
+     * @return The SAS expiration period, DD.HH:MM:SS.
      * 
-    */
+     */
     public String sasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }

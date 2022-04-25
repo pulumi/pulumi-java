@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PipelineTemplateResponse {
-    /**
-     * Unique identifier of the pipeline template.
-     * 
-     */
+        /**
+         * @return Unique identifier of the pipeline template.
+         * 
+         */
     private final String id;
-    /**
-     * Dictionary of input parameters used in the pipeline template.
-     * 
-     */
+        /**
+         * @return Dictionary of input parameters used in the pipeline template.
+         * 
+         */
     private final @Nullable Map<String,String> parameters;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PipelineTemplateResponse {
     }
 
     /**
-     * Unique identifier of the pipeline template.
+     * @return Unique identifier of the pipeline template.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Dictionary of input parameters used in the pipeline template.
+     * @return Dictionary of input parameters used in the pipeline template.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }

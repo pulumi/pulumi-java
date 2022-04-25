@@ -26,6 +26,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
     @Import(name="path")
     private @Nullable String path;
 
+    /**
+     * @return Request Path.
+     * 
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
@@ -48,6 +56,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
     @Import(name="timeInterval")
     private @Nullable String timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -59,6 +71,10 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
     @Import(name="timeTaken")
     private @Nullable String timeTaken;
 
+    /**
+     * @return Time taken.
+     * 
+     */
     public Optional<String> timeTaken() {
         return Optional.ofNullable(this.timeTaken);
     }
@@ -90,21 +106,45 @@ public final class SlowRequestsBasedTriggerResponse extends com.pulumi.resources
             $ = new SlowRequestsBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param path Request Path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable String path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable String timeInterval) {
             $.timeInterval = timeInterval;
             return this;
         }
 
+        /**
+         * @param timeTaken Time taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeTaken(@Nullable String timeTaken) {
             $.timeTaken = timeTaken;
             return this;

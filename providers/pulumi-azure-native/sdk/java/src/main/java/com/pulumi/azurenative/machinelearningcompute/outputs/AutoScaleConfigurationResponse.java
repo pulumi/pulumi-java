@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoScaleConfigurationResponse {
-    /**
-     * The maximum number of replicas for each service.
-     * 
-     */
+        /**
+         * @return The maximum number of replicas for each service.
+         * 
+         */
     private final @Nullable Integer maxReplicas;
-    /**
-     * The minimum number of replicas for each service.
-     * 
-     */
+        /**
+         * @return The minimum number of replicas for each service.
+         * 
+         */
     private final @Nullable Integer minReplicas;
-    /**
-     * Refresh period in seconds.
-     * 
-     */
+        /**
+         * @return Refresh period in seconds.
+         * 
+         */
     private final @Nullable Integer refreshPeriodInSeconds;
-    /**
-     * If auto-scale is enabled for all services. Each service can turn it off individually.
-     * 
-     */
+        /**
+         * @return If auto-scale is enabled for all services. Each service can turn it off individually.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * The target utilization.
-     * 
-     */
+        /**
+         * @return The target utilization.
+         * 
+         */
     private final @Nullable Double targetUtilization;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class AutoScaleConfigurationResponse {
     }
 
     /**
-     * The maximum number of replicas for each service.
+     * @return The maximum number of replicas for each service.
      * 
-    */
+     */
     public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
     /**
-     * The minimum number of replicas for each service.
+     * @return The minimum number of replicas for each service.
      * 
-    */
+     */
     public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
     /**
-     * Refresh period in seconds.
+     * @return Refresh period in seconds.
      * 
-    */
+     */
     public Optional<Integer> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
     /**
-     * If auto-scale is enabled for all services. Each service can turn it off individually.
+     * @return If auto-scale is enabled for all services. Each service can turn it off individually.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The target utilization.
+     * @return The target utilization.
      * 
-    */
+     */
     public Optional<Double> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }

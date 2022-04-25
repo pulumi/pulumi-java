@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AliasPatternResponse {
-    /**
-     * The alias pattern phrase.
-     * 
-     */
+        /**
+         * @return The alias pattern phrase.
+         * 
+         */
     private final @Nullable String phrase;
-    /**
-     * The type of alias pattern
-     * 
-     */
+        /**
+         * @return The type of alias pattern
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The alias pattern variable.
-     * 
-     */
+        /**
+         * @return The alias pattern variable.
+         * 
+         */
     private final @Nullable String variable;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AliasPatternResponse {
     }
 
     /**
-     * The alias pattern phrase.
+     * @return The alias pattern phrase.
      * 
-    */
+     */
     public Optional<String> phrase() {
         return Optional.ofNullable(this.phrase);
     }
     /**
-     * The type of alias pattern
+     * @return The type of alias pattern
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The alias pattern variable.
+     * @return The alias pattern variable.
      * 
-    */
+     */
     public Optional<String> variable() {
         return Optional.ofNullable(this.variable);
     }

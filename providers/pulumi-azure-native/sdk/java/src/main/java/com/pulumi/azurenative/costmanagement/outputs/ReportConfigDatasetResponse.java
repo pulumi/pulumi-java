@@ -18,35 +18,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportConfigDatasetResponse {
-    /**
-     * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
-     * 
-     */
+        /**
+         * @return Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+         * 
+         */
     private final @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
-    /**
-     * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
-     * 
-     */
+        /**
+         * @return Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+         * 
+         */
     private final @Nullable ReportConfigDatasetConfigurationResponse configuration;
-    /**
-     * Has filter expression to use in the report.
-     * 
-     */
+        /**
+         * @return Has filter expression to use in the report.
+         * 
+         */
     private final @Nullable ReportConfigFilterResponse filter;
-    /**
-     * The granularity of rows in the report.
-     * 
-     */
+        /**
+         * @return The granularity of rows in the report.
+         * 
+         */
     private final @Nullable String granularity;
-    /**
-     * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
-     * 
-     */
+        /**
+         * @return Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+         * 
+         */
     private final @Nullable List<ReportConfigGroupingResponse> grouping;
-    /**
-     * Array of order by expression to use in the report.
-     * 
-     */
+        /**
+         * @return Array of order by expression to use in the report.
+         * 
+         */
     private final @Nullable List<ReportConfigSortingResponse> sorting;
 
     @CustomType.Constructor
@@ -66,44 +66,44 @@ public final class ReportConfigDatasetResponse {
     }
 
     /**
-     * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+     * @return Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
      * 
-    */
+     */
     public Map<String,ReportConfigAggregationResponse> aggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
     /**
-     * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+     * @return Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
      * 
-    */
+     */
     public Optional<ReportConfigDatasetConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * Has filter expression to use in the report.
+     * @return Has filter expression to use in the report.
      * 
-    */
+     */
     public Optional<ReportConfigFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The granularity of rows in the report.
+     * @return The granularity of rows in the report.
      * 
-    */
+     */
     public Optional<String> granularity() {
         return Optional.ofNullable(this.granularity);
     }
     /**
-     * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+     * @return Array of group by expression to use in the report. Report can have up to 2 group by clauses.
      * 
-    */
+     */
     public List<ReportConfigGroupingResponse> grouping() {
         return this.grouping == null ? List.of() : this.grouping;
     }
     /**
-     * Array of order by expression to use in the report.
+     * @return Array of order by expression to use in the report.
      * 
-    */
+     */
     public List<ReportConfigSortingResponse> sorting() {
         return this.sorting == null ? List.of() : this.sorting;
     }

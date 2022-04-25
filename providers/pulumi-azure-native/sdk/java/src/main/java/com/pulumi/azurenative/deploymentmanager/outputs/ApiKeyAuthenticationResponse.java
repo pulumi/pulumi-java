@@ -9,26 +9,26 @@ import java.util.Objects;
 
 @CustomType
 public final class ApiKeyAuthenticationResponse {
-    /**
-     * The location of the authentication key/value pair in the request.
-     * 
-     */
+        /**
+         * @return The location of the authentication key/value pair in the request.
+         * 
+         */
     private final String in;
-    /**
-     * The key name of the authentication key/value pair.
-     * 
-     */
+        /**
+         * @return The key name of the authentication key/value pair.
+         * 
+         */
     private final String name;
-    /**
-     * The authentication type.
-     * Expected value is &#39;ApiKey&#39;.
-     * 
-     */
+        /**
+         * @return The authentication type.
+         * Expected value is &#39;ApiKey&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The value of the authentication key/value pair.
-     * 
-     */
+        /**
+         * @return The value of the authentication key/value pair.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -44,31 +44,31 @@ public final class ApiKeyAuthenticationResponse {
     }
 
     /**
-     * The location of the authentication key/value pair in the request.
+     * @return The location of the authentication key/value pair in the request.
      * 
-    */
+     */
     public String in() {
         return this.in;
     }
     /**
-     * The key name of the authentication key/value pair.
+     * @return The key name of the authentication key/value pair.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;ApiKey&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The value of the authentication key/value pair.
+     * @return The value of the authentication key/value pair.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

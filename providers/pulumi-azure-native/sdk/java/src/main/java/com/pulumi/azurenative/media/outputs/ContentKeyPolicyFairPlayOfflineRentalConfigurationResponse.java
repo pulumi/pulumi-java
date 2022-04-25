@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
-    /**
-     * Playback duration
-     * 
-     */
+        /**
+         * @return Playback duration
+         * 
+         */
     private final Double playbackDurationSeconds;
-    /**
-     * Storage duration
-     * 
-     */
+        /**
+         * @return Storage duration
+         * 
+         */
     private final Double storageDurationSeconds;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     }
 
     /**
-     * Playback duration
+     * @return Playback duration
      * 
-    */
+     */
     public Double playbackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
     /**
-     * Storage duration
+     * @return Storage duration
      * 
-    */
+     */
     public Double storageDurationSeconds() {
         return this.storageDurationSeconds;
     }

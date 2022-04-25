@@ -18,16 +18,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FromAllInputFileResponse {
-    /**
-     * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
-     * 
-     */
+        /**
+         * @return The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+         * 
+         */
     private final @Nullable List<Object> includedTracks;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.FromAllInputFile&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.FromAllInputFile&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -39,17 +39,17 @@ public final class FromAllInputFileResponse {
     }
 
     /**
-     * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+     * @return The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
-    */
+     */
     public List<Object> includedTracks() {
         return this.includedTracks == null ? List.of() : this.includedTracks;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.FromAllInputFile&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

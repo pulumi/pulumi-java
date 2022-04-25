@@ -15,65 +15,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccountResult {
-    /**
-     * The account&#39;s data-plane ID
-     * 
-     */
+        /**
+         * @return The account&#39;s data-plane ID
+         * 
+         */
     private final @Nullable String accountId;
-    /**
-     * The account&#39;s name
-     * 
-     */
+        /**
+         * @return The account&#39;s name
+         * 
+         */
     private final String accountName;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Managed service identity (system assigned and/or user assigned identities)
-     * 
-     */
+        /**
+         * @return Managed service identity (system assigned and/or user assigned identities)
+         * 
+         */
     private final @Nullable ManagedServiceIdentityResponse identity;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The media services details
-     * 
-     */
+        /**
+         * @return The media services details
+         * 
+         */
     private final @Nullable MediaServicesForPutRequestResponse mediaServices;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets the status of the account at the time the operation was called.
-     * 
-     */
+        /**
+         * @return Gets the status of the account at the time the operation was called.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The system meta data relating to this resource.
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The account&#39;s tenant id
-     * 
-     */
+        /**
+         * @return The account&#39;s tenant id
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -105,86 +105,86 @@ public final class GetAccountResult {
     }
 
     /**
-     * The account&#39;s data-plane ID
+     * @return The account&#39;s data-plane ID
      * 
-    */
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
-     * The account&#39;s name
+     * @return The account&#39;s name
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed service identity (system assigned and/or user assigned identities)
+     * @return Managed service identity (system assigned and/or user assigned identities)
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The media services details
+     * @return The media services details
      * 
-    */
+     */
     public Optional<MediaServicesForPutRequestResponse> mediaServices() {
         return Optional.ofNullable(this.mediaServices);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the status of the account at the time the operation was called.
+     * @return Gets the status of the account at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The account&#39;s tenant id
+     * @return The account&#39;s tenant id
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

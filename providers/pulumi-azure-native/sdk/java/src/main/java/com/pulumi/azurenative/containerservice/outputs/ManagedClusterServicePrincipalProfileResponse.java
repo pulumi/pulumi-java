@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterServicePrincipalProfileResponse {
-    /**
-     * The ID for the service principal.
-     * 
-     */
+        /**
+         * @return The ID for the service principal.
+         * 
+         */
     private final String clientId;
-    /**
-     * The secret password associated with the service principal in plain text.
-     * 
-     */
+        /**
+         * @return The secret password associated with the service principal in plain text.
+         * 
+         */
     private final @Nullable String secret;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ManagedClusterServicePrincipalProfileResponse {
     }
 
     /**
-     * The ID for the service principal.
+     * @return The ID for the service principal.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * The secret password associated with the service principal in plain text.
+     * @return The secret password associated with the service principal in plain text.
      * 
-    */
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }

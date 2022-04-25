@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class KubernetesRoleResourcesResponse {
-    /**
-     * Kubernetes role compute resource
-     * 
-     */
+        /**
+         * @return Kubernetes role compute resource
+         * 
+         */
     private final KubernetesRoleComputeResponse compute;
-    /**
-     * Kubernetes role network resource
-     * 
-     */
+        /**
+         * @return Kubernetes role network resource
+         * 
+         */
     private final KubernetesRoleNetworkResponse network;
-    /**
-     * Kubernetes role storage resource
-     * 
-     */
+        /**
+         * @return Kubernetes role storage resource
+         * 
+         */
     private final @Nullable KubernetesRoleStorageResponse storage;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class KubernetesRoleResourcesResponse {
     }
 
     /**
-     * Kubernetes role compute resource
+     * @return Kubernetes role compute resource
      * 
-    */
+     */
     public KubernetesRoleComputeResponse compute() {
         return this.compute;
     }
     /**
-     * Kubernetes role network resource
+     * @return Kubernetes role network resource
      * 
-    */
+     */
     public KubernetesRoleNetworkResponse network() {
         return this.network;
     }
     /**
-     * Kubernetes role storage resource
+     * @return Kubernetes role storage resource
      * 
-    */
+     */
     public Optional<KubernetesRoleStorageResponse> storage() {
         return Optional.ofNullable(this.storage);
     }

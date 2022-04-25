@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PyTorchResponse {
-    /**
-     * Enum to determine the job distribution type.
-     * Expected value is &#39;PyTorch&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine the job distribution type.
+         * Expected value is &#39;PyTorch&#39;.
+         * 
+         */
     private final String distributionType;
-    /**
-     * Total process count for the distributed job.
-     * 
-     */
+        /**
+         * @return Total process count for the distributed job.
+         * 
+         */
     private final @Nullable Integer processCount;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class PyTorchResponse {
     }
 
     /**
-     * Enum to determine the job distribution type.
+     * @return Enum to determine the job distribution type.
      * Expected value is &#39;PyTorch&#39;.
      * 
-    */
+     */
     public String distributionType() {
         return this.distributionType;
     }
     /**
-     * Total process count for the distributed job.
+     * @return Total process count for the distributed job.
      * 
-    */
+     */
     public Optional<Integer> processCount() {
         return Optional.ofNullable(this.processCount);
     }

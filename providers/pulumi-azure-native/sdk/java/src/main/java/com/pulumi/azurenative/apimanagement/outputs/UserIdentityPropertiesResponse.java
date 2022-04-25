@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserIdentityPropertiesResponse {
-    /**
-     * The client id of user assigned identity.
-     * 
-     */
+        /**
+         * @return The client id of user assigned identity.
+         * 
+         */
     private final @Nullable String clientId;
-    /**
-     * The principal id of user assigned identity.
-     * 
-     */
+        /**
+         * @return The principal id of user assigned identity.
+         * 
+         */
     private final @Nullable String principalId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class UserIdentityPropertiesResponse {
     }
 
     /**
-     * The client id of user assigned identity.
+     * @return The client id of user assigned identity.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The principal id of user assigned identity.
+     * @return The principal id of user assigned identity.
      * 
-    */
+     */
     public Optional<String> principalId() {
         return Optional.ofNullable(this.principalId);
     }

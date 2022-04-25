@@ -34,6 +34,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="createdTimeUtc", required=true)
     private String createdTimeUtc;
 
+    /**
+     * @return Created time of the job in UTC timezone.
+     * 
+     */
     public String createdTimeUtc() {
         return this.createdTimeUtc;
     }
@@ -45,6 +49,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="datasetConfiguration", required=true)
     private LabelingDatasetConfigurationResponse datasetConfiguration;
 
+    /**
+     * @return Dataset configuration for the job.
+     * 
+     */
     public LabelingDatasetConfigurationResponse datasetConfiguration() {
         return this.datasetConfiguration;
     }
@@ -56,6 +64,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="jobInstructions", required=true)
     private LabelingJobInstructionsResponse jobInstructions;
 
+    /**
+     * @return Instructions for the job.
+     * 
+     */
     public LabelingJobInstructionsResponse jobInstructions() {
         return this.jobInstructions;
     }
@@ -67,6 +79,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="labelCategories", required=true)
     private Map<String,LabelCategoryResponse> labelCategories;
 
+    /**
+     * @return Label categories of the job.
+     * 
+     */
     public Map<String,LabelCategoryResponse> labelCategories() {
         return this.labelCategories;
     }
@@ -78,6 +94,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="labelingJobMediaProperties", required=true)
     private LabelingJobImagePropertiesResponse labelingJobMediaProperties;
 
+    /**
+     * @return Media specific properties in a labeling job.
+     * 
+     */
     public LabelingJobImagePropertiesResponse labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
     }
@@ -89,6 +109,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="mlAssistConfiguration")
     private @Nullable MLAssistConfigurationResponse mlAssistConfiguration;
 
+    /**
+     * @return Machine learning assisted configuration for the job.
+     * 
+     */
     public Optional<MLAssistConfigurationResponse> mlAssistConfiguration() {
         return Optional.ofNullable(this.mlAssistConfiguration);
     }
@@ -100,6 +124,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="progressMetrics", required=true)
     private ProgressMetricsResponse progressMetrics;
 
+    /**
+     * @return Progress metrics of the job.
+     * 
+     */
     public ProgressMetricsResponse progressMetrics() {
         return this.progressMetrics;
     }
@@ -111,6 +139,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="projectId", required=true)
     private String projectId;
 
+    /**
+     * @return Internal id of the job(Previously called project).
+     * 
+     */
     public String projectId() {
         return this.projectId;
     }
@@ -122,6 +154,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The job property dictionary. Properties can be added, but not removed or altered.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -133,6 +169,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the job.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -144,6 +184,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="statusMessages", required=true)
     private List<StatusMessageResponse> statusMessages;
 
+    /**
+     * @return Status messages of the job.
+     * 
+     */
     public List<StatusMessageResponse> statusMessages() {
         return this.statusMessages;
     }
@@ -155,6 +199,10 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The job tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -194,65 +242,143 @@ public final class LabelingJobPropertiesResponse extends com.pulumi.resources.In
             $ = new LabelingJobPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdTimeUtc Created time of the job in UTC timezone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTimeUtc(String createdTimeUtc) {
             $.createdTimeUtc = createdTimeUtc;
             return this;
         }
 
+        /**
+         * @param datasetConfiguration Dataset configuration for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetConfiguration(LabelingDatasetConfigurationResponse datasetConfiguration) {
             $.datasetConfiguration = datasetConfiguration;
             return this;
         }
 
+        /**
+         * @param jobInstructions Instructions for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobInstructions(LabelingJobInstructionsResponse jobInstructions) {
             $.jobInstructions = jobInstructions;
             return this;
         }
 
+        /**
+         * @param labelCategories Label categories of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelCategories(Map<String,LabelCategoryResponse> labelCategories) {
             $.labelCategories = labelCategories;
             return this;
         }
 
+        /**
+         * @param labelingJobMediaProperties Media specific properties in a labeling job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesResponse labelingJobMediaProperties) {
             $.labelingJobMediaProperties = labelingJobMediaProperties;
             return this;
         }
 
+        /**
+         * @param mlAssistConfiguration Machine learning assisted configuration for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationResponse mlAssistConfiguration) {
             $.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
 
+        /**
+         * @param progressMetrics Progress metrics of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progressMetrics(ProgressMetricsResponse progressMetrics) {
             $.progressMetrics = progressMetrics;
             return this;
         }
 
+        /**
+         * @param projectId Internal id of the job(Previously called project).
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param properties The job property dictionary. Properties can be added, but not removed or altered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param status Status of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param statusMessages Status messages of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessages(List<StatusMessageResponse> statusMessages) {
             $.statusMessages = statusMessages;
             return this;
         }
 
+        /**
+         * @param statusMessages Status messages of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessages(StatusMessageResponse... statusMessages) {
             return statusMessages(List.of(statusMessages));
         }
 
+        /**
+         * @param tags The job tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;

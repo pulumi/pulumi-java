@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCertificateResult {
-    /**
-     * Gets the creation time.
-     * 
-     */
+        /**
+         * @return Gets the creation time.
+         * 
+         */
     private final String creationTime;
-    /**
-     * Gets or sets the description.
-     * 
-     */
+        /**
+         * @return Gets or sets the description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Gets the expiry time of the certificate.
-     * 
-     */
+        /**
+         * @return Gets the expiry time of the certificate.
+         * 
+         */
     private final String expiryTime;
-    /**
-     * Fully qualified resource Id for the resource
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource
+         * 
+         */
     private final String id;
-    /**
-     * Gets the is exportable flag of the certificate.
-     * 
-     */
+        /**
+         * @return Gets the is exportable flag of the certificate.
+         * 
+         */
     private final Boolean isExportable;
-    /**
-     * Gets the last modified time.
-     * 
-     */
+        /**
+         * @return Gets the last modified time.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets the thumbprint of the certificate.
-     * 
-     */
+        /**
+         * @return Gets the thumbprint of the certificate.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -81,65 +81,65 @@ public final class GetCertificateResult {
     }
 
     /**
-     * Gets the creation time.
+     * @return Gets the creation time.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Gets the expiry time of the certificate.
+     * @return Gets the expiry time of the certificate.
      * 
-    */
+     */
     public String expiryTime() {
         return this.expiryTime;
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the is exportable flag of the certificate.
+     * @return Gets the is exportable flag of the certificate.
      * 
-    */
+     */
     public Boolean isExportable() {
         return this.isExportable;
     }
     /**
-     * Gets the last modified time.
+     * @return Gets the last modified time.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the thumbprint of the certificate.
+     * @return Gets the thumbprint of the certificate.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

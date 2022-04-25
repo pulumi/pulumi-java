@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetEnterpriseChannelResult {
-    /**
-     * Entity Tag
-     * 
-     */
+        /**
+         * @return Entity Tag
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Specifies the resource ID.
-     * 
-     */
+        /**
+         * @return Specifies the resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Required. Gets or sets the Kind of the resource.
-     * 
-     */
+        /**
+         * @return Required. Gets or sets the Kind of the resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Specifies the location of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the location of the resource.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Specifies the name of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The set of properties specific to an Enterprise Channel resource.
-     * 
-     */
+        /**
+         * @return The set of properties specific to an Enterprise Channel resource.
+         * 
+         */
     private final EnterpriseChannelPropertiesResponse properties;
-    /**
-     * Gets or sets the SKU of the resource.
-     * 
-     */
+        /**
+         * @return Gets or sets the SKU of the resource.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Contains resource tags defined as key/value pairs.
-     * 
-     */
+        /**
+         * @return Contains resource tags defined as key/value pairs.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Specifies the type of the resource.
-     * 
-     */
+        /**
+         * @return Specifies the type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetEnterpriseChannelResult {
     }
 
     /**
-     * Entity Tag
+     * @return Entity Tag
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Specifies the resource ID.
+     * @return Specifies the resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Required. Gets or sets the Kind of the resource.
+     * @return Required. Gets or sets the Kind of the resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Specifies the location of the resource.
+     * @return Specifies the location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Specifies the name of the resource.
+     * @return Specifies the name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The set of properties specific to an Enterprise Channel resource.
+     * @return The set of properties specific to an Enterprise Channel resource.
      * 
-    */
+     */
     public EnterpriseChannelPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Gets or sets the SKU of the resource.
+     * @return Gets or sets the SKU of the resource.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Contains resource tags defined as key/value pairs.
+     * @return Contains resource tags defined as key/value pairs.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Specifies the type of the resource.
+     * @return Specifies the type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

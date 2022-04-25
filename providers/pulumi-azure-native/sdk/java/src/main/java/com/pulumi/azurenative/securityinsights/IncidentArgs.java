@@ -30,6 +30,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classification")
     private @Nullable Output<Either<String,IncidentClassification>> classification;
 
+    /**
+     * @return The reason the incident was closed
+     * 
+     */
     public Optional<Output<Either<String,IncidentClassification>>> classification() {
         return Optional.ofNullable(this.classification);
     }
@@ -41,6 +45,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classificationComment")
     private @Nullable Output<String> classificationComment;
 
+    /**
+     * @return Describes the reason the incident was closed
+     * 
+     */
     public Optional<Output<String>> classificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
@@ -52,6 +60,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="classificationReason")
     private @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
+    /**
+     * @return The classification reason the incident was closed with
+     * 
+     */
     public Optional<Output<Either<String,IncidentClassificationReason>>> classificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
@@ -63,6 +75,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the incident
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -74,6 +90,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="firstActivityTimeUtc")
     private @Nullable Output<String> firstActivityTimeUtc;
 
+    /**
+     * @return The time of the first activity in the incident
+     * 
+     */
     public Optional<Output<String>> firstActivityTimeUtc() {
         return Optional.ofNullable(this.firstActivityTimeUtc);
     }
@@ -85,6 +105,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incidentId")
     private @Nullable Output<String> incidentId;
 
+    /**
+     * @return Incident ID
+     * 
+     */
     public Optional<Output<String>> incidentId() {
         return Optional.ofNullable(this.incidentId);
     }
@@ -96,6 +120,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<IncidentLabelArgs>> labels;
 
+    /**
+     * @return List of labels relevant to this incident
+     * 
+     */
     public Optional<Output<List<IncidentLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -107,6 +135,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastActivityTimeUtc")
     private @Nullable Output<String> lastActivityTimeUtc;
 
+    /**
+     * @return The time of the last activity in the incident
+     * 
+     */
     public Optional<Output<String>> lastActivityTimeUtc() {
         return Optional.ofNullable(this.lastActivityTimeUtc);
     }
@@ -118,6 +150,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="owner")
     private @Nullable Output<IncidentOwnerInfoArgs> owner;
 
+    /**
+     * @return Describes a user that the incident is assigned to
+     * 
+     */
     public Optional<Output<IncidentOwnerInfoArgs>> owner() {
         return Optional.ofNullable(this.owner);
     }
@@ -129,6 +165,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -140,6 +180,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
     private Output<Either<String,IncidentSeverity>> severity;
 
+    /**
+     * @return The severity of the incident
+     * 
+     */
     public Output<Either<String,IncidentSeverity>> severity() {
         return this.severity;
     }
@@ -151,6 +195,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
     private Output<Either<String,IncidentStatus>> status;
 
+    /**
+     * @return The status of the incident
+     * 
+     */
     public Output<Either<String,IncidentStatus>> status() {
         return this.status;
     }
@@ -162,6 +210,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return The title of the incident
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -173,6 +225,10 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -214,164 +270,386 @@ public final class IncidentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IncidentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(@Nullable Output<Either<String,IncidentClassification>> classification) {
             $.classification = classification;
             return this;
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(Either<String,IncidentClassification> classification) {
             return classification(Output.of(classification));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(String classification) {
             return classification(Either.ofLeft(classification));
         }
 
+        /**
+         * @param classification The reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classification(IncidentClassification classification) {
             return classification(Either.ofRight(classification));
         }
 
+        /**
+         * @param classificationComment Describes the reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
             $.classificationComment = classificationComment;
             return this;
         }
 
+        /**
+         * @param classificationComment Describes the reason the incident was closed
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationComment(String classificationComment) {
             return classificationComment(Output.of(classificationComment));
         }
 
+        /**
+         * @param classificationReason The classification reason the incident was closed with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
             $.classificationReason = classificationReason;
             return this;
         }
 
+        /**
+         * @param classificationReason The classification reason the incident was closed with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(Either<String,IncidentClassificationReason> classificationReason) {
             return classificationReason(Output.of(classificationReason));
         }
 
+        /**
+         * @param classificationReason The classification reason the incident was closed with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(String classificationReason) {
             return classificationReason(Either.ofLeft(classificationReason));
         }
 
+        /**
+         * @param classificationReason The classification reason the incident was closed with
+         * 
+         * @return builder
+         * 
+         */
         public Builder classificationReason(IncidentClassificationReason classificationReason) {
             return classificationReason(Either.ofRight(classificationReason));
         }
 
+        /**
+         * @param description The description of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param firstActivityTimeUtc The time of the first activity in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstActivityTimeUtc(@Nullable Output<String> firstActivityTimeUtc) {
             $.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
 
+        /**
+         * @param firstActivityTimeUtc The time of the first activity in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstActivityTimeUtc(String firstActivityTimeUtc) {
             return firstActivityTimeUtc(Output.of(firstActivityTimeUtc));
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(@Nullable Output<String> incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(String incidentId) {
             return incidentId(Output.of(incidentId));
         }
 
+        /**
+         * @param labels List of labels relevant to this incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels List of labels relevant to this incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<IncidentLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels List of labels relevant to this incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(IncidentLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param lastActivityTimeUtc The time of the last activity in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastActivityTimeUtc(@Nullable Output<String> lastActivityTimeUtc) {
             $.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
 
+        /**
+         * @param lastActivityTimeUtc The time of the last activity in the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastActivityTimeUtc(String lastActivityTimeUtc) {
             return lastActivityTimeUtc(Output.of(lastActivityTimeUtc));
         }
 
+        /**
+         * @param owner Describes a user that the incident is assigned to
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
             $.owner = owner;
             return this;
         }
 
+        /**
+         * @param owner Describes a user that the incident is assigned to
+         * 
+         * @return builder
+         * 
+         */
         public Builder owner(IncidentOwnerInfoArgs owner) {
             return owner(Output.of(owner));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Output<Either<String,IncidentSeverity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,IncidentSeverity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(IncidentSeverity severity) {
             return severity(Either.ofRight(severity));
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,IncidentStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,IncidentStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(IncidentStatus status) {
             return status(Either.ofRight(status));
         }
 
+        /**
+         * @param title The title of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The title of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

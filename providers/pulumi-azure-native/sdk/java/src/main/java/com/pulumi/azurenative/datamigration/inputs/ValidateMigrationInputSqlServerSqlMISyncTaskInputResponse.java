@@ -31,6 +31,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
     @Import(name="azureApp", required=true)
     private AzureActiveDirectoryAppResponse azureApp;
 
+    /**
+     * @return Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     * 
+     */
     public AzureActiveDirectoryAppResponse azureApp() {
         return this.azureApp;
     }
@@ -42,6 +46,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
     @Import(name="backupFileShare")
     private @Nullable FileShareResponse backupFileShare;
 
+    /**
+     * @return Backup file share information for all selected databases.
+     * 
+     */
     public Optional<FileShareResponse> backupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
@@ -53,6 +61,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
     @Import(name="selectedDatabases", required=true)
     private List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -64,6 +76,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
     @Import(name="sourceConnectionInfo", required=true)
     private SqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source SQL Server
+     * 
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -75,6 +91,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
     @Import(name="storageResourceId", required=true)
     private String storageResourceId;
 
+    /**
+     * @return Fully qualified resourceId of storage
+     * 
+     */
     public String storageResourceId() {
         return this.storageResourceId;
     }
@@ -86,6 +106,10 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
     @Import(name="targetConnectionInfo", required=true)
     private MiSqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for Azure SQL Database Managed Instance
+     * 
+     */
     public MiSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -119,35 +143,77 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse ext
             $ = new ValidateMigrationInputSqlServerSqlMISyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureApp Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureApp(AzureActiveDirectoryAppResponse azureApp) {
             $.azureApp = azureApp;
             return this;
         }
 
+        /**
+         * @param backupFileShare Backup file share information for all selected databases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param storageResourceId Fully qualified resourceId of storage
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageResourceId(String storageResourceId) {
             $.storageResourceId = storageResourceId;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for Azure SQL Database Managed Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MiSqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

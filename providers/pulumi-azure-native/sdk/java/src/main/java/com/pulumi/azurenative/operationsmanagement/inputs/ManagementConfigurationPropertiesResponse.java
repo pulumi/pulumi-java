@@ -28,6 +28,10 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
     @Import(name="applicationId")
     private @Nullable String applicationId;
 
+    /**
+     * @return The applicationId of the appliance for this Management.
+     * 
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
@@ -39,6 +43,10 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
     @Import(name="parameters", required=true)
     private List<ArmTemplateParameterResponse> parameters;
 
+    /**
+     * @return Parameters to run the ARM template
+     * 
+     */
     public List<ArmTemplateParameterResponse> parameters() {
         return this.parameters;
     }
@@ -50,6 +58,10 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
     @Import(name="parentResourceType", required=true)
     private String parentResourceType;
 
+    /**
+     * @return The type of the parent resource.
+     * 
+     */
     public String parentResourceType() {
         return this.parentResourceType;
     }
@@ -61,6 +73,10 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state for the ManagementConfiguration.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -72,6 +88,10 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
     @Import(name="template", required=true)
     private Object template;
 
+    /**
+     * @return The Json object containing the ARM template to deploy
+     * 
+     */
     public Object template() {
         return this.template;
     }
@@ -104,30 +124,66 @@ public final class ManagementConfigurationPropertiesResponse extends com.pulumi.
             $ = new ManagementConfigurationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationId The applicationId of the appliance for this Management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(@Nullable String applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param parameters Parameters to run the ARM template
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ArmTemplateParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters to run the ARM template
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ArmTemplateParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param parentResourceType The type of the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourceType(String parentResourceType) {
             $.parentResourceType = parentResourceType;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state for the ManagementConfiguration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param template The Json object containing the ARM template to deploy
+         * 
+         * @return builder
+         * 
+         */
         public Builder template(Object template) {
             $.template = template;
             return this;

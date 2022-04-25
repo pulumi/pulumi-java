@@ -27,6 +27,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Search results table&#39;s Description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endSearchTime")
     private @Nullable Output<String> endSearchTime;
 
+    /**
+     * @return The timestamp to end the search by (UTC)
+     * 
+     */
     public Optional<Output<String>> endSearchTime() {
         return Optional.ofNullable(this.endSearchTime);
     }
@@ -49,6 +57,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="limit")
     private @Nullable Output<Integer> limit;
 
+    /**
+     * @return Limit the search job to return up to specified number of rows.
+     * 
+     */
     public Optional<Output<Integer>> limit() {
         return Optional.ofNullable(this.limit);
     }
@@ -60,6 +72,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Search job query.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -71,6 +87,10 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startSearchTime")
     private @Nullable Output<String> startSearchTime;
 
+    /**
+     * @return The timestamp to start the search from (UTC)
+     * 
+     */
     public Optional<Output<String>> startSearchTime() {
         return Optional.ofNullable(this.startSearchTime);
     }
@@ -103,47 +123,107 @@ public final class SearchResultsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SearchResultsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Search results table&#39;s Description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Search results table&#39;s Description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endSearchTime The timestamp to end the search by (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endSearchTime(@Nullable Output<String> endSearchTime) {
             $.endSearchTime = endSearchTime;
             return this;
         }
 
+        /**
+         * @param endSearchTime The timestamp to end the search by (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder endSearchTime(String endSearchTime) {
             return endSearchTime(Output.of(endSearchTime));
         }
 
+        /**
+         * @param limit Limit the search job to return up to specified number of rows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(@Nullable Output<Integer> limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param limit Limit the search job to return up to specified number of rows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(Integer limit) {
             return limit(Output.of(limit));
         }
 
+        /**
+         * @param query Search job query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Search job query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param startSearchTime The timestamp to start the search from (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder startSearchTime(@Nullable Output<String> startSearchTime) {
             $.startSearchTime = startSearchTime;
             return this;
         }
 
+        /**
+         * @param startSearchTime The timestamp to start the search from (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder startSearchTime(String startSearchTime) {
             return startSearchTime(Output.of(startSearchTime));
         }

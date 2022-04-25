@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetExportResult {
-    /**
-     * Has the definition for the export.
-     * 
-     */
+        /**
+         * @return Has the definition for the export.
+         * 
+         */
     private final ExportDefinitionResponse definition;
-    /**
-     * Has delivery information for the export.
-     * 
-     */
+        /**
+         * @return Has delivery information for the export.
+         * 
+         */
     private final ExportDeliveryInfoResponse deliveryInfo;
-    /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
-     * 
-     */
+        /**
+         * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
-     * 
-     */
+        /**
+         * @return The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+         * 
+         */
     private final @Nullable String format;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * If the export has an active schedule, provides an estimate of the next execution time.
-     * 
-     */
+        /**
+         * @return If the export has an active schedule, provides an estimate of the next execution time.
+         * 
+         */
     private final String nextRunTimeEstimate;
-    /**
-     * If requested, has the most recent execution history for the export.
-     * 
-     */
+        /**
+         * @return If requested, has the most recent execution history for the export.
+         * 
+         */
     private final @Nullable ExportExecutionListResultResponse runHistory;
-    /**
-     * Has schedule information for the export.
-     * 
-     */
+        /**
+         * @return Has schedule information for the export.
+         * 
+         */
     private final @Nullable ExportScheduleResponse schedule;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetExportResult {
     }
 
     /**
-     * Has the definition for the export.
+     * @return Has the definition for the export.
      * 
-    */
+     */
     public ExportDefinitionResponse definition() {
         return this.definition;
     }
     /**
-     * Has delivery information for the export.
+     * @return Has delivery information for the export.
      * 
-    */
+     */
     public ExportDeliveryInfoResponse deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
+     * @return The format of the export being delivered. Currently only &#39;Csv&#39; is supported.
      * 
-    */
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * If the export has an active schedule, provides an estimate of the next execution time.
+     * @return If the export has an active schedule, provides an estimate of the next execution time.
      * 
-    */
+     */
     public String nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
     /**
-     * If requested, has the most recent execution history for the export.
+     * @return If requested, has the most recent execution history for the export.
      * 
-    */
+     */
     public Optional<ExportExecutionListResultResponse> runHistory() {
         return Optional.ofNullable(this.runHistory);
     }
     /**
-     * Has schedule information for the export.
+     * @return Has schedule information for the export.
      * 
-    */
+     */
     public Optional<ExportScheduleResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

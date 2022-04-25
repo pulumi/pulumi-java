@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureKeyVaultSecretReferenceResponse {
-    /**
-     * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object secretName;
-    /**
-     * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object secretVersion;
-    /**
-     * The Azure Key Vault linked service reference.
-     * 
-     */
+        /**
+         * @return The Azure Key Vault linked service reference.
+         * 
+         */
     private final LinkedServiceReferenceResponse store;
-    /**
-     * Type of the secret.
-     * Expected value is &#39;AzureKeyVaultSecret&#39;.
-     * 
-     */
+        /**
+         * @return Type of the secret.
+         * Expected value is &#39;AzureKeyVaultSecret&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -48,31 +48,31 @@ public final class AzureKeyVaultSecretReferenceResponse {
     }
 
     /**
-     * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
+     * @return The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object secretName() {
         return this.secretName;
     }
     /**
-     * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
+     * @return The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
     /**
-     * The Azure Key Vault linked service reference.
+     * @return The Azure Key Vault linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse store() {
         return this.store;
     }
     /**
-     * Type of the secret.
+     * @return Type of the secret.
      * Expected value is &#39;AzureKeyVaultSecret&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

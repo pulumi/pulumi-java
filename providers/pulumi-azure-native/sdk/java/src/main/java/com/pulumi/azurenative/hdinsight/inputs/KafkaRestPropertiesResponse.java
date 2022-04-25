@@ -27,6 +27,10 @@ public final class KafkaRestPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="clientGroupInfo")
     private @Nullable ClientGroupInfoResponse clientGroupInfo;
 
+    /**
+     * @return The information of AAD security group.
+     * 
+     */
     public Optional<ClientGroupInfoResponse> clientGroupInfo() {
         return Optional.ofNullable(this.clientGroupInfo);
     }
@@ -38,6 +42,10 @@ public final class KafkaRestPropertiesResponse extends com.pulumi.resources.Invo
     @Import(name="configurationOverride")
     private @Nullable Map<String,String> configurationOverride;
 
+    /**
+     * @return The configurations that need to be overriden.
+     * 
+     */
     public Optional<Map<String,String>> configurationOverride() {
         return Optional.ofNullable(this.configurationOverride);
     }
@@ -67,11 +75,23 @@ public final class KafkaRestPropertiesResponse extends com.pulumi.resources.Invo
             $ = new KafkaRestPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientGroupInfo The information of AAD security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientGroupInfo(@Nullable ClientGroupInfoResponse clientGroupInfo) {
             $.clientGroupInfo = clientGroupInfo;
             return this;
         }
 
+        /**
+         * @param configurationOverride The configurations that need to be overriden.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
             $.configurationOverride = configurationOverride;
             return this;

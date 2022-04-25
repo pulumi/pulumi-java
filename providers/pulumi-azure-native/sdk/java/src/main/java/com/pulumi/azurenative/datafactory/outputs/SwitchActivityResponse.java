@@ -54,46 +54,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SwitchActivityResponse {
-    /**
-     * List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
-     * 
-     */
+        /**
+         * @return List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+         * 
+         */
     private final @Nullable List<SwitchCaseResponse> cases;
-    /**
-     * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
-     * 
-     */
+        /**
+         * @return List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
+         * 
+         */
     private final @Nullable List<Object> defaultActivities;
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
-     * 
-     */
+        /**
+         * @return An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
+         * 
+         */
     private final ExpressionResponse on;
-    /**
-     * Type of activity.
-     * Expected value is &#39;Switch&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;Switch&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -117,59 +117,59 @@ public final class SwitchActivityResponse {
     }
 
     /**
-     * List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
+     * @return List of cases that correspond to expected values of the &#39;on&#39; property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
      * 
-    */
+     */
     public List<SwitchCaseResponse> cases() {
         return this.cases == null ? List.of() : this.cases;
     }
     /**
-     * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
+     * @return List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
      * 
-    */
+     */
     public List<Object> defaultActivities() {
         return this.defaultActivities == null ? List.of() : this.defaultActivities;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
+     * @return An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
      * 
-    */
+     */
     public ExpressionResponse on() {
         return this.on;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Switch&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

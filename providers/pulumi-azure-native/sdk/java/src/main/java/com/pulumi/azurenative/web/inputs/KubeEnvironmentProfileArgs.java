@@ -26,6 +26,10 @@ public final class KubeEnvironmentProfileArgs extends com.pulumi.resources.Resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID of the Kubernetes Environment.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -54,11 +58,23 @@ public final class KubeEnvironmentProfileArgs extends com.pulumi.resources.Resou
             $ = new KubeEnvironmentProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID of the Kubernetes Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID of the Kubernetes Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

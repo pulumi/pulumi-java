@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ControllerDetailsResponse {
-    /**
-     * controller arm resource id
-     * 
-     */
+        /**
+         * @return controller arm resource id
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ControllerDetailsResponse {
     }
 
     /**
-     * controller arm resource id
+     * @return controller arm resource id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

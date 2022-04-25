@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WindowsEventLogDataSourceResponse {
-    /**
-     * A friendly name for the data source.
-     * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
-     */
+        /**
+         * @return A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * List of streams that this data source will be sent to.
-     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
-     */
+        /**
+         * @return List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         */
     private final @Nullable List<String> streams;
-    /**
-     * A list of Windows Event Log queries in XPATH format.
-     * 
-     */
+        /**
+         * @return A list of Windows Event Log queries in XPATH format.
+         * 
+         */
     private final @Nullable List<String> xPathQueries;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class WindowsEventLogDataSourceResponse {
     }
 
     /**
-     * A friendly name for the data source.
+     * @return A friendly name for the data source.
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * List of streams that this data source will be sent to.
+     * @return List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
-    */
+     */
     public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }
     /**
-     * A list of Windows Event Log queries in XPATH format.
+     * @return A list of Windows Event Log queries in XPATH format.
      * 
-    */
+     */
     public List<String> xPathQueries() {
         return this.xPathQueries == null ? List.of() : this.xPathQueries;
     }

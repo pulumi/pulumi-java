@@ -21,6 +21,10 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
     @Import(name="livenessRoute")
     private @Nullable RouteResponse livenessRoute;
 
+    /**
+     * @return The route to check the liveness of the inference server container.
+     * 
+     */
     public Optional<RouteResponse> livenessRoute() {
         return Optional.ofNullable(this.livenessRoute);
     }
@@ -32,6 +36,10 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
     @Import(name="readinessRoute")
     private @Nullable RouteResponse readinessRoute;
 
+    /**
+     * @return The route to check the readiness of the inference server container.
+     * 
+     */
     public Optional<RouteResponse> readinessRoute() {
         return Optional.ofNullable(this.readinessRoute);
     }
@@ -43,6 +51,10 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
     @Import(name="scoringRoute")
     private @Nullable RouteResponse scoringRoute;
 
+    /**
+     * @return The port to send the scoring requests to, within the inference server container.
+     * 
+     */
     public Optional<RouteResponse> scoringRoute() {
         return Optional.ofNullable(this.scoringRoute);
     }
@@ -73,16 +85,34 @@ public final class InferenceContainerPropertiesResponse extends com.pulumi.resou
             $ = new InferenceContainerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param livenessRoute The route to check the liveness of the inference server container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder livenessRoute(@Nullable RouteResponse livenessRoute) {
             $.livenessRoute = livenessRoute;
             return this;
         }
 
+        /**
+         * @param readinessRoute The route to check the readiness of the inference server container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessRoute(@Nullable RouteResponse readinessRoute) {
             $.readinessRoute = readinessRoute;
             return this;
         }
 
+        /**
+         * @param scoringRoute The port to send the scoring requests to, within the inference server container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scoringRoute(@Nullable RouteResponse scoringRoute) {
             $.scoringRoute = scoringRoute;
             return this;

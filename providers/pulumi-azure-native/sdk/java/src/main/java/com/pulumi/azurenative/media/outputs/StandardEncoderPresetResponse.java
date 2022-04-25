@@ -30,26 +30,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StandardEncoderPresetResponse {
-    /**
-     * The list of codecs to be used when encoding the input video.
-     * 
-     */
+        /**
+         * @return The list of codecs to be used when encoding the input video.
+         * 
+         */
     private final List<Object> codecs;
-    /**
-     * One or more filtering operations that are applied to the input media before encoding.
-     * 
-     */
+        /**
+         * @return One or more filtering operations that are applied to the input media before encoding.
+         * 
+         */
     private final @Nullable FiltersResponse filters;
-    /**
-     * The list of outputs to be produced by the encoder.
-     * 
-     */
+        /**
+         * @return The list of outputs to be produced by the encoder.
+         * 
+         */
     private final List<Object> formats;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -65,31 +65,31 @@ public final class StandardEncoderPresetResponse {
     }
 
     /**
-     * The list of codecs to be used when encoding the input video.
+     * @return The list of codecs to be used when encoding the input video.
      * 
-    */
+     */
     public List<Object> codecs() {
         return this.codecs;
     }
     /**
-     * One or more filtering operations that are applied to the input media before encoding.
+     * @return One or more filtering operations that are applied to the input media before encoding.
      * 
-    */
+     */
     public Optional<FiltersResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
     /**
-     * The list of outputs to be produced by the encoder.
+     * @return The list of outputs to be produced by the encoder.
      * 
-    */
+     */
     public List<Object> formats() {
         return this.formats;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TimelineErrorResponse {
-    /**
-     * the error message
-     * 
-     */
+        /**
+         * @return the error message
+         * 
+         */
     private final String errorMessage;
-    /**
-     * the query kind
-     * 
-     */
+        /**
+         * @return the query kind
+         * 
+         */
     private final String kind;
-    /**
-     * the query id
-     * 
-     */
+        /**
+         * @return the query id
+         * 
+         */
     private final @Nullable String queryId;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class TimelineErrorResponse {
     }
 
     /**
-     * the error message
+     * @return the error message
      * 
-    */
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
     /**
-     * the query kind
+     * @return the query kind
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * the query id
+     * @return the query id
      * 
-    */
+     */
     public Optional<String> queryId() {
         return Optional.ofNullable(this.queryId);
     }

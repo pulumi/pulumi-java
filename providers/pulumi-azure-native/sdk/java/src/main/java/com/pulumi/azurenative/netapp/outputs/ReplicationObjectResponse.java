@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReplicationObjectResponse {
-    /**
-     * Indicates whether the local volume is the source or destination for the Volume Replication
-     * 
-     */
+        /**
+         * @return Indicates whether the local volume is the source or destination for the Volume Replication
+         * 
+         */
     private final @Nullable String endpointType;
-    /**
-     * The remote region for the other end of the Volume Replication.
-     * 
-     */
+        /**
+         * @return The remote region for the other end of the Volume Replication.
+         * 
+         */
     private final @Nullable String remoteVolumeRegion;
-    /**
-     * The resource ID of the remote volume.
-     * 
-     */
+        /**
+         * @return The resource ID of the remote volume.
+         * 
+         */
     private final String remoteVolumeResourceId;
-    /**
-     * Id
-     * 
-     */
+        /**
+         * @return Id
+         * 
+         */
     private final @Nullable String replicationId;
-    /**
-     * Schedule
-     * 
-     */
+        /**
+         * @return Schedule
+         * 
+         */
     private final String replicationSchedule;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ReplicationObjectResponse {
     }
 
     /**
-     * Indicates whether the local volume is the source or destination for the Volume Replication
+     * @return Indicates whether the local volume is the source or destination for the Volume Replication
      * 
-    */
+     */
     public Optional<String> endpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
-     * The remote region for the other end of the Volume Replication.
+     * @return The remote region for the other end of the Volume Replication.
      * 
-    */
+     */
     public Optional<String> remoteVolumeRegion() {
         return Optional.ofNullable(this.remoteVolumeRegion);
     }
     /**
-     * The resource ID of the remote volume.
+     * @return The resource ID of the remote volume.
      * 
-    */
+     */
     public String remoteVolumeResourceId() {
         return this.remoteVolumeResourceId;
     }
     /**
-     * Id
+     * @return Id
      * 
-    */
+     */
     public Optional<String> replicationId() {
         return Optional.ofNullable(this.replicationId);
     }
     /**
-     * Schedule
+     * @return Schedule
      * 
-    */
+     */
     public String replicationSchedule() {
         return this.replicationSchedule;
     }

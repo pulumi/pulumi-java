@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CacheKeyQueryStringActionParametersResponse {
     private final String odataType;
-    /**
-     * query parameters to include or exclude (comma separated).
-     * 
-     */
+        /**
+         * @return query parameters to include or exclude (comma separated).
+         * 
+         */
     private final @Nullable String queryParameters;
-    /**
-     * Caching behavior for the requests
-     * 
-     */
+        /**
+         * @return Caching behavior for the requests
+         * 
+         */
     private final String queryStringBehavior;
 
     @CustomType.Constructor
@@ -37,16 +37,16 @@ public final class CacheKeyQueryStringActionParametersResponse {
         return this.odataType;
     }
     /**
-     * query parameters to include or exclude (comma separated).
+     * @return query parameters to include or exclude (comma separated).
      * 
-    */
+     */
     public Optional<String> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
     /**
-     * Caching behavior for the requests
+     * @return Caching behavior for the requests
      * 
-    */
+     */
     public String queryStringBehavior() {
         return this.queryStringBehavior;
     }

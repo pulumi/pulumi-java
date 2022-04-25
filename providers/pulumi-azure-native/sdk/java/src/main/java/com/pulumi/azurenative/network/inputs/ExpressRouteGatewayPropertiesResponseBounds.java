@@ -25,6 +25,10 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends com.pulum
     @Import(name="max")
     private @Nullable Integer max;
 
+    /**
+     * @return Maximum number of scale units deployed for ExpressRoute gateway.
+     * 
+     */
     public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
@@ -36,6 +40,10 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends com.pulum
     @Import(name="min")
     private @Nullable Integer min;
 
+    /**
+     * @return Minimum number of scale units deployed for ExpressRoute gateway.
+     * 
+     */
     public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }
@@ -65,11 +73,23 @@ public final class ExpressRouteGatewayPropertiesResponseBounds extends com.pulum
             $ = new ExpressRouteGatewayPropertiesResponseBounds(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Maximum number of scale units deployed for ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Integer max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param min Minimum number of scale units deployed for ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Integer min) {
             $.min = min;
             return this;

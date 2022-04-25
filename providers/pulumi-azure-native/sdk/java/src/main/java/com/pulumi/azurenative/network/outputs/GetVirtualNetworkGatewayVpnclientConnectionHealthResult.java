@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
-    /**
-     * List of vpn client connection health.
-     * 
-     */
+        /**
+         * @return List of vpn client connection health.
+         * 
+         */
     private final @Nullable List<VpnClientConnectionHealthDetailResponse> value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
     }
 
     /**
-     * List of vpn client connection health.
+     * @return List of vpn client connection health.
      * 
-    */
+     */
     public List<VpnClientConnectionHealthDetailResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

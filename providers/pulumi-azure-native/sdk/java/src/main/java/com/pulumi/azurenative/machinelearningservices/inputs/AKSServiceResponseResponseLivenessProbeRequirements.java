@@ -25,6 +25,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="failureThreshold")
     private @Nullable Integer failureThreshold;
 
+    /**
+     * @return The number of failures to allow before returning an unhealthy status.
+     * 
+     */
     public Optional<Integer> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -36,6 +40,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="initialDelaySeconds")
     private @Nullable Integer initialDelaySeconds;
 
+    /**
+     * @return The delay before the first probe in seconds.
+     * 
+     */
     public Optional<Integer> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
@@ -47,6 +55,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="periodSeconds")
     private @Nullable Integer periodSeconds;
 
+    /**
+     * @return The length of time between probes in seconds.
+     * 
+     */
     public Optional<Integer> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
@@ -58,6 +70,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="successThreshold")
     private @Nullable Integer successThreshold;
 
+    /**
+     * @return The number of successful probes before returning a healthy status.
+     * 
+     */
     public Optional<Integer> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -69,6 +85,10 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
     @Import(name="timeoutSeconds")
     private @Nullable Integer timeoutSeconds;
 
+    /**
+     * @return The probe timeout in seconds.
+     * 
+     */
     public Optional<Integer> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -101,26 +121,56 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends c
             $ = new AKSServiceResponseResponseLivenessProbeRequirements(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureThreshold The number of failures to allow before returning an unhealthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param initialDelaySeconds The delay before the first probe in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
+        /**
+         * @param periodSeconds The length of time between probes in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
             $.periodSeconds = periodSeconds;
             return this;
         }
 
+        /**
+         * @param successThreshold The number of successful probes before returning a healthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Integer successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds The probe timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;

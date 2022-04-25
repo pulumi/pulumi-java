@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTestResultFileResult {
-    /**
-     * File contents.
-     * 
-     */
+        /**
+         * @return File contents.
+         * 
+         */
     private final @Nullable String data;
-    /**
-     * The URI that can be used to request the next section of the result file in the event the file is too large for a single request.
-     * 
-     */
+        /**
+         * @return The URI that can be used to request the next section of the result file in the event the file is too large for a single request.
+         * 
+         */
     private final @Nullable String nextLink;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class GetTestResultFileResult {
     }
 
     /**
-     * File contents.
+     * @return File contents.
      * 
-    */
+     */
     public Optional<String> data() {
         return Optional.ofNullable(this.data);
     }
     /**
-     * The URI that can be used to request the next section of the result file in the event the file is too large for a single request.
+     * @return The URI that can be used to request the next section of the result file in the event the file is too large for a single request.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }

@@ -25,6 +25,10 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Reference name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference pipeline name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -47,6 +55,10 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Pipeline reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -77,16 +89,34 @@ public final class PipelineReferenceResponse extends com.pulumi.resources.Invoke
             $ = new PipelineReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Reference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param referenceName Reference pipeline name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Pipeline reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

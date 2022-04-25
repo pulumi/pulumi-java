@@ -26,6 +26,10 @@ public final class ScopeNamespaceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="targetNamespace")
     private @Nullable Output<String> targetNamespace;
 
+    /**
+     * @return Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
+     * 
+     */
     public Optional<Output<String>> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -54,11 +58,23 @@ public final class ScopeNamespaceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ScopeNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetNamespace Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;
         }
 
+        /**
+         * @param targetNamespace Namespace where the extensionInstance will be created for an Namespace scoped extensionInstance.  If this namespace does not exist, it will be created
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(String targetNamespace) {
             return targetNamespace(Output.of(targetNamespace));
         }

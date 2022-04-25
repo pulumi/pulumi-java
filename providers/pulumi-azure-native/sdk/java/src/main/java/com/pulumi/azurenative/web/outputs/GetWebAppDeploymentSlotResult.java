@@ -13,70 +13,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebAppDeploymentSlotResult {
-    /**
-     * True if deployment is currently active, false if completed and null if not started.
-     * 
-     */
+        /**
+         * @return True if deployment is currently active, false if completed and null if not started.
+         * 
+         */
     private final @Nullable Boolean active;
-    /**
-     * Who authored the deployment.
-     * 
-     */
+        /**
+         * @return Who authored the deployment.
+         * 
+         */
     private final @Nullable String author;
-    /**
-     * Author email.
-     * 
-     */
+        /**
+         * @return Author email.
+         * 
+         */
     private final @Nullable String authorEmail;
-    /**
-     * Who performed the deployment.
-     * 
-     */
+        /**
+         * @return Who performed the deployment.
+         * 
+         */
     private final @Nullable String deployer;
-    /**
-     * Details on deployment.
-     * 
-     */
+        /**
+         * @return Details on deployment.
+         * 
+         */
     private final @Nullable String details;
-    /**
-     * End time.
-     * 
-     */
+        /**
+         * @return End time.
+         * 
+         */
     private final @Nullable String endTime;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Details about deployment status.
-     * 
-     */
+        /**
+         * @return Details about deployment status.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * Start time.
-     * 
-     */
+        /**
+         * @return Start time.
+         * 
+         */
     private final @Nullable String startTime;
-    /**
-     * Deployment status.
-     * 
-     */
+        /**
+         * @return Deployment status.
+         * 
+         */
     private final @Nullable Integer status;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -110,93 +110,93 @@ public final class GetWebAppDeploymentSlotResult {
     }
 
     /**
-     * True if deployment is currently active, false if completed and null if not started.
+     * @return True if deployment is currently active, false if completed and null if not started.
      * 
-    */
+     */
     public Optional<Boolean> active() {
         return Optional.ofNullable(this.active);
     }
     /**
-     * Who authored the deployment.
+     * @return Who authored the deployment.
      * 
-    */
+     */
     public Optional<String> author() {
         return Optional.ofNullable(this.author);
     }
     /**
-     * Author email.
+     * @return Author email.
      * 
-    */
+     */
     public Optional<String> authorEmail() {
         return Optional.ofNullable(this.authorEmail);
     }
     /**
-     * Who performed the deployment.
+     * @return Who performed the deployment.
      * 
-    */
+     */
     public Optional<String> deployer() {
         return Optional.ofNullable(this.deployer);
     }
     /**
-     * Details on deployment.
+     * @return Details on deployment.
      * 
-    */
+     */
     public Optional<String> details() {
         return Optional.ofNullable(this.details);
     }
     /**
-     * End time.
+     * @return End time.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Details about deployment status.
+     * @return Details about deployment status.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Start time.
+     * @return Start time.
      * 
-    */
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
-     * Deployment status.
+     * @return Deployment status.
      * 
-    */
+     */
     public Optional<Integer> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

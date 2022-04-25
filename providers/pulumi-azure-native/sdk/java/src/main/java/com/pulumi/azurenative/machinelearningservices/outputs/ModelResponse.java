@@ -17,110 +17,110 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ModelResponse {
-    /**
-     * The Model creation time (UTC).
-     * 
-     */
+        /**
+         * @return The Model creation time (UTC).
+         * 
+         */
     private final @Nullable String createdTime;
-    /**
-     * The list of datasets associated with the model.
-     * 
-     */
+        /**
+         * @return The list of datasets associated with the model.
+         * 
+         */
     private final @Nullable List<DatasetReferenceResponse> datasets;
-    /**
-     * Models derived from this model
-     * 
-     */
+        /**
+         * @return Models derived from this model
+         * 
+         */
     private final @Nullable List<String> derivedModelIds;
-    /**
-     * The Model description text.
-     * 
-     */
+        /**
+         * @return The Model description text.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The name of the experiment where this model was created.
-     * 
-     */
+        /**
+         * @return The name of the experiment where this model was created.
+         * 
+         */
     private final @Nullable String experimentName;
-    /**
-     * The Model framework.
-     * 
-     */
+        /**
+         * @return The Model framework.
+         * 
+         */
     private final @Nullable String framework;
-    /**
-     * The Model framework version.
-     * 
-     */
+        /**
+         * @return The Model framework version.
+         * 
+         */
     private final @Nullable String frameworkVersion;
-    /**
-     * The Model Id.
-     * 
-     */
+        /**
+         * @return The Model Id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The Model tag dictionary. Items are mutable.
-     * 
-     */
+        /**
+         * @return The Model tag dictionary. Items are mutable.
+         * 
+         */
     private final @Nullable Map<String,String> kvTags;
-    /**
-     * The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
-     * 
-     */
+        /**
+         * @return The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+         * 
+         */
     private final String mimeType;
-    /**
-     * The Model last modified time (UTC).
-     * 
-     */
+        /**
+         * @return The Model last modified time (UTC).
+         * 
+         */
     private final @Nullable String modifiedTime;
-    /**
-     * The Model name.
-     * 
-     */
+        /**
+         * @return The Model name.
+         * 
+         */
     private final String name;
-    /**
-     * The Parent Model Id.
-     * 
-     */
+        /**
+         * @return The Parent Model Id.
+         * 
+         */
     private final @Nullable String parentModelId;
-    /**
-     * The Model property dictionary. Properties are immutable.
-     * 
-     */
+        /**
+         * @return The Model property dictionary. Properties are immutable.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Resource requirements for the model
-     * 
-     */
+        /**
+         * @return Resource requirements for the model
+         * 
+         */
     private final @Nullable ContainerResourceRequirementsResponse resourceRequirements;
-    /**
-     * The RunId that created this model.
-     * 
-     */
+        /**
+         * @return The RunId that created this model.
+         * 
+         */
     private final @Nullable String runId;
-    /**
-     * Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-     * 
-     */
+        /**
+         * @return Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+         * 
+         */
     private final @Nullable String sampleInputData;
-    /**
-     * Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
-     * 
-     */
+        /**
+         * @return Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+         * 
+         */
     private final @Nullable String sampleOutputData;
-    /**
-     * Indicates whether we need to unpack the Model during docker Image creation.
-     * 
-     */
+        /**
+         * @return Indicates whether we need to unpack the Model during docker Image creation.
+         * 
+         */
     private final @Nullable Boolean unpack;
-    /**
-     * The URL of the Model. Usually a SAS URL.
-     * 
-     */
+        /**
+         * @return The URL of the Model. Usually a SAS URL.
+         * 
+         */
     private final String url;
-    /**
-     * The Model version assigned by Model Management Service.
-     * 
-     */
+        /**
+         * @return The Model version assigned by Model Management Service.
+         * 
+         */
     private final @Nullable Double version;
 
     @CustomType.Constructor
@@ -170,149 +170,149 @@ public final class ModelResponse {
     }
 
     /**
-     * The Model creation time (UTC).
+     * @return The Model creation time (UTC).
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * The list of datasets associated with the model.
+     * @return The list of datasets associated with the model.
      * 
-    */
+     */
     public List<DatasetReferenceResponse> datasets() {
         return this.datasets == null ? List.of() : this.datasets;
     }
     /**
-     * Models derived from this model
+     * @return Models derived from this model
      * 
-    */
+     */
     public List<String> derivedModelIds() {
         return this.derivedModelIds == null ? List.of() : this.derivedModelIds;
     }
     /**
-     * The Model description text.
+     * @return The Model description text.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The name of the experiment where this model was created.
+     * @return The name of the experiment where this model was created.
      * 
-    */
+     */
     public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
     /**
-     * The Model framework.
+     * @return The Model framework.
      * 
-    */
+     */
     public Optional<String> framework() {
         return Optional.ofNullable(this.framework);
     }
     /**
-     * The Model framework version.
+     * @return The Model framework version.
      * 
-    */
+     */
     public Optional<String> frameworkVersion() {
         return Optional.ofNullable(this.frameworkVersion);
     }
     /**
-     * The Model Id.
+     * @return The Model Id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The Model tag dictionary. Items are mutable.
+     * @return The Model tag dictionary. Items are mutable.
      * 
-    */
+     */
     public Map<String,String> kvTags() {
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
     /**
-     * The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
+     * @return The MIME type of Model content. For more details about MIME type, please open https://www.iana.org/assignments/media-types/media-types.xhtml
      * 
-    */
+     */
     public String mimeType() {
         return this.mimeType;
     }
     /**
-     * The Model last modified time (UTC).
+     * @return The Model last modified time (UTC).
      * 
-    */
+     */
     public Optional<String> modifiedTime() {
         return Optional.ofNullable(this.modifiedTime);
     }
     /**
-     * The Model name.
+     * @return The Model name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Parent Model Id.
+     * @return The Parent Model Id.
      * 
-    */
+     */
     public Optional<String> parentModelId() {
         return Optional.ofNullable(this.parentModelId);
     }
     /**
-     * The Model property dictionary. Properties are immutable.
+     * @return The Model property dictionary. Properties are immutable.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Resource requirements for the model
+     * @return Resource requirements for the model
      * 
-    */
+     */
     public Optional<ContainerResourceRequirementsResponse> resourceRequirements() {
         return Optional.ofNullable(this.resourceRequirements);
     }
     /**
-     * The RunId that created this model.
+     * @return The RunId that created this model.
      * 
-    */
+     */
     public Optional<String> runId() {
         return Optional.ofNullable(this.runId);
     }
     /**
-     * Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+     * @return Sample Input Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
      * 
-    */
+     */
     public Optional<String> sampleInputData() {
         return Optional.ofNullable(this.sampleInputData);
     }
     /**
-     * Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
+     * @return Sample Output Data for the Model. A reference to a dataset in the workspace in the format aml://dataset/{datasetId}
      * 
-    */
+     */
     public Optional<String> sampleOutputData() {
         return Optional.ofNullable(this.sampleOutputData);
     }
     /**
-     * Indicates whether we need to unpack the Model during docker Image creation.
+     * @return Indicates whether we need to unpack the Model during docker Image creation.
      * 
-    */
+     */
     public Optional<Boolean> unpack() {
         return Optional.ofNullable(this.unpack);
     }
     /**
-     * The URL of the Model. Usually a SAS URL.
+     * @return The URL of the Model. Usually a SAS URL.
      * 
-    */
+     */
     public String url() {
         return this.url;
     }
     /**
-     * The Model version assigned by Model Management Service.
+     * @return The Model version assigned by Model Management Service.
      * 
-    */
+     */
     public Optional<Double> version() {
         return Optional.ofNullable(this.version);
     }

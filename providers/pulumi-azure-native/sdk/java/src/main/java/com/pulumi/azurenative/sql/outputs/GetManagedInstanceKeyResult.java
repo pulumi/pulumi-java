@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetManagedInstanceKeyResult {
-    /**
-     * Key auto rotation opt-in flag. Either true or false.
-     * 
-     */
+        /**
+         * @return Key auto rotation opt-in flag. Either true or false.
+         * 
+         */
     private final Boolean autoRotationEnabled;
-    /**
-     * The key creation date.
-     * 
-     */
+        /**
+         * @return The key creation date.
+         * 
+         */
     private final String creationDate;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of encryption protector. This is metadata used for the Azure portal experience.
-     * 
-     */
+        /**
+         * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
+         * 
+         */
     private final String kind;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Thumbprint of the key.
-     * 
-     */
+        /**
+         * @return Thumbprint of the key.
+         * 
+         */
     private final String thumbprint;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class GetManagedInstanceKeyResult {
     }
 
     /**
-     * Key auto rotation opt-in flag. Either true or false.
+     * @return Key auto rotation opt-in flag. Either true or false.
      * 
-    */
+     */
     public Boolean autoRotationEnabled() {
         return this.autoRotationEnabled;
     }
     /**
-     * The key creation date.
+     * @return The key creation date.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of encryption protector. This is metadata used for the Azure portal experience.
+     * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Thumbprint of the key.
+     * @return Thumbprint of the key.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

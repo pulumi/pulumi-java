@@ -14,100 +14,100 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNamespaceResult {
-    /**
-     * The time the namespace was created.
-     * 
-     */
+        /**
+         * @return The time the namespace was created.
+         * 
+         */
     private final @Nullable String createdAt;
-    /**
-     * Whether or not the namespace is set as Critical.
-     * 
-     */
+        /**
+         * @return Whether or not the namespace is set as Critical.
+         * 
+         */
     private final @Nullable Boolean critical;
-    /**
-     * Data center for the namespace
-     * 
-     */
+        /**
+         * @return Data center for the namespace
+         * 
+         */
     private final @Nullable String dataCenter;
-    /**
-     * Whether or not the namespace is currently enabled.
-     * 
-     */
+        /**
+         * @return Whether or not the namespace is currently enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Identifier for Azure Insights metrics
-     * 
-     */
+        /**
+         * @return Identifier for Azure Insights metrics
+         * 
+         */
     private final String metricId;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * The namespace type.
-     * 
-     */
+        /**
+         * @return The namespace type.
+         * 
+         */
     private final @Nullable String namespaceType;
-    /**
-     * Provisioning state of the Namespace.
-     * 
-     */
+        /**
+         * @return Provisioning state of the Namespace.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
-     * 
-     */
+        /**
+         * @return Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
+         * 
+         */
     private final @Nullable String region;
-    /**
-     * ScaleUnit where the namespace gets created
-     * 
-     */
+        /**
+         * @return ScaleUnit where the namespace gets created
+         * 
+         */
     private final @Nullable String scaleUnit;
-    /**
-     * Endpoint you can use to perform NotificationHub operations.
-     * 
-     */
+        /**
+         * @return Endpoint you can use to perform NotificationHub operations.
+         * 
+         */
     private final @Nullable String serviceBusEndpoint;
-    /**
-     * The sku of the created namespace
-     * 
-     */
+        /**
+         * @return The sku of the created namespace
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
-     * 
-     */
+        /**
+         * @return Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * The Id of the Azure subscription associated with the namespace.
-     * 
-     */
+        /**
+         * @return The Id of the Azure subscription associated with the namespace.
+         * 
+         */
     private final @Nullable String subscriptionId;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * The time the namespace was updated.
-     * 
-     */
+        /**
+         * @return The time the namespace was updated.
+         * 
+         */
     private final @Nullable String updatedAt;
 
     @CustomType.Constructor
@@ -153,135 +153,135 @@ public final class GetNamespaceResult {
     }
 
     /**
-     * The time the namespace was created.
+     * @return The time the namespace was created.
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * Whether or not the namespace is set as Critical.
+     * @return Whether or not the namespace is set as Critical.
      * 
-    */
+     */
     public Optional<Boolean> critical() {
         return Optional.ofNullable(this.critical);
     }
     /**
-     * Data center for the namespace
+     * @return Data center for the namespace
      * 
-    */
+     */
     public Optional<String> dataCenter() {
         return Optional.ofNullable(this.dataCenter);
     }
     /**
-     * Whether or not the namespace is currently enabled.
+     * @return Whether or not the namespace is currently enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Identifier for Azure Insights metrics
+     * @return Identifier for Azure Insights metrics
      * 
-    */
+     */
     public String metricId() {
         return this.metricId;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The namespace type.
+     * @return The namespace type.
      * 
-    */
+     */
     public Optional<String> namespaceType() {
         return Optional.ofNullable(this.namespaceType);
     }
     /**
-     * Provisioning state of the Namespace.
+     * @return Provisioning state of the Namespace.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
+     * @return Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
-     * ScaleUnit where the namespace gets created
+     * @return ScaleUnit where the namespace gets created
      * 
-    */
+     */
     public Optional<String> scaleUnit() {
         return Optional.ofNullable(this.scaleUnit);
     }
     /**
-     * Endpoint you can use to perform NotificationHub operations.
+     * @return Endpoint you can use to perform NotificationHub operations.
      * 
-    */
+     */
     public Optional<String> serviceBusEndpoint() {
         return Optional.ofNullable(this.serviceBusEndpoint);
     }
     /**
-     * The sku of the created namespace
+     * @return The sku of the created namespace
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
+     * @return Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The Id of the Azure subscription associated with the namespace.
+     * @return The Id of the Azure subscription associated with the namespace.
      * 
-    */
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The time the namespace was updated.
+     * @return The time the namespace was updated.
      * 
-    */
+     */
     public Optional<String> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }

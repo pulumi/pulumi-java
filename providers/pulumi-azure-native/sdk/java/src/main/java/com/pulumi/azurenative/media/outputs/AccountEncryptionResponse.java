@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AccountEncryptionResponse {
-    /**
-     * The properties of the key used to encrypt the account.
-     * 
-     */
+        /**
+         * @return The properties of the key used to encrypt the account.
+         * 
+         */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
-    /**
-     * The type of key used to encrypt the Account Key.
-     * 
-     */
+        /**
+         * @return The type of key used to encrypt the Account Key.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AccountEncryptionResponse {
     }
 
     /**
-     * The properties of the key used to encrypt the account.
+     * @return The properties of the key used to encrypt the account.
      * 
-    */
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
-     * The type of key used to encrypt the Account Key.
+     * @return The type of key used to encrypt the Account Key.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

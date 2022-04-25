@@ -35,6 +35,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="allocationState", required=true)
     private String allocationState;
 
+    /**
+     * @return Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+     * 
+     */
     public String allocationState() {
         return this.allocationState;
     }
@@ -46,6 +50,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="allocationStateTransitionTime", required=true)
     private String allocationStateTransitionTime;
 
+    /**
+     * @return The time at which the compute entered its current allocation state.
+     * 
+     */
     public String allocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
     }
@@ -57,6 +65,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="currentNodeCount", required=true)
     private Integer currentNodeCount;
 
+    /**
+     * @return The number of compute nodes currently assigned to the compute.
+     * 
+     */
     public Integer currentNodeCount() {
         return this.currentNodeCount;
     }
@@ -68,6 +80,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="enableNodePublicIp")
     private @Nullable Boolean enableNodePublicIp;
 
+    /**
+     * @return Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+     * 
+     */
     public Optional<Boolean> enableNodePublicIp() {
         return Optional.ofNullable(this.enableNodePublicIp);
     }
@@ -79,6 +95,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="errors", required=true)
     private List<MachineLearningServiceErrorResponse> errors;
 
+    /**
+     * @return Collection of errors encountered by various compute nodes during node setup.
+     * 
+     */
     public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
     }
@@ -90,6 +110,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="isolatedNetwork")
     private @Nullable Boolean isolatedNetwork;
 
+    /**
+     * @return Network is isolated or not
+     * 
+     */
     public Optional<Boolean> isolatedNetwork() {
         return Optional.ofNullable(this.isolatedNetwork);
     }
@@ -101,6 +125,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="nodeStateCounts", required=true)
     private NodeStateCountsResponse nodeStateCounts;
 
+    /**
+     * @return Counts of various node states on the compute.
+     * 
+     */
     public NodeStateCountsResponse nodeStateCounts() {
         return this.nodeStateCounts;
     }
@@ -112,6 +140,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return Compute OS Type
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -123,6 +155,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="remoteLoginPortPublicAccess")
     private @Nullable String remoteLoginPortPublicAccess;
 
+    /**
+     * @return State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+     * 
+     */
     public Optional<String> remoteLoginPortPublicAccess() {
         return Optional.ofNullable(this.remoteLoginPortPublicAccess);
     }
@@ -134,6 +170,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="scaleSettings")
     private @Nullable ScaleSettingsResponse scaleSettings;
 
+    /**
+     * @return Scale settings for AML Compute
+     * 
+     */
     public Optional<ScaleSettingsResponse> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }
@@ -145,6 +185,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="subnet")
     private @Nullable ResourceIdResponse subnet;
 
+    /**
+     * @return Virtual network subnet resource ID the compute nodes belong to.
+     * 
+     */
     public Optional<ResourceIdResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -156,6 +200,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="targetNodeCount", required=true)
     private Integer targetNodeCount;
 
+    /**
+     * @return The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+     * 
+     */
     public Integer targetNodeCount() {
         return this.targetNodeCount;
     }
@@ -167,6 +215,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="userAccountCredentials")
     private @Nullable UserAccountCredentialsResponse userAccountCredentials;
 
+    /**
+     * @return Credentials for an administrator user account that will be created on each compute node.
+     * 
+     */
     public Optional<UserAccountCredentialsResponse> userAccountCredentials() {
         return Optional.ofNullable(this.userAccountCredentials);
     }
@@ -178,6 +230,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="virtualMachineImage")
     private @Nullable VirtualMachineImageResponse virtualMachineImage;
 
+    /**
+     * @return Virtual Machine image for AML Compute - windows only
+     * 
+     */
     public Optional<VirtualMachineImageResponse> virtualMachineImage() {
         return Optional.ofNullable(this.virtualMachineImage);
     }
@@ -189,6 +245,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="vmPriority")
     private @Nullable String vmPriority;
 
+    /**
+     * @return Virtual Machine priority
+     * 
+     */
     public Optional<String> vmPriority() {
         return Optional.ofNullable(this.vmPriority);
     }
@@ -200,6 +260,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return Virtual Machine Size
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -243,85 +307,187 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
             $ = new AmlComputeResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationState Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationState(String allocationState) {
             $.allocationState = allocationState;
             return this;
         }
 
+        /**
+         * @param allocationStateTransitionTime The time at which the compute entered its current allocation state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
             $.allocationStateTransitionTime = allocationStateTransitionTime;
             return this;
         }
 
+        /**
+         * @param currentNodeCount The number of compute nodes currently assigned to the compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentNodeCount(Integer currentNodeCount) {
             $.currentNodeCount = currentNodeCount;
             return this;
         }
 
+        /**
+         * @param enableNodePublicIp Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
             $.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
 
+        /**
+         * @param errors Collection of errors encountered by various compute nodes during node setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors Collection of errors encountered by various compute nodes during node setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(MachineLearningServiceErrorResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param isolatedNetwork Network is isolated or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
             $.isolatedNetwork = isolatedNetwork;
             return this;
         }
 
+        /**
+         * @param nodeStateCounts Counts of various node states on the compute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
             $.nodeStateCounts = nodeStateCounts;
             return this;
         }
 
+        /**
+         * @param osType Compute OS Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param remoteLoginPortPublicAccess State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
             $.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
 
+        /**
+         * @param scaleSettings Scale settings for AML Compute
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
             $.scaleSettings = scaleSettings;
             return this;
         }
 
+        /**
+         * @param subnet Virtual network subnet resource ID the compute nodes belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable ResourceIdResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param targetNodeCount The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNodeCount(Integer targetNodeCount) {
             $.targetNodeCount = targetNodeCount;
             return this;
         }
 
+        /**
+         * @param userAccountCredentials Credentials for an administrator user account that will be created on each compute node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
             $.userAccountCredentials = userAccountCredentials;
             return this;
         }
 
+        /**
+         * @param virtualMachineImage Virtual Machine image for AML Compute - windows only
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
             $.virtualMachineImage = virtualMachineImage;
             return this;
         }
 
+        /**
+         * @param vmPriority Virtual Machine priority
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmPriority(@Nullable String vmPriority) {
             $.vmPriority = vmPriority;
             return this;
         }
 
+        /**
+         * @param vmSize Virtual Machine Size
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;

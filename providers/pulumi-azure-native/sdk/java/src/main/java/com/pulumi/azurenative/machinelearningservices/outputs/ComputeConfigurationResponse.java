@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ComputeConfigurationResponse {
-    /**
-     * Number of instances or nodes.
-     * 
-     */
+        /**
+         * @return Number of instances or nodes.
+         * 
+         */
     private final @Nullable Integer instanceCount;
-    /**
-     * SKU type to run on.
-     * 
-     */
+        /**
+         * @return SKU type to run on.
+         * 
+         */
     private final @Nullable String instanceType;
-    /**
-     * Set to true for jobs running on local compute.
-     * 
-     */
+        /**
+         * @return Set to true for jobs running on local compute.
+         * 
+         */
     private final @Nullable Boolean isLocal;
-    /**
-     * Location for virtual cluster run.
-     * 
-     */
+        /**
+         * @return Location for virtual cluster run.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Additional properties.
-     * 
-     */
+        /**
+         * @return Additional properties.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * ARM resource ID of the compute resource.
-     * 
-     */
+        /**
+         * @return ARM resource ID of the compute resource.
+         * 
+         */
     private final @Nullable String target;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class ComputeConfigurationResponse {
     }
 
     /**
-     * Number of instances or nodes.
+     * @return Number of instances or nodes.
      * 
-    */
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
-     * SKU type to run on.
+     * @return SKU type to run on.
      * 
-    */
+     */
     public Optional<String> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
-     * Set to true for jobs running on local compute.
+     * @return Set to true for jobs running on local compute.
      * 
-    */
+     */
     public Optional<Boolean> isLocal() {
         return Optional.ofNullable(this.isLocal);
     }
     /**
-     * Location for virtual cluster run.
+     * @return Location for virtual cluster run.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Additional properties.
+     * @return Additional properties.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * ARM resource ID of the compute resource.
+     * @return ARM resource ID of the compute resource.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

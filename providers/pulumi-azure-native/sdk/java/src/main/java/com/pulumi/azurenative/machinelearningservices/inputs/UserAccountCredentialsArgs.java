@@ -26,6 +26,10 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
     @Import(name="adminUserName", required=true)
     private Output<String> adminUserName;
 
+    /**
+     * @return Name of the administrator user account which can be used to SSH to nodes.
+     * 
+     */
     public Output<String> adminUserName() {
         return this.adminUserName;
     }
@@ -37,6 +41,10 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
     @Import(name="adminUserPassword")
     private @Nullable Output<String> adminUserPassword;
 
+    /**
+     * @return Password of the administrator user account.
+     * 
+     */
     public Optional<Output<String>> adminUserPassword() {
         return Optional.ofNullable(this.adminUserPassword);
     }
@@ -48,6 +56,10 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
     @Import(name="adminUserSshPublicKey")
     private @Nullable Output<String> adminUserSshPublicKey;
 
+    /**
+     * @return SSH public key of the administrator user account.
+     * 
+     */
     public Optional<Output<String>> adminUserSshPublicKey() {
         return Optional.ofNullable(this.adminUserSshPublicKey);
     }
@@ -78,29 +90,65 @@ public final class UserAccountCredentialsArgs extends com.pulumi.resources.Resou
             $ = new UserAccountCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminUserName Name of the administrator user account which can be used to SSH to nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserName(Output<String> adminUserName) {
             $.adminUserName = adminUserName;
             return this;
         }
 
+        /**
+         * @param adminUserName Name of the administrator user account which can be used to SSH to nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserName(String adminUserName) {
             return adminUserName(Output.of(adminUserName));
         }
 
+        /**
+         * @param adminUserPassword Password of the administrator user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserPassword(@Nullable Output<String> adminUserPassword) {
             $.adminUserPassword = adminUserPassword;
             return this;
         }
 
+        /**
+         * @param adminUserPassword Password of the administrator user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserPassword(String adminUserPassword) {
             return adminUserPassword(Output.of(adminUserPassword));
         }
 
+        /**
+         * @param adminUserSshPublicKey SSH public key of the administrator user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserSshPublicKey(@Nullable Output<String> adminUserSshPublicKey) {
             $.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }
 
+        /**
+         * @param adminUserSshPublicKey SSH public key of the administrator user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserSshPublicKey(String adminUserSshPublicKey) {
             return adminUserSshPublicKey(Output.of(adminUserSshPublicKey));
         }

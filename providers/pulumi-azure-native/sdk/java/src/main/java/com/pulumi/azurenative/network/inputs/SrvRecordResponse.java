@@ -26,6 +26,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The port value for this SRV record.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -37,6 +41,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return The priority value for this SRV record.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -48,6 +56,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The target domain name for this SRV record.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -59,6 +71,10 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight")
     private @Nullable Integer weight;
 
+    /**
+     * @return The weight value for this SRV record.
+     * 
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -90,21 +106,45 @@ public final class SrvRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SrvRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The port value for this SRV record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param priority The priority value for this SRV record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param target The target domain name for this SRV record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param weight The weight value for this SRV record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Integer weight) {
             $.weight = weight;
             return this;

@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * Capacity of the particular SKU.
-     * 
-     */
+        /**
+         * @return Capacity of the particular SKU.
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * If the service has different generations of hardware, for the same SKU, then that can be captured here.
-     * 
-     */
+        /**
+         * @return If the service has different generations of hardware, for the same SKU, then that can be captured here.
+         * 
+         */
     private final @Nullable String family;
-    /**
-     * The name of the SKU, typically, a letter + Number code, e.g. P3.
-     * 
-     */
+        /**
+         * @return The name of the SKU, typically, a letter + Number code, e.g. P3.
+         * 
+         */
     private final String name;
-    /**
-     * Size of the particular SKU
-     * 
-     */
+        /**
+         * @return Size of the particular SKU
+         * 
+         */
     private final @Nullable String size;
-    /**
-     * The tier or edition of the particular SKU, e.g. Basic, Premium.
-     * 
-     */
+        /**
+         * @return The tier or edition of the particular SKU, e.g. Basic, Premium.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class SkuResponse {
     }
 
     /**
-     * Capacity of the particular SKU.
+     * @return Capacity of the particular SKU.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * If the service has different generations of hardware, for the same SKU, then that can be captured here.
+     * @return If the service has different generations of hardware, for the same SKU, then that can be captured here.
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The name of the SKU, typically, a letter + Number code, e.g. P3.
+     * @return The name of the SKU, typically, a letter + Number code, e.g. P3.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Size of the particular SKU
+     * @return Size of the particular SKU
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The tier or edition of the particular SKU, e.g. Basic, Premium.
+     * @return The tier or edition of the particular SKU, e.g. Basic, Premium.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

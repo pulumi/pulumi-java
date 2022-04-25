@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReliableCollectionsRefResponse {
-    /**
-     * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
-     * 
-     */
+        /**
+         * @return False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+         * 
+         */
     private final @Nullable Boolean doNotPersistState;
-    /**
-     * Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
-     * 
-     */
+        /**
+         * @return Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ReliableCollectionsRefResponse {
     }
 
     /**
-     * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
+     * @return False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
      * 
-    */
+     */
     public Optional<Boolean> doNotPersistState() {
         return Optional.ofNullable(this.doNotPersistState);
     }
     /**
-     * Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
+     * @return Name of ReliableCollection resource. Right now it&#39;s not used and you can use any string.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

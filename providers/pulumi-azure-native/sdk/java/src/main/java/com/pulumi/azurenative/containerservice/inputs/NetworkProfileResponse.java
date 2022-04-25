@@ -26,6 +26,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="peerVnetId")
     private @Nullable String peerVnetId;
 
+    /**
+     * @return CIDR of the Vnet to peer.
+     * 
+     */
     public Optional<String> peerVnetId() {
         return Optional.ofNullable(this.peerVnetId);
     }
@@ -37,6 +41,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="vnetCidr")
     private @Nullable String vnetCidr;
 
+    /**
+     * @return CIDR for the OpenShift Vnet.
+     * 
+     */
     public Optional<String> vnetCidr() {
         return Optional.ofNullable(this.vnetCidr);
     }
@@ -48,6 +56,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="vnetId")
     private @Nullable String vnetId;
 
+    /**
+     * @return ID of the Vnet created for OSA cluster.
+     * 
+     */
     public Optional<String> vnetId() {
         return Optional.ofNullable(this.vnetId);
     }
@@ -78,16 +90,34 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peerVnetId CIDR of the Vnet to peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerVnetId(@Nullable String peerVnetId) {
             $.peerVnetId = peerVnetId;
             return this;
         }
 
+        /**
+         * @param vnetCidr CIDR for the OpenShift Vnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetCidr(@Nullable String vnetCidr) {
             $.vnetCidr = vnetCidr;
             return this;
         }
 
+        /**
+         * @param vnetId ID of the Vnet created for OSA cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetId(@Nullable String vnetId) {
             $.vnetId = vnetId;
             return this;

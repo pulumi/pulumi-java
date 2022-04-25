@@ -26,6 +26,10 @@ public final class CloudServiceRoleProfileResponse extends com.pulumi.resources.
     @Import(name="roles")
     private @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
+    /**
+     * @return List of roles for the cloud service.
+     * 
+     */
     public Optional<List<CloudServiceRoleProfilePropertiesResponse>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -54,11 +58,23 @@ public final class CloudServiceRoleProfileResponse extends com.pulumi.resources.
             $ = new CloudServiceRoleProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param roles List of roles for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles List of roles for the cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(CloudServiceRoleProfilePropertiesResponse... roles) {
             return roles(List.of(roles));
         }

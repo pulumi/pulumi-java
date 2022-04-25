@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatadogInstallMethodResponse {
-    /**
-     * The installer version.
-     * 
-     */
+        /**
+         * @return The installer version.
+         * 
+         */
     private final @Nullable String installerVersion;
-    /**
-     * The tool.
-     * 
-     */
+        /**
+         * @return The tool.
+         * 
+         */
     private final @Nullable String tool;
-    /**
-     * The tool version.
-     * 
-     */
+        /**
+         * @return The tool version.
+         * 
+         */
     private final @Nullable String toolVersion;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class DatadogInstallMethodResponse {
     }
 
     /**
-     * The installer version.
+     * @return The installer version.
      * 
-    */
+     */
     public Optional<String> installerVersion() {
         return Optional.ofNullable(this.installerVersion);
     }
     /**
-     * The tool.
+     * @return The tool.
      * 
-    */
+     */
     public Optional<String> tool() {
         return Optional.ofNullable(this.tool);
     }
     /**
-     * The tool version.
+     * @return The tool version.
      * 
-    */
+     */
     public Optional<String> toolVersion() {
         return Optional.ofNullable(this.toolVersion);
     }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetImageUploadUrlForEntityTypeResult {
-    /**
-     * Content URL for the image blob.
-     * 
-     */
+        /**
+         * @return Content URL for the image blob.
+         * 
+         */
     private final @Nullable String contentUrl;
-    /**
-     * Whether image exists already.
-     * 
-     */
+        /**
+         * @return Whether image exists already.
+         * 
+         */
     private final @Nullable Boolean imageExists;
-    /**
-     * Relative path of the image.
-     * 
-     */
+        /**
+         * @return Relative path of the image.
+         * 
+         */
     private final @Nullable String relativePath;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class GetImageUploadUrlForEntityTypeResult {
     }
 
     /**
-     * Content URL for the image blob.
+     * @return Content URL for the image blob.
      * 
-    */
+     */
     public Optional<String> contentUrl() {
         return Optional.ofNullable(this.contentUrl);
     }
     /**
-     * Whether image exists already.
+     * @return Whether image exists already.
      * 
-    */
+     */
     public Optional<Boolean> imageExists() {
         return Optional.ofNullable(this.imageExists);
     }
     /**
-     * Relative path of the image.
+     * @return Relative path of the image.
      * 
-    */
+     */
     public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }

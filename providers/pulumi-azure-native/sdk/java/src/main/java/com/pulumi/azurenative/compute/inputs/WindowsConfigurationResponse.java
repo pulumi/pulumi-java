@@ -30,6 +30,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="additionalUnattendContent")
     private @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent;
 
+    /**
+     * @return Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
+     * 
+     */
     public Optional<List<AdditionalUnattendContentResponse>> additionalUnattendContent() {
         return Optional.ofNullable(this.additionalUnattendContent);
     }
@@ -41,6 +45,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="enableAutomaticUpdates")
     private @Nullable Boolean enableAutomaticUpdates;
 
+    /**
+     * @return Indicates whether Automatic Updates is enabled for the Windows virtual machine. Default value is true. &lt;br&gt;&lt;br&gt; For virtual machine scale sets, this property can be updated and updates will take effect on OS reprovisioning.
+     * 
+     */
     public Optional<Boolean> enableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);
     }
@@ -52,6 +60,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="patchSettings")
     private @Nullable PatchSettingsResponse patchSettings;
 
+    /**
+     * @return [Preview Feature] Specifies settings related to VM Guest Patching on Windows.
+     * 
+     */
     public Optional<PatchSettingsResponse> patchSettings() {
         return Optional.ofNullable(this.patchSettings);
     }
@@ -63,6 +75,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="provisionVMAgent")
     private @Nullable Boolean provisionVMAgent;
 
+    /**
+     * @return Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+     * 
+     */
     public Optional<Boolean> provisionVMAgent() {
         return Optional.ofNullable(this.provisionVMAgent);
     }
@@ -74,6 +90,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return Specifies the time zone of the virtual machine. e.g. &#34;Pacific Standard Time&#34;. &lt;br&gt;&lt;br&gt; Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -85,6 +105,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="winRM")
     private @Nullable WinRMConfigurationResponse winRM;
 
+    /**
+     * @return Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.
+     * 
+     */
     public Optional<WinRMConfigurationResponse> winRM() {
         return Optional.ofNullable(this.winRM);
     }
@@ -118,35 +142,77 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
             $ = new WindowsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalUnattendContent Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent) {
             $.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
 
+        /**
+         * @param additionalUnattendContent Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalUnattendContent(AdditionalUnattendContentResponse... additionalUnattendContent) {
             return additionalUnattendContent(List.of(additionalUnattendContent));
         }
 
+        /**
+         * @param enableAutomaticUpdates Indicates whether Automatic Updates is enabled for the Windows virtual machine. Default value is true. &lt;br&gt;&lt;br&gt; For virtual machine scale sets, this property can be updated and updates will take effect on OS reprovisioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             $.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
 
+        /**
+         * @param patchSettings [Preview Feature] Specifies settings related to VM Guest Patching on Windows.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchSettings(@Nullable PatchSettingsResponse patchSettings) {
             $.patchSettings = patchSettings;
             return this;
         }
 
+        /**
+         * @param provisionVMAgent Indicates whether virtual machine agent should be provisioned on the virtual machine. &lt;br&gt;&lt;br&gt; When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             $.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
+        /**
+         * @param timeZone Specifies the time zone of the virtual machine. e.g. &#34;Pacific Standard Time&#34;. &lt;br&gt;&lt;br&gt; Possible values can be [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param winRM Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.
+         * 
+         * @return builder
+         * 
+         */
         public Builder winRM(@Nullable WinRMConfigurationResponse winRM) {
             $.winRM = winRM;
             return this;

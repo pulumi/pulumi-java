@@ -24,6 +24,10 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Action of the geo filter, i.e. allow or block access.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -35,6 +39,10 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="countryCodes", required=true)
     private List<String> countryCodes;
 
+    /**
+     * @return Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+     * 
+     */
     public List<String> countryCodes() {
         return this.countryCodes;
     }
@@ -46,6 +54,10 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="relativePath", required=true)
     private String relativePath;
 
+    /**
+     * @return Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+     * 
+     */
     public String relativePath() {
         return this.relativePath;
     }
@@ -76,20 +88,44 @@ public final class GeoFilterResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GeoFilterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Action of the geo filter, i.e. allow or block access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param countryCodes Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCodes(List<String> countryCodes) {
             $.countryCodes = countryCodes;
             return this;
         }
 
+        /**
+         * @param countryCodes Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
 
+        /**
+         * @param relativePath Relative path applicable to geo filter. (e.g. &#39;/mypictures&#39;, &#39;/mypicture/kitty.jpg&#39;, and etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(String relativePath) {
             $.relativePath = relativePath;
             return this;

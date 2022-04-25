@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VMResourcesResponse {
-    /**
-     * The ARM id of the VM resource.
-     * 
-     */
+        /**
+         * @return The ARM id of the VM resource.
+         * 
+         */
     private final @Nullable String vmResourceId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VMResourcesResponse {
     }
 
     /**
-     * The ARM id of the VM resource.
+     * @return The ARM id of the VM resource.
      * 
-    */
+     */
     public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }

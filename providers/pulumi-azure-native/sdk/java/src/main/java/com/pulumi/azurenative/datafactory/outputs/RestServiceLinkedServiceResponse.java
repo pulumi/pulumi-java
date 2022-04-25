@@ -20,96 +20,96 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RestServiceLinkedServiceResponse {
-    /**
-     * The resource you are requesting authorization to use.
-     * 
-     */
+        /**
+         * @return The resource you are requesting authorization to use.
+         * 
+         */
     private final @Nullable Object aadResourceId;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
-     * 
-     */
+        /**
+         * @return The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+         * 
+         */
     private final @Nullable Object authHeaders;
-    /**
-     * Type of authentication used to connect to the REST service.
-     * 
-     */
+        /**
+         * @return Type of authentication used to connect to the REST service.
+         * 
+         */
     private final String authenticationType;
-    /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object azureCloudType;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The credential reference containing authentication information.
-     * 
-     */
+        /**
+         * @return The credential reference containing authentication information.
+         * 
+         */
     private final @Nullable CredentialReferenceResponse credential;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object enableServerCertificateValidation;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password used in Basic authentication type.
-     * 
-     */
+        /**
+         * @return The password used in Basic authentication type.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The application&#39;s client ID used in AadServicePrincipal authentication type.
-     * 
-     */
+        /**
+         * @return The application&#39;s client ID used in AadServicePrincipal authentication type.
+         * 
+         */
     private final @Nullable Object servicePrincipalId;
-    /**
-     * The application&#39;s key used in AadServicePrincipal authentication type.
-     * 
-     */
+        /**
+         * @return The application&#39;s key used in AadServicePrincipal authentication type.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-    /**
-     * The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
-     * 
-     */
+        /**
+         * @return The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
+         * 
+         */
     private final @Nullable Object tenant;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;RestService&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;RestService&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The base URL of the REST service.
-     * 
-     */
+        /**
+         * @return The base URL of the REST service.
+         * 
+         */
     private final Object url;
-    /**
-     * The user name used in Basic authentication type.
-     * 
-     */
+        /**
+         * @return The user name used in Basic authentication type.
+         * 
+         */
     private final @Nullable Object userName;
 
     @CustomType.Constructor
@@ -153,129 +153,129 @@ public final class RestServiceLinkedServiceResponse {
     }
 
     /**
-     * The resource you are requesting authorization to use.
+     * @return The resource you are requesting authorization to use.
      * 
-    */
+     */
     public Optional<Object> aadResourceId() {
         return Optional.ofNullable(this.aadResourceId);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+     * @return The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
-    */
+     */
     public Optional<Object> authHeaders() {
         return Optional.ofNullable(this.authHeaders);
     }
     /**
-     * Type of authentication used to connect to the REST service.
+     * @return Type of authentication used to connect to the REST service.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     * @return Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> azureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password used in Basic authentication type.
+     * @return The password used in Basic authentication type.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The application&#39;s client ID used in AadServicePrincipal authentication type.
+     * @return The application&#39;s client ID used in AadServicePrincipal authentication type.
      * 
-    */
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The application&#39;s key used in AadServicePrincipal authentication type.
+     * @return The application&#39;s key used in AadServicePrincipal authentication type.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
-     * The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
+     * @return The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
      * 
-    */
+     */
     public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;RestService&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The base URL of the REST service.
+     * @return The base URL of the REST service.
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }
     /**
-     * The user name used in Basic authentication type.
+     * @return The user name used in Basic authentication type.
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

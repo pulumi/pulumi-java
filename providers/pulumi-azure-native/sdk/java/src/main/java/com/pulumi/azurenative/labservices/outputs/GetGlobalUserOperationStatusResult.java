@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGlobalUserOperationStatusResult {
-    /**
-     * status of the long running operation for an environment
-     * 
-     */
+        /**
+         * @return status of the long running operation for an environment
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetGlobalUserOperationStatusResult {
     }
 
     /**
-     * status of the long running operation for an environment
+     * @return status of the long running operation for an environment
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

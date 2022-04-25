@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class DatabaseBackupInfoResponse {
-    /**
-     * The list of backup files for the current database.
-     * 
-     */
+        /**
+         * @return The list of backup files for the current database.
+         * 
+         */
     private final List<String> backupFiles;
-    /**
-     * Date and time when the backup operation finished.
-     * 
-     */
+        /**
+         * @return Date and time when the backup operation finished.
+         * 
+         */
     private final String backupFinishDate;
-    /**
-     * Backup Type.
-     * 
-     */
+        /**
+         * @return Backup Type.
+         * 
+         */
     private final String backupType;
-    /**
-     * Database name.
-     * 
-     */
+        /**
+         * @return Database name.
+         * 
+         */
     private final String databaseName;
-    /**
-     * Number of files in the backup set.
-     * 
-     */
+        /**
+         * @return Number of files in the backup set.
+         * 
+         */
     private final Integer familyCount;
-    /**
-     * Whether the backup set is compressed
-     * 
-     */
+        /**
+         * @return Whether the backup set is compressed
+         * 
+         */
     private final Boolean isCompressed;
-    /**
-     * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
-     * 
-     */
+        /**
+         * @return Database was damaged when backed up, but the backup operation was requested to continue despite errors.
+         * 
+         */
     private final Boolean isDamaged;
-    /**
-     * Position of current database backup in the file.
-     * 
-     */
+        /**
+         * @return Position of current database backup in the file.
+         * 
+         */
     private final Integer position;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class DatabaseBackupInfoResponse {
     }
 
     /**
-     * The list of backup files for the current database.
+     * @return The list of backup files for the current database.
      * 
-    */
+     */
     public List<String> backupFiles() {
         return this.backupFiles;
     }
     /**
-     * Date and time when the backup operation finished.
+     * @return Date and time when the backup operation finished.
      * 
-    */
+     */
     public String backupFinishDate() {
         return this.backupFinishDate;
     }
     /**
-     * Backup Type.
+     * @return Backup Type.
      * 
-    */
+     */
     public String backupType() {
         return this.backupType;
     }
     /**
-     * Database name.
+     * @return Database name.
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * Number of files in the backup set.
+     * @return Number of files in the backup set.
      * 
-    */
+     */
     public Integer familyCount() {
         return this.familyCount;
     }
     /**
-     * Whether the backup set is compressed
+     * @return Whether the backup set is compressed
      * 
-    */
+     */
     public Boolean isCompressed() {
         return this.isCompressed;
     }
     /**
-     * Database was damaged when backed up, but the backup operation was requested to continue despite errors.
+     * @return Database was damaged when backed up, but the backup operation was requested to continue despite errors.
      * 
-    */
+     */
     public Boolean isDamaged() {
         return this.isDamaged;
     }
     /**
-     * Position of current database backup in the file.
+     * @return Position of current database backup in the file.
      * 
-    */
+     */
     public Integer position() {
         return this.position;
     }

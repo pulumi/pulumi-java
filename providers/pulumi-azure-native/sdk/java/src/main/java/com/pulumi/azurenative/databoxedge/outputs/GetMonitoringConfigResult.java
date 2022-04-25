@@ -11,25 +11,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetMonitoringConfigResult {
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * The metrics configuration details
-     * 
-     */
+        /**
+         * @return The metrics configuration details
+         * 
+         */
     private final List<MetricConfigurationResponse> metricConfigurations;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GetMonitoringConfigResult {
     }
 
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The metrics configuration details
+     * @return The metrics configuration details
      * 
-    */
+     */
     public List<MetricConfigurationResponse> metricConfigurations() {
         return this.metricConfigurations;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

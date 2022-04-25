@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EmailNotificationResponse {
-    /**
-     * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
-     * 
-     */
+        /**
+         * @return the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+         * 
+         */
     private final @Nullable List<String> customEmails;
-    /**
-     * a value indicating whether to send email to subscription administrator.
-     * 
-     */
+        /**
+         * @return a value indicating whether to send email to subscription administrator.
+         * 
+         */
     private final @Nullable Boolean sendToSubscriptionAdministrator;
-    /**
-     * a value indicating whether to send email to subscription co-administrators.
-     * 
-     */
+        /**
+         * @return a value indicating whether to send email to subscription co-administrators.
+         * 
+         */
     private final @Nullable Boolean sendToSubscriptionCoAdministrators;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class EmailNotificationResponse {
     }
 
     /**
-     * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+     * @return the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
      * 
-    */
+     */
     public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
-     * a value indicating whether to send email to subscription administrator.
+     * @return a value indicating whether to send email to subscription administrator.
      * 
-    */
+     */
     public Optional<Boolean> sendToSubscriptionAdministrator() {
         return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
     /**
-     * a value indicating whether to send email to subscription co-administrators.
+     * @return a value indicating whether to send email to subscription co-administrators.
      * 
-    */
+     */
     public Optional<Boolean> sendToSubscriptionCoAdministrators() {
         return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }

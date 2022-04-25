@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class Nfs3TargetResponse {
-    /**
-     * IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
-     * 
-     */
+        /**
+         * @return IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+         * 
+         */
     private final @Nullable String target;
-    /**
-     * Identifies the StorageCache usage model to be used for this storage target.
-     * 
-     */
+        /**
+         * @return Identifies the StorageCache usage model to be used for this storage target.
+         * 
+         */
     private final @Nullable String usageModel;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class Nfs3TargetResponse {
     }
 
     /**
-     * IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
+     * @return IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Identifies the StorageCache usage model to be used for this storage target.
+     * @return Identifies the StorageCache usage model to be used for this storage target.
      * 
-    */
+     */
     public Optional<String> usageModel() {
         return Optional.ofNullable(this.usageModel);
     }

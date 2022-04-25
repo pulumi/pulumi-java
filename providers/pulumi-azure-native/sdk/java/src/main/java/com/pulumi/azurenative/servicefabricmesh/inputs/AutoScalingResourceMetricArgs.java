@@ -28,6 +28,11 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Enumerates the metrics that are used for triggering auto scaling.
+     * Expected value is &#39;Resource&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -39,6 +44,10 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<Either<String,AutoScalingResourceMetricName>> name;
 
+    /**
+     * @return Name of the resource.
+     * 
+     */
     public Output<Either<String,AutoScalingResourceMetricName>> name() {
         return this.name;
     }
@@ -68,28 +77,66 @@ public final class AutoScalingResourceMetricArgs extends com.pulumi.resources.Re
             $ = new AutoScalingResourceMetricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind Enumerates the metrics that are used for triggering auto scaling.
+         * Expected value is &#39;Resource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Enumerates the metrics that are used for triggering auto scaling.
+         * Expected value is &#39;Resource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,AutoScalingResourceMetricName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,AutoScalingResourceMetricName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(AutoScalingResourceMetricName name) {
             return name(Either.ofRight(name));
         }

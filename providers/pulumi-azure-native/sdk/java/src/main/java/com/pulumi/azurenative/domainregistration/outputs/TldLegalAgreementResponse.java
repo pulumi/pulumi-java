@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TldLegalAgreementResponse {
-    /**
-     * Unique identifier for the agreement.
-     * 
-     */
+        /**
+         * @return Unique identifier for the agreement.
+         * 
+         */
     private final String agreementKey;
-    /**
-     * Agreement details.
-     * 
-     */
+        /**
+         * @return Agreement details.
+         * 
+         */
     private final String content;
-    /**
-     * Agreement title.
-     * 
-     */
+        /**
+         * @return Agreement title.
+         * 
+         */
     private final String title;
-    /**
-     * URL where a copy of the agreement details is hosted.
-     * 
-     */
+        /**
+         * @return URL where a copy of the agreement details is hosted.
+         * 
+         */
     private final @Nullable String url;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class TldLegalAgreementResponse {
     }
 
     /**
-     * Unique identifier for the agreement.
+     * @return Unique identifier for the agreement.
      * 
-    */
+     */
     public String agreementKey() {
         return this.agreementKey;
     }
     /**
-     * Agreement details.
+     * @return Agreement details.
      * 
-    */
+     */
     public String content() {
         return this.content;
     }
     /**
-     * Agreement title.
+     * @return Agreement title.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * URL where a copy of the agreement details is hosted.
+     * @return URL where a copy of the agreement details is hosted.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

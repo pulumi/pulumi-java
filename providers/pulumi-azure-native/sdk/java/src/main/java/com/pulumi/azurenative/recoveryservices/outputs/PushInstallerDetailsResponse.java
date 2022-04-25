@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class PushInstallerDetailsResponse {
-    /**
-     * The health of the push installer.
-     * 
-     */
+        /**
+         * @return The health of the push installer.
+         * 
+         */
     private final String health;
-    /**
-     * The health errors.
-     * 
-     */
+        /**
+         * @return The health errors.
+         * 
+         */
     private final List<HealthErrorResponse> healthErrors;
-    /**
-     * The push installer Id.
-     * 
-     */
+        /**
+         * @return The push installer Id.
+         * 
+         */
     private final String id;
-    /**
-     * The last heartbeat received from the push installer.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the push installer.
+         * 
+         */
     private final String lastHeartbeatUtc;
-    /**
-     * The push installer name.
-     * 
-     */
+        /**
+         * @return The push installer name.
+         * 
+         */
     private final String name;
-    /**
-     * The push installer version.
-     * 
-     */
+        /**
+         * @return The push installer version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class PushInstallerDetailsResponse {
     }
 
     /**
-     * The health of the push installer.
+     * @return The health of the push installer.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The health errors.
+     * @return The health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The push installer Id.
+     * @return The push installer Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last heartbeat received from the push installer.
+     * @return The last heartbeat received from the push installer.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The push installer name.
+     * @return The push installer name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The push installer version.
+     * @return The push installer version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

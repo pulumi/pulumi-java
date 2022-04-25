@@ -21,6 +21,10 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="created")
     private @Nullable String created;
 
+    /**
+     * @return The time of creation of the API key.
+     * 
+     */
     public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
@@ -32,6 +36,10 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="createdBy")
     private @Nullable String createdBy;
 
+    /**
+     * @return The user that created the API key.
+     * 
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -43,6 +51,10 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The value of the API key.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -54,6 +66,10 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the API key.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -85,21 +101,45 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
             $ = new DatadogApiKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param created The time of creation of the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder created(@Nullable String created) {
             $.created = created;
             return this;
         }
 
+        /**
+         * @param createdBy The user that created the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable String createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param key The value of the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param name The name of the API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

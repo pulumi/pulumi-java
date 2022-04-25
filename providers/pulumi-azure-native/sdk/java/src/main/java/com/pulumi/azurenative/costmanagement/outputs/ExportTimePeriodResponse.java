@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ExportTimePeriodResponse {
-    /**
-     * The start date for export data.
-     * 
-     */
+        /**
+         * @return The start date for export data.
+         * 
+         */
     private final String from;
-    /**
-     * The end date for export data.
-     * 
-     */
+        /**
+         * @return The end date for export data.
+         * 
+         */
     private final String to;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ExportTimePeriodResponse {
     }
 
     /**
-     * The start date for export data.
+     * @return The start date for export data.
      * 
-    */
+     */
     public String from() {
         return this.from;
     }
     /**
-     * The end date for export data.
+     * @return The end date for export data.
      * 
-    */
+     */
     public String to() {
         return this.to;
     }

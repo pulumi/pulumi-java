@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DcAccessSecurityCodeResponse {
-    /**
-     * Forward Dc access security code.
-     * 
-     */
+        /**
+         * @return Forward Dc access security code.
+         * 
+         */
     private final @Nullable String forwardDCAccessCode;
-    /**
-     * Reverse Dc access security code.
-     * 
-     */
+        /**
+         * @return Reverse Dc access security code.
+         * 
+         */
     private final @Nullable String reverseDCAccessCode;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DcAccessSecurityCodeResponse {
     }
 
     /**
-     * Forward Dc access security code.
+     * @return Forward Dc access security code.
      * 
-    */
+     */
     public Optional<String> forwardDCAccessCode() {
         return Optional.ofNullable(this.forwardDCAccessCode);
     }
     /**
-     * Reverse Dc access security code.
+     * @return Reverse Dc access security code.
      * 
-    */
+     */
     public Optional<String> reverseDCAccessCode() {
         return Optional.ofNullable(this.reverseDCAccessCode);
     }

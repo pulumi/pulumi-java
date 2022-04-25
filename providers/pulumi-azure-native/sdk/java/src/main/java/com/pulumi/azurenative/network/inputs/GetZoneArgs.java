@@ -19,6 +19,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="zoneName", required=true)
     private String zoneName;
 
+    /**
+     * @return The name of the DNS zone (without a terminating dot).
+     * 
+     */
     public String zoneName() {
         return this.zoneName;
     }
@@ -59,11 +67,23 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetZoneArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param zoneName The name of the DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneName(String zoneName) {
             $.zoneName = zoneName;
             return this;

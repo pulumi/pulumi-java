@@ -13,40 +13,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContactProfileLinkChannelResponse {
-    /**
-     * Bandwidth in MHz
-     * 
-     */
+        /**
+         * @return Bandwidth in MHz
+         * 
+         */
     private final Double bandwidthMHz;
-    /**
-     * Center Frequency in MHz
-     * 
-     */
+        /**
+         * @return Center Frequency in MHz
+         * 
+         */
     private final Double centerFrequencyMHz;
-    /**
-     * Configuration for decoding
-     * 
-     */
+        /**
+         * @return Configuration for decoding
+         * 
+         */
     private final @Nullable String decodingConfiguration;
-    /**
-     * Configuration for demodulation
-     * 
-     */
+        /**
+         * @return Configuration for demodulation
+         * 
+         */
     private final @Nullable String demodulationConfiguration;
-    /**
-     * Configuration for encoding
-     * 
-     */
+        /**
+         * @return Configuration for encoding
+         * 
+         */
     private final @Nullable String encodingConfiguration;
-    /**
-     * Customer End point to store/retrieve data during a contact.
-     * 
-     */
+        /**
+         * @return Customer End point to store/retrieve data during a contact.
+         * 
+         */
     private final EndPointResponse endPoint;
-    /**
-     * Configuration for modulation
-     * 
-     */
+        /**
+         * @return Configuration for modulation
+         * 
+         */
     private final @Nullable String modulationConfiguration;
 
     @CustomType.Constructor
@@ -68,51 +68,51 @@ public final class ContactProfileLinkChannelResponse {
     }
 
     /**
-     * Bandwidth in MHz
+     * @return Bandwidth in MHz
      * 
-    */
+     */
     public Double bandwidthMHz() {
         return this.bandwidthMHz;
     }
     /**
-     * Center Frequency in MHz
+     * @return Center Frequency in MHz
      * 
-    */
+     */
     public Double centerFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
     /**
-     * Configuration for decoding
+     * @return Configuration for decoding
      * 
-    */
+     */
     public Optional<String> decodingConfiguration() {
         return Optional.ofNullable(this.decodingConfiguration);
     }
     /**
-     * Configuration for demodulation
+     * @return Configuration for demodulation
      * 
-    */
+     */
     public Optional<String> demodulationConfiguration() {
         return Optional.ofNullable(this.demodulationConfiguration);
     }
     /**
-     * Configuration for encoding
+     * @return Configuration for encoding
      * 
-    */
+     */
     public Optional<String> encodingConfiguration() {
         return Optional.ofNullable(this.encodingConfiguration);
     }
     /**
-     * Customer End point to store/retrieve data during a contact.
+     * @return Customer End point to store/retrieve data during a contact.
      * 
-    */
+     */
     public EndPointResponse endPoint() {
         return this.endPoint;
     }
     /**
-     * Configuration for modulation
+     * @return Configuration for modulation
      * 
-    */
+     */
     public Optional<String> modulationConfiguration() {
         return Optional.ofNullable(this.modulationConfiguration);
     }

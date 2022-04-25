@@ -26,6 +26,10 @@ public final class HelmOperatorPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="chartValues")
     private @Nullable Output<String> chartValues;
 
+    /**
+     * @return Values override for the operator Helm chart.
+     * 
+     */
     public Optional<Output<String>> chartValues() {
         return Optional.ofNullable(this.chartValues);
     }
@@ -37,6 +41,10 @@ public final class HelmOperatorPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="chartVersion")
     private @Nullable Output<String> chartVersion;
 
+    /**
+     * @return Version of the operator Helm chart.
+     * 
+     */
     public Optional<Output<String>> chartVersion() {
         return Optional.ofNullable(this.chartVersion);
     }
@@ -66,20 +74,44 @@ public final class HelmOperatorPropertiesArgs extends com.pulumi.resources.Resou
             $ = new HelmOperatorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param chartValues Values override for the operator Helm chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartValues(@Nullable Output<String> chartValues) {
             $.chartValues = chartValues;
             return this;
         }
 
+        /**
+         * @param chartValues Values override for the operator Helm chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartValues(String chartValues) {
             return chartValues(Output.of(chartValues));
         }
 
+        /**
+         * @param chartVersion Version of the operator Helm chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartVersion(@Nullable Output<String> chartVersion) {
             $.chartVersion = chartVersion;
             return this;
         }
 
+        /**
+         * @param chartVersion Version of the operator Helm chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chartVersion(String chartVersion) {
             return chartVersion(Output.of(chartVersion));
         }

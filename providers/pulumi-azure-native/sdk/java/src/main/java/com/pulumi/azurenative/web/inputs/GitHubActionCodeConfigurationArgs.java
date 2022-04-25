@@ -26,6 +26,10 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
     @Import(name="runtimeStack")
     private @Nullable Output<String> runtimeStack;
 
+    /**
+     * @return Runtime stack is used to determine the workflow file content for code base apps.
+     * 
+     */
     public Optional<Output<String>> runtimeStack() {
         return Optional.ofNullable(this.runtimeStack);
     }
@@ -37,6 +41,10 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
     @Import(name="runtimeVersion")
     private @Nullable Output<String> runtimeVersion;
 
+    /**
+     * @return Runtime version is used to determine what build version to set in the workflow file.
+     * 
+     */
     public Optional<Output<String>> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -66,20 +74,44 @@ public final class GitHubActionCodeConfigurationArgs extends com.pulumi.resource
             $ = new GitHubActionCodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param runtimeStack Runtime stack is used to determine the workflow file content for code base apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeStack(@Nullable Output<String> runtimeStack) {
             $.runtimeStack = runtimeStack;
             return this;
         }
 
+        /**
+         * @param runtimeStack Runtime stack is used to determine the workflow file content for code base apps.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeStack(String runtimeStack) {
             return runtimeStack(Output.of(runtimeStack));
         }
 
+        /**
+         * @param runtimeVersion Runtime version is used to determine what build version to set in the workflow file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Runtime version is used to determine what build version to set in the workflow file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }

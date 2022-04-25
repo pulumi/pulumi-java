@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataDisksGroupsResponse {
-    /**
-     * ReadOnly. The DiskSize in GB. Do not set this value.
-     * 
-     */
+        /**
+         * @return ReadOnly. The DiskSize in GB. Do not set this value.
+         * 
+         */
     private final Integer diskSizeGB;
-    /**
-     * The number of disks per node.
-     * 
-     */
+        /**
+         * @return The number of disks per node.
+         * 
+         */
     private final @Nullable Integer disksPerNode;
-    /**
-     * ReadOnly. The storage account type. Do not set this value.
-     * 
-     */
+        /**
+         * @return ReadOnly. The storage account type. Do not set this value.
+         * 
+         */
     private final String storageAccountType;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class DataDisksGroupsResponse {
     }
 
     /**
-     * ReadOnly. The DiskSize in GB. Do not set this value.
+     * @return ReadOnly. The DiskSize in GB. Do not set this value.
      * 
-    */
+     */
     public Integer diskSizeGB() {
         return this.diskSizeGB;
     }
     /**
-     * The number of disks per node.
+     * @return The number of disks per node.
      * 
-    */
+     */
     public Optional<Integer> disksPerNode() {
         return Optional.ofNullable(this.disksPerNode);
     }
     /**
-     * ReadOnly. The storage account type. Do not set this value.
+     * @return ReadOnly. The storage account type. Do not set this value.
      * 
-    */
+     */
     public String storageAccountType() {
         return this.storageAccountType;
     }

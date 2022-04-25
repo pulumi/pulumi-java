@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IdentityDataResponse {
-    /**
-     * The principal ID of resource identity.
-     * 
-     */
+        /**
+         * @return The principal ID of resource identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant ID of resource.
-     * 
-     */
+        /**
+         * @return The tenant ID of resource.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
-     * 
-     */
+        /**
+         * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+         * 
+         */
     private final String type;
-    /**
-     * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
-     * 
-     */
+        /**
+         * @return The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         */
     private final @Nullable Map<String,UserIdentityResponse> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class IdentityDataResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,UserIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

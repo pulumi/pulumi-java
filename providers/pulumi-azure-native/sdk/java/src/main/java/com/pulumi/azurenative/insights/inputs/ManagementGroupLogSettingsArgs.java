@@ -25,6 +25,10 @@ public final class ManagementGroupLogSettingsArgs extends com.pulumi.resources.R
     @Import(name="category", required=true)
     private Output<String> category;
 
+    /**
+     * @return Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+     * 
+     */
     public Output<String> category() {
         return this.category;
     }
@@ -36,6 +40,10 @@ public final class ManagementGroupLogSettingsArgs extends com.pulumi.resources.R
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return a value indicating whether this log is enabled.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -65,20 +73,44 @@ public final class ManagementGroupLogSettingsArgs extends com.pulumi.resources.R
             $ = new ManagementGroupLogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param category Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled a value indicating whether this log is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

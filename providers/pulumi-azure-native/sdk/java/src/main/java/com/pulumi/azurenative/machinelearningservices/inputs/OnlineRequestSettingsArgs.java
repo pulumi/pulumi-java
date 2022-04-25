@@ -27,6 +27,10 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="maxConcurrentRequestsPerInstance")
     private @Nullable Output<Integer> maxConcurrentRequestsPerInstance;
 
+    /**
+     * @return The number of requests allowed to queue at once for this deployment.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentRequestsPerInstance() {
         return Optional.ofNullable(this.maxConcurrentRequestsPerInstance);
     }
@@ -38,6 +42,10 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="maxQueueWait")
     private @Nullable Output<String> maxQueueWait;
 
+    /**
+     * @return The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+     * 
+     */
     public Optional<Output<String>> maxQueueWait() {
         return Optional.ofNullable(this.maxQueueWait);
     }
@@ -49,6 +57,10 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="requestTimeout")
     private @Nullable Output<String> requestTimeout;
 
+    /**
+     * @return The request timeout in ISO 8601 format. Supports millisecond precision.
+     * 
+     */
     public Optional<Output<String>> requestTimeout() {
         return Optional.ofNullable(this.requestTimeout);
     }
@@ -79,29 +91,65 @@ public final class OnlineRequestSettingsArgs extends com.pulumi.resources.Resour
             $ = new OnlineRequestSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxConcurrentRequestsPerInstance The number of requests allowed to queue at once for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequestsPerInstance(@Nullable Output<Integer> maxConcurrentRequestsPerInstance) {
             $.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
             return this;
         }
 
+        /**
+         * @param maxConcurrentRequestsPerInstance The number of requests allowed to queue at once for this deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentRequestsPerInstance(Integer maxConcurrentRequestsPerInstance) {
             return maxConcurrentRequestsPerInstance(Output.of(maxConcurrentRequestsPerInstance));
         }
 
+        /**
+         * @param maxQueueWait The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxQueueWait(@Nullable Output<String> maxQueueWait) {
             $.maxQueueWait = maxQueueWait;
             return this;
         }
 
+        /**
+         * @param maxQueueWait The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxQueueWait(String maxQueueWait) {
             return maxQueueWait(Output.of(maxQueueWait));
         }
 
+        /**
+         * @param requestTimeout The request timeout in ISO 8601 format. Supports millisecond precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(@Nullable Output<String> requestTimeout) {
             $.requestTimeout = requestTimeout;
             return this;
         }
 
+        /**
+         * @param requestTimeout The request timeout in ISO 8601 format. Supports millisecond precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestTimeout(String requestTimeout) {
             return requestTimeout(Output.of(requestTimeout));
         }

@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class KubernetesClusterInfoResponse {
-    /**
-     * Etcd configuration
-     * 
-     */
+        /**
+         * @return Etcd configuration
+         * 
+         */
     private final EtcdInfoResponse etcdInfo;
-    /**
-     * Kubernetes cluster nodes
-     * 
-     */
+        /**
+         * @return Kubernetes cluster nodes
+         * 
+         */
     private final List<NodeInfoResponse> nodes;
-    /**
-     * Kubernetes cluster version
-     * 
-     */
+        /**
+         * @return Kubernetes cluster version
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class KubernetesClusterInfoResponse {
     }
 
     /**
-     * Etcd configuration
+     * @return Etcd configuration
      * 
-    */
+     */
     public EtcdInfoResponse etcdInfo() {
         return this.etcdInfo;
     }
     /**
-     * Kubernetes cluster nodes
+     * @return Kubernetes cluster nodes
      * 
-    */
+     */
     public List<NodeInfoResponse> nodes() {
         return this.nodes;
     }
     /**
-     * Kubernetes cluster version
+     * @return Kubernetes cluster version
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

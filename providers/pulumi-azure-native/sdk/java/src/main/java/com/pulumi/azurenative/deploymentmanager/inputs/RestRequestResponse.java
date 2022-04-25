@@ -26,6 +26,10 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authentication", required=true)
     private Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
 
+    /**
+     * @return The authentication information required in the request to the health provider.
+     * 
+     */
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication() {
         return this.authentication;
     }
@@ -37,6 +41,10 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="method", required=true)
     private String method;
 
+    /**
+     * @return The HTTP method to use for the request.
+     * 
+     */
     public String method() {
         return this.method;
     }
@@ -48,6 +56,10 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The HTTP URI to use for the request.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -78,24 +90,54 @@ public final class RestRequestResponse extends com.pulumi.resources.InvokeArgs {
             $ = new RestRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication The authentication information required in the request to the health provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication The authentication information required in the request to the health provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(ApiKeyAuthenticationResponse authentication) {
             return authentication(Either.ofLeft(authentication));
         }
 
+        /**
+         * @param authentication The authentication information required in the request to the health provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(RolloutIdentityAuthenticationResponse authentication) {
             return authentication(Either.ofRight(authentication));
         }
 
+        /**
+         * @param method The HTTP method to use for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param uri The HTTP URI to use for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

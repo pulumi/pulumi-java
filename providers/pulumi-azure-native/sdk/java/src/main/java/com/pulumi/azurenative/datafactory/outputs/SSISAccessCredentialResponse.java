@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class SSISAccessCredentialResponse {
-    /**
-     * Domain for windows authentication.
-     * 
-     */
+        /**
+         * @return Domain for windows authentication.
+         * 
+         */
     private final Object domain;
-    /**
-     * Password for windows authentication.
-     * 
-     */
+        /**
+         * @return Password for windows authentication.
+         * 
+         */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * UseName for windows authentication.
-     * 
-     */
+        /**
+         * @return UseName for windows authentication.
+         * 
+         */
     private final Object userName;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class SSISAccessCredentialResponse {
     }
 
     /**
-     * Domain for windows authentication.
+     * @return Domain for windows authentication.
      * 
-    */
+     */
     public Object domain() {
         return this.domain;
     }
     /**
-     * Password for windows authentication.
+     * @return Password for windows authentication.
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
-     * UseName for windows authentication.
+     * @return UseName for windows authentication.
      * 
-    */
+     */
     public Object userName() {
         return this.userName;
     }

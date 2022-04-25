@@ -21,6 +21,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="groupConnectivity")
     private @Nullable String groupConnectivity;
 
+    /**
+     * @return Group connectivity type.
+     * 
+     */
     public Optional<String> groupConnectivity() {
         return Optional.ofNullable(this.groupConnectivity);
     }
@@ -32,6 +36,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="isGlobal")
     private @Nullable String isGlobal;
 
+    /**
+     * @return Flag if global is supported.
+     * 
+     */
     public Optional<String> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
@@ -43,6 +51,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="networkGroupId")
     private @Nullable String networkGroupId;
 
+    /**
+     * @return Network group Id.
+     * 
+     */
     public Optional<String> networkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
@@ -54,6 +66,10 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
     @Import(name="useHubGateway")
     private @Nullable String useHubGateway;
 
+    /**
+     * @return Flag if need to use hub gateway.
+     * 
+     */
     public Optional<String> useHubGateway() {
         return Optional.ofNullable(this.useHubGateway);
     }
@@ -85,21 +101,45 @@ public final class ConnectivityGroupItemResponse extends com.pulumi.resources.In
             $ = new ConnectivityGroupItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupConnectivity Group connectivity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivity(@Nullable String groupConnectivity) {
             $.groupConnectivity = groupConnectivity;
             return this;
         }
 
+        /**
+         * @param isGlobal Flag if global is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(@Nullable String isGlobal) {
             $.isGlobal = isGlobal;
             return this;
         }
 
+        /**
+         * @param networkGroupId Network group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupId(@Nullable String networkGroupId) {
             $.networkGroupId = networkGroupId;
             return this;
         }
 
+        /**
+         * @param useHubGateway Flag if need to use hub gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHubGateway(@Nullable String useHubGateway) {
             $.useHubGateway = useHubGateway;
             return this;

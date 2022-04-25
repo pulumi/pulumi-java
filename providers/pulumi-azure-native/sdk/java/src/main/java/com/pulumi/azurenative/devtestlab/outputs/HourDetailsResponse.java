@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HourDetailsResponse {
-    /**
-     * Minutes of the hour the schedule will run.
-     * 
-     */
+        /**
+         * @return Minutes of the hour the schedule will run.
+         * 
+         */
     private final @Nullable Integer minute;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class HourDetailsResponse {
     }
 
     /**
-     * Minutes of the hour the schedule will run.
+     * @return Minutes of the hour the schedule will run.
      * 
-    */
+     */
     public Optional<Integer> minute() {
         return Optional.ofNullable(this.minute);
     }

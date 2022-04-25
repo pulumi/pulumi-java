@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointPropertiesResponseSubnets {
-    /**
-     * First address in the subnet.
-     * 
-     */
+        /**
+         * @return First address in the subnet.
+         * 
+         */
     private final @Nullable String first;
-    /**
-     * Last address in the subnet.
-     * 
-     */
+        /**
+         * @return Last address in the subnet.
+         * 
+         */
     private final @Nullable String last;
-    /**
-     * Block size (number of leading bits in the subnet mask).
-     * 
-     */
+        /**
+         * @return Block size (number of leading bits in the subnet mask).
+         * 
+         */
     private final @Nullable Integer scope;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class EndpointPropertiesResponseSubnets {
     }
 
     /**
-     * First address in the subnet.
+     * @return First address in the subnet.
      * 
-    */
+     */
     public Optional<String> first() {
         return Optional.ofNullable(this.first);
     }
     /**
-     * Last address in the subnet.
+     * @return Last address in the subnet.
      * 
-    */
+     */
     public Optional<String> last() {
         return Optional.ofNullable(this.last);
     }
     /**
-     * Block size (number of leading bits in the subnet mask).
+     * @return Block size (number of leading bits in the subnet mask).
      * 
-    */
+     */
     public Optional<Integer> scope() {
         return Optional.ofNullable(this.scope);
     }

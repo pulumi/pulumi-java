@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class WorkspaceCustomBooleanParameterResponse {
-    /**
-     * The type of variable that this is
-     * 
-     */
+        /**
+         * @return The type of variable that this is
+         * 
+         */
     private final String type;
-    /**
-     * The value which should be used for this field.
-     * 
-     */
+        /**
+         * @return The value which should be used for this field.
+         * 
+         */
     private final Boolean value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class WorkspaceCustomBooleanParameterResponse {
     }
 
     /**
-     * The type of variable that this is
+     * @return The type of variable that this is
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The value which should be used for this field.
+     * @return The value which should be used for this field.
      * 
-    */
+     */
     public Boolean value() {
         return this.value;
     }

@@ -12,56 +12,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SalesforceSinkResponse {
-    /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object disableMetricsCollection;
-    /**
-     * The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object externalIdFieldName;
-    /**
-     * The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object ignoreNullValues;
-    /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object maxConcurrentConnections;
-    /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
-     * 
-     */
+        /**
+         * @return Sink retry count. Type: integer (or Expression with resultType integer).
+         * 
+         */
     private final @Nullable Object sinkRetryCount;
-    /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object sinkRetryWait;
-    /**
-     * Copy sink type.
-     * Expected value is &#39;SalesforceSink&#39;.
-     * 
-     */
+        /**
+         * @return Copy sink type.
+         * Expected value is &#39;SalesforceSink&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object writeBatchSize;
-    /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object writeBatchTimeout;
-    /**
-     * The write behavior for the operation. Default is Insert.
-     * 
-     */
+        /**
+         * @return The write behavior for the operation. Default is Insert.
+         * 
+         */
     private final @Nullable String writeBehavior;
 
     @CustomType.Constructor
@@ -89,73 +89,73 @@ public final class SalesforceSinkResponse {
     }
 
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
+     * @return The name of the external ID field for upsert operation. Default value is &#39;Id&#39; column. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> externalIdFieldName() {
         return Optional.ofNullable(this.externalIdFieldName);
     }
     /**
-     * The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+     * @return The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> ignoreNullValues() {
         return Optional.ofNullable(this.ignoreNullValues);
     }
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;SalesforceSink&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
     /**
-     * The write behavior for the operation. Default is Insert.
+     * @return The write behavior for the operation. Default is Insert.
      * 
-    */
+     */
     public Optional<String> writeBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }

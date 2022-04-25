@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExperimentEndpointResponse {
-    /**
-     * The endpoint URL
-     * 
-     */
+        /**
+         * @return The endpoint URL
+         * 
+         */
     private final @Nullable String endpoint;
-    /**
-     * The name of the endpoint
-     * 
-     */
+        /**
+         * @return The name of the endpoint
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ExperimentEndpointResponse {
     }
 
     /**
-     * The endpoint URL
+     * @return The endpoint URL
      * 
-    */
+     */
     public Optional<String> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
-     * The name of the endpoint
+     * @return The name of the endpoint
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

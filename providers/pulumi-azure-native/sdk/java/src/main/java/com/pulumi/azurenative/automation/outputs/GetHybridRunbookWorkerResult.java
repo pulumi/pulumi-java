@@ -12,55 +12,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHybridRunbookWorkerResult {
-    /**
-     * Fully qualified resource Id for the resource
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource
+         * 
+         */
     private final String id;
-    /**
-     * Gets or sets the assigned machine IP address.
-     * 
-     */
+        /**
+         * @return Gets or sets the assigned machine IP address.
+         * 
+         */
     private final @Nullable String ip;
-    /**
-     * Last Heartbeat from the Worker
-     * 
-     */
+        /**
+         * @return Last Heartbeat from the Worker
+         * 
+         */
     private final @Nullable String lastSeenDateTime;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Gets or sets the registration time of the worker machine.
-     * 
-     */
+        /**
+         * @return Gets or sets the registration time of the worker machine.
+         * 
+         */
     private final @Nullable String registeredDateTime;
-    /**
-     * Resource system metadata.
-     * 
-     */
+        /**
+         * @return Resource system metadata.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * Azure Resource Manager Id for a virtual machine.
-     * 
-     */
+        /**
+         * @return Azure Resource Manager Id for a virtual machine.
+         * 
+         */
     private final @Nullable String vmResourceId;
-    /**
-     * Name of the HybridWorker.
-     * 
-     */
+        /**
+         * @return Name of the HybridWorker.
+         * 
+         */
     private final @Nullable String workerName;
-    /**
-     * Type of the HybridWorker.
-     * 
-     */
+        /**
+         * @return Type of the HybridWorker.
+         * 
+         */
     private final @Nullable String workerType;
 
     @CustomType.Constructor
@@ -88,72 +88,72 @@ public final class GetHybridRunbookWorkerResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the assigned machine IP address.
+     * @return Gets or sets the assigned machine IP address.
      * 
-    */
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * Last Heartbeat from the Worker
+     * @return Last Heartbeat from the Worker
      * 
-    */
+     */
     public Optional<String> lastSeenDateTime() {
         return Optional.ofNullable(this.lastSeenDateTime);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the registration time of the worker machine.
+     * @return Gets or sets the registration time of the worker machine.
      * 
-    */
+     */
     public Optional<String> registeredDateTime() {
         return Optional.ofNullable(this.registeredDateTime);
     }
     /**
-     * Resource system metadata.
+     * @return Resource system metadata.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Azure Resource Manager Id for a virtual machine.
+     * @return Azure Resource Manager Id for a virtual machine.
      * 
-    */
+     */
     public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
     /**
-     * Name of the HybridWorker.
+     * @return Name of the HybridWorker.
      * 
-    */
+     */
     public Optional<String> workerName() {
         return Optional.ofNullable(this.workerName);
     }
     /**
-     * Type of the HybridWorker.
+     * @return Type of the HybridWorker.
      * 
-    */
+     */
     public Optional<String> workerType() {
         return Optional.ofNullable(this.workerType);
     }

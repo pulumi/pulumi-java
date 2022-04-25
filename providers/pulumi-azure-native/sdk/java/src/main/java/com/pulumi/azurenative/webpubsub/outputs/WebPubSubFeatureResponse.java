@@ -11,23 +11,23 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WebPubSubFeatureResponse {
-    /**
-     * FeatureFlags is the supported features of Azure SignalR service.
-     *  - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
-     *  - EnableMessagingLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
-     *  - EnableLiveTrace: Live Trace allows you to know what&#39;s happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: &#34;true&#34;/&#34;false&#34;, to enable/disable live trace feature.
-     * 
-     */
+        /**
+         * @return FeatureFlags is the supported features of Azure SignalR service.
+         *  - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         *  - EnableMessagingLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         *  - EnableLiveTrace: Live Trace allows you to know what&#39;s happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: &#34;true&#34;/&#34;false&#34;, to enable/disable live trace feature.
+         * 
+         */
     private final String flag;
-    /**
-     * Optional properties related to this feature.
-     * 
-     */
+        /**
+         * @return Optional properties related to this feature.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
-     * 
-     */
+        /**
+         * @return Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -41,26 +41,26 @@ public final class WebPubSubFeatureResponse {
     }
 
     /**
-     * FeatureFlags is the supported features of Azure SignalR service.
+     * @return FeatureFlags is the supported features of Azure SignalR service.
      *  - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
      *  - EnableMessagingLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
      *  - EnableLiveTrace: Live Trace allows you to know what&#39;s happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: &#34;true&#34;/&#34;false&#34;, to enable/disable live trace feature.
      * 
-    */
+     */
     public String flag() {
         return this.flag;
     }
     /**
-     * Optional properties related to this feature.
+     * @return Optional properties related to this feature.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+     * @return Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

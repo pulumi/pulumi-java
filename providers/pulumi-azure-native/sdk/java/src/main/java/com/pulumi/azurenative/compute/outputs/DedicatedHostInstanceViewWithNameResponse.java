@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DedicatedHostInstanceViewWithNameResponse {
-    /**
-     * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
-     * 
-     */
+        /**
+         * @return Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
+         * 
+         */
     private final String assetId;
-    /**
-     * Unutilized capacity of the dedicated host.
-     * 
-     */
+        /**
+         * @return Unutilized capacity of the dedicated host.
+         * 
+         */
     private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
-    /**
-     * The name of the dedicated host.
-     * 
-     */
+        /**
+         * @return The name of the dedicated host.
+         * 
+         */
     private final String name;
-    /**
-     * The resource status information.
-     * 
-     */
+        /**
+         * @return The resource status information.
+         * 
+         */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class DedicatedHostInstanceViewWithNameResponse {
     }
 
     /**
-     * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
+     * @return Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
      * 
-    */
+     */
     public String assetId() {
         return this.assetId;
     }
     /**
-     * Unutilized capacity of the dedicated host.
+     * @return Unutilized capacity of the dedicated host.
      * 
-    */
+     */
     public Optional<DedicatedHostAvailableCapacityResponse> availableCapacity() {
         return Optional.ofNullable(this.availableCapacity);
     }
     /**
-     * The name of the dedicated host.
+     * @return The name of the dedicated host.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }

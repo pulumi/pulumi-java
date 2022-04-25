@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class VirtualNetworkBgpCommunitiesResponse {
-    /**
-     * The BGP community associated with the region of the virtual network.
-     * 
-     */
+        /**
+         * @return The BGP community associated with the region of the virtual network.
+         * 
+         */
     private final String regionalCommunity;
-    /**
-     * The BGP community associated with the virtual network.
-     * 
-     */
+        /**
+         * @return The BGP community associated with the virtual network.
+         * 
+         */
     private final String virtualNetworkCommunity;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class VirtualNetworkBgpCommunitiesResponse {
     }
 
     /**
-     * The BGP community associated with the region of the virtual network.
+     * @return The BGP community associated with the region of the virtual network.
      * 
-    */
+     */
     public String regionalCommunity() {
         return this.regionalCommunity;
     }
     /**
-     * The BGP community associated with the virtual network.
+     * @return The BGP community associated with the virtual network.
      * 
-    */
+     */
     public String virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }

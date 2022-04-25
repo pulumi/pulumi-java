@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
-    /**
-     * Group id of the private endpoint.
-     * 
-     */
+        /**
+         * @return Group id of the private endpoint.
+         * 
+         */
     private final String groupId;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Private endpoint which the connection belongs to.
-     * 
-     */
+        /**
+         * @return Private endpoint which the connection belongs to.
+         * 
+         */
     private final PrivateEndpointPropertyResponse privateEndpoint;
-    /**
-     * Connection State of the Private Endpoint Connection.
-     * 
-     */
+        /**
+         * @return Connection State of the Private Endpoint Connection.
+         * 
+         */
     private final PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
-    /**
-     * Provisioning state of the private endpoint.
-     * 
-     */
+        /**
+         * @return Provisioning state of the private endpoint.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * Group id of the private endpoint.
+     * @return Group id of the private endpoint.
      * 
-    */
+     */
     public String groupId() {
         return this.groupId;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Private endpoint which the connection belongs to.
+     * @return Private endpoint which the connection belongs to.
      * 
-    */
+     */
     public PrivateEndpointPropertyResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * Connection State of the Private Endpoint Connection.
+     * @return Connection State of the Private Endpoint Connection.
      * 
-    */
+     */
     public PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
-     * Provisioning state of the private endpoint.
+     * @return Provisioning state of the private endpoint.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

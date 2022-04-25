@@ -32,6 +32,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="certificates")
     private @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
 
+    /**
+     * @return Permissions to certificates
+     * 
+     */
     public Optional<Output<List<Either<String,CertificatePermissions>>>> certificates() {
         return Optional.ofNullable(this.certificates);
     }
@@ -43,6 +47,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keys")
     private @Nullable Output<List<Either<String,KeyPermissions>>> keys;
 
+    /**
+     * @return Permissions to keys
+     * 
+     */
     public Optional<Output<List<Either<String,KeyPermissions>>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -54,6 +62,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
     private @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
 
+    /**
+     * @return Permissions to secrets
+     * 
+     */
     public Optional<Output<List<Either<String,SecretPermissions>>>> secrets() {
         return Optional.ofNullable(this.secrets);
     }
@@ -65,6 +77,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storage")
     private @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
+    /**
+     * @return Permissions to storage accounts
+     * 
+     */
     public Optional<Output<List<Either<String,StoragePermissions>>>> storage() {
         return Optional.ofNullable(this.storage);
     }
@@ -96,54 +112,126 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PermissionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificates Permissions to certificates
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(@Nullable Output<List<Either<String,CertificatePermissions>>> certificates) {
             $.certificates = certificates;
             return this;
         }
 
+        /**
+         * @param certificates Permissions to certificates
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(List<Either<String,CertificatePermissions>> certificates) {
             return certificates(Output.of(certificates));
         }
 
+        /**
+         * @param certificates Permissions to certificates
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificates(Either<String,CertificatePermissions>... certificates) {
             return certificates(List.of(certificates));
         }
 
+        /**
+         * @param keys Permissions to keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<List<Either<String,KeyPermissions>>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys Permissions to keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(List<Either<String,KeyPermissions>> keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param keys Permissions to keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(Either<String,KeyPermissions>... keys) {
             return keys(List.of(keys));
         }
 
+        /**
+         * @param secrets Permissions to secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(@Nullable Output<List<Either<String,SecretPermissions>>> secrets) {
             $.secrets = secrets;
             return this;
         }
 
+        /**
+         * @param secrets Permissions to secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(List<Either<String,SecretPermissions>> secrets) {
             return secrets(Output.of(secrets));
         }
 
+        /**
+         * @param secrets Permissions to secrets
+         * 
+         * @return builder
+         * 
+         */
         public Builder secrets(Either<String,SecretPermissions>... secrets) {
             return secrets(List.of(secrets));
         }
 
+        /**
+         * @param storage Permissions to storage accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(@Nullable Output<List<Either<String,StoragePermissions>>> storage) {
             $.storage = storage;
             return this;
         }
 
+        /**
+         * @param storage Permissions to storage accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(List<Either<String,StoragePermissions>> storage) {
             return storage(Output.of(storage));
         }
 
+        /**
+         * @param storage Permissions to storage accounts
+         * 
+         * @return builder
+         * 
+         */
         public Builder storage(Either<String,StoragePermissions>... storage) {
             return storage(List.of(storage));
         }

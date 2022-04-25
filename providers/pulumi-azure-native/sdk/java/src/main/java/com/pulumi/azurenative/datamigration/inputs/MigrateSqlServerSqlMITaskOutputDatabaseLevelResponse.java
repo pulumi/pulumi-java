@@ -23,6 +23,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -34,6 +38,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -45,6 +53,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Migration exceptions and warnings
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -56,6 +68,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -67,6 +83,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Migration progress message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -79,6 +99,11 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;DatabaseLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -90,6 +115,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="sizeMB", required=true)
     private Double sizeMB;
 
+    /**
+     * @return Size of the database in megabytes
+     * 
+     */
     public Double sizeMB() {
         return this.sizeMB;
     }
@@ -101,6 +130,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="stage", required=true)
     private String stage;
 
+    /**
+     * @return Current stage of migration
+     * 
+     */
     public String stage() {
         return this.stage;
     }
@@ -112,6 +145,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -123,6 +160,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -160,55 +201,122 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
             $ = new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration exceptions and warnings
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param message Migration progress message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;DatabaseLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sizeMB Size of the database in megabytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeMB(Double sizeMB) {
             $.sizeMB = sizeMB;
             return this;
         }
 
+        /**
+         * @param stage Current stage of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param state Current state of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

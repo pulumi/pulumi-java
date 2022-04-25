@@ -25,6 +25,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="additionalInformation", required=true)
     private String additionalInformation;
 
+    /**
+     * @return Additional shipping information for customer, specific to datacenter to which customer should send their disks.
+     * 
+     */
     public String additionalInformation() {
         return this.additionalInformation;
     }
@@ -36,6 +40,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="city")
     private @Nullable String city;
 
+    /**
+     * @return The city name to use when returning the drives.
+     * 
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
@@ -47,6 +55,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="countryOrRegion")
     private @Nullable String countryOrRegion;
 
+    /**
+     * @return The country or region to use when returning the drives.
+     * 
+     */
     public Optional<String> countryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
@@ -58,6 +70,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="phone")
     private @Nullable String phone;
 
+    /**
+     * @return Phone number of the recipient of the returned drives.
+     * 
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
@@ -69,6 +85,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="postalCode")
     private @Nullable String postalCode;
 
+    /**
+     * @return The postal code to use when returning the drives.
+     * 
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
@@ -80,6 +100,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="recipientName")
     private @Nullable String recipientName;
 
+    /**
+     * @return The name of the recipient who will receive the hard drives when they are returned.
+     * 
+     */
     public Optional<String> recipientName() {
         return Optional.ofNullable(this.recipientName);
     }
@@ -91,6 +115,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="stateOrProvince")
     private @Nullable String stateOrProvince;
 
+    /**
+     * @return The state or province to use when returning the drives.
+     * 
+     */
     public Optional<String> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
@@ -102,6 +130,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="streetAddress1")
     private @Nullable String streetAddress1;
 
+    /**
+     * @return The first line of the street address to use when returning the drives.
+     * 
+     */
     public Optional<String> streetAddress1() {
         return Optional.ofNullable(this.streetAddress1);
     }
@@ -113,6 +145,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
     @Import(name="streetAddress2")
     private @Nullable String streetAddress2;
 
+    /**
+     * @return The second line of the street address to use when returning the drives.
+     * 
+     */
     public Optional<String> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
@@ -149,46 +185,100 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
             $ = new ShippingInformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalInformation Additional shipping information for customer, specific to datacenter to which customer should send their disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalInformation(String additionalInformation) {
             $.additionalInformation = additionalInformation;
             return this;
         }
 
+        /**
+         * @param city The city name to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable String city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param countryOrRegion The country or region to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
             $.countryOrRegion = countryOrRegion;
             return this;
         }
 
+        /**
+         * @param phone Phone number of the recipient of the returned drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phone(@Nullable String phone) {
             $.phone = phone;
             return this;
         }
 
+        /**
+         * @param postalCode The postal code to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(@Nullable String postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param recipientName The name of the recipient who will receive the hard drives when they are returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recipientName(@Nullable String recipientName) {
             $.recipientName = recipientName;
             return this;
         }
 
+        /**
+         * @param stateOrProvince The state or province to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
             $.stateOrProvince = stateOrProvince;
             return this;
         }
 
+        /**
+         * @param streetAddress1 The first line of the street address to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress1(@Nullable String streetAddress1) {
             $.streetAddress1 = streetAddress1;
             return this;
         }
 
+        /**
+         * @param streetAddress2 The second line of the street address to use when returning the drives.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress2(@Nullable String streetAddress2) {
             $.streetAddress2 = streetAddress2;
             return this;

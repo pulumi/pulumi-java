@@ -29,6 +29,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="asyncExecution")
     private @Nullable Output<Boolean> asyncExecution;
 
+    /**
+     * @return Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+     * 
+     */
     public Optional<Output<Boolean>> asyncExecution() {
         return Optional.ofNullable(this.asyncExecution);
     }
@@ -40,6 +44,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="errorBlobUri")
     private @Nullable Output<String> errorBlobUri;
 
+    /**
+     * @return Specifies the Azure storage blob where script error stream will be uploaded.
+     * 
+     */
     public Optional<Output<String>> errorBlobUri() {
         return Optional.ofNullable(this.errorBlobUri);
     }
@@ -51,6 +59,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="instanceId", required=true)
     private Output<String> instanceId;
 
+    /**
+     * @return The instance ID of the virtual machine.
+     * 
+     */
     public Output<String> instanceId() {
         return this.instanceId;
     }
@@ -62,6 +74,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -73,6 +89,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="outputBlobUri")
     private @Nullable Output<String> outputBlobUri;
 
+    /**
+     * @return Specifies the Azure storage blob where script output stream will be uploaded.
+     * 
+     */
     public Optional<Output<String>> outputBlobUri() {
         return Optional.ofNullable(this.outputBlobUri);
     }
@@ -84,6 +104,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="parameters")
     private @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
 
+    /**
+     * @return The parameters used by the script.
+     * 
+     */
     public Optional<Output<List<RunCommandInputParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -95,6 +119,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="protectedParameters")
     private @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
 
+    /**
+     * @return The parameters used by the script.
+     * 
+     */
     public Optional<Output<List<RunCommandInputParameterArgs>>> protectedParameters() {
         return Optional.ofNullable(this.protectedParameters);
     }
@@ -106,6 +134,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -117,6 +149,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="runAsPassword")
     private @Nullable Output<String> runAsPassword;
 
+    /**
+     * @return Specifies the user account password on the VM when executing the run command.
+     * 
+     */
     public Optional<Output<String>> runAsPassword() {
         return Optional.ofNullable(this.runAsPassword);
     }
@@ -128,6 +164,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="runAsUser")
     private @Nullable Output<String> runAsUser;
 
+    /**
+     * @return Specifies the user account on the VM when executing the run command.
+     * 
+     */
     public Optional<Output<String>> runAsUser() {
         return Optional.ofNullable(this.runAsUser);
     }
@@ -139,6 +179,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="runCommandName")
     private @Nullable Output<String> runCommandName;
 
+    /**
+     * @return The name of the virtual machine run command.
+     * 
+     */
     public Optional<Output<String>> runCommandName() {
         return Optional.ofNullable(this.runCommandName);
     }
@@ -150,6 +194,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="source")
     private @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
 
+    /**
+     * @return The source of the run command script.
+     * 
+     */
     public Optional<Output<VirtualMachineRunCommandScriptSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -161,6 +209,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -172,6 +224,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="timeoutInSeconds")
     private @Nullable Output<Integer> timeoutInSeconds;
 
+    /**
+     * @return The timeout in seconds to execute the run command.
+     * 
+     */
     public Optional<Output<Integer>> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -183,6 +239,10 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
     @Import(name="vmScaleSetName", required=true)
     private Output<String> vmScaleSetName;
 
+    /**
+     * @return The name of the VM scale set.
+     * 
+     */
     public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
@@ -225,145 +285,337 @@ public final class VirtualMachineScaleSetVMRunCommandArgs extends com.pulumi.res
             $ = new VirtualMachineScaleSetVMRunCommandArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asyncExecution Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncExecution(@Nullable Output<Boolean> asyncExecution) {
             $.asyncExecution = asyncExecution;
             return this;
         }
 
+        /**
+         * @param asyncExecution Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asyncExecution(Boolean asyncExecution) {
             return asyncExecution(Output.of(asyncExecution));
         }
 
+        /**
+         * @param errorBlobUri Specifies the Azure storage blob where script error stream will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorBlobUri(@Nullable Output<String> errorBlobUri) {
             $.errorBlobUri = errorBlobUri;
             return this;
         }
 
+        /**
+         * @param errorBlobUri Specifies the Azure storage blob where script error stream will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorBlobUri(String errorBlobUri) {
             return errorBlobUri(Output.of(errorBlobUri));
         }
 
+        /**
+         * @param instanceId The instance ID of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The instance ID of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param outputBlobUri Specifies the Azure storage blob where script output stream will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputBlobUri(@Nullable Output<String> outputBlobUri) {
             $.outputBlobUri = outputBlobUri;
             return this;
         }
 
+        /**
+         * @param outputBlobUri Specifies the Azure storage blob where script output stream will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputBlobUri(String outputBlobUri) {
             return outputBlobUri(Output.of(outputBlobUri));
         }
 
+        /**
+         * @param parameters The parameters used by the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<RunCommandInputParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters used by the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<RunCommandInputParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The parameters used by the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(RunCommandInputParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param protectedParameters The parameters used by the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedParameters(@Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters) {
             $.protectedParameters = protectedParameters;
             return this;
         }
 
+        /**
+         * @param protectedParameters The parameters used by the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedParameters(List<RunCommandInputParameterArgs> protectedParameters) {
             return protectedParameters(Output.of(protectedParameters));
         }
 
+        /**
+         * @param protectedParameters The parameters used by the script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedParameters(RunCommandInputParameterArgs... protectedParameters) {
             return protectedParameters(List.of(protectedParameters));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param runAsPassword Specifies the user account password on the VM when executing the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsPassword(@Nullable Output<String> runAsPassword) {
             $.runAsPassword = runAsPassword;
             return this;
         }
 
+        /**
+         * @param runAsPassword Specifies the user account password on the VM when executing the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsPassword(String runAsPassword) {
             return runAsPassword(Output.of(runAsPassword));
         }
 
+        /**
+         * @param runAsUser Specifies the user account on the VM when executing the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(@Nullable Output<String> runAsUser) {
             $.runAsUser = runAsUser;
             return this;
         }
 
+        /**
+         * @param runAsUser Specifies the user account on the VM when executing the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsUser(String runAsUser) {
             return runAsUser(Output.of(runAsUser));
         }
 
+        /**
+         * @param runCommandName The name of the virtual machine run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runCommandName(@Nullable Output<String> runCommandName) {
             $.runCommandName = runCommandName;
             return this;
         }
 
+        /**
+         * @param runCommandName The name of the virtual machine run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runCommandName(String runCommandName) {
             return runCommandName(Output.of(runCommandName));
         }
 
+        /**
+         * @param source The source of the run command script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The source of the run command script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(VirtualMachineRunCommandScriptSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param timeoutInSeconds The timeout in seconds to execute the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds The timeout in seconds to execute the run command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             return timeoutInSeconds(Output.of(timeoutInSeconds));
         }
 
+        /**
+         * @param vmScaleSetName The name of the VM scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmScaleSetName(Output<String> vmScaleSetName) {
             $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
+        /**
+         * @param vmScaleSetName The name of the VM scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmScaleSetName(String vmScaleSetName) {
             return vmScaleSetName(Output.of(vmScaleSetName));
         }

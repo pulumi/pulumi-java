@@ -10,35 +10,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ApiKeyResponse {
-    /**
-     * A connection string that can be used by supporting clients for authentication.
-     * 
-     */
+        /**
+         * @return A connection string that can be used by supporting clients for authentication.
+         * 
+         */
     private final String connectionString;
-    /**
-     * The key ID.
-     * 
-     */
+        /**
+         * @return The key ID.
+         * 
+         */
     private final String id;
-    /**
-     * The last time any of the key&#39;s properties were modified.
-     * 
-     */
+        /**
+         * @return The last time any of the key&#39;s properties were modified.
+         * 
+         */
     private final String lastModified;
-    /**
-     * A name for the key describing its usage.
-     * 
-     */
+        /**
+         * @return A name for the key describing its usage.
+         * 
+         */
     private final String name;
-    /**
-     * Whether this key can only be used for read operations.
-     * 
-     */
+        /**
+         * @return Whether this key can only be used for read operations.
+         * 
+         */
     private final Boolean readOnly;
-    /**
-     * The value of the key that is used for authentication purposes.
-     * 
-     */
+        /**
+         * @return The value of the key that is used for authentication purposes.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -58,44 +58,44 @@ public final class ApiKeyResponse {
     }
 
     /**
-     * A connection string that can be used by supporting clients for authentication.
+     * @return A connection string that can be used by supporting clients for authentication.
      * 
-    */
+     */
     public String connectionString() {
         return this.connectionString;
     }
     /**
-     * The key ID.
+     * @return The key ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last time any of the key&#39;s properties were modified.
+     * @return The last time any of the key&#39;s properties were modified.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * A name for the key describing its usage.
+     * @return A name for the key describing its usage.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Whether this key can only be used for read operations.
+     * @return Whether this key can only be used for read operations.
      * 
-    */
+     */
     public Boolean readOnly() {
         return this.readOnly;
     }
     /**
-     * The value of the key that is used for authentication purposes.
+     * @return The value of the key that is used for authentication purposes.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

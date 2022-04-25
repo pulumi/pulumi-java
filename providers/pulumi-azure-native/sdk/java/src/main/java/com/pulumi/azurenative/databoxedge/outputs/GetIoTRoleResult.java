@@ -17,71 +17,71 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIoTRoleResult {
-    /**
-     * Resource allocation
-     * 
-     */
+        /**
+         * @return Resource allocation
+         * 
+         */
     private final @Nullable ComputeResourceResponse computeResource;
-    /**
-     * Host OS supported by the IoT role.
-     * 
-     */
+        /**
+         * @return Host OS supported by the IoT role.
+         * 
+         */
     private final String hostPlatform;
-    /**
-     * Platform where the Iot runtime is hosted.
-     * 
-     */
+        /**
+         * @return Platform where the Iot runtime is hosted.
+         * 
+         */
     private final String hostPlatformType;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * IoT device metadata to which data box edge device needs to be connected.
-     * 
-     */
+        /**
+         * @return IoT device metadata to which data box edge device needs to be connected.
+         * 
+         */
     private final IoTDeviceInfoResponse ioTDeviceDetails;
-    /**
-     * Iot edge agent details to download the agent and bootstrap iot runtime.
-     * 
-     */
+        /**
+         * @return Iot edge agent details to download the agent and bootstrap iot runtime.
+         * 
+         */
     private final @Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo;
-    /**
-     * IoT edge device to which the IoT role needs to be configured.
-     * 
-     */
+        /**
+         * @return IoT edge device to which the IoT role needs to be configured.
+         * 
+         */
     private final IoTDeviceInfoResponse ioTEdgeDeviceDetails;
-    /**
-     * Role type.
-     * Expected value is &#39;IOT&#39;.
-     * 
-     */
+        /**
+         * @return Role type.
+         * Expected value is &#39;IOT&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * Role status.
-     * 
-     */
+        /**
+         * @return Role status.
+         * 
+         */
     private final String roleStatus;
-    /**
-     * Mount points of shares in role(s).
-     * 
-     */
+        /**
+         * @return Mount points of shares in role(s).
+         * 
+         */
     private final @Nullable List<MountPointMapResponse> shareMappings;
-    /**
-     * Role configured on ASE resource
-     * 
-     */
+        /**
+         * @return Role configured on ASE resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -115,94 +115,94 @@ public final class GetIoTRoleResult {
     }
 
     /**
-     * Resource allocation
+     * @return Resource allocation
      * 
-    */
+     */
     public Optional<ComputeResourceResponse> computeResource() {
         return Optional.ofNullable(this.computeResource);
     }
     /**
-     * Host OS supported by the IoT role.
+     * @return Host OS supported by the IoT role.
      * 
-    */
+     */
     public String hostPlatform() {
         return this.hostPlatform;
     }
     /**
-     * Platform where the Iot runtime is hosted.
+     * @return Platform where the Iot runtime is hosted.
      * 
-    */
+     */
     public String hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * IoT device metadata to which data box edge device needs to be connected.
+     * @return IoT device metadata to which data box edge device needs to be connected.
      * 
-    */
+     */
     public IoTDeviceInfoResponse ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
     /**
-     * Iot edge agent details to download the agent and bootstrap iot runtime.
+     * @return Iot edge agent details to download the agent and bootstrap iot runtime.
      * 
-    */
+     */
     public Optional<IoTEdgeAgentInfoResponse> ioTEdgeAgentInfo() {
         return Optional.ofNullable(this.ioTEdgeAgentInfo);
     }
     /**
-     * IoT edge device to which the IoT role needs to be configured.
+     * @return IoT edge device to which the IoT role needs to be configured.
      * 
-    */
+     */
     public IoTDeviceInfoResponse ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
     /**
-     * Role type.
+     * @return Role type.
      * Expected value is &#39;IOT&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Role status.
+     * @return Role status.
      * 
-    */
+     */
     public String roleStatus() {
         return this.roleStatus;
     }
     /**
-     * Mount points of shares in role(s).
+     * @return Mount points of shares in role(s).
      * 
-    */
+     */
     public List<MountPointMapResponse> shareMappings() {
         return this.shareMappings == null ? List.of() : this.shareMappings;
     }
     /**
-     * Role configured on ASE resource
+     * @return Role configured on ASE resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

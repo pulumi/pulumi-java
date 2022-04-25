@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLongTermRetentionPolicyResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The monthly retention policy for an LTR backup in an ISO 8601 format.
-     * 
-     */
+        /**
+         * @return The monthly retention policy for an LTR backup in an ISO 8601 format.
+         * 
+         */
     private final @Nullable String monthlyRetention;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The week of year to take the yearly backup in an ISO 8601 format.
-     * 
-     */
+        /**
+         * @return The week of year to take the yearly backup in an ISO 8601 format.
+         * 
+         */
     private final @Nullable Integer weekOfYear;
-    /**
-     * The weekly retention policy for an LTR backup in an ISO 8601 format.
-     * 
-     */
+        /**
+         * @return The weekly retention policy for an LTR backup in an ISO 8601 format.
+         * 
+         */
     private final @Nullable String weeklyRetention;
-    /**
-     * The yearly retention policy for an LTR backup in an ISO 8601 format.
-     * 
-     */
+        /**
+         * @return The yearly retention policy for an LTR backup in an ISO 8601 format.
+         * 
+         */
     private final @Nullable String yearlyRetention;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetLongTermRetentionPolicyResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The monthly retention policy for an LTR backup in an ISO 8601 format.
+     * @return The monthly retention policy for an LTR backup in an ISO 8601 format.
      * 
-    */
+     */
     public Optional<String> monthlyRetention() {
         return Optional.ofNullable(this.monthlyRetention);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The week of year to take the yearly backup in an ISO 8601 format.
+     * @return The week of year to take the yearly backup in an ISO 8601 format.
      * 
-    */
+     */
     public Optional<Integer> weekOfYear() {
         return Optional.ofNullable(this.weekOfYear);
     }
     /**
-     * The weekly retention policy for an LTR backup in an ISO 8601 format.
+     * @return The weekly retention policy for an LTR backup in an ISO 8601 format.
      * 
-    */
+     */
     public Optional<String> weeklyRetention() {
         return Optional.ofNullable(this.weeklyRetention);
     }
     /**
-     * The yearly retention policy for an LTR backup in an ISO 8601 format.
+     * @return The yearly retention policy for an LTR backup in an ISO 8601 format.
      * 
-    */
+     */
     public Optional<String> yearlyRetention() {
         return Optional.ofNullable(this.yearlyRetention);
     }

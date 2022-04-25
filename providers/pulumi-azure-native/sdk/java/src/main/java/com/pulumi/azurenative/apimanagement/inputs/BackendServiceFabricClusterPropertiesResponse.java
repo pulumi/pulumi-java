@@ -28,6 +28,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
     @Import(name="clientCertificateId")
     private @Nullable String clientCertificateId;
 
+    /**
+     * @return The client certificate id for the management endpoint.
+     * 
+     */
     public Optional<String> clientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
@@ -39,6 +43,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
     @Import(name="clientCertificatethumbprint")
     private @Nullable String clientCertificatethumbprint;
 
+    /**
+     * @return The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+     * 
+     */
     public Optional<String> clientCertificatethumbprint() {
         return Optional.ofNullable(this.clientCertificatethumbprint);
     }
@@ -50,6 +58,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
     @Import(name="managementEndpoints", required=true)
     private List<String> managementEndpoints;
 
+    /**
+     * @return The cluster management endpoint.
+     * 
+     */
     public List<String> managementEndpoints() {
         return this.managementEndpoints;
     }
@@ -61,6 +73,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
     @Import(name="maxPartitionResolutionRetries")
     private @Nullable Integer maxPartitionResolutionRetries;
 
+    /**
+     * @return Maximum number of retries while attempting resolve the partition.
+     * 
+     */
     public Optional<Integer> maxPartitionResolutionRetries() {
         return Optional.ofNullable(this.maxPartitionResolutionRetries);
     }
@@ -72,6 +88,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
     @Import(name="serverCertificateThumbprints")
     private @Nullable List<String> serverCertificateThumbprints;
 
+    /**
+     * @return Thumbprints of certificates cluster management service uses for tls communication
+     * 
+     */
     public Optional<List<String>> serverCertificateThumbprints() {
         return Optional.ofNullable(this.serverCertificateThumbprints);
     }
@@ -83,6 +103,10 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
     @Import(name="serverX509Names")
     private @Nullable List<X509CertificateNameResponse> serverX509Names;
 
+    /**
+     * @return Server X509 Certificate Names Collection
+     * 
+     */
     public Optional<List<X509CertificateNameResponse>> serverX509Names() {
         return Optional.ofNullable(this.serverX509Names);
     }
@@ -116,44 +140,98 @@ public final class BackendServiceFabricClusterPropertiesResponse extends com.pul
             $ = new BackendServiceFabricClusterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCertificateId The client certificate id for the management endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
             $.clientCertificateId = clientCertificateId;
             return this;
         }
 
+        /**
+         * @param clientCertificatethumbprint The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCertificatethumbprint(@Nullable String clientCertificatethumbprint) {
             $.clientCertificatethumbprint = clientCertificatethumbprint;
             return this;
         }
 
+        /**
+         * @param managementEndpoints The cluster management endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementEndpoints(List<String> managementEndpoints) {
             $.managementEndpoints = managementEndpoints;
             return this;
         }
 
+        /**
+         * @param managementEndpoints The cluster management endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementEndpoints(String... managementEndpoints) {
             return managementEndpoints(List.of(managementEndpoints));
         }
 
+        /**
+         * @param maxPartitionResolutionRetries Maximum number of retries while attempting resolve the partition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPartitionResolutionRetries(@Nullable Integer maxPartitionResolutionRetries) {
             $.maxPartitionResolutionRetries = maxPartitionResolutionRetries;
             return this;
         }
 
+        /**
+         * @param serverCertificateThumbprints Thumbprints of certificates cluster management service uses for tls communication
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificateThumbprints(@Nullable List<String> serverCertificateThumbprints) {
             $.serverCertificateThumbprints = serverCertificateThumbprints;
             return this;
         }
 
+        /**
+         * @param serverCertificateThumbprints Thumbprints of certificates cluster management service uses for tls communication
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverCertificateThumbprints(String... serverCertificateThumbprints) {
             return serverCertificateThumbprints(List.of(serverCertificateThumbprints));
         }
 
+        /**
+         * @param serverX509Names Server X509 Certificate Names Collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverX509Names(@Nullable List<X509CertificateNameResponse> serverX509Names) {
             $.serverX509Names = serverX509Names;
             return this;
         }
 
+        /**
+         * @param serverX509Names Server X509 Certificate Names Collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverX509Names(X509CertificateNameResponse... serverX509Names) {
             return serverX509Names(List.of(serverX509Names));
         }

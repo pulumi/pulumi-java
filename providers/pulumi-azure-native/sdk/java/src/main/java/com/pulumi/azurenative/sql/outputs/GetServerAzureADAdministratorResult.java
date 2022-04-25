@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetServerAzureADAdministratorResult {
-    /**
-     * Type of the sever administrator.
-     * 
-     */
+        /**
+         * @return Type of the sever administrator.
+         * 
+         */
     private final String administratorType;
-    /**
-     * Azure Active Directory only Authentication enabled.
-     * 
-     */
+        /**
+         * @return Azure Active Directory only Authentication enabled.
+         * 
+         */
     private final Boolean azureADOnlyAuthentication;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Login name of the server administrator.
-     * 
-     */
+        /**
+         * @return Login name of the server administrator.
+         * 
+         */
     private final String login;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * SID (object ID) of the server administrator.
-     * 
-     */
+        /**
+         * @return SID (object ID) of the server administrator.
+         * 
+         */
     private final String sid;
-    /**
-     * Tenant ID of the administrator.
-     * 
-     */
+        /**
+         * @return Tenant ID of the administrator.
+         * 
+         */
     private final @Nullable String tenantId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetServerAzureADAdministratorResult {
     }
 
     /**
-     * Type of the sever administrator.
+     * @return Type of the sever administrator.
      * 
-    */
+     */
     public String administratorType() {
         return this.administratorType;
     }
     /**
-     * Azure Active Directory only Authentication enabled.
+     * @return Azure Active Directory only Authentication enabled.
      * 
-    */
+     */
     public Boolean azureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Login name of the server administrator.
+     * @return Login name of the server administrator.
      * 
-    */
+     */
     public String login() {
         return this.login;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * SID (object ID) of the server administrator.
+     * @return SID (object ID) of the server administrator.
      * 
-    */
+     */
     public String sid() {
         return this.sid;
     }
     /**
-     * Tenant ID of the administrator.
+     * @return Tenant ID of the administrator.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

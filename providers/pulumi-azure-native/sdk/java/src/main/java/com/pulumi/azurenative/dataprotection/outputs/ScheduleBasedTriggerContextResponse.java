@@ -12,21 +12,21 @@ import java.util.Objects;
 
 @CustomType
 public final class ScheduleBasedTriggerContextResponse {
-    /**
-     * Type of the specific object - used for deserializing
-     * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
-     * 
-     */
+        /**
+         * @return Type of the specific object - used for deserializing
+         * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
+         * 
+         */
     private final String objectType;
-    /**
-     * Schedule for this backup
-     * 
-     */
+        /**
+         * @return Schedule for this backup
+         * 
+         */
     private final BackupScheduleResponse schedule;
-    /**
-     * List of tags that can be applicable for given schedule.
-     * 
-     */
+        /**
+         * @return List of tags that can be applicable for given schedule.
+         * 
+         */
     private final List<TaggingCriteriaResponse> taggingCriteria;
 
     @CustomType.Constructor
@@ -40,24 +40,24 @@ public final class ScheduleBasedTriggerContextResponse {
     }
 
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;ScheduleBasedTriggerContext&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * Schedule for this backup
+     * @return Schedule for this backup
      * 
-    */
+     */
     public BackupScheduleResponse schedule() {
         return this.schedule;
     }
     /**
-     * List of tags that can be applicable for given schedule.
+     * @return List of tags that can be applicable for given schedule.
      * 
-    */
+     */
     public List<TaggingCriteriaResponse> taggingCriteria() {
         return this.taggingCriteria;
     }

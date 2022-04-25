@@ -26,6 +26,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
     @Import(name="blobContainerUri")
     private @Nullable String blobContainerUri;
 
+    /**
+     * @return The URI of the Azure blob container that contains the custom setup script.
+     * 
+     */
     public Optional<String> blobContainerUri() {
         return Optional.ofNullable(this.blobContainerUri);
     }
@@ -37,6 +41,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
     @Import(name="sasToken")
     private @Nullable SecureStringResponse sasToken;
 
+    /**
+     * @return The SAS token of the Azure blob container.
+     * 
+     */
     public Optional<SecureStringResponse> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
@@ -66,11 +74,23 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
             $ = new IntegrationRuntimeCustomSetupScriptPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobContainerUri The URI of the Azure blob container that contains the custom setup script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainerUri(@Nullable String blobContainerUri) {
             $.blobContainerUri = blobContainerUri;
             return this;
         }
 
+        /**
+         * @param sasToken The SAS token of the Azure blob container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(@Nullable SecureStringResponse sasToken) {
             $.sasToken = sasToken;
             return this;

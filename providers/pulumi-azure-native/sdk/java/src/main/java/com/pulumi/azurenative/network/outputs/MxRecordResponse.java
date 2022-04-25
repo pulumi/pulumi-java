@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MxRecordResponse {
-    /**
-     * The domain name of the mail host for this MX record.
-     * 
-     */
+        /**
+         * @return The domain name of the mail host for this MX record.
+         * 
+         */
     private final @Nullable String exchange;
-    /**
-     * The preference value for this MX record.
-     * 
-     */
+        /**
+         * @return The preference value for this MX record.
+         * 
+         */
     private final @Nullable Integer preference;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class MxRecordResponse {
     }
 
     /**
-     * The domain name of the mail host for this MX record.
+     * @return The domain name of the mail host for this MX record.
      * 
-    */
+     */
     public Optional<String> exchange() {
         return Optional.ofNullable(this.exchange);
     }
     /**
-     * The preference value for this MX record.
+     * @return The preference value for this MX record.
      * 
-    */
+     */
     public Optional<Integer> preference() {
         return Optional.ofNullable(this.preference);
     }

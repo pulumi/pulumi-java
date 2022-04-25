@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutomationRulePropertyValuesConditionResponseConditionProperties {
-    /**
-     * The operator to use for evaluation the condition
-     * 
-     */
+        /**
+         * @return The operator to use for evaluation the condition
+         * 
+         */
     private final @Nullable String operator;
-    /**
-     * The property to evaluate
-     * 
-     */
+        /**
+         * @return The property to evaluate
+         * 
+         */
     private final @Nullable String propertyName;
-    /**
-     * The values to use for evaluating the condition
-     * 
-     */
+        /**
+         * @return The values to use for evaluating the condition
+         * 
+         */
     private final @Nullable List<String> propertyValues;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     }
 
     /**
-     * The operator to use for evaluation the condition
+     * @return The operator to use for evaluation the condition
      * 
-    */
+     */
     public Optional<String> operator() {
         return Optional.ofNullable(this.operator);
     }
     /**
-     * The property to evaluate
+     * @return The property to evaluate
      * 
-    */
+     */
     public Optional<String> propertyName() {
         return Optional.ofNullable(this.propertyName);
     }
     /**
-     * The values to use for evaluating the condition
+     * @return The values to use for evaluating the condition
      * 
-    */
+     */
     public List<String> propertyValues() {
         return this.propertyValues == null ? List.of() : this.propertyValues;
     }

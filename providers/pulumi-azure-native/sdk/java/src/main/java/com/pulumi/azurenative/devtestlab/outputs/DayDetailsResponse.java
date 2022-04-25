@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DayDetailsResponse {
-    /**
-     * The time of day the schedule will occur.
-     * 
-     */
+        /**
+         * @return The time of day the schedule will occur.
+         * 
+         */
     private final @Nullable String time;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DayDetailsResponse {
     }
 
     /**
-     * The time of day the schedule will occur.
+     * @return The time of day the schedule will occur.
      * 
-    */
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }

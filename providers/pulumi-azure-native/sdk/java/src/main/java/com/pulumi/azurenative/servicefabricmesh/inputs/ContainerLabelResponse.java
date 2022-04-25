@@ -23,6 +23,10 @@ public final class ContainerLabelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the container label.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class ContainerLabelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the container label.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class ContainerLabelResponse extends com.pulumi.resources.InvokeArg
             $ = new ContainerLabelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the container label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value The value of the container label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

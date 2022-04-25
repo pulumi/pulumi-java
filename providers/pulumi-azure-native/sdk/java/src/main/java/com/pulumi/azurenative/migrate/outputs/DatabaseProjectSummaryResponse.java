@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabaseProjectSummaryResponse {
-    /**
-     * Gets or sets the extended summary.
-     * 
-     */
+        /**
+         * @return Gets or sets the extended summary.
+         * 
+         */
     private final @Nullable Map<String,String> extendedSummary;
-    /**
-     * Gets the Instance type.
-     * Expected value is &#39;Databases&#39;.
-     * 
-     */
+        /**
+         * @return Gets the Instance type.
+         * Expected value is &#39;Databases&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * Gets or sets the time when summary was last refreshed.
-     * 
-     */
+        /**
+         * @return Gets or sets the time when summary was last refreshed.
+         * 
+         */
     private final @Nullable String lastSummaryRefreshedTime;
-    /**
-     * Gets or sets the state of refresh summary.
-     * 
-     */
+        /**
+         * @return Gets or sets the state of refresh summary.
+         * 
+         */
     private final @Nullable String refreshSummaryState;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class DatabaseProjectSummaryResponse {
     }
 
     /**
-     * Gets or sets the extended summary.
+     * @return Gets or sets the extended summary.
      * 
-    */
+     */
     public Map<String,String> extendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
     /**
-     * Gets the Instance type.
+     * @return Gets the Instance type.
      * Expected value is &#39;Databases&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * Gets or sets the time when summary was last refreshed.
+     * @return Gets or sets the time when summary was last refreshed.
      * 
-    */
+     */
     public Optional<String> lastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
     /**
-     * Gets or sets the state of refresh summary.
+     * @return Gets or sets the state of refresh summary.
      * 
-    */
+     */
     public Optional<String> refreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }

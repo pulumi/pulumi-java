@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNetworkProfileResult {
-    /**
-     * List of chid container network interface configurations.
-     * 
-     */
+        /**
+         * @return List of chid container network interface configurations.
+         * 
+         */
     private final @Nullable List<ContainerNetworkInterfaceConfigurationResponse> containerNetworkInterfaceConfigurations;
-    /**
-     * List of child container network interfaces.
-     * 
-     */
+        /**
+         * @return List of child container network interfaces.
+         * 
+         */
     private final List<ContainerNetworkInterfaceResponse> containerNetworkInterfaces;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the network profile resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the network profile resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource GUID property of the network profile resource.
-     * 
-     */
+        /**
+         * @return The resource GUID property of the network profile resource.
+         * 
+         */
     private final String resourceGuid;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetNetworkProfileResult {
     }
 
     /**
-     * List of chid container network interface configurations.
+     * @return List of chid container network interface configurations.
      * 
-    */
+     */
     public List<ContainerNetworkInterfaceConfigurationResponse> containerNetworkInterfaceConfigurations() {
         return this.containerNetworkInterfaceConfigurations == null ? List.of() : this.containerNetworkInterfaceConfigurations;
     }
     /**
-     * List of child container network interfaces.
+     * @return List of child container network interfaces.
      * 
-    */
+     */
     public List<ContainerNetworkInterfaceResponse> containerNetworkInterfaces() {
         return this.containerNetworkInterfaces;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the network profile resource.
+     * @return The provisioning state of the network profile resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the network profile resource.
+     * @return The resource GUID property of the network profile resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

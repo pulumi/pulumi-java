@@ -9,16 +9,16 @@ import java.util.Objects;
 
 @CustomType
 public final class ImageTemplateSharedImageVersionSourceResponse {
-    /**
-     * ARM resource id of the image version in the shared image gallery
-     * 
-     */
+        /**
+         * @return ARM resource id of the image version in the shared image gallery
+         * 
+         */
     private final String imageVersionId;
-    /**
-     * Specifies the type of source image you want to start with.
-     * Expected value is &#39;SharedImageVersion&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the type of source image you want to start with.
+         * Expected value is &#39;SharedImageVersion&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -30,17 +30,17 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
     }
 
     /**
-     * ARM resource id of the image version in the shared image gallery
+     * @return ARM resource id of the image version in the shared image gallery
      * 
-    */
+     */
     public String imageVersionId() {
         return this.imageVersionId;
     }
     /**
-     * Specifies the type of source image you want to start with.
+     * @return Specifies the type of source image you want to start with.
      * Expected value is &#39;SharedImageVersion&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

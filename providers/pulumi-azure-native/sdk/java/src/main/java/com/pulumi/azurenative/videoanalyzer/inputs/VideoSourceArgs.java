@@ -26,6 +26,10 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Node name. Must be unique within the topology.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeSequences", required=true)
     private Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
 
+    /**
+     * @return Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+     * 
+     */
     public Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences() {
         return this.timeSequences;
     }
@@ -49,6 +57,11 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -60,6 +73,10 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="videoName", required=true)
     private Output<String> videoName;
 
+    /**
+     * @return Name of the Video Analyzer video resource to be used as the source.
+     * 
+     */
     public Output<String> videoName() {
         return this.videoName;
     }
@@ -91,38 +108,88 @@ public final class VideoSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new VideoSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Node name. Must be unique within the topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param timeSequences Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSequences(Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences) {
             $.timeSequences = timeSequences;
             return this;
         }
 
+        /**
+         * @param timeSequences Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersArgs timeSequences) {
             return timeSequences(Output.of(timeSequences));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param videoName Name of the Video Analyzer video resource to be used as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoName(Output<String> videoName) {
             $.videoName = videoName;
             return this;
         }
 
+        /**
+         * @param videoName Name of the Video Analyzer video resource to be used as the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder videoName(String videoName) {
             return videoName(Output.of(videoName));
         }

@@ -24,6 +24,10 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
     @Import(name="acsKubeConfig", required=true)
     private String acsKubeConfig;
 
+    /**
+     * @return The ACS kube config file.
+     * 
+     */
     public String acsKubeConfig() {
         return this.acsKubeConfig;
     }
@@ -35,6 +39,10 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
     @Import(name="imagePullSecretName", required=true)
     private String imagePullSecretName;
 
+    /**
+     * @return The ACR image pull secret name which was created in Kubernetes.
+     * 
+     */
     public String imagePullSecretName() {
         return this.imagePullSecretName;
     }
@@ -46,6 +54,10 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
     @Import(name="servicePrincipalConfiguration", required=true)
     private ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
+    /**
+     * @return Service principal configuration used by Kubernetes.
+     * 
+     */
     public ServicePrincipalPropertiesResponse servicePrincipalConfiguration() {
         return this.servicePrincipalConfiguration;
     }
@@ -76,16 +88,34 @@ public final class ContainerServiceCredentialsResponse extends com.pulumi.resour
             $ = new ContainerServiceCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acsKubeConfig The ACS kube config file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acsKubeConfig(String acsKubeConfig) {
             $.acsKubeConfig = acsKubeConfig;
             return this;
         }
 
+        /**
+         * @param imagePullSecretName The ACR image pull secret name which was created in Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imagePullSecretName(String imagePullSecretName) {
             $.imagePullSecretName = imagePullSecretName;
             return this;
         }
 
+        /**
+         * @param servicePrincipalConfiguration Service principal configuration used by Kubernetes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalConfiguration(ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
             $.servicePrincipalConfiguration = servicePrincipalConfiguration;
             return this;

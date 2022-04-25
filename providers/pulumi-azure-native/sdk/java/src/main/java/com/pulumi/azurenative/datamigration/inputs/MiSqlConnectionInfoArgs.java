@@ -27,6 +27,10 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="managedInstanceResourceId", required=true)
     private Output<String> managedInstanceResourceId;
 
+    /**
+     * @return Resource id for Azure SQL database Managed instance
+     * 
+     */
     public Output<String> managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
@@ -38,6 +42,10 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Password credential.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -50,6 +58,11 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of connection info
+     * Expected value is &#39;MiSqlConnectionInfo&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -61,6 +74,10 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return User name
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -92,38 +109,88 @@ public final class MiSqlConnectionInfoArgs extends com.pulumi.resources.Resource
             $ = new MiSqlConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedInstanceResourceId Resource id for Azure SQL database Managed instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceResourceId(Output<String> managedInstanceResourceId) {
             $.managedInstanceResourceId = managedInstanceResourceId;
             return this;
         }
 
+        /**
+         * @param managedInstanceResourceId Resource id for Azure SQL database Managed instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceResourceId(String managedInstanceResourceId) {
             return managedInstanceResourceId(Output.of(managedInstanceResourceId));
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;MiSqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;MiSqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

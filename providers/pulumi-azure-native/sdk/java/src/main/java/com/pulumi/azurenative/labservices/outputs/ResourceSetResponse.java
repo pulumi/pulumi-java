@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceSetResponse {
-    /**
-     * resourceSettingId for the environment
-     * 
-     */
+        /**
+         * @return resourceSettingId for the environment
+         * 
+         */
     private final @Nullable String resourceSettingId;
-    /**
-     * VM resource Id for the environment
-     * 
-     */
+        /**
+         * @return VM resource Id for the environment
+         * 
+         */
     private final @Nullable String vmResourceId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ResourceSetResponse {
     }
 
     /**
-     * resourceSettingId for the environment
+     * @return resourceSettingId for the environment
      * 
-    */
+     */
     public Optional<String> resourceSettingId() {
         return Optional.ofNullable(this.resourceSettingId);
     }
     /**
-     * VM resource Id for the environment
+     * @return VM resource Id for the environment
      * 
-    */
+     */
     public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }

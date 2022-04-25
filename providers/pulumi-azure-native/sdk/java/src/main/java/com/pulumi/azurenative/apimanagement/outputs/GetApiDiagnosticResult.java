@@ -14,65 +14,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiDiagnosticResult {
-    /**
-     * Specifies for what type of messages sampling settings should not apply.
-     * 
-     */
+        /**
+         * @return Specifies for what type of messages sampling settings should not apply.
+         * 
+         */
     private final @Nullable String alwaysLog;
-    /**
-     * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
-     * 
-     */
+        /**
+         * @return Diagnostic settings for incoming/outgoing HTTP messages to the Backend
+         * 
+         */
     private final @Nullable PipelineDiagnosticSettingsResponse backend;
-    /**
-     * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
-     * 
-     */
+        /**
+         * @return Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+         * 
+         */
     private final @Nullable PipelineDiagnosticSettingsResponse frontend;
-    /**
-     * Sets correlation protocol to use for Application Insights diagnostics.
-     * 
-     */
+        /**
+         * @return Sets correlation protocol to use for Application Insights diagnostics.
+         * 
+         */
     private final @Nullable String httpCorrelationProtocol;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Log the ClientIP. Default is false.
-     * 
-     */
+        /**
+         * @return Log the ClientIP. Default is false.
+         * 
+         */
     private final @Nullable Boolean logClientIp;
-    /**
-     * Resource Id of a target logger.
-     * 
-     */
+        /**
+         * @return Resource Id of a target logger.
+         * 
+         */
     private final String loggerId;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The format of the Operation Name for Application Insights telemetries. Default is Name.
-     * 
-     */
+        /**
+         * @return The format of the Operation Name for Application Insights telemetries. Default is Name.
+         * 
+         */
     private final @Nullable String operationNameFormat;
-    /**
-     * Sampling settings for Diagnostic.
-     * 
-     */
+        /**
+         * @return Sampling settings for Diagnostic.
+         * 
+         */
     private final @Nullable SamplingSettingsResponse sampling;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
-    /**
-     * The verbosity level applied to traces emitted by trace policies.
-     * 
-     */
+        /**
+         * @return The verbosity level applied to traces emitted by trace policies.
+         * 
+         */
     private final @Nullable String verbosity;
 
     @CustomType.Constructor
@@ -104,86 +104,86 @@ public final class GetApiDiagnosticResult {
     }
 
     /**
-     * Specifies for what type of messages sampling settings should not apply.
+     * @return Specifies for what type of messages sampling settings should not apply.
      * 
-    */
+     */
     public Optional<String> alwaysLog() {
         return Optional.ofNullable(this.alwaysLog);
     }
     /**
-     * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
+     * @return Diagnostic settings for incoming/outgoing HTTP messages to the Backend
      * 
-    */
+     */
     public Optional<PipelineDiagnosticSettingsResponse> backend() {
         return Optional.ofNullable(this.backend);
     }
     /**
-     * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
+     * @return Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
      * 
-    */
+     */
     public Optional<PipelineDiagnosticSettingsResponse> frontend() {
         return Optional.ofNullable(this.frontend);
     }
     /**
-     * Sets correlation protocol to use for Application Insights diagnostics.
+     * @return Sets correlation protocol to use for Application Insights diagnostics.
      * 
-    */
+     */
     public Optional<String> httpCorrelationProtocol() {
         return Optional.ofNullable(this.httpCorrelationProtocol);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Log the ClientIP. Default is false.
+     * @return Log the ClientIP. Default is false.
      * 
-    */
+     */
     public Optional<Boolean> logClientIp() {
         return Optional.ofNullable(this.logClientIp);
     }
     /**
-     * Resource Id of a target logger.
+     * @return Resource Id of a target logger.
      * 
-    */
+     */
     public String loggerId() {
         return this.loggerId;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The format of the Operation Name for Application Insights telemetries. Default is Name.
+     * @return The format of the Operation Name for Application Insights telemetries. Default is Name.
      * 
-    */
+     */
     public Optional<String> operationNameFormat() {
         return Optional.ofNullable(this.operationNameFormat);
     }
     /**
-     * Sampling settings for Diagnostic.
+     * @return Sampling settings for Diagnostic.
      * 
-    */
+     */
     public Optional<SamplingSettingsResponse> sampling() {
         return Optional.ofNullable(this.sampling);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The verbosity level applied to traces emitted by trace policies.
+     * @return The verbosity level applied to traces emitted by trace policies.
      * 
-    */
+     */
     public Optional<String> verbosity() {
         return Optional.ofNullable(this.verbosity);
     }

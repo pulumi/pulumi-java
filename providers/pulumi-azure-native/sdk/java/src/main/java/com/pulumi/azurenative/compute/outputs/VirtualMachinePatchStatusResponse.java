@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachinePatchStatusResponse {
-    /**
-     * The available patch summary of the latest assessment operation for the virtual machine.
-     * 
-     */
+        /**
+         * @return The available patch summary of the latest assessment operation for the virtual machine.
+         * 
+         */
     private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
-    /**
-     * The enablement status of the specified patchMode
-     * 
-     */
+        /**
+         * @return The enablement status of the specified patchMode
+         * 
+         */
     private final List<InstanceViewStatusResponse> configurationStatuses;
-    /**
-     * The installation summary of the latest installation operation for the virtual machine.
-     * 
-     */
+        /**
+         * @return The installation summary of the latest installation operation for the virtual machine.
+         * 
+         */
     private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class VirtualMachinePatchStatusResponse {
     }
 
     /**
-     * The available patch summary of the latest assessment operation for the virtual machine.
+     * @return The available patch summary of the latest assessment operation for the virtual machine.
      * 
-    */
+     */
     public Optional<AvailablePatchSummaryResponse> availablePatchSummary() {
         return Optional.ofNullable(this.availablePatchSummary);
     }
     /**
-     * The enablement status of the specified patchMode
+     * @return The enablement status of the specified patchMode
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> configurationStatuses() {
         return this.configurationStatuses;
     }
     /**
-     * The installation summary of the latest installation operation for the virtual machine.
+     * @return The installation summary of the latest installation operation for the virtual machine.
      * 
-    */
+     */
     public Optional<LastPatchInstallationSummaryResponse> lastPatchInstallationSummary() {
         return Optional.ofNullable(this.lastPatchInstallationSummary);
     }

@@ -15,40 +15,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHybridRunbookWorkerGroupResult {
-    /**
-     * Sets the credential of a worker group.
-     * 
-     */
+        /**
+         * @return Sets the credential of a worker group.
+         * 
+         */
     private final @Nullable RunAsCredentialAssociationPropertyResponse credential;
-    /**
-     * Type of the HybridWorkerGroup.
-     * 
-     */
+        /**
+         * @return Type of the HybridWorkerGroup.
+         * 
+         */
     private final @Nullable String groupType;
-    /**
-     * Gets or sets the list of hybrid runbook workers.
-     * 
-     */
+        /**
+         * @return Gets or sets the list of hybrid runbook workers.
+         * 
+         */
     private final @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers;
-    /**
-     * Gets or sets the id of the resource.
-     * 
-     */
+        /**
+         * @return Gets or sets the id of the resource.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Gets or sets the name of the group.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the group.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Resource system metadata.
-     * 
-     */
+        /**
+         * @return Resource system metadata.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -70,51 +70,51 @@ public final class GetHybridRunbookWorkerGroupResult {
     }
 
     /**
-     * Sets the credential of a worker group.
+     * @return Sets the credential of a worker group.
      * 
-    */
+     */
     public Optional<RunAsCredentialAssociationPropertyResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * Type of the HybridWorkerGroup.
+     * @return Type of the HybridWorkerGroup.
      * 
-    */
+     */
     public Optional<String> groupType() {
         return Optional.ofNullable(this.groupType);
     }
     /**
-     * Gets or sets the list of hybrid runbook workers.
+     * @return Gets or sets the list of hybrid runbook workers.
      * 
-    */
+     */
     public List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers() {
         return this.hybridRunbookWorkers == null ? List.of() : this.hybridRunbookWorkers;
     }
     /**
-     * Gets or sets the id of the resource.
+     * @return Gets or sets the id of the resource.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Gets or sets the name of the group.
+     * @return Gets or sets the name of the group.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Resource system metadata.
+     * @return Resource system metadata.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

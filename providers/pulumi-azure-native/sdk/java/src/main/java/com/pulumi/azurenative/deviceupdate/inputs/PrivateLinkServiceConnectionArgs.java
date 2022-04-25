@@ -27,6 +27,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="groupIds")
     private @Nullable Output<List<String>> groupIds;
 
+    /**
+     * @return List of group IDs.
+     * 
+     */
     public Optional<Output<List<String>>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -38,6 +42,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Private link service connection name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
     @Import(name="requestMessage")
     private @Nullable Output<String> requestMessage;
 
+    /**
+     * @return Request message.
+     * 
+     */
     public Optional<Output<String>> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -79,33 +91,75 @@ public final class PrivateLinkServiceConnectionArgs extends com.pulumi.resources
             $ = new PrivateLinkServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds List of group IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds List of group IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(List<String> groupIds) {
             return groupIds(Output.of(groupIds));
         }
 
+        /**
+         * @param groupIds List of group IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
 
+        /**
+         * @param name Private link service connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Private link service connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param requestMessage Request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable Output<String> requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param requestMessage Request message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(String requestMessage) {
             return requestMessage(Output.of(requestMessage));
         }

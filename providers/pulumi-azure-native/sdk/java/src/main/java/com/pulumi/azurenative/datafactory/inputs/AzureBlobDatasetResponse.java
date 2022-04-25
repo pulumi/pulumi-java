@@ -38,6 +38,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Dataset.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -49,6 +53,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="compression")
     private @Nullable DatasetCompressionResponse compression;
 
+    /**
+     * @return The data compression method used for the blob storage.
+     * 
+     */
     public Optional<DatasetCompressionResponse> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -60,6 +68,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Dataset description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +83,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="fileName")
     private @Nullable Object fileName;
 
+    /**
+     * @return The name of the Azure Blob. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -82,6 +98,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="folder")
     private @Nullable DatasetResponseFolder folder;
 
+    /**
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -93,6 +113,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="folderPath")
     private @Nullable Object folderPath;
 
+    /**
+     * @return The path of the Azure Blob storage. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -104,6 +128,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="format")
     private @Nullable Object format;
 
+    /**
+     * @return The format of the Azure Blob storage.
+     * 
+     */
     public Optional<Object> format() {
         return Optional.ofNullable(this.format);
     }
@@ -115,6 +143,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -126,6 +158,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="modifiedDatetimeEnd")
     private @Nullable Object modifiedDatetimeEnd;
 
+    /**
+     * @return The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> modifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
@@ -137,6 +173,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="modifiedDatetimeStart")
     private @Nullable Object modifiedDatetimeStart;
 
+    /**
+     * @return The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> modifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
@@ -148,6 +188,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for dataset.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -159,6 +203,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="schema")
     private @Nullable Object schema;
 
+    /**
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -170,6 +218,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="structure")
     private @Nullable Object structure;
 
+    /**
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
@@ -181,6 +233,10 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="tableRootLocation")
     private @Nullable Object tableRootLocation;
 
+    /**
+     * @return The root of blob path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> tableRootLocation() {
         return Optional.ofNullable(this.tableRootLocation);
     }
@@ -193,6 +249,11 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset.
+     * Expected value is &#39;AzureBlob&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -235,80 +296,177 @@ public final class AzureBlobDatasetResponse extends com.pulumi.resources.InvokeA
             $ = new AzureBlobDatasetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param compression The data compression method used for the blob storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param fileName The name of the Azure Blob. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Object fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable DatasetResponseFolder folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folderPath The path of the Azure Blob storage. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Object folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param format The format of the Azure Blob storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Object format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param modifiedDatetimeEnd The end of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
+        /**
+         * @param modifiedDatetimeStart The start of Azure Blob&#39;s modified datetime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Object schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(@Nullable Object structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param tableRootLocation The root of blob path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableRootLocation(@Nullable Object tableRootLocation) {
             $.tableRootLocation = tableRootLocation;
             return this;
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;AzureBlob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

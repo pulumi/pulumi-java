@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ParticipantProfilePropertyReferenceResponse {
-    /**
-     * The source interaction property that maps to the target profile property.
-     * 
-     */
+        /**
+         * @return The source interaction property that maps to the target profile property.
+         * 
+         */
     private final String interactionPropertyName;
-    /**
-     * The target profile property that maps to the source interaction property.
-     * 
-     */
+        /**
+         * @return The target profile property that maps to the source interaction property.
+         * 
+         */
     private final String profilePropertyName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ParticipantProfilePropertyReferenceResponse {
     }
 
     /**
-     * The source interaction property that maps to the target profile property.
+     * @return The source interaction property that maps to the target profile property.
      * 
-    */
+     */
     public String interactionPropertyName() {
         return this.interactionPropertyName;
     }
     /**
-     * The target profile property that maps to the source interaction property.
+     * @return The target profile property that maps to the source interaction property.
      * 
-    */
+     */
     public String profilePropertyName() {
         return this.profilePropertyName;
     }

@@ -11,50 +11,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ShippingInformationResponse {
-    /**
-     * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
-     * 
-     */
+        /**
+         * @return Additional shipping information for customer, specific to datacenter to which customer should send their disks.
+         * 
+         */
     private final String additionalInformation;
-    /**
-     * The city name to use when returning the drives.
-     * 
-     */
+        /**
+         * @return The city name to use when returning the drives.
+         * 
+         */
     private final @Nullable String city;
-    /**
-     * The country or region to use when returning the drives.
-     * 
-     */
+        /**
+         * @return The country or region to use when returning the drives.
+         * 
+         */
     private final @Nullable String countryOrRegion;
-    /**
-     * Phone number of the recipient of the returned drives.
-     * 
-     */
+        /**
+         * @return Phone number of the recipient of the returned drives.
+         * 
+         */
     private final @Nullable String phone;
-    /**
-     * The postal code to use when returning the drives.
-     * 
-     */
+        /**
+         * @return The postal code to use when returning the drives.
+         * 
+         */
     private final @Nullable String postalCode;
-    /**
-     * The name of the recipient who will receive the hard drives when they are returned.
-     * 
-     */
+        /**
+         * @return The name of the recipient who will receive the hard drives when they are returned.
+         * 
+         */
     private final @Nullable String recipientName;
-    /**
-     * The state or province to use when returning the drives.
-     * 
-     */
+        /**
+         * @return The state or province to use when returning the drives.
+         * 
+         */
     private final @Nullable String stateOrProvince;
-    /**
-     * The first line of the street address to use when returning the drives.
-     * 
-     */
+        /**
+         * @return The first line of the street address to use when returning the drives.
+         * 
+         */
     private final @Nullable String streetAddress1;
-    /**
-     * The second line of the street address to use when returning the drives.
-     * 
-     */
+        /**
+         * @return The second line of the street address to use when returning the drives.
+         * 
+         */
     private final @Nullable String streetAddress2;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class ShippingInformationResponse {
     }
 
     /**
-     * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
+     * @return Additional shipping information for customer, specific to datacenter to which customer should send their disks.
      * 
-    */
+     */
     public String additionalInformation() {
         return this.additionalInformation;
     }
     /**
-     * The city name to use when returning the drives.
+     * @return The city name to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
-     * The country or region to use when returning the drives.
+     * @return The country or region to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> countryOrRegion() {
         return Optional.ofNullable(this.countryOrRegion);
     }
     /**
-     * Phone number of the recipient of the returned drives.
+     * @return Phone number of the recipient of the returned drives.
      * 
-    */
+     */
     public Optional<String> phone() {
         return Optional.ofNullable(this.phone);
     }
     /**
-     * The postal code to use when returning the drives.
+     * @return The postal code to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
-     * The name of the recipient who will receive the hard drives when they are returned.
+     * @return The name of the recipient who will receive the hard drives when they are returned.
      * 
-    */
+     */
     public Optional<String> recipientName() {
         return Optional.ofNullable(this.recipientName);
     }
     /**
-     * The state or province to use when returning the drives.
+     * @return The state or province to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
-     * The first line of the street address to use when returning the drives.
+     * @return The first line of the street address to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> streetAddress1() {
         return Optional.ofNullable(this.streetAddress1);
     }
     /**
-     * The second line of the street address to use when returning the drives.
+     * @return The second line of the street address to use when returning the drives.
      * 
-    */
+     */
     public Optional<String> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }

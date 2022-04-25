@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectedClusterIdentityResponse {
-    /**
-     * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
-     * 
-     */
+        /**
+         * @return The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ConnectedClusterIdentityResponse {
     }
 
     /**
-     * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
+     * @return The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
+     * @return The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+     * @return The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

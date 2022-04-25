@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceReferenceResponse {
-    /**
-     * The resource id.
-     * 
-     */
+        /**
+         * @return The resource id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Gets the resource name.
-     * 
-     */
+        /**
+         * @return Gets the resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Gets the resource type.
-     * 
-     */
+        /**
+         * @return Gets the resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ResourceReferenceResponse {
     }
 
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

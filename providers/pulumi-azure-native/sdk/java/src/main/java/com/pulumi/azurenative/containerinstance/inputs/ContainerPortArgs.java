@@ -29,6 +29,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port number exposed within the container group.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -40,6 +44,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
     private @Nullable Output<Either<String,ContainerNetworkProtocol>> protocol;
 
+    /**
+     * @return The protocol associated with the port.
+     * 
+     */
     public Optional<Output<Either<String,ContainerNetworkProtocol>>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -69,28 +77,64 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The port number exposed within the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number exposed within the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol The protocol associated with the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Either<String,ContainerNetworkProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol associated with the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,ContainerNetworkProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol The protocol associated with the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol The protocol associated with the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(ContainerNetworkProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }

@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BackupFileInfoResponse {
-    /**
-     * Sequence number of the backup file in the backup set
-     * 
-     */
+        /**
+         * @return Sequence number of the backup file in the backup set
+         * 
+         */
     private final @Nullable Integer familySequenceNumber;
-    /**
-     * Location of the backup file in shared folder
-     * 
-     */
+        /**
+         * @return Location of the backup file in shared folder
+         * 
+         */
     private final @Nullable String fileLocation;
-    /**
-     * Status of the backup file during migration
-     * 
-     */
+        /**
+         * @return Status of the backup file during migration
+         * 
+         */
     private final @Nullable String status;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class BackupFileInfoResponse {
     }
 
     /**
-     * Sequence number of the backup file in the backup set
+     * @return Sequence number of the backup file in the backup set
      * 
-    */
+     */
     public Optional<Integer> familySequenceNumber() {
         return Optional.ofNullable(this.familySequenceNumber);
     }
     /**
-     * Location of the backup file in shared folder
+     * @return Location of the backup file in shared folder
      * 
-    */
+     */
     public Optional<String> fileLocation() {
         return Optional.ofNullable(this.fileLocation);
     }
     /**
-     * Status of the backup file during migration
+     * @return Status of the backup file during migration
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

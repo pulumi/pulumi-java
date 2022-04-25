@@ -10,55 +10,55 @@ import java.util.Objects;
 
 @CustomType
 public final class DatabaseSummaryResultResponse {
-    /**
-     * Migration end time
-     * 
-     */
+        /**
+         * @return Migration end time
+         * 
+         */
     private final String endedOn;
-    /**
-     * Wildcard string prefix to use for querying all errors of the item
-     * 
-     */
+        /**
+         * @return Wildcard string prefix to use for querying all errors of the item
+         * 
+         */
     private final String errorPrefix;
-    /**
-     * Number of successfully completed items
-     * 
-     */
+        /**
+         * @return Number of successfully completed items
+         * 
+         */
     private final Double itemsCompletedCount;
-    /**
-     * Number of items
-     * 
-     */
+        /**
+         * @return Number of items
+         * 
+         */
     private final Double itemsCount;
-    /**
-     * Name of the item
-     * 
-     */
+        /**
+         * @return Name of the item
+         * 
+         */
     private final String name;
-    /**
-     * Wildcard string prefix to use for querying all sub-tem results of the item
-     * 
-     */
+        /**
+         * @return Wildcard string prefix to use for querying all sub-tem results of the item
+         * 
+         */
     private final String resultPrefix;
-    /**
-     * Size of the database in megabytes
-     * 
-     */
+        /**
+         * @return Size of the database in megabytes
+         * 
+         */
     private final Double sizeMB;
-    /**
-     * Migration start time
-     * 
-     */
+        /**
+         * @return Migration start time
+         * 
+         */
     private final String startedOn;
-    /**
-     * Current state of migration
-     * 
-     */
+        /**
+         * @return Current state of migration
+         * 
+         */
     private final String state;
-    /**
-     * Status message
-     * 
-     */
+        /**
+         * @return Status message
+         * 
+         */
     private final String statusMessage;
 
     @CustomType.Constructor
@@ -86,72 +86,72 @@ public final class DatabaseSummaryResultResponse {
     }
 
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Wildcard string prefix to use for querying all errors of the item
+     * @return Wildcard string prefix to use for querying all errors of the item
      * 
-    */
+     */
     public String errorPrefix() {
         return this.errorPrefix;
     }
     /**
-     * Number of successfully completed items
+     * @return Number of successfully completed items
      * 
-    */
+     */
     public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
     /**
-     * Number of items
+     * @return Number of items
      * 
-    */
+     */
     public Double itemsCount() {
         return this.itemsCount;
     }
     /**
-     * Name of the item
+     * @return Name of the item
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Wildcard string prefix to use for querying all sub-tem results of the item
+     * @return Wildcard string prefix to use for querying all sub-tem results of the item
      * 
-    */
+     */
     public String resultPrefix() {
         return this.resultPrefix;
     }
     /**
-     * Size of the database in megabytes
+     * @return Size of the database in megabytes
      * 
-    */
+     */
     public Double sizeMB() {
         return this.sizeMB;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Status message
+     * @return Status message
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }

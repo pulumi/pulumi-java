@@ -19,6 +19,10 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="dnsAliasName", required=true)
     private String dnsAliasName;
 
+    /**
+     * @return The name of the server dns alias.
+     * 
+     */
     public String dnsAliasName() {
         return this.dnsAliasName;
     }
@@ -30,6 +34,10 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server that the alias is pointing to.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -71,16 +83,34 @@ public final class GetServerDnsAliasArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetServerDnsAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsAliasName The name of the server dns alias.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsAliasName(String dnsAliasName) {
             $.dnsAliasName = dnsAliasName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server that the alias is pointing to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

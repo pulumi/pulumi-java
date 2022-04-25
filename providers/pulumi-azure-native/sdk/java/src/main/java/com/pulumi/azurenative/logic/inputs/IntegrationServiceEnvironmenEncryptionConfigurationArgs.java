@@ -26,6 +26,10 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
     @Import(name="encryptionKeyReference")
     private @Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
+    /**
+     * @return The encryption key reference.
+     * 
+     */
     public Optional<Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs>> encryptionKeyReference() {
         return Optional.ofNullable(this.encryptionKeyReference);
     }
@@ -54,11 +58,23 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
             $ = new IntegrationServiceEnvironmenEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionKeyReference The encryption key reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyReference(@Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
             $.encryptionKeyReference = encryptionKeyReference;
             return this;
         }
 
+        /**
+         * @param encryptionKeyReference The encryption key reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKeyReference(IntegrationServiceEnvironmenEncryptionKeyReferenceArgs encryptionKeyReference) {
             return encryptionKeyReference(Output.of(encryptionKeyReference));
         }

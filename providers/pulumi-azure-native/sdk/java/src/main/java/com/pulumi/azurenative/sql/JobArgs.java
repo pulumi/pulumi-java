@@ -24,6 +24,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-defined description of the job.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName", required=true)
     private Output<String> jobAgentName;
 
+    /**
+     * @return The name of the job agent.
+     * 
+     */
     public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
@@ -46,6 +54,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
     private @Nullable Output<String> jobName;
 
+    /**
+     * @return The name of the job to get.
+     * 
+     */
     public Optional<Output<String>> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -57,6 +69,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
     private @Nullable Output<JobScheduleArgs> schedule;
 
+    /**
+     * @return Schedule properties of the job.
+     * 
+     */
     public Optional<Output<JobScheduleArgs>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -79,6 +99,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -112,56 +136,128 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-defined description of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-defined description of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(Output<String> jobAgentName) {
             $.jobAgentName = jobAgentName;
             return this;
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(String jobAgentName) {
             return jobAgentName(Output.of(jobAgentName));
         }
 
+        /**
+         * @param jobName The name of the job to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The name of the job to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schedule Schedule properties of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<JobScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Schedule properties of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(JobScheduleArgs schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }

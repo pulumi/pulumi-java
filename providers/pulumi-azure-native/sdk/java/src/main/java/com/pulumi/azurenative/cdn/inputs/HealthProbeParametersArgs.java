@@ -29,6 +29,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probeIntervalInSeconds")
     private @Nullable Output<Integer> probeIntervalInSeconds;
 
+    /**
+     * @return The number of seconds between health probes.Default is 240sec.
+     * 
+     */
     public Optional<Output<Integer>> probeIntervalInSeconds() {
         return Optional.ofNullable(this.probeIntervalInSeconds);
     }
@@ -40,6 +44,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probePath")
     private @Nullable Output<String> probePath;
 
+    /**
+     * @return The path relative to the origin that is used to determine the health of the origin.
+     * 
+     */
     public Optional<Output<String>> probePath() {
         return Optional.ofNullable(this.probePath);
     }
@@ -51,6 +59,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probeProtocol")
     private @Nullable Output<ProbeProtocol> probeProtocol;
 
+    /**
+     * @return Protocol to use for health probe.
+     * 
+     */
     public Optional<Output<ProbeProtocol>> probeProtocol() {
         return Optional.ofNullable(this.probeProtocol);
     }
@@ -62,6 +74,10 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
     @Import(name="probeRequestType")
     private @Nullable Output<HealthProbeRequestType> probeRequestType;
 
+    /**
+     * @return The type of health probe request that is made.
+     * 
+     */
     public Optional<Output<HealthProbeRequestType>> probeRequestType() {
         return Optional.ofNullable(this.probeRequestType);
     }
@@ -93,38 +109,86 @@ public final class HealthProbeParametersArgs extends com.pulumi.resources.Resour
             $ = new HealthProbeParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param probeIntervalInSeconds The number of seconds between health probes.Default is 240sec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeIntervalInSeconds(@Nullable Output<Integer> probeIntervalInSeconds) {
             $.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
 
+        /**
+         * @param probeIntervalInSeconds The number of seconds between health probes.Default is 240sec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeIntervalInSeconds(Integer probeIntervalInSeconds) {
             return probeIntervalInSeconds(Output.of(probeIntervalInSeconds));
         }
 
+        /**
+         * @param probePath The path relative to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probePath(@Nullable Output<String> probePath) {
             $.probePath = probePath;
             return this;
         }
 
+        /**
+         * @param probePath The path relative to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probePath(String probePath) {
             return probePath(Output.of(probePath));
         }
 
+        /**
+         * @param probeProtocol Protocol to use for health probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(@Nullable Output<ProbeProtocol> probeProtocol) {
             $.probeProtocol = probeProtocol;
             return this;
         }
 
+        /**
+         * @param probeProtocol Protocol to use for health probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(ProbeProtocol probeProtocol) {
             return probeProtocol(Output.of(probeProtocol));
         }
 
+        /**
+         * @param probeRequestType The type of health probe request that is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeRequestType(@Nullable Output<HealthProbeRequestType> probeRequestType) {
             $.probeRequestType = probeRequestType;
             return this;
         }
 
+        /**
+         * @param probeRequestType The type of health probe request that is made.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeRequestType(HealthProbeRequestType probeRequestType) {
             return probeRequestType(Output.of(probeRequestType));
         }

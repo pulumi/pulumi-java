@@ -15,36 +15,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class XmlReadSettingsResponse {
-    /**
-     * Compression settings.
-     * 
-     */
+        /**
+         * @return Compression settings.
+         * 
+         */
     private final @Nullable Object compressionProperties;
-    /**
-     * Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object detectDataType;
-    /**
-     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
-     * 
-     */
+        /**
+         * @return Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
+         * 
+         */
     private final @Nullable Object namespacePrefixes;
-    /**
-     * Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object namespaces;
-    /**
-     * The read setting type.
-     * Expected value is &#39;XmlReadSettings&#39;.
-     * 
-     */
+        /**
+         * @return The read setting type.
+         * Expected value is &#39;XmlReadSettings&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object validationMode;
 
     @CustomType.Constructor
@@ -64,45 +64,45 @@ public final class XmlReadSettingsResponse {
     }
 
     /**
-     * Compression settings.
+     * @return Compression settings.
      * 
-    */
+     */
     public Optional<Object> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
     /**
-     * Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> detectDataType() {
         return Optional.ofNullable(this.detectDataType);
     }
     /**
-     * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
+     * @return Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: &#34;{&#34;http://www.example.com/xml&#34;:&#34;prefix&#34;}&#34; Type: object (or Expression with resultType object).
      * 
-    */
+     */
     public Optional<Object> namespacePrefixes() {
         return Optional.ofNullable(this.namespacePrefixes);
     }
     /**
-     * Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
+     * @return Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> namespaces() {
         return Optional.ofNullable(this.namespaces);
     }
     /**
-     * The read setting type.
+     * @return The read setting type.
      * Expected value is &#39;XmlReadSettings&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
+     * @return Indicates what validation method is used when reading the xml files. Allowed values: &#39;none&#39;, &#39;xsd&#39;, or &#39;dtd&#39;. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> validationMode() {
         return Optional.ofNullable(this.validationMode);
     }

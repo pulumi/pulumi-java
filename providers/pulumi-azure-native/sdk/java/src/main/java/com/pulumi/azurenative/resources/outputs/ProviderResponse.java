@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProviderResponse {
-    /**
-     * The provider ID.
-     * 
-     */
+        /**
+         * @return The provider ID.
+         * 
+         */
     private final String id;
-    /**
-     * The namespace of the resource provider.
-     * 
-     */
+        /**
+         * @return The namespace of the resource provider.
+         * 
+         */
     private final @Nullable String namespace;
-    /**
-     * The registration policy of the resource provider.
-     * 
-     */
+        /**
+         * @return The registration policy of the resource provider.
+         * 
+         */
     private final String registrationPolicy;
-    /**
-     * The registration state of the resource provider.
-     * 
-     */
+        /**
+         * @return The registration state of the resource provider.
+         * 
+         */
     private final String registrationState;
-    /**
-     * The collection of provider resource types.
-     * 
-     */
+        /**
+         * @return The collection of provider resource types.
+         * 
+         */
     private final List<ProviderResourceTypeResponse> resourceTypes;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class ProviderResponse {
     }
 
     /**
-     * The provider ID.
+     * @return The provider ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The namespace of the resource provider.
+     * @return The namespace of the resource provider.
      * 
-    */
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
-     * The registration policy of the resource provider.
+     * @return The registration policy of the resource provider.
      * 
-    */
+     */
     public String registrationPolicy() {
         return this.registrationPolicy;
     }
     /**
-     * The registration state of the resource provider.
+     * @return The registration state of the resource provider.
      * 
-    */
+     */
     public String registrationState() {
         return this.registrationState;
     }
     /**
-     * The collection of provider resource types.
+     * @return The collection of provider resource types.
      * 
-    */
+     */
     public List<ProviderResourceTypeResponse> resourceTypes() {
         return this.resourceTypes;
     }

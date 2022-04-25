@@ -27,6 +27,10 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
     @Import(name="dataDisks")
     private @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
 
+    /**
+     * @return Gets the data disks of the VM captured at the time of the restore point creation.
+     * 
+     */
     public Optional<List<RestorePointSourceVMDataDiskResponse>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -38,6 +42,10 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
     @Import(name="osDisk")
     private @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
+    /**
+     * @return Gets the OS disk of the VM captured at the time of the restore point creation.
+     * 
+     */
     public Optional<RestorePointSourceVMOSDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -67,15 +75,33 @@ public final class RestorePointSourceVMStorageProfileResponse extends com.pulumi
             $ = new RestorePointSourceVMStorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Gets the data disks of the VM captured at the time of the restore point creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Gets the data disks of the VM captured at the time of the restore point creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(RestorePointSourceVMDataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param osDisk Gets the OS disk of the VM captured at the time of the restore point creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable RestorePointSourceVMOSDiskResponse osDisk) {
             $.osDisk = osDisk;
             return this;

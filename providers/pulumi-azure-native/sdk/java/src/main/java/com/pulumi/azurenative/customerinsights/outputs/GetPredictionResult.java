@@ -17,105 +17,105 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPredictionResult {
-    /**
-     * Whether do auto analyze.
-     * 
-     */
+        /**
+         * @return Whether do auto analyze.
+         * 
+         */
     private final Boolean autoAnalyze;
-    /**
-     * Description of the prediction.
-     * 
-     */
+        /**
+         * @return Description of the prediction.
+         * 
+         */
     private final @Nullable Map<String,String> description;
-    /**
-     * Display name of the prediction.
-     * 
-     */
+        /**
+         * @return Display name of the prediction.
+         * 
+         */
     private final @Nullable Map<String,String> displayName;
-    /**
-     * The prediction grades.
-     * 
-     */
+        /**
+         * @return The prediction grades.
+         * 
+         */
     private final @Nullable List<PredictionResponseGrades> grades;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Interaction types involved in the prediction.
-     * 
-     */
+        /**
+         * @return Interaction types involved in the prediction.
+         * 
+         */
     private final @Nullable List<String> involvedInteractionTypes;
-    /**
-     * KPI types involved in the prediction.
-     * 
-     */
+        /**
+         * @return KPI types involved in the prediction.
+         * 
+         */
     private final @Nullable List<String> involvedKpiTypes;
-    /**
-     * Relationships involved in the prediction.
-     * 
-     */
+        /**
+         * @return Relationships involved in the prediction.
+         * 
+         */
     private final @Nullable List<String> involvedRelationships;
-    /**
-     * Definition of the link mapping of prediction.
-     * 
-     */
+        /**
+         * @return Definition of the link mapping of prediction.
+         * 
+         */
     private final PredictionResponseMappings mappings;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Negative outcome expression.
-     * 
-     */
+        /**
+         * @return Negative outcome expression.
+         * 
+         */
     private final String negativeOutcomeExpression;
-    /**
-     * Positive outcome expression.
-     * 
-     */
+        /**
+         * @return Positive outcome expression.
+         * 
+         */
     private final String positiveOutcomeExpression;
-    /**
-     * Name of the prediction.
-     * 
-     */
+        /**
+         * @return Name of the prediction.
+         * 
+         */
     private final @Nullable String predictionName;
-    /**
-     * Primary profile type.
-     * 
-     */
+        /**
+         * @return Primary profile type.
+         * 
+         */
     private final String primaryProfileType;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Scope expression.
-     * 
-     */
+        /**
+         * @return Scope expression.
+         * 
+         */
     private final String scopeExpression;
-    /**
-     * Score label.
-     * 
-     */
+        /**
+         * @return Score label.
+         * 
+         */
     private final String scoreLabel;
-    /**
-     * System generated entities.
-     * 
-     */
+        /**
+         * @return System generated entities.
+         * 
+         */
     private final PredictionResponseSystemGeneratedEntities systemGeneratedEntities;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -163,142 +163,142 @@ public final class GetPredictionResult {
     }
 
     /**
-     * Whether do auto analyze.
+     * @return Whether do auto analyze.
      * 
-    */
+     */
     public Boolean autoAnalyze() {
         return this.autoAnalyze;
     }
     /**
-     * Description of the prediction.
+     * @return Description of the prediction.
      * 
-    */
+     */
     public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
-     * Display name of the prediction.
+     * @return Display name of the prediction.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * The prediction grades.
+     * @return The prediction grades.
      * 
-    */
+     */
     public List<PredictionResponseGrades> grades() {
         return this.grades == null ? List.of() : this.grades;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Interaction types involved in the prediction.
+     * @return Interaction types involved in the prediction.
      * 
-    */
+     */
     public List<String> involvedInteractionTypes() {
         return this.involvedInteractionTypes == null ? List.of() : this.involvedInteractionTypes;
     }
     /**
-     * KPI types involved in the prediction.
+     * @return KPI types involved in the prediction.
      * 
-    */
+     */
     public List<String> involvedKpiTypes() {
         return this.involvedKpiTypes == null ? List.of() : this.involvedKpiTypes;
     }
     /**
-     * Relationships involved in the prediction.
+     * @return Relationships involved in the prediction.
      * 
-    */
+     */
     public List<String> involvedRelationships() {
         return this.involvedRelationships == null ? List.of() : this.involvedRelationships;
     }
     /**
-     * Definition of the link mapping of prediction.
+     * @return Definition of the link mapping of prediction.
      * 
-    */
+     */
     public PredictionResponseMappings mappings() {
         return this.mappings;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Negative outcome expression.
+     * @return Negative outcome expression.
      * 
-    */
+     */
     public String negativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
     }
     /**
-     * Positive outcome expression.
+     * @return Positive outcome expression.
      * 
-    */
+     */
     public String positiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
     }
     /**
-     * Name of the prediction.
+     * @return Name of the prediction.
      * 
-    */
+     */
     public Optional<String> predictionName() {
         return Optional.ofNullable(this.predictionName);
     }
     /**
-     * Primary profile type.
+     * @return Primary profile type.
      * 
-    */
+     */
     public String primaryProfileType() {
         return this.primaryProfileType;
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Scope expression.
+     * @return Scope expression.
      * 
-    */
+     */
     public String scopeExpression() {
         return this.scopeExpression;
     }
     /**
-     * Score label.
+     * @return Score label.
      * 
-    */
+     */
     public String scoreLabel() {
         return this.scoreLabel;
     }
     /**
-     * System generated entities.
+     * @return System generated entities.
      * 
-    */
+     */
     public PredictionResponseSystemGeneratedEntities systemGeneratedEntities() {
         return this.systemGeneratedEntities;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

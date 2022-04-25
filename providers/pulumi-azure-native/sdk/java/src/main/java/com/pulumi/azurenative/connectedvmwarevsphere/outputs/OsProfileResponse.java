@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OsProfileResponse {
-    /**
-     * Gets or sets administrator username.
-     * 
-     */
+        /**
+         * @return Gets or sets administrator username.
+         * 
+         */
     private final @Nullable String adminUsername;
-    /**
-     * Gets or sets computer name.
-     * 
-     */
+        /**
+         * @return Gets or sets computer name.
+         * 
+         */
     private final @Nullable String computerName;
-    /**
-     * Gets or sets os name.
-     * 
-     */
+        /**
+         * @return Gets or sets os name.
+         * 
+         */
     private final String osName;
-    /**
-     * Gets or sets the type of the os.
-     * 
-     */
+        /**
+         * @return Gets or sets the type of the os.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * Gets or sets the current running status of VMware Tools running in the guest operating system.
-     * 
-     */
+        /**
+         * @return Gets or sets the current running status of VMware Tools running in the guest operating system.
+         * 
+         */
     private final String toolsRunningStatus;
-    /**
-     * Gets or sets the current version of VMware Tools.
-     * 
-     */
+        /**
+         * @return Gets or sets the current version of VMware Tools.
+         * 
+         */
     private final String toolsVersion;
-    /**
-     * Gets or sets the current version status of VMware Tools installed in the guest operating system.
-     * 
-     */
+        /**
+         * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
+         * 
+         */
     private final String toolsVersionStatus;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class OsProfileResponse {
     }
 
     /**
-     * Gets or sets administrator username.
+     * @return Gets or sets administrator username.
      * 
-    */
+     */
     public Optional<String> adminUsername() {
         return Optional.ofNullable(this.adminUsername);
     }
     /**
-     * Gets or sets computer name.
+     * @return Gets or sets computer name.
      * 
-    */
+     */
     public Optional<String> computerName() {
         return Optional.ofNullable(this.computerName);
     }
     /**
-     * Gets or sets os name.
+     * @return Gets or sets os name.
      * 
-    */
+     */
     public String osName() {
         return this.osName;
     }
     /**
-     * Gets or sets the type of the os.
+     * @return Gets or sets the type of the os.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Gets or sets the current running status of VMware Tools running in the guest operating system.
+     * @return Gets or sets the current running status of VMware Tools running in the guest operating system.
      * 
-    */
+     */
     public String toolsRunningStatus() {
         return this.toolsRunningStatus;
     }
     /**
-     * Gets or sets the current version of VMware Tools.
+     * @return Gets or sets the current version of VMware Tools.
      * 
-    */
+     */
     public String toolsVersion() {
         return this.toolsVersion;
     }
     /**
-     * Gets or sets the current version status of VMware Tools installed in the guest operating system.
+     * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
-    */
+     */
     public String toolsVersionStatus() {
         return this.toolsVersionStatus;
     }

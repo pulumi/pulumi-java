@@ -28,6 +28,10 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
     @Import(name="inquiryValidation")
     private @Nullable Output<InquiryValidationArgs> inquiryValidation;
 
+    /**
+     * @return Inquiry validation such as permissions and other backup validations.
+     * 
+     */
     public Optional<Output<InquiryValidationArgs>> inquiryValidation() {
         return Optional.ofNullable(this.inquiryValidation);
     }
@@ -39,6 +43,10 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
     @Import(name="itemCount")
     private @Nullable Output<Double> itemCount;
 
+    /**
+     * @return Contains the protectable item Count inside this Container.
+     * 
+     */
     public Optional<Output<Double>> itemCount() {
         return Optional.ofNullable(this.itemCount);
     }
@@ -50,6 +58,10 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Type of the Workload such as SQL, Oracle etc.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -80,29 +92,65 @@ public final class WorkloadInquiryDetailsArgs extends com.pulumi.resources.Resou
             $ = new WorkloadInquiryDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inquiryValidation Inquiry validation such as permissions and other backup validations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryValidation(@Nullable Output<InquiryValidationArgs> inquiryValidation) {
             $.inquiryValidation = inquiryValidation;
             return this;
         }
 
+        /**
+         * @param inquiryValidation Inquiry validation such as permissions and other backup validations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryValidation(InquiryValidationArgs inquiryValidation) {
             return inquiryValidation(Output.of(inquiryValidation));
         }
 
+        /**
+         * @param itemCount Contains the protectable item Count inside this Container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemCount(@Nullable Output<Double> itemCount) {
             $.itemCount = itemCount;
             return this;
         }
 
+        /**
+         * @param itemCount Contains the protectable item Count inside this Container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemCount(Double itemCount) {
             return itemCount(Output.of(itemCount));
         }
 
+        /**
+         * @param type Type of the Workload such as SQL, Oracle etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of the Workload such as SQL, Oracle etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RegistrationDefinitionPropertiesResponse {
-    /**
-     * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
-     * 
-     */
+        /**
+         * @return Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+         * 
+         */
     private final List<AuthorizationResponse> authorizations;
-    /**
-     * Description of the registration definition.
-     * 
-     */
+        /**
+         * @return Description of the registration definition.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Id of the managedBy tenant.
-     * 
-     */
+        /**
+         * @return Id of the managedBy tenant.
+         * 
+         */
     private final String managedByTenantId;
-    /**
-     * Name of the managedBy tenant.
-     * 
-     */
+        /**
+         * @return Name of the managedBy tenant.
+         * 
+         */
     private final String managedByTenantName;
-    /**
-     * Current state of the registration definition.
-     * 
-     */
+        /**
+         * @return Current state of the registration definition.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Name of the registration definition.
-     * 
-     */
+        /**
+         * @return Name of the registration definition.
+         * 
+         */
     private final @Nullable String registrationDefinitionName;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class RegistrationDefinitionPropertiesResponse {
     }
 
     /**
-     * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     * @return Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
-    */
+     */
     public List<AuthorizationResponse> authorizations() {
         return this.authorizations;
     }
     /**
-     * Description of the registration definition.
+     * @return Description of the registration definition.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Id of the managedBy tenant.
+     * @return Id of the managedBy tenant.
      * 
-    */
+     */
     public String managedByTenantId() {
         return this.managedByTenantId;
     }
     /**
-     * Name of the managedBy tenant.
+     * @return Name of the managedBy tenant.
      * 
-    */
+     */
     public String managedByTenantName() {
         return this.managedByTenantName;
     }
     /**
-     * Current state of the registration definition.
+     * @return Current state of the registration definition.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Name of the registration definition.
+     * @return Name of the registration definition.
      * 
-    */
+     */
     public Optional<String> registrationDefinitionName() {
         return Optional.ofNullable(this.registrationDefinitionName);
     }

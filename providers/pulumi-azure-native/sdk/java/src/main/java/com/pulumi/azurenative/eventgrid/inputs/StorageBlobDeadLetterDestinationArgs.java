@@ -27,6 +27,10 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
     @Import(name="blobContainerName")
     private @Nullable Output<String> blobContainerName;
 
+    /**
+     * @return The name of the Storage blob container that is the destination of the deadletter events
+     * 
+     */
     public Optional<Output<String>> blobContainerName() {
         return Optional.ofNullable(this.blobContainerName);
     }
@@ -39,6 +43,11 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
     @Import(name="endpointType", required=true)
     private Output<String> endpointType;
 
+    /**
+     * @return Type of the endpoint for the dead letter destination
+     * Expected value is &#39;StorageBlob&#39;.
+     * 
+     */
     public Output<String> endpointType() {
         return this.endpointType;
     }
@@ -50,6 +59,10 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The Azure Resource ID of the storage account that is the destination of the deadletter events
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -80,29 +93,67 @@ public final class StorageBlobDeadLetterDestinationArgs extends com.pulumi.resou
             $ = new StorageBlobDeadLetterDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blobContainerName The name of the Storage blob container that is the destination of the deadletter events
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainerName(@Nullable Output<String> blobContainerName) {
             $.blobContainerName = blobContainerName;
             return this;
         }
 
+        /**
+         * @param blobContainerName The name of the Storage blob container that is the destination of the deadletter events
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobContainerName(String blobContainerName) {
             return blobContainerName(Output.of(blobContainerName));
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the dead letter destination
+         * Expected value is &#39;StorageBlob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(Output<String> endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointType Type of the endpoint for the dead letter destination
+         * Expected value is &#39;StorageBlob&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             return endpointType(Output.of(endpointType));
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of the storage account that is the destination of the deadletter events
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The Azure Resource ID of the storage account that is the destination of the deadletter events
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

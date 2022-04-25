@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PermissionResponse {
-    /**
-     * Allowed actions.
-     * 
-     */
+        /**
+         * @return Allowed actions.
+         * 
+         */
     private final @Nullable List<String> actions;
-    /**
-     * Allowed Data actions.
-     * 
-     */
+        /**
+         * @return Allowed Data actions.
+         * 
+         */
     private final @Nullable List<String> dataActions;
-    /**
-     * Denied actions.
-     * 
-     */
+        /**
+         * @return Denied actions.
+         * 
+         */
     private final @Nullable List<String> notActions;
-    /**
-     * Denied Data actions.
-     * 
-     */
+        /**
+         * @return Denied Data actions.
+         * 
+         */
     private final @Nullable List<String> notDataActions;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class PermissionResponse {
     }
 
     /**
-     * Allowed actions.
+     * @return Allowed actions.
      * 
-    */
+     */
     public List<String> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * Allowed Data actions.
+     * @return Allowed Data actions.
      * 
-    */
+     */
     public List<String> dataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
     }
     /**
-     * Denied actions.
+     * @return Denied actions.
      * 
-    */
+     */
     public List<String> notActions() {
         return this.notActions == null ? List.of() : this.notActions;
     }
     /**
-     * Denied Data actions.
+     * @return Denied Data actions.
      * 
-    */
+     */
     public List<String> notDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;
     }

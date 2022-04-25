@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class NsgReferenceResponse {
-    /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
-     * 
-     */
+        /**
+         * @return Gets the ARM resource ID of the tracked resource being referenced.
+         * 
+         */
     private final String sourceArmResourceId;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class NsgReferenceResponse {
     }
 
     /**
-     * Gets the ARM resource ID of the tracked resource being referenced.
+     * @return Gets the ARM resource ID of the tracked resource being referenced.
      * 
-    */
+     */
     public String sourceArmResourceId() {
         return this.sourceArmResourceId;
     }

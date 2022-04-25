@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ApplianceNetworkConfigurationResponse {
-    /**
-     * Mac Address.
-     * 
-     */
+        /**
+         * @return Mac Address.
+         * 
+         */
     private final String macAddress;
-    /**
-     * Name of the network.
-     * 
-     */
+        /**
+         * @return Name of the network.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ApplianceNetworkConfigurationResponse {
     }
 
     /**
-     * Mac Address.
+     * @return Mac Address.
      * 
-    */
+     */
     public String macAddress() {
         return this.macAddress;
     }
     /**
-     * Name of the network.
+     * @return Name of the network.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResizeErrorResponse {
-    /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
-     * 
-     */
+        /**
+         * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+         * 
+         */
     private final String code;
     private final @Nullable List<ResizeErrorResponse> details;
-    /**
-     * A message describing the error, intended to be suitable for display in a user interface.
-     * 
-     */
+        /**
+         * @return A message describing the error, intended to be suitable for display in a user interface.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -34,9 +34,9 @@ public final class ResizeErrorResponse {
     }
 
     /**
-     * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
@@ -44,9 +44,9 @@ public final class ResizeErrorResponse {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * A message describing the error, intended to be suitable for display in a user interface.
+     * @return A message describing the error, intended to be suitable for display in a user interface.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

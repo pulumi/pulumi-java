@@ -26,6 +26,10 @@ public final class InputPortResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Port data type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,6 +58,12 @@ public final class InputPortResponse extends com.pulumi.resources.InvokeArgs {
             $ = new InputPortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Port data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

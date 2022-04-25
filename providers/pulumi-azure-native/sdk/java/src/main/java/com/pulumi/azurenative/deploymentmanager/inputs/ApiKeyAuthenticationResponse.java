@@ -24,6 +24,10 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="in", required=true)
     private String in;
 
+    /**
+     * @return The location of the authentication key/value pair in the request.
+     * 
+     */
     public String in() {
         return this.in;
     }
@@ -35,6 +39,10 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The key name of the authentication key/value pair.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,11 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;ApiKey&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -58,6 +71,10 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the authentication key/value pair.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -89,21 +106,46 @@ public final class ApiKeyAuthenticationResponse extends com.pulumi.resources.Inv
             $ = new ApiKeyAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param in The location of the authentication key/value pair in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder in(String in) {
             $.in = in;
             return this;
         }
 
+        /**
+         * @param name The key name of the authentication key/value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The authentication type.
+         * Expected value is &#39;ApiKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value The value of the authentication key/value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

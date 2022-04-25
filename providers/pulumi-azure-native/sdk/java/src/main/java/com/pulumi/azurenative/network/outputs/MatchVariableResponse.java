@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MatchVariableResponse {
-    /**
-     * The selector of match variable.
-     * 
-     */
+        /**
+         * @return The selector of match variable.
+         * 
+         */
     private final @Nullable String selector;
-    /**
-     * Match Variable.
-     * 
-     */
+        /**
+         * @return Match Variable.
+         * 
+         */
     private final String variableName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class MatchVariableResponse {
     }
 
     /**
-     * The selector of match variable.
+     * @return The selector of match variable.
      * 
-    */
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
     /**
-     * Match Variable.
+     * @return Match Variable.
      * 
-    */
+     */
     public String variableName() {
         return this.variableName;
     }

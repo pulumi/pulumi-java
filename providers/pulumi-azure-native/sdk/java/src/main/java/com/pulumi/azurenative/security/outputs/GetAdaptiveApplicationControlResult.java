@@ -16,52 +16,52 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAdaptiveApplicationControlResult {
-    /**
-     * The configuration status of the machines group or machine or rule
-     * 
-     */
+        /**
+         * @return The configuration status of the machines group or machine or rule
+         * 
+         */
     private final String configurationStatus;
-    /**
-     * The application control policy enforcement/protection mode of the machine group
-     * 
-     */
+        /**
+         * @return The application control policy enforcement/protection mode of the machine group
+         * 
+         */
     private final @Nullable String enforcementMode;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
     private final List<AdaptiveApplicationControlIssueSummaryResponse> issues;
-    /**
-     * Location where the resource is stored
-     * 
-     */
+        /**
+         * @return Location where the resource is stored
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
     private final @Nullable List<PathRecommendationResponse> pathRecommendations;
-    /**
-     * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
-     * 
-     */
+        /**
+         * @return The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+         * 
+         */
     private final @Nullable ProtectionModeResponse protectionMode;
-    /**
-     * The initial recommendation status of the machine group or machine
-     * 
-     */
+        /**
+         * @return The initial recommendation status of the machine group or machine
+         * 
+         */
     private final String recommendationStatus;
-    /**
-     * The source type of the machine group
-     * 
-     */
+        /**
+         * @return The source type of the machine group
+         * 
+         */
     private final String sourceSystem;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
     private final @Nullable List<VmRecommendationResponse> vmRecommendations;
 
@@ -94,23 +94,23 @@ public final class GetAdaptiveApplicationControlResult {
     }
 
     /**
-     * The configuration status of the machines group or machine or rule
+     * @return The configuration status of the machines group or machine or rule
      * 
-    */
+     */
     public String configurationStatus() {
         return this.configurationStatus;
     }
     /**
-     * The application control policy enforcement/protection mode of the machine group
+     * @return The application control policy enforcement/protection mode of the machine group
      * 
-    */
+     */
     public Optional<String> enforcementMode() {
         return Optional.ofNullable(this.enforcementMode);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -118,16 +118,16 @@ public final class GetAdaptiveApplicationControlResult {
         return this.issues;
     }
     /**
-     * Location where the resource is stored
+     * @return Location where the resource is stored
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -135,30 +135,30 @@ public final class GetAdaptiveApplicationControlResult {
         return this.pathRecommendations == null ? List.of() : this.pathRecommendations;
     }
     /**
-     * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
+     * @return The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
      * 
-    */
+     */
     public Optional<ProtectionModeResponse> protectionMode() {
         return Optional.ofNullable(this.protectionMode);
     }
     /**
-     * The initial recommendation status of the machine group or machine
+     * @return The initial recommendation status of the machine group or machine
      * 
-    */
+     */
     public String recommendationStatus() {
         return this.recommendationStatus;
     }
     /**
-     * The source type of the machine group
+     * @return The source type of the machine group
      * 
-    */
+     */
     public String sourceSystem() {
         return this.sourceSystem;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

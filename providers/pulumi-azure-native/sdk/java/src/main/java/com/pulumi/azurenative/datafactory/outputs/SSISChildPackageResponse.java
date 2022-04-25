@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SSISChildPackageResponse {
-    /**
-     * Content for embedded child package. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Content for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object packageContent;
-    /**
-     * Last modified date for embedded child package.
-     * 
-     */
+        /**
+         * @return Last modified date for embedded child package.
+         * 
+         */
     private final @Nullable String packageLastModifiedDate;
-    /**
-     * Name for embedded child package.
-     * 
-     */
+        /**
+         * @return Name for embedded child package.
+         * 
+         */
     private final @Nullable String packageName;
-    /**
-     * Path for embedded child package. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Path for embedded child package. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object packagePath;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SSISChildPackageResponse {
     }
 
     /**
-     * Content for embedded child package. Type: string (or Expression with resultType string).
+     * @return Content for embedded child package. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object packageContent() {
         return this.packageContent;
     }
     /**
-     * Last modified date for embedded child package.
+     * @return Last modified date for embedded child package.
      * 
-    */
+     */
     public Optional<String> packageLastModifiedDate() {
         return Optional.ofNullable(this.packageLastModifiedDate);
     }
     /**
-     * Name for embedded child package.
+     * @return Name for embedded child package.
      * 
-    */
+     */
     public Optional<String> packageName() {
         return Optional.ofNullable(this.packageName);
     }
     /**
-     * Path for embedded child package. Type: string (or Expression with resultType string).
+     * @return Path for embedded child package. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object packagePath() {
         return this.packagePath;
     }

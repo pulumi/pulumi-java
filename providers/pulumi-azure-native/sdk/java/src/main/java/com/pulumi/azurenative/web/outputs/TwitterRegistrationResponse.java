@@ -11,18 +11,18 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TwitterRegistrationResponse {
-    /**
-     * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
-     * This setting is required for enabling Twitter Sign-In.
-     * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
-     * 
-     */
+        /**
+         * @return The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+         * This setting is required for enabling Twitter Sign-In.
+         * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
+         * 
+         */
     private final @Nullable String consumerKey;
-    /**
-     * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-     * application used for sign-in.
-     * 
-     */
+        /**
+         * @return The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+         * application used for sign-in.
+         * 
+         */
     private final @Nullable String consumerSecretSettingName;
 
     @CustomType.Constructor
@@ -34,19 +34,19 @@ public final class TwitterRegistrationResponse {
     }
 
     /**
-     * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+     * @return The OAuth 1.0a consumer key of the Twitter application used for sign-in.
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
-    */
+     */
     public Optional<String> consumerKey() {
         return Optional.ofNullable(this.consumerKey);
     }
     /**
-     * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+     * @return The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
      * application used for sign-in.
      * 
-    */
+     */
     public Optional<String> consumerSecretSettingName() {
         return Optional.ofNullable(this.consumerSecretSettingName);
     }

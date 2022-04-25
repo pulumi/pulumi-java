@@ -29,6 +29,10 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action")
     private @Nullable Output<Either<String,Action>> action;
 
+    /**
+     * @return The action of IP ACL rule.
+     * 
+     */
     public Optional<Output<Either<String,Action>>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -40,6 +44,10 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="iPAddressOrRange", required=true)
     private Output<String> iPAddressOrRange;
 
+    /**
+     * @return Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+     * 
+     */
     public Output<String> iPAddressOrRange() {
         return this.iPAddressOrRange;
     }
@@ -69,28 +77,64 @@ public final class IPRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IPRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action of IP ACL rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<Either<String,Action>> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action of IP ACL rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Either<String,Action> action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param action The action of IP ACL rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             return action(Either.ofLeft(action));
         }
 
+        /**
+         * @param action The action of IP ACL rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Action action) {
             return action(Either.ofRight(action));
         }
 
+        /**
+         * @param iPAddressOrRange Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iPAddressOrRange(Output<String> iPAddressOrRange) {
             $.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
 
+        /**
+         * @param iPAddressOrRange Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder iPAddressOrRange(String iPAddressOrRange) {
             return iPAddressOrRange(Output.of(iPAddressOrRange));
         }

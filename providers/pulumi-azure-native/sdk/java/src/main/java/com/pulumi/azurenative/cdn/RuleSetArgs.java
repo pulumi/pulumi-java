@@ -22,6 +22,10 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -33,6 +37,10 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName")
     private @Nullable Output<String> ruleSetName;
 
+    /**
+     * @return Name of the rule set under the profile which is unique globally
+     * 
+     */
     public Optional<Output<String>> ruleSetName() {
         return Optional.ofNullable(this.ruleSetName);
     }
@@ -74,29 +86,65 @@ public final class RuleSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RuleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleSetName Name of the rule set under the profile which is unique globally
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
             $.ruleSetName = ruleSetName;
             return this;
         }
 
+        /**
+         * @param ruleSetName Name of the rule set under the profile which is unique globally
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleSetName(String ruleSetName) {
             return ruleSetName(Output.of(ruleSetName));
         }

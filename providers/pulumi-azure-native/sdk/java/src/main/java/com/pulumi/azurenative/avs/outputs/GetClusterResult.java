@@ -12,45 +12,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The identity
-     * 
-     */
+        /**
+         * @return The identity
+         * 
+         */
     private final Integer clusterId;
-    /**
-     * The cluster size
-     * 
-     */
+        /**
+         * @return The cluster size
+         * 
+         */
     private final Integer clusterSize;
-    /**
-     * The hosts
-     * 
-     */
+        /**
+         * @return The hosts
+         * 
+         */
     private final List<String> hosts;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the cluster provisioning
-     * 
-     */
+        /**
+         * @return The state of the cluster provisioning
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The cluster SKU
-     * 
-     */
+        /**
+         * @return The cluster SKU
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetClusterResult {
     }
 
     /**
-     * The identity
+     * @return The identity
      * 
-    */
+     */
     public Integer clusterId() {
         return this.clusterId;
     }
     /**
-     * The cluster size
+     * @return The cluster size
      * 
-    */
+     */
     public Integer clusterSize() {
         return this.clusterSize;
     }
     /**
-     * The hosts
+     * @return The hosts
      * 
-    */
+     */
     public List<String> hosts() {
         return this.hosts;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the cluster provisioning
+     * @return The state of the cluster provisioning
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The cluster SKU
+     * @return The cluster SKU
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

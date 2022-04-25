@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ParameterDefinitionsValueResponseMetadata {
-    /**
-     * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
-     * 
-     */
+        /**
+         * @return Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+         * 
+         */
     private final @Nullable Boolean assignPermissions;
-    /**
-     * The description of the parameter.
-     * 
-     */
+        /**
+         * @return The description of the parameter.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The display name for the parameter.
-     * 
-     */
+        /**
+         * @return The display name for the parameter.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
-     * 
-     */
+        /**
+         * @return Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+         * 
+         */
     private final @Nullable String strongType;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class ParameterDefinitionsValueResponseMetadata {
     }
 
     /**
-     * Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+     * @return Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
      * 
-    */
+     */
     public Optional<Boolean> assignPermissions() {
         return Optional.ofNullable(this.assignPermissions);
     }
     /**
-     * The description of the parameter.
+     * @return The description of the parameter.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name for the parameter.
+     * @return The display name for the parameter.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+     * @return Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
      * 
-    */
+     */
     public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }

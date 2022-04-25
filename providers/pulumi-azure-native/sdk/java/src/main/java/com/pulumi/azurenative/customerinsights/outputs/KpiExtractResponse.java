@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class KpiExtractResponse {
-    /**
-     * The expression.
-     * 
-     */
+        /**
+         * @return The expression.
+         * 
+         */
     private final String expression;
-    /**
-     * KPI extract name.
-     * 
-     */
+        /**
+         * @return KPI extract name.
+         * 
+         */
     private final String extractName;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class KpiExtractResponse {
     }
 
     /**
-     * The expression.
+     * @return The expression.
      * 
-    */
+     */
     public String expression() {
         return this.expression;
     }
     /**
-     * KPI extract name.
+     * @return KPI extract name.
      * 
-    */
+     */
     public String extractName() {
         return this.extractName;
     }

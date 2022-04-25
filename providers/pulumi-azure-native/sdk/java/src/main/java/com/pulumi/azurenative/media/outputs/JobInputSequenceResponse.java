@@ -12,16 +12,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JobInputSequenceResponse {
-    /**
-     * JobInputs that make up the timeline.
-     * 
-     */
+        /**
+         * @return JobInputs that make up the timeline.
+         * 
+         */
     private final @Nullable List<JobInputClipResponse> inputs;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -33,17 +33,17 @@ public final class JobInputSequenceResponse {
     }
 
     /**
-     * JobInputs that make up the timeline.
+     * @return JobInputs that make up the timeline.
      * 
-    */
+     */
     public List<JobInputClipResponse> inputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

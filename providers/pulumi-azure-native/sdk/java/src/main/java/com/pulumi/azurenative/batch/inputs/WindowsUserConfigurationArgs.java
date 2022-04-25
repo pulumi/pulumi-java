@@ -22,6 +22,10 @@ public final class WindowsUserConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="loginMode")
     private @Nullable Output<LoginMode> loginMode;
 
+    /**
+     * @return Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+     * 
+     */
     public Optional<Output<LoginMode>> loginMode() {
         return Optional.ofNullable(this.loginMode);
     }
@@ -50,11 +54,23 @@ public final class WindowsUserConfigurationArgs extends com.pulumi.resources.Res
             $ = new WindowsUserConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param loginMode Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(@Nullable Output<LoginMode> loginMode) {
             $.loginMode = loginMode;
             return this;
         }
 
+        /**
+         * @param loginMode Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginMode(LoginMode loginMode) {
             return loginMode(Output.of(loginMode));
         }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SymmetricKeyResponse {
-    /**
-     * Connection string based on the symmetric key.
-     * 
-     */
+        /**
+         * @return Connection string based on the symmetric key.
+         * 
+         */
     private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SymmetricKeyResponse {
     }
 
     /**
-     * Connection string based on the symmetric key.
+     * @return Connection string based on the symmetric key.
      * 
-    */
+     */
     public Optional<AsymmetricEncryptedSecretResponse> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }

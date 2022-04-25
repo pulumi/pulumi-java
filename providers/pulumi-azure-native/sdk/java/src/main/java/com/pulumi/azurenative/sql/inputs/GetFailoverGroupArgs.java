@@ -19,6 +19,10 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="failoverGroupName", required=true)
     private String failoverGroupName;
 
+    /**
+     * @return The name of the failover group.
+     * 
+     */
     public String failoverGroupName() {
         return this.failoverGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server containing the failover group.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -71,16 +83,34 @@ public final class GetFailoverGroupArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetFailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverGroupName(String failoverGroupName) {
             $.failoverGroupName = failoverGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server containing the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

@@ -11,26 +11,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutomationActionEventHubResponse {
-    /**
-     * The type of the action that will be triggered by the Automation
-     * Expected value is &#39;EventHub&#39;.
-     * 
-     */
+        /**
+         * @return The type of the action that will be triggered by the Automation
+         * Expected value is &#39;EventHub&#39;.
+         * 
+         */
     private final String actionType;
-    /**
-     * The target Event Hub connection string (it will not be included in any response).
-     * 
-     */
+        /**
+         * @return The target Event Hub connection string (it will not be included in any response).
+         * 
+         */
     private final @Nullable String connectionString;
-    /**
-     * The target Event Hub Azure Resource ID.
-     * 
-     */
+        /**
+         * @return The target Event Hub Azure Resource ID.
+         * 
+         */
     private final @Nullable String eventHubResourceId;
-    /**
-     * The target Event Hub SAS policy name.
-     * 
-     */
+        /**
+         * @return The target Event Hub SAS policy name.
+         * 
+         */
     private final String sasPolicyName;
 
     @CustomType.Constructor
@@ -46,31 +46,31 @@ public final class AutomationActionEventHubResponse {
     }
 
     /**
-     * The type of the action that will be triggered by the Automation
+     * @return The type of the action that will be triggered by the Automation
      * Expected value is &#39;EventHub&#39;.
      * 
-    */
+     */
     public String actionType() {
         return this.actionType;
     }
     /**
-     * The target Event Hub connection string (it will not be included in any response).
+     * @return The target Event Hub connection string (it will not be included in any response).
      * 
-    */
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * The target Event Hub Azure Resource ID.
+     * @return The target Event Hub Azure Resource ID.
      * 
-    */
+     */
     public Optional<String> eventHubResourceId() {
         return Optional.ofNullable(this.eventHubResourceId);
     }
     /**
-     * The target Event Hub SAS policy name.
+     * @return The target Event Hub SAS policy name.
      * 
-    */
+     */
     public String sasPolicyName() {
         return this.sasPolicyName;
     }

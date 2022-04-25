@@ -26,6 +26,10 @@ public final class KubernetesClusterPropertiesArgs extends com.pulumi.resources.
     @Import(name="servicePrincipal")
     private @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
+    /**
+     * @return The Azure Service Principal used by Kubernetes
+     * 
+     */
     public Optional<Output<ServicePrincipalPropertiesArgs>> servicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }
@@ -54,11 +58,23 @@ public final class KubernetesClusterPropertiesArgs extends com.pulumi.resources.
             $ = new KubernetesClusterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param servicePrincipal The Azure Service Principal used by Kubernetes
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
             $.servicePrincipal = servicePrincipal;
             return this;
         }
 
+        /**
+         * @param servicePrincipal The Azure Service Principal used by Kubernetes
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipal(ServicePrincipalPropertiesArgs servicePrincipal) {
             return servicePrincipal(Output.of(servicePrincipal));
         }

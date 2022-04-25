@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExpressRouteCircuitSkuResponse {
-    /**
-     * The family of the SKU.
-     * 
-     */
+        /**
+         * @return The family of the SKU.
+         * 
+         */
     private final @Nullable String family;
-    /**
-     * The name of the SKU.
-     * 
-     */
+        /**
+         * @return The name of the SKU.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The tier of the SKU.
-     * 
-     */
+        /**
+         * @return The tier of the SKU.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ExpressRouteCircuitSkuResponse {
     }
 
     /**
-     * The family of the SKU.
+     * @return The family of the SKU.
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The name of the SKU.
+     * @return The name of the SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The tier of the SKU.
+     * @return The tier of the SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

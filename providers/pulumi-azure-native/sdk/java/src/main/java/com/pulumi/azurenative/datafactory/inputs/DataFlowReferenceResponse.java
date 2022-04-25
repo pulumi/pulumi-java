@@ -27,6 +27,10 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="datasetParameters")
     private @Nullable Object datasetParameters;
 
+    /**
+     * @return Reference data flow parameters from dataset.
+     * 
+     */
     public Optional<Object> datasetParameters() {
         return Optional.ofNullable(this.datasetParameters);
     }
@@ -38,6 +42,10 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="parameters")
     private @Nullable Map<String,Object> parameters;
 
+    /**
+     * @return Data flow parameters
+     * 
+     */
     public Optional<Map<String,Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -49,6 +57,10 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference data flow name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -60,6 +72,10 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Data flow reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -91,21 +107,45 @@ public final class DataFlowReferenceResponse extends com.pulumi.resources.Invoke
             $ = new DataFlowReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasetParameters Reference data flow parameters from dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetParameters(@Nullable Object datasetParameters) {
             $.datasetParameters = datasetParameters;
             return this;
         }
 
+        /**
+         * @param parameters Data flow parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param referenceName Reference data flow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Data flow reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

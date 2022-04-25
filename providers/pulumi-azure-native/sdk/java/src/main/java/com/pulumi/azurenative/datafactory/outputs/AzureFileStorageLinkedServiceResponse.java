@@ -19,81 +19,81 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFileStorageLinkedServiceResponse {
-    /**
-     * The Azure key vault secret reference of accountKey in connection string.
-     * 
-     */
+        /**
+         * @return The Azure key vault secret reference of accountKey in connection string.
+         * 
+         */
     private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
-     */
+        /**
+         * @return The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         */
     private final @Nullable Object connectionString;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object fileShare;
-    /**
-     * Host name of the server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Host name of the server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object host;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Password to logon the server.
-     * 
-     */
+        /**
+         * @return Password to logon the server.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The Azure key vault secret reference of sasToken in sas uri.
-     * 
-     */
+        /**
+         * @return The Azure key vault secret reference of sasToken in sas uri.
+         * 
+         */
     private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
-    /**
-     * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
-     */
+        /**
+         * @return SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         */
     private final @Nullable Object sasUri;
-    /**
-     * The azure file share snapshot version. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The azure file share snapshot version. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object snapshot;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;AzureFileStorage&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;AzureFileStorage&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * User ID to logon the server. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return User ID to logon the server. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object userId;
 
     @CustomType.Constructor
@@ -131,108 +131,108 @@ public final class AzureFileStorageLinkedServiceResponse {
     }
 
     /**
-     * The Azure key vault secret reference of accountKey in connection string.
+     * @return The Azure key vault secret reference of accountKey in connection string.
      * 
-    */
+     */
     public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Optional<Object> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+     * @return The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileShare() {
         return Optional.ofNullable(this.fileShare);
     }
     /**
-     * Host name of the server. Type: string (or Expression with resultType string).
+     * @return Host name of the server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password to logon the server.
+     * @return Password to logon the server.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The Azure key vault secret reference of sasToken in sas uri.
+     * @return The Azure key vault secret reference of sasToken in sas uri.
      * 
-    */
+     */
     public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
-     * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Optional<Object> sasUri() {
         return Optional.ofNullable(this.sasUri);
     }
     /**
-     * The azure file share snapshot version. Type: string (or Expression with resultType string).
+     * @return The azure file share snapshot version. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AzureFileStorage&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * User ID to logon the server. Type: string (or Expression with resultType string).
+     * @return User ID to logon the server. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userId() {
         return Optional.ofNullable(this.userId);
     }

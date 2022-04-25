@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListTopLevelDomainAgreementsResult {
-    /**
-     * Link to next page of resources.
-     * 
-     */
+        /**
+         * @return Link to next page of resources.
+         * 
+         */
     private final String nextLink;
-    /**
-     * Collection of resources.
-     * 
-     */
+        /**
+         * @return Collection of resources.
+         * 
+         */
     private final List<TldLegalAgreementResponse> value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListTopLevelDomainAgreementsResult {
     }
 
     /**
-     * Link to next page of resources.
+     * @return Link to next page of resources.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * Collection of resources.
+     * @return Collection of resources.
      * 
-    */
+     */
     public List<TldLegalAgreementResponse> value() {
         return this.value;
     }

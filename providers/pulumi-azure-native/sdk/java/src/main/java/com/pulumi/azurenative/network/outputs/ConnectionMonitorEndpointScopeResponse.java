@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionMonitorEndpointScopeResponse {
-    /**
-     * List of items which needs to be excluded from the endpoint scope.
-     * 
-     */
+        /**
+         * @return List of items which needs to be excluded from the endpoint scope.
+         * 
+         */
     private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
-    /**
-     * List of items which needs to be included to the endpoint scope.
-     * 
-     */
+        /**
+         * @return List of items which needs to be included to the endpoint scope.
+         * 
+         */
     private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ConnectionMonitorEndpointScopeResponse {
     }
 
     /**
-     * List of items which needs to be excluded from the endpoint scope.
+     * @return List of items which needs to be excluded from the endpoint scope.
      * 
-    */
+     */
     public List<ConnectionMonitorEndpointScopeItemResponse> exclude() {
         return this.exclude == null ? List.of() : this.exclude;
     }
     /**
-     * List of items which needs to be included to the endpoint scope.
+     * @return List of items which needs to be included to the endpoint scope.
      * 
-    */
+     */
     public List<ConnectionMonitorEndpointScopeItemResponse> include() {
         return this.include == null ? List.of() : this.include;
     }

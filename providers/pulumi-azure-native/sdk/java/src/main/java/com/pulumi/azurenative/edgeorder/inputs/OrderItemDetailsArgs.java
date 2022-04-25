@@ -31,6 +31,10 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="notificationEmailList")
     private @Nullable Output<List<String>> notificationEmailList;
 
+    /**
+     * @return Additional notification email list
+     * 
+     */
     public Optional<Output<List<String>>> notificationEmailList() {
         return Optional.ofNullable(this.notificationEmailList);
     }
@@ -42,6 +46,10 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="orderItemType", required=true)
     private Output<Either<String,OrderItemType>> orderItemType;
 
+    /**
+     * @return Order item type.
+     * 
+     */
     public Output<Either<String,OrderItemType>> orderItemType() {
         return this.orderItemType;
     }
@@ -53,6 +61,10 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="preferences")
     private @Nullable Output<PreferencesArgs> preferences;
 
+    /**
+     * @return Customer notification Preferences
+     * 
+     */
     public Optional<Output<PreferencesArgs>> preferences() {
         return Optional.ofNullable(this.preferences);
     }
@@ -64,6 +76,10 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="productDetails", required=true)
     private Output<ProductDetailsArgs> productDetails;
 
+    /**
+     * @return Unique identifier for configuration.
+     * 
+     */
     public Output<ProductDetailsArgs> productDetails() {
         return this.productDetails;
     }
@@ -95,50 +111,116 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
             $ = new OrderItemDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationEmailList Additional notification email list
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailList(@Nullable Output<List<String>> notificationEmailList) {
             $.notificationEmailList = notificationEmailList;
             return this;
         }
 
+        /**
+         * @param notificationEmailList Additional notification email list
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailList(List<String> notificationEmailList) {
             return notificationEmailList(Output.of(notificationEmailList));
         }
 
+        /**
+         * @param notificationEmailList Additional notification email list
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationEmailList(String... notificationEmailList) {
             return notificationEmailList(List.of(notificationEmailList));
         }
 
+        /**
+         * @param orderItemType Order item type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemType(Output<Either<String,OrderItemType>> orderItemType) {
             $.orderItemType = orderItemType;
             return this;
         }
 
+        /**
+         * @param orderItemType Order item type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemType(Either<String,OrderItemType> orderItemType) {
             return orderItemType(Output.of(orderItemType));
         }
 
+        /**
+         * @param orderItemType Order item type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemType(String orderItemType) {
             return orderItemType(Either.ofLeft(orderItemType));
         }
 
+        /**
+         * @param orderItemType Order item type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemType(OrderItemType orderItemType) {
             return orderItemType(Either.ofRight(orderItemType));
         }
 
+        /**
+         * @param preferences Customer notification Preferences
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             $.preferences = preferences;
             return this;
         }
 
+        /**
+         * @param preferences Customer notification Preferences
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferences(PreferencesArgs preferences) {
             return preferences(Output.of(preferences));
         }
 
+        /**
+         * @param productDetails Unique identifier for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productDetails(Output<ProductDetailsArgs> productDetails) {
             $.productDetails = productDetails;
             return this;
         }
 
+        /**
+         * @param productDetails Unique identifier for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productDetails(ProductDetailsArgs productDetails) {
             return productDetails(Output.of(productDetails));
         }

@@ -31,6 +31,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="containers")
     private @Nullable List<ContainerResponse> containers;
 
+    /**
+     * @return List of container definitions for the Container App.
+     * 
+     */
     public Optional<List<ContainerResponse>> containers() {
         return Optional.ofNullable(this.containers);
     }
@@ -42,6 +46,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dapr")
     private @Nullable DaprResponse dapr;
 
+    /**
+     * @return Dapr configuration for the Container App.
+     * 
+     */
     public Optional<DaprResponse> dapr() {
         return Optional.ofNullable(this.dapr);
     }
@@ -53,6 +61,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="revisionSuffix")
     private @Nullable String revisionSuffix;
 
+    /**
+     * @return User friendly suffix that is appended to the revision name
+     * 
+     */
     public Optional<String> revisionSuffix() {
         return Optional.ofNullable(this.revisionSuffix);
     }
@@ -64,6 +76,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="scale")
     private @Nullable ScaleResponse scale;
 
+    /**
+     * @return Scaling properties for the Container App.
+     * 
+     */
     public Optional<ScaleResponse> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -95,25 +111,55 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new TemplateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containers List of container definitions for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(@Nullable List<ContainerResponse> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers List of container definitions for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerResponse... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param dapr Dapr configuration for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dapr(@Nullable DaprResponse dapr) {
             $.dapr = dapr;
             return this;
         }
 
+        /**
+         * @param revisionSuffix User friendly suffix that is appended to the revision name
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionSuffix(@Nullable String revisionSuffix) {
             $.revisionSuffix = revisionSuffix;
             return this;
         }
 
+        /**
+         * @param scale Scaling properties for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable ScaleResponse scale) {
             $.scale = scale;
             return this;

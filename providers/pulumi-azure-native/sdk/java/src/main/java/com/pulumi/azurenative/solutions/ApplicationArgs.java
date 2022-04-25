@@ -28,6 +28,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationDefinitionId")
     private @Nullable Output<String> applicationDefinitionId;
 
+    /**
+     * @return The fully qualified path of managed application definition Id.
+     * 
+     */
     public Optional<Output<String>> applicationDefinitionId() {
         return Optional.ofNullable(this.applicationDefinitionId);
     }
@@ -39,6 +43,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
     private @Nullable Output<String> applicationName;
 
+    /**
+     * @return The name of the managed application.
+     * 
+     */
     public Optional<Output<String>> applicationName() {
         return Optional.ofNullable(this.applicationName);
     }
@@ -50,6 +58,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -61,6 +73,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jitAccessPolicy")
     private @Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
 
+    /**
+     * @return The managed application Jit access policy.
+     * 
+     */
     public Optional<Output<ApplicationJitAccessPolicyArgs>> jitAccessPolicy() {
         return Optional.ofNullable(this.jitAccessPolicy);
     }
@@ -72,6 +88,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -83,6 +103,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -94,6 +118,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
     private @Nullable Output<String> managedBy;
 
+    /**
+     * @return ID of the resource that manages this resource.
+     * 
+     */
     public Optional<Output<String>> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
@@ -105,6 +133,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceGroupId")
     private @Nullable Output<String> managedResourceGroupId;
 
+    /**
+     * @return The managed resource group Id.
+     * 
+     */
     public Optional<Output<String>> managedResourceGroupId() {
         return Optional.ofNullable(this.managedResourceGroupId);
     }
@@ -116,6 +148,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Object> parameters;
 
+    /**
+     * @return Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+     * 
+     */
     public Optional<Output<Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -127,6 +163,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plan")
     private @Nullable Output<PlanArgs> plan;
 
+    /**
+     * @return The plan information.
+     * 
+     */
     public Optional<Output<PlanArgs>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -138,6 +178,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -149,6 +193,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The SKU of the resource.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -160,6 +208,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -200,119 +252,275 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationDefinitionId The fully qualified path of managed application definition Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationDefinitionId(@Nullable Output<String> applicationDefinitionId) {
             $.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
 
+        /**
+         * @param applicationDefinitionId The fully qualified path of managed application definition Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationDefinitionId(String applicationDefinitionId) {
             return applicationDefinitionId(Output.of(applicationDefinitionId));
         }
 
+        /**
+         * @param applicationName The name of the managed application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(@Nullable Output<String> applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the managed application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             return applicationName(Output.of(applicationName));
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param jitAccessPolicy The managed application Jit access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitAccessPolicy(@Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy) {
             $.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
 
+        /**
+         * @param jitAccessPolicy The managed application Jit access policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jitAccessPolicy(ApplicationJitAccessPolicyArgs jitAccessPolicy) {
             return jitAccessPolicy(Output.of(jitAccessPolicy));
         }
 
+        /**
+         * @param kind The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedBy ID of the resource that manages this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(@Nullable Output<String> managedBy) {
             $.managedBy = managedBy;
             return this;
         }
 
+        /**
+         * @param managedBy ID of the resource that manages this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(String managedBy) {
             return managedBy(Output.of(managedBy));
         }
 
+        /**
+         * @param managedResourceGroupId The managed resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResourceGroupId(@Nullable Output<String> managedResourceGroupId) {
             $.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
 
+        /**
+         * @param managedResourceGroupId The managed resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedResourceGroupId(String managedResourceGroupId) {
             return managedResourceGroupId(Output.of(managedResourceGroupId));
         }
 
+        /**
+         * @param parameters Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param plan The plan information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<PlanArgs> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan The plan information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(PlanArgs plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

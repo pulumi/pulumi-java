@@ -25,6 +25,10 @@ public final class InstanceViewStatusResponse extends com.pulumi.resources.Invok
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return The status code.
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -36,6 +40,10 @@ public final class InstanceViewStatusResponse extends com.pulumi.resources.Invok
     @Import(name="displayStatus")
     private @Nullable String displayStatus;
 
+    /**
+     * @return The short localizable label for the status.
+     * 
+     */
     public Optional<String> displayStatus() {
         return Optional.ofNullable(this.displayStatus);
     }
@@ -47,6 +55,10 @@ public final class InstanceViewStatusResponse extends com.pulumi.resources.Invok
     @Import(name="level")
     private @Nullable String level;
 
+    /**
+     * @return The level code.
+     * 
+     */
     public Optional<String> level() {
         return Optional.ofNullable(this.level);
     }
@@ -58,6 +70,10 @@ public final class InstanceViewStatusResponse extends com.pulumi.resources.Invok
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The detailed status message, including for alerts and error messages.
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -69,6 +85,10 @@ public final class InstanceViewStatusResponse extends com.pulumi.resources.Invok
     @Import(name="time")
     private @Nullable String time;
 
+    /**
+     * @return The time of the status.
+     * 
+     */
     public Optional<String> time() {
         return Optional.ofNullable(this.time);
     }
@@ -101,26 +121,56 @@ public final class InstanceViewStatusResponse extends com.pulumi.resources.Invok
             $ = new InstanceViewStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param displayStatus The short localizable label for the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(@Nullable String displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param level The level code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param message The detailed status message, including for alerts and error messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param time The time of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(@Nullable String time) {
             $.time = time;
             return this;

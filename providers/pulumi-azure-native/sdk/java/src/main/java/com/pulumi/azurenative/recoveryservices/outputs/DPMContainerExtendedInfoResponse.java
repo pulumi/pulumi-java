@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DPMContainerExtendedInfoResponse {
-    /**
-     * Last refresh time of the DPMContainer.
-     * 
-     */
+        /**
+         * @return Last refresh time of the DPMContainer.
+         * 
+         */
     private final @Nullable String lastRefreshedAt;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DPMContainerExtendedInfoResponse {
     }
 
     /**
-     * Last refresh time of the DPMContainer.
+     * @return Last refresh time of the DPMContainer.
      * 
-    */
+     */
     public Optional<String> lastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }

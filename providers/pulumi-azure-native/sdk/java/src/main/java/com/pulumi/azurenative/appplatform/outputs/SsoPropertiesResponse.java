@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SsoPropertiesResponse {
-    /**
-     * The public identifier for the application
-     * 
-     */
+        /**
+         * @return The public identifier for the application
+         * 
+         */
     private final @Nullable String clientId;
-    /**
-     * The secret known only to the application and the authorization server
-     * 
-     */
+        /**
+         * @return The secret known only to the application and the authorization server
+         * 
+         */
     private final @Nullable String clientSecret;
-    /**
-     * The URI of Issuer Identifier
-     * 
-     */
+        /**
+         * @return The URI of Issuer Identifier
+         * 
+         */
     private final @Nullable String issuerUri;
-    /**
-     * It defines the specific actions applications can be allowed to do on a user&#39;s behalf
-     * 
-     */
+        /**
+         * @return It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+         * 
+         */
     private final @Nullable List<String> scope;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class SsoPropertiesResponse {
     }
 
     /**
-     * The public identifier for the application
+     * @return The public identifier for the application
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The secret known only to the application and the authorization server
+     * @return The secret known only to the application and the authorization server
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * The URI of Issuer Identifier
+     * @return The URI of Issuer Identifier
      * 
-    */
+     */
     public Optional<String> issuerUri() {
         return Optional.ofNullable(this.issuerUri);
     }
     /**
-     * It defines the specific actions applications can be allowed to do on a user&#39;s behalf
+     * @return It defines the specific actions applications can be allowed to do on a user&#39;s behalf
      * 
-    */
+     */
     public List<String> scope() {
         return this.scope == null ? List.of() : this.scope;
     }

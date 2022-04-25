@@ -26,6 +26,10 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends com.
     @Import(name="subscriptions")
     private @Nullable List<String> subscriptions;
 
+    /**
+     * @return The list of subscriptions.
+     * 
+     */
     public Optional<List<String>> subscriptions() {
         return Optional.ofNullable(this.subscriptions);
     }
@@ -54,11 +58,23 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends com.
             $ = new PrivateLinkServicePropertiesResponseAutoApproval(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subscriptions The list of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(@Nullable List<String> subscriptions) {
             $.subscriptions = subscriptions;
             return this;
         }
 
+        /**
+         * @param subscriptions The list of subscriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
         }

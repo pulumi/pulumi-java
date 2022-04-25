@@ -27,6 +27,11 @@ public final class ManagedIdentitySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="resource")
     private @Nullable Output<String> resource;
 
+    /**
+     * @return The Resource indicating the App ID URI of the target resource.
+     * It also appears in the aud (audience) claim of the issued token.
+     * 
+     */
     public Optional<Output<String>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -55,11 +60,25 @@ public final class ManagedIdentitySettingsArgs extends com.pulumi.resources.Reso
             $ = new ManagedIdentitySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resource The Resource indicating the App ID URI of the target resource.
+         * It also appears in the aud (audience) claim of the issued token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource The Resource indicating the App ID URI of the target resource.
+         * It also appears in the aud (audience) claim of the issued token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }

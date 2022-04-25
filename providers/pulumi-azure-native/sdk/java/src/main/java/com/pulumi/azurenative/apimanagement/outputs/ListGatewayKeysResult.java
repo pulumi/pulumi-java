@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListGatewayKeysResult {
-    /**
-     * Primary gateway key.
-     * 
-     */
+        /**
+         * @return Primary gateway key.
+         * 
+         */
     private final @Nullable String primary;
-    /**
-     * Secondary gateway key.
-     * 
-     */
+        /**
+         * @return Secondary gateway key.
+         * 
+         */
     private final @Nullable String secondary;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListGatewayKeysResult {
     }
 
     /**
-     * Primary gateway key.
+     * @return Primary gateway key.
      * 
-    */
+     */
     public Optional<String> primary() {
         return Optional.ofNullable(this.primary);
     }
     /**
-     * Secondary gateway key.
+     * @return Secondary gateway key.
      * 
-    */
+     */
     public Optional<String> secondary() {
         return Optional.ofNullable(this.secondary);
     }

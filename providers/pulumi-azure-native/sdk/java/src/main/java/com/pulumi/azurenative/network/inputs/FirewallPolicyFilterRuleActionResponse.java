@@ -25,6 +25,10 @@ public final class FirewallPolicyFilterRuleActionResponse extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of action.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -53,6 +57,12 @@ public final class FirewallPolicyFilterRuleActionResponse extends com.pulumi.res
             $ = new FirewallPolicyFilterRuleActionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -24,6 +24,10 @@ public final class IdAssetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="assetId", required=true)
     private String assetId;
 
+    /**
+     * @return ARM resource ID of the asset.
+     * 
+     */
     public String assetId() {
         return this.assetId;
     }
@@ -36,6 +40,11 @@ public final class IdAssetReferenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="referenceType", required=true)
     private String referenceType;
 
+    /**
+     * @return Enum to determine which reference method to use for an asset.
+     * Expected value is &#39;Id&#39;.
+     * 
+     */
     public String referenceType() {
         return this.referenceType;
     }
@@ -65,11 +74,24 @@ public final class IdAssetReferenceResponse extends com.pulumi.resources.InvokeA
             $ = new IdAssetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId ARM resource ID of the asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(String assetId) {
             $.assetId = assetId;
             return this;
         }
 
+        /**
+         * @param referenceType Enum to determine which reference method to use for an asset.
+         * Expected value is &#39;Id&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceType(String referenceType) {
             $.referenceType = referenceType;
             return this;

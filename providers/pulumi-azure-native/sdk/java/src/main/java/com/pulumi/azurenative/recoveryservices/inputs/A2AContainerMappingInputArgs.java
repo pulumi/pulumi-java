@@ -29,6 +29,10 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
     @Import(name="agentAutoUpdateStatus")
     private @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
+    /**
+     * @return A value indicating whether the auto update is enabled.
+     * 
+     */
     public Optional<Output<Either<String,AgentAutoUpdateStatus>>> agentAutoUpdateStatus() {
         return Optional.ofNullable(this.agentAutoUpdateStatus);
     }
@@ -40,6 +44,10 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
     @Import(name="automationAccountArmId")
     private @Nullable Output<String> automationAccountArmId;
 
+    /**
+     * @return The automation account arm id.
+     * 
+     */
     public Optional<Output<String>> automationAccountArmId() {
         return Optional.ofNullable(this.automationAccountArmId);
     }
@@ -52,6 +60,11 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -82,37 +95,87 @@ public final class A2AContainerMappingInputArgs extends com.pulumi.resources.Res
             $ = new A2AContainerMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentAutoUpdateStatus A value indicating whether the auto update is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentAutoUpdateStatus(@Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus) {
             $.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
 
+        /**
+         * @param agentAutoUpdateStatus A value indicating whether the auto update is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentAutoUpdateStatus(Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
             return agentAutoUpdateStatus(Output.of(agentAutoUpdateStatus));
         }
 
+        /**
+         * @param agentAutoUpdateStatus A value indicating whether the auto update is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentAutoUpdateStatus(String agentAutoUpdateStatus) {
             return agentAutoUpdateStatus(Either.ofLeft(agentAutoUpdateStatus));
         }
 
+        /**
+         * @param agentAutoUpdateStatus A value indicating whether the auto update is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentAutoUpdateStatus(AgentAutoUpdateStatus agentAutoUpdateStatus) {
             return agentAutoUpdateStatus(Either.ofRight(agentAutoUpdateStatus));
         }
 
+        /**
+         * @param automationAccountArmId The automation account arm id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountArmId(@Nullable Output<String> automationAccountArmId) {
             $.automationAccountArmId = automationAccountArmId;
             return this;
         }
 
+        /**
+         * @param automationAccountArmId The automation account arm id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountArmId(String automationAccountArmId) {
             return automationAccountArmId(Output.of(automationAccountArmId));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }

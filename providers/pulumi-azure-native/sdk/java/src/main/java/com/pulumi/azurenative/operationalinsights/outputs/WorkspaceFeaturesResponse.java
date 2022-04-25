@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WorkspaceFeaturesResponse {
-    /**
-     * Dedicated LA cluster resourceId that is linked to the workspaces.
-     * 
-     */
+        /**
+         * @return Dedicated LA cluster resourceId that is linked to the workspaces.
+         * 
+         */
     private final @Nullable String clusterResourceId;
-    /**
-     * Disable Non-AAD based Auth.
-     * 
-     */
+        /**
+         * @return Disable Non-AAD based Auth.
+         * 
+         */
     private final @Nullable Boolean disableLocalAuth;
-    /**
-     * Flag that indicate if data should be exported.
-     * 
-     */
+        /**
+         * @return Flag that indicate if data should be exported.
+         * 
+         */
     private final @Nullable Boolean enableDataExport;
-    /**
-     * Flag that indicate which permission to use - resource or workspace or both.
-     * 
-     */
+        /**
+         * @return Flag that indicate which permission to use - resource or workspace or both.
+         * 
+         */
     private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
-    /**
-     * Flag that describes if we want to remove the data after 30 days.
-     * 
-     */
+        /**
+         * @return Flag that describes if we want to remove the data after 30 days.
+         * 
+         */
     private final @Nullable Boolean immediatePurgeDataOn30Days;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class WorkspaceFeaturesResponse {
     }
 
     /**
-     * Dedicated LA cluster resourceId that is linked to the workspaces.
+     * @return Dedicated LA cluster resourceId that is linked to the workspaces.
      * 
-    */
+     */
     public Optional<String> clusterResourceId() {
         return Optional.ofNullable(this.clusterResourceId);
     }
     /**
-     * Disable Non-AAD based Auth.
+     * @return Disable Non-AAD based Auth.
      * 
-    */
+     */
     public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
-     * Flag that indicate if data should be exported.
+     * @return Flag that indicate if data should be exported.
      * 
-    */
+     */
     public Optional<Boolean> enableDataExport() {
         return Optional.ofNullable(this.enableDataExport);
     }
     /**
-     * Flag that indicate which permission to use - resource or workspace or both.
+     * @return Flag that indicate which permission to use - resource or workspace or both.
      * 
-    */
+     */
     public Optional<Boolean> enableLogAccessUsingOnlyResourcePermissions() {
         return Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
     /**
-     * Flag that describes if we want to remove the data after 30 days.
+     * @return Flag that describes if we want to remove the data after 30 days.
      * 
-    */
+     */
     public Optional<Boolean> immediatePurgeDataOn30Days() {
         return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }

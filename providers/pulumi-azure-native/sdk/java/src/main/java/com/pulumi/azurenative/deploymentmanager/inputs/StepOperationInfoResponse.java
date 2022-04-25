@@ -26,6 +26,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="correlationId", required=true)
     private String correlationId;
 
+    /**
+     * @return Unique identifier to track the request for ARM-based resources.
+     * 
+     */
     public String correlationId() {
         return this.correlationId;
     }
@@ -37,6 +41,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="deploymentName", required=true)
     private String deploymentName;
 
+    /**
+     * @return The name of the ARM deployment initiated as part of the step.
+     * 
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
@@ -48,6 +56,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return End time of the action in UTC.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -59,6 +71,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="error")
     private @Nullable CloudErrorBodyResponse error;
 
+    /**
+     * @return The errors, if any, for the action.
+     * 
+     */
     public Optional<CloudErrorBodyResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -70,6 +86,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="lastUpdatedTime", required=true)
     private String lastUpdatedTime;
 
+    /**
+     * @return Last time in UTC this operation was updated.
+     * 
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
@@ -81,6 +101,10 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return Start time of the action in UTC.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -114,31 +138,67 @@ public final class StepOperationInfoResponse extends com.pulumi.resources.Invoke
             $ = new StepOperationInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param correlationId Unique identifier to track the request for ARM-based resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder correlationId(String correlationId) {
             $.correlationId = correlationId;
             return this;
         }
 
+        /**
+         * @param deploymentName The name of the ARM deployment initiated as part of the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param endTime End time of the action in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param error The errors, if any, for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable CloudErrorBodyResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime Last time in UTC this operation was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param startTime Start time of the action in UTC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;

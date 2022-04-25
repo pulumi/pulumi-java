@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiOAuthSettingsParameterResponse {
-    /**
-     * Options available to this parameter
-     * 
-     */
+        /**
+         * @return Options available to this parameter
+         * 
+         */
     private final @Nullable Object options;
-    /**
-     * UI definitions per culture as caller can specify the culture
-     * 
-     */
+        /**
+         * @return UI definitions per culture as caller can specify the culture
+         * 
+         */
     private final @Nullable Object uiDefinition;
-    /**
-     * Value of the setting
-     * 
-     */
+        /**
+         * @return Value of the setting
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ApiOAuthSettingsParameterResponse {
     }
 
     /**
-     * Options available to this parameter
+     * @return Options available to this parameter
      * 
-    */
+     */
     public Optional<Object> options() {
         return Optional.ofNullable(this.options);
     }
     /**
-     * UI definitions per culture as caller can specify the culture
+     * @return UI definitions per culture as caller can specify the culture
      * 
-    */
+     */
     public Optional<Object> uiDefinition() {
         return Optional.ofNullable(this.uiDefinition);
     }
     /**
-     * Value of the setting
+     * @return Value of the setting
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

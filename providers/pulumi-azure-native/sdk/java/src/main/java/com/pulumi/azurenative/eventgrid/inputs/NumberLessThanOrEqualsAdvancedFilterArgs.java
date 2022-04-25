@@ -28,6 +28,10 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends com.pulumi.r
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The field/property in the event based on which you want to filter.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -40,6 +44,11 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends com.pulumi.r
     @Import(name="operatorType", required=true)
     private Output<String> operatorType;
 
+    /**
+     * @return The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+     * Expected value is &#39;NumberLessThanOrEquals&#39;.
+     * 
+     */
     public Output<String> operatorType() {
         return this.operatorType;
     }
@@ -51,6 +60,10 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends com.pulumi.r
     @Import(name="value")
     private @Nullable Output<Double> value;
 
+    /**
+     * @return The filter value.
+     * 
+     */
     public Optional<Output<Double>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -81,29 +94,67 @@ public final class NumberLessThanOrEqualsAdvancedFilterArgs extends com.pulumi.r
             $ = new NumberLessThanOrEqualsAdvancedFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The field/property in the event based on which you want to filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;NumberLessThanOrEquals&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(Output<String> operatorType) {
             $.operatorType = operatorType;
             return this;
         }
 
+        /**
+         * @param operatorType The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+         * Expected value is &#39;NumberLessThanOrEquals&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatorType(String operatorType) {
             return operatorType(Output.of(operatorType));
         }
 
+        /**
+         * @param value The filter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Double> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The filter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Double value) {
             return value(Output.of(value));
         }

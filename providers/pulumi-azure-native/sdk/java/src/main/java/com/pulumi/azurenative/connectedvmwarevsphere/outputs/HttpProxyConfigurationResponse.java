@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HttpProxyConfigurationResponse {
-    /**
-     * Gets or sets httpsProxy url.
-     * 
-     */
+        /**
+         * @return Gets or sets httpsProxy url.
+         * 
+         */
     private final @Nullable String httpsProxy;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class HttpProxyConfigurationResponse {
     }
 
     /**
-     * Gets or sets httpsProxy url.
+     * @return Gets or sets httpsProxy url.
      * 
-    */
+     */
     public Optional<String> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }

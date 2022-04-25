@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomRuleListResponse {
-    /**
-     * List of rules
-     * 
-     */
+        /**
+         * @return List of rules
+         * 
+         */
     private final @Nullable List<CustomRuleResponse> rules;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CustomRuleListResponse {
     }
 
     /**
-     * List of rules
+     * @return List of rules
      * 
-    */
+     */
     public List<CustomRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

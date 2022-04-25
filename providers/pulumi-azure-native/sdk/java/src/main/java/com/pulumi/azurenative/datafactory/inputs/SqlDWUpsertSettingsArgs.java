@@ -26,6 +26,10 @@ public final class SqlDWUpsertSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="interimSchemaName")
     private @Nullable Output<Object> interimSchemaName;
 
+    /**
+     * @return Schema name for interim table. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> interimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
@@ -37,6 +41,10 @@ public final class SqlDWUpsertSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="keys")
     private @Nullable Output<Object> keys;
 
+    /**
+     * @return Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Output<Object>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -66,20 +74,44 @@ public final class SqlDWUpsertSettingsArgs extends com.pulumi.resources.Resource
             $ = new SqlDWUpsertSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interimSchemaName Schema name for interim table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interimSchemaName(@Nullable Output<Object> interimSchemaName) {
             $.interimSchemaName = interimSchemaName;
             return this;
         }
 
+        /**
+         * @param interimSchemaName Schema name for interim table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interimSchemaName(Object interimSchemaName) {
             return interimSchemaName(Output.of(interimSchemaName));
         }
 
+        /**
+         * @param keys Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<Object> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(Object keys) {
             return keys(Output.of(keys));
         }

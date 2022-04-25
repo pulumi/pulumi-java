@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class InitContainerPropertiesDefinitionResponseInstanceView {
-    /**
-     * The current state of the init container.
-     * 
-     */
+        /**
+         * @return The current state of the init container.
+         * 
+         */
     private final ContainerStateResponse currentState;
-    /**
-     * The events of the init container.
-     * 
-     */
+        /**
+         * @return The events of the init container.
+         * 
+         */
     private final List<EventResponse> events;
-    /**
-     * The previous state of the init container.
-     * 
-     */
+        /**
+         * @return The previous state of the init container.
+         * 
+         */
     private final ContainerStateResponse previousState;
-    /**
-     * The number of times that the init container has been restarted.
-     * 
-     */
+        /**
+         * @return The number of times that the init container has been restarted.
+         * 
+         */
     private final Integer restartCount;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView {
     }
 
     /**
-     * The current state of the init container.
+     * @return The current state of the init container.
      * 
-    */
+     */
     public ContainerStateResponse currentState() {
         return this.currentState;
     }
     /**
-     * The events of the init container.
+     * @return The events of the init container.
      * 
-    */
+     */
     public List<EventResponse> events() {
         return this.events;
     }
     /**
-     * The previous state of the init container.
+     * @return The previous state of the init container.
      * 
-    */
+     */
     public ContainerStateResponse previousState() {
         return this.previousState;
     }
     /**
-     * The number of times that the init container has been restarted.
+     * @return The number of times that the init container has been restarted.
      * 
-    */
+     */
     public Integer restartCount() {
         return this.restartCount;
     }

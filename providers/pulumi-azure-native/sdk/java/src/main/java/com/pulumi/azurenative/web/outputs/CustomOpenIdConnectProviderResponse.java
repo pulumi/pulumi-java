@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CustomOpenIdConnectProviderResponse {
-    /**
-     * &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The configuration settings of the login flow of the custom Open ID Connect provider.
-     * 
-     */
+        /**
+         * @return The configuration settings of the login flow of the custom Open ID Connect provider.
+         * 
+         */
     private final @Nullable OpenIdConnectLoginResponse login;
-    /**
-     * The configuration settings of the app registration for the custom Open ID Connect provider.
-     * 
-     */
+        /**
+         * @return The configuration settings of the app registration for the custom Open ID Connect provider.
+         * 
+         */
     private final @Nullable OpenIdConnectRegistrationResponse registration;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class CustomOpenIdConnectProviderResponse {
     }
 
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the custom Open ID provider provider should not be enabled; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The configuration settings of the login flow of the custom Open ID Connect provider.
+     * @return The configuration settings of the login flow of the custom Open ID Connect provider.
      * 
-    */
+     */
     public Optional<OpenIdConnectLoginResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * The configuration settings of the app registration for the custom Open ID Connect provider.
+     * @return The configuration settings of the app registration for the custom Open ID Connect provider.
      * 
-    */
+     */
     public Optional<OpenIdConnectRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }

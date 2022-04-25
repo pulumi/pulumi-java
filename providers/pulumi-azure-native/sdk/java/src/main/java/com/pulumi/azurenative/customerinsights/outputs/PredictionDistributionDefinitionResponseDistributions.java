@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PredictionDistributionDefinitionResponseDistributions {
-    /**
-     * Number of negatives.
-     * 
-     */
+        /**
+         * @return Number of negatives.
+         * 
+         */
     private final @Nullable Double negatives;
-    /**
-     * Number of negatives above threshold.
-     * 
-     */
+        /**
+         * @return Number of negatives above threshold.
+         * 
+         */
     private final @Nullable Double negativesAboveThreshold;
-    /**
-     * Number of positives.
-     * 
-     */
+        /**
+         * @return Number of positives.
+         * 
+         */
     private final @Nullable Double positives;
-    /**
-     * Number of positives above threshold.
-     * 
-     */
+        /**
+         * @return Number of positives above threshold.
+         * 
+         */
     private final @Nullable Double positivesAboveThreshold;
-    /**
-     * Score threshold.
-     * 
-     */
+        /**
+         * @return Score threshold.
+         * 
+         */
     private final @Nullable Integer scoreThreshold;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class PredictionDistributionDefinitionResponseDistributions {
     }
 
     /**
-     * Number of negatives.
+     * @return Number of negatives.
      * 
-    */
+     */
     public Optional<Double> negatives() {
         return Optional.ofNullable(this.negatives);
     }
     /**
-     * Number of negatives above threshold.
+     * @return Number of negatives above threshold.
      * 
-    */
+     */
     public Optional<Double> negativesAboveThreshold() {
         return Optional.ofNullable(this.negativesAboveThreshold);
     }
     /**
-     * Number of positives.
+     * @return Number of positives.
      * 
-    */
+     */
     public Optional<Double> positives() {
         return Optional.ofNullable(this.positives);
     }
     /**
-     * Number of positives above threshold.
+     * @return Number of positives above threshold.
      * 
-    */
+     */
     public Optional<Double> positivesAboveThreshold() {
         return Optional.ofNullable(this.positivesAboveThreshold);
     }
     /**
-     * Score threshold.
+     * @return Score threshold.
      * 
-    */
+     */
     public Optional<Integer> scoreThreshold() {
         return Optional.ofNullable(this.scoreThreshold);
     }

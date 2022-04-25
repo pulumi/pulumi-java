@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
-    /**
-     * authentication key
-     * 
-     */
+        /**
+         * @return authentication key
+         * 
+         */
     private final @Nullable String base64Key;
-    /**
-     * The expiration time of the authentication key.
-     * 
-     */
+        /**
+         * @return The expiration time of the authentication key.
+         * 
+         */
     private final @Nullable String expiration;
-    /**
-     * identifier of the key
-     * 
-     */
+        /**
+         * @return identifier of the key
+         * 
+         */
     private final @Nullable String identifier;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse {
     }
 
     /**
-     * authentication key
+     * @return authentication key
      * 
-    */
+     */
     public Optional<String> base64Key() {
         return Optional.ofNullable(this.base64Key);
     }
     /**
-     * The expiration time of the authentication key.
+     * @return The expiration time of the authentication key.
      * 
-    */
+     */
     public Optional<String> expiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
-     * identifier of the key
+     * @return identifier of the key
      * 
-    */
+     */
     public Optional<String> identifier() {
         return Optional.ofNullable(this.identifier);
     }

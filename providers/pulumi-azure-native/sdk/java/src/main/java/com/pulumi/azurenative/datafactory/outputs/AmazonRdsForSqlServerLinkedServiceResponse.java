@@ -20,56 +20,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AmazonRdsForSqlServerLinkedServiceResponse {
-    /**
-     * Sql always encrypted properties.
-     * 
-     */
+        /**
+         * @return Sql always encrypted properties.
+         * 
+         */
     private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
-     * 
-     */
+        /**
+         * @return The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         */
     private final Object connectionString;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The on-premises Windows authentication password.
-     * 
-     */
+        /**
+         * @return The on-premises Windows authentication password.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;AmazonRdsForSqlServer&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;AmazonRdsForSqlServer&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object userName;
 
     @CustomType.Constructor
@@ -97,73 +97,73 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse {
     }
 
     /**
-     * Sql always encrypted properties.
+     * @return Sql always encrypted properties.
      * 
-    */
+     */
     public Optional<SqlAlwaysEncryptedPropertiesResponse> alwaysEncryptedSettings() {
         return Optional.ofNullable(this.alwaysEncryptedSettings);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Object connectionString() {
         return this.connectionString;
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The on-premises Windows authentication password.
+     * @return The on-premises Windows authentication password.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;AmazonRdsForSqlServer&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
+     * @return The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

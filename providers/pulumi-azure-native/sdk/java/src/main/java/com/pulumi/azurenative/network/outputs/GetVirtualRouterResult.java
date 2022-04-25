@@ -15,65 +15,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualRouterResult {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * The Gateway on which VirtualRouter is hosted.
-     * 
-     */
+        /**
+         * @return The Gateway on which VirtualRouter is hosted.
+         * 
+         */
     private final @Nullable SubResourceResponse hostedGateway;
-    /**
-     * The Subnet on which VirtualRouter is hosted.
-     * 
-     */
+        /**
+         * @return The Subnet on which VirtualRouter is hosted.
+         * 
+         */
     private final @Nullable SubResourceResponse hostedSubnet;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * List of references to VirtualRouterPeerings.
-     * 
-     */
+        /**
+         * @return List of references to VirtualRouterPeerings.
+         * 
+         */
     private final List<SubResourceResponse> peerings;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * VirtualRouter ASN.
-     * 
-     */
+        /**
+         * @return VirtualRouter ASN.
+         * 
+         */
     private final @Nullable Double virtualRouterAsn;
-    /**
-     * VirtualRouter IPs.
-     * 
-     */
+        /**
+         * @return VirtualRouter IPs.
+         * 
+         */
     private final @Nullable List<String> virtualRouterIps;
 
     @CustomType.Constructor
@@ -105,86 +105,86 @@ public final class GetVirtualRouterResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The Gateway on which VirtualRouter is hosted.
+     * @return The Gateway on which VirtualRouter is hosted.
      * 
-    */
+     */
     public Optional<SubResourceResponse> hostedGateway() {
         return Optional.ofNullable(this.hostedGateway);
     }
     /**
-     * The Subnet on which VirtualRouter is hosted.
+     * @return The Subnet on which VirtualRouter is hosted.
      * 
-    */
+     */
     public Optional<SubResourceResponse> hostedSubnet() {
         return Optional.ofNullable(this.hostedSubnet);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of references to VirtualRouterPeerings.
+     * @return List of references to VirtualRouterPeerings.
      * 
-    */
+     */
     public List<SubResourceResponse> peerings() {
         return this.peerings;
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * VirtualRouter ASN.
+     * @return VirtualRouter ASN.
      * 
-    */
+     */
     public Optional<Double> virtualRouterAsn() {
         return Optional.ofNullable(this.virtualRouterAsn);
     }
     /**
-     * VirtualRouter IPs.
+     * @return VirtualRouter IPs.
      * 
-    */
+     */
     public List<String> virtualRouterIps() {
         return this.virtualRouterIps == null ? List.of() : this.virtualRouterIps;
     }

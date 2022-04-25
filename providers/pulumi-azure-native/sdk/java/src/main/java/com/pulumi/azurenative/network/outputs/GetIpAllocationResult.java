@@ -14,70 +14,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIpAllocationResult {
-    /**
-     * IpAllocation tags.
-     * 
-     */
+        /**
+         * @return IpAllocation tags.
+         * 
+         */
     private final @Nullable Map<String,String> allocationTags;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The IPAM allocation ID.
-     * 
-     */
+        /**
+         * @return The IPAM allocation ID.
+         * 
+         */
     private final @Nullable String ipamAllocationId;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The address prefix for the IpAllocation.
-     * 
-     */
+        /**
+         * @return The address prefix for the IpAllocation.
+         * 
+         */
     private final @Nullable String prefix;
-    /**
-     * The address prefix length for the IpAllocation.
-     * 
-     */
+        /**
+         * @return The address prefix length for the IpAllocation.
+         * 
+         */
     private final @Nullable Integer prefixLength;
-    /**
-     * The address prefix Type for the IpAllocation.
-     * 
-     */
+        /**
+         * @return The address prefix Type for the IpAllocation.
+         * 
+         */
     private final @Nullable String prefixType;
-    /**
-     * The Subnet that using the prefix of this IpAllocation resource.
-     * 
-     */
+        /**
+         * @return The Subnet that using the prefix of this IpAllocation resource.
+         * 
+         */
     private final SubResourceResponse subnet;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The VirtualNetwork that using the prefix of this IpAllocation resource.
-     * 
-     */
+        /**
+         * @return The VirtualNetwork that using the prefix of this IpAllocation resource.
+         * 
+         */
     private final SubResourceResponse virtualNetwork;
 
     @CustomType.Constructor
@@ -111,93 +111,93 @@ public final class GetIpAllocationResult {
     }
 
     /**
-     * IpAllocation tags.
+     * @return IpAllocation tags.
      * 
-    */
+     */
     public Map<String,String> allocationTags() {
         return this.allocationTags == null ? Map.of() : this.allocationTags;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The IPAM allocation ID.
+     * @return The IPAM allocation ID.
      * 
-    */
+     */
     public Optional<String> ipamAllocationId() {
         return Optional.ofNullable(this.ipamAllocationId);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The address prefix for the IpAllocation.
+     * @return The address prefix for the IpAllocation.
      * 
-    */
+     */
     public Optional<String> prefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
-     * The address prefix length for the IpAllocation.
+     * @return The address prefix length for the IpAllocation.
      * 
-    */
+     */
     public Optional<Integer> prefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
     /**
-     * The address prefix Type for the IpAllocation.
+     * @return The address prefix Type for the IpAllocation.
      * 
-    */
+     */
     public Optional<String> prefixType() {
         return Optional.ofNullable(this.prefixType);
     }
     /**
-     * The Subnet that using the prefix of this IpAllocation resource.
+     * @return The Subnet that using the prefix of this IpAllocation resource.
      * 
-    */
+     */
     public SubResourceResponse subnet() {
         return this.subnet;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The VirtualNetwork that using the prefix of this IpAllocation resource.
+     * @return The VirtualNetwork that using the prefix of this IpAllocation resource.
      * 
-    */
+     */
     public SubResourceResponse virtualNetwork() {
         return this.virtualNetwork;
     }

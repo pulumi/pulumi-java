@@ -16,35 +16,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AKSServiceResponseResponseEnvironmentImageRequest {
-    /**
-     * The list of assets.
-     * 
-     */
+        /**
+         * @return The list of assets.
+         * 
+         */
     private final @Nullable List<ImageAssetResponse> assets;
-    /**
-     * The name of the driver file.
-     * 
-     */
+        /**
+         * @return The name of the driver file.
+         * 
+         */
     private final @Nullable String driverProgram;
-    /**
-     * The details of the AZURE ML environment.
-     * 
-     */
+        /**
+         * @return The details of the AZURE ML environment.
+         * 
+         */
     private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
-    /**
-     * The unique identifying details of the AZURE ML environment.
-     * 
-     */
+        /**
+         * @return The unique identifying details of the AZURE ML environment.
+         * 
+         */
     private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
-    /**
-     * The list of model Ids.
-     * 
-     */
+        /**
+         * @return The list of model Ids.
+         * 
+         */
     private final @Nullable List<String> modelIds;
-    /**
-     * The list of models.
-     * 
-     */
+        /**
+         * @return The list of models.
+         * 
+         */
     private final @Nullable List<ModelResponse> models;
 
     @CustomType.Constructor
@@ -64,44 +64,44 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest {
     }
 
     /**
-     * The list of assets.
+     * @return The list of assets.
      * 
-    */
+     */
     public List<ImageAssetResponse> assets() {
         return this.assets == null ? List.of() : this.assets;
     }
     /**
-     * The name of the driver file.
+     * @return The name of the driver file.
      * 
-    */
+     */
     public Optional<String> driverProgram() {
         return Optional.ofNullable(this.driverProgram);
     }
     /**
-     * The details of the AZURE ML environment.
+     * @return The details of the AZURE ML environment.
      * 
-    */
+     */
     public Optional<EnvironmentImageResponseResponseEnvironment> environment() {
         return Optional.ofNullable(this.environment);
     }
     /**
-     * The unique identifying details of the AZURE ML environment.
+     * @return The unique identifying details of the AZURE ML environment.
      * 
-    */
+     */
     public Optional<EnvironmentImageResponseResponseEnvironmentReference> environmentReference() {
         return Optional.ofNullable(this.environmentReference);
     }
     /**
-     * The list of model Ids.
+     * @return The list of model Ids.
      * 
-    */
+     */
     public List<String> modelIds() {
         return this.modelIds == null ? List.of() : this.modelIds;
     }
     /**
-     * The list of models.
+     * @return The list of models.
      * 
-    */
+     */
     public List<ModelResponse> models() {
         return this.models == null ? List.of() : this.models;
     }

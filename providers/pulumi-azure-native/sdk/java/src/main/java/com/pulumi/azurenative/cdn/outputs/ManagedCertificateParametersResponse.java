@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedCertificateParametersResponse {
-    /**
-     * The type of the Secret to create.
-     * Expected value is &#39;ManagedCertificate&#39;.
-     * 
-     */
+        /**
+         * @return The type of the Secret to create.
+         * Expected value is &#39;ManagedCertificate&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class ManagedCertificateParametersResponse {
     }
 
     /**
-     * The type of the Secret to create.
+     * @return The type of the Secret to create.
      * Expected value is &#39;ManagedCertificate&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

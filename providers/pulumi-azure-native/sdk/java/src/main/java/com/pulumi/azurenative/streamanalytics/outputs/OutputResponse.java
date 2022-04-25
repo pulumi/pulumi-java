@@ -25,40 +25,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OutputResponse {
-    /**
-     * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable Object datasource;
-    /**
-     * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
-     * 
-     */
+        /**
+         * @return Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
+         * 
+         */
     private final DiagnosticsResponse diagnostics;
-    /**
-     * The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
-     */
+        /**
+         * @return The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable Object serialization;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -80,51 +80,51 @@ public final class OutputResponse {
     }
 
     /**
-     * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<Object> datasource() {
         return Optional.ofNullable(this.datasource);
     }
     /**
-     * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
+     * @return Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
-    */
+     */
     public DiagnosticsResponse diagnostics() {
         return this.diagnostics;
     }
     /**
-     * The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * @return The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<Object> serialization() {
         return Optional.ofNullable(this.serialization);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

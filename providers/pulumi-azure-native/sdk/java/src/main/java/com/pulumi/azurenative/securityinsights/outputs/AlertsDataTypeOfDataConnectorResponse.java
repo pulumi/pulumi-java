@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AlertsDataTypeOfDataConnectorResponse {
-    /**
-     * Alerts data type connection.
-     * 
-     */
+        /**
+         * @return Alerts data type connection.
+         * 
+         */
     private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AlertsDataTypeOfDataConnectorResponse {
     }
 
     /**
-     * Alerts data type connection.
+     * @return Alerts data type connection.
      * 
-    */
+     */
     public Optional<DataConnectorDataTypeCommonResponse> alerts() {
         return Optional.ofNullable(this.alerts);
     }

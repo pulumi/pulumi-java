@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class DraDetailsResponse {
-    /**
-     * The health of the DRA.
-     * 
-     */
+        /**
+         * @return The health of the DRA.
+         * 
+         */
     private final String health;
-    /**
-     * The health errors.
-     * 
-     */
+        /**
+         * @return The health errors.
+         * 
+         */
     private final List<HealthErrorResponse> healthErrors;
-    /**
-     * The DRA Id.
-     * 
-     */
+        /**
+         * @return The DRA Id.
+         * 
+         */
     private final String id;
-    /**
-     * The last heartbeat received from the DRA.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the DRA.
+         * 
+         */
     private final String lastHeartbeatUtc;
-    /**
-     * The DRA name.
-     * 
-     */
+        /**
+         * @return The DRA name.
+         * 
+         */
     private final String name;
-    /**
-     * The DRA version.
-     * 
-     */
+        /**
+         * @return The DRA version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class DraDetailsResponse {
     }
 
     /**
-     * The health of the DRA.
+     * @return The health of the DRA.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The health errors.
+     * @return The health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The DRA Id.
+     * @return The DRA Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last heartbeat received from the DRA.
+     * @return The last heartbeat received from the DRA.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The DRA name.
+     * @return The DRA name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The DRA version.
+     * @return The DRA version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

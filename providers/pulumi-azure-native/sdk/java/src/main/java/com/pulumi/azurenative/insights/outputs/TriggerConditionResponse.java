@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TriggerConditionResponse {
-    /**
-     * Trigger condition for metric query rule
-     * 
-     */
+        /**
+         * @return Trigger condition for metric query rule
+         * 
+         */
     private final @Nullable LogMetricTriggerResponse metricTrigger;
-    /**
-     * Result or count threshold based on which rule should be triggered.
-     * 
-     */
+        /**
+         * @return Result or count threshold based on which rule should be triggered.
+         * 
+         */
     private final Double threshold;
-    /**
-     * Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
-     * 
-     */
+        /**
+         * @return Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+         * 
+         */
     private final String thresholdOperator;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class TriggerConditionResponse {
     }
 
     /**
-     * Trigger condition for metric query rule
+     * @return Trigger condition for metric query rule
      * 
-    */
+     */
     public Optional<LogMetricTriggerResponse> metricTrigger() {
         return Optional.ofNullable(this.metricTrigger);
     }
     /**
-     * Result or count threshold based on which rule should be triggered.
+     * @return Result or count threshold based on which rule should be triggered.
      * 
-    */
+     */
     public Double threshold() {
         return this.threshold;
     }
     /**
-     * Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
+     * @return Evaluation operation for rule - &#39;GreaterThan&#39; or &#39;LessThan.
      * 
-    */
+     */
     public String thresholdOperator() {
         return this.thresholdOperator;
     }

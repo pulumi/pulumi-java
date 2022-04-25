@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetBookmarkRelationResult {
-    /**
-     * Etag of the azure resource
-     * 
-     */
+        /**
+         * @return Etag of the azure resource
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * The resource ID of the related resource
-     * 
-     */
+        /**
+         * @return The resource ID of the related resource
+         * 
+         */
     private final String relatedResourceId;
-    /**
-     * The resource kind of the related resource
-     * 
-     */
+        /**
+         * @return The resource kind of the related resource
+         * 
+         */
     private final String relatedResourceKind;
-    /**
-     * The name of the related resource
-     * 
-     */
+        /**
+         * @return The name of the related resource
+         * 
+         */
     private final String relatedResourceName;
-    /**
-     * The resource type of the related resource
-     * 
-     */
+        /**
+         * @return The resource type of the related resource
+         * 
+         */
     private final String relatedResourceType;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetBookmarkRelationResult {
     }
 
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource ID of the related resource
+     * @return The resource ID of the related resource
      * 
-    */
+     */
     public String relatedResourceId() {
         return this.relatedResourceId;
     }
     /**
-     * The resource kind of the related resource
+     * @return The resource kind of the related resource
      * 
-    */
+     */
     public String relatedResourceKind() {
         return this.relatedResourceKind;
     }
     /**
-     * The name of the related resource
+     * @return The name of the related resource
      * 
-    */
+     */
     public String relatedResourceName() {
         return this.relatedResourceName;
     }
     /**
-     * The resource type of the related resource
+     * @return The resource type of the related resource
      * 
-    */
+     */
     public String relatedResourceType() {
         return this.relatedResourceType;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

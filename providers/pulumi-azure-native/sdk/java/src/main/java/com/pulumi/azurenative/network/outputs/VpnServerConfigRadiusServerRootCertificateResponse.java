@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpnServerConfigRadiusServerRootCertificateResponse {
-    /**
-     * The certificate name.
-     * 
-     */
+        /**
+         * @return The certificate name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The certificate public data.
-     * 
-     */
+        /**
+         * @return The certificate public data.
+         * 
+         */
     private final @Nullable String publicCertData;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse {
     }
 
     /**
-     * The certificate name.
+     * @return The certificate name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The certificate public data.
+     * @return The certificate public data.
      * 
-    */
+     */
     public Optional<String> publicCertData() {
         return Optional.ofNullable(this.publicCertData);
     }

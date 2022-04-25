@@ -27,6 +27,10 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
     @Import(name="denylistValues", required=true)
     private Output<List<String>> denylistValues;
 
+    /**
+     * @return The values to deny. The format of the values depends on the rule type.
+     * 
+     */
     public Output<List<String>> denylistValues() {
         return this.denylistValues;
     }
@@ -38,6 +42,10 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Status of the custom alert.
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -50,6 +58,11 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
     @Import(name="ruleType", required=true)
     private Output<String> ruleType;
 
+    /**
+     * @return The type of the custom alert rule.
+     * Expected value is &#39;DenylistCustomAlertRule&#39;.
+     * 
+     */
     public Output<String> ruleType() {
         return this.ruleType;
     }
@@ -80,33 +93,77 @@ public final class DenylistCustomAlertRuleArgs extends com.pulumi.resources.Reso
             $ = new DenylistCustomAlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param denylistValues The values to deny. The format of the values depends on the rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denylistValues(Output<List<String>> denylistValues) {
             $.denylistValues = denylistValues;
             return this;
         }
 
+        /**
+         * @param denylistValues The values to deny. The format of the values depends on the rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denylistValues(List<String> denylistValues) {
             return denylistValues(Output.of(denylistValues));
         }
 
+        /**
+         * @param denylistValues The values to deny. The format of the values depends on the rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denylistValues(String... denylistValues) {
             return denylistValues(List.of(denylistValues));
         }
 
+        /**
+         * @param isEnabled Status of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Status of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param ruleType The type of the custom alert rule.
+         * Expected value is &#39;DenylistCustomAlertRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(Output<String> ruleType) {
             $.ruleType = ruleType;
             return this;
         }
 
+        /**
+         * @param ruleType The type of the custom alert rule.
+         * Expected value is &#39;DenylistCustomAlertRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             return ruleType(Output.of(ruleType));
         }

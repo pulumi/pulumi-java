@@ -38,6 +38,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
     private @Nullable Output<WebActivityAuthenticationArgs> authentication;
 
+    /**
+     * @return Authentication method used for calling the endpoint.
+     * 
+     */
     public Optional<Output<WebActivityAuthenticationArgs>> authentication() {
         return Optional.ofNullable(this.authentication);
     }
@@ -49,6 +53,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="body")
     private @Nullable Output<Object> body;
 
+    /**
+     * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> body() {
         return Optional.ofNullable(this.body);
     }
@@ -60,6 +68,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -71,6 +83,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasets")
     private @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
+    /**
+     * @return List of datasets passed to web endpoint.
+     * 
+     */
     public Optional<Output<List<DatasetReferenceArgs>>> datasets() {
         return Optional.ofNullable(this.datasets);
     }
@@ -82,6 +98,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -93,6 +113,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -104,6 +128,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headers")
     private @Nullable Output<Object> headers;
 
+    /**
+     * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -115,6 +143,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -126,6 +158,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedServices")
     private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
+    /**
+     * @return List of linked services passed to web endpoint.
+     * 
+     */
     public Optional<Output<List<LinkedServiceReferenceArgs>>> linkedServices() {
         return Optional.ofNullable(this.linkedServices);
     }
@@ -137,6 +173,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="method", required=true)
     private Output<Either<String,WebActivityMethod>> method;
 
+    /**
+     * @return Rest API method for target endpoint.
+     * 
+     */
     public Output<Either<String,WebActivityMethod>> method() {
         return this.method;
     }
@@ -148,6 +188,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -159,6 +203,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policy")
     private @Nullable Output<ActivityPolicyArgs> policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<Output<ActivityPolicyArgs>> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -171,6 +219,11 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;WebActivity&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -182,6 +235,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
     private Output<Object> url;
 
+    /**
+     * @return Web activity target endpoint and path. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> url() {
         return this.url;
     }
@@ -193,6 +250,10 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -235,161 +296,379 @@ public final class WebActivityArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Authentication method used for calling the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(@Nullable Output<WebActivityAuthenticationArgs> authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param authentication Authentication method used for calling the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(WebActivityAuthenticationArgs authentication) {
             return authentication(Output.of(authentication));
         }
 
+        /**
+         * @param body Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Output<Object> body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param body Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(Object body) {
             return body(Output.of(body));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param datasets List of datasets passed to web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
             $.datasets = datasets;
             return this;
         }
 
+        /**
+         * @param datasets List of datasets passed to web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(List<DatasetReferenceArgs> datasets) {
             return datasets(Output.of(datasets));
         }
 
+        /**
+         * @param datasets List of datasets passed to web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasets(DatasetReferenceArgs... datasets) {
             return datasets(List.of(datasets));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param headers Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<Object> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(Object headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param linkedServices List of linked services passed to web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
             $.linkedServices = linkedServices;
             return this;
         }
 
+        /**
+         * @param linkedServices List of linked services passed to web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(List<LinkedServiceReferenceArgs> linkedServices) {
             return linkedServices(Output.of(linkedServices));
         }
 
+        /**
+         * @param linkedServices List of linked services passed to web endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServices(LinkedServiceReferenceArgs... linkedServices) {
             return linkedServices(List.of(linkedServices));
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Output<Either<String,WebActivityMethod>> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Either<String,WebActivityMethod> method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             return method(Either.ofLeft(method));
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(WebActivityMethod method) {
             return method(Either.ofRight(method));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(ActivityPolicyArgs policy) {
             return policy(Output.of(policy));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;WebActivity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;WebActivity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param url Web activity target endpoint and path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<Object> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Web activity target endpoint and path. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             return url(Output.of(url));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

@@ -15,41 +15,41 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FilterActivityResponse {
-    /**
-     * Condition to be used for filtering the input.
-     * 
-     */
+        /**
+         * @return Condition to be used for filtering the input.
+         * 
+         */
     private final ExpressionResponse condition;
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Input array on which filter should be applied.
-     * 
-     */
+        /**
+         * @return Input array on which filter should be applied.
+         * 
+         */
     private final ExpressionResponse items;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Type of activity.
-     * Expected value is &#39;Filter&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;Filter&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -71,52 +71,52 @@ public final class FilterActivityResponse {
     }
 
     /**
-     * Condition to be used for filtering the input.
+     * @return Condition to be used for filtering the input.
      * 
-    */
+     */
     public ExpressionResponse condition() {
         return this.condition;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Input array on which filter should be applied.
+     * @return Input array on which filter should be applied.
      * 
-    */
+     */
     public ExpressionResponse items() {
         return this.items;
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Filter&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

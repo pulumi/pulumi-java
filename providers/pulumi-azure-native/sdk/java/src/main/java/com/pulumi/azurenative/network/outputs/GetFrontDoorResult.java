@@ -20,95 +20,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetFrontDoorResult {
-    /**
-     * Backend pools available to routing rules.
-     * 
-     */
+        /**
+         * @return Backend pools available to routing rules.
+         * 
+         */
     private final @Nullable List<BackendPoolResponse> backendPools;
-    /**
-     * Settings for all backendPools
-     * 
-     */
+        /**
+         * @return Settings for all backendPools
+         * 
+         */
     private final @Nullable BackendPoolsSettingsResponse backendPoolsSettings;
-    /**
-     * The host that each frontendEndpoint must CNAME to.
-     * 
-     */
+        /**
+         * @return The host that each frontendEndpoint must CNAME to.
+         * 
+         */
     private final String cname;
-    /**
-     * Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
-     * 
-     */
+        /**
+         * @return Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         */
     private final @Nullable String enabledState;
-    /**
-     * A friendly name for the frontDoor
-     * 
-     */
+        /**
+         * @return A friendly name for the frontDoor
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * The Id of the frontdoor.
-     * 
-     */
+        /**
+         * @return The Id of the frontdoor.
+         * 
+         */
     private final String frontdoorId;
-    /**
-     * Frontend endpoints available to routing rules.
-     * 
-     */
+        /**
+         * @return Frontend endpoints available to routing rules.
+         * 
+         */
     private final @Nullable List<FrontendEndpointResponse> frontendEndpoints;
-    /**
-     * Health probe settings associated with this Front Door instance.
-     * 
-     */
+        /**
+         * @return Health probe settings associated with this Front Door instance.
+         * 
+         */
     private final @Nullable List<HealthProbeSettingsModelResponse> healthProbeSettings;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Load balancing settings associated with this Front Door instance.
-     * 
-     */
+        /**
+         * @return Load balancing settings associated with this Front Door instance.
+         * 
+         */
     private final @Nullable List<LoadBalancingSettingsModelResponse> loadBalancingSettings;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state of the Front Door.
-     * 
-     */
+        /**
+         * @return Provisioning state of the Front Door.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource status of the Front Door.
-     * 
-     */
+        /**
+         * @return Resource status of the Front Door.
+         * 
+         */
     private final String resourceState;
-    /**
-     * Routing rules associated with this Front Door.
-     * 
-     */
+        /**
+         * @return Routing rules associated with this Front Door.
+         * 
+         */
     private final @Nullable List<RoutingRuleResponse> routingRules;
-    /**
-     * Rules Engine Configurations available to routing rules.
-     * 
-     */
+        /**
+         * @return Rules Engine Configurations available to routing rules.
+         * 
+         */
     private final List<RulesEngineResponse> rulesEngines;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -152,128 +152,128 @@ public final class GetFrontDoorResult {
     }
 
     /**
-     * Backend pools available to routing rules.
+     * @return Backend pools available to routing rules.
      * 
-    */
+     */
     public List<BackendPoolResponse> backendPools() {
         return this.backendPools == null ? List.of() : this.backendPools;
     }
     /**
-     * Settings for all backendPools
+     * @return Settings for all backendPools
      * 
-    */
+     */
     public Optional<BackendPoolsSettingsResponse> backendPoolsSettings() {
         return Optional.ofNullable(this.backendPoolsSettings);
     }
     /**
-     * The host that each frontendEndpoint must CNAME to.
+     * @return The host that each frontendEndpoint must CNAME to.
      * 
-    */
+     */
     public String cname() {
         return this.cname;
     }
     /**
-     * Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * @return Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * A friendly name for the frontDoor
+     * @return A friendly name for the frontDoor
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * The Id of the frontdoor.
+     * @return The Id of the frontdoor.
      * 
-    */
+     */
     public String frontdoorId() {
         return this.frontdoorId;
     }
     /**
-     * Frontend endpoints available to routing rules.
+     * @return Frontend endpoints available to routing rules.
      * 
-    */
+     */
     public List<FrontendEndpointResponse> frontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
     }
     /**
-     * Health probe settings associated with this Front Door instance.
+     * @return Health probe settings associated with this Front Door instance.
      * 
-    */
+     */
     public List<HealthProbeSettingsModelResponse> healthProbeSettings() {
         return this.healthProbeSettings == null ? List.of() : this.healthProbeSettings;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Load balancing settings associated with this Front Door instance.
+     * @return Load balancing settings associated with this Front Door instance.
      * 
-    */
+     */
     public List<LoadBalancingSettingsModelResponse> loadBalancingSettings() {
         return this.loadBalancingSettings == null ? List.of() : this.loadBalancingSettings;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the Front Door.
+     * @return Provisioning state of the Front Door.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource status of the Front Door.
+     * @return Resource status of the Front Door.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Routing rules associated with this Front Door.
+     * @return Routing rules associated with this Front Door.
      * 
-    */
+     */
     public List<RoutingRuleResponse> routingRules() {
         return this.routingRules == null ? List.of() : this.routingRules;
     }
     /**
-     * Rules Engine Configurations available to routing rules.
+     * @return Rules Engine Configurations available to routing rules.
      * 
-    */
+     */
     public List<RulesEngineResponse> rulesEngines() {
         return this.rulesEngines;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

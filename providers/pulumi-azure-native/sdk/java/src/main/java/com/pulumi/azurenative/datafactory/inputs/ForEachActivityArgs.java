@@ -71,6 +71,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="activities", required=true)
     private Output<List<Object>> activities;
 
+    /**
+     * @return List of activities to execute .
+     * 
+     */
     public Output<List<Object>> activities() {
         return this.activities;
     }
@@ -82,6 +86,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="batchCount")
     private @Nullable Output<Integer> batchCount;
 
+    /**
+     * @return Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+     * 
+     */
     public Optional<Output<Integer>> batchCount() {
         return Optional.ofNullable(this.batchCount);
     }
@@ -93,6 +101,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="dependsOn")
     private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -104,6 +116,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -115,6 +131,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isSequential")
     private @Nullable Output<Boolean> isSequential;
 
+    /**
+     * @return Should the loop be executed in sequence or in parallel (max 50)
+     * 
+     */
     public Optional<Output<Boolean>> isSequential() {
         return Optional.ofNullable(this.isSequential);
     }
@@ -126,6 +146,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="items", required=true)
     private Output<ExpressionArgs> items;
 
+    /**
+     * @return Collection to iterate.
+     * 
+     */
     public Output<ExpressionArgs> items() {
         return this.items;
     }
@@ -137,6 +161,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -149,6 +177,11 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;ForEach&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -160,6 +193,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="userProperties")
     private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<Output<List<UserPropertyArgs>>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -196,95 +233,223 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
             $ = new ForEachActivityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activities List of activities to execute .
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Output<List<Object>> activities) {
             $.activities = activities;
             return this;
         }
 
+        /**
+         * @param activities List of activities to execute .
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(List<Object> activities) {
             return activities(Output.of(activities));
         }
 
+        /**
+         * @param activities List of activities to execute .
+         * 
+         * @return builder
+         * 
+         */
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
 
+        /**
+         * @param batchCount Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchCount(@Nullable Output<Integer> batchCount) {
             $.batchCount = batchCount;
             return this;
         }
 
+        /**
+         * @param batchCount Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchCount(Integer batchCount) {
             return batchCount(Output.of(batchCount));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isSequential Should the loop be executed in sequence or in parallel (max 50)
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSequential(@Nullable Output<Boolean> isSequential) {
             $.isSequential = isSequential;
             return this;
         }
 
+        /**
+         * @param isSequential Should the loop be executed in sequence or in parallel (max 50)
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSequential(Boolean isSequential) {
             return isSequential(Output.of(isSequential));
         }
 
+        /**
+         * @param items Collection to iterate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(Output<ExpressionArgs> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items Collection to iterate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(ExpressionArgs items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;ForEach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;ForEach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(List<UserPropertyArgs> userProperties) {
             return userProperties(Output.of(userProperties));
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }

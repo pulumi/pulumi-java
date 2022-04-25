@@ -27,6 +27,10 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="enableReliableLogging")
     private @Nullable Output<Object> enableReliableLogging;
 
+    /**
+     * @return Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> enableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
@@ -38,6 +42,10 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Log storage linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -49,6 +57,10 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="logLevel")
     private @Nullable Output<Object> logLevel;
 
+    /**
+     * @return Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -60,6 +72,10 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="path")
     private @Nullable Output<Object> path;
 
+    /**
+     * @return The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -91,38 +107,86 @@ public final class LogStorageSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new LogStorageSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableReliableLogging Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReliableLogging(@Nullable Output<Object> enableReliableLogging) {
             $.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
+        /**
+         * @param enableReliableLogging Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReliableLogging(Object enableReliableLogging) {
             return enableReliableLogging(Output.of(enableReliableLogging));
         }
 
+        /**
+         * @param linkedServiceName Log storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Log storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param logLevel Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Output<Object> logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param logLevel Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(Object logLevel) {
             return logLevel(Output.of(logLevel));
         }
 
+        /**
+         * @param path The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<Object> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Object path) {
             return path(Output.of(path));
         }

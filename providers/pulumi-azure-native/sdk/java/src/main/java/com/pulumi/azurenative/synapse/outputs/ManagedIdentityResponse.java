@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedIdentityResponse {
-    /**
-     * The principal ID of the workspace managed identity
-     * 
-     */
+        /**
+         * @return The principal ID of the workspace managed identity
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant ID of the workspace managed identity
-     * 
-     */
+        /**
+         * @return The tenant ID of the workspace managed identity
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of managed identity for the workspace
-     * 
-     */
+        /**
+         * @return The type of managed identity for the workspace
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ManagedIdentityResponse {
     }
 
     /**
-     * The principal ID of the workspace managed identity
+     * @return The principal ID of the workspace managed identity
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of the workspace managed identity
+     * @return The tenant ID of the workspace managed identity
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of managed identity for the workspace
+     * @return The type of managed identity for the workspace
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

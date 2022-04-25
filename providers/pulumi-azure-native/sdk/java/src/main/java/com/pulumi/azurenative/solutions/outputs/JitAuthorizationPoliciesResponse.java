@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class JitAuthorizationPoliciesResponse {
-    /**
-     * The the principal id that will be granted JIT access.
-     * 
-     */
+        /**
+         * @return The the principal id that will be granted JIT access.
+         * 
+         */
     private final String principalId;
-    /**
-     * The role definition id that will be granted to the Principal.
-     * 
-     */
+        /**
+         * @return The role definition id that will be granted to the Principal.
+         * 
+         */
     private final String roleDefinitionId;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class JitAuthorizationPoliciesResponse {
     }
 
     /**
-     * The the principal id that will be granted JIT access.
+     * @return The the principal id that will be granted JIT access.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The role definition id that will be granted to the Principal.
+     * @return The role definition id that will be granted to the Principal.
      * 
-    */
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }

@@ -15,64 +15,64 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NodeTypeDescriptionResponse {
-    /**
-     * The range of ports from which cluster assigned port to Service Fabric applications.
-     * 
-     */
+        /**
+         * @return The range of ports from which cluster assigned port to Service Fabric applications.
+         * 
+         */
     private final @Nullable EndpointRangeDescriptionResponse applicationPorts;
-    /**
-     * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
-     * 
-     */
+        /**
+         * @return The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+         * 
+         */
     private final @Nullable Map<String,String> capacities;
-    /**
-     * The TCP cluster management endpoint port.
-     * 
-     */
+        /**
+         * @return The TCP cluster management endpoint port.
+         * 
+         */
     private final Integer clientConnectionEndpointPort;
-    /**
-     * The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
-     * 
-     *   - Bronze - No privileges. This is the default.
-     *   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
-     *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
-     * 
-     */
+        /**
+         * @return The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+         * 
+         *   - Bronze - No privileges. This is the default.
+         *   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
+         *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
+         * 
+         */
     private final @Nullable String durabilityLevel;
-    /**
-     * The range of ephemeral ports that nodes in this node type should be configured with.
-     * 
-     */
+        /**
+         * @return The range of ephemeral ports that nodes in this node type should be configured with.
+         * 
+         */
     private final @Nullable EndpointRangeDescriptionResponse ephemeralPorts;
-    /**
-     * The HTTP cluster management endpoint port.
-     * 
-     */
+        /**
+         * @return The HTTP cluster management endpoint port.
+         * 
+         */
     private final Integer httpGatewayEndpointPort;
-    /**
-     * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
-     * 
-     */
+        /**
+         * @return The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
+         * 
+         */
     private final Boolean isPrimary;
-    /**
-     * The name of the node type.
-     * 
-     */
+        /**
+         * @return The name of the node type.
+         * 
+         */
     private final String name;
-    /**
-     * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
-     * 
-     */
+        /**
+         * @return The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+         * 
+         */
     private final @Nullable Map<String,String> placementProperties;
-    /**
-     * The endpoint used by reverse proxy.
-     * 
-     */
+        /**
+         * @return The endpoint used by reverse proxy.
+         * 
+         */
     private final @Nullable Integer reverseProxyEndpointPort;
-    /**
-     * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
-     * 
-     */
+        /**
+         * @return The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+         * 
+         */
     private final Integer vmInstanceCount;
 
     @CustomType.Constructor
@@ -102,83 +102,83 @@ public final class NodeTypeDescriptionResponse {
     }
 
     /**
-     * The range of ports from which cluster assigned port to Service Fabric applications.
+     * @return The range of ports from which cluster assigned port to Service Fabric applications.
      * 
-    */
+     */
     public Optional<EndpointRangeDescriptionResponse> applicationPorts() {
         return Optional.ofNullable(this.applicationPorts);
     }
     /**
-     * The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
+     * @return The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.
      * 
-    */
+     */
     public Map<String,String> capacities() {
         return this.capacities == null ? Map.of() : this.capacities;
     }
     /**
-     * The TCP cluster management endpoint port.
+     * @return The TCP cluster management endpoint port.
      * 
-    */
+     */
     public Integer clientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
     }
     /**
-     * The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
+     * @return The durability level of the node type. Learn about [DurabilityLevel](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-capacity).
      * 
      *   - Bronze - No privileges. This is the default.
      *   - Silver - The infrastructure jobs can be paused for a duration of 10 minutes per UD.
      *   - Gold - The infrastructure jobs can be paused for a duration of 2 hours per UD. Gold durability can be enabled only on full node VM skus like D15_V2, G5 etc.
      * 
-    */
+     */
     public Optional<String> durabilityLevel() {
         return Optional.ofNullable(this.durabilityLevel);
     }
     /**
-     * The range of ephemeral ports that nodes in this node type should be configured with.
+     * @return The range of ephemeral ports that nodes in this node type should be configured with.
      * 
-    */
+     */
     public Optional<EndpointRangeDescriptionResponse> ephemeralPorts() {
         return Optional.ofNullable(this.ephemeralPorts);
     }
     /**
-     * The HTTP cluster management endpoint port.
+     * @return The HTTP cluster management endpoint port.
      * 
-    */
+     */
     public Integer httpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
     }
     /**
-     * The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
+     * @return The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
      * 
-    */
+     */
     public Boolean isPrimary() {
         return this.isPrimary;
     }
     /**
-     * The name of the node type.
+     * @return The name of the node type.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
+     * @return The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.
      * 
-    */
+     */
     public Map<String,String> placementProperties() {
         return this.placementProperties == null ? Map.of() : this.placementProperties;
     }
     /**
-     * The endpoint used by reverse proxy.
+     * @return The endpoint used by reverse proxy.
      * 
-    */
+     */
     public Optional<Integer> reverseProxyEndpointPort() {
         return Optional.ofNullable(this.reverseProxyEndpointPort);
     }
     /**
-     * The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
+     * @return The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource.
      * 
-    */
+     */
     public Integer vmInstanceCount() {
         return this.vmInstanceCount;
     }

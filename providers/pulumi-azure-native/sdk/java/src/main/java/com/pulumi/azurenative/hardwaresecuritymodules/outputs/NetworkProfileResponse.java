@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkProfileResponse {
-    /**
-     * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-     * 
-     */
+        /**
+         * @return Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+         * 
+         */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
-    /**
-     * Specifies the identifier of the subnet.
-     * 
-     */
+        /**
+         * @return Specifies the identifier of the subnet.
+         * 
+         */
     private final @Nullable ApiEntityReferenceResponse subnet;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class NetworkProfileResponse {
     }
 
     /**
-     * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
+     * @return Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
      * 
-    */
+     */
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
     /**
-     * Specifies the identifier of the subnet.
+     * @return Specifies the identifier of the subnet.
      * 
-    */
+     */
     public Optional<ApiEntityReferenceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }

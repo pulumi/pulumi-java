@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CloudServiceNetworkProfileResponse {
-    /**
-     * List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
-     * 
-     */
+        /**
+         * @return List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+         * 
+         */
     private final @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
-    /**
-     * The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
-     * 
-     */
+        /**
+         * @return The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+         * 
+         */
     private final @Nullable SubResourceResponse swappableCloudService;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class CloudServiceNetworkProfileResponse {
     }
 
     /**
-     * List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+     * @return List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
      * 
-    */
+     */
     public List<LoadBalancerConfigurationResponse> loadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? List.of() : this.loadBalancerConfigurations;
     }
     /**
-     * The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+     * @return The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
      * 
-    */
+     */
     public Optional<SubResourceResponse> swappableCloudService() {
         return Optional.ofNullable(this.swappableCloudService);
     }

@@ -28,6 +28,10 @@ public final class JobInputSequenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="inputs")
     private @Nullable List<JobInputClipResponse> inputs;
 
+    /**
+     * @return JobInputs that make up the timeline.
+     * 
+     */
     public Optional<List<JobInputClipResponse>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -40,6 +44,11 @@ public final class JobInputSequenceResponse extends com.pulumi.resources.InvokeA
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -69,15 +78,34 @@ public final class JobInputSequenceResponse extends com.pulumi.resources.InvokeA
             $ = new JobInputSequenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inputs JobInputs that make up the timeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable List<JobInputClipResponse> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs JobInputs that make up the timeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(JobInputClipResponse... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputSequence&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

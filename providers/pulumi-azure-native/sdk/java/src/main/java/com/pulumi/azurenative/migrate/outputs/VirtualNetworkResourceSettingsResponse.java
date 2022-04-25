@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkResourceSettingsResponse {
-    /**
-     * Gets or sets the address prefixes for the virtual network.
-     * 
-     */
+        /**
+         * @return Gets or sets the address prefixes for the virtual network.
+         * 
+         */
     private final @Nullable List<String> addressSpace;
-    /**
-     * Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
-     * deployed in the virtual network.
-     * 
-     */
+        /**
+         * @return Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+         * deployed in the virtual network.
+         * 
+         */
     private final @Nullable List<String> dnsServers;
-    /**
-     * Gets or sets a value indicating whether gets or sets whether the
-     * DDOS protection should be switched on.
-     * 
-     */
+        /**
+         * @return Gets or sets a value indicating whether gets or sets whether the
+         * DDOS protection should be switched on.
+         * 
+         */
     private final @Nullable Boolean enableDdosProtection;
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
-     * 
-     */
+        /**
+         * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
+         * 
+         */
     private final String resourceType;
-    /**
-     * Gets or sets List of subnets in a VirtualNetwork.
-     * 
-     */
+        /**
+         * @return Gets or sets List of subnets in a VirtualNetwork.
+         * 
+         */
     private final @Nullable List<SubnetResourceSettingsResponse> subnets;
-    /**
-     * Gets or sets the target Resource name.
-     * 
-     */
+        /**
+         * @return Gets or sets the target Resource name.
+         * 
+         */
     private final String targetResourceName;
 
     @CustomType.Constructor
@@ -65,47 +65,47 @@ public final class VirtualNetworkResourceSettingsResponse {
     }
 
     /**
-     * Gets or sets the address prefixes for the virtual network.
+     * @return Gets or sets the address prefixes for the virtual network.
      * 
-    */
+     */
     public List<String> addressSpace() {
         return this.addressSpace == null ? List.of() : this.addressSpace;
     }
     /**
-     * Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
+     * @return Gets or sets DHCPOptions that contains an array of DNS servers available to VMs
      * deployed in the virtual network.
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
     /**
-     * Gets or sets a value indicating whether gets or sets whether the
+     * @return Gets or sets a value indicating whether gets or sets whether the
      * DDOS protection should be switched on.
      * 
-    */
+     */
     public Optional<Boolean> enableDdosProtection() {
         return Optional.ofNullable(this.enableDdosProtection);
     }
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Network/virtualNetworks&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets List of subnets in a VirtualNetwork.
+     * @return Gets or sets List of subnets in a VirtualNetwork.
      * 
-    */
+     */
     public List<SubnetResourceSettingsResponse> subnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }

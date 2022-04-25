@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DefenderForServersAwsOfferingResponse {
-    /**
-     * The ARC autoprovisioning configuration
-     * 
-     */
+        /**
+         * @return The ARC autoprovisioning configuration
+         * 
+         */
     private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
-    /**
-     * The Defender for servers connection configuration
-     * 
-     */
+        /**
+         * @return The Defender for servers connection configuration
+         * 
+         */
     private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
-    /**
-     * The offering description.
-     * 
-     */
+        /**
+         * @return The offering description.
+         * 
+         */
     private final String description;
-    /**
-     * The type of the security offering.
-     * Expected value is &#39;DefenderForServersAWS&#39;.
-     * 
-     */
+        /**
+         * @return The type of the security offering.
+         * Expected value is &#39;DefenderForServersAWS&#39;.
+         * 
+         */
     private final String offeringType;
 
     @CustomType.Constructor
@@ -48,31 +48,31 @@ public final class DefenderForServersAwsOfferingResponse {
     }
 
     /**
-     * The ARC autoprovisioning configuration
+     * @return The ARC autoprovisioning configuration
      * 
-    */
+     */
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> arcAutoProvisioning() {
         return Optional.ofNullable(this.arcAutoProvisioning);
     }
     /**
-     * The Defender for servers connection configuration
+     * @return The Defender for servers connection configuration
      * 
-    */
+     */
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> defenderForServers() {
         return Optional.ofNullable(this.defenderForServers);
     }
     /**
-     * The offering description.
+     * @return The offering description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The type of the security offering.
+     * @return The type of the security offering.
      * Expected value is &#39;DefenderForServersAWS&#39;.
      * 
-    */
+     */
     public String offeringType() {
         return this.offeringType;
     }

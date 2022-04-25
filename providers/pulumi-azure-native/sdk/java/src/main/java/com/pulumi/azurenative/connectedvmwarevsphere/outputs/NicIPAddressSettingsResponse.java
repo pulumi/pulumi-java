@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class NicIPAddressSettingsResponse {
-    /**
-     * Gets the ip address allocation method.
-     * 
-     */
+        /**
+         * @return Gets the ip address allocation method.
+         * 
+         */
     private final String allocationMethod;
-    /**
-     * Gets the ip address for the nic.
-     * 
-     */
+        /**
+         * @return Gets the ip address for the nic.
+         * 
+         */
     private final String ipAddress;
-    /**
-     * Gets the mask.
-     * 
-     */
+        /**
+         * @return Gets the mask.
+         * 
+         */
     private final String subnetMask;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class NicIPAddressSettingsResponse {
     }
 
     /**
-     * Gets the ip address allocation method.
+     * @return Gets the ip address allocation method.
      * 
-    */
+     */
     public String allocationMethod() {
         return this.allocationMethod;
     }
     /**
-     * Gets the ip address for the nic.
+     * @return Gets the ip address for the nic.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * Gets the mask.
+     * @return Gets the mask.
      * 
-    */
+     */
     public String subnetMask() {
         return this.subnetMask;
     }

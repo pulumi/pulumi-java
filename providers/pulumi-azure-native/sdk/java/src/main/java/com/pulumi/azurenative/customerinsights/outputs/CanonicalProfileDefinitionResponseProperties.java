@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CanonicalProfileDefinitionResponseProperties {
-    /**
-     * Profile name.
-     * 
-     */
+        /**
+         * @return Profile name.
+         * 
+         */
     private final @Nullable String profileName;
-    /**
-     * Property name of profile.
-     * 
-     */
+        /**
+         * @return Property name of profile.
+         * 
+         */
     private final @Nullable String profilePropertyName;
-    /**
-     * The rank.
-     * 
-     */
+        /**
+         * @return The rank.
+         * 
+         */
     private final @Nullable Integer rank;
-    /**
-     * Type of canonical property value.
-     * 
-     */
+        /**
+         * @return Type of canonical property value.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * Value of the canonical property.
-     * 
-     */
+        /**
+         * @return Value of the canonical property.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class CanonicalProfileDefinitionResponseProperties {
     }
 
     /**
-     * Profile name.
+     * @return Profile name.
      * 
-    */
+     */
     public Optional<String> profileName() {
         return Optional.ofNullable(this.profileName);
     }
     /**
-     * Property name of profile.
+     * @return Property name of profile.
      * 
-    */
+     */
     public Optional<String> profilePropertyName() {
         return Optional.ofNullable(this.profilePropertyName);
     }
     /**
-     * The rank.
+     * @return The rank.
      * 
-    */
+     */
     public Optional<Integer> rank() {
         return Optional.ofNullable(this.rank);
     }
     /**
-     * Type of canonical property value.
+     * @return Type of canonical property value.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Value of the canonical property.
+     * @return Value of the canonical property.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementConfigurationPropertiesResponse {
-    /**
-     * The applicationId of the appliance for this Management.
-     * 
-     */
+        /**
+         * @return The applicationId of the appliance for this Management.
+         * 
+         */
     private final @Nullable String applicationId;
-    /**
-     * Parameters to run the ARM template
-     * 
-     */
+        /**
+         * @return Parameters to run the ARM template
+         * 
+         */
     private final List<ArmTemplateParameterResponse> parameters;
-    /**
-     * The type of the parent resource.
-     * 
-     */
+        /**
+         * @return The type of the parent resource.
+         * 
+         */
     private final String parentResourceType;
-    /**
-     * The provisioning state for the ManagementConfiguration.
-     * 
-     */
+        /**
+         * @return The provisioning state for the ManagementConfiguration.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The Json object containing the ARM template to deploy
-     * 
-     */
+        /**
+         * @return The Json object containing the ARM template to deploy
+         * 
+         */
     private final Object template;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class ManagementConfigurationPropertiesResponse {
     }
 
     /**
-     * The applicationId of the appliance for this Management.
+     * @return The applicationId of the appliance for this Management.
      * 
-    */
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
-     * Parameters to run the ARM template
+     * @return Parameters to run the ARM template
      * 
-    */
+     */
     public List<ArmTemplateParameterResponse> parameters() {
         return this.parameters;
     }
     /**
-     * The type of the parent resource.
+     * @return The type of the parent resource.
      * 
-    */
+     */
     public String parentResourceType() {
         return this.parentResourceType;
     }
     /**
-     * The provisioning state for the ManagementConfiguration.
+     * @return The provisioning state for the ManagementConfiguration.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The Json object containing the ARM template to deploy
+     * @return The Json object containing the ARM template to deploy
      * 
-    */
+     */
     public Object template() {
         return this.template;
     }

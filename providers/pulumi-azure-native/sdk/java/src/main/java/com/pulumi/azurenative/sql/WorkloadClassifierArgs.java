@@ -22,6 +22,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="context")
     private @Nullable Output<String> context;
 
+    /**
+     * @return The workload classifier context.
+     * 
+     */
     public Optional<Output<String>> context() {
         return Optional.ofNullable(this.context);
     }
@@ -33,6 +37,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="databaseName", required=true)
     private Output<String> databaseName;
 
+    /**
+     * @return The name of the database.
+     * 
+     */
     public Output<String> databaseName() {
         return this.databaseName;
     }
@@ -44,6 +52,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="endTime")
     private @Nullable Output<String> endTime;
 
+    /**
+     * @return The workload classifier end time for classification.
+     * 
+     */
     public Optional<Output<String>> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -55,6 +67,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="importance")
     private @Nullable Output<String> importance;
 
+    /**
+     * @return The workload classifier importance.
+     * 
+     */
     public Optional<Output<String>> importance() {
         return Optional.ofNullable(this.importance);
     }
@@ -66,6 +82,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return The workload classifier label.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -77,6 +97,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="memberName", required=true)
     private Output<String> memberName;
 
+    /**
+     * @return The workload classifier member name.
+     * 
+     */
     public Output<String> memberName() {
         return this.memberName;
     }
@@ -88,6 +112,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,6 +127,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -110,6 +142,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return The workload classifier start time for classification.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -121,6 +157,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="workloadClassifierName")
     private @Nullable Output<String> workloadClassifierName;
 
+    /**
+     * @return The name of the workload classifier to create/update.
+     * 
+     */
     public Optional<Output<String>> workloadClassifierName() {
         return Optional.ofNullable(this.workloadClassifierName);
     }
@@ -132,6 +172,10 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
     @Import(name="workloadGroupName", required=true)
     private Output<String> workloadGroupName;
 
+    /**
+     * @return The name of the workload group from which to receive the classifier from.
+     * 
+     */
     public Output<String> workloadGroupName() {
         return this.workloadGroupName;
     }
@@ -170,101 +214,233 @@ public final class WorkloadClassifierArgs extends com.pulumi.resources.ResourceA
             $ = new WorkloadClassifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param context The workload classifier context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(@Nullable Output<String> context) {
             $.context = context;
             return this;
         }
 
+        /**
+         * @param context The workload classifier context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder context(String context) {
             return context(Output.of(context));
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param endTime The workload classifier end time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable Output<String> endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param endTime The workload classifier end time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             return endTime(Output.of(endTime));
         }
 
+        /**
+         * @param importance The workload classifier importance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(@Nullable Output<String> importance) {
             $.importance = importance;
             return this;
         }
 
+        /**
+         * @param importance The workload classifier importance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder importance(String importance) {
             return importance(Output.of(importance));
         }
 
+        /**
+         * @param label The workload classifier label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label The workload classifier label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param memberName The workload classifier member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberName(Output<String> memberName) {
             $.memberName = memberName;
             return this;
         }
 
+        /**
+         * @param memberName The workload classifier member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memberName(String memberName) {
             return memberName(Output.of(memberName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param startTime The workload classifier start time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The workload classifier start time for classification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
 
+        /**
+         * @param workloadClassifierName The name of the workload classifier to create/update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadClassifierName(@Nullable Output<String> workloadClassifierName) {
             $.workloadClassifierName = workloadClassifierName;
             return this;
         }
 
+        /**
+         * @param workloadClassifierName The name of the workload classifier to create/update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadClassifierName(String workloadClassifierName) {
             return workloadClassifierName(Output.of(workloadClassifierName));
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group from which to receive the classifier from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(Output<String> workloadGroupName) {
             $.workloadGroupName = workloadGroupName;
             return this;
         }
 
+        /**
+         * @param workloadGroupName The name of the workload group from which to receive the classifier from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workloadGroupName(String workloadGroupName) {
             return workloadGroupName(Output.of(workloadGroupName));
         }

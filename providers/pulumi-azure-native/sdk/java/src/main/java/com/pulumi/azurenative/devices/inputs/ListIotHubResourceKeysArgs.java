@@ -19,6 +19,10 @@ public final class ListIotHubResourceKeysArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the IoT hub.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class ListIotHubResourceKeysArgs extends com.pulumi.resources.Invok
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the IoT hub.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -59,11 +67,23 @@ public final class ListIotHubResourceKeysArgs extends com.pulumi.resources.Invok
             $ = new ListIotHubResourceKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

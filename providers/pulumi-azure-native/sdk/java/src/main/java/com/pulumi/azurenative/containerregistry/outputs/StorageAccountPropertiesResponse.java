@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class StorageAccountPropertiesResponse {
-    /**
-     * The resource ID of the storage account.
-     * 
-     */
+        /**
+         * @return The resource ID of the storage account.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class StorageAccountPropertiesResponse {
     }
 
     /**
-     * The resource ID of the storage account.
+     * @return The resource ID of the storage account.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -24,6 +24,10 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     @Import(name="consoleScreenshotBlobUri", required=true)
     private String consoleScreenshotBlobUri;
 
+    /**
+     * @return The console screenshot blob URI. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * 
+     */
     public String consoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
     }
@@ -35,6 +39,10 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     @Import(name="serialConsoleLogBlobUri", required=true)
     private String serialConsoleLogBlobUri;
 
+    /**
+     * @return The serial console log blob Uri. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+     * 
+     */
     public String serialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
     }
@@ -46,6 +54,10 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
     @Import(name="status", required=true)
     private InstanceViewStatusResponse status;
 
+    /**
+     * @return The boot diagnostics status information for the VM. &lt;br&gt;&lt;br&gt; NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+     * 
+     */
     public InstanceViewStatusResponse status() {
         return this.status;
     }
@@ -76,16 +88,34 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
             $ = new BootDiagnosticsInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consoleScreenshotBlobUri The console screenshot blob URI. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consoleScreenshotBlobUri(String consoleScreenshotBlobUri) {
             $.consoleScreenshotBlobUri = consoleScreenshotBlobUri;
             return this;
         }
 
+        /**
+         * @param serialConsoleLogBlobUri The serial console log blob Uri. &lt;br&gt;&lt;br&gt;NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialConsoleLogBlobUri(String serialConsoleLogBlobUri) {
             $.serialConsoleLogBlobUri = serialConsoleLogBlobUri;
             return this;
         }
 
+        /**
+         * @param status The boot diagnostics status information for the VM. &lt;br&gt;&lt;br&gt; NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(InstanceViewStatusResponse status) {
             $.status = status;
             return this;

@@ -14,91 +14,91 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
-    /**
-     * Selected agent jobs as a map from name to id
-     * 
-     */
+        /**
+         * @return Selected agent jobs as a map from name to id
+         * 
+         */
     private final Map<String,String> agentJobs;
-    /**
-     * Selected databases as a map from database name to database id
-     * 
-     */
+        /**
+         * @return Selected databases as a map from database name to database id
+         * 
+         */
     private final Map<String,String> databases;
-    /**
-     * Migration end time
-     * 
-     */
+        /**
+         * @return Migration end time
+         * 
+         */
     private final String endedOn;
-    /**
-     * Migration exceptions and warnings.
-     * 
-     */
+        /**
+         * @return Migration exceptions and warnings.
+         * 
+         */
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * Selected logins as a map from name to id
-     * 
-     */
+        /**
+         * @return Selected logins as a map from name to id
+         * 
+         */
     private final Map<String,String> logins;
-    /**
-     * Migration progress message
-     * 
-     */
+        /**
+         * @return Migration progress message
+         * 
+         */
     private final String message;
-    /**
-     * List of orphaned users.
-     * 
-     */
+        /**
+         * @return List of orphaned users.
+         * 
+         */
     private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
-    /**
-     * Result type
-     * Expected value is &#39;MigrationLevelOutput&#39;.
-     * 
-     */
+        /**
+         * @return Result type
+         * Expected value is &#39;MigrationLevelOutput&#39;.
+         * 
+         */
     private final String resultType;
-    /**
-     * Map of server role migration results.
-     * 
-     */
+        /**
+         * @return Map of server role migration results.
+         * 
+         */
     private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
-    /**
-     * Source server brand version
-     * 
-     */
+        /**
+         * @return Source server brand version
+         * 
+         */
     private final String sourceServerBrandVersion;
-    /**
-     * Source server version
-     * 
-     */
+        /**
+         * @return Source server version
+         * 
+         */
     private final String sourceServerVersion;
-    /**
-     * Migration start time
-     * 
-     */
+        /**
+         * @return Migration start time
+         * 
+         */
     private final String startedOn;
-    /**
-     * Current state of migration
-     * 
-     */
+        /**
+         * @return Current state of migration
+         * 
+         */
     private final String state;
-    /**
-     * Current status of migration
-     * 
-     */
+        /**
+         * @return Current status of migration
+         * 
+         */
     private final String status;
-    /**
-     * Target server brand version
-     * 
-     */
+        /**
+         * @return Target server brand version
+         * 
+         */
     private final String targetServerBrandVersion;
-    /**
-     * Target server version
-     * 
-     */
+        /**
+         * @return Target server version
+         * 
+         */
     private final String targetServerVersion;
 
     @CustomType.Constructor
@@ -140,122 +140,122 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
     }
 
     /**
-     * Selected agent jobs as a map from name to id
+     * @return Selected agent jobs as a map from name to id
      * 
-    */
+     */
     public Map<String,String> agentJobs() {
         return this.agentJobs;
     }
     /**
-     * Selected databases as a map from database name to database id
+     * @return Selected databases as a map from database name to database id
      * 
-    */
+     */
     public Map<String,String> databases() {
         return this.databases;
     }
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Migration exceptions and warnings.
+     * @return Migration exceptions and warnings.
      * 
-    */
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Selected logins as a map from name to id
+     * @return Selected logins as a map from name to id
      * 
-    */
+     */
     public Map<String,String> logins() {
         return this.logins;
     }
     /**
-     * Migration progress message
+     * @return Migration progress message
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * List of orphaned users.
+     * @return List of orphaned users.
      * 
-    */
+     */
     public List<OrphanedUserInfoResponse> orphanedUsersInfo() {
         return this.orphanedUsersInfo;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Map of server role migration results.
+     * @return Map of server role migration results.
      * 
-    */
+     */
     public Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults() {
         return this.serverRoleResults;
     }
     /**
-     * Source server brand version
+     * @return Source server brand version
      * 
-    */
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
-     * Source server version
+     * @return Source server version
      * 
-    */
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current state of migration
+     * @return Current state of migration
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Current status of migration
+     * @return Current status of migration
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Target server brand version
+     * @return Target server brand version
      * 
-    */
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
-     * Target server version
+     * @return Target server version
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }

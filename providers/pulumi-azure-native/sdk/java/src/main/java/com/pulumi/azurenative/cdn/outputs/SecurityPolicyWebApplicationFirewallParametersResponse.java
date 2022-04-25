@@ -14,21 +14,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityPolicyWebApplicationFirewallParametersResponse {
-    /**
-     * Waf associations
-     * 
-     */
+        /**
+         * @return Waf associations
+         * 
+         */
     private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
-    /**
-     * The type of the Security policy to create.
-     * Expected value is &#39;WebApplicationFirewall&#39;.
-     * 
-     */
+        /**
+         * @return The type of the Security policy to create.
+         * Expected value is &#39;WebApplicationFirewall&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable ResourceReferenceResponse wafPolicy;
 
     @CustomType.Constructor
@@ -42,24 +42,24 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
     }
 
     /**
-     * Waf associations
+     * @return Waf associations
      * 
-    */
+     */
     public List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations() {
         return this.associations == null ? List.of() : this.associations;
     }
     /**
-     * The type of the Security policy to create.
+     * @return The type of the Security policy to create.
      * Expected value is &#39;WebApplicationFirewall&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> wafPolicy() {
         return Optional.ofNullable(this.wafPolicy);
     }

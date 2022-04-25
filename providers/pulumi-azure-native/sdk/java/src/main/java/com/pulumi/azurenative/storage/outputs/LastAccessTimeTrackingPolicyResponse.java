@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LastAccessTimeTrackingPolicyResponse {
-    /**
-     * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
-     * 
-     */
+        /**
+         * @return An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
+         * 
+         */
     private final @Nullable List<String> blobType;
-    /**
-     * When set to true last access time based tracking is enabled.
-     * 
-     */
+        /**
+         * @return When set to true last access time based tracking is enabled.
+         * 
+         */
     private final Boolean enable;
-    /**
-     * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
-     * 
-     */
+        /**
+         * @return Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
-     * 
-     */
+        /**
+         * @return The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
+         * 
+         */
     private final @Nullable Integer trackingGranularityInDays;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class LastAccessTimeTrackingPolicyResponse {
     }
 
     /**
-     * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
+     * @return An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
      * 
-    */
+     */
     public List<String> blobType() {
         return this.blobType == null ? List.of() : this.blobType;
     }
     /**
-     * When set to true last access time based tracking is enabled.
+     * @return When set to true last access time based tracking is enabled.
      * 
-    */
+     */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
+     * @return Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
+     * @return The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
      * 
-    */
+     */
     public Optional<Integer> trackingGranularityInDays() {
         return Optional.ofNullable(this.trackingGranularityInDays);
     }

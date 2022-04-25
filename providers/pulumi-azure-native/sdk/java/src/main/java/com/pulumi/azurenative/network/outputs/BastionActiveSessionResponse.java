@@ -11,60 +11,60 @@ import java.util.Objects;
 
 @CustomType
 public final class BastionActiveSessionResponse {
-    /**
-     * The protocol used to connect to the target.
-     * 
-     */
+        /**
+         * @return The protocol used to connect to the target.
+         * 
+         */
     private final String protocol;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String resourceType;
-    /**
-     * Duration in mins the session has been active.
-     * 
-     */
+        /**
+         * @return Duration in mins the session has been active.
+         * 
+         */
     private final Double sessionDurationInMins;
-    /**
-     * A unique id for the session.
-     * 
-     */
+        /**
+         * @return A unique id for the session.
+         * 
+         */
     private final String sessionId;
-    /**
-     * The time when the session started.
-     * 
-     */
+        /**
+         * @return The time when the session started.
+         * 
+         */
     private final Object startTime;
-    /**
-     * The host name of the target.
-     * 
-     */
+        /**
+         * @return The host name of the target.
+         * 
+         */
     private final String targetHostName;
-    /**
-     * The IP Address of the target.
-     * 
-     */
+        /**
+         * @return The IP Address of the target.
+         * 
+         */
     private final String targetIpAddress;
-    /**
-     * The resource group of the target.
-     * 
-     */
+        /**
+         * @return The resource group of the target.
+         * 
+         */
     private final String targetResourceGroup;
-    /**
-     * The resource id of the target.
-     * 
-     */
+        /**
+         * @return The resource id of the target.
+         * 
+         */
     private final String targetResourceId;
-    /**
-     * The subscription id for the target virtual machine.
-     * 
-     */
+        /**
+         * @return The subscription id for the target virtual machine.
+         * 
+         */
     private final String targetSubscriptionId;
-    /**
-     * The user name who is active on this session.
-     * 
-     */
+        /**
+         * @return The user name who is active on this session.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -94,79 +94,79 @@ public final class BastionActiveSessionResponse {
     }
 
     /**
-     * The protocol used to connect to the target.
+     * @return The protocol used to connect to the target.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Duration in mins the session has been active.
+     * @return Duration in mins the session has been active.
      * 
-    */
+     */
     public Double sessionDurationInMins() {
         return this.sessionDurationInMins;
     }
     /**
-     * A unique id for the session.
+     * @return A unique id for the session.
      * 
-    */
+     */
     public String sessionId() {
         return this.sessionId;
     }
     /**
-     * The time when the session started.
+     * @return The time when the session started.
      * 
-    */
+     */
     public Object startTime() {
         return this.startTime;
     }
     /**
-     * The host name of the target.
+     * @return The host name of the target.
      * 
-    */
+     */
     public String targetHostName() {
         return this.targetHostName;
     }
     /**
-     * The IP Address of the target.
+     * @return The IP Address of the target.
      * 
-    */
+     */
     public String targetIpAddress() {
         return this.targetIpAddress;
     }
     /**
-     * The resource group of the target.
+     * @return The resource group of the target.
      * 
-    */
+     */
     public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
     /**
-     * The resource id of the target.
+     * @return The resource id of the target.
      * 
-    */
+     */
     public String targetResourceId() {
         return this.targetResourceId;
     }
     /**
-     * The subscription id for the target virtual machine.
+     * @return The subscription id for the target virtual machine.
      * 
-    */
+     */
     public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
     /**
-     * The user name who is active on this session.
+     * @return The user name who is active on this session.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

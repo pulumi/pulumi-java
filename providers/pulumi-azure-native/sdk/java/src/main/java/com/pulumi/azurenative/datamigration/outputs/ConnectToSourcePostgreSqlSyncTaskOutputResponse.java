@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
-    /**
-     * List of databases on source server
-     * 
-     */
+        /**
+         * @return List of databases on source server
+         * 
+         */
     private final List<String> databases;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * Source server brand version
-     * 
-     */
+        /**
+         * @return Source server brand version
+         * 
+         */
     private final String sourceServerBrandVersion;
-    /**
-     * Version of the source server
-     * 
-     */
+        /**
+         * @return Version of the source server
+         * 
+         */
     private final String sourceServerVersion;
-    /**
-     * Validation errors associated with the task
-     * 
-     */
+        /**
+         * @return Validation errors associated with the task
+         * 
+         */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
     }
 
     /**
-     * List of databases on source server
+     * @return List of databases on source server
      * 
-    */
+     */
     public List<String> databases() {
         return this.databases;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Source server brand version
+     * @return Source server brand version
      * 
-    */
+     */
     public String sourceServerBrandVersion() {
         return this.sourceServerBrandVersion;
     }
     /**
-     * Version of the source server
+     * @return Version of the source server
      * 
-    */
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
-     * Validation errors associated with the task
+     * @return Validation errors associated with the task
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

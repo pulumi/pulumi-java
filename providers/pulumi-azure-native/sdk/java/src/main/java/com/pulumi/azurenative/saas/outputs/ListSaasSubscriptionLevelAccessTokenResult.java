@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListSaasSubscriptionLevelAccessTokenResult {
-    /**
-     * The Publisher Offer Base Uri
-     * 
-     */
+        /**
+         * @return The Publisher Offer Base Uri
+         * 
+         */
     private final @Nullable String publisherOfferBaseUri;
-    /**
-     * The generated token
-     * 
-     */
+        /**
+         * @return The generated token
+         * 
+         */
     private final @Nullable String token;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ListSaasSubscriptionLevelAccessTokenResult {
     }
 
     /**
-     * The Publisher Offer Base Uri
+     * @return The Publisher Offer Base Uri
      * 
-    */
+     */
     public Optional<String> publisherOfferBaseUri() {
         return Optional.ofNullable(this.publisherOfferBaseUri);
     }
     /**
-     * The generated token
+     * @return The generated token
      * 
-    */
+     */
     public Optional<String> token() {
         return Optional.ofNullable(this.token);
     }

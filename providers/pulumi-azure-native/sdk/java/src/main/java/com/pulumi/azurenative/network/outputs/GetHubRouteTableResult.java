@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHubRouteTableResult {
-    /**
-     * List of all connections associated with this route table.
-     * 
-     */
+        /**
+         * @return List of all connections associated with this route table.
+         * 
+         */
     private final List<String> associatedConnections;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * List of labels associated with this route table.
-     * 
-     */
+        /**
+         * @return List of labels associated with this route table.
+         * 
+         */
     private final @Nullable List<String> labels;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * List of all connections that advertise to this route table.
-     * 
-     */
+        /**
+         * @return List of all connections that advertise to this route table.
+         * 
+         */
     private final List<String> propagatingConnections;
-    /**
-     * The provisioning state of the RouteTable resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the RouteTable resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * List of all routes.
-     * 
-     */
+        /**
+         * @return List of all routes.
+         * 
+         */
     private final @Nullable List<HubRouteResponse> routes;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class GetHubRouteTableResult {
     }
 
     /**
-     * List of all connections associated with this route table.
+     * @return List of all connections associated with this route table.
      * 
-    */
+     */
     public List<String> associatedConnections() {
         return this.associatedConnections;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * List of labels associated with this route table.
+     * @return List of labels associated with this route table.
      * 
-    */
+     */
     public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * List of all connections that advertise to this route table.
+     * @return List of all connections that advertise to this route table.
      * 
-    */
+     */
     public List<String> propagatingConnections() {
         return this.propagatingConnections;
     }
     /**
-     * The provisioning state of the RouteTable resource.
+     * @return The provisioning state of the RouteTable resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * List of all routes.
+     * @return List of all routes.
      * 
-    */
+     */
     public List<HubRouteResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

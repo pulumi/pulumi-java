@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class RestRequestResponse {
-    /**
-     * The authentication information required in the request to the health provider.
-     * 
-     */
+        /**
+         * @return The authentication information required in the request to the health provider.
+         * 
+         */
     private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
-    /**
-     * The HTTP method to use for the request.
-     * 
-     */
+        /**
+         * @return The HTTP method to use for the request.
+         * 
+         */
     private final String method;
-    /**
-     * The HTTP URI to use for the request.
-     * 
-     */
+        /**
+         * @return The HTTP URI to use for the request.
+         * 
+         */
     private final String uri;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class RestRequestResponse {
     }
 
     /**
-     * The authentication information required in the request to the health provider.
+     * @return The authentication information required in the request to the health provider.
      * 
-    */
+     */
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication() {
         return this.authentication;
     }
     /**
-     * The HTTP method to use for the request.
+     * @return The HTTP method to use for the request.
      * 
-    */
+     */
     public String method() {
         return this.method;
     }
     /**
-     * The HTTP URI to use for the request.
+     * @return The HTTP URI to use for the request.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

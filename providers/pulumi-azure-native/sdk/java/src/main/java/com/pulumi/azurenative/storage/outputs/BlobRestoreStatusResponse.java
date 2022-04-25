@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class BlobRestoreStatusResponse {
-    /**
-     * Failure reason when blob restore is failed.
-     * 
-     */
+        /**
+         * @return Failure reason when blob restore is failed.
+         * 
+         */
     private final String failureReason;
-    /**
-     * Blob restore request parameters.
-     * 
-     */
+        /**
+         * @return Blob restore request parameters.
+         * 
+         */
     private final BlobRestoreParametersResponse parameters;
-    /**
-     * Id for tracking blob restore request.
-     * 
-     */
+        /**
+         * @return Id for tracking blob restore request.
+         * 
+         */
     private final String restoreId;
-    /**
-     * The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
-     * 
-     */
+        /**
+         * @return The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
+         * 
+         */
     private final String status;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class BlobRestoreStatusResponse {
     }
 
     /**
-     * Failure reason when blob restore is failed.
+     * @return Failure reason when blob restore is failed.
      * 
-    */
+     */
     public String failureReason() {
         return this.failureReason;
     }
     /**
-     * Blob restore request parameters.
+     * @return Blob restore request parameters.
      * 
-    */
+     */
     public BlobRestoreParametersResponse parameters() {
         return this.parameters;
     }
     /**
-     * Id for tracking blob restore request.
+     * @return Id for tracking blob restore request.
      * 
-    */
+     */
     public String restoreId() {
         return this.restoreId;
     }
     /**
-     * The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
+     * @return The status of blob restore progress. Possible values are: - InProgress: Indicates that blob restore is ongoing. - Complete: Indicates that blob restore has been completed successfully. - Failed: Indicates that blob restore is failed.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

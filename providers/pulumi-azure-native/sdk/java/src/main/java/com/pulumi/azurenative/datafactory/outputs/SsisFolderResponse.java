@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SsisFolderResponse {
-    /**
-     * Metadata description.
-     * 
-     */
+        /**
+         * @return Metadata description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Metadata id.
-     * 
-     */
+        /**
+         * @return Metadata id.
+         * 
+         */
     private final @Nullable Double id;
-    /**
-     * Metadata name.
-     * 
-     */
+        /**
+         * @return Metadata name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The type of SSIS object metadata.
-     * Expected value is &#39;Folder&#39;.
-     * 
-     */
+        /**
+         * @return The type of SSIS object metadata.
+         * Expected value is &#39;Folder&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class SsisFolderResponse {
     }
 
     /**
-     * Metadata description.
+     * @return Metadata description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Metadata id.
+     * @return Metadata id.
      * 
-    */
+     */
     public Optional<Double> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Metadata name.
+     * @return Metadata name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The type of SSIS object metadata.
+     * @return The type of SSIS object metadata.
      * Expected value is &#39;Folder&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

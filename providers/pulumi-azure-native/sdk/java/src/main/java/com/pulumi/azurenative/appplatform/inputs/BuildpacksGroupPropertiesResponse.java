@@ -27,6 +27,10 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
     @Import(name="buildpacks")
     private @Nullable List<BuildpackPropertiesResponse> buildpacks;
 
+    /**
+     * @return Buildpacks in the buildpack group
+     * 
+     */
     public Optional<List<BuildpackPropertiesResponse>> buildpacks() {
         return Optional.ofNullable(this.buildpacks);
     }
@@ -38,6 +42,10 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Buildpack group name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,15 +75,33 @@ public final class BuildpacksGroupPropertiesResponse extends com.pulumi.resource
             $ = new BuildpacksGroupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildpacks Buildpacks in the buildpack group
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpacks(@Nullable List<BuildpackPropertiesResponse> buildpacks) {
             $.buildpacks = buildpacks;
             return this;
         }
 
+        /**
+         * @param buildpacks Buildpacks in the buildpack group
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpacks(BuildpackPropertiesResponse... buildpacks) {
             return buildpacks(List.of(buildpacks));
         }
 
+        /**
+         * @param name Buildpack group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

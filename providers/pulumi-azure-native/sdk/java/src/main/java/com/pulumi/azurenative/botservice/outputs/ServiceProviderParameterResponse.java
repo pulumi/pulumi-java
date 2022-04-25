@@ -10,40 +10,40 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceProviderParameterResponse {
-    /**
-     * Default Name for the Service Provider
-     * 
-     */
+        /**
+         * @return Default Name for the Service Provider
+         * 
+         */
     private final String default_;
-    /**
-     * Description of the Service Provider
-     * 
-     */
+        /**
+         * @return Description of the Service Provider
+         * 
+         */
     private final String description;
-    /**
-     * Display Name of the Service Provider
-     * 
-     */
+        /**
+         * @return Display Name of the Service Provider
+         * 
+         */
     private final String displayName;
-    /**
-     * Help Url for the  Service Provider
-     * 
-     */
+        /**
+         * @return Help Url for the  Service Provider
+         * 
+         */
     private final String helpUrl;
-    /**
-     * Meta data for the Service Provider
-     * 
-     */
+        /**
+         * @return Meta data for the Service Provider
+         * 
+         */
     private final ServiceProviderParameterResponseMetadata metadata;
-    /**
-     * Name of the Service Provider
-     * 
-     */
+        /**
+         * @return Name of the Service Provider
+         * 
+         */
     private final String name;
-    /**
-     * Type of the Service Provider
-     * 
-     */
+        /**
+         * @return Type of the Service Provider
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -65,51 +65,51 @@ public final class ServiceProviderParameterResponse {
     }
 
     /**
-     * Default Name for the Service Provider
+     * @return Default Name for the Service Provider
      * 
-    */
+     */
     public String default_() {
         return this.default_;
     }
     /**
-     * Description of the Service Provider
+     * @return Description of the Service Provider
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Display Name of the Service Provider
+     * @return Display Name of the Service Provider
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Help Url for the  Service Provider
+     * @return Help Url for the  Service Provider
      * 
-    */
+     */
     public String helpUrl() {
         return this.helpUrl;
     }
     /**
-     * Meta data for the Service Provider
+     * @return Meta data for the Service Provider
      * 
-    */
+     */
     public ServiceProviderParameterResponseMetadata metadata() {
         return this.metadata;
     }
     /**
-     * Name of the Service Provider
+     * @return Name of the Service Provider
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of the Service Provider
+     * @return Type of the Service Provider
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

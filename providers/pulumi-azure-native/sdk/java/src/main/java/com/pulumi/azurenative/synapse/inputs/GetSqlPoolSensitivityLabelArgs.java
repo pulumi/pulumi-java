@@ -19,6 +19,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="columnName", required=true)
     private String columnName;
 
+    /**
+     * @return The name of the column.
+     * 
+     */
     public String columnName() {
         return this.columnName;
     }
@@ -30,6 +34,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="schemaName", required=true)
     private String schemaName;
 
+    /**
+     * @return The name of the schema.
+     * 
+     */
     public String schemaName() {
         return this.schemaName;
     }
@@ -52,6 +64,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="sensitivityLabelSource", required=true)
     private String sensitivityLabelSource;
 
+    /**
+     * @return The source of the sensitivity label.
+     * 
+     */
     public String sensitivityLabelSource() {
         return this.sensitivityLabelSource;
     }
@@ -63,6 +79,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="sqlPoolName", required=true)
     private String sqlPoolName;
 
+    /**
+     * @return SQL pool name
+     * 
+     */
     public String sqlPoolName() {
         return this.sqlPoolName;
     }
@@ -74,6 +94,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return The name of the table.
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -85,6 +109,10 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -119,36 +147,78 @@ public final class GetSqlPoolSensitivityLabelArgs extends com.pulumi.resources.I
             $ = new GetSqlPoolSensitivityLabelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName The name of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param schemaName The name of the schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaName(String schemaName) {
             $.schemaName = schemaName;
             return this;
         }
 
+        /**
+         * @param sensitivityLabelSource The source of the sensitivity label.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensitivityLabelSource(String sensitivityLabelSource) {
             $.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
+        /**
+         * @param sqlPoolName SQL pool name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlPoolName(String sqlPoolName) {
             $.sqlPoolName = sqlPoolName;
             return this;
         }
 
+        /**
+         * @param tableName The name of the table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

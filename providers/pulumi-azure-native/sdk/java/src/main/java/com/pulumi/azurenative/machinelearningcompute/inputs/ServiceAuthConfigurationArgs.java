@@ -24,6 +24,10 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="primaryAuthKeyHash", required=true)
     private Output<String> primaryAuthKeyHash;
 
+    /**
+     * @return The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+     * 
+     */
     public Output<String> primaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
     }
@@ -35,6 +39,10 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="secondaryAuthKeyHash", required=true)
     private Output<String> secondaryAuthKeyHash;
 
+    /**
+     * @return The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+     * 
+     */
     public Output<String> secondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
@@ -64,20 +72,44 @@ public final class ServiceAuthConfigurationArgs extends com.pulumi.resources.Res
             $ = new ServiceAuthConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primaryAuthKeyHash The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryAuthKeyHash(Output<String> primaryAuthKeyHash) {
             $.primaryAuthKeyHash = primaryAuthKeyHash;
             return this;
         }
 
+        /**
+         * @param primaryAuthKeyHash The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
             return primaryAuthKeyHash(Output.of(primaryAuthKeyHash));
         }
 
+        /**
+         * @param secondaryAuthKeyHash The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAuthKeyHash(Output<String> secondaryAuthKeyHash) {
             $.secondaryAuthKeyHash = secondaryAuthKeyHash;
             return this;
         }
 
+        /**
+         * @param secondaryAuthKeyHash The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
             return secondaryAuthKeyHash(Output.of(secondaryAuthKeyHash));
         }

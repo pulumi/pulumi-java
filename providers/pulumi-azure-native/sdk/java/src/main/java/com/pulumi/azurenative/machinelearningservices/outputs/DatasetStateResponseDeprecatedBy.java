@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetStateResponseDeprecatedBy {
-    /**
-     * Unique Dataset identifier.
-     * 
-     */
+        /**
+         * @return Unique Dataset identifier.
+         * 
+         */
     private final String datasetId;
-    /**
-     * Definition Version
-     * 
-     */
+        /**
+         * @return Definition Version
+         * 
+         */
     private final @Nullable String definitionVersion;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class DatasetStateResponseDeprecatedBy {
     }
 
     /**
-     * Unique Dataset identifier.
+     * @return Unique Dataset identifier.
      * 
-    */
+     */
     public String datasetId() {
         return this.datasetId;
     }
     /**
-     * Definition Version
+     * @return Definition Version
      * 
-    */
+     */
     public Optional<String> definitionVersion() {
         return Optional.ofNullable(this.definitionVersion);
     }

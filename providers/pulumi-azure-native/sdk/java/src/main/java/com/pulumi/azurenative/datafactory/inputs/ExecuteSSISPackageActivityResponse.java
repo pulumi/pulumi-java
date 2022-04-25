@@ -39,6 +39,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="connectVia", required=true)
     private IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public IntegrationRuntimeReferenceResponse connectVia() {
         return this.connectVia;
     }
@@ -50,6 +54,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -61,6 +69,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -72,6 +84,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="environmentPath")
     private @Nullable Object environmentPath;
 
+    /**
+     * @return The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> environmentPath() {
         return Optional.ofNullable(this.environmentPath);
     }
@@ -83,6 +99,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="executionCredential")
     private @Nullable SSISExecutionCredentialResponse executionCredential;
 
+    /**
+     * @return The package execution credential.
+     * 
+     */
     public Optional<SSISExecutionCredentialResponse> executionCredential() {
         return Optional.ofNullable(this.executionCredential);
     }
@@ -94,6 +114,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -105,6 +129,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="logLocation")
     private @Nullable SSISLogLocationResponse logLocation;
 
+    /**
+     * @return SSIS package execution log location.
+     * 
+     */
     public Optional<SSISLogLocationResponse> logLocation() {
         return Optional.ofNullable(this.logLocation);
     }
@@ -116,6 +144,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="loggingLevel")
     private @Nullable Object loggingLevel;
 
+    /**
+     * @return The logging level of SSIS package execution. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> loggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
@@ -127,6 +159,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -138,6 +174,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="packageConnectionManagers")
     private @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
 
+    /**
+     * @return The package level connection managers to execute the SSIS package.
+     * 
+     */
     public Optional<Map<String,Map<String,SSISExecutionParameterResponse>>> packageConnectionManagers() {
         return Optional.ofNullable(this.packageConnectionManagers);
     }
@@ -149,6 +189,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="packageLocation", required=true)
     private SSISPackageLocationResponse packageLocation;
 
+    /**
+     * @return SSIS package location.
+     * 
+     */
     public SSISPackageLocationResponse packageLocation() {
         return this.packageLocation;
     }
@@ -160,6 +204,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="packageParameters")
     private @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
 
+    /**
+     * @return The package level parameters to execute the SSIS package.
+     * 
+     */
     public Optional<Map<String,SSISExecutionParameterResponse>> packageParameters() {
         return Optional.ofNullable(this.packageParameters);
     }
@@ -171,6 +219,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -182,6 +234,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="projectConnectionManagers")
     private @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
 
+    /**
+     * @return The project level connection managers to execute the SSIS package.
+     * 
+     */
     public Optional<Map<String,Map<String,SSISExecutionParameterResponse>>> projectConnectionManagers() {
         return Optional.ofNullable(this.projectConnectionManagers);
     }
@@ -193,6 +249,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="projectParameters")
     private @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
 
+    /**
+     * @return The project level parameters to execute the SSIS package.
+     * 
+     */
     public Optional<Map<String,SSISExecutionParameterResponse>> projectParameters() {
         return Optional.ofNullable(this.projectParameters);
     }
@@ -204,6 +264,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="propertyOverrides")
     private @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
 
+    /**
+     * @return The property overrides to execute the SSIS package.
+     * 
+     */
     public Optional<Map<String,SSISPropertyOverrideResponse>> propertyOverrides() {
         return Optional.ofNullable(this.propertyOverrides);
     }
@@ -215,6 +279,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="runtime")
     private @Nullable Object runtime;
 
+    /**
+     * @return Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> runtime() {
         return Optional.ofNullable(this.runtime);
     }
@@ -227,6 +295,11 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;ExecuteSSISPackage&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -238,6 +311,10 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -284,105 +361,232 @@ public final class ExecuteSSISPackageActivityResponse extends com.pulumi.resourc
             $ = new ExecuteSSISPackageActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param environmentPath The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentPath(@Nullable Object environmentPath) {
             $.environmentPath = environmentPath;
             return this;
         }
 
+        /**
+         * @param executionCredential The package execution credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder executionCredential(@Nullable SSISExecutionCredentialResponse executionCredential) {
             $.executionCredential = executionCredential;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param logLocation SSIS package execution log location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLocation(@Nullable SSISLogLocationResponse logLocation) {
             $.logLocation = logLocation;
             return this;
         }
 
+        /**
+         * @param loggingLevel The logging level of SSIS package execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder loggingLevel(@Nullable Object loggingLevel) {
             $.loggingLevel = loggingLevel;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param packageConnectionManagers The package level connection managers to execute the SSIS package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers) {
             $.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
 
+        /**
+         * @param packageLocation SSIS package location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageLocation(SSISPackageLocationResponse packageLocation) {
             $.packageLocation = packageLocation;
             return this;
         }
 
+        /**
+         * @param packageParameters The package level parameters to execute the SSIS package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterResponse> packageParameters) {
             $.packageParameters = packageParameters;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param projectConnectionManagers The project level connection managers to execute the SSIS package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers) {
             $.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
 
+        /**
+         * @param projectParameters The project level parameters to execute the SSIS package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterResponse> projectParameters) {
             $.projectParameters = projectParameters;
             return this;
         }
 
+        /**
+         * @param propertyOverrides The property overrides to execute the SSIS package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides) {
             $.propertyOverrides = propertyOverrides;
             return this;
         }
 
+        /**
+         * @param runtime Specifies the runtime to execute SSIS package. The value should be &#34;x86&#34; or &#34;x64&#34;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(@Nullable Object runtime) {
             $.runtime = runtime;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;ExecuteSSISPackage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

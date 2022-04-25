@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class DeliveryRuleCacheKeyQueryStringActionResponse {
-    /**
-     * The name of the action for the delivery rule.
-     * Expected value is &#39;CacheKeyQueryString&#39;.
-     * 
-     */
+        /**
+         * @return The name of the action for the delivery rule.
+         * Expected value is &#39;CacheKeyQueryString&#39;.
+         * 
+         */
     private final String name;
-    /**
-     * Defines the parameters for the action.
-     * 
-     */
+        /**
+         * @return Defines the parameters for the action.
+         * 
+         */
     private final CacheKeyQueryStringActionParametersResponse parameters;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
     }
 
     /**
-     * The name of the action for the delivery rule.
+     * @return The name of the action for the delivery rule.
      * Expected value is &#39;CacheKeyQueryString&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the action.
+     * @return Defines the parameters for the action.
      * 
-    */
+     */
     public CacheKeyQueryStringActionParametersResponse parameters() {
         return this.parameters;
     }

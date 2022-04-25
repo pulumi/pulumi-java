@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListGlobalUserLabsResult {
-    /**
-     * List of all the labs
-     * 
-     */
+        /**
+         * @return List of all the labs
+         * 
+         */
     private final @Nullable List<LabDetailsResponse> labs;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListGlobalUserLabsResult {
     }
 
     /**
-     * List of all the labs
+     * @return List of all the labs
      * 
-    */
+     */
     public List<LabDetailsResponse> labs() {
         return this.labs == null ? List.of() : this.labs;
     }

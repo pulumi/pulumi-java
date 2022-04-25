@@ -17,45 +17,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssetItemResponse {
-    /**
-     * Asset&#39;s Id.
-     * 
-     */
+        /**
+         * @return Asset&#39;s Id.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Information about the asset&#39;s input ports.
-     * 
-     */
+        /**
+         * @return Information about the asset&#39;s input ports.
+         * 
+         */
     private final @Nullable Map<String,InputPortResponse> inputPorts;
-    /**
-     * Access information for the asset.
-     * 
-     */
+        /**
+         * @return Access information for the asset.
+         * 
+         */
     private final BlobLocationResponse locationInfo;
-    /**
-     * If the asset is a custom module, this holds the module&#39;s metadata.
-     * 
-     */
+        /**
+         * @return If the asset is a custom module, this holds the module&#39;s metadata.
+         * 
+         */
     private final @Nullable Map<String,String> metadata;
-    /**
-     * Asset&#39;s friendly name.
-     * 
-     */
+        /**
+         * @return Asset&#39;s friendly name.
+         * 
+         */
     private final String name;
-    /**
-     * Information about the asset&#39;s output ports.
-     * 
-     */
+        /**
+         * @return Information about the asset&#39;s output ports.
+         * 
+         */
     private final @Nullable Map<String,OutputPortResponse> outputPorts;
-    /**
-     * If the asset is a custom module, this holds the module&#39;s parameters.
-     * 
-     */
+        /**
+         * @return If the asset is a custom module, this holds the module&#39;s parameters.
+         * 
+         */
     private final @Nullable List<ModuleAssetParameterResponse> parameters;
-    /**
-     * Asset&#39;s type.
-     * 
-     */
+        /**
+         * @return Asset&#39;s type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -79,58 +79,58 @@ public final class AssetItemResponse {
     }
 
     /**
-     * Asset&#39;s Id.
+     * @return Asset&#39;s Id.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Information about the asset&#39;s input ports.
+     * @return Information about the asset&#39;s input ports.
      * 
-    */
+     */
     public Map<String,InputPortResponse> inputPorts() {
         return this.inputPorts == null ? Map.of() : this.inputPorts;
     }
     /**
-     * Access information for the asset.
+     * @return Access information for the asset.
      * 
-    */
+     */
     public BlobLocationResponse locationInfo() {
         return this.locationInfo;
     }
     /**
-     * If the asset is a custom module, this holds the module&#39;s metadata.
+     * @return If the asset is a custom module, this holds the module&#39;s metadata.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * Asset&#39;s friendly name.
+     * @return Asset&#39;s friendly name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Information about the asset&#39;s output ports.
+     * @return Information about the asset&#39;s output ports.
      * 
-    */
+     */
     public Map<String,OutputPortResponse> outputPorts() {
         return this.outputPorts == null ? Map.of() : this.outputPorts;
     }
     /**
-     * If the asset is a custom module, this holds the module&#39;s parameters.
+     * @return If the asset is a custom module, this holds the module&#39;s parameters.
      * 
-    */
+     */
     public List<ModuleAssetParameterResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * Asset&#39;s type.
+     * @return Asset&#39;s type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

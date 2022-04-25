@@ -24,6 +24,10 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends com.pulum
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -35,6 +39,10 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends com.pulum
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -64,20 +72,44 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends com.pulum
             $ = new CacheActiveDirectorySettingsCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

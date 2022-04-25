@@ -27,6 +27,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileDisplayName", required=true)
     private String billingProfileDisplayName;
 
+    /**
+     * @return The name of the billing profile for the invoice section.
+     * 
+     */
     public String billingProfileDisplayName() {
         return this.billingProfileDisplayName;
     }
@@ -38,6 +42,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileId", required=true)
     private String billingProfileId;
 
+    /**
+     * @return The ID of the billing profile for the invoice section.
+     * 
+     */
     public String billingProfileId() {
         return this.billingProfileId;
     }
@@ -49,6 +57,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileSpendingLimit", required=true)
     private String billingProfileSpendingLimit;
 
+    /**
+     * @return The billing profile spending limit.
+     * 
+     */
     public String billingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
     }
@@ -60,6 +72,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileStatus", required=true)
     private String billingProfileStatus;
 
+    /**
+     * @return The status of the billing profile.
+     * 
+     */
     public String billingProfileStatus() {
         return this.billingProfileStatus;
     }
@@ -71,6 +87,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileStatusReasonCode", required=true)
     private String billingProfileStatusReasonCode;
 
+    /**
+     * @return Reason for the specified billing profile status.
+     * 
+     */
     public String billingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
     }
@@ -82,6 +102,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="billingProfileSystemId", required=true)
     private String billingProfileSystemId;
 
+    /**
+     * @return The system generated unique identifier for a billing profile.
+     * 
+     */
     public String billingProfileSystemId() {
         return this.billingProfileSystemId;
     }
@@ -93,6 +117,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="enabledAzurePlans")
     private @Nullable List<AzurePlanResponse> enabledAzurePlans;
 
+    /**
+     * @return Enabled azure plans for the associated billing profile.
+     * 
+     */
     public Optional<List<AzurePlanResponse>> enabledAzurePlans() {
         return Optional.ofNullable(this.enabledAzurePlans);
     }
@@ -104,6 +132,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="invoiceSectionDisplayName", required=true)
     private String invoiceSectionDisplayName;
 
+    /**
+     * @return The name of the invoice section.
+     * 
+     */
     public String invoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
     }
@@ -115,6 +147,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="invoiceSectionId", required=true)
     private String invoiceSectionId;
 
+    /**
+     * @return The ID of the invoice section.
+     * 
+     */
     public String invoiceSectionId() {
         return this.invoiceSectionId;
     }
@@ -126,6 +162,10 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
     @Import(name="invoiceSectionSystemId", required=true)
     private String invoiceSectionSystemId;
 
+    /**
+     * @return The system generated unique identifier for an invoice section.
+     * 
+     */
     public String invoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
     }
@@ -163,55 +203,121 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends com.pul
             $ = new InvoiceSectionWithCreateSubPermissionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingProfileDisplayName The name of the billing profile for the invoice section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfileDisplayName(String billingProfileDisplayName) {
             $.billingProfileDisplayName = billingProfileDisplayName;
             return this;
         }
 
+        /**
+         * @param billingProfileId The ID of the billing profile for the invoice section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfileId(String billingProfileId) {
             $.billingProfileId = billingProfileId;
             return this;
         }
 
+        /**
+         * @param billingProfileSpendingLimit The billing profile spending limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfileSpendingLimit(String billingProfileSpendingLimit) {
             $.billingProfileSpendingLimit = billingProfileSpendingLimit;
             return this;
         }
 
+        /**
+         * @param billingProfileStatus The status of the billing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfileStatus(String billingProfileStatus) {
             $.billingProfileStatus = billingProfileStatus;
             return this;
         }
 
+        /**
+         * @param billingProfileStatusReasonCode Reason for the specified billing profile status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfileStatusReasonCode(String billingProfileStatusReasonCode) {
             $.billingProfileStatusReasonCode = billingProfileStatusReasonCode;
             return this;
         }
 
+        /**
+         * @param billingProfileSystemId The system generated unique identifier for a billing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingProfileSystemId(String billingProfileSystemId) {
             $.billingProfileSystemId = billingProfileSystemId;
             return this;
         }
 
+        /**
+         * @param enabledAzurePlans Enabled azure plans for the associated billing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledAzurePlans(@Nullable List<AzurePlanResponse> enabledAzurePlans) {
             $.enabledAzurePlans = enabledAzurePlans;
             return this;
         }
 
+        /**
+         * @param enabledAzurePlans Enabled azure plans for the associated billing profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledAzurePlans(AzurePlanResponse... enabledAzurePlans) {
             return enabledAzurePlans(List.of(enabledAzurePlans));
         }
 
+        /**
+         * @param invoiceSectionDisplayName The name of the invoice section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invoiceSectionDisplayName(String invoiceSectionDisplayName) {
             $.invoiceSectionDisplayName = invoiceSectionDisplayName;
             return this;
         }
 
+        /**
+         * @param invoiceSectionId The ID of the invoice section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invoiceSectionId(String invoiceSectionId) {
             $.invoiceSectionId = invoiceSectionId;
             return this;
         }
 
+        /**
+         * @param invoiceSectionSystemId The system generated unique identifier for an invoice section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invoiceSectionSystemId(String invoiceSectionSystemId) {
             $.invoiceSectionSystemId = invoiceSectionSystemId;
             return this;

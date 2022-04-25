@@ -26,6 +26,10 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
     @Import(name="audience")
     private @Nullable String audience;
 
+    /**
+     * @return The audience url for the service
+     * 
+     */
     public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -37,6 +41,10 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
     @Import(name="authority")
     private @Nullable String authority;
 
+    /**
+     * @return The authority url for the service
+     * 
+     */
     public Optional<String> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -48,6 +56,10 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
     @Import(name="smartProxyEnabled")
     private @Nullable Boolean smartProxyEnabled;
 
+    /**
+     * @return If the SMART on FHIR proxy is enabled
+     * 
+     */
     public Optional<Boolean> smartProxyEnabled() {
         return Optional.ofNullable(this.smartProxyEnabled);
     }
@@ -78,16 +90,34 @@ public final class FhirServiceAuthenticationConfigurationResponse extends com.pu
             $ = new FhirServiceAuthenticationConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience The audience url for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable String audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param authority The authority url for the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable String authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param smartProxyEnabled If the SMART on FHIR proxy is enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             $.smartProxyEnabled = smartProxyEnabled;
             return this;

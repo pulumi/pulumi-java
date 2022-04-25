@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class CreatedByResponse {
-    /**
-     * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
-     * 
-     */
+        /**
+         * @return The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
+         * 
+         */
     private final String applicationId;
-    /**
-     * The Object ID that created the workspace.
-     * 
-     */
+        /**
+         * @return The Object ID that created the workspace.
+         * 
+         */
     private final String oid;
-    /**
-     * The Personal Object ID corresponding to the object ID above
-     * 
-     */
+        /**
+         * @return The Personal Object ID corresponding to the object ID above
+         * 
+         */
     private final String puid;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class CreatedByResponse {
     }
 
     /**
-     * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
+     * @return The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
      * 
-    */
+     */
     public String applicationId() {
         return this.applicationId;
     }
     /**
-     * The Object ID that created the workspace.
+     * @return The Object ID that created the workspace.
      * 
-    */
+     */
     public String oid() {
         return this.oid;
     }
     /**
-     * The Personal Object ID corresponding to the object ID above
+     * @return The Personal Object ID corresponding to the object ID above
      * 
-    */
+     */
     public String puid() {
         return this.puid;
     }

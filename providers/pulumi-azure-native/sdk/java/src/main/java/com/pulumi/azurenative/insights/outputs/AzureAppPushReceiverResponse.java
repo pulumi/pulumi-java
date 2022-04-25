@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AzureAppPushReceiverResponse {
-    /**
-     * The email address registered for the Azure mobile app.
-     * 
-     */
+        /**
+         * @return The email address registered for the Azure mobile app.
+         * 
+         */
     private final String emailAddress;
-    /**
-     * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
-     * 
-     */
+        /**
+         * @return The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AzureAppPushReceiverResponse {
     }
 
     /**
-     * The email address registered for the Azure mobile app.
+     * @return The email address registered for the Azure mobile app.
      * 
-    */
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
     /**
-     * The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

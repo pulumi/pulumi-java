@@ -12,75 +12,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSyncMemberResult {
-    /**
-     * Database name of the member database in the sync member.
-     * 
-     */
+        /**
+         * @return Database name of the member database in the sync member.
+         * 
+         */
     private final @Nullable String databaseName;
-    /**
-     * Database type of the sync member.
-     * 
-     */
+        /**
+         * @return Database type of the sync member.
+         * 
+         */
     private final @Nullable String databaseType;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
-     * 
-     */
+        /**
+         * @return Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
+         * 
+         */
     private final String privateEndpointName;
-    /**
-     * Server name of the member database in the sync member
-     * 
-     */
+        /**
+         * @return Server name of the member database in the sync member
+         * 
+         */
     private final @Nullable String serverName;
-    /**
-     * SQL Server database id of the sync member.
-     * 
-     */
+        /**
+         * @return SQL Server database id of the sync member.
+         * 
+         */
     private final @Nullable String sqlServerDatabaseId;
-    /**
-     * ARM resource id of the sync agent in the sync member.
-     * 
-     */
+        /**
+         * @return ARM resource id of the sync agent in the sync member.
+         * 
+         */
     private final @Nullable String syncAgentId;
-    /**
-     * Sync direction of the sync member.
-     * 
-     */
+        /**
+         * @return Sync direction of the sync member.
+         * 
+         */
     private final @Nullable String syncDirection;
-    /**
-     * ARM resource id of the sync member logical database, for sync members in Azure.
-     * 
-     */
+        /**
+         * @return ARM resource id of the sync member logical database, for sync members in Azure.
+         * 
+         */
     private final @Nullable String syncMemberAzureDatabaseResourceId;
-    /**
-     * Sync state of the sync member.
-     * 
-     */
+        /**
+         * @return Sync state of the sync member.
+         * 
+         */
     private final String syncState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Whether to use private link connection.
-     * 
-     */
+        /**
+         * @return Whether to use private link connection.
+         * 
+         */
     private final @Nullable Boolean usePrivateLinkConnection;
-    /**
-     * User name of the member database in the sync member.
-     * 
-     */
+        /**
+         * @return User name of the member database in the sync member.
+         * 
+         */
     private final @Nullable String userName;
 
     @CustomType.Constructor
@@ -116,100 +116,100 @@ public final class GetSyncMemberResult {
     }
 
     /**
-     * Database name of the member database in the sync member.
+     * @return Database name of the member database in the sync member.
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * Database type of the sync member.
+     * @return Database type of the sync member.
      * 
-    */
+     */
     public Optional<String> databaseType() {
         return Optional.ofNullable(this.databaseType);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
+     * @return Private endpoint name of the sync member if use private link connection is enabled, for sync members in Azure.
      * 
-    */
+     */
     public String privateEndpointName() {
         return this.privateEndpointName;
     }
     /**
-     * Server name of the member database in the sync member
+     * @return Server name of the member database in the sync member
      * 
-    */
+     */
     public Optional<String> serverName() {
         return Optional.ofNullable(this.serverName);
     }
     /**
-     * SQL Server database id of the sync member.
+     * @return SQL Server database id of the sync member.
      * 
-    */
+     */
     public Optional<String> sqlServerDatabaseId() {
         return Optional.ofNullable(this.sqlServerDatabaseId);
     }
     /**
-     * ARM resource id of the sync agent in the sync member.
+     * @return ARM resource id of the sync agent in the sync member.
      * 
-    */
+     */
     public Optional<String> syncAgentId() {
         return Optional.ofNullable(this.syncAgentId);
     }
     /**
-     * Sync direction of the sync member.
+     * @return Sync direction of the sync member.
      * 
-    */
+     */
     public Optional<String> syncDirection() {
         return Optional.ofNullable(this.syncDirection);
     }
     /**
-     * ARM resource id of the sync member logical database, for sync members in Azure.
+     * @return ARM resource id of the sync member logical database, for sync members in Azure.
      * 
-    */
+     */
     public Optional<String> syncMemberAzureDatabaseResourceId() {
         return Optional.ofNullable(this.syncMemberAzureDatabaseResourceId);
     }
     /**
-     * Sync state of the sync member.
+     * @return Sync state of the sync member.
      * 
-    */
+     */
     public String syncState() {
         return this.syncState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Whether to use private link connection.
+     * @return Whether to use private link connection.
      * 
-    */
+     */
     public Optional<Boolean> usePrivateLinkConnection() {
         return Optional.ofNullable(this.usePrivateLinkConnection);
     }
     /**
-     * User name of the member database in the sync member.
+     * @return User name of the member database in the sync member.
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

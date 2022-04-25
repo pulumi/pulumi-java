@@ -26,6 +26,10 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
     private Output<GatewayDestinationArgs> destination;
 
+    /**
+     * @return Describes destination endpoint for routing traffic.
+     * 
+     */
     public Output<GatewayDestinationArgs> destination() {
         return this.destination;
     }
@@ -37,6 +41,10 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return tcp gateway config name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return Specifies the port at which the service endpoint below needs to be exposed.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -78,29 +90,65 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TcpConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Describes destination endpoint for routing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<GatewayDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Describes destination endpoint for routing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(GatewayDestinationArgs destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param name tcp gateway config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name tcp gateway config name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param port Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Specifies the port at which the service endpoint below needs to be exposed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }

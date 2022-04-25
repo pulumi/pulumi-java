@@ -35,6 +35,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="authorizationKey")
     private @Nullable Output<String> authorizationKey;
 
+    /**
+     * @return The authorizationKey.
+     * 
+     */
     public Optional<Output<String>> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
@@ -46,6 +50,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="connectionMode")
     private @Nullable Output<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode;
 
+    /**
+     * @return The connection mode for this connection.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkGatewayConnectionMode>>> connectionMode() {
         return Optional.ofNullable(this.connectionMode);
     }
@@ -57,6 +65,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="connectionProtocol")
     private @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol;
 
+    /**
+     * @return Connection protocol used for this connection.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkGatewayConnectionProtocol>>> connectionProtocol() {
         return Optional.ofNullable(this.connectionProtocol);
     }
@@ -68,6 +80,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="connectionType", required=true)
     private Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType;
 
+    /**
+     * @return Gateway connection type.
+     * 
+     */
     public Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType() {
         return this.connectionType;
     }
@@ -79,6 +95,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="dpdTimeoutSeconds")
     private @Nullable Output<Integer> dpdTimeoutSeconds;
 
+    /**
+     * @return The dead peer detection timeout of this connection in seconds.
+     * 
+     */
     public Optional<Output<Integer>> dpdTimeoutSeconds() {
         return Optional.ofNullable(this.dpdTimeoutSeconds);
     }
@@ -90,6 +110,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="enableBgp")
     private @Nullable Output<Boolean> enableBgp;
 
+    /**
+     * @return EnableBgp flag.
+     * 
+     */
     public Optional<Output<Boolean>> enableBgp() {
         return Optional.ofNullable(this.enableBgp);
     }
@@ -101,6 +125,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="expressRouteGatewayBypass")
     private @Nullable Output<Boolean> expressRouteGatewayBypass;
 
+    /**
+     * @return Bypass ExpressRoute Gateway for data forwarding.
+     * 
+     */
     public Optional<Output<Boolean>> expressRouteGatewayBypass() {
         return Optional.ofNullable(this.expressRouteGatewayBypass);
     }
@@ -112,6 +140,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -123,6 +155,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="ipsecPolicies")
     private @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
 
+    /**
+     * @return The IPSec Policies to be considered by this connection.
+     * 
+     */
     public Optional<Output<List<IpsecPolicyArgs>>> ipsecPolicies() {
         return Optional.ofNullable(this.ipsecPolicies);
     }
@@ -134,6 +170,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="localNetworkGateway2")
     private @Nullable Output<LocalNetworkGatewayArgs> localNetworkGateway2;
 
+    /**
+     * @return The reference to local network gateway resource.
+     * 
+     */
     public Optional<Output<LocalNetworkGatewayArgs>> localNetworkGateway2() {
         return Optional.ofNullable(this.localNetworkGateway2);
     }
@@ -145,6 +185,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -156,6 +200,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="peer")
     private @Nullable Output<SubResourceArgs> peer;
 
+    /**
+     * @return The reference to peerings resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> peer() {
         return Optional.ofNullable(this.peer);
     }
@@ -167,6 +215,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -178,6 +230,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="routingWeight")
     private @Nullable Output<Integer> routingWeight;
 
+    /**
+     * @return The routing weight.
+     * 
+     */
     public Optional<Output<Integer>> routingWeight() {
         return Optional.ofNullable(this.routingWeight);
     }
@@ -189,6 +245,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="sharedKey")
     private @Nullable Output<String> sharedKey;
 
+    /**
+     * @return The IPSec shared key.
+     * 
+     */
     public Optional<Output<String>> sharedKey() {
         return Optional.ofNullable(this.sharedKey);
     }
@@ -200,6 +260,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -211,6 +275,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="trafficSelectorPolicies")
     private @Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
 
+    /**
+     * @return The Traffic Selector Policies to be considered by this connection.
+     * 
+     */
     public Optional<Output<List<TrafficSelectorPolicyArgs>>> trafficSelectorPolicies() {
         return Optional.ofNullable(this.trafficSelectorPolicies);
     }
@@ -222,6 +290,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="useLocalAzureIpAddress")
     private @Nullable Output<Boolean> useLocalAzureIpAddress;
 
+    /**
+     * @return Use private local Azure IP for the connection.
+     * 
+     */
     public Optional<Output<Boolean>> useLocalAzureIpAddress() {
         return Optional.ofNullable(this.useLocalAzureIpAddress);
     }
@@ -233,6 +305,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="usePolicyBasedTrafficSelectors")
     private @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
 
+    /**
+     * @return Enable policy-based traffic selectors.
+     * 
+     */
     public Optional<Output<Boolean>> usePolicyBasedTrafficSelectors() {
         return Optional.ofNullable(this.usePolicyBasedTrafficSelectors);
     }
@@ -244,6 +320,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGateway1", required=true)
     private Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1;
 
+    /**
+     * @return The reference to virtual network gateway resource.
+     * 
+     */
     public Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
     }
@@ -255,6 +335,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGateway2")
     private @Nullable Output<VirtualNetworkGatewayArgs> virtualNetworkGateway2;
 
+    /**
+     * @return The reference to virtual network gateway resource.
+     * 
+     */
     public Optional<Output<VirtualNetworkGatewayArgs>> virtualNetworkGateway2() {
         return Optional.ofNullable(this.virtualNetworkGateway2);
     }
@@ -266,6 +350,10 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
     @Import(name="virtualNetworkGatewayConnectionName")
     private @Nullable Output<String> virtualNetworkGatewayConnectionName;
 
+    /**
+     * @return The name of the virtual network gateway connection.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkGatewayConnectionName() {
         return Optional.ofNullable(this.virtualNetworkGatewayConnectionName);
     }
@@ -315,232 +403,544 @@ public final class VirtualNetworkGatewayConnectionArgs extends com.pulumi.resour
             $ = new VirtualNetworkGatewayConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationKey The authorizationKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
             $.authorizationKey = authorizationKey;
             return this;
         }
 
+        /**
+         * @param authorizationKey The authorizationKey.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(String authorizationKey) {
             return authorizationKey(Output.of(authorizationKey));
         }
 
+        /**
+         * @param connectionMode The connection mode for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMode(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionMode>> connectionMode) {
             $.connectionMode = connectionMode;
             return this;
         }
 
+        /**
+         * @param connectionMode The connection mode for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMode(Either<String,VirtualNetworkGatewayConnectionMode> connectionMode) {
             return connectionMode(Output.of(connectionMode));
         }
 
+        /**
+         * @param connectionMode The connection mode for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMode(String connectionMode) {
             return connectionMode(Either.ofLeft(connectionMode));
         }
 
+        /**
+         * @param connectionMode The connection mode for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMode(VirtualNetworkGatewayConnectionMode connectionMode) {
             return connectionMode(Either.ofRight(connectionMode));
         }
 
+        /**
+         * @param connectionProtocol Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProtocol(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> connectionProtocol) {
             $.connectionProtocol = connectionProtocol;
             return this;
         }
 
+        /**
+         * @param connectionProtocol Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProtocol(Either<String,VirtualNetworkGatewayConnectionProtocol> connectionProtocol) {
             return connectionProtocol(Output.of(connectionProtocol));
         }
 
+        /**
+         * @param connectionProtocol Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProtocol(String connectionProtocol) {
             return connectionProtocol(Either.ofLeft(connectionProtocol));
         }
 
+        /**
+         * @param connectionProtocol Connection protocol used for this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProtocol(VirtualNetworkGatewayConnectionProtocol connectionProtocol) {
             return connectionProtocol(Either.ofRight(connectionProtocol));
         }
 
+        /**
+         * @param connectionType Gateway connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(Output<Either<String,VirtualNetworkGatewayConnectionType>> connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param connectionType Gateway connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(Either<String,VirtualNetworkGatewayConnectionType> connectionType) {
             return connectionType(Output.of(connectionType));
         }
 
+        /**
+         * @param connectionType Gateway connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(String connectionType) {
             return connectionType(Either.ofLeft(connectionType));
         }
 
+        /**
+         * @param connectionType Gateway connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(VirtualNetworkGatewayConnectionType connectionType) {
             return connectionType(Either.ofRight(connectionType));
         }
 
+        /**
+         * @param dpdTimeoutSeconds The dead peer detection timeout of this connection in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpdTimeoutSeconds(@Nullable Output<Integer> dpdTimeoutSeconds) {
             $.dpdTimeoutSeconds = dpdTimeoutSeconds;
             return this;
         }
 
+        /**
+         * @param dpdTimeoutSeconds The dead peer detection timeout of this connection in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dpdTimeoutSeconds(Integer dpdTimeoutSeconds) {
             return dpdTimeoutSeconds(Output.of(dpdTimeoutSeconds));
         }
 
+        /**
+         * @param enableBgp EnableBgp flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
             $.enableBgp = enableBgp;
             return this;
         }
 
+        /**
+         * @param enableBgp EnableBgp flag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableBgp(Boolean enableBgp) {
             return enableBgp(Output.of(enableBgp));
         }
 
+        /**
+         * @param expressRouteGatewayBypass Bypass ExpressRoute Gateway for data forwarding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayBypass(@Nullable Output<Boolean> expressRouteGatewayBypass) {
             $.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
 
+        /**
+         * @param expressRouteGatewayBypass Bypass ExpressRoute Gateway for data forwarding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayBypass(Boolean expressRouteGatewayBypass) {
             return expressRouteGatewayBypass(Output.of(expressRouteGatewayBypass));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipsecPolicies The IPSec Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies) {
             $.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
+        /**
+         * @param ipsecPolicies The IPSec Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecPolicies(List<IpsecPolicyArgs> ipsecPolicies) {
             return ipsecPolicies(Output.of(ipsecPolicies));
         }
 
+        /**
+         * @param ipsecPolicies The IPSec Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecPolicies(IpsecPolicyArgs... ipsecPolicies) {
             return ipsecPolicies(List.of(ipsecPolicies));
         }
 
+        /**
+         * @param localNetworkGateway2 The reference to local network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localNetworkGateway2(@Nullable Output<LocalNetworkGatewayArgs> localNetworkGateway2) {
             $.localNetworkGateway2 = localNetworkGateway2;
             return this;
         }
 
+        /**
+         * @param localNetworkGateway2 The reference to local network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localNetworkGateway2(LocalNetworkGatewayArgs localNetworkGateway2) {
             return localNetworkGateway2(Output.of(localNetworkGateway2));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param peer The reference to peerings resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peer(@Nullable Output<SubResourceArgs> peer) {
             $.peer = peer;
             return this;
         }
 
+        /**
+         * @param peer The reference to peerings resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peer(SubResourceArgs peer) {
             return peer(Output.of(peer));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routingWeight The routing weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
             $.routingWeight = routingWeight;
             return this;
         }
 
+        /**
+         * @param routingWeight The routing weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingWeight(Integer routingWeight) {
             return routingWeight(Output.of(routingWeight));
         }
 
+        /**
+         * @param sharedKey The IPSec shared key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
             $.sharedKey = sharedKey;
             return this;
         }
 
+        /**
+         * @param sharedKey The IPSec shared key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedKey(String sharedKey) {
             return sharedKey(Output.of(sharedKey));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param trafficSelectorPolicies The Traffic Selector Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficSelectorPolicies(@Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies) {
             $.trafficSelectorPolicies = trafficSelectorPolicies;
             return this;
         }
 
+        /**
+         * @param trafficSelectorPolicies The Traffic Selector Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficSelectorPolicies(List<TrafficSelectorPolicyArgs> trafficSelectorPolicies) {
             return trafficSelectorPolicies(Output.of(trafficSelectorPolicies));
         }
 
+        /**
+         * @param trafficSelectorPolicies The Traffic Selector Policies to be considered by this connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficSelectorPolicies(TrafficSelectorPolicyArgs... trafficSelectorPolicies) {
             return trafficSelectorPolicies(List.of(trafficSelectorPolicies));
         }
 
+        /**
+         * @param useLocalAzureIpAddress Use private local Azure IP for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLocalAzureIpAddress(@Nullable Output<Boolean> useLocalAzureIpAddress) {
             $.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
+        /**
+         * @param useLocalAzureIpAddress Use private local Azure IP for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useLocalAzureIpAddress(Boolean useLocalAzureIpAddress) {
             return useLocalAzureIpAddress(Output.of(useLocalAzureIpAddress));
         }
 
+        /**
+         * @param usePolicyBasedTrafficSelectors Enable policy-based traffic selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePolicyBasedTrafficSelectors(@Nullable Output<Boolean> usePolicyBasedTrafficSelectors) {
             $.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
+        /**
+         * @param usePolicyBasedTrafficSelectors Enable policy-based traffic selectors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usePolicyBasedTrafficSelectors(Boolean usePolicyBasedTrafficSelectors) {
             return usePolicyBasedTrafficSelectors(Output.of(usePolicyBasedTrafficSelectors));
         }
 
+        /**
+         * @param virtualNetworkGateway1 The reference to virtual network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGateway1(Output<VirtualNetworkGatewayArgs> virtualNetworkGateway1) {
             $.virtualNetworkGateway1 = virtualNetworkGateway1;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGateway1 The reference to virtual network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGateway1(VirtualNetworkGatewayArgs virtualNetworkGateway1) {
             return virtualNetworkGateway1(Output.of(virtualNetworkGateway1));
         }
 
+        /**
+         * @param virtualNetworkGateway2 The reference to virtual network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGateway2(@Nullable Output<VirtualNetworkGatewayArgs> virtualNetworkGateway2) {
             $.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGateway2 The reference to virtual network gateway resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGateway2(VirtualNetworkGatewayArgs virtualNetworkGateway2) {
             return virtualNetworkGateway2(Output.of(virtualNetworkGateway2));
         }
 
+        /**
+         * @param virtualNetworkGatewayConnectionName The name of the virtual network gateway connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayConnectionName(@Nullable Output<String> virtualNetworkGatewayConnectionName) {
             $.virtualNetworkGatewayConnectionName = virtualNetworkGatewayConnectionName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGatewayConnectionName The name of the virtual network gateway connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayConnectionName(String virtualNetworkGatewayConnectionName) {
             return virtualNetworkGatewayConnectionName(Output.of(virtualNetworkGatewayConnectionName));
         }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork {
-    /**
-     * The Id of the databricks virtual network.
-     * 
-     */
+        /**
+         * @return The Id of the databricks virtual network.
+         * 
+         */
     private final @Nullable String id;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtua
     }
 
     /**
-     * The Id of the databricks virtual network.
+     * @return The Id of the databricks virtual network.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

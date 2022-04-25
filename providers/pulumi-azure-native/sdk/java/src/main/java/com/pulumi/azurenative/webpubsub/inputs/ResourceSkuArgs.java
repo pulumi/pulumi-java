@@ -33,6 +33,14 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return Optional, integer. The unit count of the resource. 1 by default.
+     * 
+     * If present, following values are allowed:
+     *     Free: 1
+     *     Standard: 1,2,5,10,20,50,100
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -46,6 +54,12 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the SKU. Required.
+     * 
+     * Allowed values: Standard_S1, Free_F1
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -59,6 +73,12 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<Either<String,WebPubSubSkuTier>> tier;
 
+    /**
+     * @return Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+     * 
+     * `Basic` is deprecated, use `Standard` instead.
+     * 
+     */
     public Optional<Output<Either<String,WebPubSubSkuTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -89,37 +109,105 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Optional, integer. The unit count of the resource. 1 by default.
+         * 
+         * If present, following values are allowed:
+         *     Free: 1
+         *     Standard: 1,2,5,10,20,50,100
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity Optional, integer. The unit count of the resource. 1 by default.
+         * 
+         * If present, following values are allowed:
+         *     Free: 1
+         *     Standard: 1,2,5,10,20,50,100
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The name of the SKU. Required.
+         * 
+         * Allowed values: Standard_S1, Free_F1
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU. Required.
+         * 
+         * Allowed values: Standard_S1, Free_F1
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+         * 
+         * `Basic` is deprecated, use `Standard` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,WebPubSubSkuTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+         * 
+         * `Basic` is deprecated, use `Standard` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,WebPubSubSkuTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+         * 
+         * `Basic` is deprecated, use `Standard` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Optional tier of this particular SKU. &#39;Standard&#39; or &#39;Free&#39;.
+         * 
+         * `Basic` is deprecated, use `Standard` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(WebPubSubSkuTier tier) {
             return tier(Either.ofRight(tier));
         }

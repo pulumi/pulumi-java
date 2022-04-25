@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListNotificationHubKeysResult {
-    /**
-     * KeyName of the created AuthorizationRule
-     * 
-     */
+        /**
+         * @return KeyName of the created AuthorizationRule
+         * 
+         */
     private final @Nullable String keyName;
-    /**
-     * PrimaryConnectionString of the AuthorizationRule.
-     * 
-     */
+        /**
+         * @return PrimaryConnectionString of the AuthorizationRule.
+         * 
+         */
     private final @Nullable String primaryConnectionString;
-    /**
-     * PrimaryKey of the created AuthorizationRule.
-     * 
-     */
+        /**
+         * @return PrimaryKey of the created AuthorizationRule.
+         * 
+         */
     private final @Nullable String primaryKey;
-    /**
-     * SecondaryConnectionString of the created AuthorizationRule
-     * 
-     */
+        /**
+         * @return SecondaryConnectionString of the created AuthorizationRule
+         * 
+         */
     private final @Nullable String secondaryConnectionString;
-    /**
-     * SecondaryKey of the created AuthorizationRule
-     * 
-     */
+        /**
+         * @return SecondaryKey of the created AuthorizationRule
+         * 
+         */
     private final @Nullable String secondaryKey;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class ListNotificationHubKeysResult {
     }
 
     /**
-     * KeyName of the created AuthorizationRule
+     * @return KeyName of the created AuthorizationRule
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * PrimaryConnectionString of the AuthorizationRule.
+     * @return PrimaryConnectionString of the AuthorizationRule.
      * 
-    */
+     */
     public Optional<String> primaryConnectionString() {
         return Optional.ofNullable(this.primaryConnectionString);
     }
     /**
-     * PrimaryKey of the created AuthorizationRule.
+     * @return PrimaryKey of the created AuthorizationRule.
      * 
-    */
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
-     * SecondaryConnectionString of the created AuthorizationRule
+     * @return SecondaryConnectionString of the created AuthorizationRule
      * 
-    */
+     */
     public Optional<String> secondaryConnectionString() {
         return Optional.ofNullable(this.secondaryConnectionString);
     }
     /**
-     * SecondaryKey of the created AuthorizationRule
+     * @return SecondaryKey of the created AuthorizationRule
      * 
-    */
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

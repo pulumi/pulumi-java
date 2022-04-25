@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTagByApiResult {
-    /**
-     * Tag name.
-     * 
-     */
+        /**
+         * @return Tag name.
+         * 
+         */
     private final String displayName;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class GetTagByApiResult {
     }
 
     /**
-     * Tag name.
+     * @return Tag name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

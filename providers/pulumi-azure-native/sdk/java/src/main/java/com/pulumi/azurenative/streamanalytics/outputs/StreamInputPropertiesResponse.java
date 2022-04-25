@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StreamInputPropertiesResponse {
-    /**
-     * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable Object datasource;
-    /**
-     * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
-     * 
-     */
+        /**
+         * @return Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
+         * 
+         */
     private final DiagnosticsResponse diagnostics;
-    /**
-     * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
-     * 
-     */
+        /**
+         * @return The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+         * 
+         */
     private final String etag;
-    /**
-     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable Object serialization;
-    /**
-     * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;Stream&#39;.
-     * 
-     */
+        /**
+         * @return Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Stream&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,38 +61,38 @@ public final class StreamInputPropertiesResponse {
     }
 
     /**
-     * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
+     * @return Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<Object> datasource() {
         return Optional.ofNullable(this.datasource);
     }
     /**
-     * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
+     * @return Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
-    */
+     */
     public DiagnosticsResponse diagnostics() {
         return this.diagnostics;
     }
     /**
-     * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * @return The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<Object> serialization() {
         return Optional.ofNullable(this.serialization);
     }
     /**
-     * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Stream&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

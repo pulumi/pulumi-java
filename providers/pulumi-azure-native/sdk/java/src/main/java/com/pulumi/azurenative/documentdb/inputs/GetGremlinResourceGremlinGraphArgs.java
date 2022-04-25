@@ -19,6 +19,10 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Cosmos DB database name.
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -41,6 +49,10 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
     @Import(name="graphName", required=true)
     private String graphName;
 
+    /**
+     * @return Cosmos DB graph name.
+     * 
+     */
     public String graphName() {
         return this.graphName;
     }
@@ -52,6 +64,10 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetGremlinResourceGremlinGraphArgs extends com.pulumi.resourc
             $ = new GetGremlinResourceGremlinGraphArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param databaseName Cosmos DB database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param graphName Cosmos DB graph name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder graphName(String graphName) {
             $.graphName = graphName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

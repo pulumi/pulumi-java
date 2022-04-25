@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumeReferenceResponse {
-    /**
-     * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
-     * 
-     */
+        /**
+         * @return The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+         * 
+         */
     private final String destinationPath;
-    /**
-     * Name of the volume being referenced.
-     * 
-     */
+        /**
+         * @return Name of the volume being referenced.
+         * 
+         */
     private final String name;
-    /**
-     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
-     * 
-     */
+        /**
+         * @return The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+         * 
+         */
     private final @Nullable Boolean readOnly;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class VolumeReferenceResponse {
     }
 
     /**
-     * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
+     * @return The path within the container at which the volume should be mounted. Only valid path characters are allowed.
      * 
-    */
+     */
     public String destinationPath() {
         return this.destinationPath;
     }
     /**
-     * Name of the volume being referenced.
+     * @return Name of the volume being referenced.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The flag indicating whether the volume is read only. Default is &#39;false&#39;.
+     * @return The flag indicating whether the volume is read only. Default is &#39;false&#39;.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }

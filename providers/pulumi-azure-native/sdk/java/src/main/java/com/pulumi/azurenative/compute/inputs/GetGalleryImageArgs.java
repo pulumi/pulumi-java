@@ -19,6 +19,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryImageName", required=true)
     private String galleryImageName;
 
+    /**
+     * @return The name of the gallery image definition to be retrieved.
+     * 
+     */
     public String galleryImageName() {
         return this.galleryImageName;
     }
@@ -30,6 +34,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="galleryName", required=true)
     private String galleryName;
 
+    /**
+     * @return The name of the Shared Image Gallery from which the Image Definitions are to be retrieved.
+     * 
+     */
     public String galleryName() {
         return this.galleryName;
     }
@@ -41,6 +49,10 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetGalleryImageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetGalleryImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param galleryImageName The name of the gallery image definition to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageName(String galleryImageName) {
             $.galleryImageName = galleryImageName;
             return this;
         }
 
+        /**
+         * @param galleryName The name of the Shared Image Gallery from which the Image Definitions are to be retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

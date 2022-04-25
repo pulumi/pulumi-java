@@ -22,6 +22,10 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
     @Import(name="networkManagerName", required=true)
     private String networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public String networkManagerName() {
         return this.networkManagerName;
     }
@@ -33,6 +37,10 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
     @Import(name="regions")
     private @Nullable List<String> regions;
 
+    /**
+     * @return List of regions.
+     * 
+     */
     public Optional<List<String>> regions() {
         return Optional.ofNullable(this.regions);
     }
@@ -44,6 +52,10 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -86,25 +102,55 @@ public final class ListActiveSecurityUserRuleArgs extends com.pulumi.resources.I
             $ = new ListActiveSecurityUserRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param regions List of regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(@Nullable List<String> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions List of regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

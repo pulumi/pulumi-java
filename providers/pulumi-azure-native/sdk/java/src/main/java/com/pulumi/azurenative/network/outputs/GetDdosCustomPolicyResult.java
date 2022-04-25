@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDdosCustomPolicyResult {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The protocol-specific DDoS policy customization parameters.
-     * 
-     */
+        /**
+         * @return The protocol-specific DDoS policy customization parameters.
+         * 
+         */
     private final @Nullable List<ProtocolCustomSettingsFormatResponse> protocolCustomSettings;
-    /**
-     * The provisioning state of the DDoS custom policy resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the DDoS custom policy resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
-     * 
-     */
+        /**
+         * @return The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
+         * 
+         */
     private final List<SubResourceResponse> publicIPAddresses;
-    /**
-     * The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
-     * 
-     */
+        /**
+         * @return The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
+         * 
+         */
     private final String resourceGuid;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetDdosCustomPolicyResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The protocol-specific DDoS policy customization parameters.
+     * @return The protocol-specific DDoS policy customization parameters.
      * 
-    */
+     */
     public List<ProtocolCustomSettingsFormatResponse> protocolCustomSettings() {
         return this.protocolCustomSettings == null ? List.of() : this.protocolCustomSettings;
     }
     /**
-     * The provisioning state of the DDoS custom policy resource.
+     * @return The provisioning state of the DDoS custom policy resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
+     * @return The list of public IPs associated with the DDoS custom policy resource. This list is read-only.
      * 
-    */
+     */
     public List<SubResourceResponse> publicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
-     * The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
+     * @return The resource GUID property of the DDoS custom policy resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

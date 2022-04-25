@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetClientTokenResult {
-    /**
-     * OAuth token for Azure Management API and SDK authentication.
-     * 
-     */
+        /**
+         * @return OAuth token for Azure Management API and SDK authentication.
+         * 
+         */
     private final String token;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class GetClientTokenResult {
     }
 
     /**
-     * OAuth token for Azure Management API and SDK authentication.
+     * @return OAuth token for Azure Management API and SDK authentication.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

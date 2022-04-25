@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicyFilterRuleActionResponse {
-    /**
-     * The type of action.
-     * 
-     */
+        /**
+         * @return The type of action.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FirewallPolicyFilterRuleActionResponse {
     }
 
     /**
-     * The type of action.
+     * @return The type of action.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

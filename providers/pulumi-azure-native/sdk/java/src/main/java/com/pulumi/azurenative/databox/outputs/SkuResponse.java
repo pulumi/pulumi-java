@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The display name of the sku.
-     * 
-     */
+        /**
+         * @return The display name of the sku.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The sku family.
-     * 
-     */
+        /**
+         * @return The sku family.
+         * 
+         */
     private final @Nullable String family;
-    /**
-     * The sku name.
-     * 
-     */
+        /**
+         * @return The sku name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class SkuResponse {
     }
 
     /**
-     * The display name of the sku.
+     * @return The display name of the sku.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The sku family.
+     * @return The sku family.
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The sku name.
+     * @return The sku name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

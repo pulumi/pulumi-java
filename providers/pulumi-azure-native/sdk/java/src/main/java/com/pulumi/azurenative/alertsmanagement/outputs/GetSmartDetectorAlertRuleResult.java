@@ -16,70 +16,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSmartDetectorAlertRuleResult {
-    /**
-     * The alert rule actions.
-     * 
-     */
+        /**
+         * @return The alert rule actions.
+         * 
+         */
     private final ActionGroupsInformationResponse actionGroups;
-    /**
-     * The alert rule description.
-     * 
-     */
+        /**
+         * @return The alert rule description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The alert rule&#39;s detector.
-     * 
-     */
+        /**
+         * @return The alert rule&#39;s detector.
+         * 
+         */
     private final DetectorResponse detector;
-    /**
-     * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
-     * 
-     */
+        /**
+         * @return The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
+         * 
+         */
     private final String frequency;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The alert rule resources scope.
-     * 
-     */
+        /**
+         * @return The alert rule resources scope.
+         * 
+         */
     private final List<String> scope;
-    /**
-     * The alert rule severity.
-     * 
-     */
+        /**
+         * @return The alert rule severity.
+         * 
+         */
     private final String severity;
-    /**
-     * The alert rule state.
-     * 
-     */
+        /**
+         * @return The alert rule state.
+         * 
+         */
     private final String state;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The alert rule throttling information.
-     * 
-     */
+        /**
+         * @return The alert rule throttling information.
+         * 
+         */
     private final @Nullable ThrottlingInformationResponse throttling;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -113,93 +113,93 @@ public final class GetSmartDetectorAlertRuleResult {
     }
 
     /**
-     * The alert rule actions.
+     * @return The alert rule actions.
      * 
-    */
+     */
     public ActionGroupsInformationResponse actionGroups() {
         return this.actionGroups;
     }
     /**
-     * The alert rule description.
+     * @return The alert rule description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The alert rule&#39;s detector.
+     * @return The alert rule&#39;s detector.
      * 
-    */
+     */
     public DetectorResponse detector() {
         return this.detector;
     }
     /**
-     * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
+     * @return The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
      * 
-    */
+     */
     public String frequency() {
         return this.frequency;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The alert rule resources scope.
+     * @return The alert rule resources scope.
      * 
-    */
+     */
     public List<String> scope() {
         return this.scope;
     }
     /**
-     * The alert rule severity.
+     * @return The alert rule severity.
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
     /**
-     * The alert rule state.
+     * @return The alert rule state.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The alert rule throttling information.
+     * @return The alert rule throttling information.
      * 
-    */
+     */
     public Optional<ThrottlingInformationResponse> throttling() {
         return Optional.ofNullable(this.throttling);
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

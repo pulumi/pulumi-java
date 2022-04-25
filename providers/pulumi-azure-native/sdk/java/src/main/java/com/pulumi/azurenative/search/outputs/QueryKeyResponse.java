@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class QueryKeyResponse {
-    /**
-     * The value of the query API key.
-     * 
-     */
+        /**
+         * @return The value of the query API key.
+         * 
+         */
     private final String key;
-    /**
-     * The name of the query API key; may be empty.
-     * 
-     */
+        /**
+         * @return The name of the query API key; may be empty.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class QueryKeyResponse {
     }
 
     /**
-     * The value of the query API key.
+     * @return The value of the query API key.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The name of the query API key; may be empty.
+     * @return The name of the query API key; may be empty.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

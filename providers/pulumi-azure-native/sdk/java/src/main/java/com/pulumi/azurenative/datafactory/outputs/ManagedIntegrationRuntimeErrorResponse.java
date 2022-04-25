@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ManagedIntegrationRuntimeErrorResponse {
-    /**
-     * Error code.
-     * 
-     */
+        /**
+         * @return Error code.
+         * 
+         */
     private final String code;
-    /**
-     * Error message.
-     * 
-     */
+        /**
+         * @return Error message.
+         * 
+         */
     private final String message;
-    /**
-     * Managed integration runtime error parameters.
-     * 
-     */
+        /**
+         * @return Managed integration runtime error parameters.
+         * 
+         */
     private final List<String> parameters;
-    /**
-     * The time when the error occurred.
-     * 
-     */
+        /**
+         * @return The time when the error occurred.
+         * 
+         */
     private final String time;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class ManagedIntegrationRuntimeErrorResponse {
     }
 
     /**
-     * Error code.
+     * @return Error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Error message.
+     * @return Error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * Managed integration runtime error parameters.
+     * @return Managed integration runtime error parameters.
      * 
-    */
+     */
     public List<String> parameters() {
         return this.parameters;
     }
     /**
-     * The time when the error occurred.
+     * @return The time when the error occurred.
      * 
-    */
+     */
     public String time() {
         return this.time;
     }

@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
-    /**
-     * Databases to migrate
-     * 
-     */
+        /**
+         * @return Databases to migrate
+         * 
+         */
     private final List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases;
-    /**
-     * Information for connecting to source SQL server
-     * 
-     */
+        /**
+         * @return Information for connecting to source SQL server
+         * 
+         */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
-    /**
-     * Information for connecting to target
-     * 
-     */
+        /**
+         * @return Information for connecting to target
+         * 
+         */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
     }
 
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
-    */
+     */
     public List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
-     * Information for connecting to source SQL server
+     * @return Information for connecting to source SQL server
      * 
-    */
+     */
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Information for connecting to target
+     * @return Information for connecting to target
      * 
-    */
+     */
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

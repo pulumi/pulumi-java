@@ -32,6 +32,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
     @Import(name="count", required=true)
     private Output<Integer> count;
 
+    /**
+     * @return Number of agents (VMs) to host docker containers.
+     * 
+     */
     public Output<Integer> count() {
         return this.count;
     }
@@ -43,6 +47,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Unique name of the pool profile in the context of the subscription and resource group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -54,6 +62,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
     @Import(name="osType")
     private @Nullable Output<Either<String,OSType>> osType;
 
+    /**
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * 
+     */
     public Optional<Output<Either<String,OSType>>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -65,6 +77,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
     @Import(name="role")
     private @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
 
+    /**
+     * @return Define the role of the AgentPoolProfile.
+     * 
+     */
     public Optional<Output<Either<String,OpenShiftAgentPoolProfileRole>>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -76,6 +92,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
     @Import(name="subnetCidr")
     private @Nullable Output<String> subnetCidr;
 
+    /**
+     * @return Subnet CIDR for the peering.
+     * 
+     */
     public Optional<Output<String>> subnetCidr() {
         return Optional.ofNullable(this.subnetCidr);
     }
@@ -87,6 +107,10 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
     @Import(name="vmSize", required=true)
     private Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize;
 
+    /**
+     * @return Size of agent VMs.
+     * 
+     */
     public Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize() {
         return this.vmSize;
     }
@@ -120,80 +144,188 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
             $ = new OpenShiftManagedClusterAgentPoolProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Number of agents (VMs) to host docker containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Number of agents (VMs) to host docker containers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param name Unique name of the pool profile in the context of the subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name of the pool profile in the context of the subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OSType> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OSType osType) {
             return osType(Either.ofRight(osType));
         }
 
+        /**
+         * @param role Define the role of the AgentPoolProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role Define the role of the AgentPoolProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Either<String,OpenShiftAgentPoolProfileRole> role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param role Define the role of the AgentPoolProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Either.ofLeft(role));
         }
 
+        /**
+         * @param role Define the role of the AgentPoolProfile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(OpenShiftAgentPoolProfileRole role) {
             return role(Either.ofRight(role));
         }
 
+        /**
+         * @param subnetCidr Subnet CIDR for the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
             $.subnetCidr = subnetCidr;
             return this;
         }
 
+        /**
+         * @param subnetCidr Subnet CIDR for the peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetCidr(String subnetCidr) {
             return subnetCidr(Output.of(subnetCidr));
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
             return vmSize(Output.of(vmSize));
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(String vmSize) {
             return vmSize(Either.ofLeft(vmSize));
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(OpenShiftContainerServiceVMSize vmSize) {
             return vmSize(Either.ofRight(vmSize));
         }

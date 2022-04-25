@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BatchEndpointResponse {
-    /**
-     * Enum to determine endpoint authentication mode.
-     * 
-     */
+        /**
+         * @return Enum to determine endpoint authentication mode.
+         * 
+         */
     private final @Nullable String authMode;
-    /**
-     * Description of the inference endpoint.
-     * 
-     */
+        /**
+         * @return Description of the inference endpoint.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Property dictionary. Properties can be added, but not removed or altered.
-     * 
-     */
+        /**
+         * @return Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Endpoint URI.
-     * 
-     */
+        /**
+         * @return Endpoint URI.
+         * 
+         */
     private final String scoringUri;
-    /**
-     * Endpoint Swagger URI.
-     * 
-     */
+        /**
+         * @return Endpoint Swagger URI.
+         * 
+         */
     private final String swaggerUri;
-    /**
-     * Traffic rules on how the traffic will be routed across deployments.
-     * 
-     */
+        /**
+         * @return Traffic rules on how the traffic will be routed across deployments.
+         * 
+         */
     private final @Nullable Map<String,Integer> traffic;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class BatchEndpointResponse {
     }
 
     /**
-     * Enum to determine endpoint authentication mode.
+     * @return Enum to determine endpoint authentication mode.
      * 
-    */
+     */
     public Optional<String> authMode() {
         return Optional.ofNullable(this.authMode);
     }
     /**
-     * Description of the inference endpoint.
+     * @return Description of the inference endpoint.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Property dictionary. Properties can be added, but not removed or altered.
+     * @return Property dictionary. Properties can be added, but not removed or altered.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Endpoint URI.
+     * @return Endpoint URI.
      * 
-    */
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
     /**
-     * Endpoint Swagger URI.
+     * @return Endpoint Swagger URI.
      * 
-    */
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
-     * Traffic rules on how the traffic will be routed across deployments.
+     * @return Traffic rules on how the traffic will be routed across deployments.
      * 
-    */
+     */
     public Map<String,Integer> traffic() {
         return this.traffic == null ? Map.of() : this.traffic;
     }

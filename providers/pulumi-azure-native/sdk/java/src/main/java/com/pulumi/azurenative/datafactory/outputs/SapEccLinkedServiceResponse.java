@@ -19,51 +19,51 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SapEccLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable String encryptedCredential;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password for Basic authentication.
-     * 
-     */
+        /**
+         * @return The password for Basic authentication.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;SapEcc&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;SapEcc&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
+         * 
+         */
     private final String url;
-    /**
-     * The username for Basic authentication. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The username for Basic authentication. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -89,66 +89,66 @@ public final class SapEccLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<String> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password for Basic authentication.
+     * @return The password for Basic authentication.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;SapEcc&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
+     * @return The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public String url() {
         return this.url;
     }
     /**
-     * The username for Basic authentication. Type: string (or Expression with resultType string).
+     * @return The username for Basic authentication. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

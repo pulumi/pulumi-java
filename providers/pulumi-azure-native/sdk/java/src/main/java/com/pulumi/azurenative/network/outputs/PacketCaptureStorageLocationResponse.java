@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PacketCaptureStorageLocationResponse {
-    /**
-     * A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
-     * 
-     */
+        /**
+         * @return A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
+         * 
+         */
     private final @Nullable String filePath;
-    /**
-     * The ID of the storage account to save the packet capture session. Required if no local file path is provided.
-     * 
-     */
+        /**
+         * @return The ID of the storage account to save the packet capture session. Required if no local file path is provided.
+         * 
+         */
     private final @Nullable String storageId;
-    /**
-     * The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
-     * 
-     */
+        /**
+         * @return The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
+         * 
+         */
     private final @Nullable String storagePath;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class PacketCaptureStorageLocationResponse {
     }
 
     /**
-     * A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
+     * @return A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
      * 
-    */
+     */
     public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
-     * The ID of the storage account to save the packet capture session. Required if no local file path is provided.
+     * @return The ID of the storage account to save the packet capture session. Required if no local file path is provided.
      * 
-    */
+     */
     public Optional<String> storageId() {
         return Optional.ofNullable(this.storageId);
     }
     /**
-     * The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
+     * @return The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
      * 
-    */
+     */
     public Optional<String> storagePath() {
         return Optional.ofNullable(this.storagePath);
     }

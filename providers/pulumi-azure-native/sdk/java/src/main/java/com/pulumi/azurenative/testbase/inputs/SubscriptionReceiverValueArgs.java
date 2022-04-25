@@ -26,6 +26,10 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role of the notification receiver.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -37,6 +41,10 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="subscriptionId")
     private @Nullable Output<String> subscriptionId;
 
+    /**
+     * @return The subscription id of the notification receiver.
+     * 
+     */
     public Optional<Output<String>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -48,6 +56,10 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
     @Import(name="subscriptionName")
     private @Nullable Output<String> subscriptionName;
 
+    /**
+     * @return The subscription name of the notification receiver.
+     * 
+     */
     public Optional<Output<String>> subscriptionName() {
         return Optional.ofNullable(this.subscriptionName);
     }
@@ -78,29 +90,65 @@ public final class SubscriptionReceiverValueArgs extends com.pulumi.resources.Re
             $ = new SubscriptionReceiverValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param role The role of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param subscriptionId The subscription id of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription id of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param subscriptionName The subscription name of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
             $.subscriptionName = subscriptionName;
             return this;
         }
 
+        /**
+         * @param subscriptionName The subscription name of the notification receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionName(String subscriptionName) {
             return subscriptionName(Output.of(subscriptionName));
         }

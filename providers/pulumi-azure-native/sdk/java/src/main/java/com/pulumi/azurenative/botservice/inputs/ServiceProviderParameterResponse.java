@@ -24,6 +24,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="default", required=true)
     private String default_;
 
+    /**
+     * @return Default Name for the Service Provider
+     * 
+     */
     public String default_() {
         return this.default_;
     }
@@ -35,6 +39,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description of the Service Provider
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -46,6 +54,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display Name of the Service Provider
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -57,6 +69,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="helpUrl", required=true)
     private String helpUrl;
 
+    /**
+     * @return Help Url for the  Service Provider
+     * 
+     */
     public String helpUrl() {
         return this.helpUrl;
     }
@@ -68,6 +84,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="metadata", required=true)
     private ServiceProviderParameterResponseMetadata metadata;
 
+    /**
+     * @return Meta data for the Service Provider
+     * 
+     */
     public ServiceProviderParameterResponseMetadata metadata() {
         return this.metadata;
     }
@@ -79,6 +99,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Service Provider
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -90,6 +114,10 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the Service Provider
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -124,36 +152,78 @@ public final class ServiceProviderParameterResponse extends com.pulumi.resources
             $ = new ServiceProviderParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ Default Name for the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(String default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param description Description of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Display Name of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param helpUrl Help Url for the  Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder helpUrl(String helpUrl) {
             $.helpUrl = helpUrl;
             return this;
         }
 
+        /**
+         * @param metadata Meta data for the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ServiceProviderParameterResponseMetadata metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param name Name of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of the Service Provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -42,6 +42,10 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -53,6 +57,10 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="formatSettings")
     private @Nullable Output<BinaryReadSettingsArgs> formatSettings;
 
+    /**
+     * @return Binary format settings.
+     * 
+     */
     public Optional<Output<BinaryReadSettingsArgs>> formatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
@@ -64,6 +72,10 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -75,6 +87,10 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
     private @Nullable Output<Object> sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -86,6 +102,10 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
     private @Nullable Output<Object> sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -97,6 +117,10 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storeSettings")
     private @Nullable Output<Object> storeSettings;
 
+    /**
+     * @return Binary store settings.
+     * 
+     */
     public Optional<Output<Object>> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -109,6 +133,11 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;BinarySource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -143,65 +172,151 @@ public final class BinarySourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BinarySourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param formatSettings Binary format settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatSettings(@Nullable Output<BinaryReadSettingsArgs> formatSettings) {
             $.formatSettings = formatSettings;
             return this;
         }
 
+        /**
+         * @param formatSettings Binary format settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatSettings(BinaryReadSettingsArgs formatSettings) {
             return formatSettings(Output.of(formatSettings));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(Object sourceRetryCount) {
             return sourceRetryCount(Output.of(sourceRetryCount));
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(Object sourceRetryWait) {
             return sourceRetryWait(Output.of(sourceRetryWait));
         }
 
+        /**
+         * @param storeSettings Binary store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
             $.storeSettings = storeSettings;
             return this;
         }
 
+        /**
+         * @param storeSettings Binary store settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storeSettings(Object storeSettings) {
             return storeSettings(Output.of(storeSettings));
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;BinarySource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;BinarySource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -26,6 +26,10 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port number exposed within the container group.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -37,6 +41,10 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The protocol associated with the port.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -66,11 +74,23 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
             $ = new ContainerPortResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The port number exposed within the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param protocol The protocol associated with the port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;

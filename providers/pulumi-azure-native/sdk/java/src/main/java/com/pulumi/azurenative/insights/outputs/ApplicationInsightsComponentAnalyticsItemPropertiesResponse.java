@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
-    /**
-     * A function alias, used when the type of the item is Function
-     * 
-     */
+        /**
+         * @return A function alias, used when the type of the item is Function
+         * 
+         */
     private final @Nullable String functionAlias;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
     }
 
     /**
-     * A function alias, used when the type of the item is Function
+     * @return A function alias, used when the type of the item is Function
      * 
-    */
+     */
     public Optional<String> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }

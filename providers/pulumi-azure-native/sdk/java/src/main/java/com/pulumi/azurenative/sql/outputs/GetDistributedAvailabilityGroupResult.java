@@ -11,70 +11,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDistributedAvailabilityGroupResult {
-    /**
-     * The distributed availability group id
-     * 
-     */
+        /**
+         * @return The distributed availability group id
+         * 
+         */
     private final String distributedAvailabilityGroupId;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The last hardened lsn
-     * 
-     */
+        /**
+         * @return The last hardened lsn
+         * 
+         */
     private final String lastHardenedLsn;
-    /**
-     * The link state
-     * 
-     */
+        /**
+         * @return The link state
+         * 
+         */
     private final String linkState;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The primary availability group name
-     * 
-     */
+        /**
+         * @return The primary availability group name
+         * 
+         */
     private final @Nullable String primaryAvailabilityGroupName;
-    /**
-     * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
-     * 
-     */
+        /**
+         * @return The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+         * 
+         */
     private final @Nullable String replicationMode;
-    /**
-     * The secondary availability group name
-     * 
-     */
+        /**
+         * @return The secondary availability group name
+         * 
+         */
     private final @Nullable String secondaryAvailabilityGroupName;
-    /**
-     * The source endpoint
-     * 
-     */
+        /**
+         * @return The source endpoint
+         * 
+         */
     private final @Nullable String sourceEndpoint;
-    /**
-     * The source replica id
-     * 
-     */
+        /**
+         * @return The source replica id
+         * 
+         */
     private final String sourceReplicaId;
-    /**
-     * The name of the target database
-     * 
-     */
+        /**
+         * @return The name of the target database
+         * 
+         */
     private final @Nullable String targetDatabase;
-    /**
-     * The target replica id
-     * 
-     */
+        /**
+         * @return The target replica id
+         * 
+         */
     private final String targetReplicaId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -108,93 +108,93 @@ public final class GetDistributedAvailabilityGroupResult {
     }
 
     /**
-     * The distributed availability group id
+     * @return The distributed availability group id
      * 
-    */
+     */
     public String distributedAvailabilityGroupId() {
         return this.distributedAvailabilityGroupId;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last hardened lsn
+     * @return The last hardened lsn
      * 
-    */
+     */
     public String lastHardenedLsn() {
         return this.lastHardenedLsn;
     }
     /**
-     * The link state
+     * @return The link state
      * 
-    */
+     */
     public String linkState() {
         return this.linkState;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The primary availability group name
+     * @return The primary availability group name
      * 
-    */
+     */
     public Optional<String> primaryAvailabilityGroupName() {
         return Optional.ofNullable(this.primaryAvailabilityGroupName);
     }
     /**
-     * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
+     * @return The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
-    */
+     */
     public Optional<String> replicationMode() {
         return Optional.ofNullable(this.replicationMode);
     }
     /**
-     * The secondary availability group name
+     * @return The secondary availability group name
      * 
-    */
+     */
     public Optional<String> secondaryAvailabilityGroupName() {
         return Optional.ofNullable(this.secondaryAvailabilityGroupName);
     }
     /**
-     * The source endpoint
+     * @return The source endpoint
      * 
-    */
+     */
     public Optional<String> sourceEndpoint() {
         return Optional.ofNullable(this.sourceEndpoint);
     }
     /**
-     * The source replica id
+     * @return The source replica id
      * 
-    */
+     */
     public String sourceReplicaId() {
         return this.sourceReplicaId;
     }
     /**
-     * The name of the target database
+     * @return The name of the target database
      * 
-    */
+     */
     public Optional<String> targetDatabase() {
         return Optional.ofNullable(this.targetDatabase);
     }
     /**
-     * The target replica id
+     * @return The target replica id
      * 
-    */
+     */
     public String targetReplicaId() {
         return this.targetReplicaId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

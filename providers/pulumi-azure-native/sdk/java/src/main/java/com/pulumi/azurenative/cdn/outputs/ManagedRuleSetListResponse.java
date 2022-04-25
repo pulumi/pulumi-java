@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedRuleSetListResponse {
-    /**
-     * List of rule sets.
-     * 
-     */
+        /**
+         * @return List of rule sets.
+         * 
+         */
     private final @Nullable List<ManagedRuleSetResponse> managedRuleSets;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ManagedRuleSetListResponse {
     }
 
     /**
-     * List of rule sets.
+     * @return List of rule sets.
      * 
-    */
+     */
     public List<ManagedRuleSetResponse> managedRuleSets() {
         return this.managedRuleSets == null ? List.of() : this.managedRuleSets;
     }

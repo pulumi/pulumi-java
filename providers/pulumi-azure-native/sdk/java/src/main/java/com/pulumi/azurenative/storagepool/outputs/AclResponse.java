@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class AclResponse {
-    /**
-     * iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
-     * 
-     */
+        /**
+         * @return iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
+         * 
+         */
     private final String initiatorIqn;
-    /**
-     * List of LUN names mapped to the ACL.
-     * 
-     */
+        /**
+         * @return List of LUN names mapped to the ACL.
+         * 
+         */
     private final List<String> mappedLuns;
-    /**
-     * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
-     * 
-     */
+        /**
+         * @return Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+         * 
+         */
     private final String password;
-    /**
-     * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
-     * 
-     */
+        /**
+         * @return Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class AclResponse {
     }
 
     /**
-     * iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
+     * @return iSCSI initiator IQN (iSCSI Qualified Name); example: &#34;iqn.2005-03.org.iscsi:client&#34;.
      * 
-    */
+     */
     public String initiatorIqn() {
         return this.initiatorIqn;
     }
     /**
-     * List of LUN names mapped to the ACL.
+     * @return List of LUN names mapped to the ACL.
      * 
-    */
+     */
     public List<String> mappedLuns() {
         return this.mappedLuns;
     }
     /**
-     * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+     * @return Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+     * @return Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

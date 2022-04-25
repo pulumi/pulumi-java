@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DiagnosticsStorageAccountConfigResponse {
-    /**
-     * The blob endpoint of the azure storage account.
-     * 
-     */
+        /**
+         * @return The blob endpoint of the azure storage account.
+         * 
+         */
     private final String blobEndpoint;
-    /**
-     * The protected diagnostics storage key name.
-     * 
-     */
+        /**
+         * @return The protected diagnostics storage key name.
+         * 
+         */
     private final String protectedAccountKeyName;
-    /**
-     * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
-     * 
-     */
+        /**
+         * @return The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+         * 
+         */
     private final @Nullable String protectedAccountKeyName2;
-    /**
-     * The queue endpoint of the azure storage account.
-     * 
-     */
+        /**
+         * @return The queue endpoint of the azure storage account.
+         * 
+         */
     private final String queueEndpoint;
-    /**
-     * The Azure storage account name.
-     * 
-     */
+        /**
+         * @return The Azure storage account name.
+         * 
+         */
     private final String storageAccountName;
-    /**
-     * The table endpoint of the azure storage account.
-     * 
-     */
+        /**
+         * @return The table endpoint of the azure storage account.
+         * 
+         */
     private final String tableEndpoint;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class DiagnosticsStorageAccountConfigResponse {
     }
 
     /**
-     * The blob endpoint of the azure storage account.
+     * @return The blob endpoint of the azure storage account.
      * 
-    */
+     */
     public String blobEndpoint() {
         return this.blobEndpoint;
     }
     /**
-     * The protected diagnostics storage key name.
+     * @return The protected diagnostics storage key name.
      * 
-    */
+     */
     public String protectedAccountKeyName() {
         return this.protectedAccountKeyName;
     }
     /**
-     * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
+     * @return The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
      * 
-    */
+     */
     public Optional<String> protectedAccountKeyName2() {
         return Optional.ofNullable(this.protectedAccountKeyName2);
     }
     /**
-     * The queue endpoint of the azure storage account.
+     * @return The queue endpoint of the azure storage account.
      * 
-    */
+     */
     public String queueEndpoint() {
         return this.queueEndpoint;
     }
     /**
-     * The Azure storage account name.
+     * @return The Azure storage account name.
      * 
-    */
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
     /**
-     * The table endpoint of the azure storage account.
+     * @return The table endpoint of the azure storage account.
      * 
-    */
+     */
     public String tableEndpoint() {
         return this.tableEndpoint;
     }

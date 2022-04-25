@@ -24,6 +24,10 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -36,6 +40,11 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -47,6 +56,10 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username to be presented as part of the credentials.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -77,16 +90,35 @@ public final class UsernamePasswordCredentialsResponse extends com.pulumi.resour
             $ = new UsernamePasswordCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param username Username to be presented as part of the credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

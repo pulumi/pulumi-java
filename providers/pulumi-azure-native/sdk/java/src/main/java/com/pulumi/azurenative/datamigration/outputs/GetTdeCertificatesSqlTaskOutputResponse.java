@@ -12,15 +12,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTdeCertificatesSqlTaskOutputResponse {
-    /**
-     * Mapping from certificate name to base 64 encoded format.
-     * 
-     */
+        /**
+         * @return Mapping from certificate name to base 64 encoded format.
+         * 
+         */
     private final Map<String,List<String>> base64EncodedCertificates;
-    /**
-     * Validation errors
-     * 
-     */
+        /**
+         * @return Validation errors
+         * 
+         */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
     }
 
     /**
-     * Mapping from certificate name to base 64 encoded format.
+     * @return Mapping from certificate name to base 64 encoded format.
      * 
-    */
+     */
     public Map<String,List<String>> base64EncodedCertificates() {
         return this.base64EncodedCertificates;
     }
     /**
-     * Validation errors
+     * @return Validation errors
      * 
-    */
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }

@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HealthProbeParametersResponse {
-    /**
-     * The number of seconds between health probes.Default is 240sec.
-     * 
-     */
+        /**
+         * @return The number of seconds between health probes.Default is 240sec.
+         * 
+         */
     private final @Nullable Integer probeIntervalInSeconds;
-    /**
-     * The path relative to the origin that is used to determine the health of the origin.
-     * 
-     */
+        /**
+         * @return The path relative to the origin that is used to determine the health of the origin.
+         * 
+         */
     private final @Nullable String probePath;
-    /**
-     * Protocol to use for health probe.
-     * 
-     */
+        /**
+         * @return Protocol to use for health probe.
+         * 
+         */
     private final @Nullable String probeProtocol;
-    /**
-     * The type of health probe request that is made.
-     * 
-     */
+        /**
+         * @return The type of health probe request that is made.
+         * 
+         */
     private final @Nullable String probeRequestType;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class HealthProbeParametersResponse {
     }
 
     /**
-     * The number of seconds between health probes.Default is 240sec.
+     * @return The number of seconds between health probes.Default is 240sec.
      * 
-    */
+     */
     public Optional<Integer> probeIntervalInSeconds() {
         return Optional.ofNullable(this.probeIntervalInSeconds);
     }
     /**
-     * The path relative to the origin that is used to determine the health of the origin.
+     * @return The path relative to the origin that is used to determine the health of the origin.
      * 
-    */
+     */
     public Optional<String> probePath() {
         return Optional.ofNullable(this.probePath);
     }
     /**
-     * Protocol to use for health probe.
+     * @return Protocol to use for health probe.
      * 
-    */
+     */
     public Optional<String> probeProtocol() {
         return Optional.ofNullable(this.probeProtocol);
     }
     /**
-     * The type of health probe request that is made.
+     * @return The type of health probe request that is made.
      * 
-    */
+     */
     public Optional<String> probeRequestType() {
         return Optional.ofNullable(this.probeRequestType);
     }

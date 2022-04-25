@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkloadNetworkDnsZoneResult {
-    /**
-     * Display name of the DNS Zone.
-     * 
-     */
+        /**
+         * @return Display name of the DNS Zone.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * DNS Server IP array of the DNS Zone.
-     * 
-     */
+        /**
+         * @return DNS Server IP array of the DNS Zone.
+         * 
+         */
     private final @Nullable List<String> dnsServerIps;
-    /**
-     * Number of DNS Services using the DNS zone.
-     * 
-     */
+        /**
+         * @return Number of DNS Services using the DNS zone.
+         * 
+         */
     private final @Nullable Double dnsServices;
-    /**
-     * Domain names of the DNS Zone.
-     * 
-     */
+        /**
+         * @return Domain names of the DNS Zone.
+         * 
+         */
     private final @Nullable List<String> domain;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state
-     * 
-     */
+        /**
+         * @return The provisioning state
+         * 
+         */
     private final String provisioningState;
-    /**
-     * NSX revision number.
-     * 
-     */
+        /**
+         * @return NSX revision number.
+         * 
+         */
     private final @Nullable Double revision;
-    /**
-     * Source IP of the DNS Zone.
-     * 
-     */
+        /**
+         * @return Source IP of the DNS Zone.
+         * 
+         */
     private final @Nullable String sourceIp;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetWorkloadNetworkDnsZoneResult {
     }
 
     /**
-     * Display name of the DNS Zone.
+     * @return Display name of the DNS Zone.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * DNS Server IP array of the DNS Zone.
+     * @return DNS Server IP array of the DNS Zone.
      * 
-    */
+     */
     public List<String> dnsServerIps() {
         return this.dnsServerIps == null ? List.of() : this.dnsServerIps;
     }
     /**
-     * Number of DNS Services using the DNS zone.
+     * @return Number of DNS Services using the DNS zone.
      * 
-    */
+     */
     public Optional<Double> dnsServices() {
         return Optional.ofNullable(this.dnsServices);
     }
     /**
-     * Domain names of the DNS Zone.
+     * @return Domain names of the DNS Zone.
      * 
-    */
+     */
     public List<String> domain() {
         return this.domain == null ? List.of() : this.domain;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state
+     * @return The provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * NSX revision number.
+     * @return NSX revision number.
      * 
-    */
+     */
     public Optional<Double> revision() {
         return Optional.ofNullable(this.revision);
     }
     /**
-     * Source IP of the DNS Zone.
+     * @return Source IP of the DNS Zone.
      * 
-    */
+     */
     public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

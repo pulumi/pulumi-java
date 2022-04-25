@@ -26,6 +26,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="collation")
     private @Nullable Output<String> collation;
 
+    /**
+     * @return SQL Server collation.
+     * 
+     */
     public Optional<Output<String>> collation() {
         return Optional.ofNullable(this.collation);
     }
@@ -37,6 +41,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="containerResourceId", required=true)
     private Output<String> containerResourceId;
 
+    /**
+     * @return ARM Resource id of the container resource (Azure Arc for Servers).
+     * 
+     */
     public Output<String> containerResourceId() {
         return this.containerResourceId;
     }
@@ -48,6 +56,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="currentVersion")
     private @Nullable Output<String> currentVersion;
 
+    /**
+     * @return SQL Server current version.
+     * 
+     */
     public Optional<Output<String>> currentVersion() {
         return Optional.ofNullable(this.currentVersion);
     }
@@ -59,6 +71,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="edition")
     private @Nullable Output<String> edition;
 
+    /**
+     * @return SQL Server edition.
+     * 
+     */
     public Optional<Output<String>> edition() {
         return Optional.ofNullable(this.edition);
     }
@@ -70,6 +86,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="instanceName")
     private @Nullable Output<String> instanceName;
 
+    /**
+     * @return SQL Server instance name.
+     * 
+     */
     public Optional<Output<String>> instanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -81,6 +101,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="licenseType")
     private @Nullable Output<String> licenseType;
 
+    /**
+     * @return SQL Server license type.
+     * 
+     */
     public Optional<Output<String>> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -92,6 +116,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="patchLevel")
     private @Nullable Output<String> patchLevel;
 
+    /**
+     * @return SQL Server update level.
+     * 
+     */
     public Optional<Output<String>> patchLevel() {
         return Optional.ofNullable(this.patchLevel);
     }
@@ -103,6 +131,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="productId")
     private @Nullable Output<String> productId;
 
+    /**
+     * @return SQL Server product ID.
+     * 
+     */
     public Optional<Output<String>> productId() {
         return Optional.ofNullable(this.productId);
     }
@@ -114,6 +146,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="status", required=true)
     private Output<String> status;
 
+    /**
+     * @return The cloud connectivity status.
+     * 
+     */
     public Output<String> status() {
         return this.status;
     }
@@ -125,6 +161,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="tcpDynamicPorts")
     private @Nullable Output<String> tcpDynamicPorts;
 
+    /**
+     * @return Dynamic TCP ports used by SQL Server.
+     * 
+     */
     public Optional<Output<String>> tcpDynamicPorts() {
         return Optional.ofNullable(this.tcpDynamicPorts);
     }
@@ -136,6 +176,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="tcpStaticPorts")
     private @Nullable Output<String> tcpStaticPorts;
 
+    /**
+     * @return Static TCP ports used by SQL Server.
+     * 
+     */
     public Optional<Output<String>> tcpStaticPorts() {
         return Optional.ofNullable(this.tcpStaticPorts);
     }
@@ -147,6 +191,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="vCore")
     private @Nullable Output<String> vCore;
 
+    /**
+     * @return The number of logical processors used by the SQL Server instance.
+     * 
+     */
     public Optional<Output<String>> vCore() {
         return Optional.ofNullable(this.vCore);
     }
@@ -158,6 +206,10 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return SQL Server version.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -198,119 +250,275 @@ public final class SqlServerInstancePropertiesArgs extends com.pulumi.resources.
             $ = new SqlServerInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param collation SQL Server collation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(@Nullable Output<String> collation) {
             $.collation = collation;
             return this;
         }
 
+        /**
+         * @param collation SQL Server collation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collation(String collation) {
             return collation(Output.of(collation));
         }
 
+        /**
+         * @param containerResourceId ARM Resource id of the container resource (Azure Arc for Servers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceId(Output<String> containerResourceId) {
             $.containerResourceId = containerResourceId;
             return this;
         }
 
+        /**
+         * @param containerResourceId ARM Resource id of the container resource (Azure Arc for Servers).
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerResourceId(String containerResourceId) {
             return containerResourceId(Output.of(containerResourceId));
         }
 
+        /**
+         * @param currentVersion SQL Server current version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersion(@Nullable Output<String> currentVersion) {
             $.currentVersion = currentVersion;
             return this;
         }
 
+        /**
+         * @param currentVersion SQL Server current version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentVersion(String currentVersion) {
             return currentVersion(Output.of(currentVersion));
         }
 
+        /**
+         * @param edition SQL Server edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(@Nullable Output<String> edition) {
             $.edition = edition;
             return this;
         }
 
+        /**
+         * @param edition SQL Server edition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(String edition) {
             return edition(Output.of(edition));
         }
 
+        /**
+         * @param instanceName SQL Server instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(@Nullable Output<String> instanceName) {
             $.instanceName = instanceName;
             return this;
         }
 
+        /**
+         * @param instanceName SQL Server instance name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceName(String instanceName) {
             return instanceName(Output.of(instanceName));
         }
 
+        /**
+         * @param licenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable Output<String> licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param licenseType SQL Server license type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             return licenseType(Output.of(licenseType));
         }
 
+        /**
+         * @param patchLevel SQL Server update level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchLevel(@Nullable Output<String> patchLevel) {
             $.patchLevel = patchLevel;
             return this;
         }
 
+        /**
+         * @param patchLevel SQL Server update level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchLevel(String patchLevel) {
             return patchLevel(Output.of(patchLevel));
         }
 
+        /**
+         * @param productId SQL Server product ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(@Nullable Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId SQL Server product ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }
 
+        /**
+         * @param status The cloud connectivity status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<String> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The cloud connectivity status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param tcpDynamicPorts Dynamic TCP ports used by SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpDynamicPorts(@Nullable Output<String> tcpDynamicPorts) {
             $.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
 
+        /**
+         * @param tcpDynamicPorts Dynamic TCP ports used by SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpDynamicPorts(String tcpDynamicPorts) {
             return tcpDynamicPorts(Output.of(tcpDynamicPorts));
         }
 
+        /**
+         * @param tcpStaticPorts Static TCP ports used by SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpStaticPorts(@Nullable Output<String> tcpStaticPorts) {
             $.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
 
+        /**
+         * @param tcpStaticPorts Static TCP ports used by SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tcpStaticPorts(String tcpStaticPorts) {
             return tcpStaticPorts(Output.of(tcpStaticPorts));
         }
 
+        /**
+         * @param vCore The number of logical processors used by the SQL Server instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCore(@Nullable Output<String> vCore) {
             $.vCore = vCore;
             return this;
         }
 
+        /**
+         * @param vCore The number of logical processors used by the SQL Server instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCore(String vCore) {
             return vCore(Output.of(vCore));
         }
 
+        /**
+         * @param version SQL Server version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version SQL Server version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

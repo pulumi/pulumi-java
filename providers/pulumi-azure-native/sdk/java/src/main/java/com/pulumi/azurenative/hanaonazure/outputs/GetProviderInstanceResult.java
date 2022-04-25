@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProviderInstanceResult {
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * A JSON string containing metadata of the provider instance.
-     * 
-     */
+        /**
+         * @return A JSON string containing metadata of the provider instance.
+         * 
+         */
     private final @Nullable String metadata;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * A JSON string containing the properties of the provider instance.
-     * 
-     */
+        /**
+         * @return A JSON string containing the properties of the provider instance.
+         * 
+         */
     private final String properties;
-    /**
-     * State of provisioning of the provider instance
-     * 
-     */
+        /**
+         * @return State of provisioning of the provider instance
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetProviderInstanceResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A JSON string containing metadata of the provider instance.
+     * @return A JSON string containing metadata of the provider instance.
      * 
-    */
+     */
     public Optional<String> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A JSON string containing the properties of the provider instance.
+     * @return A JSON string containing the properties of the provider instance.
      * 
-    */
+     */
     public String properties() {
         return this.properties;
     }
     /**
-     * State of provisioning of the provider instance
+     * @return State of provisioning of the provider instance
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

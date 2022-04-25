@@ -17,55 +17,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDedicatedHostGroupResult {
-    /**
-     * A list of references to all dedicated hosts in the dedicated host group.
-     * 
-     */
+        /**
+         * @return A list of references to all dedicated hosts in the dedicated host group.
+         * 
+         */
     private final List<SubResourceReadOnlyResponse> hosts;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
-     * 
-     */
+        /**
+         * @return The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
+         * 
+         */
     private final DedicatedHostGroupInstanceViewResponse instanceView;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Number of fault domains that the host group can span.
-     * 
-     */
+        /**
+         * @return Number of fault domains that the host group can span.
+         * 
+         */
     private final Integer platformFaultDomainCount;
-    /**
-     * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
-     * 
-     */
+        /**
+         * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+         * 
+         */
     private final @Nullable Boolean supportAutomaticPlacement;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
-     * 
-     */
+        /**
+         * @return Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -93,72 +93,72 @@ public final class GetDedicatedHostGroupResult {
     }
 
     /**
-     * A list of references to all dedicated hosts in the dedicated host group.
+     * @return A list of references to all dedicated hosts in the dedicated host group.
      * 
-    */
+     */
     public List<SubResourceReadOnlyResponse> hosts() {
         return this.hosts;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
+     * @return The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
      * 
-    */
+     */
     public DedicatedHostGroupInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of fault domains that the host group can span.
+     * @return Number of fault domains that the host group can span.
      * 
-    */
+     */
     public Integer platformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
     /**
-     * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * @return Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to &#39;false&#39; when not provided. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
      * 
-    */
+     */
     public Optional<Boolean> supportAutomaticPlacement() {
         return Optional.ofNullable(this.supportAutomaticPlacement);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
+     * @return Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetTokenResult {
-    /**
-     * The creation date of scope map.
-     * 
-     */
+        /**
+         * @return The creation date of scope map.
+         * 
+         */
     private final String creationDate;
-    /**
-     * The credentials that can be used for authenticating the token.
-     * 
-     */
+        /**
+         * @return The credentials that can be used for authenticating the token.
+         * 
+         */
     private final @Nullable TokenCredentialsPropertiesResponse credentials;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The resource ID of the scope map to which the token will be associated with.
-     * 
-     */
+        /**
+         * @return The resource ID of the scope map to which the token will be associated with.
+         * 
+         */
     private final @Nullable String scopeMapId;
-    /**
-     * The status of the token example enabled or disabled.
-     * 
-     */
+        /**
+         * @return The status of the token example enabled or disabled.
+         * 
+         */
     private final @Nullable String status;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class GetTokenResult {
     }
 
     /**
-     * The creation date of scope map.
+     * @return The creation date of scope map.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The credentials that can be used for authenticating the token.
+     * @return The credentials that can be used for authenticating the token.
      * 
-    */
+     */
     public Optional<TokenCredentialsPropertiesResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource ID of the scope map to which the token will be associated with.
+     * @return The resource ID of the scope map to which the token will be associated with.
      * 
-    */
+     */
     public Optional<String> scopeMapId() {
         return Optional.ofNullable(this.scopeMapId);
     }
     /**
-     * The status of the token example enabled or disabled.
+     * @return The status of the token example enabled or disabled.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The name of the SKU. Required on PUT (CreateOrReplace) requests.
-     * 
-     */
+        /**
+         * @return The name of the SKU. Required on PUT (CreateOrReplace) requests.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class SkuResponse {
     }
 
     /**
-     * The name of the SKU. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the SKU. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

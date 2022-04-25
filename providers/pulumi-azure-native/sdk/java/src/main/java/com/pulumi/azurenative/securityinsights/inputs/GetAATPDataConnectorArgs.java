@@ -19,6 +19,10 @@ public final class GetAATPDataConnectorArgs extends com.pulumi.resources.InvokeA
     @Import(name="dataConnectorId", required=true)
     private String dataConnectorId;
 
+    /**
+     * @return Connector ID
+     * 
+     */
     public String dataConnectorId() {
         return this.dataConnectorId;
     }
@@ -30,6 +34,10 @@ public final class GetAATPDataConnectorArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetAATPDataConnectorArgs extends com.pulumi.resources.InvokeA
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetAATPDataConnectorArgs extends com.pulumi.resources.InvokeA
             $ = new GetAATPDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataConnectorId Connector ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataConnectorId(String dataConnectorId) {
             $.dataConnectorId = dataConnectorId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

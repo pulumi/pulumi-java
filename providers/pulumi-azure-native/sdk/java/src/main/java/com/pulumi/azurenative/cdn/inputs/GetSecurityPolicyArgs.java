@@ -19,6 +19,10 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="profileName", required=true)
     private String profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public String profileName() {
         return this.profileName;
     }
@@ -30,6 +34,10 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="securityPolicyName", required=true)
     private String securityPolicyName;
 
+    /**
+     * @return Name of the security policy under the profile.
+     * 
+     */
     public String securityPolicyName() {
         return this.securityPolicyName;
     }
@@ -71,16 +83,34 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param securityPolicyName Name of the security policy under the profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityPolicyName(String securityPolicyName) {
             $.securityPolicyName = securityPolicyName;
             return this;

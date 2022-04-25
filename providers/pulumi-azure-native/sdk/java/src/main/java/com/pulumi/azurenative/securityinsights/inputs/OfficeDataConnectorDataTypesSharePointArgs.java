@@ -28,6 +28,10 @@ public final class OfficeDataConnectorDataTypesSharePointArgs extends com.pulumi
     @Import(name="state")
     private @Nullable Output<Either<String,DataTypeState>> state;
 
+    /**
+     * @return Describe whether this data type connection is enabled or not.
+     * 
+     */
     public Optional<Output<Either<String,DataTypeState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -56,19 +60,43 @@ public final class OfficeDataConnectorDataTypesSharePointArgs extends com.pulumi
             $ = new OfficeDataConnectorDataTypesSharePointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state Describe whether this data type connection is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,DataTypeState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Describe whether this data type connection is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,DataTypeState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Describe whether this data type connection is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Describe whether this data type connection is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(DataTypeState state) {
             return state(Either.ofRight(state));
         }

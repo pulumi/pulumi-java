@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PolicyAssignmentPropertiesResponsePolicy {
-    /**
-     * Id of the policy
-     * 
-     */
+        /**
+         * @return Id of the policy
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the entity last modified it
-     * 
-     */
+        /**
+         * @return The name of the entity last modified it
+         * 
+         */
     private final PrincipalResponse lastModifiedBy;
-    /**
-     * The last modified date time.
-     * 
-     */
+        /**
+         * @return The last modified date time.
+         * 
+         */
     private final @Nullable String lastModifiedDateTime;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
     }
 
     /**
-     * Id of the policy
+     * @return Id of the policy
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the entity last modified it
+     * @return The name of the entity last modified it
      * 
-    */
+     */
     public PrincipalResponse lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * The last modified date time.
+     * @return The last modified date time.
      * 
-    */
+     */
     public Optional<String> lastModifiedDateTime() {
         return Optional.ofNullable(this.lastModifiedDateTime);
     }

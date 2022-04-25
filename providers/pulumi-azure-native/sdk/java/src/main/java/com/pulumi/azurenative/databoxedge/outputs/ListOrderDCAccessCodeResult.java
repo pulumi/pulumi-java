@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListOrderDCAccessCodeResult {
-    /**
-     * DCAccess Code for the Self Managed shipment.
-     * 
-     */
+        /**
+         * @return DCAccess Code for the Self Managed shipment.
+         * 
+         */
     private final @Nullable String authCode;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListOrderDCAccessCodeResult {
     }
 
     /**
-     * DCAccess Code for the Self Managed shipment.
+     * @return DCAccess Code for the Self Managed shipment.
      * 
-    */
+     */
     public Optional<String> authCode() {
         return Optional.ofNullable(this.authCode);
     }

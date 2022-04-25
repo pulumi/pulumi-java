@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RunbookAssociationPropertyResponse {
-    /**
-     * Gets or sets the name of the runbook.
-     * 
-     */
+        /**
+         * @return Gets or sets the name of the runbook.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class RunbookAssociationPropertyResponse {
     }
 
     /**
-     * Gets or sets the name of the runbook.
+     * @return Gets or sets the name of the runbook.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -27,6 +27,10 @@ public final class InMageBasePolicyDetailsResponse extends com.pulumi.resources.
     @Import(name="appConsistentFrequencyInMinutes")
     private @Nullable Integer appConsistentFrequencyInMinutes;
 
+    /**
+     * @return The app consistent snapshot frequency in minutes.
+     * 
+     */
     public Optional<Integer> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
@@ -39,6 +43,11 @@ public final class InMageBasePolicyDetailsResponse extends com.pulumi.resources.
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the class type. Overridden in derived classes.
+     * Expected value is &#39;InMageBasePolicyDetails&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -50,6 +59,10 @@ public final class InMageBasePolicyDetailsResponse extends com.pulumi.resources.
     @Import(name="multiVmSyncStatus")
     private @Nullable String multiVmSyncStatus;
 
+    /**
+     * @return A value indicating whether multi-VM sync has to be enabled.
+     * 
+     */
     public Optional<String> multiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
@@ -61,6 +74,10 @@ public final class InMageBasePolicyDetailsResponse extends com.pulumi.resources.
     @Import(name="recoveryPointHistory")
     private @Nullable Integer recoveryPointHistory;
 
+    /**
+     * @return The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     public Optional<Integer> recoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
@@ -72,6 +89,10 @@ public final class InMageBasePolicyDetailsResponse extends com.pulumi.resources.
     @Import(name="recoveryPointThresholdInMinutes")
     private @Nullable Integer recoveryPointThresholdInMinutes;
 
+    /**
+     * @return The recovery point threshold in minutes.
+     * 
+     */
     public Optional<Integer> recoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }
@@ -104,26 +125,57 @@ public final class InMageBasePolicyDetailsResponse extends com.pulumi.resources.
             $ = new InMageBasePolicyDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appConsistentFrequencyInMinutes The app consistent snapshot frequency in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;InMageBasePolicyDetails&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi-VM sync has to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
+        /**
+         * @param recoveryPointHistory The duration in minutes until which the recovery points need to be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             $.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
+        /**
+         * @param recoveryPointThresholdInMinutes The recovery point threshold in minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             $.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;

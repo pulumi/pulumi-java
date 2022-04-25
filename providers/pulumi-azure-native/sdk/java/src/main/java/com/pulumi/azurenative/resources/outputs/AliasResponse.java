@@ -15,35 +15,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AliasResponse {
-    /**
-     * The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
-     * 
-     */
+        /**
+         * @return The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
+         * 
+         */
     private final AliasPathMetadataResponse defaultMetadata;
-    /**
-     * The default path for an alias.
-     * 
-     */
+        /**
+         * @return The default path for an alias.
+         * 
+         */
     private final @Nullable String defaultPath;
-    /**
-     * The default pattern for an alias.
-     * 
-     */
+        /**
+         * @return The default pattern for an alias.
+         * 
+         */
     private final @Nullable AliasPatternResponse defaultPattern;
-    /**
-     * The alias name.
-     * 
-     */
+        /**
+         * @return The alias name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The paths for an alias.
-     * 
-     */
+        /**
+         * @return The paths for an alias.
+         * 
+         */
     private final @Nullable List<AliasPathResponse> paths;
-    /**
-     * The type of the alias.
-     * 
-     */
+        /**
+         * @return The type of the alias.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -63,44 +63,44 @@ public final class AliasResponse {
     }
 
     /**
-     * The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
+     * @return The default alias path metadata. Applies to the default path and to any alias path that doesn&#39;t have metadata
      * 
-    */
+     */
     public AliasPathMetadataResponse defaultMetadata() {
         return this.defaultMetadata;
     }
     /**
-     * The default path for an alias.
+     * @return The default path for an alias.
      * 
-    */
+     */
     public Optional<String> defaultPath() {
         return Optional.ofNullable(this.defaultPath);
     }
     /**
-     * The default pattern for an alias.
+     * @return The default pattern for an alias.
      * 
-    */
+     */
     public Optional<AliasPatternResponse> defaultPattern() {
         return Optional.ofNullable(this.defaultPattern);
     }
     /**
-     * The alias name.
+     * @return The alias name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The paths for an alias.
+     * @return The paths for an alias.
      * 
-    */
+     */
     public List<AliasPathResponse> paths() {
         return this.paths == null ? List.of() : this.paths;
     }
     /**
-     * The type of the alias.
+     * @return The type of the alias.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

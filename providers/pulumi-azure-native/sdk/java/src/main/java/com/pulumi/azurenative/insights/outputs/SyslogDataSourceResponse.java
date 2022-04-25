@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SyslogDataSourceResponse {
-    /**
-     * The list of facility names.
-     * 
-     */
+        /**
+         * @return The list of facility names.
+         * 
+         */
     private final @Nullable List<String> facilityNames;
-    /**
-     * The log levels to collect.
-     * 
-     */
+        /**
+         * @return The log levels to collect.
+         * 
+         */
     private final @Nullable List<String> logLevels;
-    /**
-     * A friendly name for the data source.
-     * This name should be unique across all data sources (regardless of type) within the data collection rule.
-     * 
-     */
+        /**
+         * @return A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * List of streams that this data source will be sent to.
-     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
-     * 
-     */
+        /**
+         * @return List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         */
     private final @Nullable List<String> streams;
 
     @CustomType.Constructor
@@ -48,32 +48,32 @@ public final class SyslogDataSourceResponse {
     }
 
     /**
-     * The list of facility names.
+     * @return The list of facility names.
      * 
-    */
+     */
     public List<String> facilityNames() {
         return this.facilityNames == null ? List.of() : this.facilityNames;
     }
     /**
-     * The log levels to collect.
+     * @return The log levels to collect.
      * 
-    */
+     */
     public List<String> logLevels() {
         return this.logLevels == null ? List.of() : this.logLevels;
     }
     /**
-     * A friendly name for the data source.
+     * @return A friendly name for the data source.
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * List of streams that this data source will be sent to.
+     * @return List of streams that this data source will be sent to.
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
-    */
+     */
     public List<String> streams() {
         return this.streams == null ? List.of() : this.streams;
     }

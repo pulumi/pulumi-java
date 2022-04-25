@@ -12,54 +12,54 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureStorageContainerResponse {
-    /**
-     * Type of backup management for the container.
-     * 
-     */
+        /**
+         * @return Type of backup management for the container.
+         * 
+         */
     private final @Nullable String backupManagementType;
-    /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
-     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
-     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
-     * Backup is VMAppContainer
-     * Expected value is &#39;StorageContainer&#39;.
-     * 
-     */
+        /**
+         * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;StorageContainer&#39;.
+         * 
+         */
     private final String containerType;
-    /**
-     * Friendly name of the container.
-     * 
-     */
+        /**
+         * @return Friendly name of the container.
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * Status of health of the container.
-     * 
-     */
+        /**
+         * @return Status of health of the container.
+         * 
+         */
     private final @Nullable String healthStatus;
-    /**
-     * Number of items backed up in this container.
-     * 
-     */
+        /**
+         * @return Number of items backed up in this container.
+         * 
+         */
     private final @Nullable Double protectedItemCount;
-    /**
-     * Status of registration of the container with the Recovery Services Vault.
-     * 
-     */
+        /**
+         * @return Status of registration of the container with the Recovery Services Vault.
+         * 
+         */
     private final @Nullable String registrationStatus;
-    /**
-     * Resource group name of Recovery Services Vault.
-     * 
-     */
+        /**
+         * @return Resource group name of Recovery Services Vault.
+         * 
+         */
     private final @Nullable String resourceGroup;
-    /**
-     * Fully qualified ARM url.
-     * 
-     */
+        /**
+         * @return Fully qualified ARM url.
+         * 
+         */
     private final @Nullable String sourceResourceId;
-    /**
-     * Storage account version.
-     * 
-     */
+        /**
+         * @return Storage account version.
+         * 
+         */
     private final @Nullable String storageAccountVersion;
 
     @CustomType.Constructor
@@ -85,69 +85,69 @@ public final class AzureStorageContainerResponse {
     }
 
     /**
-     * Type of backup management for the container.
+     * @return Type of backup management for the container.
      * 
-    */
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
-     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
      * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
      * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
      * Backup is VMAppContainer
      * Expected value is &#39;StorageContainer&#39;.
      * 
-    */
+     */
     public String containerType() {
         return this.containerType;
     }
     /**
-     * Friendly name of the container.
+     * @return Friendly name of the container.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * Status of health of the container.
+     * @return Status of health of the container.
      * 
-    */
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
-     * Number of items backed up in this container.
+     * @return Number of items backed up in this container.
      * 
-    */
+     */
     public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
     /**
-     * Status of registration of the container with the Recovery Services Vault.
+     * @return Status of registration of the container with the Recovery Services Vault.
      * 
-    */
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
-     * Resource group name of Recovery Services Vault.
+     * @return Resource group name of Recovery Services Vault.
      * 
-    */
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
-     * Fully qualified ARM url.
+     * @return Fully qualified ARM url.
      * 
-    */
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
-     * Storage account version.
+     * @return Storage account version.
      * 
-    */
+     */
     public Optional<String> storageAccountVersion() {
         return Optional.ofNullable(this.storageAccountVersion);
     }

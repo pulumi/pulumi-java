@@ -17,50 +17,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachinePublicIPAddressConfigurationResponse {
-    /**
-     * Specify what happens to the public IP address when the VM is deleted
-     * 
-     */
+        /**
+         * @return Specify what happens to the public IP address when the VM is deleted
+         * 
+         */
     private final @Nullable String deleteOption;
-    /**
-     * The dns settings to be applied on the publicIP addresses .
-     * 
-     */
+        /**
+         * @return The dns settings to be applied on the publicIP addresses .
+         * 
+         */
     private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
-    /**
-     * The idle timeout of the public IP address.
-     * 
-     */
+        /**
+         * @return The idle timeout of the public IP address.
+         * 
+         */
     private final @Nullable Integer idleTimeoutInMinutes;
-    /**
-     * The list of IP tags associated with the public IP address.
-     * 
-     */
+        /**
+         * @return The list of IP tags associated with the public IP address.
+         * 
+         */
     private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
-    /**
-     * The publicIP address configuration name.
-     * 
-     */
+        /**
+         * @return The publicIP address configuration name.
+         * 
+         */
     private final String name;
-    /**
-     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
-     * 
-     */
+        /**
+         * @return Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+         * 
+         */
     private final @Nullable String publicIPAddressVersion;
-    /**
-     * Specify the public IP allocation type
-     * 
-     */
+        /**
+         * @return Specify the public IP allocation type
+         * 
+         */
     private final @Nullable String publicIPAllocationMethod;
-    /**
-     * The PublicIPPrefix from which to allocate publicIP addresses.
-     * 
-     */
+        /**
+         * @return The PublicIPPrefix from which to allocate publicIP addresses.
+         * 
+         */
     private final @Nullable SubResourceResponse publicIPPrefix;
-    /**
-     * Describes the public IP Sku
-     * 
-     */
+        /**
+         * @return Describes the public IP Sku
+         * 
+         */
     private final @Nullable PublicIPAddressSkuResponse sku;
 
     @CustomType.Constructor
@@ -86,65 +86,65 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse {
     }
 
     /**
-     * Specify what happens to the public IP address when the VM is deleted
+     * @return Specify what happens to the public IP address when the VM is deleted
      * 
-    */
+     */
     public Optional<String> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
     /**
-     * The dns settings to be applied on the publicIP addresses .
+     * @return The dns settings to be applied on the publicIP addresses .
      * 
-    */
+     */
     public Optional<VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
-     * The idle timeout of the public IP address.
+     * @return The idle timeout of the public IP address.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
-     * The list of IP tags associated with the public IP address.
+     * @return The list of IP tags associated with the public IP address.
      * 
-    */
+     */
     public List<VirtualMachineIpTagResponse> ipTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
     /**
-     * The publicIP address configuration name.
+     * @return The publicIP address configuration name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
+     * @return Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: &#39;IPv4&#39; and &#39;IPv6&#39;.
      * 
-    */
+     */
     public Optional<String> publicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
     /**
-     * Specify the public IP allocation type
+     * @return Specify the public IP allocation type
      * 
-    */
+     */
     public Optional<String> publicIPAllocationMethod() {
         return Optional.ofNullable(this.publicIPAllocationMethod);
     }
     /**
-     * The PublicIPPrefix from which to allocate publicIP addresses.
+     * @return The PublicIPPrefix from which to allocate publicIP addresses.
      * 
-    */
+     */
     public Optional<SubResourceResponse> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
     /**
-     * Describes the public IP Sku
+     * @return Describes the public IP Sku
      * 
-    */
+     */
     public Optional<PublicIPAddressSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }

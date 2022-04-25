@@ -22,6 +22,10 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="incidentId", required=true)
     private Output<String> incidentId;
 
+    /**
+     * @return Incident ID
+     * 
+     */
     public Output<String> incidentId() {
         return this.incidentId;
     }
@@ -33,6 +37,10 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="operationalInsightsResourceProvider", required=true)
     private Output<String> operationalInsightsResourceProvider;
 
+    /**
+     * @return The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     * 
+     */
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
@@ -44,6 +52,10 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="relatedResourceId", required=true)
     private Output<String> relatedResourceId;
 
+    /**
+     * @return The resource ID of the related resource
+     * 
+     */
     public Output<String> relatedResourceId() {
         return this.relatedResourceId;
     }
@@ -55,6 +67,10 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="relationName")
     private @Nullable Output<String> relationName;
 
+    /**
+     * @return Relation Name
+     * 
+     */
     public Optional<Output<String>> relationName() {
         return Optional.ofNullable(this.relationName);
     }
@@ -66,6 +82,10 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -110,56 +134,128 @@ public final class IncidentRelationArgs extends com.pulumi.resources.ResourceArg
             $ = new IncidentRelationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(Output<String> incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param incidentId Incident ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(String incidentId) {
             return incidentId(Output.of(incidentId));
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
 
+        /**
+         * @param operationalInsightsResourceProvider The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
 
+        /**
+         * @param relatedResourceId The resource ID of the related resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedResourceId(Output<String> relatedResourceId) {
             $.relatedResourceId = relatedResourceId;
             return this;
         }
 
+        /**
+         * @param relatedResourceId The resource ID of the related resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedResourceId(String relatedResourceId) {
             return relatedResourceId(Output.of(relatedResourceId));
         }
 
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationName(@Nullable Output<String> relationName) {
             $.relationName = relationName;
             return this;
         }
 
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationName(String relationName) {
             return relationName(Output.of(relationName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

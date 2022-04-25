@@ -9,31 +9,31 @@ import java.util.Objects;
 
 @CustomType
 public final class VMwareV2FabricSpecificDetailsResponse {
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;VMwareV2&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMwareV2&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The Migration solution ARM Id.
-     * 
-     */
+        /**
+         * @return The Migration solution ARM Id.
+         * 
+         */
     private final String migrationSolutionId;
-    /**
-     * The service endpoint.
-     * 
-     */
+        /**
+         * @return The service endpoint.
+         * 
+         */
     private final String serviceEndpoint;
-    /**
-     * The service resource Id.
-     * 
-     */
+        /**
+         * @return The service resource Id.
+         * 
+         */
     private final String serviceResourceId;
-    /**
-     * The ARM Id of the VMware site.
-     * 
-     */
+        /**
+         * @return The ARM Id of the VMware site.
+         * 
+         */
     private final String vmwareSiteId;
 
     @CustomType.Constructor
@@ -51,38 +51,38 @@ public final class VMwareV2FabricSpecificDetailsResponse {
     }
 
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMwareV2&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The Migration solution ARM Id.
+     * @return The Migration solution ARM Id.
      * 
-    */
+     */
     public String migrationSolutionId() {
         return this.migrationSolutionId;
     }
     /**
-     * The service endpoint.
+     * @return The service endpoint.
      * 
-    */
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
-     * The service resource Id.
+     * @return The service resource Id.
      * 
-    */
+     */
     public String serviceResourceId() {
         return this.serviceResourceId;
     }
     /**
-     * The ARM Id of the VMware site.
+     * @return The ARM Id of the VMware site.
      * 
-    */
+     */
     public String vmwareSiteId() {
         return this.vmwareSiteId;
     }

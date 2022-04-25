@@ -19,6 +19,10 @@ public final class AzureADMetricsPropertiesFormatResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -47,6 +51,12 @@ public final class AzureADMetricsPropertiesFormatResponse extends com.pulumi.res
             $ = new AzureADMetricsPropertiesFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

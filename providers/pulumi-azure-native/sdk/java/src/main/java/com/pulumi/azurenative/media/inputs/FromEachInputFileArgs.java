@@ -35,6 +35,10 @@ public final class FromEachInputFileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="includedTracks")
     private @Nullable Output<List<Object>> includedTracks;
 
+    /**
+     * @return The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+     * 
+     */
     public Optional<Output<List<Object>>> includedTracks() {
         return Optional.ofNullable(this.includedTracks);
     }
@@ -47,6 +51,11 @@ public final class FromEachInputFileArgs extends com.pulumi.resources.ResourceAr
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.FromEachInputFile&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -76,24 +85,56 @@ public final class FromEachInputFileArgs extends com.pulumi.resources.ResourceAr
             $ = new FromEachInputFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includedTracks The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedTracks(@Nullable Output<List<Object>> includedTracks) {
             $.includedTracks = includedTracks;
             return this;
         }
 
+        /**
+         * @param includedTracks The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedTracks(List<Object> includedTracks) {
             return includedTracks(Output.of(includedTracks));
         }
 
+        /**
+         * @param includedTracks The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedTracks(Object... includedTracks) {
             return includedTracks(List.of(includedTracks));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.FromEachInputFile&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.FromEachInputFile&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }

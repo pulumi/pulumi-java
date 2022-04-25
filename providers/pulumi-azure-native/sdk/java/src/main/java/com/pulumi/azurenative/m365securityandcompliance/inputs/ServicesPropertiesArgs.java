@@ -35,6 +35,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="accessPolicies")
     private @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
+    /**
+     * @return The access policies of the service instance.
+     * 
+     */
     public Optional<Output<List<ServiceAccessPolicyEntryArgs>>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -46,6 +50,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="authenticationConfiguration")
     private @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
+    /**
+     * @return The authentication configuration for the service instance.
+     * 
+     */
     public Optional<Output<ServiceAuthenticationConfigurationInfoArgs>> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
@@ -57,6 +65,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="corsConfiguration")
     private @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
+    /**
+     * @return The settings for the CORS configuration of the service instance.
+     * 
+     */
     public Optional<Output<ServiceCorsConfigurationInfoArgs>> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
@@ -68,6 +80,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="cosmosDbConfiguration")
     private @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
+    /**
+     * @return The settings for the Cosmos DB database backing the service.
+     * 
+     */
     public Optional<Output<ServiceCosmosDbConfigurationInfoArgs>> cosmosDbConfiguration() {
         return Optional.ofNullable(this.cosmosDbConfiguration);
     }
@@ -79,6 +95,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="exportConfiguration")
     private @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
+    /**
+     * @return The settings for the export operation of the service instance.
+     * 
+     */
     public Optional<Output<ServiceExportConfigurationInfoArgs>> exportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
@@ -90,6 +110,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="privateEndpointConnections")
     private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
+    /**
+     * @return The list of private endpoint connections that are set up for this resource.
+     * 
+     */
     public Optional<Output<List<PrivateEndpointConnectionArgs>>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -101,6 +125,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -135,81 +163,189 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new ServicesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies The access policies of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies The access policies of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(List<ServiceAccessPolicyEntryArgs> accessPolicies) {
             return accessPolicies(Output.of(accessPolicies));
         }
 
+        /**
+         * @param accessPolicies The access policies of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(ServiceAccessPolicyEntryArgs... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
 
+        /**
+         * @param authenticationConfiguration The authentication configuration for the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(@Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration) {
             $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
+        /**
+         * @param authenticationConfiguration The authentication configuration for the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationConfiguration(ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
             return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
 
+        /**
+         * @param corsConfiguration The settings for the CORS configuration of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfiguration(@Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration) {
             $.corsConfiguration = corsConfiguration;
             return this;
         }
 
+        /**
+         * @param corsConfiguration The settings for the CORS configuration of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsConfiguration(ServiceCorsConfigurationInfoArgs corsConfiguration) {
             return corsConfiguration(Output.of(corsConfiguration));
         }
 
+        /**
+         * @param cosmosDbConfiguration The settings for the Cosmos DB database backing the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cosmosDbConfiguration(@Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration) {
             $.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
 
+        /**
+         * @param cosmosDbConfiguration The settings for the Cosmos DB database backing the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cosmosDbConfiguration(ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
             return cosmosDbConfiguration(Output.of(cosmosDbConfiguration));
         }
 
+        /**
+         * @param exportConfiguration The settings for the export operation of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfiguration(@Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration) {
             $.exportConfiguration = exportConfiguration;
             return this;
         }
 
+        /**
+         * @param exportConfiguration The settings for the export operation of the service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportConfiguration(ServiceExportConfigurationInfoArgs exportConfiguration) {
             return exportConfiguration(Output.of(exportConfiguration));
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections that are set up for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections that are set up for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             return privateEndpointConnections(Output.of(privateEndpointConnections));
         }
 
+        /**
+         * @param privateEndpointConnections The list of private endpoint connections that are set up for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InstanceFailoverGroupReadWriteEndpointResponse {
-    /**
-     * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-     * 
-     */
+        /**
+         * @return Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         */
     private final String failoverPolicy;
-    /**
-     * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
-     * 
-     */
+        /**
+         * @return Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+         * 
+         */
     private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
     }
 
     /**
-     * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+     * @return Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
-    */
+     */
     public String failoverPolicy() {
         return this.failoverPolicy;
     }
     /**
-     * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
+     * @return Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
-    */
+     */
     public Optional<Integer> failoverWithDataLossGracePeriodMinutes() {
         return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }

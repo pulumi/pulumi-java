@@ -29,6 +29,10 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="recurrenceType", required=true)
     private Output<RecurrenceType> recurrenceType;
 
+    /**
+     * @return The recurrence type.
+     * 
+     */
     public Output<RecurrenceType> recurrenceType() {
         return this.recurrenceType;
     }
@@ -40,6 +44,10 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="recurrenceValue", required=true)
     private Output<Integer> recurrenceValue;
 
+    /**
+     * @return The recurrence value.
+     * 
+     */
     public Output<Integer> recurrenceValue() {
         return this.recurrenceValue;
     }
@@ -51,6 +59,10 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
     @Import(name="weeklyDaysList")
     private @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
+    /**
+     * @return The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+     * 
+     */
     public Optional<Output<List<DayOfWeek>>> weeklyDaysList() {
         return Optional.ofNullable(this.weeklyDaysList);
     }
@@ -81,33 +93,75 @@ public final class ScheduleRecurrenceArgs extends com.pulumi.resources.ResourceA
             $ = new ScheduleRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrenceType The recurrence type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(Output<RecurrenceType> recurrenceType) {
             $.recurrenceType = recurrenceType;
             return this;
         }
 
+        /**
+         * @param recurrenceType The recurrence type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceType(RecurrenceType recurrenceType) {
             return recurrenceType(Output.of(recurrenceType));
         }
 
+        /**
+         * @param recurrenceValue The recurrence value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceValue(Output<Integer> recurrenceValue) {
             $.recurrenceValue = recurrenceValue;
             return this;
         }
 
+        /**
+         * @param recurrenceValue The recurrence value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrenceValue(Integer recurrenceValue) {
             return recurrenceValue(Output.of(recurrenceValue));
         }
 
+        /**
+         * @param weeklyDaysList The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyDaysList(@Nullable Output<List<DayOfWeek>> weeklyDaysList) {
             $.weeklyDaysList = weeklyDaysList;
             return this;
         }
 
+        /**
+         * @param weeklyDaysList The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyDaysList(List<DayOfWeek> weeklyDaysList) {
             return weeklyDaysList(Output.of(weeklyDaysList));
         }
 
+        /**
+         * @param weeklyDaysList The week days list. Applicable only for schedules of recurrence type &#39;weekly&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyDaysList(DayOfWeek... weeklyDaysList) {
             return weeklyDaysList(List.of(weeklyDaysList));
         }

@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StorageQueueMessageResponse {
-    /**
-     * Gets or sets the message.
-     * 
-     */
+        /**
+         * @return Gets or sets the message.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Gets or sets the queue name.
-     * 
-     */
+        /**
+         * @return Gets or sets the queue name.
+         * 
+         */
     private final @Nullable String queueName;
-    /**
-     * Gets or sets the SAS key.
-     * 
-     */
+        /**
+         * @return Gets or sets the SAS key.
+         * 
+         */
     private final @Nullable String sasToken;
-    /**
-     * Gets or sets the storage account name.
-     * 
-     */
+        /**
+         * @return Gets or sets the storage account name.
+         * 
+         */
     private final @Nullable String storageAccount;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class StorageQueueMessageResponse {
     }
 
     /**
-     * Gets or sets the message.
+     * @return Gets or sets the message.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Gets or sets the queue name.
+     * @return Gets or sets the queue name.
      * 
-    */
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
-     * Gets or sets the SAS key.
+     * @return Gets or sets the SAS key.
      * 
-    */
+     */
     public Optional<String> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
     /**
-     * Gets or sets the storage account name.
+     * @return Gets or sets the storage account name.
      * 
-    */
+     */
     public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }

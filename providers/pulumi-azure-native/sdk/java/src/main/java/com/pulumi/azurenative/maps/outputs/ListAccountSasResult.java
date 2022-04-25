@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ListAccountSasResult {
-    /**
-     * The shared access signature access token.
-     * 
-     */
+        /**
+         * @return The shared access signature access token.
+         * 
+         */
     private final String accountSasToken;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ListAccountSasResult {
     }
 
     /**
-     * The shared access signature access token.
+     * @return The shared access signature access token.
      * 
-    */
+     */
     public String accountSasToken() {
         return this.accountSasToken;
     }

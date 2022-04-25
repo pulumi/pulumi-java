@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class RequiredTrafficResponse {
-    /**
-     * The direction of required traffic
-     * 
-     */
+        /**
+         * @return The direction of required traffic
+         * 
+         */
     private final String direction;
-    /**
-     * The FQDN list of required traffic
-     * 
-     */
+        /**
+         * @return The FQDN list of required traffic
+         * 
+         */
     private final List<String> fqdns;
-    /**
-     * The ip list of required traffic
-     * 
-     */
+        /**
+         * @return The ip list of required traffic
+         * 
+         */
     private final List<String> ips;
-    /**
-     * The port of required traffic
-     * 
-     */
+        /**
+         * @return The port of required traffic
+         * 
+         */
     private final Integer port;
-    /**
-     * The protocol of required traffic
-     * 
-     */
+        /**
+         * @return The protocol of required traffic
+         * 
+         */
     private final String protocol;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class RequiredTrafficResponse {
     }
 
     /**
-     * The direction of required traffic
+     * @return The direction of required traffic
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * The FQDN list of required traffic
+     * @return The FQDN list of required traffic
      * 
-    */
+     */
     public List<String> fqdns() {
         return this.fqdns;
     }
     /**
-     * The ip list of required traffic
+     * @return The ip list of required traffic
      * 
-    */
+     */
     public List<String> ips() {
         return this.ips;
     }
     /**
-     * The port of required traffic
+     * @return The port of required traffic
      * 
-    */
+     */
     public Integer port() {
         return this.port;
     }
     /**
-     * The protocol of required traffic
+     * @return The protocol of required traffic
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }

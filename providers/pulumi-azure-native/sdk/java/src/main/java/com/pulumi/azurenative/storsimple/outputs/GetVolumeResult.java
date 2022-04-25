@@ -13,70 +13,70 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVolumeResult {
-    /**
-     * The IDs of the access control records, associated with the volume.
-     * 
-     */
+        /**
+         * @return The IDs of the access control records, associated with the volume.
+         * 
+         */
     private final List<String> accessControlRecordIds;
-    /**
-     * The IDs of the backup policies, in which this volume is part of.
-     * 
-     */
+        /**
+         * @return The IDs of the backup policies, in which this volume is part of.
+         * 
+         */
     private final List<String> backupPolicyIds;
-    /**
-     * The backup status of the volume.
-     * 
-     */
+        /**
+         * @return The backup status of the volume.
+         * 
+         */
     private final String backupStatus;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * The Kind of the object. Currently only Series8000 is supported
-     * 
-     */
+        /**
+         * @return The Kind of the object. Currently only Series8000 is supported
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The monitoring status of the volume.
-     * 
-     */
+        /**
+         * @return The monitoring status of the volume.
+         * 
+         */
     private final String monitoringStatus;
-    /**
-     * The name of the object.
-     * 
-     */
+        /**
+         * @return The name of the object.
+         * 
+         */
     private final String name;
-    /**
-     * The operation status on the volume.
-     * 
-     */
+        /**
+         * @return The operation status on the volume.
+         * 
+         */
     private final String operationStatus;
-    /**
-     * The size of the volume in bytes.
-     * 
-     */
+        /**
+         * @return The size of the volume in bytes.
+         * 
+         */
     private final Double sizeInBytes;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
-    /**
-     * The ID of the volume container, in which this volume is created.
-     * 
-     */
+        /**
+         * @return The ID of the volume container, in which this volume is created.
+         * 
+         */
     private final String volumeContainerId;
-    /**
-     * The volume status.
-     * 
-     */
+        /**
+         * @return The volume status.
+         * 
+         */
     private final String volumeStatus;
-    /**
-     * The type of the volume.
-     * 
-     */
+        /**
+         * @return The type of the volume.
+         * 
+         */
     private final String volumeType;
 
     @CustomType.Constructor
@@ -110,93 +110,93 @@ public final class GetVolumeResult {
     }
 
     /**
-     * The IDs of the access control records, associated with the volume.
+     * @return The IDs of the access control records, associated with the volume.
      * 
-    */
+     */
     public List<String> accessControlRecordIds() {
         return this.accessControlRecordIds;
     }
     /**
-     * The IDs of the backup policies, in which this volume is part of.
+     * @return The IDs of the backup policies, in which this volume is part of.
      * 
-    */
+     */
     public List<String> backupPolicyIds() {
         return this.backupPolicyIds;
     }
     /**
-     * The backup status of the volume.
+     * @return The backup status of the volume.
      * 
-    */
+     */
     public String backupStatus() {
         return this.backupStatus;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The monitoring status of the volume.
+     * @return The monitoring status of the volume.
      * 
-    */
+     */
     public String monitoringStatus() {
         return this.monitoringStatus;
     }
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The operation status on the volume.
+     * @return The operation status on the volume.
      * 
-    */
+     */
     public String operationStatus() {
         return this.operationStatus;
     }
     /**
-     * The size of the volume in bytes.
+     * @return The size of the volume in bytes.
      * 
-    */
+     */
     public Double sizeInBytes() {
         return this.sizeInBytes;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The ID of the volume container, in which this volume is created.
+     * @return The ID of the volume container, in which this volume is created.
      * 
-    */
+     */
     public String volumeContainerId() {
         return this.volumeContainerId;
     }
     /**
-     * The volume status.
+     * @return The volume status.
      * 
-    */
+     */
     public String volumeStatus() {
         return this.volumeStatus;
     }
     /**
-     * The type of the volume.
+     * @return The type of the volume.
      * 
-    */
+     */
     public String volumeType() {
         return this.volumeType;
     }

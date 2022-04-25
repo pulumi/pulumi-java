@@ -26,6 +26,10 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends com.pulumi.resour
     @Import(name="duration")
     private @Nullable Output<Object> duration;
 
+    /**
+     * @return TimeSpan value, after which an Azure Monitoring Metric is fired.
+     * 
+     */
     public Optional<Output<Object>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -54,11 +58,23 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends com.pulumi.resour
             $ = new PipelineElapsedTimeMetricPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration TimeSpan value, after which an Azure Monitoring Metric is fired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<Object> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration TimeSpan value, after which an Azure Monitoring Metric is fired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Object duration) {
             return duration(Output.of(duration));
         }

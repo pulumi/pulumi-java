@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NfsAccessRuleResponse {
-    /**
-     * Access allowed by this rule.
-     * 
-     */
+        /**
+         * @return Access allowed by this rule.
+         * 
+         */
     private final String access;
-    /**
-     * GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
-     * 
-     */
+        /**
+         * @return GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
+         * 
+         */
     private final @Nullable String anonymousGID;
-    /**
-     * UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
-     * 
-     */
+        /**
+         * @return UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
+         * 
+         */
     private final @Nullable String anonymousUID;
-    /**
-     * Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
-     * 
-     */
+        /**
+         * @return Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+         * 
+         */
     private final @Nullable String filter;
-    /**
-     * Map root accesses to anonymousUID and anonymousGID.
-     * 
-     */
+        /**
+         * @return Map root accesses to anonymousUID and anonymousGID.
+         * 
+         */
     private final @Nullable Boolean rootSquash;
-    /**
-     * Scope for this rule. The scope and filter determine which clients match the rule.
-     * 
-     */
+        /**
+         * @return Scope for this rule. The scope and filter determine which clients match the rule.
+         * 
+         */
     private final String scope;
-    /**
-     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
-     * 
-     */
+        /**
+         * @return For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
+         * 
+         */
     private final @Nullable Boolean submountAccess;
-    /**
-     * Allow SUID semantics.
-     * 
-     */
+        /**
+         * @return Allow SUID semantics.
+         * 
+         */
     private final @Nullable Boolean suid;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class NfsAccessRuleResponse {
     }
 
     /**
-     * Access allowed by this rule.
+     * @return Access allowed by this rule.
      * 
-    */
+     */
     public String access() {
         return this.access;
     }
     /**
-     * GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
+     * @return GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
      * 
-    */
+     */
     public Optional<String> anonymousGID() {
         return Optional.ofNullable(this.anonymousGID);
     }
     /**
-     * UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
+     * @return UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
      * 
-    */
+     */
     public Optional<String> anonymousUID() {
         return Optional.ofNullable(this.anonymousUID);
     }
     /**
-     * Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+     * @return Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
      * 
-    */
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * Map root accesses to anonymousUID and anonymousGID.
+     * @return Map root accesses to anonymousUID and anonymousGID.
      * 
-    */
+     */
     public Optional<Boolean> rootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
     /**
-     * Scope for this rule. The scope and filter determine which clients match the rule.
+     * @return Scope for this rule. The scope and filter determine which clients match the rule.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
+     * @return For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
      * 
-    */
+     */
     public Optional<Boolean> submountAccess() {
         return Optional.ofNullable(this.submountAccess);
     }
     /**
-     * Allow SUID semantics.
+     * @return Allow SUID semantics.
      * 
-    */
+     */
     public Optional<Boolean> suid() {
         return Optional.ofNullable(this.suid);
     }

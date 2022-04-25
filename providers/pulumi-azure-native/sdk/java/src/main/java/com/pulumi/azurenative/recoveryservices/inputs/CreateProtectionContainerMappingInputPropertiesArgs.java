@@ -29,6 +29,10 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return Applicable policy.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -40,6 +44,10 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
     @Import(name="providerSpecificInput")
     private @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
+    /**
+     * @return Provider specific input for pairing.
+     * 
+     */
     public Optional<Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>>> providerSpecificInput() {
         return Optional.ofNullable(this.providerSpecificInput);
     }
@@ -51,6 +59,10 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
     @Import(name="targetProtectionContainerId")
     private @Nullable Output<String> targetProtectionContainerId;
 
+    /**
+     * @return The target unique protection container name.
+     * 
+     */
     public Optional<Output<String>> targetProtectionContainerId() {
         return Optional.ofNullable(this.targetProtectionContainerId);
     }
@@ -81,37 +93,85 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
             $ = new CreateProtectionContainerMappingInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyId Applicable policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId Applicable policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }
 
+        /**
+         * @param providerSpecificInput Provider specific input for pairing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificInput(@Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput) {
             $.providerSpecificInput = providerSpecificInput;
             return this;
         }
 
+        /**
+         * @param providerSpecificInput Provider specific input for pairing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificInput(Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
             return providerSpecificInput(Output.of(providerSpecificInput));
         }
 
+        /**
+         * @param providerSpecificInput Provider specific input for pairing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificInput(A2AContainerMappingInputArgs providerSpecificInput) {
             return providerSpecificInput(Either.ofLeft(providerSpecificInput));
         }
 
+        /**
+         * @param providerSpecificInput Provider specific input for pairing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerSpecificInput(VMwareCbtContainerMappingInputArgs providerSpecificInput) {
             return providerSpecificInput(Either.ofRight(providerSpecificInput));
         }
 
+        /**
+         * @param targetProtectionContainerId The target unique protection container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProtectionContainerId(@Nullable Output<String> targetProtectionContainerId) {
             $.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
 
+        /**
+         * @param targetProtectionContainerId The target unique protection container name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProtectionContainerId(String targetProtectionContainerId) {
             return targetProtectionContainerId(Output.of(targetProtectionContainerId));
         }

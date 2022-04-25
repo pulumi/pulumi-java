@@ -25,6 +25,10 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
     @Import(name="codeVersion")
     private @Nullable String codeVersion;
 
+    /**
+     * @return The Service Fabric runtime version of the cluster.
+     * 
+     */
     public Optional<String> codeVersion() {
         return Optional.ofNullable(this.codeVersion);
     }
@@ -36,6 +40,10 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
     @Import(name="environment")
     private @Nullable String environment;
 
+    /**
+     * @return Indicates if this version is for Windows or Linux operating system.
+     * 
+     */
     public Optional<String> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -47,6 +55,10 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
     @Import(name="supportExpiryUtc")
     private @Nullable String supportExpiryUtc;
 
+    /**
+     * @return The date of expiry of support of the version.
+     * 
+     */
     public Optional<String> supportExpiryUtc() {
         return Optional.ofNullable(this.supportExpiryUtc);
     }
@@ -77,16 +89,34 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
             $ = new ClusterVersionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeVersion The Service Fabric runtime version of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeVersion(@Nullable String codeVersion) {
             $.codeVersion = codeVersion;
             return this;
         }
 
+        /**
+         * @param environment Indicates if this version is for Windows or Linux operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable String environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param supportExpiryUtc The date of expiry of support of the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportExpiryUtc(@Nullable String supportExpiryUtc) {
             $.supportExpiryUtc = supportExpiryUtc;
             return this;

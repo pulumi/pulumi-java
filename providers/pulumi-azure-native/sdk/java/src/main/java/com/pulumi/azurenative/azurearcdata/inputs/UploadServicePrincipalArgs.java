@@ -26,6 +26,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
     @Import(name="authority")
     private @Nullable Output<String> authority;
 
+    /**
+     * @return Authority for the service principal. Example: https://login.microsoftonline.com/
+     * 
+     */
     public Optional<Output<String>> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -37,6 +41,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return Client ID of the service principal for uploading data.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -48,6 +56,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return Secret of the service principal
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -59,6 +71,10 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant ID of the service principal.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -90,38 +106,86 @@ public final class UploadServicePrincipalArgs extends com.pulumi.resources.Resou
             $ = new UploadServicePrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authority Authority for the service principal. Example: https://login.microsoftonline.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable Output<String> authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param authority Authority for the service principal. Example: https://login.microsoftonline.com/
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(String authority) {
             return authority(Output.of(authority));
         }
 
+        /**
+         * @param clientId Client ID of the service principal for uploading data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client ID of the service principal for uploading data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret Secret of the service principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret Secret of the service principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param tenantId Tenant ID of the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant ID of the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

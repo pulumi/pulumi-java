@@ -23,6 +23,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return The encryption key name.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -34,6 +38,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="keyVersion", required=true)
     private String keyVersion;
 
+    /**
+     * @return The encryption key version.
+     * 
+     */
     public String keyVersion() {
         return this.keyVersion;
     }
@@ -45,6 +53,10 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="vaultBaseUrl", required=true)
     private String vaultBaseUrl;
 
+    /**
+     * @return The keyvault base url.
+     * 
+     */
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }
@@ -75,16 +87,34 @@ public final class EncryptionPropertiesResponse extends com.pulumi.resources.Inv
             $ = new EncryptionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The encryption key name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyVersion The encryption key version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(String keyVersion) {
             $.keyVersion = keyVersion;
             return this;
         }
 
+        /**
+         * @param vaultBaseUrl The keyvault base url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultBaseUrl(String vaultBaseUrl) {
             $.vaultBaseUrl = vaultBaseUrl;
             return this;

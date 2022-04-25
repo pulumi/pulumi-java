@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSerialPortResult {
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Specifies whether the port is enabled for a serial console connection.
-     * 
-     */
+        /**
+         * @return Specifies whether the port is enabled for a serial console connection.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class GetSerialPortResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies whether the port is enabled for a serial console connection.
+     * @return Specifies whether the port is enabled for a serial console connection.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

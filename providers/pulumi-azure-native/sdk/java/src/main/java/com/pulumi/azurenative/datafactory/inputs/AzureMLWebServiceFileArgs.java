@@ -25,6 +25,10 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
     @Import(name="filePath", required=true)
     private Output<Object> filePath;
 
+    /**
+     * @return The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> filePath() {
         return this.filePath;
     }
@@ -36,6 +40,10 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -65,20 +73,44 @@ public final class AzureMLWebServiceFileArgs extends com.pulumi.resources.Resour
             $ = new AzureMLWebServiceFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filePath The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(Output<Object> filePath) {
             $.filePath = filePath;
             return this;
         }
 
+        /**
+         * @param filePath The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder filePath(Object filePath) {
             return filePath(Output.of(filePath));
         }
 
+        /**
+         * @param linkedServiceName Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }

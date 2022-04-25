@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DiskInstanceViewResponse {
-    /**
-     * Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
-     * 
-     */
+        /**
+         * @return Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+         * 
+         */
     private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
-    /**
-     * The disk name.
-     * 
-     */
+        /**
+         * @return The disk name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The resource status information.
-     * 
-     */
+        /**
+         * @return The resource status information.
+         * 
+         */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class DiskInstanceViewResponse {
     }
 
     /**
-     * Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+     * @return Specifies the encryption settings for the OS Disk. &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
-    */
+     */
     public List<DiskEncryptionSettingsResponse> encryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The resource status information.
+     * @return The resource status information.
      * 
-    */
+     */
     public List<InstanceViewStatusResponse> statuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }

@@ -28,6 +28,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="dayOfWeek")
     private @Nullable Output<DayOfWeek> dayOfWeek;
 
+    /**
+     * @return Day of week to apply the patch on.
+     * 
+     */
     public Optional<Output<DayOfWeek>> dayOfWeek() {
         return Optional.ofNullable(this.dayOfWeek);
     }
@@ -39,6 +43,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Enable or disable autopatching on SQL virtual machine.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -50,6 +58,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="maintenanceWindowDuration")
     private @Nullable Output<Integer> maintenanceWindowDuration;
 
+    /**
+     * @return Duration of patching.
+     * 
+     */
     public Optional<Output<Integer>> maintenanceWindowDuration() {
         return Optional.ofNullable(this.maintenanceWindowDuration);
     }
@@ -61,6 +73,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
     @Import(name="maintenanceWindowStartingHour")
     private @Nullable Output<Integer> maintenanceWindowStartingHour;
 
+    /**
+     * @return Hour of the day when patching is initiated. Local VM time.
+     * 
+     */
     public Optional<Output<Integer>> maintenanceWindowStartingHour() {
         return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }
@@ -92,38 +108,86 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
             $ = new AutoPatchingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek Day of week to apply the patch on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(@Nullable Output<DayOfWeek> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek Day of week to apply the patch on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(DayOfWeek dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }
 
+        /**
+         * @param enable Enable or disable autopatching on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Enable or disable autopatching on SQL virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param maintenanceWindowDuration Duration of patching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowDuration(@Nullable Output<Integer> maintenanceWindowDuration) {
             $.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowDuration Duration of patching.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowDuration(Integer maintenanceWindowDuration) {
             return maintenanceWindowDuration(Output.of(maintenanceWindowDuration));
         }
 
+        /**
+         * @param maintenanceWindowStartingHour Hour of the day when patching is initiated. Local VM time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowStartingHour(@Nullable Output<Integer> maintenanceWindowStartingHour) {
             $.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowStartingHour Hour of the day when patching is initiated. Local VM time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowStartingHour(Integer maintenanceWindowStartingHour) {
             return maintenanceWindowStartingHour(Output.of(maintenanceWindowStartingHour));
         }

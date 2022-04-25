@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkRuleSetResponse {
-    /**
-     * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, &#34;Logging, Metrics&#34;), or None to bypass none of those traffics.
-     * 
-     */
+        /**
+         * @return Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, &#34;Logging, Metrics&#34;), or None to bypass none of those traffics.
+         * 
+         */
     private final @Nullable String bypass;
-    /**
-     * Specifies the default action of allow or deny when no other rules match.
-     * 
-     */
+        /**
+         * @return Specifies the default action of allow or deny when no other rules match.
+         * 
+         */
     private final String defaultAction;
-    /**
-     * Sets the IP ACL rules
-     * 
-     */
+        /**
+         * @return Sets the IP ACL rules
+         * 
+         */
     private final @Nullable List<IPRuleResponse> ipRules;
-    /**
-     * Sets the resource access rules
-     * 
-     */
+        /**
+         * @return Sets the resource access rules
+         * 
+         */
     private final @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
-    /**
-     * Sets the virtual network rules
-     * 
-     */
+        /**
+         * @return Sets the virtual network rules
+         * 
+         */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class NetworkRuleSetResponse {
     }
 
     /**
-     * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, &#34;Logging, Metrics&#34;), or None to bypass none of those traffics.
+     * @return Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, &#34;Logging, Metrics&#34;), or None to bypass none of those traffics.
      * 
-    */
+     */
     public Optional<String> bypass() {
         return Optional.ofNullable(this.bypass);
     }
     /**
-     * Specifies the default action of allow or deny when no other rules match.
+     * @return Specifies the default action of allow or deny when no other rules match.
      * 
-    */
+     */
     public String defaultAction() {
         return this.defaultAction;
     }
     /**
-     * Sets the IP ACL rules
+     * @return Sets the IP ACL rules
      * 
-    */
+     */
     public List<IPRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
-     * Sets the resource access rules
+     * @return Sets the resource access rules
      * 
-    */
+     */
     public List<ResourceAccessRuleResponse> resourceAccessRules() {
         return this.resourceAccessRules == null ? List.of() : this.resourceAccessRules;
     }
     /**
-     * Sets the virtual network rules
+     * @return Sets the virtual network rules
      * 
-    */
+     */
     public List<VirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

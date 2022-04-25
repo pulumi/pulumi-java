@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecurrenceScheduleResponse {
-    /**
-     * The hours.
-     * 
-     */
+        /**
+         * @return The hours.
+         * 
+         */
     private final @Nullable List<Integer> hours;
-    /**
-     * The minutes.
-     * 
-     */
+        /**
+         * @return The minutes.
+         * 
+         */
     private final @Nullable List<Integer> minutes;
-    /**
-     * The month days.
-     * 
-     */
+        /**
+         * @return The month days.
+         * 
+         */
     private final @Nullable List<Integer> monthDays;
-    /**
-     * The monthly occurrences.
-     * 
-     */
+        /**
+         * @return The monthly occurrences.
+         * 
+         */
     private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
-    /**
-     * The days of the week.
-     * 
-     */
+        /**
+         * @return The days of the week.
+         * 
+         */
     private final @Nullable List<String> weekDays;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class RecurrenceScheduleResponse {
     }
 
     /**
-     * The hours.
+     * @return The hours.
      * 
-    */
+     */
     public List<Integer> hours() {
         return this.hours == null ? List.of() : this.hours;
     }
     /**
-     * The minutes.
+     * @return The minutes.
      * 
-    */
+     */
     public List<Integer> minutes() {
         return this.minutes == null ? List.of() : this.minutes;
     }
     /**
-     * The month days.
+     * @return The month days.
      * 
-    */
+     */
     public List<Integer> monthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
-     * The monthly occurrences.
+     * @return The monthly occurrences.
      * 
-    */
+     */
     public List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
-     * The days of the week.
+     * @return The days of the week.
      * 
-    */
+     */
     public List<String> weekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }

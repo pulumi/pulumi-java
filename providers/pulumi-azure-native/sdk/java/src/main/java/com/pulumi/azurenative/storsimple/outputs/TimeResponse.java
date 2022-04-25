@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class TimeResponse {
-    /**
-     * The hour.
-     * 
-     */
+        /**
+         * @return The hour.
+         * 
+         */
     private final Integer hours;
-    /**
-     * The minute.
-     * 
-     */
+        /**
+         * @return The minute.
+         * 
+         */
     private final Integer minutes;
-    /**
-     * The second.
-     * 
-     */
+        /**
+         * @return The second.
+         * 
+         */
     private final Integer seconds;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class TimeResponse {
     }
 
     /**
-     * The hour.
+     * @return The hour.
      * 
-    */
+     */
     public Integer hours() {
         return this.hours;
     }
     /**
-     * The minute.
+     * @return The minute.
      * 
-    */
+     */
     public Integer minutes() {
         return this.minutes;
     }
     /**
-     * The second.
+     * @return The second.
      * 
-    */
+     */
     public Integer seconds() {
         return this.seconds;
     }

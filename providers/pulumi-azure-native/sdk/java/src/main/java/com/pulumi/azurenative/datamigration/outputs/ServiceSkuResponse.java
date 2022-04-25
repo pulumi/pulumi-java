@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceSkuResponse {
-    /**
-     * The capacity of the SKU, if it supports scaling
-     * 
-     */
+        /**
+         * @return The capacity of the SKU, if it supports scaling
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * The SKU family, used when the service has multiple performance classes within a tier, such as &#39;A&#39;, &#39;D&#39;, etc. for virtual machines
-     * 
-     */
+        /**
+         * @return The SKU family, used when the service has multiple performance classes within a tier, such as &#39;A&#39;, &#39;D&#39;, etc. for virtual machines
+         * 
+         */
     private final @Nullable String family;
-    /**
-     * The unique name of the SKU, such as &#39;P3&#39;
-     * 
-     */
+        /**
+         * @return The unique name of the SKU, such as &#39;P3&#39;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. &#39;A1&#39; for virtual machines
-     * 
-     */
+        /**
+         * @return The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. &#39;A1&#39; for virtual machines
+         * 
+         */
     private final @Nullable String size;
-    /**
-     * The tier of the SKU, such as &#39;Free&#39;, &#39;Basic&#39;, &#39;Standard&#39;, or &#39;Premium&#39;
-     * 
-     */
+        /**
+         * @return The tier of the SKU, such as &#39;Free&#39;, &#39;Basic&#39;, &#39;Standard&#39;, or &#39;Premium&#39;
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class ServiceSkuResponse {
     }
 
     /**
-     * The capacity of the SKU, if it supports scaling
+     * @return The capacity of the SKU, if it supports scaling
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The SKU family, used when the service has multiple performance classes within a tier, such as &#39;A&#39;, &#39;D&#39;, etc. for virtual machines
+     * @return The SKU family, used when the service has multiple performance classes within a tier, such as &#39;A&#39;, &#39;D&#39;, etc. for virtual machines
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The unique name of the SKU, such as &#39;P3&#39;
+     * @return The unique name of the SKU, such as &#39;P3&#39;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. &#39;A1&#39; for virtual machines
+     * @return The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. &#39;A1&#39; for virtual machines
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The tier of the SKU, such as &#39;Free&#39;, &#39;Basic&#39;, &#39;Standard&#39;, or &#39;Premium&#39;
+     * @return The tier of the SKU, such as &#39;Free&#39;, &#39;Basic&#39;, &#39;Standard&#39;, or &#39;Premium&#39;
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

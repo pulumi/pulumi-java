@@ -26,6 +26,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="capabilities", required=true)
     private Map<String,String> capabilities;
 
+    /**
+     * @return The integration runtime capabilities dictionary
+     * 
+     */
     public Map<String,String> capabilities() {
         return this.capabilities;
     }
@@ -37,6 +41,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="concurrentJobsLimit", required=true)
     private Integer concurrentJobsLimit;
 
+    /**
+     * @return Maximum concurrent jobs on the integration runtime node.
+     * 
+     */
     public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
@@ -48,6 +56,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="expiryTime", required=true)
     private String expiryTime;
 
+    /**
+     * @return The time at which the integration runtime will expire in ISO8601 format.
+     * 
+     */
     public String expiryTime() {
         return this.expiryTime;
     }
@@ -59,6 +71,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="hostServiceUri", required=true)
     private String hostServiceUri;
 
+    /**
+     * @return URI for the host machine of the integration runtime.
+     * 
+     */
     public String hostServiceUri() {
         return this.hostServiceUri;
     }
@@ -70,6 +86,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="isActiveDispatcher", required=true)
     private Boolean isActiveDispatcher;
 
+    /**
+     * @return Indicates whether this node is the active dispatcher for integration runtime requests.
+     * 
+     */
     public Boolean isActiveDispatcher() {
         return this.isActiveDispatcher;
     }
@@ -81,6 +101,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="lastConnectTime", required=true)
     private String lastConnectTime;
 
+    /**
+     * @return The most recent time at which the integration runtime was connected in ISO8601 format.
+     * 
+     */
     public String lastConnectTime() {
         return this.lastConnectTime;
     }
@@ -92,6 +116,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="lastEndUpdateTime", required=true)
     private String lastEndUpdateTime;
 
+    /**
+     * @return The last time for the integration runtime node update end.
+     * 
+     */
     public String lastEndUpdateTime() {
         return this.lastEndUpdateTime;
     }
@@ -103,6 +131,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="lastStartTime", required=true)
     private String lastStartTime;
 
+    /**
+     * @return The time the node last started up.
+     * 
+     */
     public String lastStartTime() {
         return this.lastStartTime;
     }
@@ -114,6 +146,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="lastStartUpdateTime", required=true)
     private String lastStartUpdateTime;
 
+    /**
+     * @return The last time for the integration runtime node update start.
+     * 
+     */
     public String lastStartUpdateTime() {
         return this.lastStartUpdateTime;
     }
@@ -125,6 +161,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="lastStopTime", required=true)
     private String lastStopTime;
 
+    /**
+     * @return The integration runtime node last stop time.
+     * 
+     */
     public String lastStopTime() {
         return this.lastStopTime;
     }
@@ -136,6 +176,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="lastUpdateResult", required=true)
     private String lastUpdateResult;
 
+    /**
+     * @return The result of the last integration runtime node update.
+     * 
+     */
     public String lastUpdateResult() {
         return this.lastUpdateResult;
     }
@@ -147,6 +191,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="machineName", required=true)
     private String machineName;
 
+    /**
+     * @return Machine name of the integration runtime node.
+     * 
+     */
     public String machineName() {
         return this.machineName;
     }
@@ -158,6 +206,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="maxConcurrentJobs", required=true)
     private Integer maxConcurrentJobs;
 
+    /**
+     * @return The maximum concurrent jobs in this integration runtime.
+     * 
+     */
     public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
@@ -169,6 +221,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="nodeName", required=true)
     private String nodeName;
 
+    /**
+     * @return Name of the integration runtime node.
+     * 
+     */
     public String nodeName() {
         return this.nodeName;
     }
@@ -180,6 +236,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="registerTime", required=true)
     private String registerTime;
 
+    /**
+     * @return The time at which the integration runtime node was registered in ISO8601 format.
+     * 
+     */
     public String registerTime() {
         return this.registerTime;
     }
@@ -191,6 +251,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the integration runtime node.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -202,6 +266,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Version of the integration runtime node.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -213,6 +281,10 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
     @Import(name="versionStatus", required=true)
     private String versionStatus;
 
+    /**
+     * @return Status of the integration runtime node version.
+     * 
+     */
     public String versionStatus() {
         return this.versionStatus;
     }
@@ -258,91 +330,199 @@ public final class SelfHostedIntegrationRuntimeNodeResponse extends com.pulumi.r
             $ = new SelfHostedIntegrationRuntimeNodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capabilities The integration runtime capabilities dictionary
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(Map<String,String> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param concurrentJobsLimit Maximum concurrent jobs on the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
             $.concurrentJobsLimit = concurrentJobsLimit;
             return this;
         }
 
+        /**
+         * @param expiryTime The time at which the integration runtime will expire in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(String expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
 
+        /**
+         * @param hostServiceUri URI for the host machine of the integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostServiceUri(String hostServiceUri) {
             $.hostServiceUri = hostServiceUri;
             return this;
         }
 
+        /**
+         * @param isActiveDispatcher Indicates whether this node is the active dispatcher for integration runtime requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActiveDispatcher(Boolean isActiveDispatcher) {
             $.isActiveDispatcher = isActiveDispatcher;
             return this;
         }
 
+        /**
+         * @param lastConnectTime The most recent time at which the integration runtime was connected in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastConnectTime(String lastConnectTime) {
             $.lastConnectTime = lastConnectTime;
             return this;
         }
 
+        /**
+         * @param lastEndUpdateTime The last time for the integration runtime node update end.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastEndUpdateTime(String lastEndUpdateTime) {
             $.lastEndUpdateTime = lastEndUpdateTime;
             return this;
         }
 
+        /**
+         * @param lastStartTime The time the node last started up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStartTime(String lastStartTime) {
             $.lastStartTime = lastStartTime;
             return this;
         }
 
+        /**
+         * @param lastStartUpdateTime The last time for the integration runtime node update start.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStartUpdateTime(String lastStartUpdateTime) {
             $.lastStartUpdateTime = lastStartUpdateTime;
             return this;
         }
 
+        /**
+         * @param lastStopTime The integration runtime node last stop time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStopTime(String lastStopTime) {
             $.lastStopTime = lastStopTime;
             return this;
         }
 
+        /**
+         * @param lastUpdateResult The result of the last integration runtime node update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdateResult(String lastUpdateResult) {
             $.lastUpdateResult = lastUpdateResult;
             return this;
         }
 
+        /**
+         * @param machineName Machine name of the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(String machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param maxConcurrentJobs The maximum concurrent jobs in this integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
             $.maxConcurrentJobs = maxConcurrentJobs;
             return this;
         }
 
+        /**
+         * @param nodeName Name of the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeName(String nodeName) {
             $.nodeName = nodeName;
             return this;
         }
 
+        /**
+         * @param registerTime The time at which the integration runtime node was registered in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registerTime(String registerTime) {
             $.registerTime = registerTime;
             return this;
         }
 
+        /**
+         * @param status Status of the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param version Version of the integration runtime node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param versionStatus Status of the integration runtime node version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionStatus(String versionStatus) {
             $.versionStatus = versionStatus;
             return this;

@@ -27,6 +27,10 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The offering description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -38,6 +42,10 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
     @Import(name="nativeCloudConnection")
     private @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
 
+    /**
+     * @return The native cloud connection configuration
+     * 
+     */
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> nativeCloudConnection() {
         return Optional.ofNullable(this.nativeCloudConnection);
     }
@@ -50,6 +58,11 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
     @Import(name="offeringType", required=true)
     private String offeringType;
 
+    /**
+     * @return The type of the security offering.
+     * Expected value is &#39;CspmMonitorAws&#39;.
+     * 
+     */
     public String offeringType() {
         return this.offeringType;
     }
@@ -80,16 +93,35 @@ public final class CspmMonitorAwsOfferingResponse extends com.pulumi.resources.I
             $ = new CspmMonitorAwsOfferingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The offering description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param nativeCloudConnection The native cloud connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder nativeCloudConnection(@Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection) {
             $.nativeCloudConnection = nativeCloudConnection;
             return this;
         }
 
+        /**
+         * @param offeringType The type of the security offering.
+         * Expected value is &#39;CspmMonitorAws&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offeringType(String offeringType) {
             $.offeringType = offeringType;
             return this;

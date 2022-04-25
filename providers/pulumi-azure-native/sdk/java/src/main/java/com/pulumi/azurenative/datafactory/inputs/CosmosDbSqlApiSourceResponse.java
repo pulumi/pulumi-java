@@ -27,6 +27,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="additionalColumns")
     private @Nullable Object additionalColumns;
 
+    /**
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
@@ -38,6 +42,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="detectDatetime")
     private @Nullable Object detectDatetime;
 
+    /**
+     * @return Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> detectDatetime() {
         return Optional.ofNullable(this.detectDatetime);
     }
@@ -49,6 +57,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="disableMetricsCollection")
     private @Nullable Object disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -60,6 +72,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="maxConcurrentConnections")
     private @Nullable Object maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -71,6 +87,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="pageSize")
     private @Nullable Object pageSize;
 
+    /**
+     * @return Page size of the result. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> pageSize() {
         return Optional.ofNullable(this.pageSize);
     }
@@ -82,6 +102,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="preferredRegions")
     private @Nullable Object preferredRegions;
 
+    /**
+     * @return Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Object> preferredRegions() {
         return Optional.ofNullable(this.preferredRegions);
     }
@@ -93,6 +117,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="query")
     private @Nullable Object query;
 
+    /**
+     * @return SQL API query. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
@@ -104,6 +132,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="sourceRetryCount")
     private @Nullable Object sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -115,6 +147,10 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="sourceRetryWait")
     private @Nullable Object sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -127,6 +163,11 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;CosmosDbSqlApiSource&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -164,51 +205,112 @@ public final class CosmosDbSqlApiSourceResponse extends com.pulumi.resources.Inv
             $ = new CosmosDbSqlApiSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(@Nullable Object additionalColumns) {
             $.additionalColumns = additionalColumns;
             return this;
         }
 
+        /**
+         * @param detectDatetime Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder detectDatetime(@Nullable Object detectDatetime) {
             $.detectDatetime = detectDatetime;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param pageSize Page size of the result. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pageSize(@Nullable Object pageSize) {
             $.pageSize = pageSize;
             return this;
         }
 
+        /**
+         * @param preferredRegions Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder preferredRegions(@Nullable Object preferredRegions) {
             $.preferredRegions = preferredRegions;
             return this;
         }
 
+        /**
+         * @param query SQL API query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Object query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;CosmosDbSqlApiSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

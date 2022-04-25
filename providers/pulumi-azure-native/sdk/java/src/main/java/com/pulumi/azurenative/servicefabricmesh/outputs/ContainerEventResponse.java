@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerEventResponse {
-    /**
-     * The count of the event.
-     * 
-     */
+        /**
+         * @return The count of the event.
+         * 
+         */
     private final @Nullable Integer count;
-    /**
-     * Date/time of the first event.
-     * 
-     */
+        /**
+         * @return Date/time of the first event.
+         * 
+         */
     private final @Nullable String firstTimestamp;
-    /**
-     * Date/time of the last event.
-     * 
-     */
+        /**
+         * @return Date/time of the last event.
+         * 
+         */
     private final @Nullable String lastTimestamp;
-    /**
-     * The event message
-     * 
-     */
+        /**
+         * @return The event message
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * The name of the container event.
-     * 
-     */
+        /**
+         * @return The name of the container event.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The event type.
-     * 
-     */
+        /**
+         * @return The event type.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ContainerEventResponse {
     }
 
     /**
-     * The count of the event.
+     * @return The count of the event.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Date/time of the first event.
+     * @return Date/time of the first event.
      * 
-    */
+     */
     public Optional<String> firstTimestamp() {
         return Optional.ofNullable(this.firstTimestamp);
     }
     /**
-     * Date/time of the last event.
+     * @return Date/time of the last event.
      * 
-    */
+     */
     public Optional<String> lastTimestamp() {
         return Optional.ofNullable(this.lastTimestamp);
     }
     /**
-     * The event message
+     * @return The event message
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * The name of the container event.
+     * @return The name of the container event.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The event type.
+     * @return The event type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

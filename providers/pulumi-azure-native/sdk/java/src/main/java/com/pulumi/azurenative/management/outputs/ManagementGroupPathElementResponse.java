@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementGroupPathElementResponse {
-    /**
-     * The friendly name of the group.
-     * 
-     */
+        /**
+         * @return The friendly name of the group.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The name of the group.
-     * 
-     */
+        /**
+         * @return The name of the group.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ManagementGroupPathElementResponse {
     }
 
     /**
-     * The friendly name of the group.
+     * @return The friendly name of the group.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The name of the group.
+     * @return The name of the group.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

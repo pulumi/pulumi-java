@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
     @Import(name="groupIds")
     private @Nullable Output<List<String>> groupIds;
 
+    /**
+     * @return The list of group ids for the private endpoint connection.
+     * 
+     */
     public Optional<Output<List<String>>> groupIds() {
         return Optional.ofNullable(this.groupIds);
     }
@@ -60,15 +64,33 @@ public final class PrivateEndpointConnectionPropertiesArgs extends com.pulumi.re
             $ = new PrivateEndpointConnectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupIds The list of group ids for the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             $.groupIds = groupIds;
             return this;
         }
 
+        /**
+         * @param groupIds The list of group ids for the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(List<String> groupIds) {
             return groupIds(Output.of(groupIds));
         }
 
+        /**
+         * @param groupIds The list of group ids for the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }

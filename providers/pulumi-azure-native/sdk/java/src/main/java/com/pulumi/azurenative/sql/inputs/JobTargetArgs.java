@@ -30,6 +30,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The target database name.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -41,6 +45,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolName")
     private @Nullable Output<String> elasticPoolName;
 
+    /**
+     * @return The target elastic pool name.
+     * 
+     */
     public Optional<Output<String>> elasticPoolName() {
         return Optional.ofNullable(this.elasticPoolName);
     }
@@ -52,6 +60,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="membershipType")
     private @Nullable Output<JobTargetGroupMembershipType> membershipType;
 
+    /**
+     * @return Whether the target is included or excluded from the group.
+     * 
+     */
     public Optional<Output<JobTargetGroupMembershipType>> membershipType() {
         return Optional.ofNullable(this.membershipType);
     }
@@ -63,6 +75,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="refreshCredential")
     private @Nullable Output<String> refreshCredential;
 
+    /**
+     * @return The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+     * 
+     */
     public Optional<Output<String>> refreshCredential() {
         return Optional.ofNullable(this.refreshCredential);
     }
@@ -74,6 +90,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName")
     private @Nullable Output<String> serverName;
 
+    /**
+     * @return The target server name.
+     * 
+     */
     public Optional<Output<String>> serverName() {
         return Optional.ofNullable(this.serverName);
     }
@@ -85,6 +105,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shardMapName")
     private @Nullable Output<String> shardMapName;
 
+    /**
+     * @return The target shard map.
+     * 
+     */
     public Optional<Output<String>> shardMapName() {
         return Optional.ofNullable(this.shardMapName);
     }
@@ -96,6 +120,10 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<Either<String,JobTargetType>> type;
 
+    /**
+     * @return The target type.
+     * 
+     */
     public Output<Either<String,JobTargetType>> type() {
         return this.type;
     }
@@ -130,73 +158,169 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobTargetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The target database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The target database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param elasticPoolName The target elastic pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticPoolName(@Nullable Output<String> elasticPoolName) {
             $.elasticPoolName = elasticPoolName;
             return this;
         }
 
+        /**
+         * @param elasticPoolName The target elastic pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticPoolName(String elasticPoolName) {
             return elasticPoolName(Output.of(elasticPoolName));
         }
 
+        /**
+         * @param membershipType Whether the target is included or excluded from the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipType(@Nullable Output<JobTargetGroupMembershipType> membershipType) {
             $.membershipType = membershipType;
             return this;
         }
 
+        /**
+         * @param membershipType Whether the target is included or excluded from the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipType(JobTargetGroupMembershipType membershipType) {
             return membershipType(Output.of(membershipType));
         }
 
+        /**
+         * @param refreshCredential The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshCredential(@Nullable Output<String> refreshCredential) {
             $.refreshCredential = refreshCredential;
             return this;
         }
 
+        /**
+         * @param refreshCredential The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshCredential(String refreshCredential) {
             return refreshCredential(Output.of(refreshCredential));
         }
 
+        /**
+         * @param serverName The target server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(@Nullable Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The target server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param shardMapName The target shard map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardMapName(@Nullable Output<String> shardMapName) {
             $.shardMapName = shardMapName;
             return this;
         }
 
+        /**
+         * @param shardMapName The target shard map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardMapName(String shardMapName) {
             return shardMapName(Output.of(shardMapName));
         }
 
+        /**
+         * @param type The target type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,JobTargetType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The target type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,JobTargetType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The target type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The target type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(JobTargetType type) {
             return type(Either.ofRight(type));
         }

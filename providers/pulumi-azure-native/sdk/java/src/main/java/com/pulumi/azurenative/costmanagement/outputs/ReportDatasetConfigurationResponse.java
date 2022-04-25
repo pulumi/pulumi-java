@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportDatasetConfigurationResponse {
-    /**
-     * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
-     * 
-     */
+        /**
+         * @return Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+         * 
+         */
     private final @Nullable List<String> columns;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ReportDatasetConfigurationResponse {
     }
 
     /**
-     * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
+     * @return Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
      * 
-    */
+     */
     public List<String> columns() {
         return this.columns == null ? List.of() : this.columns;
     }

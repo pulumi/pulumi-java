@@ -26,6 +26,10 @@ public final class FileSystemTokenStoreArgs extends com.pulumi.resources.Resourc
     @Import(name="directory")
     private @Nullable Output<String> directory;
 
+    /**
+     * @return The directory in which the tokens will be stored.
+     * 
+     */
     public Optional<Output<String>> directory() {
         return Optional.ofNullable(this.directory);
     }
@@ -54,11 +58,23 @@ public final class FileSystemTokenStoreArgs extends com.pulumi.resources.Resourc
             $ = new FileSystemTokenStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param directory The directory in which the tokens will be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directory(@Nullable Output<String> directory) {
             $.directory = directory;
             return this;
         }
 
+        /**
+         * @param directory The directory in which the tokens will be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder directory(String directory) {
             return directory(Output.of(directory));
         }

@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class DeliveryRuleCookiesConditionResponse {
-    /**
-     * The name of the condition for the delivery rule.
-     * Expected value is &#39;Cookies&#39;.
-     * 
-     */
+        /**
+         * @return The name of the condition for the delivery rule.
+         * Expected value is &#39;Cookies&#39;.
+         * 
+         */
     private final String name;
-    /**
-     * Defines the parameters for the condition.
-     * 
-     */
+        /**
+         * @return Defines the parameters for the condition.
+         * 
+         */
     private final CookiesMatchConditionParametersResponse parameters;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class DeliveryRuleCookiesConditionResponse {
     }
 
     /**
-     * The name of the condition for the delivery rule.
+     * @return The name of the condition for the delivery rule.
      * Expected value is &#39;Cookies&#39;.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Defines the parameters for the condition.
+     * @return Defines the parameters for the condition.
      * 
-    */
+     */
     public CookiesMatchConditionParametersResponse parameters() {
         return this.parameters;
     }

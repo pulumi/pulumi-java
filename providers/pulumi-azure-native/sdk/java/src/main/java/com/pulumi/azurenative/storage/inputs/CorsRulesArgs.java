@@ -27,6 +27,10 @@ public final class CorsRulesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="corsRules")
     private @Nullable Output<List<CorsRuleArgs>> corsRules;
 
+    /**
+     * @return The List of CORS rules. You can include up to five CorsRule elements in the request.
+     * 
+     */
     public Optional<Output<List<CorsRuleArgs>>> corsRules() {
         return Optional.ofNullable(this.corsRules);
     }
@@ -55,15 +59,33 @@ public final class CorsRulesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CorsRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param corsRules The List of CORS rules. You can include up to five CorsRule elements in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsRules(@Nullable Output<List<CorsRuleArgs>> corsRules) {
             $.corsRules = corsRules;
             return this;
         }
 
+        /**
+         * @param corsRules The List of CORS rules. You can include up to five CorsRule elements in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsRules(List<CorsRuleArgs> corsRules) {
             return corsRules(Output.of(corsRules));
         }
 
+        /**
+         * @param corsRules The List of CORS rules. You can include up to five CorsRule elements in the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsRules(CorsRuleArgs... corsRules) {
             return corsRules(List.of(corsRules));
         }

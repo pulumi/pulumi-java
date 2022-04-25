@@ -21,105 +21,105 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAzureFirewallResult {
-    /**
-     * The additional properties used to further config this azure firewall.
-     * 
-     */
+        /**
+         * @return The additional properties used to further config this azure firewall.
+         * 
+         */
     private final @Nullable Map<String,String> additionalProperties;
-    /**
-     * Collection of application rule collections used by Azure Firewall.
-     * 
-     */
+        /**
+         * @return Collection of application rule collections used by Azure Firewall.
+         * 
+         */
     private final @Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * The firewallPolicy associated with this azure firewall.
-     * 
-     */
+        /**
+         * @return The firewallPolicy associated with this azure firewall.
+         * 
+         */
     private final @Nullable SubResourceResponse firewallPolicy;
-    /**
-     * IP addresses associated with AzureFirewall.
-     * 
-     */
+        /**
+         * @return IP addresses associated with AzureFirewall.
+         * 
+         */
     private final @Nullable HubIPAddressesResponse hubIPAddresses;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * IP configuration of the Azure Firewall resource.
-     * 
-     */
+        /**
+         * @return IP configuration of the Azure Firewall resource.
+         * 
+         */
     private final @Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations;
-    /**
-     * IpGroups associated with AzureFirewall.
-     * 
-     */
+        /**
+         * @return IpGroups associated with AzureFirewall.
+         * 
+         */
     private final List<AzureFirewallIpGroupsResponse> ipGroups;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * IP configuration of the Azure Firewall used for management traffic.
-     * 
-     */
+        /**
+         * @return IP configuration of the Azure Firewall used for management traffic.
+         * 
+         */
     private final @Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Collection of NAT rule collections used by Azure Firewall.
-     * 
-     */
+        /**
+         * @return Collection of NAT rule collections used by Azure Firewall.
+         * 
+         */
     private final @Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections;
-    /**
-     * Collection of network rule collections used by Azure Firewall.
-     * 
-     */
+        /**
+         * @return Collection of network rule collections used by Azure Firewall.
+         * 
+         */
     private final @Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections;
-    /**
-     * The provisioning state of the Azure firewall resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the Azure firewall resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The Azure Firewall Resource SKU.
-     * 
-     */
+        /**
+         * @return The Azure Firewall Resource SKU.
+         * 
+         */
     private final @Nullable AzureFirewallSkuResponse sku;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The operation mode for Threat Intelligence.
-     * 
-     */
+        /**
+         * @return The operation mode for Threat Intelligence.
+         * 
+         */
     private final @Nullable String threatIntelMode;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The virtualHub to which the firewall belongs.
-     * 
-     */
+        /**
+         * @return The virtualHub to which the firewall belongs.
+         * 
+         */
     private final @Nullable SubResourceResponse virtualHub;
-    /**
-     * A list of availability zones denoting where the resource needs to come from.
-     * 
-     */
+        /**
+         * @return A list of availability zones denoting where the resource needs to come from.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -167,142 +167,142 @@ public final class GetAzureFirewallResult {
     }
 
     /**
-     * The additional properties used to further config this azure firewall.
+     * @return The additional properties used to further config this azure firewall.
      * 
-    */
+     */
     public Map<String,String> additionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
     /**
-     * Collection of application rule collections used by Azure Firewall.
+     * @return Collection of application rule collections used by Azure Firewall.
      * 
-    */
+     */
     public List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections() {
         return this.applicationRuleCollections == null ? List.of() : this.applicationRuleCollections;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The firewallPolicy associated with this azure firewall.
+     * @return The firewallPolicy associated with this azure firewall.
      * 
-    */
+     */
     public Optional<SubResourceResponse> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
     /**
-     * IP addresses associated with AzureFirewall.
+     * @return IP addresses associated with AzureFirewall.
      * 
-    */
+     */
     public Optional<HubIPAddressesResponse> hubIPAddresses() {
         return Optional.ofNullable(this.hubIPAddresses);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * IP configuration of the Azure Firewall resource.
+     * @return IP configuration of the Azure Firewall resource.
      * 
-    */
+     */
     public List<AzureFirewallIPConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * IpGroups associated with AzureFirewall.
+     * @return IpGroups associated with AzureFirewall.
      * 
-    */
+     */
     public List<AzureFirewallIpGroupsResponse> ipGroups() {
         return this.ipGroups;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * IP configuration of the Azure Firewall used for management traffic.
+     * @return IP configuration of the Azure Firewall used for management traffic.
      * 
-    */
+     */
     public Optional<AzureFirewallIPConfigurationResponse> managementIpConfiguration() {
         return Optional.ofNullable(this.managementIpConfiguration);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Collection of NAT rule collections used by Azure Firewall.
+     * @return Collection of NAT rule collections used by Azure Firewall.
      * 
-    */
+     */
     public List<AzureFirewallNatRuleCollectionResponse> natRuleCollections() {
         return this.natRuleCollections == null ? List.of() : this.natRuleCollections;
     }
     /**
-     * Collection of network rule collections used by Azure Firewall.
+     * @return Collection of network rule collections used by Azure Firewall.
      * 
-    */
+     */
     public List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections() {
         return this.networkRuleCollections == null ? List.of() : this.networkRuleCollections;
     }
     /**
-     * The provisioning state of the Azure firewall resource.
+     * @return The provisioning state of the Azure firewall resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The Azure Firewall Resource SKU.
+     * @return The Azure Firewall Resource SKU.
      * 
-    */
+     */
     public Optional<AzureFirewallSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The operation mode for Threat Intelligence.
+     * @return The operation mode for Threat Intelligence.
      * 
-    */
+     */
     public Optional<String> threatIntelMode() {
         return Optional.ofNullable(this.threatIntelMode);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The virtualHub to which the firewall belongs.
+     * @return The virtualHub to which the firewall belongs.
      * 
-    */
+     */
     public Optional<SubResourceResponse> virtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
-     * A list of availability zones denoting where the resource needs to come from.
+     * @return A list of availability zones denoting where the resource needs to come from.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

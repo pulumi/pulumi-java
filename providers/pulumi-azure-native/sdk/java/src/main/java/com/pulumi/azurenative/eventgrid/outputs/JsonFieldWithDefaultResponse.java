@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JsonFieldWithDefaultResponse {
-    /**
-     * The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
-     * 
-     */
+        /**
+         * @return The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+         * 
+         */
     private final @Nullable String defaultValue;
-    /**
-     * Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
-     * 
-     */
+        /**
+         * @return Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         */
     private final @Nullable String sourceField;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class JsonFieldWithDefaultResponse {
     }
 
     /**
-     * The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
+     * @return The default value to be used for mapping when a SourceField is not provided or if there&#39;s no property with the specified name in the published JSON event payload.
      * 
-    */
+     */
     public Optional<String> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+     * @return Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
      * 
-    */
+     */
     public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }

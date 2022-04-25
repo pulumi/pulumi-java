@@ -24,6 +24,10 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
     @Import(name="kind", required=true)
     private Output<Either<String,SynchronizationSettingKind>> kind;
 
+    /**
+     * @return Kind of synchronization setting.
+     * 
+     */
     public Output<Either<String,SynchronizationSettingKind>> kind() {
         return this.kind;
     }
@@ -46,6 +54,10 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return The name of the share to add the synchronization setting to.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -68,6 +84,10 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
     @Import(name="synchronizationSettingName")
     private @Nullable Output<String> synchronizationSettingName;
 
+    /**
+     * @return The name of the synchronizationSetting.
+     * 
+     */
     public Optional<Output<String>> synchronizationSettingName() {
         return Optional.ofNullable(this.synchronizationSettingName);
     }
@@ -100,55 +120,127 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
             $ = new SynchronizationSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param kind Kind of synchronization setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,SynchronizationSettingKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of synchronization setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,SynchronizationSettingKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Kind of synchronization setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Kind of synchronization setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(SynchronizationSettingKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param shareName The name of the share to add the synchronization setting to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share to add the synchronization setting to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param synchronizationSettingName The name of the synchronizationSetting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
             $.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
 
+        /**
+         * @param synchronizationSettingName The name of the synchronizationSetting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationSettingName(String synchronizationSettingName) {
             return synchronizationSettingName(Output.of(synchronizationSettingName));
         }

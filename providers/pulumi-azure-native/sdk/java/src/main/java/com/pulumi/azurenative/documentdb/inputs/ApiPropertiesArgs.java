@@ -24,6 +24,10 @@ public final class ApiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverVersion")
     private @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
+    /**
+     * @return Describes the ServerVersion of an a MongoDB account.
+     * 
+     */
     public Optional<Output<Either<String,ServerVersion>>> serverVersion() {
         return Optional.ofNullable(this.serverVersion);
     }
@@ -52,19 +56,43 @@ public final class ApiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serverVersion Describes the ServerVersion of an a MongoDB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(@Nullable Output<Either<String,ServerVersion>> serverVersion) {
             $.serverVersion = serverVersion;
             return this;
         }
 
+        /**
+         * @param serverVersion Describes the ServerVersion of an a MongoDB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(Either<String,ServerVersion> serverVersion) {
             return serverVersion(Output.of(serverVersion));
         }
 
+        /**
+         * @param serverVersion Describes the ServerVersion of an a MongoDB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(String serverVersion) {
             return serverVersion(Either.ofLeft(serverVersion));
         }
 
+        /**
+         * @param serverVersion Describes the ServerVersion of an a MongoDB account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverVersion(ServerVersion serverVersion) {
             return serverVersion(Either.ofRight(serverVersion));
         }

@@ -15,80 +15,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualNetworkPeeringResponse {
-    /**
-     * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
-     * 
-     */
+        /**
+         * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+         * 
+         */
     private final @Nullable Boolean allowForwardedTraffic;
-    /**
-     * If gateway links can be used in remote virtual networking to link to this virtual network.
-     * 
-     */
+        /**
+         * @return If gateway links can be used in remote virtual networking to link to this virtual network.
+         * 
+         */
     private final @Nullable Boolean allowGatewayTransit;
-    /**
-     * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
-     * 
-     */
+        /**
+         * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+         * 
+         */
     private final @Nullable Boolean allowVirtualNetworkAccess;
-    /**
-     * If we need to verify the provisioning state of the remote gateway.
-     * 
-     */
+        /**
+         * @return If we need to verify the provisioning state of the remote gateway.
+         * 
+         */
     private final @Nullable Boolean doNotVerifyRemoteGateways;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The status of the virtual network peering.
-     * 
-     */
+        /**
+         * @return The status of the virtual network peering.
+         * 
+         */
     private final @Nullable String peeringState;
-    /**
-     * The provisioning state of the virtual network peering resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the virtual network peering resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The reference to the remote virtual network address space.
-     * 
-     */
+        /**
+         * @return The reference to the remote virtual network address space.
+         * 
+         */
     private final @Nullable AddressSpaceResponse remoteAddressSpace;
-    /**
-     * The reference to the remote virtual network&#39;s Bgp Communities.
-     * 
-     */
+        /**
+         * @return The reference to the remote virtual network&#39;s Bgp Communities.
+         * 
+         */
     private final @Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities;
-    /**
-     * The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
-     * 
-     */
+        /**
+         * @return The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
+         * 
+         */
     private final @Nullable SubResourceResponse remoteVirtualNetwork;
-    /**
-     * The resourceGuid property of the Virtual Network peering resource.
-     * 
-     */
+        /**
+         * @return The resourceGuid property of the Virtual Network peering resource.
+         * 
+         */
     private final String resourceGuid;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
-     * 
-     */
+        /**
+         * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+         * 
+         */
     private final @Nullable Boolean useRemoteGateways;
 
     @CustomType.Constructor
@@ -126,107 +126,107 @@ public final class VirtualNetworkPeeringResponse {
     }
 
     /**
-     * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+     * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
-    */
+     */
     public Optional<Boolean> allowForwardedTraffic() {
         return Optional.ofNullable(this.allowForwardedTraffic);
     }
     /**
-     * If gateway links can be used in remote virtual networking to link to this virtual network.
+     * @return If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
-    */
+     */
     public Optional<Boolean> allowGatewayTransit() {
         return Optional.ofNullable(this.allowGatewayTransit);
     }
     /**
-     * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+     * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
-    */
+     */
     public Optional<Boolean> allowVirtualNetworkAccess() {
         return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
     /**
-     * If we need to verify the provisioning state of the remote gateway.
+     * @return If we need to verify the provisioning state of the remote gateway.
      * 
-    */
+     */
     public Optional<Boolean> doNotVerifyRemoteGateways() {
         return Optional.ofNullable(this.doNotVerifyRemoteGateways);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The status of the virtual network peering.
+     * @return The status of the virtual network peering.
      * 
-    */
+     */
     public Optional<String> peeringState() {
         return Optional.ofNullable(this.peeringState);
     }
     /**
-     * The provisioning state of the virtual network peering resource.
+     * @return The provisioning state of the virtual network peering resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reference to the remote virtual network address space.
+     * @return The reference to the remote virtual network address space.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> remoteAddressSpace() {
         return Optional.ofNullable(this.remoteAddressSpace);
     }
     /**
-     * The reference to the remote virtual network&#39;s Bgp Communities.
+     * @return The reference to the remote virtual network&#39;s Bgp Communities.
      * 
-    */
+     */
     public Optional<VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities() {
         return Optional.ofNullable(this.remoteBgpCommunities);
     }
     /**
-     * The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
+     * @return The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
      * 
-    */
+     */
     public Optional<SubResourceResponse> remoteVirtualNetwork() {
         return Optional.ofNullable(this.remoteVirtualNetwork);
     }
     /**
-     * The resourceGuid property of the Virtual Network peering resource.
+     * @return The resourceGuid property of the Virtual Network peering resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+     * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
-    */
+     */
     public Optional<Boolean> useRemoteGateways() {
         return Optional.ofNullable(this.useRemoteGateways);
     }

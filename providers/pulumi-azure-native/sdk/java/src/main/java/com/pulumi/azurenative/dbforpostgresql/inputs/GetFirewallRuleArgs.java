@@ -19,6 +19,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="firewallRuleName", required=true)
     private String firewallRuleName;
 
+    /**
+     * @return The name of the server firewall rule.
+     * 
+     */
     public String firewallRuleName() {
         return this.firewallRuleName;
     }
@@ -30,6 +34,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverName", required=true)
     private String serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public String serverName() {
         return this.serverName;
     }
@@ -71,16 +83,34 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param firewallRuleName The name of the server firewall rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRuleName(String firewallRuleName) {
             $.firewallRuleName = firewallRuleName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             $.serverName = serverName;
             return this;

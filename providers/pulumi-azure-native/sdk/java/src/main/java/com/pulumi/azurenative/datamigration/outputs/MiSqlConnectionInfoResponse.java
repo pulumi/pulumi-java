@@ -11,26 +11,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MiSqlConnectionInfoResponse {
-    /**
-     * Resource id for Azure SQL database Managed instance
-     * 
-     */
+        /**
+         * @return Resource id for Azure SQL database Managed instance
+         * 
+         */
     private final String managedInstanceResourceId;
-    /**
-     * Password credential.
-     * 
-     */
+        /**
+         * @return Password credential.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * Type of connection info
-     * Expected value is &#39;MiSqlConnectionInfo&#39;.
-     * 
-     */
+        /**
+         * @return Type of connection info
+         * Expected value is &#39;MiSqlConnectionInfo&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * User name
-     * 
-     */
+        /**
+         * @return User name
+         * 
+         */
     private final @Nullable String userName;
 
     @CustomType.Constructor
@@ -46,31 +46,31 @@ public final class MiSqlConnectionInfoResponse {
     }
 
     /**
-     * Resource id for Azure SQL database Managed instance
+     * @return Resource id for Azure SQL database Managed instance
      * 
-    */
+     */
     public String managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
     /**
-     * Password credential.
+     * @return Password credential.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Type of connection info
+     * @return Type of connection info
      * Expected value is &#39;MiSqlConnectionInfo&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * User name
+     * @return User name
      * 
-    */
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }

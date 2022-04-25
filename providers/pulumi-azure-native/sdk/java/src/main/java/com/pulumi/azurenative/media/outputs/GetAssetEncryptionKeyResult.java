@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAssetEncryptionKeyResult {
-    /**
-     * Asset File encryption metadata.
-     * 
-     */
+        /**
+         * @return Asset File encryption metadata.
+         * 
+         */
     private final @Nullable List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata;
-    /**
-     * The Asset File storage encryption key.
-     * 
-     */
+        /**
+         * @return The Asset File storage encryption key.
+         * 
+         */
     private final @Nullable String key;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class GetAssetEncryptionKeyResult {
     }
 
     /**
-     * Asset File encryption metadata.
+     * @return Asset File encryption metadata.
      * 
-    */
+     */
     public List<AssetFileEncryptionMetadataResponse> assetFileEncryptionMetadata() {
         return this.assetFileEncryptionMetadata == null ? List.of() : this.assetFileEncryptionMetadata;
     }
     /**
-     * The Asset File storage encryption key.
+     * @return The Asset File storage encryption key.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }

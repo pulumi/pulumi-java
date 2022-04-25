@@ -24,6 +24,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return Public IP address of the virtual machine.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -35,6 +39,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="administratorAccount")
     private @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
 
+    /**
+     * @return Admin credentials for virtual machine
+     * 
+     */
     public Optional<Output<VirtualMachineSshCredentialsArgs>> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
@@ -46,6 +54,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="sshPort")
     private @Nullable Output<Integer> sshPort;
 
+    /**
+     * @return Port open for ssh connections.
+     * 
+     */
     public Optional<Output<Integer>> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }
@@ -57,6 +69,10 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
     @Import(name="virtualMachineSize")
     private @Nullable Output<String> virtualMachineSize;
 
+    /**
+     * @return Virtual Machine size
+     * 
+     */
     public Optional<Output<String>> virtualMachineSize() {
         return Optional.ofNullable(this.virtualMachineSize);
     }
@@ -88,38 +104,86 @@ public final class VirtualMachinePropertiesArgs extends com.pulumi.resources.Res
             $ = new VirtualMachinePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Public IP address of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address Public IP address of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param administratorAccount Admin credentials for virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(@Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount) {
             $.administratorAccount = administratorAccount;
             return this;
         }
 
+        /**
+         * @param administratorAccount Admin credentials for virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder administratorAccount(VirtualMachineSshCredentialsArgs administratorAccount) {
             return administratorAccount(Output.of(administratorAccount));
         }
 
+        /**
+         * @param sshPort Port open for ssh connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(@Nullable Output<Integer> sshPort) {
             $.sshPort = sshPort;
             return this;
         }
 
+        /**
+         * @param sshPort Port open for ssh connections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPort(Integer sshPort) {
             return sshPort(Output.of(sshPort));
         }
 
+        /**
+         * @param virtualMachineSize Virtual Machine size
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineSize(@Nullable Output<String> virtualMachineSize) {
             $.virtualMachineSize = virtualMachineSize;
             return this;
         }
 
+        /**
+         * @param virtualMachineSize Virtual Machine size
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineSize(String virtualMachineSize) {
             return virtualMachineSize(Output.of(virtualMachineSize));
         }

@@ -30,6 +30,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="cloudWatchToKinesis")
     private @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
 
+    /**
+     * @return The cloudwatch to kinesis connection configuration
+     * 
+     */
     public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> cloudWatchToKinesis() {
         return Optional.ofNullable(this.cloudWatchToKinesis);
     }
@@ -41,6 +45,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The offering description.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -52,6 +60,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="kinesisToS3")
     private @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
 
+    /**
+     * @return The kinesis to s3 connection configuration
+     * 
+     */
     public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> kinesisToS3() {
         return Optional.ofNullable(this.kinesisToS3);
     }
@@ -63,6 +75,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="kubernetesScubaReader")
     private @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
 
+    /**
+     * @return The kubernetes to scuba connection configuration
+     * 
+     */
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> kubernetesScubaReader() {
         return Optional.ofNullable(this.kubernetesScubaReader);
     }
@@ -74,6 +90,10 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="kubernetesService")
     private @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
 
+    /**
+     * @return The kubernetes service connection configuration
+     * 
+     */
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> kubernetesService() {
         return Optional.ofNullable(this.kubernetesService);
     }
@@ -86,6 +106,11 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
     @Import(name="offeringType", required=true)
     private String offeringType;
 
+    /**
+     * @return The type of the security offering.
+     * Expected value is &#39;DefenderForContainersAws&#39;.
+     * 
+     */
     public String offeringType() {
         return this.offeringType;
     }
@@ -119,31 +144,68 @@ public final class DefenderForContainersAwsOfferingResponse extends com.pulumi.r
             $ = new DefenderForContainersAwsOfferingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudWatchToKinesis The cloudwatch to kinesis connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudWatchToKinesis(@Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis) {
             $.cloudWatchToKinesis = cloudWatchToKinesis;
             return this;
         }
 
+        /**
+         * @param description The offering description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kinesisToS3 The kinesis to s3 connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kinesisToS3(@Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3) {
             $.kinesisToS3 = kinesisToS3;
             return this;
         }
 
+        /**
+         * @param kubernetesScubaReader The kubernetes to scuba connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesScubaReader(@Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader) {
             $.kubernetesScubaReader = kubernetesScubaReader;
             return this;
         }
 
+        /**
+         * @param kubernetesService The kubernetes service connection configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubernetesService(@Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService) {
             $.kubernetesService = kubernetesService;
             return this;
         }
 
+        /**
+         * @param offeringType The type of the security offering.
+         * Expected value is &#39;DefenderForContainersAws&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offeringType(String offeringType) {
             $.offeringType = offeringType;
             return this;

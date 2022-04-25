@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MyWorkbookManagedIdentityResponse {
-    /**
-     * The identity type.
-     * 
-     */
+        /**
+         * @return The identity type.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * Customer Managed Identity
-     * 
-     */
+        /**
+         * @return Customer Managed Identity
+         * 
+         */
     private final @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class MyWorkbookManagedIdentityResponse {
     }
 
     /**
-     * The identity type.
+     * @return The identity type.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Customer Managed Identity
+     * @return Customer Managed Identity
      * 
-    */
+     */
     public Optional<MyWorkbookUserAssignedIdentitiesResponse> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }

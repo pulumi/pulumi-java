@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StorageAccountConfigurationResponse {
-    /**
-     * The storage account access key.
-     * 
-     */
+        /**
+         * @return The storage account access key.
+         * 
+         */
     private final @Nullable String storageAccountKey;
-    /**
-     * The storage account name.
-     * 
-     */
+        /**
+         * @return The storage account name.
+         * 
+         */
     private final @Nullable String storageAccountName;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class StorageAccountConfigurationResponse {
     }
 
     /**
-     * The storage account access key.
+     * @return The storage account access key.
      * 
-    */
+     */
     public Optional<String> storageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
     /**
-     * The storage account name.
+     * @return The storage account name.
      * 
-    */
+     */
     public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }

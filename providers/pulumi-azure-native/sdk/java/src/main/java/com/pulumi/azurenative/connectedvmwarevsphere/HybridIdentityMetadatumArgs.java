@@ -22,6 +22,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
     @Import(name="metadataName")
     private @Nullable Output<String> metadataName;
 
+    /**
+     * @return Name of the hybridIdentityMetadata.
+     * 
+     */
     public Optional<Output<String>> metadataName() {
         return Optional.ofNullable(this.metadataName);
     }
@@ -33,6 +37,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
     @Import(name="publicKey")
     private @Nullable Output<String> publicKey;
 
+    /**
+     * @return Gets or sets the Public Key.
+     * 
+     */
     public Optional<Output<String>> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
@@ -44,6 +52,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
     @Import(name="virtualMachineName", required=true)
     private Output<String> virtualMachineName;
 
+    /**
+     * @return Name of the vm.
+     * 
+     */
     public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
@@ -66,6 +82,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
     @Import(name="vmId")
     private @Nullable Output<String> vmId;
 
+    /**
+     * @return Gets or sets the Vm Id.
+     * 
+     */
     public Optional<Output<String>> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -98,47 +118,107 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
             $ = new HybridIdentityMetadatumArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param metadataName Name of the hybridIdentityMetadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataName(@Nullable Output<String> metadataName) {
             $.metadataName = metadataName;
             return this;
         }
 
+        /**
+         * @param metadataName Name of the hybridIdentityMetadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataName(String metadataName) {
             return metadataName(Output.of(metadataName));
         }
 
+        /**
+         * @param publicKey Gets or sets the Public Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(@Nullable Output<String> publicKey) {
             $.publicKey = publicKey;
             return this;
         }
 
+        /**
+         * @param publicKey Gets or sets the Public Key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKey(String publicKey) {
             return publicKey(Output.of(publicKey));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(Output<String> virtualMachineName) {
             $.virtualMachineName = virtualMachineName;
             return this;
         }
 
+        /**
+         * @param virtualMachineName Name of the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineName(String virtualMachineName) {
             return virtualMachineName(Output.of(virtualMachineName));
         }
 
+        /**
+         * @param vmId Gets or sets the Vm Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable Output<String> vmId) {
             $.vmId = vmId;
             return this;
         }
 
+        /**
+         * @param vmId Gets or sets the Vm Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(String vmId) {
             return vmId(Output.of(vmId));
         }

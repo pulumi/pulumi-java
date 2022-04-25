@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TokenPasswordResponse {
-    /**
-     * The creation datetime of the password.
-     * 
-     */
+        /**
+         * @return The creation datetime of the password.
+         * 
+         */
     private final @Nullable String creationTime;
-    /**
-     * The expiry datetime of the password.
-     * 
-     */
+        /**
+         * @return The expiry datetime of the password.
+         * 
+         */
     private final @Nullable String expiry;
-    /**
-     * The password name &#34;password1&#34; or &#34;password2&#34;
-     * 
-     */
+        /**
+         * @return The password name &#34;password1&#34; or &#34;password2&#34;
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The password value.
-     * 
-     */
+        /**
+         * @return The password value.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class TokenPasswordResponse {
     }
 
     /**
-     * The creation datetime of the password.
+     * @return The creation datetime of the password.
      * 
-    */
+     */
     public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
-     * The expiry datetime of the password.
+     * @return The expiry datetime of the password.
      * 
-    */
+     */
     public Optional<String> expiry() {
         return Optional.ofNullable(this.expiry);
     }
     /**
-     * The password name &#34;password1&#34; or &#34;password2&#34;
+     * @return The password name &#34;password1&#34; or &#34;password2&#34;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The password value.
+     * @return The password value.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

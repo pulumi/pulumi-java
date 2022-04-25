@@ -24,6 +24,10 @@ public final class WaitStepAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="duration", required=true)
     private Output<String> duration;
 
+    /**
+     * @return The duration in ISO 8601 format of how long the wait should be.
+     * 
+     */
     public Output<String> duration() {
         return this.duration;
     }
@@ -52,11 +56,23 @@ public final class WaitStepAttributesArgs extends com.pulumi.resources.ResourceA
             $ = new WaitStepAttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration The duration in ISO 8601 format of how long the wait should be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration The duration in ISO 8601 format of how long the wait should be.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }

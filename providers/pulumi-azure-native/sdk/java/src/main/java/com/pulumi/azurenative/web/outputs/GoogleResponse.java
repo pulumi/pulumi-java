@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GoogleResponse {
-    /**
-     * &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The configuration settings of the login flow.
-     * 
-     */
+        /**
+         * @return The configuration settings of the login flow.
+         * 
+         */
     private final @Nullable LoginScopesResponse login;
-    /**
-     * The configuration settings of the app registration for the Google provider.
-     * 
-     */
+        /**
+         * @return The configuration settings of the app registration for the Google provider.
+         * 
+         */
     private final @Nullable ClientRegistrationResponse registration;
-    /**
-     * The configuration settings of the Azure Active Directory token validation flow.
-     * 
-     */
+        /**
+         * @return The configuration settings of the Azure Active Directory token validation flow.
+         * 
+         */
     private final @Nullable AllowedAudiencesValidationResponse validation;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class GoogleResponse {
     }
 
     /**
-     * &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * @return &lt;code&gt;false&lt;/code&gt; if the Google provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The configuration settings of the login flow.
+     * @return The configuration settings of the login flow.
      * 
-    */
+     */
     public Optional<LoginScopesResponse> login() {
         return Optional.ofNullable(this.login);
     }
     /**
-     * The configuration settings of the app registration for the Google provider.
+     * @return The configuration settings of the app registration for the Google provider.
      * 
-    */
+     */
     public Optional<ClientRegistrationResponse> registration() {
         return Optional.ofNullable(this.registration);
     }
     /**
-     * The configuration settings of the Azure Active Directory token validation flow.
+     * @return The configuration settings of the Azure Active Directory token validation flow.
      * 
-    */
+     */
     public Optional<AllowedAudiencesValidationResponse> validation() {
         return Optional.ofNullable(this.validation);
     }

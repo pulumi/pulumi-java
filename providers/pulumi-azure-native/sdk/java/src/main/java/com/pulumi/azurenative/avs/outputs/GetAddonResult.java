@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAddonResult {
-    /**
-     * The type of private cloud addon
-     * 
-     */
+        /**
+         * @return The type of private cloud addon
+         * 
+         */
     private final @Nullable String addonType;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The SRM license
-     * 
-     */
+        /**
+         * @return The SRM license
+         * 
+         */
     private final @Nullable String licenseKey;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the addon provisioning
-     * 
-     */
+        /**
+         * @return The state of the addon provisioning
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetAddonResult {
     }
 
     /**
-     * The type of private cloud addon
+     * @return The type of private cloud addon
      * 
-    */
+     */
     public Optional<String> addonType() {
         return Optional.ofNullable(this.addonType);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The SRM license
+     * @return The SRM license
      * 
-    */
+     */
     public Optional<String> licenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the addon provisioning
+     * @return The state of the addon provisioning
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

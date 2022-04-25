@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PublicIPAddressSkuResponse {
-    /**
-     * Name of a public IP address SKU.
-     * 
-     */
+        /**
+         * @return Name of a public IP address SKU.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Tier of a public IP address SKU.
-     * 
-     */
+        /**
+         * @return Tier of a public IP address SKU.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class PublicIPAddressSkuResponse {
     }
 
     /**
-     * Name of a public IP address SKU.
+     * @return Name of a public IP address SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tier of a public IP address SKU.
+     * @return Tier of a public IP address SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

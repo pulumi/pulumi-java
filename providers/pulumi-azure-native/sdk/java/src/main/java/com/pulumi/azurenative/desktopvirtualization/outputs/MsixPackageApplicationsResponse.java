@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MsixPackageApplicationsResponse {
-    /**
-     * Package Application Id, found in appxmanifest.xml.
-     * 
-     */
+        /**
+         * @return Package Application Id, found in appxmanifest.xml.
+         * 
+         */
     private final @Nullable String appId;
-    /**
-     * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
-     * 
-     */
+        /**
+         * @return Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+         * 
+         */
     private final @Nullable String appUserModelID;
-    /**
-     * Description of Package Application.
-     * 
-     */
+        /**
+         * @return Description of Package Application.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * User friendly name.
-     * 
-     */
+        /**
+         * @return User friendly name.
+         * 
+         */
     private final @Nullable String friendlyName;
-    /**
-     * User friendly name.
-     * 
-     */
+        /**
+         * @return User friendly name.
+         * 
+         */
     private final @Nullable String iconImageName;
-    /**
-     * the icon a 64 bit string as a byte array.
-     * 
-     */
+        /**
+         * @return the icon a 64 bit string as a byte array.
+         * 
+         */
     private final @Nullable String rawIcon;
-    /**
-     * the icon a 64 bit string as a byte array.
-     * 
-     */
+        /**
+         * @return the icon a 64 bit string as a byte array.
+         * 
+         */
     private final @Nullable String rawPng;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class MsixPackageApplicationsResponse {
     }
 
     /**
-     * Package Application Id, found in appxmanifest.xml.
+     * @return Package Application Id, found in appxmanifest.xml.
      * 
-    */
+     */
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
     }
     /**
-     * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
+     * @return Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
      * 
-    */
+     */
     public Optional<String> appUserModelID() {
         return Optional.ofNullable(this.appUserModelID);
     }
     /**
-     * Description of Package Application.
+     * @return Description of Package Application.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * User friendly name.
+     * @return User friendly name.
      * 
-    */
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
-     * User friendly name.
+     * @return User friendly name.
      * 
-    */
+     */
     public Optional<String> iconImageName() {
         return Optional.ofNullable(this.iconImageName);
     }
     /**
-     * the icon a 64 bit string as a byte array.
+     * @return the icon a 64 bit string as a byte array.
      * 
-    */
+     */
     public Optional<String> rawIcon() {
         return Optional.ofNullable(this.rawIcon);
     }
     /**
-     * the icon a 64 bit string as a byte array.
+     * @return the icon a 64 bit string as a byte array.
      * 
-    */
+     */
     public Optional<String> rawPng() {
         return Optional.ofNullable(this.rawPng);
     }

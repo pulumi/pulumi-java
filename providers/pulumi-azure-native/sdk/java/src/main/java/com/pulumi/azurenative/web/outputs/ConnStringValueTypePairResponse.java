@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ConnStringValueTypePairResponse {
-    /**
-     * Type of database.
-     * 
-     */
+        /**
+         * @return Type of database.
+         * 
+         */
     private final String type;
-    /**
-     * Value of pair.
-     * 
-     */
+        /**
+         * @return Value of pair.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ConnStringValueTypePairResponse {
     }
 
     /**
-     * Type of database.
+     * @return Type of database.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of pair.
+     * @return Value of pair.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

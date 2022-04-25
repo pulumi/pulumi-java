@@ -25,6 +25,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="datasourceType")
     private @Nullable String datasourceType;
 
+    /**
+     * @return DatasourceType of the resource.
+     * 
+     */
     public Optional<String> datasourceType() {
         return Optional.ofNullable(this.datasourceType);
     }
@@ -36,6 +40,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="objectType")
     private @Nullable String objectType;
 
+    /**
+     * @return Type of Datasource object, used to initialize the right inherited type
+     * 
+     */
     public Optional<String> objectType() {
         return Optional.ofNullable(this.objectType);
     }
@@ -47,6 +55,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceID", required=true)
     private String resourceID;
 
+    /**
+     * @return Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
+     * 
+     */
     public String resourceID() {
         return this.resourceID;
     }
@@ -58,6 +70,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceLocation")
     private @Nullable String resourceLocation;
 
+    /**
+     * @return Location of datasource.
+     * 
+     */
     public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
@@ -69,6 +85,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceName")
     private @Nullable String resourceName;
 
+    /**
+     * @return Unique identifier of the resource in the context of parent.
+     * 
+     */
     public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -80,6 +100,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return Resource Type of Datasource.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -91,6 +115,10 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceUri")
     private @Nullable String resourceUri;
 
+    /**
+     * @return Uri of the resource.
+     * 
+     */
     public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
@@ -125,36 +153,78 @@ public final class DatasourceSetResponse extends com.pulumi.resources.InvokeArgs
             $ = new DatasourceSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datasourceType DatasourceType of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceType(@Nullable String datasourceType) {
             $.datasourceType = datasourceType;
             return this;
         }
 
+        /**
+         * @param objectType Type of Datasource object, used to initialize the right inherited type
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(@Nullable String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param resourceID Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceID(String resourceID) {
             $.resourceID = resourceID;
             return this;
         }
 
+        /**
+         * @param resourceLocation Location of datasource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLocation(@Nullable String resourceLocation) {
             $.resourceLocation = resourceLocation;
             return this;
         }
 
+        /**
+         * @param resourceName Unique identifier of the resource in the context of parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType Resource Type of Datasource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceUri Uri of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(@Nullable String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

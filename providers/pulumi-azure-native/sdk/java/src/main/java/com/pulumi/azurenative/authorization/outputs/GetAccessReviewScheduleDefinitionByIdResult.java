@@ -16,160 +16,160 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccessReviewScheduleDefinitionByIdResult {
-    /**
-     * The role assignment state eligible/active to review
-     * 
-     */
+        /**
+         * @return The role assignment state eligible/active to review
+         * 
+         */
     private final String assignmentState;
-    /**
-     * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
+         * 
+         */
     private final @Nullable Boolean autoApplyDecisionsEnabled;
-    /**
-     * This is the collection of backup reviewers.
-     * 
-     */
+        /**
+         * @return This is the collection of backup reviewers.
+         * 
+         */
     private final @Nullable List<AccessReviewReviewerResponse> backupReviewers;
-    /**
-     * This specifies the behavior for the autoReview feature when an access review completes.
-     * 
-     */
+        /**
+         * @return This specifies the behavior for the autoReview feature when an access review completes.
+         * 
+         */
     private final @Nullable String defaultDecision;
-    /**
-     * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether reviewers are required to provide a justification when reviewing access.
+         * 
+         */
     private final @Nullable Boolean defaultDecisionEnabled;
-    /**
-     * The description provided by the access review creator and visible to admins.
-     * 
-     */
+        /**
+         * @return The description provided by the access review creator and visible to admins.
+         * 
+         */
     private final @Nullable String descriptionForAdmins;
-    /**
-     * The description provided by the access review creator to be shown to reviewers.
-     * 
-     */
+        /**
+         * @return The description provided by the access review creator to be shown to reviewers.
+         * 
+         */
     private final @Nullable String descriptionForReviewers;
-    /**
-     * The display name for the schedule definition.
-     * 
-     */
+        /**
+         * @return The display name for the schedule definition.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The DateTime when the review is scheduled to end. Required if type is endDate
-     * 
-     */
+        /**
+         * @return The DateTime when the review is scheduled to end. Required if type is endDate
+         * 
+         */
     private final @Nullable String endDate;
-    /**
-     * The access review schedule definition id.
-     * 
-     */
+        /**
+         * @return The access review schedule definition id.
+         * 
+         */
     private final String id;
-    /**
-     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
-     * 
-     */
+        /**
+         * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         */
     private final @Nullable String inactiveDuration;
-    /**
-     * The duration in days for an instance.
-     * 
-     */
+        /**
+         * @return The duration in days for an instance.
+         * 
+         */
     private final @Nullable Integer instanceDurationInDays;
-    /**
-     * This is the collection of instances returned when one does an expand on it.
-     * 
-     */
+        /**
+         * @return This is the collection of instances returned when one does an expand on it.
+         * 
+         */
     private final @Nullable List<AccessReviewInstanceResponse> instances;
-    /**
-     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     * 
-     */
+        /**
+         * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+         * 
+         */
     private final @Nullable Integer interval;
-    /**
-     * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether the reviewer is required to pass justification when recording a decision.
+         * 
+         */
     private final @Nullable Boolean justificationRequiredOnApproval;
-    /**
-     * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether sending mails to reviewers and the review creator is enabled.
+         * 
+         */
     private final @Nullable Boolean mailNotificationsEnabled;
-    /**
-     * The access review schedule definition unique id.
-     * 
-     */
+        /**
+         * @return The access review schedule definition unique id.
+         * 
+         */
     private final String name;
-    /**
-     * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     * 
-     */
+        /**
+         * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
+         * 
+         */
     private final @Nullable Integer numberOfOccurrences;
-    /**
-     * The identity id
-     * 
-     */
+        /**
+         * @return The identity id
+         * 
+         */
     private final String principalId;
-    /**
-     * The identity display name
-     * 
-     */
+        /**
+         * @return The identity display name
+         * 
+         */
     private final String principalName;
-    /**
-     * The identity type user/servicePrincipal to review
-     * 
-     */
+        /**
+         * @return The identity type user/servicePrincipal to review
+         * 
+         */
     private final String principalType;
-    /**
-     * Flag to indicate whether showing recommendations to reviewers is enabled.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether showing recommendations to reviewers is enabled.
+         * 
+         */
     private final @Nullable Boolean recommendationsEnabled;
-    /**
-     * Flag to indicate whether sending reminder emails to reviewers are enabled.
-     * 
-     */
+        /**
+         * @return Flag to indicate whether sending reminder emails to reviewers are enabled.
+         * 
+         */
     private final @Nullable Boolean reminderNotificationsEnabled;
-    /**
-     * ResourceId in which this review is getting created
-     * 
-     */
+        /**
+         * @return ResourceId in which this review is getting created
+         * 
+         */
     private final String resourceId;
-    /**
-     * This is the collection of reviewers.
-     * 
-     */
+        /**
+         * @return This is the collection of reviewers.
+         * 
+         */
     private final @Nullable List<AccessReviewReviewerResponse> reviewers;
-    /**
-     * This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
-     * 
-     */
+        /**
+         * @return This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
+         * 
+         */
     private final String reviewersType;
-    /**
-     * This is used to indicate the role being reviewed
-     * 
-     */
+        /**
+         * @return This is used to indicate the role being reviewed
+         * 
+         */
     private final String roleDefinitionId;
-    /**
-     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     * 
-     */
+        /**
+         * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+         * 
+         */
     private final @Nullable String startDate;
-    /**
-     * This read-only field specifies the status of an accessReview.
-     * 
-     */
+        /**
+         * @return This read-only field specifies the status of an accessReview.
+         * 
+         */
     private final String status;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The user principal name(if valid)
-     * 
-     */
+        /**
+         * @return The user principal name(if valid)
+         * 
+         */
     private final String userPrincipalName;
 
     @CustomType.Constructor
@@ -239,219 +239,219 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
     }
 
     /**
-     * The role assignment state eligible/active to review
+     * @return The role assignment state eligible/active to review
      * 
-    */
+     */
     public String assignmentState() {
         return this.assignmentState;
     }
     /**
-     * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
+     * @return Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
      * 
-    */
+     */
     public Optional<Boolean> autoApplyDecisionsEnabled() {
         return Optional.ofNullable(this.autoApplyDecisionsEnabled);
     }
     /**
-     * This is the collection of backup reviewers.
+     * @return This is the collection of backup reviewers.
      * 
-    */
+     */
     public List<AccessReviewReviewerResponse> backupReviewers() {
         return this.backupReviewers == null ? List.of() : this.backupReviewers;
     }
     /**
-     * This specifies the behavior for the autoReview feature when an access review completes.
+     * @return This specifies the behavior for the autoReview feature when an access review completes.
      * 
-    */
+     */
     public Optional<String> defaultDecision() {
         return Optional.ofNullable(this.defaultDecision);
     }
     /**
-     * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
+     * @return Flag to indicate whether reviewers are required to provide a justification when reviewing access.
      * 
-    */
+     */
     public Optional<Boolean> defaultDecisionEnabled() {
         return Optional.ofNullable(this.defaultDecisionEnabled);
     }
     /**
-     * The description provided by the access review creator and visible to admins.
+     * @return The description provided by the access review creator and visible to admins.
      * 
-    */
+     */
     public Optional<String> descriptionForAdmins() {
         return Optional.ofNullable(this.descriptionForAdmins);
     }
     /**
-     * The description provided by the access review creator to be shown to reviewers.
+     * @return The description provided by the access review creator to be shown to reviewers.
      * 
-    */
+     */
     public Optional<String> descriptionForReviewers() {
         return Optional.ofNullable(this.descriptionForReviewers);
     }
     /**
-     * The display name for the schedule definition.
+     * @return The display name for the schedule definition.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The DateTime when the review is scheduled to end. Required if type is endDate
+     * @return The DateTime when the review is scheduled to end. Required if type is endDate
      * 
-    */
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
-     * The access review schedule definition id.
+     * @return The access review schedule definition id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+     * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
-    */
+     */
     public Optional<String> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
     /**
-     * The duration in days for an instance.
+     * @return The duration in days for an instance.
      * 
-    */
+     */
     public Optional<Integer> instanceDurationInDays() {
         return Optional.ofNullable(this.instanceDurationInDays);
     }
     /**
-     * This is the collection of instances returned when one does an expand on it.
+     * @return This is the collection of instances returned when one does an expand on it.
      * 
-    */
+     */
     public List<AccessReviewInstanceResponse> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
-     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+     * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
+     * @return Flag to indicate whether the reviewer is required to pass justification when recording a decision.
      * 
-    */
+     */
     public Optional<Boolean> justificationRequiredOnApproval() {
         return Optional.ofNullable(this.justificationRequiredOnApproval);
     }
     /**
-     * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
+     * @return Flag to indicate whether sending mails to reviewers and the review creator is enabled.
      * 
-    */
+     */
     public Optional<Boolean> mailNotificationsEnabled() {
         return Optional.ofNullable(this.mailNotificationsEnabled);
     }
     /**
-     * The access review schedule definition unique id.
+     * @return The access review schedule definition unique id.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The number of times to repeat the access review. Required and must be positive if type is numbered.
+     * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
-    */
+     */
     public Optional<Integer> numberOfOccurrences() {
         return Optional.ofNullable(this.numberOfOccurrences);
     }
     /**
-     * The identity id
+     * @return The identity id
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The identity display name
+     * @return The identity display name
      * 
-    */
+     */
     public String principalName() {
         return this.principalName;
     }
     /**
-     * The identity type user/servicePrincipal to review
+     * @return The identity type user/servicePrincipal to review
      * 
-    */
+     */
     public String principalType() {
         return this.principalType;
     }
     /**
-     * Flag to indicate whether showing recommendations to reviewers is enabled.
+     * @return Flag to indicate whether showing recommendations to reviewers is enabled.
      * 
-    */
+     */
     public Optional<Boolean> recommendationsEnabled() {
         return Optional.ofNullable(this.recommendationsEnabled);
     }
     /**
-     * Flag to indicate whether sending reminder emails to reviewers are enabled.
+     * @return Flag to indicate whether sending reminder emails to reviewers are enabled.
      * 
-    */
+     */
     public Optional<Boolean> reminderNotificationsEnabled() {
         return Optional.ofNullable(this.reminderNotificationsEnabled);
     }
     /**
-     * ResourceId in which this review is getting created
+     * @return ResourceId in which this review is getting created
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * This is the collection of reviewers.
+     * @return This is the collection of reviewers.
      * 
-    */
+     */
     public List<AccessReviewReviewerResponse> reviewers() {
         return this.reviewers == null ? List.of() : this.reviewers;
     }
     /**
-     * This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
+     * @return This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
      * 
-    */
+     */
     public String reviewersType() {
         return this.reviewersType;
     }
     /**
-     * This is used to indicate the role being reviewed
+     * @return This is used to indicate the role being reviewed
      * 
-    */
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
-     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+     * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
-    */
+     */
     public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
-     * This read-only field specifies the status of an accessReview.
+     * @return This read-only field specifies the status of an accessReview.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The user principal name(if valid)
+     * @return The user principal name(if valid)
      * 
-    */
+     */
     public String userPrincipalName() {
         return this.userPrincipalName;
     }

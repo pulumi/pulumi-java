@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListScheduleApplicableResult {
-    /**
-     * Link for next set of results.
-     * 
-     */
+        /**
+         * @return Link for next set of results.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * Results of the list operation.
-     * 
-     */
+        /**
+         * @return Results of the list operation.
+         * 
+         */
     private final @Nullable List<ScheduleResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ListScheduleApplicableResult {
     }
 
     /**
-     * Link for next set of results.
+     * @return Link for next set of results.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * Results of the list operation.
+     * @return Results of the list operation.
      * 
-    */
+     */
     public List<ScheduleResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

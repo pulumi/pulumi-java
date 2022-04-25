@@ -25,6 +25,10 @@ public final class ConfigurationProfileResourcePropertiesResponse extends com.pu
     @Import(name="notifications")
     private @Nullable NotificationSettingsResponse notifications;
 
+    /**
+     * @return Settings of change notification configuration for a subscription.
+     * 
+     */
     public Optional<NotificationSettingsResponse> notifications() {
         return Optional.ofNullable(this.notifications);
     }
@@ -53,6 +57,12 @@ public final class ConfigurationProfileResourcePropertiesResponse extends com.pu
             $ = new ConfigurationProfileResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notifications Settings of change notification configuration for a subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifications(@Nullable NotificationSettingsResponse notifications) {
             $.notifications = notifications;
             return this;

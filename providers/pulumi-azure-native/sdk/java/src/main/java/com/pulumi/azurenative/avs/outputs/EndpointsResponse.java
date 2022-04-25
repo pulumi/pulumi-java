@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class EndpointsResponse {
-    /**
-     * Endpoint for the HCX Cloud Manager
-     * 
-     */
+        /**
+         * @return Endpoint for the HCX Cloud Manager
+         * 
+         */
     private final String hcxCloudManager;
-    /**
-     * Endpoint for the NSX-T Data Center manager
-     * 
-     */
+        /**
+         * @return Endpoint for the NSX-T Data Center manager
+         * 
+         */
     private final String nsxtManager;
-    /**
-     * Endpoint for Virtual Center Server Appliance
-     * 
-     */
+        /**
+         * @return Endpoint for Virtual Center Server Appliance
+         * 
+         */
     private final String vcsa;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class EndpointsResponse {
     }
 
     /**
-     * Endpoint for the HCX Cloud Manager
+     * @return Endpoint for the HCX Cloud Manager
      * 
-    */
+     */
     public String hcxCloudManager() {
         return this.hcxCloudManager;
     }
     /**
-     * Endpoint for the NSX-T Data Center manager
+     * @return Endpoint for the NSX-T Data Center manager
      * 
-    */
+     */
     public String nsxtManager() {
         return this.nsxtManager;
     }
     /**
-     * Endpoint for Virtual Center Server Appliance
+     * @return Endpoint for Virtual Center Server Appliance
      * 
-    */
+     */
     public String vcsa() {
         return this.vcsa;
     }

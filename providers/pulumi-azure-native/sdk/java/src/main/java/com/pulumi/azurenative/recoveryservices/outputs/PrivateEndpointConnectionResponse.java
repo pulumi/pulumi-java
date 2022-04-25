@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
-    /**
-     * Gets or sets private endpoint associated with the private endpoint connection
-     * 
-     */
+        /**
+         * @return Gets or sets private endpoint associated with the private endpoint connection
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * Gets or sets private link service connection state
-     * 
-     */
+        /**
+         * @return Gets or sets private link service connection state
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * Gets or sets provisioning state of the private endpoint connection
-     * 
-     */
+        /**
+         * @return Gets or sets provisioning state of the private endpoint connection
+         * 
+         */
     private final @Nullable String provisioningState;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * Gets or sets private endpoint associated with the private endpoint connection
+     * @return Gets or sets private endpoint associated with the private endpoint connection
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Gets or sets private link service connection state
+     * @return Gets or sets private link service connection state
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Gets or sets provisioning state of the private endpoint connection
+     * @return Gets or sets provisioning state of the private endpoint connection
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

@@ -26,6 +26,10 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
     @Import(name="action")
     private @Nullable String action;
 
+    /**
+     * @return IP Filter Action
+     * 
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
@@ -37,6 +41,10 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
     @Import(name="filterName", required=true)
     private String filterName;
 
+    /**
+     * @return Name of the IP filter rule.
+     * 
+     */
     public String filterName() {
         return this.filterName;
     }
@@ -48,6 +56,10 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
     @Import(name="ipMask", required=true)
     private String ipMask;
 
+    /**
+     * @return A string that contains the IP address range in CIDR notation for the rule.
+     * 
+     */
     public String ipMask() {
         return this.ipMask;
     }
@@ -78,16 +90,34 @@ public final class NetworkRuleSetIpRuleResponse extends com.pulumi.resources.Inv
             $ = new NetworkRuleSetIpRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action IP Filter Action
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param filterName Name of the IP filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param ipMask A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(String ipMask) {
             $.ipMask = ipMask;
             return this;

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AdhocBasedTaggingCriteriaResponse {
-    /**
-     * Retention tag information
-     * 
-     */
+        /**
+         * @return Retention tag information
+         * 
+         */
     private final @Nullable RetentionTagResponse tagInfo;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class AdhocBasedTaggingCriteriaResponse {
     }
 
     /**
-     * Retention tag information
+     * @return Retention tag information
      * 
-    */
+     */
     public Optional<RetentionTagResponse> tagInfo() {
         return Optional.ofNullable(this.tagInfo);
     }

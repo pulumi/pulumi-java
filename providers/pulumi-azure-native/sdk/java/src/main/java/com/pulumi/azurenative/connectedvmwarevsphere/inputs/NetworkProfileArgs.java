@@ -27,6 +27,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkInterfaces")
     private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
+    /**
+     * @return Gets or sets the list of network interfaces associated with the virtual machine.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceArgs>>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -55,15 +59,33 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaces Gets or sets the list of network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces Gets or sets the list of network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(List<NetworkInterfaceArgs> networkInterfaces) {
             return networkInterfaces(Output.of(networkInterfaces));
         }
 
+        /**
+         * @param networkInterfaces Gets or sets the list of network interfaces associated with the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }

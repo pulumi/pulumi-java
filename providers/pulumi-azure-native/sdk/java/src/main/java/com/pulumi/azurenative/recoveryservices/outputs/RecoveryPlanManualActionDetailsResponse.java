@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RecoveryPlanManualActionDetailsResponse {
-    /**
-     * The manual action description.
-     * 
-     */
+        /**
+         * @return The manual action description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
-     * Expected value is &#39;ManualActionDetails&#39;.
-     * 
-     */
+        /**
+         * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+         * Expected value is &#39;ManualActionDetails&#39;.
+         * 
+         */
     private final String instanceType;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class RecoveryPlanManualActionDetailsResponse {
     }
 
     /**
-     * The manual action description.
+     * @return The manual action description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
+     * @return Gets the type of action details (see RecoveryPlanActionDetailsTypes enum for possible values).
      * Expected value is &#39;ManualActionDetails&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }

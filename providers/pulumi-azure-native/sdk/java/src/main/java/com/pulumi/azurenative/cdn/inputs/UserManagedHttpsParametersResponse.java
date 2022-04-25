@@ -28,6 +28,11 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="certificateSource", required=true)
     private String certificateSource;
 
+    /**
+     * @return Defines the source of the SSL certificate.
+     * Expected value is &#39;AzureKeyVault&#39;.
+     * 
+     */
     public String certificateSource() {
         return this.certificateSource;
     }
@@ -39,6 +44,10 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="certificateSourceParameters", required=true)
     private KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
 
+    /**
+     * @return Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
+     * 
+     */
     public KeyVaultCertificateSourceParametersResponse certificateSourceParameters() {
         return this.certificateSourceParameters;
     }
@@ -50,6 +59,10 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="minimumTlsVersion")
     private @Nullable String minimumTlsVersion;
 
+    /**
+     * @return TLS protocol version that will be used for Https
+     * 
+     */
     public Optional<String> minimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
@@ -61,6 +74,10 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
     @Import(name="protocolType", required=true)
     private String protocolType;
 
+    /**
+     * @return Defines the TLS extension protocol that is used for secure delivery.
+     * 
+     */
     public String protocolType() {
         return this.protocolType;
     }
@@ -92,21 +109,46 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
             $ = new UserManagedHttpsParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateSource Defines the source of the SSL certificate.
+         * Expected value is &#39;AzureKeyVault&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSource(String certificateSource) {
             $.certificateSource = certificateSource;
             return this;
         }
 
+        /**
+         * @param certificateSourceParameters Defines the certificate source parameters using user&#39;s keyvault certificate for enabling SSL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateSourceParameters(KeyVaultCertificateSourceParametersResponse certificateSourceParameters) {
             $.certificateSourceParameters = certificateSourceParameters;
             return this;
         }
 
+        /**
+         * @param minimumTlsVersion TLS protocol version that will be used for Https
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
+        /**
+         * @param protocolType Defines the TLS extension protocol that is used for secure delivery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolType(String protocolType) {
             $.protocolType = protocolType;
             return this;

@@ -28,6 +28,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return Client Id associated with the Connection Setting.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -39,6 +43,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return Client Secret associated with the Connection Setting
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -50,6 +58,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Id associated with the Connection Setting.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -61,6 +73,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name associated with the Connection Setting.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +88,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="parameters")
     private @Nullable Output<List<ConnectionSettingParameterArgs>> parameters;
 
+    /**
+     * @return Service Provider Parameters associated with the Connection Setting
+     * 
+     */
     public Optional<Output<List<ConnectionSettingParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -83,6 +103,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the resource
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -94,6 +118,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="scopes")
     private @Nullable Output<String> scopes;
 
+    /**
+     * @return Scopes associated with the Connection Setting
+     * 
+     */
     public Optional<Output<String>> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -105,6 +133,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="serviceProviderDisplayName")
     private @Nullable Output<String> serviceProviderDisplayName;
 
+    /**
+     * @return Service Provider Display Name associated with the Connection Setting
+     * 
+     */
     public Optional<Output<String>> serviceProviderDisplayName() {
         return Optional.ofNullable(this.serviceProviderDisplayName);
     }
@@ -116,6 +148,10 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
     @Import(name="serviceProviderId")
     private @Nullable Output<String> serviceProviderId;
 
+    /**
+     * @return Service Provider Id associated with the Connection Setting
+     * 
+     */
     public Optional<Output<String>> serviceProviderId() {
         return Optional.ofNullable(this.serviceProviderId);
     }
@@ -152,87 +188,201 @@ public final class ConnectionSettingPropertiesArgs extends com.pulumi.resources.
             $ = new ConnectionSettingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client Id associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client Id associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret Client Secret associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret Client Secret associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param id Id associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Id associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Service Provider Parameters associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<ConnectionSettingParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Service Provider Parameters associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<ConnectionSettingParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Service Provider Parameters associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ConnectionSettingParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param scopes Scopes associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable Output<String> scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param scopes Scopes associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(String scopes) {
             return scopes(Output.of(scopes));
         }
 
+        /**
+         * @param serviceProviderDisplayName Service Provider Display Name associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderDisplayName(@Nullable Output<String> serviceProviderDisplayName) {
             $.serviceProviderDisplayName = serviceProviderDisplayName;
             return this;
         }
 
+        /**
+         * @param serviceProviderDisplayName Service Provider Display Name associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderDisplayName(String serviceProviderDisplayName) {
             return serviceProviderDisplayName(Output.of(serviceProviderDisplayName));
         }
 
+        /**
+         * @param serviceProviderId Service Provider Id associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderId(@Nullable Output<String> serviceProviderId) {
             $.serviceProviderId = serviceProviderId;
             return this;
         }
 
+        /**
+         * @param serviceProviderId Service Provider Id associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderId(String serviceProviderId) {
             return serviceProviderId(Output.of(serviceProviderId));
         }

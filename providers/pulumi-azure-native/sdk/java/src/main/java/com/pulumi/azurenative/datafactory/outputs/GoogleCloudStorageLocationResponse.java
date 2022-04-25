@@ -12,31 +12,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GoogleCloudStorageLocationResponse {
-    /**
-     * Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string)
-     * 
-     */
+        /**
+         * @return Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string)
+         * 
+         */
     private final @Nullable Object bucketName;
-    /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object fileName;
-    /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
-     */
+        /**
+         * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         */
     private final @Nullable Object folderPath;
-    /**
-     * Type of dataset storage location.
-     * Expected value is &#39;GoogleCloudStorageLocation&#39;.
-     * 
-     */
+        /**
+         * @return Type of dataset storage location.
+         * Expected value is &#39;GoogleCloudStorageLocation&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object version;
 
     @CustomType.Constructor
@@ -54,38 +54,38 @@ public final class GoogleCloudStorageLocationResponse {
     }
 
     /**
-     * Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string)
+     * @return Specify the bucketName of Google Cloud Storage. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
-     * Type of dataset storage location.
+     * @return Type of dataset storage location.
      * Expected value is &#39;GoogleCloudStorageLocation&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).
+     * @return Specify the version of Google Cloud Storage. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> version() {
         return Optional.ofNullable(this.version);
     }

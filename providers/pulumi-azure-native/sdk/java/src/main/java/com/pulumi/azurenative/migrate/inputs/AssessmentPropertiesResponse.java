@@ -27,6 +27,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azureDiskType", required=true)
     private String azureDiskType;
 
+    /**
+     * @return Storage type selected for this disk.
+     * 
+     */
     public String azureDiskType() {
         return this.azureDiskType;
     }
@@ -38,6 +42,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azureHybridUseBenefit", required=true)
     private String azureHybridUseBenefit;
 
+    /**
+     * @return AHUB discount on windows virtual machines.
+     * 
+     */
     public String azureHybridUseBenefit() {
         return this.azureHybridUseBenefit;
     }
@@ -49,6 +57,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azureLocation", required=true)
     private String azureLocation;
 
+    /**
+     * @return Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+     * 
+     */
     public String azureLocation() {
         return this.azureLocation;
     }
@@ -60,6 +72,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azureOfferCode", required=true)
     private String azureOfferCode;
 
+    /**
+     * @return Offer code according to which cost estimation is done.
+     * 
+     */
     public String azureOfferCode() {
         return this.azureOfferCode;
     }
@@ -71,6 +87,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azurePricingTier", required=true)
     private String azurePricingTier;
 
+    /**
+     * @return Pricing tier for Size evaluation.
+     * 
+     */
     public String azurePricingTier() {
         return this.azurePricingTier;
     }
@@ -82,6 +102,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azureStorageRedundancy", required=true)
     private String azureStorageRedundancy;
 
+    /**
+     * @return Storage Redundancy type offered by Azure.
+     * 
+     */
     public String azureStorageRedundancy() {
         return this.azureStorageRedundancy;
     }
@@ -93,6 +117,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="azureVmFamilies", required=true)
     private List<String> azureVmFamilies;
 
+    /**
+     * @return List of azure VM families.
+     * 
+     */
     public List<String> azureVmFamilies() {
         return this.azureVmFamilies;
     }
@@ -104,6 +132,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="confidenceRatingInPercentage", required=true)
     private Double confidenceRatingInPercentage;
 
+    /**
+     * @return Confidence rating percentage for assessment. Can be in the range [0, 100].
+     * 
+     */
     public Double confidenceRatingInPercentage() {
         return this.confidenceRatingInPercentage;
     }
@@ -115,6 +147,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="createdTimestamp", required=true)
     private String createdTimestamp;
 
+    /**
+     * @return Time when this project was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
@@ -126,6 +162,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="currency", required=true)
     private String currency;
 
+    /**
+     * @return Currency to report prices in.
+     * 
+     */
     public String currency() {
         return this.currency;
     }
@@ -137,6 +177,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="discountPercentage", required=true)
     private Double discountPercentage;
 
+    /**
+     * @return Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
+     * 
+     */
     public Double discountPercentage() {
         return this.discountPercentage;
     }
@@ -148,6 +192,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="eaSubscriptionId", required=true)
     private String eaSubscriptionId;
 
+    /**
+     * @return Enterprise agreement subscription arm id.
+     * 
+     */
     public String eaSubscriptionId() {
         return this.eaSubscriptionId;
     }
@@ -159,6 +207,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="monthlyBandwidthCost", required=true)
     private Double monthlyBandwidthCost;
 
+    /**
+     * @return Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+     * 
+     */
     public Double monthlyBandwidthCost() {
         return this.monthlyBandwidthCost;
     }
@@ -170,6 +222,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="monthlyComputeCost", required=true)
     private Double monthlyComputeCost;
 
+    /**
+     * @return Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+     * 
+     */
     public Double monthlyComputeCost() {
         return this.monthlyComputeCost;
     }
@@ -181,6 +237,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="monthlyPremiumStorageCost", required=true)
     private Double monthlyPremiumStorageCost;
 
+    /**
+     * @return Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+     * 
+     */
     public Double monthlyPremiumStorageCost() {
         return this.monthlyPremiumStorageCost;
     }
@@ -192,6 +252,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="monthlyStandardSSDStorageCost", required=true)
     private Double monthlyStandardSSDStorageCost;
 
+    /**
+     * @return Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+     * 
+     */
     public Double monthlyStandardSSDStorageCost() {
         return this.monthlyStandardSSDStorageCost;
     }
@@ -203,6 +267,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="monthlyStorageCost", required=true)
     private Double monthlyStorageCost;
 
+    /**
+     * @return Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+     * 
+     */
     public Double monthlyStorageCost() {
         return this.monthlyStorageCost;
     }
@@ -214,6 +282,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="numberOfMachines", required=true)
     private Integer numberOfMachines;
 
+    /**
+     * @return Number of assessed machines part of this assessment.
+     * 
+     */
     public Integer numberOfMachines() {
         return this.numberOfMachines;
     }
@@ -225,6 +297,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="percentile", required=true)
     private String percentile;
 
+    /**
+     * @return Percentile of performance data used to recommend Azure size.
+     * 
+     */
     public String percentile() {
         return this.percentile;
     }
@@ -236,6 +312,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="perfDataEndTime", required=true)
     private String perfDataEndTime;
 
+    /**
+     * @return End time to consider performance data for assessment
+     * 
+     */
     public String perfDataEndTime() {
         return this.perfDataEndTime;
     }
@@ -247,6 +327,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="perfDataStartTime", required=true)
     private String perfDataStartTime;
 
+    /**
+     * @return Start time to consider performance data for assessment
+     * 
+     */
     public String perfDataStartTime() {
         return this.perfDataStartTime;
     }
@@ -258,6 +342,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="pricesTimestamp", required=true)
     private String pricesTimestamp;
 
+    /**
+     * @return Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String pricesTimestamp() {
         return this.pricesTimestamp;
     }
@@ -269,6 +357,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="reservedInstance", required=true)
     private String reservedInstance;
 
+    /**
+     * @return Azure reserved instance.
+     * 
+     */
     public String reservedInstance() {
         return this.reservedInstance;
     }
@@ -280,6 +372,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="scalingFactor", required=true)
     private Double scalingFactor;
 
+    /**
+     * @return Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
+     * 
+     */
     public Double scalingFactor() {
         return this.scalingFactor;
     }
@@ -291,6 +387,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="sizingCriterion", required=true)
     private String sizingCriterion;
 
+    /**
+     * @return Assessment sizing criterion.
+     * 
+     */
     public String sizingCriterion() {
         return this.sizingCriterion;
     }
@@ -302,6 +402,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="stage", required=true)
     private String stage;
 
+    /**
+     * @return User configurable setting that describes the status of the assessment.
+     * 
+     */
     public String stage() {
         return this.stage;
     }
@@ -313,6 +417,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Whether the assessment has been created and is valid.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -324,6 +432,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="timeRange", required=true)
     private String timeRange;
 
+    /**
+     * @return Time range of performance data used to recommend a size.
+     * 
+     */
     public String timeRange() {
         return this.timeRange;
     }
@@ -335,6 +447,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="updatedTimestamp", required=true)
     private String updatedTimestamp;
 
+    /**
+     * @return Time when this project was last updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
@@ -346,6 +462,10 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="vmUptime", required=true)
     private VmUptimeResponse vmUptime;
 
+    /**
+     * @return Specify the duration for which the VMs are up in the on-premises environment.
+     * 
+     */
     public VmUptimeResponse vmUptime() {
         return this.vmUptime;
     }
@@ -403,155 +523,341 @@ public final class AssessmentPropertiesResponse extends com.pulumi.resources.Inv
             $ = new AssessmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureDiskType Storage type selected for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureDiskType(String azureDiskType) {
             $.azureDiskType = azureDiskType;
             return this;
         }
 
+        /**
+         * @param azureHybridUseBenefit AHUB discount on windows virtual machines.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureHybridUseBenefit(String azureHybridUseBenefit) {
             $.azureHybridUseBenefit = azureHybridUseBenefit;
             return this;
         }
 
+        /**
+         * @param azureLocation Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureLocation(String azureLocation) {
             $.azureLocation = azureLocation;
             return this;
         }
 
+        /**
+         * @param azureOfferCode Offer code according to which cost estimation is done.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureOfferCode(String azureOfferCode) {
             $.azureOfferCode = azureOfferCode;
             return this;
         }
 
+        /**
+         * @param azurePricingTier Pricing tier for Size evaluation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azurePricingTier(String azurePricingTier) {
             $.azurePricingTier = azurePricingTier;
             return this;
         }
 
+        /**
+         * @param azureStorageRedundancy Storage Redundancy type offered by Azure.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureStorageRedundancy(String azureStorageRedundancy) {
             $.azureStorageRedundancy = azureStorageRedundancy;
             return this;
         }
 
+        /**
+         * @param azureVmFamilies List of azure VM families.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmFamilies(List<String> azureVmFamilies) {
             $.azureVmFamilies = azureVmFamilies;
             return this;
         }
 
+        /**
+         * @param azureVmFamilies List of azure VM families.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureVmFamilies(String... azureVmFamilies) {
             return azureVmFamilies(List.of(azureVmFamilies));
         }
 
+        /**
+         * @param confidenceRatingInPercentage Confidence rating percentage for assessment. Can be in the range [0, 100].
+         * 
+         * @return builder
+         * 
+         */
         public Builder confidenceRatingInPercentage(Double confidenceRatingInPercentage) {
             $.confidenceRatingInPercentage = confidenceRatingInPercentage;
             return this;
         }
 
+        /**
+         * @param createdTimestamp Time when this project was created. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTimestamp(String createdTimestamp) {
             $.createdTimestamp = createdTimestamp;
             return this;
         }
 
+        /**
+         * @param currency Currency to report prices in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currency(String currency) {
             $.currency = currency;
             return this;
         }
 
+        /**
+         * @param discountPercentage Custom discount percentage to be applied on final costs. Can be in the range [0, 100].
+         * 
+         * @return builder
+         * 
+         */
         public Builder discountPercentage(Double discountPercentage) {
             $.discountPercentage = discountPercentage;
             return this;
         }
 
+        /**
+         * @param eaSubscriptionId Enterprise agreement subscription arm id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eaSubscriptionId(String eaSubscriptionId) {
             $.eaSubscriptionId = eaSubscriptionId;
             return this;
         }
 
+        /**
+         * @param monthlyBandwidthCost Monthly network cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyBandwidthCost(Double monthlyBandwidthCost) {
             $.monthlyBandwidthCost = monthlyBandwidthCost;
             return this;
         }
 
+        /**
+         * @param monthlyComputeCost Monthly compute cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyComputeCost(Double monthlyComputeCost) {
             $.monthlyComputeCost = monthlyComputeCost;
             return this;
         }
 
+        /**
+         * @param monthlyPremiumStorageCost Monthly premium storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyPremiumStorageCost(Double monthlyPremiumStorageCost) {
             $.monthlyPremiumStorageCost = monthlyPremiumStorageCost;
             return this;
         }
 
+        /**
+         * @param monthlyStandardSSDStorageCost Monthly standard SSD storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyStandardSSDStorageCost(Double monthlyStandardSSDStorageCost) {
             $.monthlyStandardSSDStorageCost = monthlyStandardSSDStorageCost;
             return this;
         }
 
+        /**
+         * @param monthlyStorageCost Monthly storage cost estimate for the machines that are part of this assessment as a group, for a 31-day month.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monthlyStorageCost(Double monthlyStorageCost) {
             $.monthlyStorageCost = monthlyStorageCost;
             return this;
         }
 
+        /**
+         * @param numberOfMachines Number of assessed machines part of this assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfMachines(Integer numberOfMachines) {
             $.numberOfMachines = numberOfMachines;
             return this;
         }
 
+        /**
+         * @param percentile Percentile of performance data used to recommend Azure size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentile(String percentile) {
             $.percentile = percentile;
             return this;
         }
 
+        /**
+         * @param perfDataEndTime End time to consider performance data for assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfDataEndTime(String perfDataEndTime) {
             $.perfDataEndTime = perfDataEndTime;
             return this;
         }
 
+        /**
+         * @param perfDataStartTime Start time to consider performance data for assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder perfDataStartTime(String perfDataStartTime) {
             $.perfDataStartTime = perfDataStartTime;
             return this;
         }
 
+        /**
+         * @param pricesTimestamp Time when the Azure Prices were queried. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pricesTimestamp(String pricesTimestamp) {
             $.pricesTimestamp = pricesTimestamp;
             return this;
         }
 
+        /**
+         * @param reservedInstance Azure reserved instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedInstance(String reservedInstance) {
             $.reservedInstance = reservedInstance;
             return this;
         }
 
+        /**
+         * @param scalingFactor Scaling factor used over utilization data to add a performance buffer for new machines to be created in Azure. Min Value = 1.0, Max value = 1.9, Default = 1.3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingFactor(Double scalingFactor) {
             $.scalingFactor = scalingFactor;
             return this;
         }
 
+        /**
+         * @param sizingCriterion Assessment sizing criterion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizingCriterion(String sizingCriterion) {
             $.sizingCriterion = sizingCriterion;
             return this;
         }
 
+        /**
+         * @param stage User configurable setting that describes the status of the assessment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param status Whether the assessment has been created and is valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param timeRange Time range of performance data used to recommend a size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeRange(String timeRange) {
             $.timeRange = timeRange;
             return this;
         }
 
+        /**
+         * @param updatedTimestamp Time when this project was last updated. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedTimestamp(String updatedTimestamp) {
             $.updatedTimestamp = updatedTimestamp;
             return this;
         }
 
+        /**
+         * @param vmUptime Specify the duration for which the VMs are up in the on-premises environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmUptime(VmUptimeResponse vmUptime) {
             $.vmUptime = vmUptime;
             return this;

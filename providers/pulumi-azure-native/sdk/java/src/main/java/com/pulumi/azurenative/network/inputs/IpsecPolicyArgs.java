@@ -32,6 +32,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dhGroup", required=true)
     private Output<Either<String,DhGroup>> dhGroup;
 
+    /**
+     * @return The DH Group used in IKE Phase 1 for initial SA.
+     * 
+     */
     public Output<Either<String,DhGroup>> dhGroup() {
         return this.dhGroup;
     }
@@ -43,6 +47,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ikeEncryption", required=true)
     private Output<Either<String,IkeEncryption>> ikeEncryption;
 
+    /**
+     * @return The IKE encryption algorithm (IKE phase 2).
+     * 
+     */
     public Output<Either<String,IkeEncryption>> ikeEncryption() {
         return this.ikeEncryption;
     }
@@ -54,6 +62,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ikeIntegrity", required=true)
     private Output<Either<String,IkeIntegrity>> ikeIntegrity;
 
+    /**
+     * @return The IKE integrity algorithm (IKE phase 2).
+     * 
+     */
     public Output<Either<String,IkeIntegrity>> ikeIntegrity() {
         return this.ikeIntegrity;
     }
@@ -65,6 +77,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipsecEncryption", required=true)
     private Output<Either<String,IpsecEncryption>> ipsecEncryption;
 
+    /**
+     * @return The IPSec encryption algorithm (IKE phase 1).
+     * 
+     */
     public Output<Either<String,IpsecEncryption>> ipsecEncryption() {
         return this.ipsecEncryption;
     }
@@ -76,6 +92,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipsecIntegrity", required=true)
     private Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
+    /**
+     * @return The IPSec integrity algorithm (IKE phase 1).
+     * 
+     */
     public Output<Either<String,IpsecIntegrity>> ipsecIntegrity() {
         return this.ipsecIntegrity;
     }
@@ -87,6 +107,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pfsGroup", required=true)
     private Output<Either<String,PfsGroup>> pfsGroup;
 
+    /**
+     * @return The Pfs Group used in IKE Phase 2 for new child SA.
+     * 
+     */
     public Output<Either<String,PfsGroup>> pfsGroup() {
         return this.pfsGroup;
     }
@@ -98,6 +122,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="saDataSizeKilobytes", required=true)
     private Output<Integer> saDataSizeKilobytes;
 
+    /**
+     * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+     * 
+     */
     public Output<Integer> saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
     }
@@ -109,6 +137,10 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="saLifeTimeSeconds", required=true)
     private Output<Integer> saLifeTimeSeconds;
 
+    /**
+     * @return The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+     * 
+     */
     public Output<Integer> saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
@@ -144,122 +176,290 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IpsecPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dhGroup The DH Group used in IKE Phase 1 for initial SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhGroup(Output<Either<String,DhGroup>> dhGroup) {
             $.dhGroup = dhGroup;
             return this;
         }
 
+        /**
+         * @param dhGroup The DH Group used in IKE Phase 1 for initial SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhGroup(Either<String,DhGroup> dhGroup) {
             return dhGroup(Output.of(dhGroup));
         }
 
+        /**
+         * @param dhGroup The DH Group used in IKE Phase 1 for initial SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhGroup(String dhGroup) {
             return dhGroup(Either.ofLeft(dhGroup));
         }
 
+        /**
+         * @param dhGroup The DH Group used in IKE Phase 1 for initial SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhGroup(DhGroup dhGroup) {
             return dhGroup(Either.ofRight(dhGroup));
         }
 
+        /**
+         * @param ikeEncryption The IKE encryption algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeEncryption(Output<Either<String,IkeEncryption>> ikeEncryption) {
             $.ikeEncryption = ikeEncryption;
             return this;
         }
 
+        /**
+         * @param ikeEncryption The IKE encryption algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeEncryption(Either<String,IkeEncryption> ikeEncryption) {
             return ikeEncryption(Output.of(ikeEncryption));
         }
 
+        /**
+         * @param ikeEncryption The IKE encryption algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeEncryption(String ikeEncryption) {
             return ikeEncryption(Either.ofLeft(ikeEncryption));
         }
 
+        /**
+         * @param ikeEncryption The IKE encryption algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeEncryption(IkeEncryption ikeEncryption) {
             return ikeEncryption(Either.ofRight(ikeEncryption));
         }
 
+        /**
+         * @param ikeIntegrity The IKE integrity algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeIntegrity(Output<Either<String,IkeIntegrity>> ikeIntegrity) {
             $.ikeIntegrity = ikeIntegrity;
             return this;
         }
 
+        /**
+         * @param ikeIntegrity The IKE integrity algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeIntegrity(Either<String,IkeIntegrity> ikeIntegrity) {
             return ikeIntegrity(Output.of(ikeIntegrity));
         }
 
+        /**
+         * @param ikeIntegrity The IKE integrity algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeIntegrity(String ikeIntegrity) {
             return ikeIntegrity(Either.ofLeft(ikeIntegrity));
         }
 
+        /**
+         * @param ikeIntegrity The IKE integrity algorithm (IKE phase 2).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeIntegrity(IkeIntegrity ikeIntegrity) {
             return ikeIntegrity(Either.ofRight(ikeIntegrity));
         }
 
+        /**
+         * @param ipsecEncryption The IPSec encryption algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecEncryption(Output<Either<String,IpsecEncryption>> ipsecEncryption) {
             $.ipsecEncryption = ipsecEncryption;
             return this;
         }
 
+        /**
+         * @param ipsecEncryption The IPSec encryption algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
             return ipsecEncryption(Output.of(ipsecEncryption));
         }
 
+        /**
+         * @param ipsecEncryption The IPSec encryption algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecEncryption(String ipsecEncryption) {
             return ipsecEncryption(Either.ofLeft(ipsecEncryption));
         }
 
+        /**
+         * @param ipsecEncryption The IPSec encryption algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecEncryption(IpsecEncryption ipsecEncryption) {
             return ipsecEncryption(Either.ofRight(ipsecEncryption));
         }
 
+        /**
+         * @param ipsecIntegrity The IPSec integrity algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecIntegrity(Output<Either<String,IpsecIntegrity>> ipsecIntegrity) {
             $.ipsecIntegrity = ipsecIntegrity;
             return this;
         }
 
+        /**
+         * @param ipsecIntegrity The IPSec integrity algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecIntegrity(Either<String,IpsecIntegrity> ipsecIntegrity) {
             return ipsecIntegrity(Output.of(ipsecIntegrity));
         }
 
+        /**
+         * @param ipsecIntegrity The IPSec integrity algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecIntegrity(String ipsecIntegrity) {
             return ipsecIntegrity(Either.ofLeft(ipsecIntegrity));
         }
 
+        /**
+         * @param ipsecIntegrity The IPSec integrity algorithm (IKE phase 1).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipsecIntegrity(IpsecIntegrity ipsecIntegrity) {
             return ipsecIntegrity(Either.ofRight(ipsecIntegrity));
         }
 
+        /**
+         * @param pfsGroup The Pfs Group used in IKE Phase 2 for new child SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfsGroup(Output<Either<String,PfsGroup>> pfsGroup) {
             $.pfsGroup = pfsGroup;
             return this;
         }
 
+        /**
+         * @param pfsGroup The Pfs Group used in IKE Phase 2 for new child SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfsGroup(Either<String,PfsGroup> pfsGroup) {
             return pfsGroup(Output.of(pfsGroup));
         }
 
+        /**
+         * @param pfsGroup The Pfs Group used in IKE Phase 2 for new child SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfsGroup(String pfsGroup) {
             return pfsGroup(Either.ofLeft(pfsGroup));
         }
 
+        /**
+         * @param pfsGroup The Pfs Group used in IKE Phase 2 for new child SA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pfsGroup(PfsGroup pfsGroup) {
             return pfsGroup(Either.ofRight(pfsGroup));
         }
 
+        /**
+         * @param saDataSizeKilobytes The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saDataSizeKilobytes(Output<Integer> saDataSizeKilobytes) {
             $.saDataSizeKilobytes = saDataSizeKilobytes;
             return this;
         }
 
+        /**
+         * @param saDataSizeKilobytes The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
             return saDataSizeKilobytes(Output.of(saDataSizeKilobytes));
         }
 
+        /**
+         * @param saLifeTimeSeconds The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saLifeTimeSeconds(Output<Integer> saLifeTimeSeconds) {
             $.saLifeTimeSeconds = saLifeTimeSeconds;
             return this;
         }
 
+        /**
+         * @param saLifeTimeSeconds The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
             return saLifeTimeSeconds(Output.of(saLifeTimeSeconds));
         }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceRequirementsResponse {
-    /**
-     * Describes the maximum limits on the resources for a given container.
-     * 
-     */
+        /**
+         * @return Describes the maximum limits on the resources for a given container.
+         * 
+         */
     private final @Nullable ResourceLimitsResponse limits;
-    /**
-     * Describes the requested resources for a given container.
-     * 
-     */
+        /**
+         * @return Describes the requested resources for a given container.
+         * 
+         */
     private final ResourceRequestsResponse requests;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ResourceRequirementsResponse {
     }
 
     /**
-     * Describes the maximum limits on the resources for a given container.
+     * @return Describes the maximum limits on the resources for a given container.
      * 
-    */
+     */
     public Optional<ResourceLimitsResponse> limits() {
         return Optional.ofNullable(this.limits);
     }
     /**
-     * Describes the requested resources for a given container.
+     * @return Describes the requested resources for a given container.
      * 
-    */
+     */
     public ResourceRequestsResponse requests() {
         return this.requests;
     }

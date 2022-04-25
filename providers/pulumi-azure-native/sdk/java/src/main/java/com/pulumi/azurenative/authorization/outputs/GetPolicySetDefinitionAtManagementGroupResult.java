@@ -17,55 +17,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPolicySetDefinitionAtManagementGroupResult {
-    /**
-     * The policy set definition description.
-     * 
-     */
+        /**
+         * @return The policy set definition description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The display name of the policy set definition.
-     * 
-     */
+        /**
+         * @return The display name of the policy set definition.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The ID of the policy set definition.
-     * 
-     */
+        /**
+         * @return The ID of the policy set definition.
+         * 
+         */
     private final String id;
-    /**
-     * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
-     * 
-     */
+        /**
+         * @return The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+         * 
+         */
     private final @Nullable Object metadata;
-    /**
-     * The name of the policy set definition.
-     * 
-     */
+        /**
+         * @return The name of the policy set definition.
+         * 
+         */
     private final String name;
-    /**
-     * The policy set definition parameters that can be used in policy definition references.
-     * 
-     */
+        /**
+         * @return The policy set definition parameters that can be used in policy definition references.
+         * 
+         */
     private final @Nullable Map<String,ParameterDefinitionsValueResponse> parameters;
-    /**
-     * The metadata describing groups of policy definition references within the policy set definition.
-     * 
-     */
+        /**
+         * @return The metadata describing groups of policy definition references within the policy set definition.
+         * 
+         */
     private final @Nullable List<PolicyDefinitionGroupResponse> policyDefinitionGroups;
-    /**
-     * An array of policy definition references.
-     * 
-     */
+        /**
+         * @return An array of policy definition references.
+         * 
+         */
     private final List<PolicyDefinitionReferenceResponse> policyDefinitions;
-    /**
-     * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
-     * 
-     */
+        /**
+         * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+         * 
+         */
     private final @Nullable String policyType;
-    /**
-     * The type of the resource (Microsoft.Authorization/policySetDefinitions).
-     * 
-     */
+        /**
+         * @return The type of the resource (Microsoft.Authorization/policySetDefinitions).
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -93,72 +93,72 @@ public final class GetPolicySetDefinitionAtManagementGroupResult {
     }
 
     /**
-     * The policy set definition description.
+     * @return The policy set definition description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the policy set definition.
+     * @return The display name of the policy set definition.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The ID of the policy set definition.
+     * @return The ID of the policy set definition.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+     * @return The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * The name of the policy set definition.
+     * @return The name of the policy set definition.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The policy set definition parameters that can be used in policy definition references.
+     * @return The policy set definition parameters that can be used in policy definition references.
      * 
-    */
+     */
     public Map<String,ParameterDefinitionsValueResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The metadata describing groups of policy definition references within the policy set definition.
+     * @return The metadata describing groups of policy definition references within the policy set definition.
      * 
-    */
+     */
     public List<PolicyDefinitionGroupResponse> policyDefinitionGroups() {
         return this.policyDefinitionGroups == null ? List.of() : this.policyDefinitionGroups;
     }
     /**
-     * An array of policy definition references.
+     * @return An array of policy definition references.
      * 
-    */
+     */
     public List<PolicyDefinitionReferenceResponse> policyDefinitions() {
         return this.policyDefinitions;
     }
     /**
-     * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+     * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
-    */
+     */
     public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
-     * The type of the resource (Microsoft.Authorization/policySetDefinitions).
+     * @return The type of the resource (Microsoft.Authorization/policySetDefinitions).
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

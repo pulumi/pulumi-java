@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MsixPackageDependenciesResponse {
-    /**
-     * Name of package dependency.
-     * 
-     */
+        /**
+         * @return Name of package dependency.
+         * 
+         */
     private final @Nullable String dependencyName;
-    /**
-     * Dependency version required.
-     * 
-     */
+        /**
+         * @return Dependency version required.
+         * 
+         */
     private final @Nullable String minVersion;
-    /**
-     * Name of dependency publisher.
-     * 
-     */
+        /**
+         * @return Name of dependency publisher.
+         * 
+         */
     private final @Nullable String publisher;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class MsixPackageDependenciesResponse {
     }
 
     /**
-     * Name of package dependency.
+     * @return Name of package dependency.
      * 
-    */
+     */
     public Optional<String> dependencyName() {
         return Optional.ofNullable(this.dependencyName);
     }
     /**
-     * Dependency version required.
+     * @return Dependency version required.
      * 
-    */
+     */
     public Optional<String> minVersion() {
         return Optional.ofNullable(this.minVersion);
     }
     /**
-     * Name of dependency publisher.
+     * @return Name of dependency publisher.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }

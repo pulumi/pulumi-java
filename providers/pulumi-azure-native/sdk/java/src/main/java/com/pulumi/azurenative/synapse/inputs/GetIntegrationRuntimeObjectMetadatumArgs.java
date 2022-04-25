@@ -21,6 +21,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="integrationRuntimeName", required=true)
     private String integrationRuntimeName;
 
+    /**
+     * @return Integration runtime name
+     * 
+     */
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
     }
@@ -32,6 +36,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="metadataPath")
     private @Nullable String metadataPath;
 
+    /**
+     * @return Metadata path.
+     * 
+     */
     public Optional<String> metadataPath() {
         return Optional.ofNullable(this.metadataPath);
     }
@@ -43,6 +51,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +66,10 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -85,21 +101,45 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends com.pulumi.r
             $ = new GetIntegrationRuntimeObjectMetadatumArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationRuntimeName Integration runtime name
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntimeName(String integrationRuntimeName) {
             $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
 
+        /**
+         * @param metadataPath Metadata path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataPath(@Nullable String metadataPath) {
             $.metadataPath = metadataPath;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

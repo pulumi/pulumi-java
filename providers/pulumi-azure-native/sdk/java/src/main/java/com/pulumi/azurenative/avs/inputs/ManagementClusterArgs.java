@@ -24,6 +24,10 @@ public final class ManagementClusterArgs extends com.pulumi.resources.ResourceAr
     @Import(name="clusterSize", required=true)
     private Output<Integer> clusterSize;
 
+    /**
+     * @return The cluster size
+     * 
+     */
     public Output<Integer> clusterSize() {
         return this.clusterSize;
     }
@@ -52,11 +56,23 @@ public final class ManagementClusterArgs extends com.pulumi.resources.ResourceAr
             $ = new ManagementClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSize The cluster size
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSize(Output<Integer> clusterSize) {
             $.clusterSize = clusterSize;
             return this;
         }
 
+        /**
+         * @param clusterSize The cluster size
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSize(Integer clusterSize) {
             return clusterSize(Output.of(clusterSize));
         }

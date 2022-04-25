@@ -27,6 +27,10 @@ public final class IPAccessControlArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="allow")
     private @Nullable Output<List<IPRangeArgs>> allow;
 
+    /**
+     * @return The IP allow list.
+     * 
+     */
     public Optional<Output<List<IPRangeArgs>>> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -55,15 +59,33 @@ public final class IPAccessControlArgs extends com.pulumi.resources.ResourceArgs
             $ = new IPAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow The IP allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Output<List<IPRangeArgs>> allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param allow The IP allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(List<IPRangeArgs> allow) {
             return allow(Output.of(allow));
         }
 
+        /**
+         * @param allow The IP allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(IPRangeArgs... allow) {
             return allow(List.of(allow));
         }

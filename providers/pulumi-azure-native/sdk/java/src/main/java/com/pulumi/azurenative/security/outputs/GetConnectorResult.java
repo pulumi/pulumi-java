@@ -16,30 +16,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectorResult {
-    /**
-     * Settings for authentication management, these settings are relevant only for the cloud connector.
-     * 
-     */
+        /**
+         * @return Settings for authentication management, these settings are relevant only for the cloud connector.
+         * 
+         */
     private final @Nullable Object authenticationDetails;
-    /**
-     * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
-     * 
-     */
+        /**
+         * @return Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
+         * 
+         */
     private final @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -57,37 +57,37 @@ public final class GetConnectorResult {
     }
 
     /**
-     * Settings for authentication management, these settings are relevant only for the cloud connector.
+     * @return Settings for authentication management, these settings are relevant only for the cloud connector.
      * 
-    */
+     */
     public Optional<Object> authenticationDetails() {
         return Optional.ofNullable(this.authenticationDetails);
     }
     /**
-     * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
+     * @return Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
      * 
-    */
+     */
     public Optional<HybridComputeSettingsPropertiesResponse> hybridComputeSettings() {
         return Optional.ofNullable(this.hybridComputeSettings);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

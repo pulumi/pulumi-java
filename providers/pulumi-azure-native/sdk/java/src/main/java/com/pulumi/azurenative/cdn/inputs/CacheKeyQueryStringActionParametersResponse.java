@@ -32,6 +32,10 @@ public final class CacheKeyQueryStringActionParametersResponse extends com.pulum
     @Import(name="queryParameters")
     private @Nullable String queryParameters;
 
+    /**
+     * @return query parameters to include or exclude (comma separated).
+     * 
+     */
     public Optional<String> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
@@ -43,6 +47,10 @@ public final class CacheKeyQueryStringActionParametersResponse extends com.pulum
     @Import(name="queryStringBehavior", required=true)
     private String queryStringBehavior;
 
+    /**
+     * @return Caching behavior for the requests
+     * 
+     */
     public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
@@ -78,11 +86,23 @@ public final class CacheKeyQueryStringActionParametersResponse extends com.pulum
             return this;
         }
 
+        /**
+         * @param queryParameters query parameters to include or exclude (comma separated).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(@Nullable String queryParameters) {
             $.queryParameters = queryParameters;
             return this;
         }
 
+        /**
+         * @param queryStringBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringBehavior(String queryStringBehavior) {
             $.queryStringBehavior = queryStringBehavior;
             return this;

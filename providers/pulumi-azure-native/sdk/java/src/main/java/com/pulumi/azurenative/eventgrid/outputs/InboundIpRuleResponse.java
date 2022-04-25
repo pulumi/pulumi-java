@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class InboundIpRuleResponse {
-    /**
-     * Action to perform based on the match or no match of the IpMask.
-     * 
-     */
+        /**
+         * @return Action to perform based on the match or no match of the IpMask.
+         * 
+         */
     private final @Nullable String action;
-    /**
-     * IP Address in CIDR notation e.g., 10.0.0.0/8.
-     * 
-     */
+        /**
+         * @return IP Address in CIDR notation e.g., 10.0.0.0/8.
+         * 
+         */
     private final @Nullable String ipMask;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class InboundIpRuleResponse {
     }
 
     /**
-     * Action to perform based on the match or no match of the IpMask.
+     * @return Action to perform based on the match or no match of the IpMask.
      * 
-    */
+     */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * IP Address in CIDR notation e.g., 10.0.0.0/8.
+     * @return IP Address in CIDR notation e.g., 10.0.0.0/8.
      * 
-    */
+     */
     public Optional<String> ipMask() {
         return Optional.ofNullable(this.ipMask);
     }

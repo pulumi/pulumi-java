@@ -29,6 +29,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -40,6 +44,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the frontend IP configuration that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -51,6 +59,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="privateIPAddress")
     private @Nullable Output<String> privateIPAddress;
 
+    /**
+     * @return PrivateIPAddress of the network interface IP Configuration.
+     * 
+     */
     public Optional<Output<String>> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -62,6 +74,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="privateIPAllocationMethod")
     private @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
+    /**
+     * @return The private IP address allocation method.
+     * 
+     */
     public Optional<Output<Either<String,IPAllocationMethod>>> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -73,6 +89,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="privateLinkConfiguration")
     private @Nullable Output<SubResourceArgs> privateLinkConfiguration;
 
+    /**
+     * @return Reference to the application gateway private link configuration.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> privateLinkConfiguration() {
         return Optional.ofNullable(this.privateLinkConfiguration);
     }
@@ -84,6 +104,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="publicIPAddress")
     private @Nullable Output<SubResourceArgs> publicIPAddress;
 
+    /**
+     * @return Reference to the PublicIP resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -95,6 +119,10 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
     @Import(name="subnet")
     private @Nullable Output<SubResourceArgs> subnet;
 
+    /**
+     * @return Reference to the subnet resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -129,73 +157,169 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends com.pul
             $ = new ApplicationGatewayFrontendIPConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the frontend IP configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the frontend IP configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param privateIPAddress PrivateIPAddress of the network interface IP Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddress PrivateIPAddress of the network interface IP Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(String privateIPAddress) {
             return privateIPAddress(Output.of(privateIPAddress));
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateIPAllocationMethod The private IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
             return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
         }
 
+        /**
+         * @param privateLinkConfiguration Reference to the application gateway private link configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConfiguration(@Nullable Output<SubResourceArgs> privateLinkConfiguration) {
             $.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
 
+        /**
+         * @param privateLinkConfiguration Reference to the application gateway private link configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConfiguration(SubResourceArgs privateLinkConfiguration) {
             return privateLinkConfiguration(Output.of(privateLinkConfiguration));
         }
 
+        /**
+         * @param publicIPAddress Reference to the PublicIP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable Output<SubResourceArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPAddress Reference to the PublicIP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(SubResourceArgs publicIPAddress) {
             return publicIPAddress(Output.of(publicIPAddress));
         }
 
+        /**
+         * @param subnet Reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubResourceArgs subnet) {
             return subnet(Output.of(subnet));
         }

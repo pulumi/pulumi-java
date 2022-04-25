@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AS2ValidationSettingsResponse {
-    /**
-     * The value indicating whether to check for certificate revocation list on receive.
-     * 
-     */
+        /**
+         * @return The value indicating whether to check for certificate revocation list on receive.
+         * 
+         */
     private final Boolean checkCertificateRevocationListOnReceive;
-    /**
-     * The value indicating whether to check for certificate revocation list on send.
-     * 
-     */
+        /**
+         * @return The value indicating whether to check for certificate revocation list on send.
+         * 
+         */
     private final Boolean checkCertificateRevocationListOnSend;
-    /**
-     * The value indicating whether to check for duplicate message.
-     * 
-     */
+        /**
+         * @return The value indicating whether to check for duplicate message.
+         * 
+         */
     private final Boolean checkDuplicateMessage;
-    /**
-     * The value indicating whether the message has to be compressed.
-     * 
-     */
+        /**
+         * @return The value indicating whether the message has to be compressed.
+         * 
+         */
     private final Boolean compressMessage;
-    /**
-     * The value indicating whether the message has to be encrypted.
-     * 
-     */
+        /**
+         * @return The value indicating whether the message has to be encrypted.
+         * 
+         */
     private final Boolean encryptMessage;
-    /**
-     * The encryption algorithm.
-     * 
-     */
+        /**
+         * @return The encryption algorithm.
+         * 
+         */
     private final String encryptionAlgorithm;
-    /**
-     * The number of days to look back for duplicate interchange.
-     * 
-     */
+        /**
+         * @return The number of days to look back for duplicate interchange.
+         * 
+         */
     private final Integer interchangeDuplicatesValidityDays;
-    /**
-     * The value indicating whether to override incoming message properties with those in agreement.
-     * 
-     */
+        /**
+         * @return The value indicating whether to override incoming message properties with those in agreement.
+         * 
+         */
     private final Boolean overrideMessageProperties;
-    /**
-     * The value indicating whether the message has to be signed.
-     * 
-     */
+        /**
+         * @return The value indicating whether the message has to be signed.
+         * 
+         */
     private final Boolean signMessage;
-    /**
-     * The signing algorithm.
-     * 
-     */
+        /**
+         * @return The signing algorithm.
+         * 
+         */
     private final @Nullable String signingAlgorithm;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class AS2ValidationSettingsResponse {
     }
 
     /**
-     * The value indicating whether to check for certificate revocation list on receive.
+     * @return The value indicating whether to check for certificate revocation list on receive.
      * 
-    */
+     */
     public Boolean checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
     /**
-     * The value indicating whether to check for certificate revocation list on send.
+     * @return The value indicating whether to check for certificate revocation list on send.
      * 
-    */
+     */
     public Boolean checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
     /**
-     * The value indicating whether to check for duplicate message.
+     * @return The value indicating whether to check for duplicate message.
      * 
-    */
+     */
     public Boolean checkDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
     /**
-     * The value indicating whether the message has to be compressed.
+     * @return The value indicating whether the message has to be compressed.
      * 
-    */
+     */
     public Boolean compressMessage() {
         return this.compressMessage;
     }
     /**
-     * The value indicating whether the message has to be encrypted.
+     * @return The value indicating whether the message has to be encrypted.
      * 
-    */
+     */
     public Boolean encryptMessage() {
         return this.encryptMessage;
     }
     /**
-     * The encryption algorithm.
+     * @return The encryption algorithm.
      * 
-    */
+     */
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
-     * The number of days to look back for duplicate interchange.
+     * @return The number of days to look back for duplicate interchange.
      * 
-    */
+     */
     public Integer interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
     /**
-     * The value indicating whether to override incoming message properties with those in agreement.
+     * @return The value indicating whether to override incoming message properties with those in agreement.
      * 
-    */
+     */
     public Boolean overrideMessageProperties() {
         return this.overrideMessageProperties;
     }
     /**
-     * The value indicating whether the message has to be signed.
+     * @return The value indicating whether the message has to be signed.
      * 
-    */
+     */
     public Boolean signMessage() {
         return this.signMessage;
     }
     /**
-     * The signing algorithm.
+     * @return The signing algorithm.
      * 
-    */
+     */
     public Optional<String> signingAlgorithm() {
         return Optional.ofNullable(this.signingAlgorithm);
     }

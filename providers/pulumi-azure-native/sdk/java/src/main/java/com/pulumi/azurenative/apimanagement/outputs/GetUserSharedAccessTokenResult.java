@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetUserSharedAccessTokenResult {
-    /**
-     * Shared Access Authorization token for the User.
-     * 
-     */
+        /**
+         * @return Shared Access Authorization token for the User.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetUserSharedAccessTokenResult {
     }
 
     /**
-     * Shared Access Authorization token for the User.
+     * @return Shared Access Authorization token for the User.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

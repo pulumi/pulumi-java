@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoBackupSettingsResponse {
-    /**
-     * Backup schedule type.
-     * 
-     */
+        /**
+         * @return Backup schedule type.
+         * 
+         */
     private final @Nullable String backupScheduleType;
-    /**
-     * Include or exclude system databases from auto backup.
-     * 
-     */
+        /**
+         * @return Include or exclude system databases from auto backup.
+         * 
+         */
     private final @Nullable Boolean backupSystemDbs;
-    /**
-     * Enable or disable autobackup on SQL virtual machine.
-     * 
-     */
+        /**
+         * @return Enable or disable autobackup on SQL virtual machine.
+         * 
+         */
     private final @Nullable Boolean enable;
-    /**
-     * Enable or disable encryption for backup on SQL virtual machine.
-     * 
-     */
+        /**
+         * @return Enable or disable encryption for backup on SQL virtual machine.
+         * 
+         */
     private final @Nullable Boolean enableEncryption;
-    /**
-     * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
-     * 
-     */
+        /**
+         * @return Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+         * 
+         */
     private final @Nullable String fullBackupFrequency;
-    /**
-     * Start time of a given day during which full backups can take place. 0-23 hours.
-     * 
-     */
+        /**
+         * @return Start time of a given day during which full backups can take place. 0-23 hours.
+         * 
+         */
     private final @Nullable Integer fullBackupStartTime;
-    /**
-     * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
-     * 
-     */
+        /**
+         * @return Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+         * 
+         */
     private final @Nullable Integer fullBackupWindowHours;
-    /**
-     * Frequency of log backups. 5-60 minutes.
-     * 
-     */
+        /**
+         * @return Frequency of log backups. 5-60 minutes.
+         * 
+         */
     private final @Nullable Integer logBackupFrequency;
-    /**
-     * Retention period of backup: 1-30 days.
-     * 
-     */
+        /**
+         * @return Retention period of backup: 1-30 days.
+         * 
+         */
     private final @Nullable Integer retentionPeriod;
-    /**
-     * Storage account url where backup will be taken to.
-     * 
-     */
+        /**
+         * @return Storage account url where backup will be taken to.
+         * 
+         */
     private final @Nullable String storageAccountUrl;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class AutoBackupSettingsResponse {
     }
 
     /**
-     * Backup schedule type.
+     * @return Backup schedule type.
      * 
-    */
+     */
     public Optional<String> backupScheduleType() {
         return Optional.ofNullable(this.backupScheduleType);
     }
     /**
-     * Include or exclude system databases from auto backup.
+     * @return Include or exclude system databases from auto backup.
      * 
-    */
+     */
     public Optional<Boolean> backupSystemDbs() {
         return Optional.ofNullable(this.backupSystemDbs);
     }
     /**
-     * Enable or disable autobackup on SQL virtual machine.
+     * @return Enable or disable autobackup on SQL virtual machine.
      * 
-    */
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * Enable or disable encryption for backup on SQL virtual machine.
+     * @return Enable or disable encryption for backup on SQL virtual machine.
      * 
-    */
+     */
     public Optional<Boolean> enableEncryption() {
         return Optional.ofNullable(this.enableEncryption);
     }
     /**
-     * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+     * @return Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
      * 
-    */
+     */
     public Optional<String> fullBackupFrequency() {
         return Optional.ofNullable(this.fullBackupFrequency);
     }
     /**
-     * Start time of a given day during which full backups can take place. 0-23 hours.
+     * @return Start time of a given day during which full backups can take place. 0-23 hours.
      * 
-    */
+     */
     public Optional<Integer> fullBackupStartTime() {
         return Optional.ofNullable(this.fullBackupStartTime);
     }
     /**
-     * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+     * @return Duration of the time window of a given day during which full backups can take place. 1-23 hours.
      * 
-    */
+     */
     public Optional<Integer> fullBackupWindowHours() {
         return Optional.ofNullable(this.fullBackupWindowHours);
     }
     /**
-     * Frequency of log backups. 5-60 minutes.
+     * @return Frequency of log backups. 5-60 minutes.
      * 
-    */
+     */
     public Optional<Integer> logBackupFrequency() {
         return Optional.ofNullable(this.logBackupFrequency);
     }
     /**
-     * Retention period of backup: 1-30 days.
+     * @return Retention period of backup: 1-30 days.
      * 
-    */
+     */
     public Optional<Integer> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
     /**
-     * Storage account url where backup will be taken to.
+     * @return Storage account url where backup will be taken to.
      * 
-    */
+     */
     public Optional<String> storageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }

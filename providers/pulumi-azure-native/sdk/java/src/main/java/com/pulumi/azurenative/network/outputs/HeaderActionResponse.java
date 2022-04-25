@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HeaderActionResponse {
-    /**
-     * Which type of manipulation to apply to the header.
-     * 
-     */
+        /**
+         * @return Which type of manipulation to apply to the header.
+         * 
+         */
     private final String headerActionType;
-    /**
-     * The name of the header this action will apply to.
-     * 
-     */
+        /**
+         * @return The name of the header this action will apply to.
+         * 
+         */
     private final String headerName;
-    /**
-     * The value to update the given header name with. This value is not used if the actionType is Delete.
-     * 
-     */
+        /**
+         * @return The value to update the given header name with. This value is not used if the actionType is Delete.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class HeaderActionResponse {
     }
 
     /**
-     * Which type of manipulation to apply to the header.
+     * @return Which type of manipulation to apply to the header.
      * 
-    */
+     */
     public String headerActionType() {
         return this.headerActionType;
     }
     /**
-     * The name of the header this action will apply to.
+     * @return The name of the header this action will apply to.
      * 
-    */
+     */
     public String headerName() {
         return this.headerName;
     }
     /**
-     * The value to update the given header name with. This value is not used if the actionType is Delete.
+     * @return The value to update the given header name with. This value is not used if the actionType is Delete.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

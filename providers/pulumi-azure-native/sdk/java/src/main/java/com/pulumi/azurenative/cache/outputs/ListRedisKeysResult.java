@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListRedisKeysResult {
-    /**
-     * The current primary key that clients can use to authenticate with Redis cache.
-     * 
-     */
+        /**
+         * @return The current primary key that clients can use to authenticate with Redis cache.
+         * 
+         */
     private final String primaryKey;
-    /**
-     * The current secondary key that clients can use to authenticate with Redis cache.
-     * 
-     */
+        /**
+         * @return The current secondary key that clients can use to authenticate with Redis cache.
+         * 
+         */
     private final String secondaryKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ListRedisKeysResult {
     }
 
     /**
-     * The current primary key that clients can use to authenticate with Redis cache.
+     * @return The current primary key that clients can use to authenticate with Redis cache.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * The current secondary key that clients can use to authenticate with Redis cache.
+     * @return The current secondary key that clients can use to authenticate with Redis cache.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }

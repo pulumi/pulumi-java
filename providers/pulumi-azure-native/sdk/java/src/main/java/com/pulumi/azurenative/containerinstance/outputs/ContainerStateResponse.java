@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerStateResponse {
-    /**
-     * The human-readable status of the container instance state.
-     * 
-     */
+        /**
+         * @return The human-readable status of the container instance state.
+         * 
+         */
     private final String detailStatus;
-    /**
-     * The container instance exit codes correspond to those from the `docker run` command.
-     * 
-     */
+        /**
+         * @return The container instance exit codes correspond to those from the `docker run` command.
+         * 
+         */
     private final Integer exitCode;
-    /**
-     * The date-time when the container instance state finished.
-     * 
-     */
+        /**
+         * @return The date-time when the container instance state finished.
+         * 
+         */
     private final String finishTime;
-    /**
-     * The date-time when the container instance state started.
-     * 
-     */
+        /**
+         * @return The date-time when the container instance state started.
+         * 
+         */
     private final String startTime;
-    /**
-     * The state of the container instance.
-     * 
-     */
+        /**
+         * @return The state of the container instance.
+         * 
+         */
     private final String state;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class ContainerStateResponse {
     }
 
     /**
-     * The human-readable status of the container instance state.
+     * @return The human-readable status of the container instance state.
      * 
-    */
+     */
     public String detailStatus() {
         return this.detailStatus;
     }
     /**
-     * The container instance exit codes correspond to those from the `docker run` command.
+     * @return The container instance exit codes correspond to those from the `docker run` command.
      * 
-    */
+     */
     public Integer exitCode() {
         return this.exitCode;
     }
     /**
-     * The date-time when the container instance state finished.
+     * @return The date-time when the container instance state finished.
      * 
-    */
+     */
     public String finishTime() {
         return this.finishTime;
     }
     /**
-     * The date-time when the container instance state started.
+     * @return The date-time when the container instance state started.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The state of the container instance.
+     * @return The state of the container instance.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }

@@ -11,56 +11,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureDataExplorerConnectionPropertiesResponse {
-    /**
-     * The name of the Azure Data Explorer database.
-     * 
-     */
+        /**
+         * @return The name of the Azure Data Explorer database.
+         * 
+         */
     private final String adxDatabaseName;
-    /**
-     * The URI of the Azure Data Explorer endpoint.
-     * 
-     */
+        /**
+         * @return The URI of the Azure Data Explorer endpoint.
+         * 
+         */
     private final String adxEndpointUri;
-    /**
-     * The resource ID of the Azure Data Explorer cluster.
-     * 
-     */
+        /**
+         * @return The resource ID of the Azure Data Explorer cluster.
+         * 
+         */
     private final String adxResourceId;
-    /**
-     * The name of the Azure Data Explorer table.
-     * 
-     */
+        /**
+         * @return The name of the Azure Data Explorer table.
+         * 
+         */
     private final @Nullable String adxTableName;
-    /**
-     * The type of time series connection resource.
-     * Expected value is &#39;AzureDataExplorer&#39;.
-     * 
-     */
+        /**
+         * @return The type of time series connection resource.
+         * Expected value is &#39;AzureDataExplorer&#39;.
+         * 
+         */
     private final String connectionType;
-    /**
-     * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
-     * 
-     */
+        /**
+         * @return The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
+         * 
+         */
     private final @Nullable String eventHubConsumerGroup;
-    /**
-     * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
-     * 
-     */
+        /**
+         * @return The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+         * 
+         */
     private final String eventHubEndpointUri;
-    /**
-     * The EventHub name in the EventHub namespace for identity-based authentication.
-     * 
-     */
+        /**
+         * @return The EventHub name in the EventHub namespace for identity-based authentication.
+         * 
+         */
     private final String eventHubEntityPath;
-    /**
-     * The resource ID of the EventHub namespace.
-     * 
-     */
+        /**
+         * @return The resource ID of the EventHub namespace.
+         * 
+         */
     private final String eventHubNamespaceResourceId;
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -88,73 +88,73 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
     }
 
     /**
-     * The name of the Azure Data Explorer database.
+     * @return The name of the Azure Data Explorer database.
      * 
-    */
+     */
     public String adxDatabaseName() {
         return this.adxDatabaseName;
     }
     /**
-     * The URI of the Azure Data Explorer endpoint.
+     * @return The URI of the Azure Data Explorer endpoint.
      * 
-    */
+     */
     public String adxEndpointUri() {
         return this.adxEndpointUri;
     }
     /**
-     * The resource ID of the Azure Data Explorer cluster.
+     * @return The resource ID of the Azure Data Explorer cluster.
      * 
-    */
+     */
     public String adxResourceId() {
         return this.adxResourceId;
     }
     /**
-     * The name of the Azure Data Explorer table.
+     * @return The name of the Azure Data Explorer table.
      * 
-    */
+     */
     public Optional<String> adxTableName() {
         return Optional.ofNullable(this.adxTableName);
     }
     /**
-     * The type of time series connection resource.
+     * @return The type of time series connection resource.
      * Expected value is &#39;AzureDataExplorer&#39;.
      * 
-    */
+     */
     public String connectionType() {
         return this.connectionType;
     }
     /**
-     * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
+     * @return The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
      * 
-    */
+     */
     public Optional<String> eventHubConsumerGroup() {
         return Optional.ofNullable(this.eventHubConsumerGroup);
     }
     /**
-     * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+     * @return The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
      * 
-    */
+     */
     public String eventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
     /**
-     * The EventHub name in the EventHub namespace for identity-based authentication.
+     * @return The EventHub name in the EventHub namespace for identity-based authentication.
      * 
-    */
+     */
     public String eventHubEntityPath() {
         return this.eventHubEntityPath;
     }
     /**
-     * The resource ID of the EventHub namespace.
+     * @return The resource ID of the EventHub namespace.
      * 
-    */
+     */
     public String eventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

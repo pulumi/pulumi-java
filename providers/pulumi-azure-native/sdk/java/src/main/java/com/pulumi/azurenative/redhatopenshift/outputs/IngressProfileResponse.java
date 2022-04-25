@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IngressProfileResponse {
-    /**
-     * The IP of the ingress (immutable).
-     * 
-     */
+        /**
+         * @return The IP of the ingress (immutable).
+         * 
+         */
     private final @Nullable String ip;
-    /**
-     * The ingress profile name.  Must be &#34;default&#34; (immutable).
-     * 
-     */
+        /**
+         * @return The ingress profile name.  Must be &#34;default&#34; (immutable).
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Ingress visibility (immutable).
-     * 
-     */
+        /**
+         * @return Ingress visibility (immutable).
+         * 
+         */
     private final @Nullable String visibility;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class IngressProfileResponse {
     }
 
     /**
-     * The IP of the ingress (immutable).
+     * @return The IP of the ingress (immutable).
      * 
-    */
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * The ingress profile name.  Must be &#34;default&#34; (immutable).
+     * @return The ingress profile name.  Must be &#34;default&#34; (immutable).
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Ingress visibility (immutable).
+     * @return Ingress visibility (immutable).
      * 
-    */
+     */
     public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }

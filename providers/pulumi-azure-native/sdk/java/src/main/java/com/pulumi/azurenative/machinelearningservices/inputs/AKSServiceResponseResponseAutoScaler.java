@@ -26,6 +26,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
     @Import(name="autoscaleEnabled")
     private @Nullable Boolean autoscaleEnabled;
 
+    /**
+     * @return Option to enable/disable auto scaling.
+     * 
+     */
     public Optional<Boolean> autoscaleEnabled() {
         return Optional.ofNullable(this.autoscaleEnabled);
     }
@@ -37,6 +41,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
     @Import(name="maxReplicas")
     private @Nullable Integer maxReplicas;
 
+    /**
+     * @return The maximum number of replicas in the cluster.
+     * 
+     */
     public Optional<Integer> maxReplicas() {
         return Optional.ofNullable(this.maxReplicas);
     }
@@ -48,6 +56,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
     @Import(name="minReplicas")
     private @Nullable Integer minReplicas;
 
+    /**
+     * @return The minimum number of replicas to scale down to.
+     * 
+     */
     public Optional<Integer> minReplicas() {
         return Optional.ofNullable(this.minReplicas);
     }
@@ -59,6 +71,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
     @Import(name="refreshPeriodInSeconds")
     private @Nullable Integer refreshPeriodInSeconds;
 
+    /**
+     * @return The amount of seconds to wait between auto scale updates.
+     * 
+     */
     public Optional<Integer> refreshPeriodInSeconds() {
         return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
@@ -70,6 +86,10 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
     @Import(name="targetUtilization")
     private @Nullable Integer targetUtilization;
 
+    /**
+     * @return The target utilization percentage to use for determining whether to scale the cluster.
+     * 
+     */
     public Optional<Integer> targetUtilization() {
         return Optional.ofNullable(this.targetUtilization);
     }
@@ -102,26 +122,56 @@ public final class AKSServiceResponseResponseAutoScaler extends com.pulumi.resou
             $ = new AKSServiceResponseResponseAutoScaler(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscaleEnabled Option to enable/disable auto scaling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
             $.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
 
+        /**
+         * @param maxReplicas The maximum number of replicas in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
             $.maxReplicas = maxReplicas;
             return this;
         }
 
+        /**
+         * @param minReplicas The minimum number of replicas to scale down to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minReplicas(@Nullable Integer minReplicas) {
             $.minReplicas = minReplicas;
             return this;
         }
 
+        /**
+         * @param refreshPeriodInSeconds The amount of seconds to wait between auto scale updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
+        /**
+         * @param targetUtilization The target utilization percentage to use for determining whether to scale the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetUtilization(@Nullable Integer targetUtilization) {
             $.targetUtilization = targetUtilization;
             return this;

@@ -18,75 +18,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDedicatedHostResult {
-    /**
-     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
-     * 
-     */
+        /**
+         * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
+         * 
+         */
     private final @Nullable Boolean autoReplaceOnFailure;
-    /**
-     * A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
-     * 
-     */
+        /**
+         * @return A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
+         * 
+         */
     private final String hostId;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The dedicated host instance view.
-     * 
-     */
+        /**
+         * @return The dedicated host instance view.
+         * 
+         */
     private final DedicatedHostInstanceViewResponse instanceView;
-    /**
-     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
-     * 
-     */
+        /**
+         * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
+         * 
+         */
     private final @Nullable String licenseType;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Fault domain of the dedicated host within a dedicated host group.
-     * 
-     */
+        /**
+         * @return Fault domain of the dedicated host within a dedicated host group.
+         * 
+         */
     private final @Nullable Integer platformFaultDomain;
-    /**
-     * The provisioning state, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The provisioning state, which only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The date when the host was first provisioned.
-     * 
-     */
+        /**
+         * @return The date when the host was first provisioned.
+         * 
+         */
     private final String provisioningTime;
-    /**
-     * SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
-     * 
-     */
+        /**
+         * @return SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * A list of references to all virtual machines in the Dedicated Host.
-     * 
-     */
+        /**
+         * @return A list of references to all virtual machines in the Dedicated Host.
+         * 
+         */
     private final List<SubResourceReadOnlyResponse> virtualMachines;
 
     @CustomType.Constructor
@@ -122,100 +122,100 @@ public final class GetDedicatedHostResult {
     }
 
     /**
-     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
+     * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
      * 
-    */
+     */
     public Optional<Boolean> autoReplaceOnFailure() {
         return Optional.ofNullable(this.autoReplaceOnFailure);
     }
     /**
-     * A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
+     * @return A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
      * 
-    */
+     */
     public String hostId() {
         return this.hostId;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The dedicated host instance view.
+     * @return The dedicated host instance view.
      * 
-    */
+     */
     public DedicatedHostInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
+     * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Fault domain of the dedicated host within a dedicated host group.
+     * @return Fault domain of the dedicated host within a dedicated host group.
      * 
-    */
+     */
     public Optional<Integer> platformFaultDomain() {
         return Optional.ofNullable(this.platformFaultDomain);
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The date when the host was first provisioned.
+     * @return The date when the host was first provisioned.
      * 
-    */
+     */
     public String provisioningTime() {
         return this.provisioningTime;
     }
     /**
-     * SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
+     * @return SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A list of references to all virtual machines in the Dedicated Host.
+     * @return A list of references to all virtual machines in the Dedicated Host.
      * 
-    */
+     */
     public List<SubResourceReadOnlyResponse> virtualMachines() {
         return this.virtualMachines;
     }

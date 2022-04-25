@@ -11,45 +11,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VnetRouteResponse {
-    /**
-     * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
-     * 
-     */
+        /**
+         * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+         * 
+         */
     private final @Nullable String endAddress;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * The type of route this is:
-     * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
-     * INHERITED - Routes inherited from the real Virtual Network routes
-     * STATIC - Static route set on the app only
-     * 
-     * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
-     * 
-     */
+        /**
+         * @return The type of route this is:
+         * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+         * INHERITED - Routes inherited from the real Virtual Network routes
+         * STATIC - Static route set on the app only
+         * 
+         * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
+         * 
+         */
     private final @Nullable String routeType;
-    /**
-     * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
-     * 
-     */
+        /**
+         * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+         * 
+         */
     private final @Nullable String startAddress;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -71,56 +71,56 @@ public final class VnetRouteResponse {
     }
 
     /**
-     * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+     * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
-    */
+     */
     public Optional<String> endAddress() {
         return Optional.ofNullable(this.endAddress);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of route this is:
+     * @return The type of route this is:
      * DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
      * INHERITED - Routes inherited from the real Virtual Network routes
      * STATIC - Static route set on the app only
      * 
      * These values will be used for syncing an app&#39;s routes with those from a Virtual Network.
      * 
-    */
+     */
     public Optional<String> routeType() {
         return Optional.ofNullable(this.routeType);
     }
     /**
-     * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+     * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
-    */
+     */
     public Optional<String> startAddress() {
         return Optional.ofNullable(this.startAddress);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

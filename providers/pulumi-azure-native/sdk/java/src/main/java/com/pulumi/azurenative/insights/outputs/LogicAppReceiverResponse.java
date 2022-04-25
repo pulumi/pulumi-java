@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LogicAppReceiverResponse {
-    /**
-     * The callback url where http request sent to.
-     * 
-     */
+        /**
+         * @return The callback url where http request sent to.
+         * 
+         */
     private final String callbackUrl;
-    /**
-     * The name of the logic app receiver. Names must be unique across all receivers within an action group.
-     * 
-     */
+        /**
+         * @return The name of the logic app receiver. Names must be unique across all receivers within an action group.
+         * 
+         */
     private final String name;
-    /**
-     * The azure resource id of the logic app receiver.
-     * 
-     */
+        /**
+         * @return The azure resource id of the logic app receiver.
+         * 
+         */
     private final String resourceId;
-    /**
-     * Indicates whether to use common alert schema.
-     * 
-     */
+        /**
+         * @return Indicates whether to use common alert schema.
+         * 
+         */
     private final @Nullable Boolean useCommonAlertSchema;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class LogicAppReceiverResponse {
     }
 
     /**
-     * The callback url where http request sent to.
+     * @return The callback url where http request sent to.
      * 
-    */
+     */
     public String callbackUrl() {
         return this.callbackUrl;
     }
     /**
-     * The name of the logic app receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the logic app receiver. Names must be unique across all receivers within an action group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The azure resource id of the logic app receiver.
+     * @return The azure resource id of the logic app receiver.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
-    */
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }

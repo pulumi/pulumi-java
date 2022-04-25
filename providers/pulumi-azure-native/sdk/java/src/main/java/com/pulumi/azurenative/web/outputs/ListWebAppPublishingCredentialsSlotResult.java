@@ -11,50 +11,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListWebAppPublishingCredentialsSlotResult {
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * Password used for publishing.
-     * 
-     */
+        /**
+         * @return Password used for publishing.
+         * 
+         */
     private final @Nullable String publishingPassword;
-    /**
-     * Password hash used for publishing.
-     * 
-     */
+        /**
+         * @return Password hash used for publishing.
+         * 
+         */
     private final @Nullable String publishingPasswordHash;
-    /**
-     * Password hash salt used for publishing.
-     * 
-     */
+        /**
+         * @return Password hash salt used for publishing.
+         * 
+         */
     private final @Nullable String publishingPasswordHashSalt;
-    /**
-     * Username used for publishing.
-     * 
-     */
+        /**
+         * @return Username used for publishing.
+         * 
+         */
     private final String publishingUserName;
-    /**
-     * Url of SCM site.
-     * 
-     */
+        /**
+         * @return Url of SCM site.
+         * 
+         */
     private final @Nullable String scmUri;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class ListWebAppPublishingCredentialsSlotResult {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Password used for publishing.
+     * @return Password used for publishing.
      * 
-    */
+     */
     public Optional<String> publishingPassword() {
         return Optional.ofNullable(this.publishingPassword);
     }
     /**
-     * Password hash used for publishing.
+     * @return Password hash used for publishing.
      * 
-    */
+     */
     public Optional<String> publishingPasswordHash() {
         return Optional.ofNullable(this.publishingPasswordHash);
     }
     /**
-     * Password hash salt used for publishing.
+     * @return Password hash salt used for publishing.
      * 
-    */
+     */
     public Optional<String> publishingPasswordHashSalt() {
         return Optional.ofNullable(this.publishingPasswordHashSalt);
     }
     /**
-     * Username used for publishing.
+     * @return Username used for publishing.
      * 
-    */
+     */
     public String publishingUserName() {
         return this.publishingUserName;
     }
     /**
-     * Url of SCM site.
+     * @return Url of SCM site.
      * 
-    */
+     */
     public Optional<String> scmUri() {
         return Optional.ofNullable(this.scmUri);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

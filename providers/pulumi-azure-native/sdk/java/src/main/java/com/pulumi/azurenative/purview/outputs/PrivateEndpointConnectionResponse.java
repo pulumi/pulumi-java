@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
-    /**
-     * Gets or sets the identifier.
-     * 
-     */
+        /**
+         * @return Gets or sets the identifier.
+         * 
+         */
     private final String id;
-    /**
-     * Gets or sets the name.
-     * 
-     */
+        /**
+         * @return Gets or sets the name.
+         * 
+         */
     private final String name;
-    /**
-     * The private endpoint information.
-     * 
-     */
+        /**
+         * @return The private endpoint information.
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * The private link service connection state.
-     * 
-     */
+        /**
+         * @return The private link service connection state.
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Gets or sets the type.
-     * 
-     */
+        /**
+         * @return Gets or sets the type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * Gets or sets the identifier.
+     * @return Gets or sets the identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the name.
+     * @return Gets or sets the name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The private endpoint information.
+     * @return The private endpoint information.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * The private link service connection state.
+     * @return The private link service connection state.
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Gets or sets the type.
+     * @return Gets or sets the type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

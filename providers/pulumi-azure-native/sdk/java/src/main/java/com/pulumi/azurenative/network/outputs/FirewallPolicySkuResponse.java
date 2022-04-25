@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FirewallPolicySkuResponse {
-    /**
-     * Tier of Firewall Policy.
-     * 
-     */
+        /**
+         * @return Tier of Firewall Policy.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class FirewallPolicySkuResponse {
     }
 
     /**
-     * Tier of Firewall Policy.
+     * @return Tier of Firewall Policy.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

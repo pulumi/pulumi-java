@@ -23,95 +23,95 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCacheResult {
-    /**
-     * The size of this Cache, in GB.
-     * 
-     */
+        /**
+         * @return The size of this Cache, in GB.
+         * 
+         */
     private final @Nullable Integer cacheSizeGB;
-    /**
-     * Specifies Directory Services settings of the cache.
-     * 
-     */
+        /**
+         * @return Specifies Directory Services settings of the cache.
+         * 
+         */
     private final @Nullable CacheDirectorySettingsResponse directoryServicesSettings;
-    /**
-     * Specifies encryption settings of the cache.
-     * 
-     */
+        /**
+         * @return Specifies encryption settings of the cache.
+         * 
+         */
     private final @Nullable CacheEncryptionSettingsResponse encryptionSettings;
-    /**
-     * Health of the Cache.
-     * 
-     */
+        /**
+         * @return Health of the Cache.
+         * 
+         */
     private final CacheHealthResponse health;
-    /**
-     * Resource ID of the Cache.
-     * 
-     */
+        /**
+         * @return Resource ID of the Cache.
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the cache, if configured.
-     * 
-     */
+        /**
+         * @return The identity of the cache, if configured.
+         * 
+         */
     private final @Nullable CacheIdentityResponse identity;
-    /**
-     * Region name string.
-     * 
-     */
+        /**
+         * @return Region name string.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Array of IP addresses that can be used by clients mounting this Cache.
-     * 
-     */
+        /**
+         * @return Array of IP addresses that can be used by clients mounting this Cache.
+         * 
+         */
     private final List<String> mountAddresses;
-    /**
-     * Name of Cache.
-     * 
-     */
+        /**
+         * @return Name of Cache.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies network settings of the cache.
-     * 
-     */
+        /**
+         * @return Specifies network settings of the cache.
+         * 
+         */
     private final @Nullable CacheNetworkSettingsResponse networkSettings;
-    /**
-     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-     * 
-     */
+        /**
+         * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * Specifies security settings of the cache.
-     * 
-     */
+        /**
+         * @return Specifies security settings of the cache.
+         * 
+         */
     private final @Nullable CacheSecuritySettingsResponse securitySettings;
-    /**
-     * SKU for the Cache.
-     * 
-     */
+        /**
+         * @return SKU for the Cache.
+         * 
+         */
     private final @Nullable CacheResponseSku sku;
-    /**
-     * Subnet used for the Cache.
-     * 
-     */
+        /**
+         * @return Subnet used for the Cache.
+         * 
+         */
     private final @Nullable String subnet;
-    /**
-     * The system meta data relating to this resource.
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of the Cache; Microsoft.StorageCache/Cache
-     * 
-     */
+        /**
+         * @return Type of the Cache; Microsoft.StorageCache/Cache
+         * 
+         */
     private final String type;
-    /**
-     * Upgrade status of the Cache.
-     * 
-     */
+        /**
+         * @return Upgrade status of the Cache.
+         * 
+         */
     private final @Nullable CacheUpgradeStatusResponse upgradeStatus;
 
     @CustomType.Constructor
@@ -155,128 +155,128 @@ public final class GetCacheResult {
     }
 
     /**
-     * The size of this Cache, in GB.
+     * @return The size of this Cache, in GB.
      * 
-    */
+     */
     public Optional<Integer> cacheSizeGB() {
         return Optional.ofNullable(this.cacheSizeGB);
     }
     /**
-     * Specifies Directory Services settings of the cache.
+     * @return Specifies Directory Services settings of the cache.
      * 
-    */
+     */
     public Optional<CacheDirectorySettingsResponse> directoryServicesSettings() {
         return Optional.ofNullable(this.directoryServicesSettings);
     }
     /**
-     * Specifies encryption settings of the cache.
+     * @return Specifies encryption settings of the cache.
      * 
-    */
+     */
     public Optional<CacheEncryptionSettingsResponse> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
     /**
-     * Health of the Cache.
+     * @return Health of the Cache.
      * 
-    */
+     */
     public CacheHealthResponse health() {
         return this.health;
     }
     /**
-     * Resource ID of the Cache.
+     * @return Resource ID of the Cache.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the cache, if configured.
+     * @return The identity of the cache, if configured.
      * 
-    */
+     */
     public Optional<CacheIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Region name string.
+     * @return Region name string.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Array of IP addresses that can be used by clients mounting this Cache.
+     * @return Array of IP addresses that can be used by clients mounting this Cache.
      * 
-    */
+     */
     public List<String> mountAddresses() {
         return this.mountAddresses;
     }
     /**
-     * Name of Cache.
+     * @return Name of Cache.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies network settings of the cache.
+     * @return Specifies network settings of the cache.
      * 
-    */
+     */
     public Optional<CacheNetworkSettingsResponse> networkSettings() {
         return Optional.ofNullable(this.networkSettings);
     }
     /**
-     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Specifies security settings of the cache.
+     * @return Specifies security settings of the cache.
      * 
-    */
+     */
     public Optional<CacheSecuritySettingsResponse> securitySettings() {
         return Optional.ofNullable(this.securitySettings);
     }
     /**
-     * SKU for the Cache.
+     * @return SKU for the Cache.
      * 
-    */
+     */
     public Optional<CacheResponseSku> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Subnet used for the Cache.
+     * @return Subnet used for the Cache.
      * 
-    */
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of the Cache; Microsoft.StorageCache/Cache
+     * @return Type of the Cache; Microsoft.StorageCache/Cache
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Upgrade status of the Cache.
+     * @return Upgrade status of the Cache.
      * 
-    */
+     */
     public Optional<CacheUpgradeStatusResponse> upgradeStatus() {
         return Optional.ofNullable(this.upgradeStatus);
     }

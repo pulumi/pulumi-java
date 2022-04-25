@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceLimitsResponse {
-    /**
-     * The CPU limit of this container instance.
-     * 
-     */
+        /**
+         * @return The CPU limit of this container instance.
+         * 
+         */
     private final @Nullable Double cpu;
-    /**
-     * The GPU limit of this container instance.
-     * 
-     */
+        /**
+         * @return The GPU limit of this container instance.
+         * 
+         */
     private final @Nullable GpuResourceResponse gpu;
-    /**
-     * The memory limit in GB of this container instance.
-     * 
-     */
+        /**
+         * @return The memory limit in GB of this container instance.
+         * 
+         */
     private final @Nullable Double memoryInGB;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ResourceLimitsResponse {
     }
 
     /**
-     * The CPU limit of this container instance.
+     * @return The CPU limit of this container instance.
      * 
-    */
+     */
     public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
-     * The GPU limit of this container instance.
+     * @return The GPU limit of this container instance.
      * 
-    */
+     */
     public Optional<GpuResourceResponse> gpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
-     * The memory limit in GB of this container instance.
+     * @return The memory limit in GB of this container instance.
      * 
-    */
+     */
     public Optional<Double> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }

@@ -30,6 +30,10 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="recurrence")
     private @Nullable Output<Either<String,RecurrenceType>> recurrence;
 
+    /**
+     * @return The schedule recurrence.
+     * 
+     */
     public Optional<Output<Either<String,RecurrenceType>>> recurrence() {
         return Optional.ofNullable(this.recurrence);
     }
@@ -41,6 +45,10 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="recurrencePeriod")
     private @Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod;
 
+    /**
+     * @return Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+     * 
+     */
     public Optional<Output<ExportRecurrencePeriodArgs>> recurrencePeriod() {
         return Optional.ofNullable(this.recurrencePeriod);
     }
@@ -52,6 +60,10 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="status")
     private @Nullable Output<Either<String,StatusType>> status;
 
+    /**
+     * @return The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+     * 
+     */
     public Optional<Output<Either<String,StatusType>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -82,45 +94,105 @@ public final class ExportScheduleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ExportScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recurrence The schedule recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(@Nullable Output<Either<String,RecurrenceType>> recurrence) {
             $.recurrence = recurrence;
             return this;
         }
 
+        /**
+         * @param recurrence The schedule recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(Either<String,RecurrenceType> recurrence) {
             return recurrence(Output.of(recurrence));
         }
 
+        /**
+         * @param recurrence The schedule recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(String recurrence) {
             return recurrence(Either.ofLeft(recurrence));
         }
 
+        /**
+         * @param recurrence The schedule recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrence(RecurrenceType recurrence) {
             return recurrence(Either.ofRight(recurrence));
         }
 
+        /**
+         * @param recurrencePeriod Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrencePeriod(@Nullable Output<ExportRecurrencePeriodArgs> recurrencePeriod) {
             $.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
+        /**
+         * @param recurrencePeriod Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurrencePeriod(ExportRecurrencePeriodArgs recurrencePeriod) {
             return recurrencePeriod(Output.of(recurrencePeriod));
         }
 
+        /**
+         * @param status The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,StatusType>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,StatusType> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The status of the export&#39;s schedule. If &#39;Inactive&#39;, the export&#39;s schedule is paused.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(StatusType status) {
             return status(Either.ofRight(status));
         }

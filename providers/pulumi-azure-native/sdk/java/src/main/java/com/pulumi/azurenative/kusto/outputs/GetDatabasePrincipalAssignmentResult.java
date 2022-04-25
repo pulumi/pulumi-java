@@ -11,55 +11,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDatabasePrincipalAssignmentResult {
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
-     * 
-     */
+        /**
+         * @return The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+         * 
+         */
     private final String principalId;
-    /**
-     * The principal name
-     * 
-     */
+        /**
+         * @return The principal name
+         * 
+         */
     private final String principalName;
-    /**
-     * Principal type.
-     * 
-     */
+        /**
+         * @return Principal type.
+         * 
+         */
     private final String principalType;
-    /**
-     * The provisioned state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioned state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Database principal role.
-     * 
-     */
+        /**
+         * @return Database principal role.
+         * 
+         */
     private final String role;
-    /**
-     * The tenant id of the principal
-     * 
-     */
+        /**
+         * @return The tenant id of the principal
+         * 
+         */
     private final @Nullable String tenantId;
-    /**
-     * The tenant name of the principal
-     * 
-     */
+        /**
+         * @return The tenant name of the principal
+         * 
+         */
     private final String tenantName;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -87,72 +87,72 @@ public final class GetDatabasePrincipalAssignmentResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
+     * @return The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The principal name
+     * @return The principal name
      * 
-    */
+     */
     public String principalName() {
         return this.principalName;
     }
     /**
-     * Principal type.
+     * @return Principal type.
      * 
-    */
+     */
     public String principalType() {
         return this.principalType;
     }
     /**
-     * The provisioned state of the resource.
+     * @return The provisioned state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Database principal role.
+     * @return Database principal role.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * The tenant id of the principal
+     * @return The tenant id of the principal
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * The tenant name of the principal
+     * @return The tenant name of the principal
      * 
-    */
+     */
     public String tenantName() {
         return this.tenantName;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

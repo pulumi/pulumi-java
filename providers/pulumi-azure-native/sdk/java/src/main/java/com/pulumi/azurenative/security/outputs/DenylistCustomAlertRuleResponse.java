@@ -11,36 +11,36 @@ import java.util.Objects;
 
 @CustomType
 public final class DenylistCustomAlertRuleResponse {
-    /**
-     * The values to deny. The format of the values depends on the rule type.
-     * 
-     */
+        /**
+         * @return The values to deny. The format of the values depends on the rule type.
+         * 
+         */
     private final List<String> denylistValues;
-    /**
-     * The description of the custom alert.
-     * 
-     */
+        /**
+         * @return The description of the custom alert.
+         * 
+         */
     private final String description;
-    /**
-     * The display name of the custom alert.
-     * 
-     */
+        /**
+         * @return The display name of the custom alert.
+         * 
+         */
     private final String displayName;
-    /**
-     * Status of the custom alert.
-     * 
-     */
+        /**
+         * @return Status of the custom alert.
+         * 
+         */
     private final Boolean isEnabled;
-    /**
-     * The type of the custom alert rule.
-     * Expected value is &#39;DenylistCustomAlertRule&#39;.
-     * 
-     */
+        /**
+         * @return The type of the custom alert rule.
+         * Expected value is &#39;DenylistCustomAlertRule&#39;.
+         * 
+         */
     private final String ruleType;
-    /**
-     * The value type of the items in the list.
-     * 
-     */
+        /**
+         * @return The value type of the items in the list.
+         * 
+         */
     private final String valueType;
 
     @CustomType.Constructor
@@ -60,45 +60,45 @@ public final class DenylistCustomAlertRuleResponse {
     }
 
     /**
-     * The values to deny. The format of the values depends on the rule type.
+     * @return The values to deny. The format of the values depends on the rule type.
      * 
-    */
+     */
     public List<String> denylistValues() {
         return this.denylistValues;
     }
     /**
-     * The description of the custom alert.
+     * @return The description of the custom alert.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The display name of the custom alert.
+     * @return The display name of the custom alert.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Status of the custom alert.
+     * @return Status of the custom alert.
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * The type of the custom alert rule.
+     * @return The type of the custom alert rule.
      * Expected value is &#39;DenylistCustomAlertRule&#39;.
      * 
-    */
+     */
     public String ruleType() {
         return this.ruleType;
     }
     /**
-     * The value type of the items in the list.
+     * @return The value type of the items in the list.
      * 
-    */
+     */
     public String valueType() {
         return this.valueType;
     }

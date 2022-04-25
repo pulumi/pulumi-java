@@ -15,60 +15,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDedicatedHsmResult {
-    /**
-     * The Azure Resource Manager resource ID for the dedicated HSM.
-     * 
-     */
+        /**
+         * @return The Azure Resource Manager resource ID for the dedicated HSM.
+         * 
+         */
     private final String id;
-    /**
-     * The supported Azure location where the dedicated HSM should be created.
-     * 
-     */
+        /**
+         * @return The supported Azure location where the dedicated HSM should be created.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the dedicated HSM.
-     * 
-     */
+        /**
+         * @return The name of the dedicated HSM.
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the network interfaces of the dedicated hsm.
-     * 
-     */
+        /**
+         * @return Specifies the network interfaces of the dedicated hsm.
+         * 
+         */
     private final @Nullable NetworkProfileResponse networkProfile;
-    /**
-     * Provisioning state.
-     * 
-     */
+        /**
+         * @return Provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * SKU details
-     * 
-     */
+        /**
+         * @return SKU details
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * This field will be used when RP does not support Availability zones.
-     * 
-     */
+        /**
+         * @return This field will be used when RP does not support Availability zones.
+         * 
+         */
     private final @Nullable String stampId;
-    /**
-     * Resource Status Message.
-     * 
-     */
+        /**
+         * @return Resource Status Message.
+         * 
+         */
     private final String statusMessage;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The resource type of the dedicated HSM.
-     * 
-     */
+        /**
+         * @return The resource type of the dedicated HSM.
+         * 
+         */
     private final String type;
-    /**
-     * The Dedicated Hsm zones.
-     * 
-     */
+        /**
+         * @return The Dedicated Hsm zones.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -98,79 +98,79 @@ public final class GetDedicatedHsmResult {
     }
 
     /**
-     * The Azure Resource Manager resource ID for the dedicated HSM.
+     * @return The Azure Resource Manager resource ID for the dedicated HSM.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The supported Azure location where the dedicated HSM should be created.
+     * @return The supported Azure location where the dedicated HSM should be created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the dedicated HSM.
+     * @return The name of the dedicated HSM.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the network interfaces of the dedicated hsm.
+     * @return Specifies the network interfaces of the dedicated hsm.
      * 
-    */
+     */
     public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * SKU details
+     * @return SKU details
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * This field will be used when RP does not support Availability zones.
+     * @return This field will be used when RP does not support Availability zones.
      * 
-    */
+     */
     public Optional<String> stampId() {
         return Optional.ofNullable(this.stampId);
     }
     /**
-     * Resource Status Message.
+     * @return Resource Status Message.
      * 
-    */
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type of the dedicated HSM.
+     * @return The resource type of the dedicated HSM.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Dedicated Hsm zones.
+     * @return The Dedicated Hsm zones.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

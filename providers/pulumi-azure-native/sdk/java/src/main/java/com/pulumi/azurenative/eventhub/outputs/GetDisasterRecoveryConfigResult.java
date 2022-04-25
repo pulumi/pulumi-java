@@ -12,45 +12,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDisasterRecoveryConfigResult {
-    /**
-     * Alternate name specified when alias and namespace names are same.
-     * 
-     */
+        /**
+         * @return Alternate name specified when alias and namespace names are same.
+         * 
+         */
     private final @Nullable String alternateName;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
-     * 
-     */
+        /**
+         * @return ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+         * 
+         */
     private final @Nullable String partnerNamespace;
-    /**
-     * Number of entities pending to be replicated.
-     * 
-     */
+        /**
+         * @return Number of entities pending to be replicated.
+         * 
+         */
     private final Double pendingReplicationOperationsCount;
-    /**
-     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values &#39;Accepted&#39; or &#39;Succeeded&#39; or &#39;Failed&#39;
-     * 
-     */
+        /**
+         * @return Provisioning state of the Alias(Disaster Recovery configuration) - possible values &#39;Accepted&#39; or &#39;Succeeded&#39; or &#39;Failed&#39;
+         * 
+         */
     private final String provisioningState;
-    /**
-     * role of namespace in GEO DR - possible values &#39;Primary&#39; or &#39;PrimaryNotReplicating&#39; or &#39;Secondary&#39;
-     * 
-     */
+        /**
+         * @return role of namespace in GEO DR - possible values &#39;Primary&#39; or &#39;PrimaryNotReplicating&#39; or &#39;Secondary&#39;
+         * 
+         */
     private final String role;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,58 +74,58 @@ public final class GetDisasterRecoveryConfigResult {
     }
 
     /**
-     * Alternate name specified when alias and namespace names are same.
+     * @return Alternate name specified when alias and namespace names are same.
      * 
-    */
+     */
     public Optional<String> alternateName() {
         return Optional.ofNullable(this.alternateName);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+     * @return ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
-    */
+     */
     public Optional<String> partnerNamespace() {
         return Optional.ofNullable(this.partnerNamespace);
     }
     /**
-     * Number of entities pending to be replicated.
+     * @return Number of entities pending to be replicated.
      * 
-    */
+     */
     public Double pendingReplicationOperationsCount() {
         return this.pendingReplicationOperationsCount;
     }
     /**
-     * Provisioning state of the Alias(Disaster Recovery configuration) - possible values &#39;Accepted&#39; or &#39;Succeeded&#39; or &#39;Failed&#39;
+     * @return Provisioning state of the Alias(Disaster Recovery configuration) - possible values &#39;Accepted&#39; or &#39;Succeeded&#39; or &#39;Failed&#39;
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * role of namespace in GEO DR - possible values &#39;Primary&#39; or &#39;PrimaryNotReplicating&#39; or &#39;Secondary&#39;
+     * @return role of namespace in GEO DR - possible values &#39;Primary&#39; or &#39;PrimaryNotReplicating&#39; or &#39;Secondary&#39;
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

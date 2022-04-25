@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatasetResponseDataPath {
-    /**
-     * Additional Properties.
-     * 
-     */
+        /**
+         * @return Additional Properties.
+         * 
+         */
     private final @Nullable Map<String,Object> additionalProperties;
-    /**
-     * Azure path for Azure Blob or File
-     * 
-     */
+        /**
+         * @return Azure path for Azure Blob or File
+         * 
+         */
     private final String azureFilePath;
-    /**
-     * Data store Name
-     * 
-     */
+        /**
+         * @return Data store Name
+         * 
+         */
     private final String datastoreName;
-    /**
-     * HTTP URL.
-     * 
-     */
+        /**
+         * @return HTTP URL.
+         * 
+         */
     private final String httpUrl;
-    /**
-     * Specify the partition format of path. Defaults to None.
-     * 
-     */
+        /**
+         * @return Specify the partition format of path. Defaults to None.
+         * 
+         */
     private final String partitionFormat;
-    /**
-     * Whether or not to ignore unmatched path.
-     * 
-     */
+        /**
+         * @return Whether or not to ignore unmatched path.
+         * 
+         */
     private final Boolean partitionFormatIgnoreError;
-    /**
-     * List of files expanded from a file GLOB specified
-     * 
-     */
+        /**
+         * @return List of files expanded from a file GLOB specified
+         * 
+         */
     private final List<String> paths;
-    /**
-     * Relative path in the data store
-     * 
-     */
+        /**
+         * @return Relative path in the data store
+         * 
+         */
     private final String relativePath;
-    /**
-     * Sql Query/Table/Stored Procedure details.
-     * 
-     */
+        /**
+         * @return Sql Query/Table/Stored Procedure details.
+         * 
+         */
     private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
     @CustomType.Constructor
@@ -85,65 +85,65 @@ public final class DatasetResponseDataPath {
     }
 
     /**
-     * Additional Properties.
+     * @return Additional Properties.
      * 
-    */
+     */
     public Map<String,Object> additionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
     /**
-     * Azure path for Azure Blob or File
+     * @return Azure path for Azure Blob or File
      * 
-    */
+     */
     public String azureFilePath() {
         return this.azureFilePath;
     }
     /**
-     * Data store Name
+     * @return Data store Name
      * 
-    */
+     */
     public String datastoreName() {
         return this.datastoreName;
     }
     /**
-     * HTTP URL.
+     * @return HTTP URL.
      * 
-    */
+     */
     public String httpUrl() {
         return this.httpUrl;
     }
     /**
-     * Specify the partition format of path. Defaults to None.
+     * @return Specify the partition format of path. Defaults to None.
      * 
-    */
+     */
     public String partitionFormat() {
         return this.partitionFormat;
     }
     /**
-     * Whether or not to ignore unmatched path.
+     * @return Whether or not to ignore unmatched path.
      * 
-    */
+     */
     public Boolean partitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
     }
     /**
-     * List of files expanded from a file GLOB specified
+     * @return List of files expanded from a file GLOB specified
      * 
-    */
+     */
     public List<String> paths() {
         return this.paths;
     }
     /**
-     * Relative path in the data store
+     * @return Relative path in the data store
      * 
-    */
+     */
     public String relativePath() {
         return this.relativePath;
     }
     /**
-     * Sql Query/Table/Stored Procedure details.
+     * @return Sql Query/Table/Stored Procedure details.
      * 
-    */
+     */
     public Optional<DatasetResponseSqlDataPath> sqlDataPath() {
         return Optional.ofNullable(this.sqlDataPath);
     }

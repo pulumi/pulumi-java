@@ -20,25 +20,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContentKeyPolicyOptionResponse {
-    /**
-     * The key delivery configuration.
-     * 
-     */
+        /**
+         * @return The key delivery configuration.
+         * 
+         */
     private final Object configuration;
-    /**
-     * The Policy Option description.
-     * 
-     */
+        /**
+         * @return The Policy Option description.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The legacy Policy Option ID.
-     * 
-     */
+        /**
+         * @return The legacy Policy Option ID.
+         * 
+         */
     private final String policyOptionId;
-    /**
-     * The requirements that must be met to deliver keys with this configuration
-     * 
-     */
+        /**
+         * @return The requirements that must be met to deliver keys with this configuration
+         * 
+         */
     private final Object restriction;
 
     @CustomType.Constructor
@@ -54,30 +54,30 @@ public final class ContentKeyPolicyOptionResponse {
     }
 
     /**
-     * The key delivery configuration.
+     * @return The key delivery configuration.
      * 
-    */
+     */
     public Object configuration() {
         return this.configuration;
     }
     /**
-     * The Policy Option description.
+     * @return The Policy Option description.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The legacy Policy Option ID.
+     * @return The legacy Policy Option ID.
      * 
-    */
+     */
     public String policyOptionId() {
         return this.policyOptionId;
     }
     /**
-     * The requirements that must be met to deliver keys with this configuration
+     * @return The requirements that must be met to deliver keys with this configuration
      * 
-    */
+     */
     public Object restriction() {
         return this.restriction;
     }

@@ -19,6 +19,10 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="fabricName", required=true)
     private String fabricName;
 
+    /**
+     * @return Fabric name associated with the backed up item.
+     * 
+     */
     public String fabricName() {
         return this.fabricName;
     }
@@ -30,6 +34,10 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="intentObjectName", required=true)
     private String intentObjectName;
 
+    /**
+     * @return Backed up item name whose details are to be fetched.
+     * 
+     */
     public String intentObjectName() {
         return this.intentObjectName;
     }
@@ -41,6 +49,10 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -83,21 +99,45 @@ public final class GetProtectionIntentArgs extends com.pulumi.resources.InvokeAr
             $ = new GetProtectionIntentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Fabric name associated with the backed up item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param intentObjectName Backed up item name whose details are to be fetched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder intentObjectName(String intentObjectName) {
             $.intentObjectName = intentObjectName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

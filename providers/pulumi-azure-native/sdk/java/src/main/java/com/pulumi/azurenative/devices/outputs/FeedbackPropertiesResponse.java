@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FeedbackPropertiesResponse {
-    /**
-     * The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
-     */
+        /**
+         * @return The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         */
     private final @Nullable String lockDurationAsIso8601;
-    /**
-     * The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
-     */
+        /**
+         * @return The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         */
     private final @Nullable Integer maxDeliveryCount;
-    /**
-     * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
-     * 
-     */
+        /**
+         * @return The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         */
     private final @Nullable String ttlAsIso8601;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class FeedbackPropertiesResponse {
     }
 
     /**
-     * The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * @return The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
-    */
+     */
     public Optional<String> lockDurationAsIso8601() {
         return Optional.ofNullable(this.lockDurationAsIso8601);
     }
     /**
-     * The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * @return The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
-    */
+     */
     public Optional<Integer> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
-     * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * @return The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
-    */
+     */
     public Optional<String> ttlAsIso8601() {
         return Optional.ofNullable(this.ttlAsIso8601);
     }

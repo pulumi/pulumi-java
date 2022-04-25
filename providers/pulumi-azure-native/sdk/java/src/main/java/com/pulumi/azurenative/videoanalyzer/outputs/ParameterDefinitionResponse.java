@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ParameterDefinitionResponse {
-    /**
-     * Name of the parameter declared in the pipeline topology.
-     * 
-     */
+        /**
+         * @return Name of the parameter declared in the pipeline topology.
+         * 
+         */
     private final String name;
-    /**
-     * Parameter value to be applied on this specific pipeline.
-     * 
-     */
+        /**
+         * @return Parameter value to be applied on this specific pipeline.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ParameterDefinitionResponse {
     }
 
     /**
-     * Name of the parameter declared in the pipeline topology.
+     * @return Name of the parameter declared in the pipeline topology.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Parameter value to be applied on this specific pipeline.
+     * @return Parameter value to be applied on this specific pipeline.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

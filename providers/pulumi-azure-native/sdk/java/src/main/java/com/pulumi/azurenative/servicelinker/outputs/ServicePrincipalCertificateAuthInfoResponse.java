@@ -9,26 +9,26 @@ import java.util.Objects;
 
 @CustomType
 public final class ServicePrincipalCertificateAuthInfoResponse {
-    /**
-     * The authentication type.
-     * Expected value is &#39;servicePrincipalCertificate&#39;.
-     * 
-     */
+        /**
+         * @return The authentication type.
+         * Expected value is &#39;servicePrincipalCertificate&#39;.
+         * 
+         */
     private final String authType;
-    /**
-     * ServicePrincipal certificate for servicePrincipal auth.
-     * 
-     */
+        /**
+         * @return ServicePrincipal certificate for servicePrincipal auth.
+         * 
+         */
     private final String certificate;
-    /**
-     * Application clientId for servicePrincipal auth.
-     * 
-     */
+        /**
+         * @return Application clientId for servicePrincipal auth.
+         * 
+         */
     private final String clientId;
-    /**
-     * Principal Id for servicePrincipal auth.
-     * 
-     */
+        /**
+         * @return Principal Id for servicePrincipal auth.
+         * 
+         */
     private final String principalId;
 
     @CustomType.Constructor
@@ -44,31 +44,31 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
     }
 
     /**
-     * The authentication type.
+     * @return The authentication type.
      * Expected value is &#39;servicePrincipalCertificate&#39;.
      * 
-    */
+     */
     public String authType() {
         return this.authType;
     }
     /**
-     * ServicePrincipal certificate for servicePrincipal auth.
+     * @return ServicePrincipal certificate for servicePrincipal auth.
      * 
-    */
+     */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * Application clientId for servicePrincipal auth.
+     * @return Application clientId for servicePrincipal auth.
      * 
-    */
+     */
     public String clientId() {
         return this.clientId;
     }
     /**
-     * Principal Id for servicePrincipal auth.
+     * @return Principal Id for servicePrincipal auth.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }

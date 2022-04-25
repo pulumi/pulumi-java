@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetLinkedWorkspaceResult {
-    /**
-     * ResourceId of the link of the linked workspace.
-     * 
-     */
+        /**
+         * @return ResourceId of the link of the linked workspace.
+         * 
+         */
     private final String id;
-    /**
-     * Friendly name of the linked workspace.
-     * 
-     */
+        /**
+         * @return Friendly name of the linked workspace.
+         * 
+         */
     private final String name;
-    /**
-     * LinkedWorkspace specific properties.
-     * 
-     */
+        /**
+         * @return LinkedWorkspace specific properties.
+         * 
+         */
     private final LinkedWorkspacePropsResponse properties;
-    /**
-     * Resource type of linked workspace.
-     * 
-     */
+        /**
+         * @return Resource type of linked workspace.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetLinkedWorkspaceResult {
     }
 
     /**
-     * ResourceId of the link of the linked workspace.
+     * @return ResourceId of the link of the linked workspace.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Friendly name of the linked workspace.
+     * @return Friendly name of the linked workspace.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * LinkedWorkspace specific properties.
+     * @return LinkedWorkspace specific properties.
      * 
-    */
+     */
     public LinkedWorkspacePropsResponse properties() {
         return this.properties;
     }
     /**
-     * Resource type of linked workspace.
+     * @return Resource type of linked workspace.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -18,65 +18,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetStorageTargetResult {
-    /**
-     * Properties when targetType is blobNfs.
-     * 
-     */
+        /**
+         * @return Properties when targetType is blobNfs.
+         * 
+         */
     private final @Nullable BlobNfsTargetResponse blobNfs;
-    /**
-     * Properties when targetType is clfs.
-     * 
-     */
+        /**
+         * @return Properties when targetType is clfs.
+         * 
+         */
     private final @Nullable ClfsTargetResponse clfs;
-    /**
-     * Resource ID of the Storage Target.
-     * 
-     */
+        /**
+         * @return Resource ID of the Storage Target.
+         * 
+         */
     private final String id;
-    /**
-     * List of Cache namespace junctions to target for namespace associations.
-     * 
-     */
+        /**
+         * @return List of Cache namespace junctions to target for namespace associations.
+         * 
+         */
     private final @Nullable List<NamespaceJunctionResponse> junctions;
-    /**
-     * Region name string.
-     * 
-     */
+        /**
+         * @return Region name string.
+         * 
+         */
     private final String location;
-    /**
-     * Name of the Storage Target.
-     * 
-     */
+        /**
+         * @return Name of the Storage Target.
+         * 
+         */
     private final String name;
-    /**
-     * Properties when targetType is nfs3.
-     * 
-     */
+        /**
+         * @return Properties when targetType is nfs3.
+         * 
+         */
     private final @Nullable Nfs3TargetResponse nfs3;
-    /**
-     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
-     * 
-     */
+        /**
+         * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * The system meta data relating to this resource.
-     * 
-     */
+        /**
+         * @return The system meta data relating to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Type of the Storage Target.
-     * 
-     */
+        /**
+         * @return Type of the Storage Target.
+         * 
+         */
     private final String targetType;
-    /**
-     * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
-     * 
-     */
+        /**
+         * @return Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
+         * 
+         */
     private final String type;
-    /**
-     * Properties when targetType is unknown.
-     * 
-     */
+        /**
+         * @return Properties when targetType is unknown.
+         * 
+         */
     private final @Nullable UnknownTargetResponse unknown;
 
     @CustomType.Constructor
@@ -108,86 +108,86 @@ public final class GetStorageTargetResult {
     }
 
     /**
-     * Properties when targetType is blobNfs.
+     * @return Properties when targetType is blobNfs.
      * 
-    */
+     */
     public Optional<BlobNfsTargetResponse> blobNfs() {
         return Optional.ofNullable(this.blobNfs);
     }
     /**
-     * Properties when targetType is clfs.
+     * @return Properties when targetType is clfs.
      * 
-    */
+     */
     public Optional<ClfsTargetResponse> clfs() {
         return Optional.ofNullable(this.clfs);
     }
     /**
-     * Resource ID of the Storage Target.
+     * @return Resource ID of the Storage Target.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * List of Cache namespace junctions to target for namespace associations.
+     * @return List of Cache namespace junctions to target for namespace associations.
      * 
-    */
+     */
     public List<NamespaceJunctionResponse> junctions() {
         return this.junctions == null ? List.of() : this.junctions;
     }
     /**
-     * Region name string.
+     * @return Region name string.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the Storage Target.
+     * @return Name of the Storage Target.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties when targetType is nfs3.
+     * @return Properties when targetType is nfs3.
      * 
-    */
+     */
     public Optional<Nfs3TargetResponse> nfs3() {
         return Optional.ofNullable(this.nfs3);
     }
     /**
-     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The system meta data relating to this resource.
+     * @return The system meta data relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the Storage Target.
+     * @return Type of the Storage Target.
      * 
-    */
+     */
     public String targetType() {
         return this.targetType;
     }
     /**
-     * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
+     * @return Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Properties when targetType is unknown.
+     * @return Properties when targetType is unknown.
      * 
-    */
+     */
     public Optional<UnknownTargetResponse> unknown() {
         return Optional.ofNullable(this.unknown);
     }

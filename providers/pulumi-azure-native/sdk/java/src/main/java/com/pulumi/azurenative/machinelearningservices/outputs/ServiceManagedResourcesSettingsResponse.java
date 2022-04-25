@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceManagedResourcesSettingsResponse {
-    /**
-     * The settings for the service managed cosmosdb account.
-     * 
-     */
+        /**
+         * @return The settings for the service managed cosmosdb account.
+         * 
+         */
     private final @Nullable CosmosDbSettingsResponse cosmosDb;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ServiceManagedResourcesSettingsResponse {
     }
 
     /**
-     * The settings for the service managed cosmosdb account.
+     * @return The settings for the service managed cosmosdb account.
      * 
-    */
+     */
     public Optional<CosmosDbSettingsResponse> cosmosDb() {
         return Optional.ofNullable(this.cosmosDb);
     }

@@ -12,40 +12,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLinkedServiceResult {
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state of the linked service.
-     * 
-     */
+        /**
+         * @return The provisioning state of the linked service.
+         * 
+         */
     private final @Nullable String provisioningState;
-    /**
-     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
-     * 
-     */
+        /**
+         * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
+         * 
+         */
     private final @Nullable String resourceId;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
-     * 
-     */
+        /**
+         * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
+         * 
+         */
     private final @Nullable String writeAccessResourceId;
 
     @CustomType.Constructor
@@ -67,51 +67,51 @@ public final class GetLinkedServiceResult {
     }
 
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the linked service.
+     * @return The provisioning state of the linked service.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
+     * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require read access
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
+     * @return The resource id of the resource that will be linked to the workspace. This should be used for linking resources which require write access
      * 
-    */
+     */
     public Optional<String> writeAccessResourceId() {
         return Optional.ofNullable(this.writeAccessResourceId);
     }

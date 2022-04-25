@@ -26,6 +26,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends com.pulu
     @Import(name="protectFromScaleIn")
     private @Nullable Output<Boolean> protectFromScaleIn;
 
+    /**
+     * @return Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
+     * 
+     */
     public Optional<Output<Boolean>> protectFromScaleIn() {
         return Optional.ofNullable(this.protectFromScaleIn);
     }
@@ -37,6 +41,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends com.pulu
     @Import(name="protectFromScaleSetActions")
     private @Nullable Output<Boolean> protectFromScaleSetActions;
 
+    /**
+     * @return Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+     * 
+     */
     public Optional<Output<Boolean>> protectFromScaleSetActions() {
         return Optional.ofNullable(this.protectFromScaleSetActions);
     }
@@ -66,20 +74,44 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends com.pulu
             $ = new VirtualMachineScaleSetVMProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protectFromScaleIn Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleIn(@Nullable Output<Boolean> protectFromScaleIn) {
             $.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
+        /**
+         * @param protectFromScaleIn Indicates that the virtual machine scale set VM shouldn&#39;t be considered for deletion during a scale-in operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleIn(Boolean protectFromScaleIn) {
             return protectFromScaleIn(Output.of(protectFromScaleIn));
         }
 
+        /**
+         * @param protectFromScaleSetActions Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleSetActions(@Nullable Output<Boolean> protectFromScaleSetActions) {
             $.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
         }
 
+        /**
+         * @param protectFromScaleSetActions Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectFromScaleSetActions(Boolean protectFromScaleSetActions) {
             return protectFromScaleSetActions(Output.of(protectFromScaleSetActions));
         }

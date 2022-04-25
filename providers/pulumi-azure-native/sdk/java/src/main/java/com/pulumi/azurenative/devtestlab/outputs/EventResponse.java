@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventResponse {
-    /**
-     * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
-     * 
-     */
+        /**
+         * @return The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+         * 
+         */
     private final @Nullable String eventName;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class EventResponse {
     }
 
     /**
-     * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+     * @return The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
      * 
-    */
+     */
     public Optional<String> eventName() {
         return Optional.ofNullable(this.eventName);
     }

@@ -25,6 +25,10 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="vmResourceId")
     private @Nullable String vmResourceId;
 
+    /**
+     * @return The ARM id of the VM resource.
+     * 
+     */
     public Optional<String> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
@@ -53,6 +57,12 @@ public final class VMResourcesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new VMResourcesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vmResourceId The ARM id of the VM resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(@Nullable String vmResourceId) {
             $.vmResourceId = vmResourceId;
             return this;

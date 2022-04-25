@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OnlineEndpointResponse {
-    /**
-     * Inference endpoint authentication mode type
-     * 
-     */
+        /**
+         * @return Inference endpoint authentication mode type
+         * 
+         */
     private final String authMode;
-    /**
-     * Description of the inference endpoint.
-     * 
-     */
+        /**
+         * @return Description of the inference endpoint.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Property dictionary. Properties can be added, but not removed or altered.
-     * 
-     */
+        /**
+         * @return Property dictionary. Properties can be added, but not removed or altered.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * State of endpoint provisioning.
-     * 
-     */
+        /**
+         * @return State of endpoint provisioning.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Endpoint URI.
-     * 
-     */
+        /**
+         * @return Endpoint URI.
+         * 
+         */
     private final String scoringUri;
-    /**
-     * Endpoint Swagger URI.
-     * 
-     */
+        /**
+         * @return Endpoint Swagger URI.
+         * 
+         */
     private final String swaggerUri;
-    /**
-     * ARM resource ID of the compute if it exists.
-     * optional
-     * 
-     */
+        /**
+         * @return ARM resource ID of the compute if it exists.
+         * optional
+         * 
+         */
     private final @Nullable String target;
-    /**
-     * Traffic rules on how the traffic will be routed across deployments.
-     * 
-     */
+        /**
+         * @return Traffic rules on how the traffic will be routed across deployments.
+         * 
+         */
     private final @Nullable Map<String,Integer> traffic;
 
     @CustomType.Constructor
@@ -76,59 +76,59 @@ public final class OnlineEndpointResponse {
     }
 
     /**
-     * Inference endpoint authentication mode type
+     * @return Inference endpoint authentication mode type
      * 
-    */
+     */
     public String authMode() {
         return this.authMode;
     }
     /**
-     * Description of the inference endpoint.
+     * @return Description of the inference endpoint.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Property dictionary. Properties can be added, but not removed or altered.
+     * @return Property dictionary. Properties can be added, but not removed or altered.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * State of endpoint provisioning.
+     * @return State of endpoint provisioning.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Endpoint URI.
+     * @return Endpoint URI.
      * 
-    */
+     */
     public String scoringUri() {
         return this.scoringUri;
     }
     /**
-     * Endpoint Swagger URI.
+     * @return Endpoint Swagger URI.
      * 
-    */
+     */
     public String swaggerUri() {
         return this.swaggerUri;
     }
     /**
-     * ARM resource ID of the compute if it exists.
+     * @return ARM resource ID of the compute if it exists.
      * optional
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
     /**
-     * Traffic rules on how the traffic will be routed across deployments.
+     * @return Traffic rules on how the traffic will be routed across deployments.
      * 
-    */
+     */
     public Map<String,Integer> traffic() {
         return this.traffic == null ? Map.of() : this.traffic;
     }

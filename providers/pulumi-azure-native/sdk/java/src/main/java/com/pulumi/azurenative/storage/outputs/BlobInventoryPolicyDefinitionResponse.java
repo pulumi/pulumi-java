@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class BlobInventoryPolicyDefinitionResponse {
-    /**
-     * An object that defines the filter set.
-     * 
-     */
+        /**
+         * @return An object that defines the filter set.
+         * 
+         */
     private final BlobInventoryPolicyFilterResponse filters;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class BlobInventoryPolicyDefinitionResponse {
     }
 
     /**
-     * An object that defines the filter set.
+     * @return An object that defines the filter set.
      * 
-    */
+     */
     public BlobInventoryPolicyFilterResponse filters() {
         return this.filters;
     }

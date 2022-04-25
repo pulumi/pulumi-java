@@ -27,6 +27,10 @@ public final class KeyEncryptionKeyResponse extends com.pulumi.resources.InvokeA
     @Import(name="identityProperties")
     private @Nullable IdentityPropertiesResponse identityProperties;
 
+    /**
+     * @return Managed identity properties used for key encryption.
+     * 
+     */
     public Optional<IdentityPropertiesResponse> identityProperties() {
         return Optional.ofNullable(this.identityProperties);
     }
@@ -38,6 +42,10 @@ public final class KeyEncryptionKeyResponse extends com.pulumi.resources.InvokeA
     @Import(name="kekType", required=true)
     private String kekType;
 
+    /**
+     * @return Type of encryption key used for key encryption.
+     * 
+     */
     public String kekType() {
         return this.kekType;
     }
@@ -49,6 +57,10 @@ public final class KeyEncryptionKeyResponse extends com.pulumi.resources.InvokeA
     @Import(name="kekUrl")
     private @Nullable String kekUrl;
 
+    /**
+     * @return Key encryption key. It is required in case of Customer managed KekType.
+     * 
+     */
     public Optional<String> kekUrl() {
         return Optional.ofNullable(this.kekUrl);
     }
@@ -60,6 +72,10 @@ public final class KeyEncryptionKeyResponse extends com.pulumi.resources.InvokeA
     @Import(name="kekVaultResourceID")
     private @Nullable String kekVaultResourceID;
 
+    /**
+     * @return Kek vault resource id. It is required in case of Customer managed KekType.
+     * 
+     */
     public Optional<String> kekVaultResourceID() {
         return Optional.ofNullable(this.kekVaultResourceID);
     }
@@ -91,21 +107,45 @@ public final class KeyEncryptionKeyResponse extends com.pulumi.resources.InvokeA
             $ = new KeyEncryptionKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityProperties Managed identity properties used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityProperties(@Nullable IdentityPropertiesResponse identityProperties) {
             $.identityProperties = identityProperties;
             return this;
         }
 
+        /**
+         * @param kekType Type of encryption key used for key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekType(String kekType) {
             $.kekType = kekType;
             return this;
         }
 
+        /**
+         * @param kekUrl Key encryption key. It is required in case of Customer managed KekType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekUrl(@Nullable String kekUrl) {
             $.kekUrl = kekUrl;
             return this;
         }
 
+        /**
+         * @param kekVaultResourceID Kek vault resource id. It is required in case of Customer managed KekType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             $.kekVaultResourceID = kekVaultResourceID;
             return this;

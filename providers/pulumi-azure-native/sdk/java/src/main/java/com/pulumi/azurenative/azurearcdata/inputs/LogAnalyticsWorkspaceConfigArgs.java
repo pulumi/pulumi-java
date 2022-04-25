@@ -26,6 +26,10 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
     @Import(name="primaryKey")
     private @Nullable Output<String> primaryKey;
 
+    /**
+     * @return Primary key of the workspace
+     * 
+     */
     public Optional<Output<String>> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -37,6 +41,10 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
     @Import(name="workspaceId")
     private @Nullable Output<String> workspaceId;
 
+    /**
+     * @return Azure Log Analytics workspace ID
+     * 
+     */
     public Optional<Output<String>> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -66,20 +74,44 @@ public final class LogAnalyticsWorkspaceConfigArgs extends com.pulumi.resources.
             $ = new LogAnalyticsWorkspaceConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primaryKey Primary key of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param primaryKey Primary key of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             return primaryKey(Output.of(primaryKey));
         }
 
+        /**
+         * @param workspaceId Azure Log Analytics workspace ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId Azure Log Analytics workspace ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(String workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

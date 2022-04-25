@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GalleryDataDiskImageResponse {
-    /**
-     * The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
-     * 
-     */
+        /**
+         * @return The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+         * 
+         */
     private final @Nullable String hostCaching;
-    /**
-     * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
-     * 
-     */
+        /**
+         * @return This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+         * 
+         */
     private final Integer lun;
-    /**
-     * This property indicates the size of the VHD to be created.
-     * 
-     */
+        /**
+         * @return This property indicates the size of the VHD to be created.
+         * 
+         */
     private final Integer sizeInGB;
-    /**
-     * The gallery artifact version source.
-     * 
-     */
+        /**
+         * @return The gallery artifact version source.
+         * 
+         */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class GalleryDataDiskImageResponse {
     }
 
     /**
-     * The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
+     * @return The host caching of the disk. Valid values are &#39;None&#39;, &#39;ReadOnly&#39;, and &#39;ReadWrite&#39;
      * 
-    */
+     */
     public Optional<String> hostCaching() {
         return Optional.ofNullable(this.hostCaching);
     }
     /**
-     * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
+     * @return This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
-    */
+     */
     public Integer lun() {
         return this.lun;
     }
     /**
-     * This property indicates the size of the VHD to be created.
+     * @return This property indicates the size of the VHD to be created.
      * 
-    */
+     */
     public Integer sizeInGB() {
         return this.sizeInGB;
     }
     /**
-     * The gallery artifact version source.
+     * @return The gallery artifact version source.
      * 
-    */
+     */
     public Optional<GalleryArtifactVersionSourceResponse> source() {
         return Optional.ofNullable(this.source);
     }

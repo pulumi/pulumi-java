@@ -20,6 +20,10 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The friendly name of user assigned identity.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -31,6 +35,10 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
     @Import(name="principalId", required=true)
     private Output<String> principalId;
 
+    /**
+     * @return The principal id of user assigned identity.
+     * 
+     */
     public Output<String> principalId() {
         return this.principalId;
     }
@@ -60,20 +68,44 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
             $ = new ApplicationUserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The friendly name of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The friendly name of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }

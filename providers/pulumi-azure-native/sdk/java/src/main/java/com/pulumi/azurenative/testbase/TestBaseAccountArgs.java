@@ -25,6 +25,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -36,6 +40,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -47,6 +55,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="restore")
     private @Nullable Output<Boolean> restore;
 
+    /**
+     * @return The flag indicating if we would like to restore the Test Base Accounts which were soft deleted before.
+     * 
+     */
     public Optional<Output<Boolean>> restore() {
         return Optional.ofNullable(this.restore);
     }
@@ -58,6 +70,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku", required=true)
     private Output<TestBaseAccountSKUArgs> sku;
 
+    /**
+     * @return The SKU of the Test Base Account.
+     * 
+     */
     public Output<TestBaseAccountSKUArgs> sku() {
         return this.sku;
     }
@@ -69,6 +85,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -80,6 +100,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="testBaseAccountName")
     private @Nullable Output<String> testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public Optional<Output<String>> testBaseAccountName() {
         return Optional.ofNullable(this.testBaseAccountName);
     }
@@ -113,56 +137,128 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
             $ = new TestBaseAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param restore The flag indicating if we would like to restore the Test Base Accounts which were soft deleted before.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restore(@Nullable Output<Boolean> restore) {
             $.restore = restore;
             return this;
         }
 
+        /**
+         * @param restore The flag indicating if we would like to restore the Test Base Accounts which were soft deleted before.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restore(Boolean restore) {
             return restore(Output.of(restore));
         }
 
+        /**
+         * @param sku The SKU of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<TestBaseAccountSKUArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(TestBaseAccountSKUArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(@Nullable Output<String> testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             return testBaseAccountName(Output.of(testBaseAccountName));
         }

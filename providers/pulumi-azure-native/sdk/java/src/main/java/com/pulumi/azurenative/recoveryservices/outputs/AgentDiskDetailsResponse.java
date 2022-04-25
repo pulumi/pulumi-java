@@ -11,30 +11,30 @@ import java.util.Objects;
 
 @CustomType
 public final class AgentDiskDetailsResponse {
-    /**
-     * The disk capacity in bytes.
-     * 
-     */
+        /**
+         * @return The disk capacity in bytes.
+         * 
+         */
     private final Double capacityInBytes;
-    /**
-     * The disk Id.
-     * 
-     */
+        /**
+         * @return The disk Id.
+         * 
+         */
     private final String diskId;
-    /**
-     * The disk name.
-     * 
-     */
+        /**
+         * @return The disk name.
+         * 
+         */
     private final String diskName;
-    /**
-     * A value indicating whether the disk is the OS disk.
-     * 
-     */
+        /**
+         * @return A value indicating whether the disk is the OS disk.
+         * 
+         */
     private final String isOSDisk;
-    /**
-     * The lun of disk.
-     * 
-     */
+        /**
+         * @return The lun of disk.
+         * 
+         */
     private final Integer lunId;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class AgentDiskDetailsResponse {
     }
 
     /**
-     * The disk capacity in bytes.
+     * @return The disk capacity in bytes.
      * 
-    */
+     */
     public Double capacityInBytes() {
         return this.capacityInBytes;
     }
     /**
-     * The disk Id.
+     * @return The disk Id.
      * 
-    */
+     */
     public String diskId() {
         return this.diskId;
     }
     /**
-     * The disk name.
+     * @return The disk name.
      * 
-    */
+     */
     public String diskName() {
         return this.diskName;
     }
     /**
-     * A value indicating whether the disk is the OS disk.
+     * @return A value indicating whether the disk is the OS disk.
      * 
-    */
+     */
     public String isOSDisk() {
         return this.isOSDisk;
     }
     /**
-     * The lun of disk.
+     * @return The lun of disk.
      * 
-    */
+     */
     public Integer lunId() {
         return this.lunId;
     }

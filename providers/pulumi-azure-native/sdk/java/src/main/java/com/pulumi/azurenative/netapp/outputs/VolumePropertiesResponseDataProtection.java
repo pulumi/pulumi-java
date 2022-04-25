@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumePropertiesResponseDataProtection {
-    /**
-     * Backup Properties
-     * 
-     */
+        /**
+         * @return Backup Properties
+         * 
+         */
     private final @Nullable VolumeBackupPropertiesResponse backup;
-    /**
-     * Replication properties
-     * 
-     */
+        /**
+         * @return Replication properties
+         * 
+         */
     private final @Nullable ReplicationObjectResponse replication;
-    /**
-     * Snapshot properties.
-     * 
-     */
+        /**
+         * @return Snapshot properties.
+         * 
+         */
     private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class VolumePropertiesResponseDataProtection {
     }
 
     /**
-     * Backup Properties
+     * @return Backup Properties
      * 
-    */
+     */
     public Optional<VolumeBackupPropertiesResponse> backup() {
         return Optional.ofNullable(this.backup);
     }
     /**
-     * Replication properties
+     * @return Replication properties
      * 
-    */
+     */
     public Optional<ReplicationObjectResponse> replication() {
         return Optional.ofNullable(this.replication);
     }
     /**
-     * Snapshot properties.
+     * @return Snapshot properties.
      * 
-    */
+     */
     public Optional<VolumeSnapshotPropertiesResponse> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }

@@ -26,6 +26,10 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
     @Import(name="limits")
     private @Nullable ResourceLimitsResponse limits;
 
+    /**
+     * @return The resource limits of this container instance.
+     * 
+     */
     public Optional<ResourceLimitsResponse> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -37,6 +41,10 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
     @Import(name="requests", required=true)
     private ResourceRequestsResponse requests;
 
+    /**
+     * @return The resource requests of this container instance.
+     * 
+     */
     public ResourceRequestsResponse requests() {
         return this.requests;
     }
@@ -66,11 +74,23 @@ public final class ResourceRequirementsResponse extends com.pulumi.resources.Inv
             $ = new ResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits The resource limits of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable ResourceLimitsResponse limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param requests The resource requests of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(ResourceRequestsResponse requests) {
             $.requests = requests;
             return this;

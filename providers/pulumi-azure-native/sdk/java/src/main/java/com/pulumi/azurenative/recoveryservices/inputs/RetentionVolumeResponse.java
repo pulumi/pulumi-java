@@ -27,6 +27,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="capacityInBytes")
     private @Nullable Double capacityInBytes;
 
+    /**
+     * @return The volume capacity.
+     * 
+     */
     public Optional<Double> capacityInBytes() {
         return Optional.ofNullable(this.capacityInBytes);
     }
@@ -38,6 +42,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="freeSpaceInBytes")
     private @Nullable Double freeSpaceInBytes;
 
+    /**
+     * @return The free space available in this volume.
+     * 
+     */
     public Optional<Double> freeSpaceInBytes() {
         return Optional.ofNullable(this.freeSpaceInBytes);
     }
@@ -49,6 +57,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="thresholdPercentage")
     private @Nullable Integer thresholdPercentage;
 
+    /**
+     * @return The threshold percentage.
+     * 
+     */
     public Optional<Integer> thresholdPercentage() {
         return Optional.ofNullable(this.thresholdPercentage);
     }
@@ -60,6 +72,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="volumeName")
     private @Nullable String volumeName;
 
+    /**
+     * @return The volume name.
+     * 
+     */
     public Optional<String> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
@@ -91,21 +107,45 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
             $ = new RetentionVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityInBytes The volume capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityInBytes(@Nullable Double capacityInBytes) {
             $.capacityInBytes = capacityInBytes;
             return this;
         }
 
+        /**
+         * @param freeSpaceInBytes The free space available in this volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder freeSpaceInBytes(@Nullable Double freeSpaceInBytes) {
             $.freeSpaceInBytes = freeSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param thresholdPercentage The threshold percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercentage(@Nullable Integer thresholdPercentage) {
             $.thresholdPercentage = thresholdPercentage;
             return this;
         }
 
+        /**
+         * @param volumeName The volume name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(@Nullable String volumeName) {
             $.volumeName = volumeName;
             return this;

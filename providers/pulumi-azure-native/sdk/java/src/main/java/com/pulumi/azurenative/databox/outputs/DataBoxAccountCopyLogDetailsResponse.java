@@ -9,26 +9,26 @@ import java.util.Objects;
 
 @CustomType
 public final class DataBoxAccountCopyLogDetailsResponse {
-    /**
-     * Account name.
-     * 
-     */
+        /**
+         * @return Account name.
+         * 
+         */
     private final String accountName;
-    /**
-     * Indicates the type of job details.
-     * Expected value is &#39;DataBox&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of job details.
+         * Expected value is &#39;DataBox&#39;.
+         * 
+         */
     private final String copyLogDetailsType;
-    /**
-     * Link for copy logs.
-     * 
-     */
+        /**
+         * @return Link for copy logs.
+         * 
+         */
     private final String copyLogLink;
-    /**
-     * Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
-     * 
-     */
+        /**
+         * @return Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
+         * 
+         */
     private final String copyVerboseLogLink;
 
     @CustomType.Constructor
@@ -44,31 +44,31 @@ public final class DataBoxAccountCopyLogDetailsResponse {
     }
 
     /**
-     * Account name.
+     * @return Account name.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBox&#39;.
      * 
-    */
+     */
     public String copyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
-     * Link for copy logs.
+     * @return Link for copy logs.
      * 
-    */
+     */
     public String copyLogLink() {
         return this.copyLogLink;
     }
     /**
-     * Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
+     * @return Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
      * 
-    */
+     */
     public String copyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }

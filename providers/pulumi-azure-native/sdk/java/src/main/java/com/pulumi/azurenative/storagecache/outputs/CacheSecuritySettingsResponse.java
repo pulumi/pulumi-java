@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CacheSecuritySettingsResponse {
-    /**
-     * NFS access policies defined for this cache.
-     * 
-     */
+        /**
+         * @return NFS access policies defined for this cache.
+         * 
+         */
     private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class CacheSecuritySettingsResponse {
     }
 
     /**
-     * NFS access policies defined for this cache.
+     * @return NFS access policies defined for this cache.
      * 
-    */
+     */
     public List<NfsAccessPolicyResponse> accessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }

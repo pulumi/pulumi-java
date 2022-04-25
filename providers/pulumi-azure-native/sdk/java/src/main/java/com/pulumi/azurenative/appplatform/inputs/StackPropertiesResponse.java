@@ -25,6 +25,10 @@ public final class StackPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id of the ClusterStack.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class StackPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Version of the ClusterStack
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -65,11 +73,23 @@ public final class StackPropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new StackPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Id of the ClusterStack.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param version Version of the ClusterStack
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

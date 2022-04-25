@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureBlobFSLocationResponse {
-    /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object fileName;
-    /**
-     * Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object fileSystem;
-    /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
-     * 
-     */
+        /**
+         * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         */
     private final @Nullable Object folderPath;
-    /**
-     * Type of dataset storage location.
-     * Expected value is &#39;AzureBlobFSLocation&#39;.
-     * 
-     */
+        /**
+         * @return Type of dataset storage location.
+         * Expected value is &#39;AzureBlobFSLocation&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class AzureBlobFSLocationResponse {
     }
 
     /**
-     * Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
-     * Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+     * @return Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
-     * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-    */
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
-     * Type of dataset storage location.
+     * @return Type of dataset storage location.
      * Expected value is &#39;AzureBlobFSLocation&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

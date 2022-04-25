@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ActionListResponse {
-    /**
-     * The list of the Action Groups.
-     * 
-     */
+        /**
+         * @return The list of the Action Groups.
+         * 
+         */
     private final @Nullable List<ActionGroupResponse> actionGroups;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ActionListResponse {
     }
 
     /**
-     * The list of the Action Groups.
+     * @return The list of the Action Groups.
      * 
-    */
+     */
     public List<ActionGroupResponse> actionGroups() {
         return this.actionGroups == null ? List.of() : this.actionGroups;
     }

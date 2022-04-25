@@ -14,57 +14,57 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityAssessmentMetadataPropertiesResponse {
-    /**
-     * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
-     * 
-     */
+        /**
+         * @return BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+         * 
+         */
     private final String assessmentType;
     private final @Nullable List<String> categories;
-    /**
-     * Human readable description of the assessment
-     * 
-     */
+        /**
+         * @return Human readable description of the assessment
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * User friendly display name of the assessment
-     * 
-     */
+        /**
+         * @return User friendly display name of the assessment
+         * 
+         */
     private final String displayName;
-    /**
-     * The implementation effort required to remediate this assessment
-     * 
-     */
+        /**
+         * @return The implementation effort required to remediate this assessment
+         * 
+         */
     private final @Nullable String implementationEffort;
-    /**
-     * Describes the partner that created the assessment
-     * 
-     */
+        /**
+         * @return Describes the partner that created the assessment
+         * 
+         */
     private final @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData;
-    /**
-     * Azure resource ID of the policy definition that turns this assessment calculation on
-     * 
-     */
+        /**
+         * @return Azure resource ID of the policy definition that turns this assessment calculation on
+         * 
+         */
     private final String policyDefinitionId;
-    /**
-     * True if this assessment is in preview release status
-     * 
-     */
+        /**
+         * @return True if this assessment is in preview release status
+         * 
+         */
     private final @Nullable Boolean preview;
-    /**
-     * Human readable description of what you should do to mitigate this security issue
-     * 
-     */
+        /**
+         * @return Human readable description of what you should do to mitigate this security issue
+         * 
+         */
     private final @Nullable String remediationDescription;
-    /**
-     * The severity level of the assessment
-     * 
-     */
+        /**
+         * @return The severity level of the assessment
+         * 
+         */
     private final String severity;
     private final @Nullable List<String> threats;
-    /**
-     * The user impact of the assessment
-     * 
-     */
+        /**
+         * @return The user impact of the assessment
+         * 
+         */
     private final @Nullable String userImpact;
 
     @CustomType.Constructor
@@ -96,9 +96,9 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
     }
 
     /**
-     * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
+     * @return BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
      * 
-    */
+     */
     public String assessmentType() {
         return this.assessmentType;
     }
@@ -106,58 +106,58 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
         return this.categories == null ? List.of() : this.categories;
     }
     /**
-     * Human readable description of the assessment
+     * @return Human readable description of the assessment
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * User friendly display name of the assessment
+     * @return User friendly display name of the assessment
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * The implementation effort required to remediate this assessment
+     * @return The implementation effort required to remediate this assessment
      * 
-    */
+     */
     public Optional<String> implementationEffort() {
         return Optional.ofNullable(this.implementationEffort);
     }
     /**
-     * Describes the partner that created the assessment
+     * @return Describes the partner that created the assessment
      * 
-    */
+     */
     public Optional<SecurityAssessmentMetadataPartnerDataResponse> partnerData() {
         return Optional.ofNullable(this.partnerData);
     }
     /**
-     * Azure resource ID of the policy definition that turns this assessment calculation on
+     * @return Azure resource ID of the policy definition that turns this assessment calculation on
      * 
-    */
+     */
     public String policyDefinitionId() {
         return this.policyDefinitionId;
     }
     /**
-     * True if this assessment is in preview release status
+     * @return True if this assessment is in preview release status
      * 
-    */
+     */
     public Optional<Boolean> preview() {
         return Optional.ofNullable(this.preview);
     }
     /**
-     * Human readable description of what you should do to mitigate this security issue
+     * @return Human readable description of what you should do to mitigate this security issue
      * 
-    */
+     */
     public Optional<String> remediationDescription() {
         return Optional.ofNullable(this.remediationDescription);
     }
     /**
-     * The severity level of the assessment
+     * @return The severity level of the assessment
      * 
-    */
+     */
     public String severity() {
         return this.severity;
     }
@@ -165,9 +165,9 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
         return this.threats == null ? List.of() : this.threats;
     }
     /**
-     * The user impact of the assessment
+     * @return The user impact of the assessment
      * 
-    */
+     */
     public Optional<String> userImpact() {
         return Optional.ofNullable(this.userImpact);
     }

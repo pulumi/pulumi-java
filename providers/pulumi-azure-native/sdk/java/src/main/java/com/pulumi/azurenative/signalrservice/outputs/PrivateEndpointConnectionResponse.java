@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PrivateEndpointConnectionResponse {
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Private endpoint associated with the private endpoint connection
-     * 
-     */
+        /**
+         * @return Private endpoint associated with the private endpoint connection
+         * 
+         */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
-    /**
-     * Connection state
-     * 
-     */
+        /**
+         * @return Connection state
+         * 
+         */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * Provisioning state of the private endpoint connection
-     * 
-     */
+        /**
+         * @return Provisioning state of the private endpoint connection
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class PrivateEndpointConnectionResponse {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Private endpoint associated with the private endpoint connection
+     * @return Private endpoint associated with the private endpoint connection
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Connection state
+     * @return Connection state
      * 
-    */
+     */
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Provisioning state of the private endpoint connection
+     * @return Provisioning state of the private endpoint connection
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

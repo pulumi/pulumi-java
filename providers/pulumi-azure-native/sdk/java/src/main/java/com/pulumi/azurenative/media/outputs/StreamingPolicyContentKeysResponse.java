@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StreamingPolicyContentKeysResponse {
-    /**
-     * Default content key for an encryption scheme
-     * 
-     */
+        /**
+         * @return Default content key for an encryption scheme
+         * 
+         */
     private final @Nullable DefaultKeyResponse defaultKey;
-    /**
-     * Representing tracks needs separate content key
-     * 
-     */
+        /**
+         * @return Representing tracks needs separate content key
+         * 
+         */
     private final @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class StreamingPolicyContentKeysResponse {
     }
 
     /**
-     * Default content key for an encryption scheme
+     * @return Default content key for an encryption scheme
      * 
-    */
+     */
     public Optional<DefaultKeyResponse> defaultKey() {
         return Optional.ofNullable(this.defaultKey);
     }
     /**
-     * Representing tracks needs separate content key
+     * @return Representing tracks needs separate content key
      * 
-    */
+     */
     public List<StreamingPolicyContentKeyResponse> keyToTrackMappings() {
         return this.keyToTrackMappings == null ? List.of() : this.keyToTrackMappings;
     }

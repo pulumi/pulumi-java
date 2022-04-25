@@ -10,16 +10,16 @@ import java.util.Objects;
 
 @CustomType
 public final class TriggerDependencyReferenceResponse {
-    /**
-     * Referenced trigger.
-     * 
-     */
+        /**
+         * @return Referenced trigger.
+         * 
+         */
     private final TriggerReferenceResponse referenceTrigger;
-    /**
-     * The type of dependency reference.
-     * Expected value is &#39;TriggerDependencyReference&#39;.
-     * 
-     */
+        /**
+         * @return The type of dependency reference.
+         * Expected value is &#39;TriggerDependencyReference&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -31,17 +31,17 @@ public final class TriggerDependencyReferenceResponse {
     }
 
     /**
-     * Referenced trigger.
+     * @return Referenced trigger.
      * 
-    */
+     */
     public TriggerReferenceResponse referenceTrigger() {
         return this.referenceTrigger;
     }
     /**
-     * The type of dependency reference.
+     * @return The type of dependency reference.
      * Expected value is &#39;TriggerDependencyReference&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

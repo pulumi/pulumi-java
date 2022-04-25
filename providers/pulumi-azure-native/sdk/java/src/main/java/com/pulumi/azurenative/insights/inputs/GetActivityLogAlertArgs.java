@@ -19,6 +19,10 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
     @Import(name="activityLogAlertName", required=true)
     private String activityLogAlertName;
 
+    /**
+     * @return The name of the Activity Log Alert rule.
+     * 
+     */
     public String activityLogAlertName() {
         return this.activityLogAlertName;
     }
@@ -30,6 +34,10 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetActivityLogAlertArgs extends com.pulumi.resources.InvokeAr
             $ = new GetActivityLogAlertArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activityLogAlertName The name of the Activity Log Alert rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityLogAlertName(String activityLogAlertName) {
             $.activityLogAlertName = activityLogAlertName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

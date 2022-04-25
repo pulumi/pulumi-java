@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDeploymentScriptResult {
-    /**
-     * String Id used to locate any resource on Azure.
-     * 
-     */
+        /**
+         * @return String Id used to locate any resource on Azure.
+         * 
+         */
     private final String id;
-    /**
-     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
-     * 
-     */
+        /**
+         * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+         * 
+         */
     private final @Nullable ManagedServiceIdentityResponse identity;
-    /**
-     * Type of the script.
-     * 
-     */
+        /**
+         * @return Type of the script.
+         * 
+         */
     private final String kind;
-    /**
-     * The location of the ACI and the storage account for the deployment script.
-     * 
-     */
+        /**
+         * @return The location of the ACI and the storage account for the deployment script.
+         * 
+         */
     private final String location;
-    /**
-     * Name of this resource.
-     * 
-     */
+        /**
+         * @return Name of this resource.
+         * 
+         */
     private final String name;
-    /**
-     * The system metadata related to this resource.
-     * 
-     */
+        /**
+         * @return The system metadata related to this resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Type of this resource.
-     * 
-     */
+        /**
+         * @return Type of this resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class GetDeploymentScriptResult {
     }
 
     /**
-     * String Id used to locate any resource on Azure.
+     * @return String Id used to locate any resource on Azure.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
+     * @return Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
-    */
+     */
     public Optional<ManagedServiceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Type of the script.
+     * @return Type of the script.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The location of the ACI and the storage account for the deployment script.
+     * @return The location of the ACI and the storage account for the deployment script.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of this resource.
+     * @return Name of this resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The system metadata related to this resource.
+     * @return The system metadata related to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of this resource.
+     * @return Type of this resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

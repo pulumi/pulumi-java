@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PeeringServiceSkuResponse {
-    /**
-     * The name of the peering service SKU.
-     * 
-     */
+        /**
+         * @return The name of the peering service SKU.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class PeeringServiceSkuResponse {
     }
 
     /**
-     * The name of the peering service SKU.
+     * @return The name of the peering service SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

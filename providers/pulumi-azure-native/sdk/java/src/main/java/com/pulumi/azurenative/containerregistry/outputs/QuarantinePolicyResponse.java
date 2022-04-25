@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class QuarantinePolicyResponse {
-    /**
-     * The value that indicates whether the policy is enabled or not.
-     * 
-     */
+        /**
+         * @return The value that indicates whether the policy is enabled or not.
+         * 
+         */
     private final @Nullable String status;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class QuarantinePolicyResponse {
     }
 
     /**
-     * The value that indicates whether the policy is enabled or not.
+     * @return The value that indicates whether the policy is enabled or not.
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

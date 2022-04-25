@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VmGuestHealthAlertCriterionResponse {
-    /**
-     * Health states to alert on
-     * 
-     */
+        /**
+         * @return Health states to alert on
+         * 
+         */
     private final List<HealthStateResponse> healthStates;
-    /**
-     * Names of health monitor on which to define alert
-     * 
-     */
+        /**
+         * @return Names of health monitor on which to define alert
+         * 
+         */
     private final @Nullable List<String> monitorNames;
-    /**
-     * Names of health monitor type on which to define alert
-     * 
-     */
+        /**
+         * @return Names of health monitor type on which to define alert
+         * 
+         */
     private final @Nullable List<String> monitorTypes;
-    /**
-     * specifies the type of the alert criterion.
-     * Expected value is &#39;GuestVmHealth&#39;.
-     * 
-     */
+        /**
+         * @return specifies the type of the alert criterion.
+         * Expected value is &#39;GuestVmHealth&#39;.
+         * 
+         */
     private final String namespace;
 
     @CustomType.Constructor
@@ -47,31 +47,31 @@ public final class VmGuestHealthAlertCriterionResponse {
     }
 
     /**
-     * Health states to alert on
+     * @return Health states to alert on
      * 
-    */
+     */
     public List<HealthStateResponse> healthStates() {
         return this.healthStates;
     }
     /**
-     * Names of health monitor on which to define alert
+     * @return Names of health monitor on which to define alert
      * 
-    */
+     */
     public List<String> monitorNames() {
         return this.monitorNames == null ? List.of() : this.monitorNames;
     }
     /**
-     * Names of health monitor type on which to define alert
+     * @return Names of health monitor type on which to define alert
      * 
-    */
+     */
     public List<String> monitorTypes() {
         return this.monitorTypes == null ? List.of() : this.monitorTypes;
     }
     /**
-     * specifies the type of the alert criterion.
+     * @return specifies the type of the alert criterion.
      * Expected value is &#39;GuestVmHealth&#39;.
      * 
-    */
+     */
     public String namespace() {
         return this.namespace;
     }

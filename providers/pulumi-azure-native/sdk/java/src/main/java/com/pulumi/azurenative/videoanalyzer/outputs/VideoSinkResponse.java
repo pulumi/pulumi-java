@@ -15,36 +15,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VideoSinkResponse {
-    /**
-     * An array of upstream node references within the topology to be used as inputs for this node.
-     * 
-     */
+        /**
+         * @return An array of upstream node references within the topology to be used as inputs for this node.
+         * 
+         */
     private final List<NodeInputResponse> inputs;
-    /**
-     * Node name. Must be unique within the topology.
-     * 
-     */
+        /**
+         * @return Node name. Must be unique within the topology.
+         * 
+         */
     private final String name;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Optional video properties to be used in case a new video resource needs to be created on the service.
-     * 
-     */
+        /**
+         * @return Optional video properties to be used in case a new video resource needs to be created on the service.
+         * 
+         */
     private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
-    /**
-     * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
-     * 
-     */
+        /**
+         * @return Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
+         * 
+         */
     private final String videoName;
-    /**
-     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
-     * 
-     */
+        /**
+         * @return Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+         * 
+         */
     private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
     @CustomType.Constructor
@@ -64,45 +64,45 @@ public final class VideoSinkResponse {
     }
 
     /**
-     * An array of upstream node references within the topology to be used as inputs for this node.
+     * @return An array of upstream node references within the topology to be used as inputs for this node.
      * 
-    */
+     */
     public List<NodeInputResponse> inputs() {
         return this.inputs;
     }
     /**
-     * Node name. Must be unique within the topology.
+     * @return Node name. Must be unique within the topology.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.VideoSink&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Optional video properties to be used in case a new video resource needs to be created on the service.
+     * @return Optional video properties to be used in case a new video resource needs to be created on the service.
      * 
-    */
+     */
     public Optional<VideoCreationPropertiesResponse> videoCreationProperties() {
         return Optional.ofNullable(this.videoCreationProperties);
     }
     /**
-     * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
+     * @return Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
      * 
-    */
+     */
     public String videoName() {
         return this.videoName;
     }
     /**
-     * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+     * @return Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
      * 
-    */
+     */
     public Optional<VideoPublishingOptionsResponse> videoPublishingOptions() {
         return Optional.ofNullable(this.videoPublishingOptions);
     }

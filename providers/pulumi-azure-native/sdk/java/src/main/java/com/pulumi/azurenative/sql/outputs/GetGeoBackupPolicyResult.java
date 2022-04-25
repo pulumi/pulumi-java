@@ -9,40 +9,40 @@ import java.util.Objects;
 
 @CustomType
 public final class GetGeoBackupPolicyResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Kind of geo backup policy.  This is metadata used for the Azure portal experience.
-     * 
-     */
+        /**
+         * @return Kind of geo backup policy.  This is metadata used for the Azure portal experience.
+         * 
+         */
     private final String kind;
-    /**
-     * Backup policy location.
-     * 
-     */
+        /**
+         * @return Backup policy location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The state of the geo backup policy.
-     * 
-     */
+        /**
+         * @return The state of the geo backup policy.
+         * 
+         */
     private final String state;
-    /**
-     * The storage type of the geo backup policy.
-     * 
-     */
+        /**
+         * @return The storage type of the geo backup policy.
+         * 
+         */
     private final String storageType;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -64,51 +64,51 @@ public final class GetGeoBackupPolicyResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of geo backup policy.  This is metadata used for the Azure portal experience.
+     * @return Kind of geo backup policy.  This is metadata used for the Azure portal experience.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Backup policy location.
+     * @return Backup policy location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The state of the geo backup policy.
+     * @return The state of the geo backup policy.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * The storage type of the geo backup policy.
+     * @return The storage type of the geo backup policy.
      * 
-    */
+     */
     public String storageType() {
         return this.storageType;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

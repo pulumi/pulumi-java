@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ModuleAssetParameterResponse {
-    /**
-     * Definitions for nested interface parameters if this is a complex module parameter.
-     * 
-     */
+        /**
+         * @return Definitions for nested interface parameters if this is a complex module parameter.
+         * 
+         */
     private final @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
-    /**
-     * Parameter name.
-     * 
-     */
+        /**
+         * @return Parameter name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Parameter type.
-     * 
-     */
+        /**
+         * @return Parameter type.
+         * 
+         */
     private final @Nullable String parameterType;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ModuleAssetParameterResponse {
     }
 
     /**
-     * Definitions for nested interface parameters if this is a complex module parameter.
+     * @return Definitions for nested interface parameters if this is a complex module parameter.
      * 
-    */
+     */
     public Map<String,ModeValueInfoResponse> modeValuesInfo() {
         return this.modeValuesInfo == null ? Map.of() : this.modeValuesInfo;
     }
     /**
-     * Parameter name.
+     * @return Parameter name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Parameter type.
+     * @return Parameter type.
      * 
-    */
+     */
     public Optional<String> parameterType() {
         return Optional.ofNullable(this.parameterType);
     }

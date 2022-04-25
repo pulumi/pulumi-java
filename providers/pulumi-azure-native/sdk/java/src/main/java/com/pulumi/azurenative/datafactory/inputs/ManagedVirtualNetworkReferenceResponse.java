@@ -23,6 +23,10 @@ public final class ManagedVirtualNetworkReferenceResponse extends com.pulumi.res
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference ManagedVirtualNetwork name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -34,6 +38,10 @@ public final class ManagedVirtualNetworkReferenceResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Managed Virtual Network reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class ManagedVirtualNetworkReferenceResponse extends com.pulumi.res
             $ = new ManagedVirtualNetworkReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param referenceName Reference ManagedVirtualNetwork name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Managed Virtual Network reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

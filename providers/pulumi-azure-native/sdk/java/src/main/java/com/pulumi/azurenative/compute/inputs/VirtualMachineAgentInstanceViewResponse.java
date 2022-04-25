@@ -28,6 +28,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
     @Import(name="extensionHandlers")
     private @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
 
+    /**
+     * @return The virtual machine extension handler instance view.
+     * 
+     */
     public Optional<List<VirtualMachineExtensionHandlerInstanceViewResponse>> extensionHandlers() {
         return Optional.ofNullable(this.extensionHandlers);
     }
@@ -39,6 +43,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
     @Import(name="statuses")
     private @Nullable List<InstanceViewStatusResponse> statuses;
 
+    /**
+     * @return The resource status information.
+     * 
+     */
     public Optional<List<InstanceViewStatusResponse>> statuses() {
         return Optional.ofNullable(this.statuses);
     }
@@ -50,6 +58,10 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
     @Import(name="vmAgentVersion")
     private @Nullable String vmAgentVersion;
 
+    /**
+     * @return The VM Agent full version.
+     * 
+     */
     public Optional<String> vmAgentVersion() {
         return Optional.ofNullable(this.vmAgentVersion);
     }
@@ -80,24 +92,54 @@ public final class VirtualMachineAgentInstanceViewResponse extends com.pulumi.re
             $ = new VirtualMachineAgentInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extensionHandlers The virtual machine extension handler instance view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionHandlers(@Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers) {
             $.extensionHandlers = extensionHandlers;
             return this;
         }
 
+        /**
+         * @param extensionHandlers The virtual machine extension handler instance view.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionHandlers(VirtualMachineExtensionHandlerInstanceViewResponse... extensionHandlers) {
             return extensionHandlers(List.of(extensionHandlers));
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             $.statuses = statuses;
             return this;
         }
 
+        /**
+         * @param statuses The resource status information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
 
+        /**
+         * @param vmAgentVersion The VM Agent full version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmAgentVersion(@Nullable String vmAgentVersion) {
             $.vmAgentVersion = vmAgentVersion;
             return this;

@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureResourceErrorInfoResponse {
-    /**
-     * The error code.
-     * 
-     */
+        /**
+         * @return The error code.
+         * 
+         */
     private final String code;
-    /**
-     * The error details.
-     * 
-     */
+        /**
+         * @return The error details.
+         * 
+         */
     private final @Nullable List<AzureResourceErrorInfoResponse> details;
-    /**
-     * The error message.
-     * 
-     */
+        /**
+         * @return The error message.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class AzureResourceErrorInfoResponse {
     }
 
     /**
-     * The error code.
+     * @return The error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * The error details.
+     * @return The error details.
      * 
-    */
+     */
     public List<AzureResourceErrorInfoResponse> details() {
         return this.details == null ? List.of() : this.details;
     }
     /**
-     * The error message.
+     * @return The error message.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

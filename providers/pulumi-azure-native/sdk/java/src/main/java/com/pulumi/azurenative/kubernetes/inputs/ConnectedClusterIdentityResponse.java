@@ -24,6 +24,10 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -35,6 +39,10 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -46,6 +54,10 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -76,16 +88,34 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
             $ = new ConnectedClusterIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the connected cluster. The type &#39;SystemAssigned, includes a system created identity. The type &#39;None&#39; means no identity is assigned to the connected cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

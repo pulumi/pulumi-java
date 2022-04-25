@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ResourceLimitsResponse {
-    /**
-     * CPU limits in cores. At present, only full cores are supported.
-     * 
-     */
+        /**
+         * @return CPU limits in cores. At present, only full cores are supported.
+         * 
+         */
     private final @Nullable Double cpu;
-    /**
-     * The memory limit in GB.
-     * 
-     */
+        /**
+         * @return The memory limit in GB.
+         * 
+         */
     private final @Nullable Double memoryInGB;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ResourceLimitsResponse {
     }
 
     /**
-     * CPU limits in cores. At present, only full cores are supported.
+     * @return CPU limits in cores. At present, only full cores are supported.
      * 
-    */
+     */
     public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
-     * The memory limit in GB.
+     * @return The memory limit in GB.
      * 
-    */
+     */
     public Optional<Double> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }

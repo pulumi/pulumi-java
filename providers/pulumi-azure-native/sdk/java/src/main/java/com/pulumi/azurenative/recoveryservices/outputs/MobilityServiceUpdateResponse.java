@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MobilityServiceUpdateResponse {
-    /**
-     * The OS type.
-     * 
-     */
+        /**
+         * @return The OS type.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * The reboot status of the update - whether it is required or not.
-     * 
-     */
+        /**
+         * @return The reboot status of the update - whether it is required or not.
+         * 
+         */
     private final @Nullable String rebootStatus;
-    /**
-     * The version of the latest update.
-     * 
-     */
+        /**
+         * @return The version of the latest update.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class MobilityServiceUpdateResponse {
     }
 
     /**
-     * The OS type.
+     * @return The OS type.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * The reboot status of the update - whether it is required or not.
+     * @return The reboot status of the update - whether it is required or not.
      * 
-    */
+     */
     public Optional<String> rebootStatus() {
         return Optional.ofNullable(this.rebootStatus);
     }
     /**
-     * The version of the latest update.
+     * @return The version of the latest update.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

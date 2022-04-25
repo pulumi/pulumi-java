@@ -15,76 +15,76 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAFDOriginResult {
-    /**
-     * Resource reference to the Azure origin resource.
-     * 
-     */
+        /**
+         * @return Resource reference to the Azure origin resource.
+         * 
+         */
     private final @Nullable ResourceReferenceResponse azureOrigin;
     private final String deploymentStatus;
-    /**
-     * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
-     * 
-     */
+        /**
+         * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+         * 
+         */
     private final @Nullable String enabledState;
-    /**
-     * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
-     * 
-     */
+        /**
+         * @return The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
+         * 
+         */
     private final String hostName;
-    /**
-     * The value of the HTTP port. Must be between 1 and 65535.
-     * 
-     */
+        /**
+         * @return The value of the HTTP port. Must be between 1 and 65535.
+         * 
+         */
     private final @Nullable Integer httpPort;
-    /**
-     * The value of the HTTPS port. Must be between 1 and 65535.
-     * 
-     */
+        /**
+         * @return The value of the HTTPS port. Must be between 1 and 65535.
+         * 
+         */
     private final @Nullable Integer httpsPort;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
-     * 
-     */
+        /**
+         * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
+         * 
+         */
     private final @Nullable String originHostHeader;
-    /**
-     * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
-     * 
-     */
+        /**
+         * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+         * 
+         */
     private final @Nullable Integer priority;
-    /**
-     * Provisioning status
-     * 
-     */
+        /**
+         * @return Provisioning status
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The properties of the private link resource for private origin.
-     * 
-     */
+        /**
+         * @return The properties of the private link resource for private origin.
+         * 
+         */
     private final @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource;
-    /**
-     * Read only system data
-     * 
-     */
+        /**
+         * @return Read only system data
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
-     * 
-     */
+        /**
+         * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+         * 
+         */
     private final @Nullable Integer weight;
 
     @CustomType.Constructor
@@ -122,9 +122,9 @@ public final class GetAFDOriginResult {
     }
 
     /**
-     * Resource reference to the Azure origin resource.
+     * @return Resource reference to the Azure origin resource.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> azureOrigin() {
         return Optional.ofNullable(this.azureOrigin);
     }
@@ -132,93 +132,93 @@ public final class GetAFDOriginResult {
         return this.deploymentStatus;
     }
     /**
-     * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+     * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
+     * @return The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * The value of the HTTP port. Must be between 1 and 65535.
+     * @return The value of the HTTP port. Must be between 1 and 65535.
      * 
-    */
+     */
     public Optional<Integer> httpPort() {
         return Optional.ofNullable(this.httpPort);
     }
     /**
-     * The value of the HTTPS port. Must be between 1 and 65535.
+     * @return The value of the HTTPS port. Must be between 1 and 65535.
      * 
-    */
+     */
     public Optional<Integer> httpsPort() {
         return Optional.ofNullable(this.httpsPort);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
+     * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
-    */
+     */
     public Optional<String> originHostHeader() {
         return Optional.ofNullable(this.originHostHeader);
     }
     /**
-     * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
+     * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Provisioning status
+     * @return Provisioning status
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The properties of the private link resource for private origin.
+     * @return The properties of the private link resource for private origin.
      * 
-    */
+     */
     public Optional<SharedPrivateLinkResourcePropertiesResponse> sharedPrivateLinkResource() {
         return Optional.ofNullable(this.sharedPrivateLinkResource);
     }
     /**
-     * Read only system data
+     * @return Read only system data
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
+     * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

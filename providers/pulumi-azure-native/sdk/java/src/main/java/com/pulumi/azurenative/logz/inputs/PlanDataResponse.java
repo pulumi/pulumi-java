@@ -21,6 +21,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="billingCycle")
     private @Nullable String billingCycle;
 
+    /**
+     * @return different billing cycles like MONTHLY/WEEKLY. this could be enum
+     * 
+     */
     public Optional<String> billingCycle() {
         return Optional.ofNullable(this.billingCycle);
     }
@@ -32,6 +36,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="effectiveDate")
     private @Nullable String effectiveDate;
 
+    /**
+     * @return date when plan was applied
+     * 
+     */
     public Optional<String> effectiveDate() {
         return Optional.ofNullable(this.effectiveDate);
     }
@@ -43,6 +51,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="planDetails")
     private @Nullable String planDetails;
 
+    /**
+     * @return plan id as published by Logz
+     * 
+     */
     public Optional<String> planDetails() {
         return Optional.ofNullable(this.planDetails);
     }
@@ -54,6 +66,10 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="usageType")
     private @Nullable String usageType;
 
+    /**
+     * @return different usage type like PAYG/COMMITTED. this could be enum
+     * 
+     */
     public Optional<String> usageType() {
         return Optional.ofNullable(this.usageType);
     }
@@ -85,21 +101,45 @@ public final class PlanDataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PlanDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingCycle different billing cycles like MONTHLY/WEEKLY. this could be enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingCycle(@Nullable String billingCycle) {
             $.billingCycle = billingCycle;
             return this;
         }
 
+        /**
+         * @param effectiveDate date when plan was applied
+         * 
+         * @return builder
+         * 
+         */
         public Builder effectiveDate(@Nullable String effectiveDate) {
             $.effectiveDate = effectiveDate;
             return this;
         }
 
+        /**
+         * @param planDetails plan id as published by Logz
+         * 
+         * @return builder
+         * 
+         */
         public Builder planDetails(@Nullable String planDetails) {
             $.planDetails = planDetails;
             return this;
         }
 
+        /**
+         * @param usageType different usage type like PAYG/COMMITTED. this could be enum
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageType(@Nullable String usageType) {
             $.usageType = usageType;
             return this;

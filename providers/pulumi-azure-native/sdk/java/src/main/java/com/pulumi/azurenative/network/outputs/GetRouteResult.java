@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRouteResult {
-    /**
-     * The destination CIDR to which the route applies.
-     * 
-     */
+        /**
+         * @return The destination CIDR to which the route applies.
+         * 
+         */
     private final @Nullable String addressPrefix;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
-     * 
-     */
+        /**
+         * @return A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+         * 
+         */
     private final @Nullable Boolean hasBgpOverride;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
-     * 
-     */
+        /**
+         * @return The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+         * 
+         */
     private final @Nullable String nextHopIpAddress;
-    /**
-     * The type of Azure hop the packet should be sent to.
-     * 
-     */
+        /**
+         * @return The type of Azure hop the packet should be sent to.
+         * 
+         */
     private final String nextHopType;
-    /**
-     * The provisioning state of the route resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the route resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -81,65 +81,65 @@ public final class GetRouteResult {
     }
 
     /**
-     * The destination CIDR to which the route applies.
+     * @return The destination CIDR to which the route applies.
      * 
-    */
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
+     * @return A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
-    */
+     */
     public Optional<Boolean> hasBgpOverride() {
         return Optional.ofNullable(this.hasBgpOverride);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
+     * @return The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
-    */
+     */
     public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
     /**
-     * The type of Azure hop the packet should be sent to.
+     * @return The type of Azure hop the packet should be sent to.
      * 
-    */
+     */
     public String nextHopType() {
         return this.nextHopType;
     }
     /**
-     * The provisioning state of the route resource.
+     * @return The provisioning state of the route resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StepGroupResponse {
-    /**
-     * The list of step group names on which this step group depends on.
-     * 
-     */
+        /**
+         * @return The list of step group names on which this step group depends on.
+         * 
+         */
     private final @Nullable List<String> dependsOnStepGroups;
-    /**
-     * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
-     * 
-     */
+        /**
+         * @return The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+         * 
+         */
     private final String deploymentTargetId;
-    /**
-     * The name of the step group.
-     * 
-     */
+        /**
+         * @return The name of the step group.
+         * 
+         */
     private final String name;
-    /**
-     * The list of steps to be run after deploying the target.
-     * 
-     */
+        /**
+         * @return The list of steps to be run after deploying the target.
+         * 
+         */
     private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
-    /**
-     * The list of steps to be run before deploying the target.
-     * 
-     */
+        /**
+         * @return The list of steps to be run before deploying the target.
+         * 
+         */
     private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class StepGroupResponse {
     }
 
     /**
-     * The list of step group names on which this step group depends on.
+     * @return The list of step group names on which this step group depends on.
      * 
-    */
+     */
     public List<String> dependsOnStepGroups() {
         return this.dependsOnStepGroups == null ? List.of() : this.dependsOnStepGroups;
     }
     /**
-     * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
+     * @return The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
      * 
-    */
+     */
     public String deploymentTargetId() {
         return this.deploymentTargetId;
     }
     /**
-     * The name of the step group.
+     * @return The name of the step group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of steps to be run after deploying the target.
+     * @return The list of steps to be run after deploying the target.
      * 
-    */
+     */
     public List<PrePostStepResponse> postDeploymentSteps() {
         return this.postDeploymentSteps == null ? List.of() : this.postDeploymentSteps;
     }
     /**
-     * The list of steps to be run before deploying the target.
+     * @return The list of steps to be run before deploying the target.
      * 
-    */
+     */
     public List<PrePostStepResponse> preDeploymentSteps() {
         return this.preDeploymentSteps == null ? List.of() : this.preDeploymentSteps;
     }

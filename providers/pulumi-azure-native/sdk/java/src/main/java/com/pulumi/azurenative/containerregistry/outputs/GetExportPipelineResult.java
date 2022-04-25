@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetExportPipelineResult {
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The identity of the export pipeline.
-     * 
-     */
+        /**
+         * @return The identity of the export pipeline.
+         * 
+         */
     private final @Nullable IdentityPropertiesResponse identity;
-    /**
-     * The location of the export pipeline.
-     * 
-     */
+        /**
+         * @return The location of the export pipeline.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The list of all options configured for the pipeline.
-     * 
-     */
+        /**
+         * @return The list of all options configured for the pipeline.
+         * 
+         */
     private final @Nullable List<String> options;
-    /**
-     * The provisioning state of the pipeline at the time the operation was called.
-     * 
-     */
+        /**
+         * @return The provisioning state of the pipeline at the time the operation was called.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The target properties of the export pipeline.
-     * 
-     */
+        /**
+         * @return The target properties of the export pipeline.
+         * 
+         */
     private final ExportPipelineTargetPropertiesResponse target;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -84,65 +84,65 @@ public final class GetExportPipelineResult {
     }
 
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the export pipeline.
+     * @return The identity of the export pipeline.
      * 
-    */
+     */
     public Optional<IdentityPropertiesResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The location of the export pipeline.
+     * @return The location of the export pipeline.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of all options configured for the pipeline.
+     * @return The list of all options configured for the pipeline.
      * 
-    */
+     */
     public List<String> options() {
         return this.options == null ? List.of() : this.options;
     }
     /**
-     * The provisioning state of the pipeline at the time the operation was called.
+     * @return The provisioning state of the pipeline at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The target properties of the export pipeline.
+     * @return The target properties of the export pipeline.
      * 
-    */
+     */
     public ExportPipelineTargetPropertiesResponse target() {
         return this.target;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

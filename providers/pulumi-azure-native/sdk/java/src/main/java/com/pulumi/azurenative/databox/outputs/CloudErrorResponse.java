@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CloudErrorResponse {
-    /**
-     * Cloud error additional info.
-     * 
-     */
+        /**
+         * @return Cloud error additional info.
+         * 
+         */
     private final List<AdditionalErrorInfoResponse> additionalInfo;
-    /**
-     * Cloud error code.
-     * 
-     */
+        /**
+         * @return Cloud error code.
+         * 
+         */
     private final @Nullable String code;
-    /**
-     * Cloud error details.
-     * 
-     */
+        /**
+         * @return Cloud error details.
+         * 
+         */
     private final List<CloudErrorResponse> details;
-    /**
-     * Cloud error message.
-     * 
-     */
+        /**
+         * @return Cloud error message.
+         * 
+         */
     private final @Nullable String message;
-    /**
-     * Cloud error target.
-     * 
-     */
+        /**
+         * @return Cloud error target.
+         * 
+         */
     private final @Nullable String target;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class CloudErrorResponse {
     }
 
     /**
-     * Cloud error additional info.
+     * @return Cloud error additional info.
      * 
-    */
+     */
     public List<AdditionalErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
     }
     /**
-     * Cloud error code.
+     * @return Cloud error code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Cloud error details.
+     * @return Cloud error details.
      * 
-    */
+     */
     public List<CloudErrorResponse> details() {
         return this.details;
     }
     /**
-     * Cloud error message.
+     * @return Cloud error message.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Cloud error target.
+     * @return Cloud error target.
      * 
-    */
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }

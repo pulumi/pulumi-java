@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IotDpsSkuInfoResponse {
-    /**
-     * The number of units to provision
-     * 
-     */
+        /**
+         * @return The number of units to provision
+         * 
+         */
     private final @Nullable Double capacity;
-    /**
-     * Sku name.
-     * 
-     */
+        /**
+         * @return Sku name.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Pricing tier name of the provisioning service.
-     * 
-     */
+        /**
+         * @return Pricing tier name of the provisioning service.
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class IotDpsSkuInfoResponse {
     }
 
     /**
-     * The number of units to provision
+     * @return The number of units to provision
      * 
-    */
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * Sku name.
+     * @return Sku name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Pricing tier name of the provisioning service.
+     * @return Pricing tier name of the provisioning service.
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

@@ -34,6 +34,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="availabilityInformation", required=true)
     private AvailabilityInformationResponse availabilityInformation;
 
+    /**
+     * @return Availability information of the product system.
+     * 
+     */
     public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
     }
@@ -45,6 +49,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="costInformation", required=true)
     private CostInformationResponse costInformation;
 
+    /**
+     * @return Cost information for the product system.
+     * 
+     */
     public CostInformationResponse costInformation() {
         return this.costInformation;
     }
@@ -56,6 +64,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private DescriptionResponse description;
 
+    /**
+     * @return Description related to the product system.
+     * 
+     */
     public DescriptionResponse description() {
         return this.description;
     }
@@ -67,6 +79,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display Name for the product system.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -78,6 +94,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filterableProperties", required=true)
     private List<FilterablePropertyResponse> filterableProperties;
 
+    /**
+     * @return list of filters supported for a product
+     * 
+     */
     public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
     }
@@ -89,6 +109,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hierarchyInformation", required=true)
     private HierarchyInformationResponse hierarchyInformation;
 
+    /**
+     * @return Hierarchy information of a product.
+     * 
+     */
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
@@ -100,6 +124,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="imageInformation", required=true)
     private List<ImageInformationResponse> imageInformation;
 
+    /**
+     * @return Image information for the product system.
+     * 
+     */
     public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
     }
@@ -111,6 +139,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="productLines", required=true)
     private List<ProductLineResponse> productLines;
 
+    /**
+     * @return List of product lines supported in the product family
+     * 
+     */
     public List<ProductLineResponse> productLines() {
         return this.productLines;
     }
@@ -122,6 +154,10 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceProviderDetails")
     private @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
+    /**
+     * @return Contains details related to resource provider
+     * 
+     */
     public Optional<List<ResourceProviderDetailsResponse>> resourceProviderDetails() {
         return Optional.ofNullable(this.resourceProviderDetails);
     }
@@ -158,63 +194,141 @@ public final class ProductFamilyResponse extends com.pulumi.resources.InvokeArgs
             $ = new ProductFamilyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityInformation Availability information of the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
             $.availabilityInformation = availabilityInformation;
             return this;
         }
 
+        /**
+         * @param costInformation Cost information for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder costInformation(CostInformationResponse costInformation) {
             $.costInformation = costInformation;
             return this;
         }
 
+        /**
+         * @param description Description related to the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(DescriptionResponse description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Display Name for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param filterableProperties list of filters supported for a product
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             $.filterableProperties = filterableProperties;
             return this;
         }
 
+        /**
+         * @param filterableProperties list of filters supported for a product
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterableProperties(FilterablePropertyResponse... filterableProperties) {
             return filterableProperties(List.of(filterableProperties));
         }
 
+        /**
+         * @param hierarchyInformation Hierarchy information of a product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             $.hierarchyInformation = hierarchyInformation;
             return this;
         }
 
+        /**
+         * @param imageInformation Image information for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             $.imageInformation = imageInformation;
             return this;
         }
 
+        /**
+         * @param imageInformation Image information for the product system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageInformation(ImageInformationResponse... imageInformation) {
             return imageInformation(List.of(imageInformation));
         }
 
+        /**
+         * @param productLines List of product lines supported in the product family
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLines(List<ProductLineResponse> productLines) {
             $.productLines = productLines;
             return this;
         }
 
+        /**
+         * @param productLines List of product lines supported in the product family
+         * 
+         * @return builder
+         * 
+         */
         public Builder productLines(ProductLineResponse... productLines) {
             return productLines(List.of(productLines));
         }
 
+        /**
+         * @param resourceProviderDetails Contains details related to resource provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderDetails(@Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
             $.resourceProviderDetails = resourceProviderDetails;
             return this;
         }
 
+        /**
+         * @param resourceProviderDetails Contains details related to resource provider
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderDetails(ResourceProviderDetailsResponse... resourceProviderDetails) {
             return resourceProviderDetails(List.of(resourceProviderDetails));
         }

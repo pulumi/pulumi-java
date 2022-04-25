@@ -13,45 +13,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetConnectionResult {
-    /**
-     * Gets or sets the connectionType of the connection.
-     * 
-     */
+        /**
+         * @return Gets or sets the connectionType of the connection.
+         * 
+         */
     private final @Nullable ConnectionTypeAssociationPropertyResponse connectionType;
-    /**
-     * Gets the creation time.
-     * 
-     */
+        /**
+         * @return Gets the creation time.
+         * 
+         */
     private final String creationTime;
-    /**
-     * Gets or sets the description.
-     * 
-     */
+        /**
+         * @return Gets or sets the description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Gets the field definition values of the connection.
-     * 
-     */
+        /**
+         * @return Gets the field definition values of the connection.
+         * 
+         */
     private final Map<String,String> fieldDefinitionValues;
-    /**
-     * Fully qualified resource Id for the resource
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource
+         * 
+         */
     private final String id;
-    /**
-     * Gets the last modified time.
-     * 
-     */
+        /**
+         * @return Gets the last modified time.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -75,58 +75,58 @@ public final class GetConnectionResult {
     }
 
     /**
-     * Gets or sets the connectionType of the connection.
+     * @return Gets or sets the connectionType of the connection.
      * 
-    */
+     */
     public Optional<ConnectionTypeAssociationPropertyResponse> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
-     * Gets the creation time.
+     * @return Gets the creation time.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Gets the field definition values of the connection.
+     * @return Gets the field definition values of the connection.
      * 
-    */
+     */
     public Map<String,String> fieldDefinitionValues() {
         return this.fieldDefinitionValues;
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the last modified time.
+     * @return Gets the last modified time.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

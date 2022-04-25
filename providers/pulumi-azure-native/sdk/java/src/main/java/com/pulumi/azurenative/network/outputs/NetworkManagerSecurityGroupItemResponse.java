@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NetworkManagerSecurityGroupItemResponse {
-    /**
-     * Network manager group Id.
-     * 
-     */
+        /**
+         * @return Network manager group Id.
+         * 
+         */
     private final @Nullable String networkGroupId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class NetworkManagerSecurityGroupItemResponse {
     }
 
     /**
-     * Network manager group Id.
+     * @return Network manager group Id.
      * 
-    */
+     */
     public Optional<String> networkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }

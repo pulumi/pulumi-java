@@ -12,36 +12,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AacAudioResponse {
-    /**
-     * The bitrate, in bits per second, of the output encoded audio.
-     * 
-     */
+        /**
+         * @return The bitrate, in bits per second, of the output encoded audio.
+         * 
+         */
     private final @Nullable Integer bitrate;
-    /**
-     * The number of channels in the audio.
-     * 
-     */
+        /**
+         * @return The number of channels in the audio.
+         * 
+         */
     private final @Nullable Integer channels;
-    /**
-     * An optional label for the codec. The label can be used to control muxing behavior.
-     * 
-     */
+        /**
+         * @return An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         */
     private final @Nullable String label;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * The encoding profile to be used when encoding audio with AAC.
-     * 
-     */
+        /**
+         * @return The encoding profile to be used when encoding audio with AAC.
+         * 
+         */
     private final @Nullable String profile;
-    /**
-     * The sampling rate to use for encoding in hertz.
-     * 
-     */
+        /**
+         * @return The sampling rate to use for encoding in hertz.
+         * 
+         */
     private final @Nullable Integer samplingRate;
 
     @CustomType.Constructor
@@ -61,45 +61,45 @@ public final class AacAudioResponse {
     }
 
     /**
-     * The bitrate, in bits per second, of the output encoded audio.
+     * @return The bitrate, in bits per second, of the output encoded audio.
      * 
-    */
+     */
     public Optional<Integer> bitrate() {
         return Optional.ofNullable(this.bitrate);
     }
     /**
-     * The number of channels in the audio.
+     * @return The number of channels in the audio.
      * 
-    */
+     */
     public Optional<Integer> channels() {
         return Optional.ofNullable(this.channels);
     }
     /**
-     * An optional label for the codec. The label can be used to control muxing behavior.
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
      * 
-    */
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The encoding profile to be used when encoding audio with AAC.
+     * @return The encoding profile to be used when encoding audio with AAC.
      * 
-    */
+     */
     public Optional<String> profile() {
         return Optional.ofNullable(this.profile);
     }
     /**
-     * The sampling rate to use for encoding in hertz.
+     * @return The sampling rate to use for encoding in hertz.
      * 
-    */
+     */
     public Optional<Integer> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }

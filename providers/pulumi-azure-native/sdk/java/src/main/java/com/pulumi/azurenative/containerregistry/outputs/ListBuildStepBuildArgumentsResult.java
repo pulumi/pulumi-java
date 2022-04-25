@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListBuildStepBuildArgumentsResult {
-    /**
-     * The URI that can be used to request the next set of paged results.
-     * 
-     */
+        /**
+         * @return The URI that can be used to request the next set of paged results.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * The collection value.
-     * 
-     */
+        /**
+         * @return The collection value.
+         * 
+         */
     private final @Nullable List<BuildArgumentResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ListBuildStepBuildArgumentsResult {
     }
 
     /**
-     * The URI that can be used to request the next set of paged results.
+     * @return The URI that can be used to request the next set of paged results.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * The collection value.
+     * @return The collection value.
      * 
-    */
+     */
     public List<BuildArgumentResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

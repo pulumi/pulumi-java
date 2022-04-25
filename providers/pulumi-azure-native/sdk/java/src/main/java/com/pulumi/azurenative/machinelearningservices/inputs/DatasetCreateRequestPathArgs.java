@@ -30,6 +30,10 @@ public final class DatasetCreateRequestPathArgs extends com.pulumi.resources.Res
     @Import(name="httpUrl")
     private @Nullable Output<String> httpUrl;
 
+    /**
+     * @return The Http URL.
+     * 
+     */
     public Optional<Output<String>> httpUrl() {
         return Optional.ofNullable(this.httpUrl);
     }
@@ -68,11 +72,23 @@ public final class DatasetCreateRequestPathArgs extends com.pulumi.resources.Res
             return dataPath(Output.of(dataPath));
         }
 
+        /**
+         * @param httpUrl The Http URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpUrl(@Nullable Output<String> httpUrl) {
             $.httpUrl = httpUrl;
             return this;
         }
 
+        /**
+         * @param httpUrl The Http URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpUrl(String httpUrl) {
             return httpUrl(Output.of(httpUrl));
         }

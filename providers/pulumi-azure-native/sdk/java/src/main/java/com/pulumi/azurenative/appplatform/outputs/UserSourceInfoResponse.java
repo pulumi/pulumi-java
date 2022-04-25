@@ -11,26 +11,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserSourceInfoResponse {
-    /**
-     * Selector for the artifact to be used for the deployment for multi-module projects. This should be
-     * the relative path to the target module/project.
-     * 
-     */
+        /**
+         * @return Selector for the artifact to be used for the deployment for multi-module projects. This should be
+         * the relative path to the target module/project.
+         * 
+         */
     private final @Nullable String artifactSelector;
-    /**
-     * Relative path of the storage which stores the source
-     * 
-     */
+        /**
+         * @return Relative path of the storage which stores the source
+         * 
+         */
     private final @Nullable String relativePath;
-    /**
-     * Type of the source uploaded
-     * 
-     */
+        /**
+         * @return Type of the source uploaded
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * Version of the source
-     * 
-     */
+        /**
+         * @return Version of the source
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -46,31 +46,31 @@ public final class UserSourceInfoResponse {
     }
 
     /**
-     * Selector for the artifact to be used for the deployment for multi-module projects. This should be
+     * @return Selector for the artifact to be used for the deployment for multi-module projects. This should be
      * the relative path to the target module/project.
      * 
-    */
+     */
     public Optional<String> artifactSelector() {
         return Optional.ofNullable(this.artifactSelector);
     }
     /**
-     * Relative path of the storage which stores the source
+     * @return Relative path of the storage which stores the source
      * 
-    */
+     */
     public Optional<String> relativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
-     * Type of the source uploaded
+     * @return Type of the source uploaded
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * Version of the source
+     * @return Version of the source
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

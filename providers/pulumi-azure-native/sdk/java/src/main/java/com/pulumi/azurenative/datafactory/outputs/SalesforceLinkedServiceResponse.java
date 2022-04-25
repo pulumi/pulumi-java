@@ -19,61 +19,61 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SalesforceLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object apiVersion;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The URL of Salesforce instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The URL of Salesforce instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object environmentUrl;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password for Basic authentication of the Salesforce instance.
-     * 
-     */
+        /**
+         * @return The password for Basic authentication of the Salesforce instance.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The security token is optional to remotely access Salesforce instance.
-     * 
-     */
+        /**
+         * @return The security token is optional to remotely access Salesforce instance.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;Salesforce&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;Salesforce&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object username;
 
     @CustomType.Constructor
@@ -103,80 +103,80 @@ public final class SalesforceLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
+     * @return The Salesforce API version used in ADF. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The URL of Salesforce instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
+     * @return The URL of Salesforce instance. Default is &#39;https://login.salesforce.com&#39;. To copy data from sandbox, specify &#39;https://test.salesforce.com&#39;. To copy data from custom domain, specify, for example, &#39;https://[domain].my.salesforce.com&#39;. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> environmentUrl() {
         return Optional.ofNullable(this.environmentUrl);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password for Basic authentication of the Salesforce instance.
+     * @return The password for Basic authentication of the Salesforce instance.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The security token is optional to remotely access Salesforce instance.
+     * @return The security token is optional to remotely access Salesforce instance.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> securityToken() {
         return Optional.ofNullable(this.securityToken);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Salesforce&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
+     * @return The username for Basic authentication of the Salesforce instance. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }

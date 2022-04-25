@@ -11,46 +11,46 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCloudEdgeManagementRoleResult {
-    /**
-     * Edge Profile of the resource
-     * 
-     */
+        /**
+         * @return Edge Profile of the resource
+         * 
+         */
     private final EdgeProfileResponse edgeProfile;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * Role type.
-     * Expected value is &#39;CloudEdgeManagement&#39;.
-     * 
-     */
+        /**
+         * @return Role type.
+         * Expected value is &#39;CloudEdgeManagement&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Local Edge Management Status
-     * 
-     */
+        /**
+         * @return Local Edge Management Status
+         * 
+         */
     private final String localManagementStatus;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * Role status.
-     * 
-     */
+        /**
+         * @return Role status.
+         * 
+         */
     private final String roleStatus;
-    /**
-     * Role configured on ASE resource
-     * 
-     */
+        /**
+         * @return Role configured on ASE resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -74,59 +74,59 @@ public final class GetCloudEdgeManagementRoleResult {
     }
 
     /**
-     * Edge Profile of the resource
+     * @return Edge Profile of the resource
      * 
-    */
+     */
     public EdgeProfileResponse edgeProfile() {
         return this.edgeProfile;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Role type.
+     * @return Role type.
      * Expected value is &#39;CloudEdgeManagement&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Local Edge Management Status
+     * @return Local Edge Management Status
      * 
-    */
+     */
     public String localManagementStatus() {
         return this.localManagementStatus;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Role status.
+     * @return Role status.
      * 
-    */
+     */
     public String roleStatus() {
         return this.roleStatus;
     }
     /**
-     * Role configured on ASE resource
+     * @return Role configured on ASE resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -15,30 +15,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RulesEngineRuleResponse {
-    /**
-     * Actions to perform on the request and response if all of the match conditions are met.
-     * 
-     */
+        /**
+         * @return Actions to perform on the request and response if all of the match conditions are met.
+         * 
+         */
     private final RulesEngineActionResponse action;
-    /**
-     * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
-     * 
-     */
+        /**
+         * @return A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+         * 
+         */
     private final @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
-    /**
-     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
-     * 
-     */
+        /**
+         * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+         * 
+         */
     private final @Nullable String matchProcessingBehavior;
-    /**
-     * A name to refer to this specific rule.
-     * 
-     */
+        /**
+         * @return A name to refer to this specific rule.
+         * 
+         */
     private final String name;
-    /**
-     * A priority assigned to this rule.
-     * 
-     */
+        /**
+         * @return A priority assigned to this rule.
+         * 
+         */
     private final Integer priority;
 
     @CustomType.Constructor
@@ -56,37 +56,37 @@ public final class RulesEngineRuleResponse {
     }
 
     /**
-     * Actions to perform on the request and response if all of the match conditions are met.
+     * @return Actions to perform on the request and response if all of the match conditions are met.
      * 
-    */
+     */
     public RulesEngineActionResponse action() {
         return this.action;
     }
     /**
-     * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
+     * @return A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
      * 
-    */
+     */
     public List<RulesEngineMatchConditionResponse> matchConditions() {
         return this.matchConditions == null ? List.of() : this.matchConditions;
     }
     /**
-     * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
+     * @return If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
-    */
+     */
     public Optional<String> matchProcessingBehavior() {
         return Optional.ofNullable(this.matchProcessingBehavior);
     }
     /**
-     * A name to refer to this specific rule.
+     * @return A name to refer to this specific rule.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A priority assigned to this rule.
+     * @return A priority assigned to this rule.
      * 
-    */
+     */
     public Integer priority() {
         return this.priority;
     }

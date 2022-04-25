@@ -23,6 +23,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of Cognitive Services account.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -34,6 +38,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentName")
     private @Nullable Output<String> deploymentName;
 
+    /**
+     * @return The name of the deployment associated with the Cognitive Services Account
+     * 
+     */
     public Optional<Output<String>> deploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
@@ -45,6 +53,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<DeploymentPropertiesArgs> properties;
 
+    /**
+     * @return Properties of Cognitive Services account deployment.
+     * 
+     */
     public Optional<Output<DeploymentPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param deploymentName The name of the deployment associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param deploymentName The name of the deployment associated with the Cognitive Services Account
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             return deploymentName(Output.of(deploymentName));
         }
 
+        /**
+         * @param properties Properties of Cognitive Services account deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<DeploymentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of Cognitive Services account deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(DeploymentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

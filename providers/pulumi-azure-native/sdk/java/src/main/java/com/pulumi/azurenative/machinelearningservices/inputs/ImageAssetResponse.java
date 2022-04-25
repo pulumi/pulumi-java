@@ -26,6 +26,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The Asset Id.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="mimeType")
     private @Nullable String mimeType;
 
+    /**
+     * @return The mime type.
+     * 
+     */
     public Optional<String> mimeType() {
         return Optional.ofNullable(this.mimeType);
     }
@@ -48,6 +56,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="unpack")
     private @Nullable Boolean unpack;
 
+    /**
+     * @return Whether the Asset is unpacked.
+     * 
+     */
     public Optional<Boolean> unpack() {
         return Optional.ofNullable(this.unpack);
     }
@@ -59,6 +71,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The Url of the Asset.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -90,21 +106,45 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ImageAssetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The Asset Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param mimeType The mime type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mimeType(@Nullable String mimeType) {
             $.mimeType = mimeType;
             return this;
         }
 
+        /**
+         * @param unpack Whether the Asset is unpacked.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unpack(@Nullable Boolean unpack) {
             $.unpack = unpack;
             return this;
         }
 
+        /**
+         * @param url The Url of the Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

@@ -22,6 +22,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -33,6 +37,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="hybridRunbookWorkerGroupName", required=true)
     private Output<String> hybridRunbookWorkerGroupName;
 
+    /**
+     * @return The hybrid runbook worker group name
+     * 
+     */
     public Output<String> hybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
     }
@@ -44,6 +52,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="hybridRunbookWorkerId")
     private @Nullable Output<String> hybridRunbookWorkerId;
 
+    /**
+     * @return The hybrid runbook worker id
+     * 
+     */
     public Optional<Output<String>> hybridRunbookWorkerId() {
         return Optional.ofNullable(this.hybridRunbookWorkerId);
     }
@@ -55,6 +67,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,6 +82,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -77,6 +97,10 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
     @Import(name="vmResourceId")
     private @Nullable Output<String> vmResourceId;
 
+    /**
+     * @return Azure Resource Manager Id for a virtual machine.
+     * 
+     */
     public Optional<Output<String>> vmResourceId() {
         return Optional.ofNullable(this.vmResourceId);
     }
@@ -110,56 +134,128 @@ public final class HybridRunbookWorkerArgs extends com.pulumi.resources.Resource
             $ = new HybridRunbookWorkerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param hybridRunbookWorkerGroupName The hybrid runbook worker group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerGroupName(Output<String> hybridRunbookWorkerGroupName) {
             $.hybridRunbookWorkerGroupName = hybridRunbookWorkerGroupName;
             return this;
         }
 
+        /**
+         * @param hybridRunbookWorkerGroupName The hybrid runbook worker group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
             return hybridRunbookWorkerGroupName(Output.of(hybridRunbookWorkerGroupName));
         }
 
+        /**
+         * @param hybridRunbookWorkerId The hybrid runbook worker id
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerId(@Nullable Output<String> hybridRunbookWorkerId) {
             $.hybridRunbookWorkerId = hybridRunbookWorkerId;
             return this;
         }
 
+        /**
+         * @param hybridRunbookWorkerId The hybrid runbook worker id
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridRunbookWorkerId(String hybridRunbookWorkerId) {
             return hybridRunbookWorkerId(Output.of(hybridRunbookWorkerId));
         }
 
+        /**
+         * @param name Gets or sets the name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param vmResourceId Azure Resource Manager Id for a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
             $.vmResourceId = vmResourceId;
             return this;
         }
 
+        /**
+         * @param vmResourceId Azure Resource Manager Id for a virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmResourceId(String vmResourceId) {
             return vmResourceId(Output.of(vmResourceId));
         }

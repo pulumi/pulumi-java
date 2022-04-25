@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
-     * 
-     */
+        /**
+         * @return The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+         * 
+         */
     private final Integer capacity;
-    /**
-     * The name of this SKU.
-     * 
-     */
+        /**
+         * @return The name of this SKU.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class SkuResponse {
     }
 
     /**
-     * The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+     * @return The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
      * 
-    */
+     */
     public Integer capacity() {
         return this.capacity;
     }
     /**
-     * The name of this SKU.
+     * @return The name of this SKU.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

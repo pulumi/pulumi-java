@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RelationshipTypeFieldMappingResponse {
-    /**
-     * Specifies the fieldName in profile.
-     * 
-     */
+        /**
+         * @return Specifies the fieldName in profile.
+         * 
+         */
     private final String profileFieldName;
-    /**
-     * Specifies the KeyProperty (from StrongId) of the related profile.
-     * 
-     */
+        /**
+         * @return Specifies the KeyProperty (from StrongId) of the related profile.
+         * 
+         */
     private final String relatedProfileKeyProperty;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RelationshipTypeFieldMappingResponse {
     }
 
     /**
-     * Specifies the fieldName in profile.
+     * @return Specifies the fieldName in profile.
      * 
-    */
+     */
     public String profileFieldName() {
         return this.profileFieldName;
     }
     /**
-     * Specifies the KeyProperty (from StrongId) of the related profile.
+     * @return Specifies the KeyProperty (from StrongId) of the related profile.
      * 
-    */
+     */
     public String relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }

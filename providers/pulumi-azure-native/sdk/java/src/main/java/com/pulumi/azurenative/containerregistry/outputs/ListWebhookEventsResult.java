@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListWebhookEventsResult {
-    /**
-     * The URI that can be used to request the next list of events.
-     * 
-     */
+        /**
+         * @return The URI that can be used to request the next list of events.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
-     * 
-     */
+        /**
+         * @return The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
+         * 
+         */
     private final @Nullable List<EventResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ListWebhookEventsResult {
     }
 
     /**
-     * The URI that can be used to request the next list of events.
+     * @return The URI that can be used to request the next list of events.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
+     * @return The list of events. Since this list may be incomplete, the nextLink field should be used to request the next list of events.
      * 
-    */
+     */
     public List<EventResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

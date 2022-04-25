@@ -11,31 +11,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VirtualMachineResourceSettingsResponse {
-    /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
-     * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
-     * 
-     */
+        /**
+         * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
+         * 
+         */
     private final String resourceType;
-    /**
-     * Gets or sets the target availability set id for virtual machines not in an availability set at source.
-     * 
-     */
+        /**
+         * @return Gets or sets the target availability set id for virtual machines not in an availability set at source.
+         * 
+         */
     private final @Nullable String targetAvailabilitySetId;
-    /**
-     * Gets or sets the target availability zone.
-     * 
-     */
+        /**
+         * @return Gets or sets the target availability zone.
+         * 
+         */
     private final @Nullable String targetAvailabilityZone;
-    /**
-     * Gets or sets the target Resource name.
-     * 
-     */
+        /**
+         * @return Gets or sets the target Resource name.
+         * 
+         */
     private final String targetResourceName;
-    /**
-     * Gets or sets the target virtual machine size.
-     * 
-     */
+        /**
+         * @return Gets or sets the target virtual machine size.
+         * 
+         */
     private final @Nullable String targetVmSize;
 
     @CustomType.Constructor
@@ -53,38 +53,38 @@ public final class VirtualMachineResourceSettingsResponse {
     }
 
     /**
-     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
      * Expected value is &#39;Microsoft.Compute/virtualMachines&#39;.
      * 
-    */
+     */
     public String resourceType() {
         return this.resourceType;
     }
     /**
-     * Gets or sets the target availability set id for virtual machines not in an availability set at source.
+     * @return Gets or sets the target availability set id for virtual machines not in an availability set at source.
      * 
-    */
+     */
     public Optional<String> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
     /**
-     * Gets or sets the target availability zone.
+     * @return Gets or sets the target availability zone.
      * 
-    */
+     */
     public Optional<String> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
     /**
-     * Gets or sets the target Resource name.
+     * @return Gets or sets the target Resource name.
      * 
-    */
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
     /**
-     * Gets or sets the target virtual machine size.
+     * @return Gets or sets the target virtual machine size.
      * 
-    */
+     */
     public Optional<String> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }

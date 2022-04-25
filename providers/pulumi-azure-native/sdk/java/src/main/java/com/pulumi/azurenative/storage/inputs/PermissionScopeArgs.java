@@ -20,6 +20,10 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="permissions", required=true)
     private Output<String> permissions;
 
+    /**
+     * @return The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
+     * 
+     */
     public Output<String> permissions() {
         return this.permissions;
     }
@@ -31,6 +35,10 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of resource, normally the container name or the file share name, used by the local user.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -42,6 +50,10 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="service", required=true)
     private Output<String> service;
 
+    /**
+     * @return The service used by the local user, e.g. blob, file.
+     * 
+     */
     public Output<String> service() {
         return this.service;
     }
@@ -72,29 +84,65 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
             $ = new PermissionScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param permissions The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(Output<String> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param resourceName The name of resource, normally the container name or the file share name, used by the local user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of resource, normally the container name or the file share name, used by the local user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param service The service used by the local user, e.g. blob, file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The service used by the local user, e.g. blob, file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }

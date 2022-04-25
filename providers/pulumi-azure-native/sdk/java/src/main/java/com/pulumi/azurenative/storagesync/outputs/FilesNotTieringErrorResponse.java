@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class FilesNotTieringErrorResponse {
-    /**
-     * Error code (HResult)
-     * 
-     */
+        /**
+         * @return Error code (HResult)
+         * 
+         */
     private final Integer errorCode;
-    /**
-     * Count of files with this error
-     * 
-     */
+        /**
+         * @return Count of files with this error
+         * 
+         */
     private final Double fileCount;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class FilesNotTieringErrorResponse {
     }
 
     /**
-     * Error code (HResult)
+     * @return Error code (HResult)
      * 
-    */
+     */
     public Integer errorCode() {
         return this.errorCode;
     }
     /**
-     * Count of files with this error
+     * @return Count of files with this error
      * 
-    */
+     */
     public Double fileCount() {
         return this.fileCount;
     }

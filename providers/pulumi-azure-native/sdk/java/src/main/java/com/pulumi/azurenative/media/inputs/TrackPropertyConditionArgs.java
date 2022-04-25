@@ -29,6 +29,10 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
     @Import(name="operation", required=true)
     private Output<Either<String,TrackPropertyCompareOperation>> operation;
 
+    /**
+     * @return Track property condition operation
+     * 
+     */
     public Output<Either<String,TrackPropertyCompareOperation>> operation() {
         return this.operation;
     }
@@ -40,6 +44,10 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
     @Import(name="property", required=true)
     private Output<Either<String,TrackPropertyType>> property;
 
+    /**
+     * @return Track property type
+     * 
+     */
     public Output<Either<String,TrackPropertyType>> property() {
         return this.property;
     }
@@ -51,6 +59,10 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Track property value
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -81,45 +93,105 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
             $ = new TrackPropertyConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operation Track property condition operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Output<Either<String,TrackPropertyCompareOperation>> operation) {
             $.operation = operation;
             return this;
         }
 
+        /**
+         * @param operation Track property condition operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(Either<String,TrackPropertyCompareOperation> operation) {
             return operation(Output.of(operation));
         }
 
+        /**
+         * @param operation Track property condition operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(String operation) {
             return operation(Either.ofLeft(operation));
         }
 
+        /**
+         * @param operation Track property condition operation
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(TrackPropertyCompareOperation operation) {
             return operation(Either.ofRight(operation));
         }
 
+        /**
+         * @param property Track property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(Output<Either<String,TrackPropertyType>> property) {
             $.property = property;
             return this;
         }
 
+        /**
+         * @param property Track property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(Either<String,TrackPropertyType> property) {
             return property(Output.of(property));
         }
 
+        /**
+         * @param property Track property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(String property) {
             return property(Either.ofLeft(property));
         }
 
+        /**
+         * @param property Track property type
+         * 
+         * @return builder
+         * 
+         */
         public Builder property(TrackPropertyType property) {
             return property(Either.ofRight(property));
         }
 
+        /**
+         * @param value Track property value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Track property value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

@@ -12,20 +12,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ServiceRegistryPropertiesResponse {
-    /**
-     * Collection of instances belong to Service Registry.
-     * 
-     */
+        /**
+         * @return Collection of instances belong to Service Registry.
+         * 
+         */
     private final List<ServiceRegistryInstanceResponse> instances;
-    /**
-     * State of the Service Registry.
-     * 
-     */
+        /**
+         * @return State of the Service Registry.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The requested resource quantity for required CPU and Memory.
-     * 
-     */
+        /**
+         * @return The requested resource quantity for required CPU and Memory.
+         * 
+         */
     private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class ServiceRegistryPropertiesResponse {
     }
 
     /**
-     * Collection of instances belong to Service Registry.
+     * @return Collection of instances belong to Service Registry.
      * 
-    */
+     */
     public List<ServiceRegistryInstanceResponse> instances() {
         return this.instances;
     }
     /**
-     * State of the Service Registry.
+     * @return State of the Service Registry.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
-    */
+     */
     public ServiceRegistryResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }

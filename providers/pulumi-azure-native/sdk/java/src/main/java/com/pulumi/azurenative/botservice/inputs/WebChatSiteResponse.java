@@ -25,6 +25,10 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Whether this site is enabled for DirectLine channel
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -36,6 +40,10 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
     private Boolean isWebchatPreviewEnabled;
 
+    /**
+     * @return Whether this site is enabled for preview versions of Webchat
+     * 
+     */
     public Boolean isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
@@ -47,6 +55,10 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -58,6 +70,10 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key2", required=true)
     private String key2;
 
+    /**
+     * @return Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public String key2() {
         return this.key2;
     }
@@ -69,6 +85,10 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteId", required=true)
     private String siteId;
 
+    /**
+     * @return Site Id
+     * 
+     */
     public String siteId() {
         return this.siteId;
     }
@@ -80,6 +100,10 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="siteName", required=true)
     private String siteName;
 
+    /**
+     * @return Site name
+     * 
+     */
     public String siteName() {
         return this.siteName;
     }
@@ -113,31 +137,67 @@ public final class WebChatSiteResponse extends com.pulumi.resources.InvokeArgs {
             $ = new WebChatSiteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEnabled Whether this site is enabled for DirectLine channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isWebchatPreviewEnabled Whether this site is enabled for preview versions of Webchat
+         * 
+         * @return builder
+         * 
+         */
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             $.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
             return this;
         }
 
+        /**
+         * @param key Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key2 Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key2(String key2) {
             $.key2 = key2;
             return this;
         }
 
+        /**
+         * @param siteId Site Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteId(String siteId) {
             $.siteId = siteId;
             return this;
         }
 
+        /**
+         * @param siteName Site name
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteName(String siteName) {
             $.siteName = siteName;
             return this;

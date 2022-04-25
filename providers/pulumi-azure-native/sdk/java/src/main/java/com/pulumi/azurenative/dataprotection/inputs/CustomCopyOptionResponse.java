@@ -26,6 +26,10 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="duration")
     private @Nullable String duration;
 
+    /**
+     * @return Data copied after given timespan
+     * 
+     */
     public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -38,6 +42,11 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;CustomCopyOption&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -67,11 +76,24 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
             $ = new CustomCopyOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param duration Data copied after given timespan
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;CustomCopyOption&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TrustedExternalTenantResponse {
-    /**
-     * GUID representing an external tenant.
-     * 
-     */
+        /**
+         * @return GUID representing an external tenant.
+         * 
+         */
     private final @Nullable String value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class TrustedExternalTenantResponse {
     }
 
     /**
-     * GUID representing an external tenant.
+     * @return GUID representing an external tenant.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TransformationResponse {
-    /**
-     * Dataset reference.
-     * 
-     */
+        /**
+         * @return Dataset reference.
+         * 
+         */
     private final @Nullable DatasetReferenceResponse dataset;
-    /**
-     * Transformation description.
-     * 
-     */
+        /**
+         * @return Transformation description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Flowlet Reference
-     * 
-     */
+        /**
+         * @return Flowlet Reference
+         * 
+         */
     private final @Nullable DataFlowReferenceResponse flowlet;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedService;
-    /**
-     * Transformation name.
-     * 
-     */
+        /**
+         * @return Transformation name.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class TransformationResponse {
     }
 
     /**
-     * Dataset reference.
+     * @return Dataset reference.
      * 
-    */
+     */
     public Optional<DatasetReferenceResponse> dataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
-     * Transformation description.
+     * @return Transformation description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Flowlet Reference
+     * @return Flowlet Reference
      * 
-    */
+     */
     public Optional<DataFlowReferenceResponse> flowlet() {
         return Optional.ofNullable(this.flowlet);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
     /**
-     * Transformation name.
+     * @return Transformation name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

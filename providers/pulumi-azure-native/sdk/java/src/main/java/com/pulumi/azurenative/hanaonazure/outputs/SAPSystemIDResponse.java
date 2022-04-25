@@ -11,30 +11,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SAPSystemIDResponse {
-    /**
-     * Group ID of the HANA database user.
-     * 
-     */
+        /**
+         * @return Group ID of the HANA database user.
+         * 
+         */
     private final @Nullable String gid;
-    /**
-     * Percent of memory to allocate to this SID.
-     * 
-     */
+        /**
+         * @return Percent of memory to allocate to this SID.
+         * 
+         */
     private final String memoryAllocation;
-    /**
-     * SAP system ID as database identifier.
-     * 
-     */
+        /**
+         * @return SAP system ID as database identifier.
+         * 
+         */
     private final @Nullable String sid;
-    /**
-     * User ID of the HANA database user.
-     * 
-     */
+        /**
+         * @return User ID of the HANA database user.
+         * 
+         */
     private final @Nullable String uid;
-    /**
-     * Name of the HANA database user.
-     * 
-     */
+        /**
+         * @return Name of the HANA database user.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -52,37 +52,37 @@ public final class SAPSystemIDResponse {
     }
 
     /**
-     * Group ID of the HANA database user.
+     * @return Group ID of the HANA database user.
      * 
-    */
+     */
     public Optional<String> gid() {
         return Optional.ofNullable(this.gid);
     }
     /**
-     * Percent of memory to allocate to this SID.
+     * @return Percent of memory to allocate to this SID.
      * 
-    */
+     */
     public String memoryAllocation() {
         return this.memoryAllocation;
     }
     /**
-     * SAP system ID as database identifier.
+     * @return SAP system ID as database identifier.
      * 
-    */
+     */
     public Optional<String> sid() {
         return Optional.ofNullable(this.sid);
     }
     /**
-     * User ID of the HANA database user.
+     * @return User ID of the HANA database user.
      * 
-    */
+     */
     public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
-     * Name of the HANA database user.
+     * @return Name of the HANA database user.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

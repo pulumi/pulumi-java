@@ -20,96 +20,96 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DynamicsLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The authentication type to connect to Dynamics server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The authentication type to connect to Dynamics server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object authenticationType;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * The credential reference containing authentication information.
-     * 
-     */
+        /**
+         * @return The credential reference containing authentication information.
+         * 
+         */
     private final @Nullable CredentialReferenceResponse credential;
-    /**
-     * The deployment type of the Dynamics instance. &#39;Online&#39; for Dynamics Online and &#39;OnPremisesWithIfd&#39; for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The deployment type of the Dynamics instance. &#39;Online&#39; for Dynamics Online and &#39;OnPremisesWithIfd&#39; for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object deploymentType;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object hostName;
-    /**
-     * The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object organizationName;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * Password to access the Dynamics instance.
-     * 
-     */
+        /**
+         * @return Password to access the Dynamics instance.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object port;
-    /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
-     * 
-     */
+        /**
+         * @return The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
-    /**
-     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object servicePrincipalCredentialType;
-    /**
-     * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object servicePrincipalId;
-    /**
-     * The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object serviceUri;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;Dynamics&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;Dynamics&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * User name to access the Dynamics instance. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return User name to access the Dynamics instance. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object username;
 
     @CustomType.Constructor
@@ -153,129 +153,129 @@ public final class DynamicsLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The authentication type to connect to Dynamics server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
+     * @return The authentication type to connect to Dynamics server. &#39;Office365&#39; for online scenario, &#39;Ifd&#39; for on-premises with Ifd scenario, &#39;AADServicePrincipal&#39; for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object authenticationType() {
         return this.authenticationType;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * The credential reference containing authentication information.
+     * @return The credential reference containing authentication information.
      * 
-    */
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
     /**
-     * The deployment type of the Dynamics instance. &#39;Online&#39; for Dynamics Online and &#39;OnPremisesWithIfd&#39; for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
+     * @return The deployment type of the Dynamics instance. &#39;Online&#39; for Dynamics Online and &#39;OnPremisesWithIfd&#39; for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object deploymentType() {
         return this.deploymentType;
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
+     * @return The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
+     * @return The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> organizationName() {
         return Optional.ofNullable(this.organizationName);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password to access the Dynamics instance.
+     * @return Password to access the Dynamics instance.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
+     * @return The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is &#39;ServicePrincipalKey&#39;, servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is &#39;ServicePrincipalCert&#39;, servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalCredential() {
         return Optional.ofNullable(this.servicePrincipalCredential);
     }
     /**
-     * The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
+     * @return The service principal credential type to use in Server-To-Server authentication. &#39;ServicePrincipalKey&#39; for key/secret, &#39;ServicePrincipalCert&#39; for certificate. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> servicePrincipalCredentialType() {
         return Optional.ofNullable(this.servicePrincipalCredentialType);
     }
     /**
-     * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
+     * @return The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
-     * The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
+     * @return The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Dynamics&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * User name to access the Dynamics instance. Type: string (or Expression with resultType string).
+     * @return User name to access the Dynamics instance. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }

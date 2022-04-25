@@ -19,6 +19,10 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="storageAccountName", required=true)
     private String storageAccountName;
 
+    /**
+     * @return The storage account name.
+     * 
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
@@ -71,16 +83,34 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param storageAccountName The storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;

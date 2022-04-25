@@ -13,30 +13,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetPredictionTrainingResultsResult {
-    /**
-     * Canonical profiles.
-     * 
-     */
+        /**
+         * @return Canonical profiles.
+         * 
+         */
     private final List<CanonicalProfileDefinitionResponse> canonicalProfiles;
-    /**
-     * Prediction distribution.
-     * 
-     */
+        /**
+         * @return Prediction distribution.
+         * 
+         */
     private final PredictionDistributionDefinitionResponse predictionDistribution;
-    /**
-     * Instance count of the primary profile.
-     * 
-     */
+        /**
+         * @return Instance count of the primary profile.
+         * 
+         */
     private final Double primaryProfileInstanceCount;
-    /**
-     * Score name.
-     * 
-     */
+        /**
+         * @return Score name.
+         * 
+         */
     private final String scoreName;
-    /**
-     * The hub name.
-     * 
-     */
+        /**
+         * @return The hub name.
+         * 
+         */
     private final String tenantId;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class GetPredictionTrainingResultsResult {
     }
 
     /**
-     * Canonical profiles.
+     * @return Canonical profiles.
      * 
-    */
+     */
     public List<CanonicalProfileDefinitionResponse> canonicalProfiles() {
         return this.canonicalProfiles;
     }
     /**
-     * Prediction distribution.
+     * @return Prediction distribution.
      * 
-    */
+     */
     public PredictionDistributionDefinitionResponse predictionDistribution() {
         return this.predictionDistribution;
     }
     /**
-     * Instance count of the primary profile.
+     * @return Instance count of the primary profile.
      * 
-    */
+     */
     public Double primaryProfileInstanceCount() {
         return this.primaryProfileInstanceCount;
     }
     /**
-     * Score name.
+     * @return Score name.
      * 
-    */
+     */
     public String scoreName() {
         return this.scoreName;
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

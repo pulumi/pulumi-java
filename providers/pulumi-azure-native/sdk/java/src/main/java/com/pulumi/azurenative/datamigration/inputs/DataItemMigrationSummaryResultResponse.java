@@ -24,6 +24,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -35,6 +39,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="errorPrefix", required=true)
     private String errorPrefix;
 
+    /**
+     * @return Wildcard string prefix to use for querying all errors of the item
+     * 
+     */
     public String errorPrefix() {
         return this.errorPrefix;
     }
@@ -46,6 +54,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="itemsCompletedCount", required=true)
     private Double itemsCompletedCount;
 
+    /**
+     * @return Number of successfully completed items
+     * 
+     */
     public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
     }
@@ -57,6 +69,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="itemsCount", required=true)
     private Double itemsCount;
 
+    /**
+     * @return Number of items
+     * 
+     */
     public Double itemsCount() {
         return this.itemsCount;
     }
@@ -68,6 +84,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the item
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -79,6 +99,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="resultPrefix", required=true)
     private String resultPrefix;
 
+    /**
+     * @return Wildcard string prefix to use for querying all sub-tem results of the item
+     * 
+     */
     public String resultPrefix() {
         return this.resultPrefix;
     }
@@ -90,6 +114,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -101,6 +129,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -112,6 +144,10 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
     @Import(name="statusMessage", required=true)
     private String statusMessage;
 
+    /**
+     * @return Status message
+     * 
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
@@ -148,46 +184,100 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
             $ = new DataItemMigrationSummaryResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param errorPrefix Wildcard string prefix to use for querying all errors of the item
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorPrefix(String errorPrefix) {
             $.errorPrefix = errorPrefix;
             return this;
         }
 
+        /**
+         * @param itemsCompletedCount Number of successfully completed items
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsCompletedCount(Double itemsCompletedCount) {
             $.itemsCompletedCount = itemsCompletedCount;
             return this;
         }
 
+        /**
+         * @param itemsCount Number of items
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemsCount(Double itemsCount) {
             $.itemsCount = itemsCount;
             return this;
         }
 
+        /**
+         * @param name Name of the item
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resultPrefix Wildcard string prefix to use for querying all sub-tem results of the item
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultPrefix(String resultPrefix) {
             $.resultPrefix = resultPrefix;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param state Current state of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param statusMessage Status message
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(String statusMessage) {
             $.statusMessage = statusMessage;
             return this;

@@ -19,6 +19,10 @@ public final class ListRegistryCredentialsArgs extends com.pulumi.resources.Invo
     @Import(name="registryName", required=true)
     private String registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public String registryName() {
         return this.registryName;
     }
@@ -30,6 +34,10 @@ public final class ListRegistryCredentialsArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListRegistryCredentialsArgs extends com.pulumi.resources.Invo
             $ = new ListRegistryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

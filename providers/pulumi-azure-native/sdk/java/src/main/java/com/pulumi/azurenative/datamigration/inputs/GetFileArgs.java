@@ -19,6 +19,10 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fileName", required=true)
     private String fileName;
 
+    /**
+     * @return Name of the File
+     * 
+     */
     public String fileName() {
         return this.fileName;
     }
@@ -30,6 +34,10 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="groupName", required=true)
     private String groupName;
 
+    /**
+     * @return Name of the resource group
+     * 
+     */
     public String groupName() {
         return this.groupName;
     }
@@ -41,6 +49,10 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="projectName", required=true)
     private String projectName;
 
+    /**
+     * @return Name of the project
+     * 
+     */
     public String projectName() {
         return this.projectName;
     }
@@ -52,6 +64,10 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return Name of the service
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -83,21 +99,45 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName Name of the File
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(String fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param groupName Name of the resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupName(String groupName) {
             $.groupName = groupName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the project
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the service
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

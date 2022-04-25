@@ -18,56 +18,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatabricksSparkPythonActivityResponse {
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * A list of libraries to be installed on the cluster that will execute the job.
-     * 
-     */
+        /**
+         * @return A list of libraries to be installed on the cluster that will execute the job.
+         * 
+         */
     private final @Nullable List<Map<String,Object>> libraries;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Command line parameters that will be passed to the Python file.
-     * 
-     */
+        /**
+         * @return Command line parameters that will be passed to the Python file.
+         * 
+         */
     private final @Nullable List<Object> parameters;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object pythonFile;
-    /**
-     * Type of activity.
-     * Expected value is &#39;DatabricksSparkPython&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;DatabricksSparkPython&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -95,73 +95,73 @@ public final class DatabricksSparkPythonActivityResponse {
     }
 
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * A list of libraries to be installed on the cluster that will execute the job.
+     * @return A list of libraries to be installed on the cluster that will execute the job.
      * 
-    */
+     */
     public List<Map<String,Object>> libraries() {
         return this.libraries == null ? List.of() : this.libraries;
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Command line parameters that will be passed to the Python file.
+     * @return Command line parameters that will be passed to the Python file.
      * 
-    */
+     */
     public List<Object> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
+     * @return The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object pythonFile() {
         return this.pythonFile;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;DatabricksSparkPython&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

@@ -19,6 +19,10 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -30,6 +34,10 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sensorName", required=true)
     private String sensorName;
 
+    /**
+     * @return Name of the IoT sensor
+     * 
+     */
     public String sensorName() {
         return this.sensorName;
     }
@@ -59,11 +67,23 @@ public final class GetSensorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSensorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param sensorName Name of the IoT sensor
+         * 
+         * @return builder
+         * 
+         */
         public Builder sensorName(String sensorName) {
             $.sensorName = sensorName;
             return this;

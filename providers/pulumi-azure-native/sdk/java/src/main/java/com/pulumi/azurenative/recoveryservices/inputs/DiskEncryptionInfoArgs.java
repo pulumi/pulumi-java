@@ -27,6 +27,10 @@ public final class DiskEncryptionInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="diskEncryptionKeyInfo")
     private @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
+    /**
+     * @return The recovery KeyVault reference for secret.
+     * 
+     */
     public Optional<Output<DiskEncryptionKeyInfoArgs>> diskEncryptionKeyInfo() {
         return Optional.ofNullable(this.diskEncryptionKeyInfo);
     }
@@ -38,6 +42,10 @@ public final class DiskEncryptionInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyEncryptionKeyInfo")
     private @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
+    /**
+     * @return The recovery KeyVault reference for key.
+     * 
+     */
     public Optional<Output<KeyEncryptionKeyInfoArgs>> keyEncryptionKeyInfo() {
         return Optional.ofNullable(this.keyEncryptionKeyInfo);
     }
@@ -67,20 +75,44 @@ public final class DiskEncryptionInfoArgs extends com.pulumi.resources.ResourceA
             $ = new DiskEncryptionInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionKeyInfo The recovery KeyVault reference for secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeyInfo(@Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo) {
             $.diskEncryptionKeyInfo = diskEncryptionKeyInfo;
             return this;
         }
 
+        /**
+         * @param diskEncryptionKeyInfo The recovery KeyVault reference for secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionKeyInfo(DiskEncryptionKeyInfoArgs diskEncryptionKeyInfo) {
             return diskEncryptionKeyInfo(Output.of(diskEncryptionKeyInfo));
         }
 
+        /**
+         * @param keyEncryptionKeyInfo The recovery KeyVault reference for key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKeyInfo(@Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
             $.keyEncryptionKeyInfo = keyEncryptionKeyInfo;
             return this;
         }
 
+        /**
+         * @param keyEncryptionKeyInfo The recovery KeyVault reference for key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyEncryptionKeyInfo(KeyEncryptionKeyInfoArgs keyEncryptionKeyInfo) {
             return keyEncryptionKeyInfo(Output.of(keyEncryptionKeyInfo));
         }

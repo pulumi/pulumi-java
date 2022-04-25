@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class StorageAccountKeyResponse {
-    /**
-     * Creation time of the key, in round trip date format.
-     * 
-     */
+        /**
+         * @return Creation time of the key, in round trip date format.
+         * 
+         */
     private final String creationTime;
-    /**
-     * Name of the key.
-     * 
-     */
+        /**
+         * @return Name of the key.
+         * 
+         */
     private final String keyName;
-    /**
-     * Permissions for the key -- read-only or full permissions.
-     * 
-     */
+        /**
+         * @return Permissions for the key -- read-only or full permissions.
+         * 
+         */
     private final String permissions;
-    /**
-     * Base 64-encoded value of the key.
-     * 
-     */
+        /**
+         * @return Base 64-encoded value of the key.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class StorageAccountKeyResponse {
     }
 
     /**
-     * Creation time of the key, in round trip date format.
+     * @return Creation time of the key, in round trip date format.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Name of the key.
+     * @return Name of the key.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * Permissions for the key -- read-only or full permissions.
+     * @return Permissions for the key -- read-only or full permissions.
      * 
-    */
+     */
     public String permissions() {
         return this.permissions;
     }
     /**
-     * Base 64-encoded value of the key.
+     * @return Base 64-encoded value of the key.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

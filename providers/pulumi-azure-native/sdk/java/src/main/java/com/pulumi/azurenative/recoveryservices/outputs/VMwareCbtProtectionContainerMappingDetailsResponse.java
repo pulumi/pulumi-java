@@ -9,41 +9,41 @@ import java.util.Objects;
 
 @CustomType
 public final class VMwareCbtProtectionContainerMappingDetailsResponse {
-    /**
-     * Gets the class type. Overridden in derived classes.
-     * Expected value is &#39;VMwareCbt&#39;.
-     * 
-     */
+        /**
+         * @return Gets the class type. Overridden in derived classes.
+         * Expected value is &#39;VMwareCbt&#39;.
+         * 
+         */
     private final String instanceType;
-    /**
-     * The target key vault ARM Id.
-     * 
-     */
+        /**
+         * @return The target key vault ARM Id.
+         * 
+         */
     private final String keyVaultId;
-    /**
-     * The target key vault URI.
-     * 
-     */
+        /**
+         * @return The target key vault URI.
+         * 
+         */
     private final String keyVaultUri;
-    /**
-     * The secret name of the service bus connection string.
-     * 
-     */
+        /**
+         * @return The secret name of the service bus connection string.
+         * 
+         */
     private final String serviceBusConnectionStringSecretName;
-    /**
-     * The storage account ARM Id.
-     * 
-     */
+        /**
+         * @return The storage account ARM Id.
+         * 
+         */
     private final String storageAccountId;
-    /**
-     * The secret name of the storage account.
-     * 
-     */
+        /**
+         * @return The secret name of the storage account.
+         * 
+         */
     private final String storageAccountSasSecretName;
-    /**
-     * The target location.
-     * 
-     */
+        /**
+         * @return The target location.
+         * 
+         */
     private final String targetLocation;
 
     @CustomType.Constructor
@@ -65,52 +65,52 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
     }
 
     /**
-     * Gets the class type. Overridden in derived classes.
+     * @return Gets the class type. Overridden in derived classes.
      * Expected value is &#39;VMwareCbt&#39;.
      * 
-    */
+     */
     public String instanceType() {
         return this.instanceType;
     }
     /**
-     * The target key vault ARM Id.
+     * @return The target key vault ARM Id.
      * 
-    */
+     */
     public String keyVaultId() {
         return this.keyVaultId;
     }
     /**
-     * The target key vault URI.
+     * @return The target key vault URI.
      * 
-    */
+     */
     public String keyVaultUri() {
         return this.keyVaultUri;
     }
     /**
-     * The secret name of the service bus connection string.
+     * @return The secret name of the service bus connection string.
      * 
-    */
+     */
     public String serviceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
     }
     /**
-     * The storage account ARM Id.
+     * @return The storage account ARM Id.
      * 
-    */
+     */
     public String storageAccountId() {
         return this.storageAccountId;
     }
     /**
-     * The secret name of the storage account.
+     * @return The secret name of the storage account.
      * 
-    */
+     */
     public String storageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
     }
     /**
-     * The target location.
+     * @return The target location.
      * 
-    */
+     */
     public String targetLocation() {
         return this.targetLocation;
     }

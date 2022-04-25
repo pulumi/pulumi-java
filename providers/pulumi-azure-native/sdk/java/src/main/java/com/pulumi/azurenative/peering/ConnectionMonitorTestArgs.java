@@ -23,6 +23,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="connectionMonitorTestName")
     private @Nullable Output<String> connectionMonitorTestName;
 
+    /**
+     * @return The name of the connection monitor test
+     * 
+     */
     public Optional<Output<String>> connectionMonitorTestName() {
         return Optional.ofNullable(this.connectionMonitorTestName);
     }
@@ -34,6 +38,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="destination")
     private @Nullable Output<String> destination;
 
+    /**
+     * @return The Connection Monitor test destination
+     * 
+     */
     public Optional<Output<String>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -45,6 +53,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="destinationPort")
     private @Nullable Output<Integer> destinationPort;
 
+    /**
+     * @return The Connection Monitor test destination port
+     * 
+     */
     public Optional<Output<Integer>> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
@@ -56,6 +68,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="peeringServiceName", required=true)
     private Output<String> peeringServiceName;
 
+    /**
+     * @return The name of the peering service.
+     * 
+     */
     public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
@@ -67,6 +83,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="sourceAgent")
     private @Nullable Output<String> sourceAgent;
 
+    /**
+     * @return The Connection Monitor test source agent
+     * 
+     */
     public Optional<Output<String>> sourceAgent() {
         return Optional.ofNullable(this.sourceAgent);
     }
@@ -89,6 +113,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
     @Import(name="testFrequencyInSec")
     private @Nullable Output<Integer> testFrequencyInSec;
 
+    /**
+     * @return The Connection Monitor test frequency in seconds
+     * 
+     */
     public Optional<Output<Integer>> testFrequencyInSec() {
         return Optional.ofNullable(this.testFrequencyInSec);
     }
@@ -123,65 +151,149 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
             $ = new ConnectionMonitorTestArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectionMonitorTestName The name of the connection monitor test
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMonitorTestName(@Nullable Output<String> connectionMonitorTestName) {
             $.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
 
+        /**
+         * @param connectionMonitorTestName The name of the connection monitor test
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionMonitorTestName(String connectionMonitorTestName) {
             return connectionMonitorTestName(Output.of(connectionMonitorTestName));
         }
 
+        /**
+         * @param destination The Connection Monitor test destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination The Connection Monitor test destination
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param destinationPort The Connection Monitor test destination port
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             $.destinationPort = destinationPort;
             return this;
         }
 
+        /**
+         * @param destinationPort The Connection Monitor test destination port
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPort(Integer destinationPort) {
             return destinationPort(Output.of(destinationPort));
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(Output<String> peeringServiceName) {
             $.peeringServiceName = peeringServiceName;
             return this;
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(String peeringServiceName) {
             return peeringServiceName(Output.of(peeringServiceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sourceAgent The Connection Monitor test source agent
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgent(@Nullable Output<String> sourceAgent) {
             $.sourceAgent = sourceAgent;
             return this;
         }
 
+        /**
+         * @param sourceAgent The Connection Monitor test source agent
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAgent(String sourceAgent) {
             return sourceAgent(Output.of(sourceAgent));
         }
 
+        /**
+         * @param testFrequencyInSec The Connection Monitor test frequency in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder testFrequencyInSec(@Nullable Output<Integer> testFrequencyInSec) {
             $.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
 
+        /**
+         * @param testFrequencyInSec The Connection Monitor test frequency in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder testFrequencyInSec(Integer testFrequencyInSec) {
             return testFrequencyInSec(Output.of(testFrequencyInSec));
         }

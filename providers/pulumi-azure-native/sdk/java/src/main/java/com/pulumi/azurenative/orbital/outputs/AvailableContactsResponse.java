@@ -13,60 +13,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AvailableContactsResponse {
-    /**
-     * Azimuth of the antenna at the end of the contact in decimal degrees.
-     * 
-     */
+        /**
+         * @return Azimuth of the antenna at the end of the contact in decimal degrees.
+         * 
+         */
     private final Double endAzimuthDegrees;
-    /**
-     * Spacecraft elevation above the horizon at contact end.
-     * 
-     */
+        /**
+         * @return Spacecraft elevation above the horizon at contact end.
+         * 
+         */
     private final Double endElevationDegrees;
-    /**
-     * Name of Azure Ground Station.
-     * 
-     */
+        /**
+         * @return Name of Azure Ground Station.
+         * 
+         */
     private final String groundStationName;
-    /**
-     * Maximum elevation of the antenna during the contact in decimal degrees.
-     * 
-     */
+        /**
+         * @return Maximum elevation of the antenna during the contact in decimal degrees.
+         * 
+         */
     private final Double maximumElevationDegrees;
-    /**
-     * Time to lost receiving a signal.
-     * 
-     */
+        /**
+         * @return Time to lost receiving a signal.
+         * 
+         */
     private final String rxEndTime;
-    /**
-     * Earliest time to receive a signal.
-     * 
-     */
+        /**
+         * @return Earliest time to receive a signal.
+         * 
+         */
     private final String rxStartTime;
-    /**
-     * The reference to the spacecraft resource.
-     * 
-     */
+        /**
+         * @return The reference to the spacecraft resource.
+         * 
+         */
     private final @Nullable ResourceReferenceResponse spacecraft;
-    /**
-     * Azimuth of the antenna at the start of the contact in decimal degrees.
-     * 
-     */
+        /**
+         * @return Azimuth of the antenna at the start of the contact in decimal degrees.
+         * 
+         */
     private final Double startAzimuthDegrees;
-    /**
-     * Spacecraft elevation above the horizon at contact start.
-     * 
-     */
+        /**
+         * @return Spacecraft elevation above the horizon at contact start.
+         * 
+         */
     private final Double startElevationDegrees;
-    /**
-     * Time at which antenna transmit will be disabled.
-     * 
-     */
+        /**
+         * @return Time at which antenna transmit will be disabled.
+         * 
+         */
     private final String txEndTime;
-    /**
-     * Time at which antenna transmit will be enabled.
-     * 
-     */
+        /**
+         * @return Time at which antenna transmit will be enabled.
+         * 
+         */
     private final String txStartTime;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class AvailableContactsResponse {
     }
 
     /**
-     * Azimuth of the antenna at the end of the contact in decimal degrees.
+     * @return Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
-    */
+     */
     public Double endAzimuthDegrees() {
         return this.endAzimuthDegrees;
     }
     /**
-     * Spacecraft elevation above the horizon at contact end.
+     * @return Spacecraft elevation above the horizon at contact end.
      * 
-    */
+     */
     public Double endElevationDegrees() {
         return this.endElevationDegrees;
     }
     /**
-     * Name of Azure Ground Station.
+     * @return Name of Azure Ground Station.
      * 
-    */
+     */
     public String groundStationName() {
         return this.groundStationName;
     }
     /**
-     * Maximum elevation of the antenna during the contact in decimal degrees.
+     * @return Maximum elevation of the antenna during the contact in decimal degrees.
      * 
-    */
+     */
     public Double maximumElevationDegrees() {
         return this.maximumElevationDegrees;
     }
     /**
-     * Time to lost receiving a signal.
+     * @return Time to lost receiving a signal.
      * 
-    */
+     */
     public String rxEndTime() {
         return this.rxEndTime;
     }
     /**
-     * Earliest time to receive a signal.
+     * @return Earliest time to receive a signal.
      * 
-    */
+     */
     public String rxStartTime() {
         return this.rxStartTime;
     }
     /**
-     * The reference to the spacecraft resource.
+     * @return The reference to the spacecraft resource.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> spacecraft() {
         return Optional.ofNullable(this.spacecraft);
     }
     /**
-     * Azimuth of the antenna at the start of the contact in decimal degrees.
+     * @return Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
-    */
+     */
     public Double startAzimuthDegrees() {
         return this.startAzimuthDegrees;
     }
     /**
-     * Spacecraft elevation above the horizon at contact start.
+     * @return Spacecraft elevation above the horizon at contact start.
      * 
-    */
+     */
     public Double startElevationDegrees() {
         return this.startElevationDegrees;
     }
     /**
-     * Time at which antenna transmit will be disabled.
+     * @return Time at which antenna transmit will be disabled.
      * 
-    */
+     */
     public String txEndTime() {
         return this.txEndTime;
     }
     /**
-     * Time at which antenna transmit will be enabled.
+     * @return Time at which antenna transmit will be enabled.
      * 
-    */
+     */
     public String txStartTime() {
         return this.txStartTime;
     }

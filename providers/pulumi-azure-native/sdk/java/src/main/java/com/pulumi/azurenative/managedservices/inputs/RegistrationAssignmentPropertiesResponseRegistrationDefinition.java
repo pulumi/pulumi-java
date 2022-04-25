@@ -27,6 +27,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Fully qualified path of the registration definition.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the registration definition.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     @Import(name="plan")
     private @Nullable PlanResponse plan;
 
+    /**
+     * @return Plan details for the managed services.
+     * 
+     */
     public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -60,6 +72,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     @Import(name="properties")
     private @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
 
+    /**
+     * @return Properties of registration definition inside registration assignment.
+     * 
+     */
     public Optional<RegistrationAssignmentPropertiesResponseProperties> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -71,6 +87,10 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -103,26 +123,56 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
             $ = new RegistrationAssignmentPropertiesResponseRegistrationDefinition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Fully qualified path of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param plan Plan details for the managed services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable PlanResponse plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param properties Properties of registration definition inside registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable RegistrationAssignmentPropertiesResponseProperties properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param type Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

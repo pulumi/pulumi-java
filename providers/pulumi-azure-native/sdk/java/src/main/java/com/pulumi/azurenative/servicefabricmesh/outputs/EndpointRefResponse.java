@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EndpointRefResponse {
-    /**
-     * Name of the endpoint.
-     * 
-     */
+        /**
+         * @return Name of the endpoint.
+         * 
+         */
     private final @Nullable String name;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class EndpointRefResponse {
     }
 
     /**
-     * Name of the endpoint.
+     * @return Name of the endpoint.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

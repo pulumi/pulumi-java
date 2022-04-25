@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LocationResponse {
-    /**
-     * The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
-     * 
-     */
+        /**
+         * @return The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
+         * 
+         */
     private final String documentEndpoint;
-    /**
-     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
-     * 
-     */
+        /**
+         * @return The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+         * 
+         */
     private final @Nullable Integer failoverPriority;
-    /**
-     * The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
-     * 
-     */
+        /**
+         * @return The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
+         * 
+         */
     private final String id;
-    /**
-     * Flag to indicate whether or not this region is an AvailabilityZone region
-     * 
-     */
+        /**
+         * @return Flag to indicate whether or not this region is an AvailabilityZone region
+         * 
+         */
     private final @Nullable Boolean isZoneRedundant;
-    /**
-     * The name of the region.
-     * 
-     */
+        /**
+         * @return The name of the region.
+         * 
+         */
     private final @Nullable String locationName;
-    /**
-     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
-     * 
-     */
+        /**
+         * @return The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class LocationResponse {
     }
 
     /**
-     * The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
+     * @return The connection endpoint for the specific region. Example: https://&amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.documents.azure.com:443/
      * 
-    */
+     */
     public String documentEndpoint() {
         return this.documentEndpoint;
     }
     /**
-     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * @return The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
-    */
+     */
     public Optional<Integer> failoverPriority() {
         return Optional.ofNullable(this.failoverPriority);
     }
     /**
-     * The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
+     * @return The unique identifier of the region within the database account. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Flag to indicate whether or not this region is an AvailabilityZone region
+     * @return Flag to indicate whether or not this region is an AvailabilityZone region
      * 
-    */
+     */
     public Optional<Boolean> isZoneRedundant() {
         return Optional.ofNullable(this.isZoneRedundant);
     }
     /**
-     * The name of the region.
+     * @return The name of the region.
      * 
-    */
+     */
     public Optional<String> locationName() {
         return Optional.ofNullable(this.locationName);
     }
     /**
-     * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
+     * @return The status of the Cosmos DB account at the time the operation was called. The status can be one of following. &#39;Creating&#39; – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. &#39;Succeeded&#39; – the Cosmos DB account is active for use. &#39;Updating&#39; – the Cosmos DB account is being updated. &#39;Deleting&#39; – the Cosmos DB account is being deleted. &#39;Failed&#39; – the Cosmos DB account failed creation. &#39;DeletionFailed&#39; – the Cosmos DB account deletion failed.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

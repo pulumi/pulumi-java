@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureActiveDirectoryValidationResponse {
-    /**
-     * The list of audiences that can make successful authentication/authorization requests.
-     * 
-     */
+        /**
+         * @return The list of audiences that can make successful authentication/authorization requests.
+         * 
+         */
     private final @Nullable List<String> allowedAudiences;
-    /**
-     * The configuration settings of the checks that should be made while validating the JWT Claims.
-     * 
-     */
+        /**
+         * @return The configuration settings of the checks that should be made while validating the JWT Claims.
+         * 
+         */
     private final @Nullable JwtClaimChecksResponse jwtClaimChecks;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class AzureActiveDirectoryValidationResponse {
     }
 
     /**
-     * The list of audiences that can make successful authentication/authorization requests.
+     * @return The list of audiences that can make successful authentication/authorization requests.
      * 
-    */
+     */
     public List<String> allowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
     /**
-     * The configuration settings of the checks that should be made while validating the JWT Claims.
+     * @return The configuration settings of the checks that should be made while validating the JWT Claims.
      * 
-    */
+     */
     public Optional<JwtClaimChecksResponse> jwtClaimChecks() {
         return Optional.ofNullable(this.jwtClaimChecks);
     }

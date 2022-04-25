@@ -25,6 +25,10 @@ public final class DatasetResponseFolder extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the folder that this Dataset is in.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class DatasetResponseFolder extends com.pulumi.resources.InvokeArgs
             $ = new DatasetResponseFolder(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the folder that this Dataset is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

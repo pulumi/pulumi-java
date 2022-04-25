@@ -13,60 +13,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetPeeringServiceResult {
-    /**
-     * The ID of the resource.
-     * 
-     */
+        /**
+         * @return The ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource.
-     * 
-     */
+        /**
+         * @return The location of the resource.
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The location (state/province) of the customer.
-     * 
-     */
+        /**
+         * @return The location (state/province) of the customer.
+         * 
+         */
     private final @Nullable String peeringServiceLocation;
-    /**
-     * The name of the service provider.
-     * 
-     */
+        /**
+         * @return The name of the service provider.
+         * 
+         */
     private final @Nullable String peeringServiceProvider;
-    /**
-     * The backup peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
-     */
+        /**
+         * @return The backup peering (Microsoft/service provider) location to be used for customer traffic.
+         * 
+         */
     private final @Nullable String providerBackupPeeringLocation;
-    /**
-     * The primary peering (Microsoft/service provider) location to be used for customer traffic.
-     * 
-     */
+        /**
+         * @return The primary peering (Microsoft/service provider) location to be used for customer traffic.
+         * 
+         */
     private final @Nullable String providerPrimaryPeeringLocation;
-    /**
-     * The provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The SKU that defines the type of the peering service.
-     * 
-     */
+        /**
+         * @return The SKU that defines the type of the peering service.
+         * 
+         */
     private final @Nullable PeeringServiceSkuResponse sku;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class GetPeeringServiceResult {
     }
 
     /**
-     * The ID of the resource.
+     * @return The ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource.
+     * @return The location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The location (state/province) of the customer.
+     * @return The location (state/province) of the customer.
      * 
-    */
+     */
     public Optional<String> peeringServiceLocation() {
         return Optional.ofNullable(this.peeringServiceLocation);
     }
     /**
-     * The name of the service provider.
+     * @return The name of the service provider.
      * 
-    */
+     */
     public Optional<String> peeringServiceProvider() {
         return Optional.ofNullable(this.peeringServiceProvider);
     }
     /**
-     * The backup peering (Microsoft/service provider) location to be used for customer traffic.
+     * @return The backup peering (Microsoft/service provider) location to be used for customer traffic.
      * 
-    */
+     */
     public Optional<String> providerBackupPeeringLocation() {
         return Optional.ofNullable(this.providerBackupPeeringLocation);
     }
     /**
-     * The primary peering (Microsoft/service provider) location to be used for customer traffic.
+     * @return The primary peering (Microsoft/service provider) location to be used for customer traffic.
      * 
-    */
+     */
     public Optional<String> providerPrimaryPeeringLocation() {
         return Optional.ofNullable(this.providerPrimaryPeeringLocation);
     }
     /**
-     * The provisioning state of the resource.
+     * @return The provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU that defines the type of the peering service.
+     * @return The SKU that defines the type of the peering service.
      * 
-    */
+     */
     public Optional<PeeringServiceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NonComplianceMessageResponse {
-    /**
-     * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
-     * 
-     */
+        /**
+         * @return A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+         * 
+         */
     private final String message;
-    /**
-     * The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
-     * 
-     */
+        /**
+         * @return The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+         * 
+         */
     private final @Nullable String policyDefinitionReferenceId;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class NonComplianceMessageResponse {
     }
 
     /**
-     * A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
+     * @return A message that describes why a resource is non-compliant with the policy. This is shown in &#39;deny&#39; error messages and on resource&#39;s non-compliant compliance results.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
+     * @return The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
      * 
-    */
+     */
     public Optional<String> policyDefinitionReferenceId() {
         return Optional.ofNullable(this.policyDefinitionReferenceId);
     }

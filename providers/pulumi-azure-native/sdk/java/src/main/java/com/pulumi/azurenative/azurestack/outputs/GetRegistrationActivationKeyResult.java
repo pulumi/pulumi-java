@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRegistrationActivationKeyResult {
-    /**
-     * Azure Stack activation key.
-     * 
-     */
+        /**
+         * @return Azure Stack activation key.
+         * 
+         */
     private final @Nullable String activationKey;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetRegistrationActivationKeyResult {
     }
 
     /**
-     * Azure Stack activation key.
+     * @return Azure Stack activation key.
      * 
-    */
+     */
     public Optional<String> activationKey() {
         return Optional.ofNullable(this.activationKey);
     }

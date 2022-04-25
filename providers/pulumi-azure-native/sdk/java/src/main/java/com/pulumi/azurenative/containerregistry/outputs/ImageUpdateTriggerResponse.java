@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageUpdateTriggerResponse {
-    /**
-     * The unique ID of the trigger.
-     * 
-     */
+        /**
+         * @return The unique ID of the trigger.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The list of image updates that caused the build.
-     * 
-     */
+        /**
+         * @return The list of image updates that caused the build.
+         * 
+         */
     private final @Nullable List<ImageDescriptorResponse> images;
-    /**
-     * The timestamp when the image update happened.
-     * 
-     */
+        /**
+         * @return The timestamp when the image update happened.
+         * 
+         */
     private final @Nullable String timestamp;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ImageUpdateTriggerResponse {
     }
 
     /**
-     * The unique ID of the trigger.
+     * @return The unique ID of the trigger.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The list of image updates that caused the build.
+     * @return The list of image updates that caused the build.
      * 
-    */
+     */
     public List<ImageDescriptorResponse> images() {
         return this.images == null ? List.of() : this.images;
     }
     /**
-     * The timestamp when the image update happened.
+     * @return The timestamp when the image update happened.
      * 
-    */
+     */
     public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }

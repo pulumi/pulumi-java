@@ -34,6 +34,10 @@ public final class FromAllInputFileResponse extends com.pulumi.resources.InvokeA
     @Import(name="includedTracks")
     private @Nullable List<Object> includedTracks;
 
+    /**
+     * @return The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+     * 
+     */
     public Optional<List<Object>> includedTracks() {
         return Optional.ofNullable(this.includedTracks);
     }
@@ -46,6 +50,11 @@ public final class FromAllInputFileResponse extends com.pulumi.resources.InvokeA
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.FromAllInputFile&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -75,15 +84,34 @@ public final class FromAllInputFileResponse extends com.pulumi.resources.InvokeA
             $ = new FromAllInputFileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param includedTracks The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedTracks(@Nullable List<Object> includedTracks) {
             $.includedTracks = includedTracks;
             return this;
         }
 
+        /**
+         * @param includedTracks The list of TrackDescriptors which define the metadata and selection of tracks in the input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedTracks(Object... includedTracks) {
             return includedTracks(List.of(includedTracks));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.FromAllInputFile&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

@@ -13,56 +13,56 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VideoOverlayResponse {
-    /**
-     * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
-     * 
-     */
+        /**
+         * @return The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
+         * 
+         */
     private final @Nullable Double audioGainLevel;
-    /**
-     * An optional rectangular window used to crop the overlay image or video.
-     * 
-     */
+        /**
+         * @return An optional rectangular window used to crop the overlay image or video.
+         * 
+         */
     private final @Nullable RectangleResponse cropRectangle;
-    /**
-     * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
-     * 
-     */
+        /**
+         * @return The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
+         * 
+         */
     private final @Nullable String end;
-    /**
-     * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
-     * 
-     */
+        /**
+         * @return The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
+         * 
+         */
     private final @Nullable String fadeInDuration;
-    /**
-     * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
-     * 
-     */
+        /**
+         * @return The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
+         * 
+         */
     private final @Nullable String fadeOutDuration;
-    /**
-     * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
-     * 
-     */
+        /**
+         * @return The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
+         * 
+         */
     private final String inputLabel;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.VideoOverlay&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.VideoOverlay&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
-     * 
-     */
+        /**
+         * @return The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
+         * 
+         */
     private final @Nullable Double opacity;
-    /**
-     * The location in the input video where the overlay is applied.
-     * 
-     */
+        /**
+         * @return The location in the input video where the overlay is applied.
+         * 
+         */
     private final @Nullable RectangleResponse position;
-    /**
-     * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
-     * 
-     */
+        /**
+         * @return The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
+         * 
+         */
     private final @Nullable String start;
 
     @CustomType.Constructor
@@ -90,73 +90,73 @@ public final class VideoOverlayResponse {
     }
 
     /**
-     * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
+     * @return The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
      * 
-    */
+     */
     public Optional<Double> audioGainLevel() {
         return Optional.ofNullable(this.audioGainLevel);
     }
     /**
-     * An optional rectangular window used to crop the overlay image or video.
+     * @return An optional rectangular window used to crop the overlay image or video.
      * 
-    */
+     */
     public Optional<RectangleResponse> cropRectangle() {
         return Optional.ofNullable(this.cropRectangle);
     }
     /**
-     * The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
+     * @return The end position, with reference to the input video, at which the overlay ends. The value should be in ISO 8601 format. For example, PT30S to end the overlay at 30 seconds into the input video. If not specified or the value is greater than the input video duration, the overlay will be applied until the end of the input video if the overlay media duration is greater than the input video duration, else the overlay will last as long as the overlay media duration.
      * 
-    */
+     */
     public Optional<String> end() {
         return Optional.ofNullable(this.end);
     }
     /**
-     * The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
+     * @return The duration over which the overlay fades in onto the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade in (same as PT0S).
      * 
-    */
+     */
     public Optional<String> fadeInDuration() {
         return Optional.ofNullable(this.fadeInDuration);
     }
     /**
-     * The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
+     * @return The duration over which the overlay fades out of the input video. The value should be in ISO 8601 duration format. If not specified the default behavior is to have no fade out (same as PT0S).
      * 
-    */
+     */
     public Optional<String> fadeOutDuration() {
         return Optional.ofNullable(this.fadeOutDuration);
     }
     /**
-     * The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
+     * @return The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats.
      * 
-    */
+     */
     public String inputLabel() {
         return this.inputLabel;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.VideoOverlay&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
+     * @return The opacity of the overlay. This is a value in the range [0 - 1.0]. Default is 1.0 which mean the overlay is opaque.
      * 
-    */
+     */
     public Optional<Double> opacity() {
         return Optional.ofNullable(this.opacity);
     }
     /**
-     * The location in the input video where the overlay is applied.
+     * @return The location in the input video where the overlay is applied.
      * 
-    */
+     */
     public Optional<RectangleResponse> position() {
         return Optional.ofNullable(this.position);
     }
     /**
-     * The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
+     * @return The start position, with reference to the input video, at which the overlay starts. The value should be in ISO 8601 format. For example, PT05S to start the overlay at 5 seconds into the input video. If not specified the overlay starts from the beginning of the input video.
      * 
-    */
+     */
     public Optional<String> start() {
         return Optional.ofNullable(this.start);
     }

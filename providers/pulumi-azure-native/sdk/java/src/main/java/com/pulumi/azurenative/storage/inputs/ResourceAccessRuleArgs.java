@@ -26,6 +26,10 @@ public final class ResourceAccessRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -37,6 +41,10 @@ public final class ResourceAccessRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant Id
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -66,20 +74,44 @@ public final class ResourceAccessRuleArgs extends com.pulumi.resources.ResourceA
             $ = new ResourceAccessRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

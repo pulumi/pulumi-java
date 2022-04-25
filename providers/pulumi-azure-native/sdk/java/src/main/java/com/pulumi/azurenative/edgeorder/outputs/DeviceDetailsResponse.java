@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class DeviceDetailsResponse {
-    /**
-     * Management Resource Id
-     * 
-     */
+        /**
+         * @return Management Resource Id
+         * 
+         */
     private final String managementResourceId;
-    /**
-     * Management Resource Tenant ID
-     * 
-     */
+        /**
+         * @return Management Resource Tenant ID
+         * 
+         */
     private final String managementResourceTenantId;
-    /**
-     * device serial number
-     * 
-     */
+        /**
+         * @return device serial number
+         * 
+         */
     private final String serialNumber;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class DeviceDetailsResponse {
     }
 
     /**
-     * Management Resource Id
+     * @return Management Resource Id
      * 
-    */
+     */
     public String managementResourceId() {
         return this.managementResourceId;
     }
     /**
-     * Management Resource Tenant ID
+     * @return Management Resource Tenant ID
      * 
-    */
+     */
     public String managementResourceTenantId() {
         return this.managementResourceTenantId;
     }
     /**
-     * device serial number
+     * @return device serial number
      * 
-    */
+     */
     public String serialNumber() {
         return this.serialNumber;
     }

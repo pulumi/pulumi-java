@@ -30,6 +30,10 @@ public final class RoutingEndpointsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="eventHubs")
     private @Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs;
 
+    /**
+     * @return The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
+     * 
+     */
     public Optional<Output<List<RoutingEventHubPropertiesArgs>>> eventHubs() {
         return Optional.ofNullable(this.eventHubs);
     }
@@ -41,6 +45,10 @@ public final class RoutingEndpointsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serviceBusQueues")
     private @Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
 
+    /**
+     * @return The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
+     * 
+     */
     public Optional<Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>>> serviceBusQueues() {
         return Optional.ofNullable(this.serviceBusQueues);
     }
@@ -52,6 +60,10 @@ public final class RoutingEndpointsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="serviceBusTopics")
     private @Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
 
+    /**
+     * @return The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
+     * 
+     */
     public Optional<Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>>> serviceBusTopics() {
         return Optional.ofNullable(this.serviceBusTopics);
     }
@@ -63,6 +75,10 @@ public final class RoutingEndpointsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="storageContainers")
     private @Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 
+    /**
+     * @return The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
+     * 
+     */
     public Optional<Output<List<RoutingStorageContainerPropertiesArgs>>> storageContainers() {
         return Optional.ofNullable(this.storageContainers);
     }
@@ -94,54 +110,126 @@ public final class RoutingEndpointsArgs extends com.pulumi.resources.ResourceArg
             $ = new RoutingEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubs The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubs(@Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs) {
             $.eventHubs = eventHubs;
             return this;
         }
 
+        /**
+         * @param eventHubs The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubs(List<RoutingEventHubPropertiesArgs> eventHubs) {
             return eventHubs(Output.of(eventHubs));
         }
 
+        /**
+         * @param eventHubs The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubs(RoutingEventHubPropertiesArgs... eventHubs) {
             return eventHubs(List.of(eventHubs));
         }
 
+        /**
+         * @param serviceBusQueues The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusQueues(@Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues) {
             $.serviceBusQueues = serviceBusQueues;
             return this;
         }
 
+        /**
+         * @param serviceBusQueues The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusQueues(List<RoutingServiceBusQueueEndpointPropertiesArgs> serviceBusQueues) {
             return serviceBusQueues(Output.of(serviceBusQueues));
         }
 
+        /**
+         * @param serviceBusQueues The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusQueues(RoutingServiceBusQueueEndpointPropertiesArgs... serviceBusQueues) {
             return serviceBusQueues(List.of(serviceBusQueues));
         }
 
+        /**
+         * @param serviceBusTopics The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusTopics(@Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics) {
             $.serviceBusTopics = serviceBusTopics;
             return this;
         }
 
+        /**
+         * @param serviceBusTopics The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusTopics(List<RoutingServiceBusTopicEndpointPropertiesArgs> serviceBusTopics) {
             return serviceBusTopics(Output.of(serviceBusTopics));
         }
 
+        /**
+         * @param serviceBusTopics The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceBusTopics(RoutingServiceBusTopicEndpointPropertiesArgs... serviceBusTopics) {
             return serviceBusTopics(List.of(serviceBusTopics));
         }
 
+        /**
+         * @param storageContainers The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageContainers(@Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers) {
             $.storageContainers = storageContainers;
             return this;
         }
 
+        /**
+         * @param storageContainers The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageContainers(List<RoutingStorageContainerPropertiesArgs> storageContainers) {
             return storageContainers(Output.of(storageContainers));
         }
 
+        /**
+         * @param storageContainers The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageContainers(RoutingStorageContainerPropertiesArgs... storageContainers) {
             return storageContainers(List.of(storageContainers));
         }

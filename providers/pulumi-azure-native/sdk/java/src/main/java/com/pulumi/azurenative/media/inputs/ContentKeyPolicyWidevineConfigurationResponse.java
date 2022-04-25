@@ -25,6 +25,11 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends com.pul
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -36,6 +41,10 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends com.pul
     @Import(name="widevineTemplate", required=true)
     private String widevineTemplate;
 
+    /**
+     * @return The Widevine template.
+     * 
+     */
     public String widevineTemplate() {
         return this.widevineTemplate;
     }
@@ -65,11 +74,24 @@ public final class ContentKeyPolicyWidevineConfigurationResponse extends com.pul
             $ = new ContentKeyPolicyWidevineConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyWidevineConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param widevineTemplate The Widevine template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder widevineTemplate(String widevineTemplate) {
             $.widevineTemplate = widevineTemplate;
             return this;

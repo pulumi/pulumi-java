@@ -29,6 +29,11 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
     private Output<String> distributionType;
 
+    /**
+     * @return Enum to determine the job distribution type.
+     * Expected value is &#39;PyTorch&#39;.
+     * 
+     */
     public Output<String> distributionType() {
         return this.distributionType;
     }
@@ -40,6 +45,10 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="processCount")
     private @Nullable Output<Integer> processCount;
 
+    /**
+     * @return Total process count for the distributed job.
+     * 
+     */
     public Optional<Output<Integer>> processCount() {
         return Optional.ofNullable(this.processCount);
     }
@@ -69,20 +78,46 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PyTorchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;PyTorch&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(Output<String> distributionType) {
             $.distributionType = distributionType;
             return this;
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;PyTorch&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(String distributionType) {
             return distributionType(Output.of(distributionType));
         }
 
+        /**
+         * @param processCount Total process count for the distributed job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCount(@Nullable Output<Integer> processCount) {
             $.processCount = processCount;
             return this;
         }
 
+        /**
+         * @param processCount Total process count for the distributed job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCount(Integer processCount) {
             return processCount(Output.of(processCount));
         }

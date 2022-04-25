@@ -28,6 +28,10 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forwardProxy")
     private @Nullable Output<ForwardProxyArgs> forwardProxy;
 
+    /**
+     * @return The configuration settings of a forward proxy used to make the requests.
+     * 
+     */
     public Optional<Output<ForwardProxyArgs>> forwardProxy() {
         return Optional.ofNullable(this.forwardProxy);
     }
@@ -39,6 +43,10 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="requireHttps")
     private @Nullable Output<Boolean> requireHttps;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> requireHttps() {
         return Optional.ofNullable(this.requireHttps);
     }
@@ -50,6 +58,10 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="routes")
     private @Nullable Output<HttpSettingsRoutesArgs> routes;
 
+    /**
+     * @return The configuration settings of the paths HTTP requests.
+     * 
+     */
     public Optional<Output<HttpSettingsRoutesArgs>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -80,29 +92,65 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardProxy The configuration settings of a forward proxy used to make the requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardProxy(@Nullable Output<ForwardProxyArgs> forwardProxy) {
             $.forwardProxy = forwardProxy;
             return this;
         }
 
+        /**
+         * @param forwardProxy The configuration settings of a forward proxy used to make the requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardProxy(ForwardProxyArgs forwardProxy) {
             return forwardProxy(Output.of(forwardProxy));
         }
 
+        /**
+         * @param requireHttps &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireHttps(@Nullable Output<Boolean> requireHttps) {
             $.requireHttps = requireHttps;
             return this;
         }
 
+        /**
+         * @param requireHttps &lt;code&gt;false&lt;/code&gt; if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireHttps(Boolean requireHttps) {
             return requireHttps(Output.of(requireHttps));
         }
 
+        /**
+         * @param routes The configuration settings of the paths HTTP requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<HttpSettingsRoutesArgs> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes The configuration settings of the paths HTTP requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(HttpSettingsRoutesArgs routes) {
             return routes(Output.of(routes));
         }

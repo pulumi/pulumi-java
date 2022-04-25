@@ -28,6 +28,10 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
     @Import(name="clientCredential")
     private @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
 
+    /**
+     * @return The authentication credentials of the custom Open ID Connect provider.
+     * 
+     */
     public Optional<Output<OpenIdConnectClientCredentialArgs>> clientCredential() {
         return Optional.ofNullable(this.clientCredential);
     }
@@ -39,6 +43,10 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The client id of the custom Open ID Connect provider.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -50,6 +58,10 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
     @Import(name="openIdConnectConfiguration")
     private @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
 
+    /**
+     * @return The configuration settings of the endpoints used for the custom Open ID Connect provider.
+     * 
+     */
     public Optional<Output<OpenIdConnectConfigArgs>> openIdConnectConfiguration() {
         return Optional.ofNullable(this.openIdConnectConfiguration);
     }
@@ -80,29 +92,65 @@ public final class OpenIdConnectRegistrationArgs extends com.pulumi.resources.Re
             $ = new OpenIdConnectRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientCredential The authentication credentials of the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCredential(@Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential) {
             $.clientCredential = clientCredential;
             return this;
         }
 
+        /**
+         * @param clientCredential The authentication credentials of the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCredential(OpenIdConnectClientCredentialArgs clientCredential) {
             return clientCredential(Output.of(clientCredential));
         }
 
+        /**
+         * @param clientId The client id of the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The client id of the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param openIdConnectConfiguration The configuration settings of the endpoints used for the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openIdConnectConfiguration(@Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration) {
             $.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }
 
+        /**
+         * @param openIdConnectConfiguration The configuration settings of the endpoints used for the custom Open ID Connect provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openIdConnectConfiguration(OpenIdConnectConfigArgs openIdConnectConfiguration) {
             return openIdConnectConfiguration(Output.of(openIdConnectConfiguration));
         }

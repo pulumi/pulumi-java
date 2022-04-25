@@ -24,6 +24,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return A resource identifier for the API the issue was created for.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -35,6 +39,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
     private @Nullable Output<String> createdDate;
 
+    /**
+     * @return Date and time when the issue was created.
+     * 
+     */
     public Optional<Output<String>> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
@@ -46,6 +54,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
     private Output<String> description;
 
+    /**
+     * @return Text describing the issue.
+     * 
+     */
     public Output<String> description() {
         return this.description;
     }
@@ -57,6 +69,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="issueId")
     private @Nullable Output<String> issueId;
 
+    /**
+     * @return Issue identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> issueId() {
         return Optional.ofNullable(this.issueId);
     }
@@ -68,6 +84,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -90,6 +114,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<Either<String,State>> state;
 
+    /**
+     * @return Status of the issue.
+     * 
+     */
     public Optional<Output<Either<String,State>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -101,6 +129,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
     private Output<String> title;
 
+    /**
+     * @return The issue title.
+     * 
+     */
     public Output<String> title() {
         return this.title;
     }
@@ -112,6 +144,10 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
     private Output<String> userId;
 
+    /**
+     * @return A resource identifier for the user created the issue.
+     * 
+     */
     public Output<String> userId() {
         return this.userId;
     }
@@ -148,91 +184,211 @@ public final class ApiIssueArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiIssueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId A resource identifier for the API the issue was created for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId A resource identifier for the API the issue was created for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param createdDate Date and time when the issue was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(@Nullable Output<String> createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param createdDate Date and time when the issue was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             return createdDate(Output.of(createdDate));
         }
 
+        /**
+         * @param description Text describing the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Text describing the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(@Nullable Output<String> issueId) {
             $.issueId = issueId;
             return this;
         }
 
+        /**
+         * @param issueId Issue identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issueId(String issueId) {
             return issueId(Output.of(issueId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param state Status of the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Status of the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state Status of the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state Status of the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Either.ofRight(state));
         }
 
+        /**
+         * @param title The issue title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The issue title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }
 
+        /**
+         * @param userId A resource identifier for the user created the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId A resource identifier for the user created the issue.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

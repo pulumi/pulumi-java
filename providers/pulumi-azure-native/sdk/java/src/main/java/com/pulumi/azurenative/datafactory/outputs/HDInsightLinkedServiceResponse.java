@@ -20,71 +20,71 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HDInsightLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * HDInsight cluster URI. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return HDInsight cluster URI. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object clusterUri;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object fileSystem;
-    /**
-     * A reference to the Azure SQL linked service that points to the HCatalog database.
-     * 
-     */
+        /**
+         * @return A reference to the Azure SQL linked service that points to the HCatalog database.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName;
-    /**
-     * Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
-     * 
-     */
+        /**
+         * @return Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
+         * 
+         */
     private final @Nullable Object isEspEnabled;
-    /**
-     * The Azure Storage linked service reference.
-     * 
-     */
+        /**
+         * @return The Azure Storage linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * HDInsight cluster password.
-     * 
-     */
+        /**
+         * @return HDInsight cluster password.
+         * 
+         */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;HDInsight&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;HDInsight&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * HDInsight cluster user name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return HDInsight cluster user name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object userName;
 
     @CustomType.Constructor
@@ -118,94 +118,94 @@ public final class HDInsightLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * HDInsight cluster URI. Type: string (or Expression with resultType string).
+     * @return HDInsight cluster URI. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object clusterUri() {
         return this.clusterUri;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
+     * @return Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
     /**
-     * A reference to the Azure SQL linked service that points to the HCatalog database.
+     * @return A reference to the Azure SQL linked service that points to the HCatalog database.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> hcatalogLinkedServiceName() {
         return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
     /**
-     * Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
+     * @return Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
      * 
-    */
+     */
     public Optional<Object> isEspEnabled() {
         return Optional.ofNullable(this.isEspEnabled);
     }
     /**
-     * The Azure Storage linked service reference.
+     * @return The Azure Storage linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * HDInsight cluster password.
+     * @return HDInsight cluster password.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;HDInsight&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * HDInsight cluster user name. Type: string (or Expression with resultType string).
+     * @return HDInsight cluster user name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }

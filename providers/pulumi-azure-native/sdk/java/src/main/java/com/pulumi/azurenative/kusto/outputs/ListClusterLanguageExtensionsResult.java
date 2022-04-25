@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListClusterLanguageExtensionsResult {
-    /**
-     * The list of language extensions.
-     * 
-     */
+        /**
+         * @return The list of language extensions.
+         * 
+         */
     private final @Nullable List<LanguageExtensionResponse> value;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class ListClusterLanguageExtensionsResult {
     }
 
     /**
-     * The list of language extensions.
+     * @return The list of language extensions.
      * 
-    */
+     */
     public List<LanguageExtensionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

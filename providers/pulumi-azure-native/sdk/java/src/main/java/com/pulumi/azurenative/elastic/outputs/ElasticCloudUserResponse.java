@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ElasticCloudUserResponse {
-    /**
-     * Elastic cloud default dashboard sso URL of the Elastic user account.
-     * 
-     */
+        /**
+         * @return Elastic cloud default dashboard sso URL of the Elastic user account.
+         * 
+         */
     private final String elasticCloudSsoDefaultUrl;
-    /**
-     * Email of the Elastic User Account.
-     * 
-     */
+        /**
+         * @return Email of the Elastic User Account.
+         * 
+         */
     private final String emailAddress;
-    /**
-     * User Id of the elastic account of the User.
-     * 
-     */
+        /**
+         * @return User Id of the elastic account of the User.
+         * 
+         */
     private final String id;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ElasticCloudUserResponse {
     }
 
     /**
-     * Elastic cloud default dashboard sso URL of the Elastic user account.
+     * @return Elastic cloud default dashboard sso URL of the Elastic user account.
      * 
-    */
+     */
     public String elasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
     }
     /**
-     * Email of the Elastic User Account.
+     * @return Email of the Elastic User Account.
      * 
-    */
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
     /**
-     * User Id of the elastic account of the User.
+     * @return User Id of the elastic account of the User.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

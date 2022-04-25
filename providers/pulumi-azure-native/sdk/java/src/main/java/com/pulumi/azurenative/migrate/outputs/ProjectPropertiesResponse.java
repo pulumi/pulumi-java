@@ -14,80 +14,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ProjectPropertiesResponse {
-    /**
-     * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
-     * 
-     */
+        /**
+         * @return Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+         * 
+         */
     private final @Nullable String assessmentSolutionId;
-    /**
-     * Time when this project was created. Date-Time represented in ISO-8601 format.
-     * 
-     */
+        /**
+         * @return Time when this project was created. Date-Time represented in ISO-8601 format.
+         * 
+         */
     private final String createdTimestamp;
-    /**
-     * The ARM id of the storage account used for interactions when public access is disabled.
-     * 
-     */
+        /**
+         * @return The ARM id of the storage account used for interactions when public access is disabled.
+         * 
+         */
     private final @Nullable String customerStorageAccountArmId;
-    /**
-     * The ARM id of service map workspace created by customer.
-     * 
-     */
+        /**
+         * @return The ARM id of service map workspace created by customer.
+         * 
+         */
     private final @Nullable String customerWorkspaceId;
-    /**
-     * Location of service map workspace created by customer.
-     * 
-     */
+        /**
+         * @return Location of service map workspace created by customer.
+         * 
+         */
     private final @Nullable String customerWorkspaceLocation;
-    /**
-     * Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
-     * 
-     */
+        /**
+         * @return Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+         * 
+         */
     private final String lastAssessmentTimestamp;
-    /**
-     * Number of assessments created in the project.
-     * 
-     */
+        /**
+         * @return Number of assessments created in the project.
+         * 
+         */
     private final Integer numberOfAssessments;
-    /**
-     * Number of groups created in the project.
-     * 
-     */
+        /**
+         * @return Number of groups created in the project.
+         * 
+         */
     private final Integer numberOfGroups;
-    /**
-     * Number of machines in the project.
-     * 
-     */
+        /**
+         * @return Number of machines in the project.
+         * 
+         */
     private final Integer numberOfMachines;
-    /**
-     * The list of private endpoint connections to the project.
-     * 
-     */
+        /**
+         * @return The list of private endpoint connections to the project.
+         * 
+         */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Assessment project status.
-     * 
-     */
+        /**
+         * @return Assessment project status.
+         * 
+         */
     private final @Nullable String projectStatus;
-    /**
-     * Provisioning state of the project.
-     * 
-     */
+        /**
+         * @return Provisioning state of the project.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
-     * 
-     */
+        /**
+         * @return This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
-    /**
-     * Endpoint at which the collector agent can call agent REST API.
-     * 
-     */
+        /**
+         * @return Endpoint at which the collector agent can call agent REST API.
+         * 
+         */
     private final String serviceEndpoint;
-    /**
-     * Time when this project was last updated. Date-Time represented in ISO-8601 format.
-     * 
-     */
+        /**
+         * @return Time when this project was last updated. Date-Time represented in ISO-8601 format.
+         * 
+         */
     private final String updatedTimestamp;
 
     @CustomType.Constructor
@@ -125,107 +125,107 @@ public final class ProjectPropertiesResponse {
     }
 
     /**
-     * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+     * @return Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
      * 
-    */
+     */
     public Optional<String> assessmentSolutionId() {
         return Optional.ofNullable(this.assessmentSolutionId);
     }
     /**
-     * Time when this project was created. Date-Time represented in ISO-8601 format.
+     * @return Time when this project was created. Date-Time represented in ISO-8601 format.
      * 
-    */
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
     /**
-     * The ARM id of the storage account used for interactions when public access is disabled.
+     * @return The ARM id of the storage account used for interactions when public access is disabled.
      * 
-    */
+     */
     public Optional<String> customerStorageAccountArmId() {
         return Optional.ofNullable(this.customerStorageAccountArmId);
     }
     /**
-     * The ARM id of service map workspace created by customer.
+     * @return The ARM id of service map workspace created by customer.
      * 
-    */
+     */
     public Optional<String> customerWorkspaceId() {
         return Optional.ofNullable(this.customerWorkspaceId);
     }
     /**
-     * Location of service map workspace created by customer.
+     * @return Location of service map workspace created by customer.
      * 
-    */
+     */
     public Optional<String> customerWorkspaceLocation() {
         return Optional.ofNullable(this.customerWorkspaceLocation);
     }
     /**
-     * Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
+     * @return Time when last assessment was created. Date-Time represented in ISO-8601 format. This value will be null until assessment is created.
      * 
-    */
+     */
     public String lastAssessmentTimestamp() {
         return this.lastAssessmentTimestamp;
     }
     /**
-     * Number of assessments created in the project.
+     * @return Number of assessments created in the project.
      * 
-    */
+     */
     public Integer numberOfAssessments() {
         return this.numberOfAssessments;
     }
     /**
-     * Number of groups created in the project.
+     * @return Number of groups created in the project.
      * 
-    */
+     */
     public Integer numberOfGroups() {
         return this.numberOfGroups;
     }
     /**
-     * Number of machines in the project.
+     * @return Number of machines in the project.
      * 
-    */
+     */
     public Integer numberOfMachines() {
         return this.numberOfMachines;
     }
     /**
-     * The list of private endpoint connections to the project.
+     * @return The list of private endpoint connections to the project.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Assessment project status.
+     * @return Assessment project status.
      * 
-    */
+     */
     public Optional<String> projectStatus() {
         return Optional.ofNullable(this.projectStatus);
     }
     /**
-     * Provisioning state of the project.
+     * @return Provisioning state of the project.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     * @return This value can be set to &#39;enabled&#39; to avoid breaking changes on existing customer resources and templates. If set to &#39;disabled&#39;, traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Endpoint at which the collector agent can call agent REST API.
+     * @return Endpoint at which the collector agent can call agent REST API.
      * 
-    */
+     */
     public String serviceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
-     * Time when this project was last updated. Date-Time represented in ISO-8601 format.
+     * @return Time when this project was last updated. Date-Time represented in ISO-8601 format.
      * 
-    */
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }

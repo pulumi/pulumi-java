@@ -25,6 +25,10 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends com.pulumi.reso
     @Import(name="sqlWorkloadType")
     private @Nullable String sqlWorkloadType;
 
+    /**
+     * @return SQL Server workload type.
+     * 
+     */
     public Optional<String> sqlWorkloadType() {
         return Optional.ofNullable(this.sqlWorkloadType);
     }
@@ -53,6 +57,12 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends com.pulumi.reso
             $ = new SqlWorkloadTypeUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sqlWorkloadType SQL Server workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlWorkloadType(@Nullable String sqlWorkloadType) {
             $.sqlWorkloadType = sqlWorkloadType;
             return this;

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportConfigSortingResponse {
-    /**
-     * Direction of sort.
-     * 
-     */
+        /**
+         * @return Direction of sort.
+         * 
+         */
     private final @Nullable String direction;
-    /**
-     * The name of the column to sort.
-     * 
-     */
+        /**
+         * @return The name of the column to sort.
+         * 
+         */
     private final String name;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ReportConfigSortingResponse {
     }
 
     /**
-     * Direction of sort.
+     * @return Direction of sort.
      * 
-    */
+     */
     public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
-     * The name of the column to sort.
+     * @return The name of the column to sort.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

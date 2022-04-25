@@ -29,6 +29,10 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="option")
     private @Nullable Output<Either<String,DiffDiskOptions>> option;
 
+    /**
+     * @return Specifies the ephemeral disk settings for operating system disk.
+     * 
+     */
     public Optional<Output<Either<String,DiffDiskOptions>>> option() {
         return Optional.ofNullable(this.option);
     }
@@ -40,6 +44,10 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="placement")
     private @Nullable Output<Either<String,DiffDiskPlacement>> placement;
 
+    /**
+     * @return Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+     * 
+     */
     public Optional<Output<Either<String,DiffDiskPlacement>>> placement() {
         return Optional.ofNullable(this.placement);
     }
@@ -69,36 +77,84 @@ public final class DiffDiskSettingsArgs extends com.pulumi.resources.ResourceArg
             $ = new DiffDiskSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param option Specifies the ephemeral disk settings for operating system disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder option(@Nullable Output<Either<String,DiffDiskOptions>> option) {
             $.option = option;
             return this;
         }
 
+        /**
+         * @param option Specifies the ephemeral disk settings for operating system disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder option(Either<String,DiffDiskOptions> option) {
             return option(Output.of(option));
         }
 
+        /**
+         * @param option Specifies the ephemeral disk settings for operating system disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder option(String option) {
             return option(Either.ofLeft(option));
         }
 
+        /**
+         * @param option Specifies the ephemeral disk settings for operating system disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder option(DiffDiskOptions option) {
             return option(Either.ofRight(option));
         }
 
+        /**
+         * @param placement Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(@Nullable Output<Either<String,DiffDiskPlacement>> placement) {
             $.placement = placement;
             return this;
         }
 
+        /**
+         * @param placement Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(Either<String,DiffDiskPlacement> placement) {
             return placement(Output.of(placement));
         }
 
+        /**
+         * @param placement Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(String placement) {
             return placement(Either.ofLeft(placement));
         }
 
+        /**
+         * @param placement Specifies the ephemeral disk placement for operating system disk.&lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **CacheDisk** &lt;br&gt;&lt;br&gt; **ResourceDisk** &lt;br&gt;&lt;br&gt; Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.&lt;br&gt;&lt;br&gt; Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder placement(DiffDiskPlacement placement) {
             return placement(Either.ofRight(placement));
         }

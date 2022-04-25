@@ -25,6 +25,10 @@ public final class JsonFieldResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceField")
     private @Nullable String sourceField;
 
+    /**
+     * @return Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+     * 
+     */
     public Optional<String> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
@@ -53,6 +57,12 @@ public final class JsonFieldResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JsonFieldResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceField Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(@Nullable String sourceField) {
             $.sourceField = sourceField;
             return this;

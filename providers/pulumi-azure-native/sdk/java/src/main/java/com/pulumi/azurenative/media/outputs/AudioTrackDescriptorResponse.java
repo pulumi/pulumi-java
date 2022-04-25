@@ -11,16 +11,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AudioTrackDescriptorResponse {
-    /**
-     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
-     * 
-     */
+        /**
+         * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         */
     private final @Nullable String channelMapping;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class AudioTrackDescriptorResponse {
     }
 
     /**
-     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
      * 
-    */
+     */
     public Optional<String> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

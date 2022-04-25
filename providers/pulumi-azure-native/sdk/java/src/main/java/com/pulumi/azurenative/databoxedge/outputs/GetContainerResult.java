@@ -11,45 +11,45 @@ import java.util.Objects;
 
 @CustomType
 public final class GetContainerResult {
-    /**
-     * Current status of the container.
-     * 
-     */
+        /**
+         * @return Current status of the container.
+         * 
+         */
     private final String containerStatus;
-    /**
-     * The UTC time when container got created.
-     * 
-     */
+        /**
+         * @return The UTC time when container got created.
+         * 
+         */
     private final String createdDateTime;
-    /**
-     * DataFormat for Container
-     * 
-     */
+        /**
+         * @return DataFormat for Container
+         * 
+         */
     private final String dataFormat;
-    /**
-     * The path ID that uniquely identifies the object.
-     * 
-     */
+        /**
+         * @return The path ID that uniquely identifies the object.
+         * 
+         */
     private final String id;
-    /**
-     * The object name.
-     * 
-     */
+        /**
+         * @return The object name.
+         * 
+         */
     private final String name;
-    /**
-     * Details of the refresh job on this container.
-     * 
-     */
+        /**
+         * @return Details of the refresh job on this container.
+         * 
+         */
     private final RefreshDetailsResponse refreshDetails;
-    /**
-     * Container in DataBoxEdge Resource
-     * 
-     */
+        /**
+         * @return Container in DataBoxEdge Resource
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * The hierarchical type of the object.
-     * 
-     */
+        /**
+         * @return The hierarchical type of the object.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -73,58 +73,58 @@ public final class GetContainerResult {
     }
 
     /**
-     * Current status of the container.
+     * @return Current status of the container.
      * 
-    */
+     */
     public String containerStatus() {
         return this.containerStatus;
     }
     /**
-     * The UTC time when container got created.
+     * @return The UTC time when container got created.
      * 
-    */
+     */
     public String createdDateTime() {
         return this.createdDateTime;
     }
     /**
-     * DataFormat for Container
+     * @return DataFormat for Container
      * 
-    */
+     */
     public String dataFormat() {
         return this.dataFormat;
     }
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The object name.
+     * @return The object name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Details of the refresh job on this container.
+     * @return Details of the refresh job on this container.
      * 
-    */
+     */
     public RefreshDetailsResponse refreshDetails() {
         return this.refreshDetails;
     }
     /**
-     * Container in DataBoxEdge Resource
+     * @return Container in DataBoxEdge Resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

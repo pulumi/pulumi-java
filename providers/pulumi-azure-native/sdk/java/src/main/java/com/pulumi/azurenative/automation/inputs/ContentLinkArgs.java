@@ -27,6 +27,10 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentHash")
     private @Nullable Output<ContentHashArgs> contentHash;
 
+    /**
+     * @return Gets or sets the hash.
+     * 
+     */
     public Optional<Output<ContentHashArgs>> contentHash() {
         return Optional.ofNullable(this.contentHash);
     }
@@ -38,6 +42,10 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return Gets or sets the uri of the runbook content.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -49,6 +57,10 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Gets or sets the version of the content.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -79,29 +91,65 @@ public final class ContentLinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContentLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentHash Gets or sets the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(@Nullable Output<ContentHashArgs> contentHash) {
             $.contentHash = contentHash;
             return this;
         }
 
+        /**
+         * @param contentHash Gets or sets the hash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentHash(ContentHashArgs contentHash) {
             return contentHash(Output.of(contentHash));
         }
 
+        /**
+         * @param uri Gets or sets the uri of the runbook content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Gets or sets the uri of the runbook content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }
 
+        /**
+         * @param version Gets or sets the version of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Gets or sets the version of the content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

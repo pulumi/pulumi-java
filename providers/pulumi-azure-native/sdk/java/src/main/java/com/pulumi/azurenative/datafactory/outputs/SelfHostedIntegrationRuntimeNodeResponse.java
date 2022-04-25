@@ -12,95 +12,95 @@ import java.util.Objects;
 
 @CustomType
 public final class SelfHostedIntegrationRuntimeNodeResponse {
-    /**
-     * The integration runtime capabilities dictionary
-     * 
-     */
+        /**
+         * @return The integration runtime capabilities dictionary
+         * 
+         */
     private final Map<String,String> capabilities;
-    /**
-     * Maximum concurrent jobs on the integration runtime node.
-     * 
-     */
+        /**
+         * @return Maximum concurrent jobs on the integration runtime node.
+         * 
+         */
     private final Integer concurrentJobsLimit;
-    /**
-     * The time at which the integration runtime will expire in ISO8601 format.
-     * 
-     */
+        /**
+         * @return The time at which the integration runtime will expire in ISO8601 format.
+         * 
+         */
     private final String expiryTime;
-    /**
-     * URI for the host machine of the integration runtime.
-     * 
-     */
+        /**
+         * @return URI for the host machine of the integration runtime.
+         * 
+         */
     private final String hostServiceUri;
-    /**
-     * Indicates whether this node is the active dispatcher for integration runtime requests.
-     * 
-     */
+        /**
+         * @return Indicates whether this node is the active dispatcher for integration runtime requests.
+         * 
+         */
     private final Boolean isActiveDispatcher;
-    /**
-     * The most recent time at which the integration runtime was connected in ISO8601 format.
-     * 
-     */
+        /**
+         * @return The most recent time at which the integration runtime was connected in ISO8601 format.
+         * 
+         */
     private final String lastConnectTime;
-    /**
-     * The last time for the integration runtime node update end.
-     * 
-     */
+        /**
+         * @return The last time for the integration runtime node update end.
+         * 
+         */
     private final String lastEndUpdateTime;
-    /**
-     * The time the node last started up.
-     * 
-     */
+        /**
+         * @return The time the node last started up.
+         * 
+         */
     private final String lastStartTime;
-    /**
-     * The last time for the integration runtime node update start.
-     * 
-     */
+        /**
+         * @return The last time for the integration runtime node update start.
+         * 
+         */
     private final String lastStartUpdateTime;
-    /**
-     * The integration runtime node last stop time.
-     * 
-     */
+        /**
+         * @return The integration runtime node last stop time.
+         * 
+         */
     private final String lastStopTime;
-    /**
-     * The result of the last integration runtime node update.
-     * 
-     */
+        /**
+         * @return The result of the last integration runtime node update.
+         * 
+         */
     private final String lastUpdateResult;
-    /**
-     * Machine name of the integration runtime node.
-     * 
-     */
+        /**
+         * @return Machine name of the integration runtime node.
+         * 
+         */
     private final String machineName;
-    /**
-     * The maximum concurrent jobs in this integration runtime.
-     * 
-     */
+        /**
+         * @return The maximum concurrent jobs in this integration runtime.
+         * 
+         */
     private final Integer maxConcurrentJobs;
-    /**
-     * Name of the integration runtime node.
-     * 
-     */
+        /**
+         * @return Name of the integration runtime node.
+         * 
+         */
     private final String nodeName;
-    /**
-     * The time at which the integration runtime node was registered in ISO8601 format.
-     * 
-     */
+        /**
+         * @return The time at which the integration runtime node was registered in ISO8601 format.
+         * 
+         */
     private final String registerTime;
-    /**
-     * Status of the integration runtime node.
-     * 
-     */
+        /**
+         * @return Status of the integration runtime node.
+         * 
+         */
     private final String status;
-    /**
-     * Version of the integration runtime node.
-     * 
-     */
+        /**
+         * @return Version of the integration runtime node.
+         * 
+         */
     private final String version;
-    /**
-     * Status of the integration runtime node version.
-     * 
-     */
+        /**
+         * @return Status of the integration runtime node version.
+         * 
+         */
     private final String versionStatus;
 
     @CustomType.Constructor
@@ -144,128 +144,128 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
     }
 
     /**
-     * The integration runtime capabilities dictionary
+     * @return The integration runtime capabilities dictionary
      * 
-    */
+     */
     public Map<String,String> capabilities() {
         return this.capabilities;
     }
     /**
-     * Maximum concurrent jobs on the integration runtime node.
+     * @return Maximum concurrent jobs on the integration runtime node.
      * 
-    */
+     */
     public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
     /**
-     * The time at which the integration runtime will expire in ISO8601 format.
+     * @return The time at which the integration runtime will expire in ISO8601 format.
      * 
-    */
+     */
     public String expiryTime() {
         return this.expiryTime;
     }
     /**
-     * URI for the host machine of the integration runtime.
+     * @return URI for the host machine of the integration runtime.
      * 
-    */
+     */
     public String hostServiceUri() {
         return this.hostServiceUri;
     }
     /**
-     * Indicates whether this node is the active dispatcher for integration runtime requests.
+     * @return Indicates whether this node is the active dispatcher for integration runtime requests.
      * 
-    */
+     */
     public Boolean isActiveDispatcher() {
         return this.isActiveDispatcher;
     }
     /**
-     * The most recent time at which the integration runtime was connected in ISO8601 format.
+     * @return The most recent time at which the integration runtime was connected in ISO8601 format.
      * 
-    */
+     */
     public String lastConnectTime() {
         return this.lastConnectTime;
     }
     /**
-     * The last time for the integration runtime node update end.
+     * @return The last time for the integration runtime node update end.
      * 
-    */
+     */
     public String lastEndUpdateTime() {
         return this.lastEndUpdateTime;
     }
     /**
-     * The time the node last started up.
+     * @return The time the node last started up.
      * 
-    */
+     */
     public String lastStartTime() {
         return this.lastStartTime;
     }
     /**
-     * The last time for the integration runtime node update start.
+     * @return The last time for the integration runtime node update start.
      * 
-    */
+     */
     public String lastStartUpdateTime() {
         return this.lastStartUpdateTime;
     }
     /**
-     * The integration runtime node last stop time.
+     * @return The integration runtime node last stop time.
      * 
-    */
+     */
     public String lastStopTime() {
         return this.lastStopTime;
     }
     /**
-     * The result of the last integration runtime node update.
+     * @return The result of the last integration runtime node update.
      * 
-    */
+     */
     public String lastUpdateResult() {
         return this.lastUpdateResult;
     }
     /**
-     * Machine name of the integration runtime node.
+     * @return Machine name of the integration runtime node.
      * 
-    */
+     */
     public String machineName() {
         return this.machineName;
     }
     /**
-     * The maximum concurrent jobs in this integration runtime.
+     * @return The maximum concurrent jobs in this integration runtime.
      * 
-    */
+     */
     public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
     /**
-     * Name of the integration runtime node.
+     * @return Name of the integration runtime node.
      * 
-    */
+     */
     public String nodeName() {
         return this.nodeName;
     }
     /**
-     * The time at which the integration runtime node was registered in ISO8601 format.
+     * @return The time at which the integration runtime node was registered in ISO8601 format.
      * 
-    */
+     */
     public String registerTime() {
         return this.registerTime;
     }
     /**
-     * Status of the integration runtime node.
+     * @return Status of the integration runtime node.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Version of the integration runtime node.
+     * @return Version of the integration runtime node.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }
     /**
-     * Status of the integration runtime node version.
+     * @return Status of the integration runtime node version.
      * 
-    */
+     */
     public String versionStatus() {
         return this.versionStatus;
     }

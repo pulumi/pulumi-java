@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AS2OneWayAgreementResponse {
-    /**
-     * The AS2 protocol settings.
-     * 
-     */
+        /**
+         * @return The AS2 protocol settings.
+         * 
+         */
     private final AS2ProtocolSettingsResponse protocolSettings;
-    /**
-     * The receiver business identity
-     * 
-     */
+        /**
+         * @return The receiver business identity
+         * 
+         */
     private final BusinessIdentityResponse receiverBusinessIdentity;
-    /**
-     * The sender business identity
-     * 
-     */
+        /**
+         * @return The sender business identity
+         * 
+         */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class AS2OneWayAgreementResponse {
     }
 
     /**
-     * The AS2 protocol settings.
+     * @return The AS2 protocol settings.
      * 
-    */
+     */
     public AS2ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
     }
     /**
-     * The receiver business identity
+     * @return The receiver business identity
      * 
-    */
+     */
     public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
     /**
-     * The sender business identity
+     * @return The sender business identity
      * 
-    */
+     */
     public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }

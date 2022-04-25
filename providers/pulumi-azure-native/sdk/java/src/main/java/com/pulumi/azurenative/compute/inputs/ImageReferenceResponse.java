@@ -25,6 +25,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="exactVersion", required=true)
     private String exactVersion;
 
+    /**
+     * @return Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
+     * 
+     */
     public String exactVersion() {
         return this.exactVersion;
     }
@@ -36,6 +40,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -47,6 +55,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="offer")
     private @Nullable String offer;
 
+    /**
+     * @return Specifies the offer of the platform image or marketplace image used to create the virtual machine.
+     * 
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -58,6 +70,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return The image publisher.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -69,6 +85,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sku")
     private @Nullable String sku;
 
+    /**
+     * @return The image SKU.
+     * 
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -80,6 +100,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -113,31 +137,67 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
             $ = new ImageReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exactVersion Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from &#39;version&#39;, only if the value specified in &#39;version&#39; field is &#39;latest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exactVersion(String exactVersion) {
             $.exactVersion = exactVersion;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param offer Specifies the offer of the platform image or marketplace image used to create the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable String offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param publisher The image publisher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param sku The image SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable String sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param version Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or &#39;latest&#39;. Major, Minor, and Build are decimal numbers. Specify &#39;latest&#39; to use the latest version of an image available at deploy time. Even if you use &#39;latest&#39;, the VM image will not automatically update after deploy time even if a new version becomes available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

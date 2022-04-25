@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UserObjectReceiverValueResponse {
-    /**
-     * user object ids.
-     * 
-     */
+        /**
+         * @return user object ids.
+         * 
+         */
     private final @Nullable List<String> userObjectIds;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class UserObjectReceiverValueResponse {
     }
 
     /**
-     * user object ids.
+     * @return user object ids.
      * 
-    */
+     */
     public List<String> userObjectIds() {
         return this.userObjectIds == null ? List.of() : this.userObjectIds;
     }

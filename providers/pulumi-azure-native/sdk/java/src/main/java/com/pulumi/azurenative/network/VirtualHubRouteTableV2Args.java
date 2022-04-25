@@ -24,6 +24,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="attachedConnections")
     private @Nullable Output<List<String>> attachedConnections;
 
+    /**
+     * @return List of all connections attached to this route table v2.
+     * 
+     */
     public Optional<Output<List<String>>> attachedConnections() {
         return Optional.ofNullable(this.attachedConnections);
     }
@@ -35,6 +39,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -46,6 +54,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualHub.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="routeTableName")
     private @Nullable Output<String> routeTableName;
 
+    /**
+     * @return The name of the VirtualHubRouteTableV2.
+     * 
+     */
     public Optional<Output<String>> routeTableName() {
         return Optional.ofNullable(this.routeTableName);
     }
@@ -79,6 +99,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="routes")
     private @Nullable Output<List<VirtualHubRouteV2Args>> routes;
 
+    /**
+     * @return List of all routes.
+     * 
+     */
     public Optional<Output<List<VirtualHubRouteV2Args>>> routes() {
         return Optional.ofNullable(this.routes);
     }
@@ -90,6 +114,10 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
     @Import(name="virtualHubName", required=true)
     private Output<String> virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
@@ -124,73 +152,169 @@ public final class VirtualHubRouteTableV2Args extends com.pulumi.resources.Resou
             $ = new VirtualHubRouteTableV2Args(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachedConnections List of all connections attached to this route table v2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedConnections(@Nullable Output<List<String>> attachedConnections) {
             $.attachedConnections = attachedConnections;
             return this;
         }
 
+        /**
+         * @param attachedConnections List of all connections attached to this route table v2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedConnections(List<String> attachedConnections) {
             return attachedConnections(Output.of(attachedConnections));
         }
 
+        /**
+         * @param attachedConnections List of all connections attached to this route table v2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachedConnections(String... attachedConnections) {
             return attachedConnections(List.of(attachedConnections));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param routeTableName The name of the VirtualHubRouteTableV2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(@Nullable Output<String> routeTableName) {
             $.routeTableName = routeTableName;
             return this;
         }
 
+        /**
+         * @param routeTableName The name of the VirtualHubRouteTableV2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeTableName(String routeTableName) {
             return routeTableName(Output.of(routeTableName));
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(@Nullable Output<List<VirtualHubRouteV2Args>> routes) {
             $.routes = routes;
             return this;
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(List<VirtualHubRouteV2Args> routes) {
             return routes(Output.of(routes));
         }
 
+        /**
+         * @param routes List of all routes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routes(VirtualHubRouteV2Args... routes) {
             return routes(List.of(routes));
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(Output<String> virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             return virtualHubName(Output.of(virtualHubName));
         }

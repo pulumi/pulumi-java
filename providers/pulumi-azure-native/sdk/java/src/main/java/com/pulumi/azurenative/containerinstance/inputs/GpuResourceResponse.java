@@ -24,6 +24,10 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="count", required=true)
     private Integer count;
 
+    /**
+     * @return The count of the GPU resource.
+     * 
+     */
     public Integer count() {
         return this.count;
     }
@@ -35,6 +39,10 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sku", required=true)
     private String sku;
 
+    /**
+     * @return The SKU of the GPU resource.
+     * 
+     */
     public String sku() {
         return this.sku;
     }
@@ -64,11 +72,23 @@ public final class GpuResourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GpuResourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The count of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the GPU resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             $.sku = sku;
             return this;

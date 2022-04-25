@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AuthenticationSettingsContractResponse {
-    /**
-     * OAuth2 Authentication settings
-     * 
-     */
+        /**
+         * @return OAuth2 Authentication settings
+         * 
+         */
     private final @Nullable OAuth2AuthenticationSettingsContractResponse oAuth2;
-    /**
-     * OpenID Connect Authentication Settings
-     * 
-     */
+        /**
+         * @return OpenID Connect Authentication Settings
+         * 
+         */
     private final @Nullable OpenIdAuthenticationSettingsContractResponse openid;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class AuthenticationSettingsContractResponse {
     }
 
     /**
-     * OAuth2 Authentication settings
+     * @return OAuth2 Authentication settings
      * 
-    */
+     */
     public Optional<OAuth2AuthenticationSettingsContractResponse> oAuth2() {
         return Optional.ofNullable(this.oAuth2);
     }
     /**
-     * OpenID Connect Authentication Settings
+     * @return OpenID Connect Authentication Settings
      * 
-    */
+     */
     public Optional<OpenIdAuthenticationSettingsContractResponse> openid() {
         return Optional.ofNullable(this.openid);
     }

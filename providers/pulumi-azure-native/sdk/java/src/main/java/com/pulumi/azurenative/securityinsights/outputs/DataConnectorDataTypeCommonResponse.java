@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataConnectorDataTypeCommonResponse {
-    /**
-     * Describe whether this data type connection is enabled or not.
-     * 
-     */
+        /**
+         * @return Describe whether this data type connection is enabled or not.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DataConnectorDataTypeCommonResponse {
     }
 
     /**
-     * Describe whether this data type connection is enabled or not.
+     * @return Describe whether this data type connection is enabled or not.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

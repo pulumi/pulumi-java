@@ -24,6 +24,10 @@ public final class MediaGraphTlsValidationOptionsArgs extends com.pulumi.resourc
     @Import(name="ignoreHostname", required=true)
     private Output<Boolean> ignoreHostname;
 
+    /**
+     * @return Ignore the host name (common name) during validation.
+     * 
+     */
     public Output<Boolean> ignoreHostname() {
         return this.ignoreHostname;
     }
@@ -35,6 +39,10 @@ public final class MediaGraphTlsValidationOptionsArgs extends com.pulumi.resourc
     @Import(name="ignoreSignature", required=true)
     private Output<Boolean> ignoreSignature;
 
+    /**
+     * @return Ignore the integrity of the certificate chain at the current time.
+     * 
+     */
     public Output<Boolean> ignoreSignature() {
         return this.ignoreSignature;
     }
@@ -64,20 +72,44 @@ public final class MediaGraphTlsValidationOptionsArgs extends com.pulumi.resourc
             $ = new MediaGraphTlsValidationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreHostname Ignore the host name (common name) during validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreHostname(Output<Boolean> ignoreHostname) {
             $.ignoreHostname = ignoreHostname;
             return this;
         }
 
+        /**
+         * @param ignoreHostname Ignore the host name (common name) during validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreHostname(Boolean ignoreHostname) {
             return ignoreHostname(Output.of(ignoreHostname));
         }
 
+        /**
+         * @param ignoreSignature Ignore the integrity of the certificate chain at the current time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSignature(Output<Boolean> ignoreSignature) {
             $.ignoreSignature = ignoreSignature;
             return this;
         }
 
+        /**
+         * @param ignoreSignature Ignore the integrity of the certificate chain at the current time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreSignature(Boolean ignoreSignature) {
             return ignoreSignature(Output.of(ignoreSignature));
         }

@@ -30,96 +30,96 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DelimitedTextDatasetResponse {
-    /**
-     * List of tags that can be used for describing the Dataset.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the Dataset.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The column delimiter. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The column delimiter. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object columnDelimiter;
-    /**
-     * The data compressionCodec. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The data compressionCodec. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object compressionCodec;
-    /**
-     * The data compression method used for DelimitedText.
-     * 
-     */
+        /**
+         * @return The data compression method used for DelimitedText.
+         * 
+         */
     private final @Nullable Object compressionLevel;
-    /**
-     * Dataset description.
-     * 
-     */
+        /**
+         * @return Dataset description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encodingName;
-    /**
-     * The escape character. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The escape character. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object escapeChar;
-    /**
-     * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object firstRowAsHeader;
-    /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
-     * 
-     */
+        /**
+         * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         */
     private final @Nullable DatasetResponseFolder folder;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * The location of the delimited text storage.
-     * 
-     */
+        /**
+         * @return The location of the delimited text storage.
+         * 
+         */
     private final Object location;
-    /**
-     * The null value string. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The null value string. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object nullValue;
-    /**
-     * Parameters for dataset.
-     * 
-     */
+        /**
+         * @return Parameters for dataset.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The quote character. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The quote character. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object quoteChar;
-    /**
-     * The row delimiter. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The row delimiter. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object rowDelimiter;
-    /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
-     * 
-     */
+        /**
+         * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         */
     private final @Nullable Object schema;
-    /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
-     * 
-     */
+        /**
+         * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         */
     private final @Nullable Object structure;
-    /**
-     * Type of dataset.
-     * Expected value is &#39;DelimitedText&#39;.
-     * 
-     */
+        /**
+         * @return Type of dataset.
+         * Expected value is &#39;DelimitedText&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -163,129 +163,129 @@ public final class DelimitedTextDatasetResponse {
     }
 
     /**
-     * List of tags that can be used for describing the Dataset.
+     * @return List of tags that can be used for describing the Dataset.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The column delimiter. Type: string (or Expression with resultType string).
+     * @return The column delimiter. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> columnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
     /**
-     * The data compressionCodec. Type: string (or Expression with resultType string).
+     * @return The data compressionCodec. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> compressionCodec() {
         return Optional.ofNullable(this.compressionCodec);
     }
     /**
-     * The data compression method used for DelimitedText.
+     * @return The data compression method used for DelimitedText.
      * 
-    */
+     */
     public Optional<Object> compressionLevel() {
         return Optional.ofNullable(this.compressionLevel);
     }
     /**
-     * Dataset description.
+     * @return Dataset description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+     * @return The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encodingName() {
         return Optional.ofNullable(this.encodingName);
     }
     /**
-     * The escape character. Type: string (or Expression with resultType string).
+     * @return The escape character. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> escapeChar() {
         return Optional.ofNullable(this.escapeChar);
     }
     /**
-     * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> firstRowAsHeader() {
         return Optional.ofNullable(this.firstRowAsHeader);
     }
     /**
-     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-    */
+     */
     public Optional<DatasetResponseFolder> folder() {
         return Optional.ofNullable(this.folder);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * The location of the delimited text storage.
+     * @return The location of the delimited text storage.
      * 
-    */
+     */
     public Object location() {
         return this.location;
     }
     /**
-     * The null value string. Type: string (or Expression with resultType string).
+     * @return The null value string. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> nullValue() {
         return Optional.ofNullable(this.nullValue);
     }
     /**
-     * Parameters for dataset.
+     * @return Parameters for dataset.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The quote character. Type: string (or Expression with resultType string).
+     * @return The quote character. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> quoteChar() {
         return Optional.ofNullable(this.quoteChar);
     }
     /**
-     * The row delimiter. Type: string (or Expression with resultType string).
+     * @return The row delimiter. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> rowDelimiter() {
         return Optional.ofNullable(this.rowDelimiter);
     }
     /**
-     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-    */
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-    */
+     */
     public Optional<Object> structure() {
         return Optional.ofNullable(this.structure);
     }
     /**
-     * Type of dataset.
+     * @return Type of dataset.
      * Expected value is &#39;DelimitedText&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

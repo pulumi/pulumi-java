@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ContainerConfigurationResponse {
-    /**
-     * This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
-     * 
-     */
+        /**
+         * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+         * 
+         */
     private final @Nullable List<String> containerImageNames;
-    /**
-     * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
-     * 
-     */
+        /**
+         * @return If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+         * 
+         */
     private final @Nullable List<ContainerRegistryResponse> containerRegistries;
     private final String type;
 
@@ -35,16 +35,16 @@ public final class ContainerConfigurationResponse {
     }
 
     /**
-     * This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+     * @return This is the full image reference, as would be specified to &#34;docker pull&#34;. An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
      * 
-    */
+     */
     public List<String> containerImageNames() {
         return this.containerImageNames == null ? List.of() : this.containerImageNames;
     }
     /**
-     * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+     * @return If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
      * 
-    */
+     */
     public List<ContainerRegistryResponse> containerRegistries() {
         return this.containerRegistries == null ? List.of() : this.containerRegistries;
     }

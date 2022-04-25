@@ -18,101 +18,101 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HDInsightStreamingActivityResponse {
-    /**
-     * User specified arguments to HDInsightActivity.
-     * 
-     */
+        /**
+         * @return User specified arguments to HDInsightActivity.
+         * 
+         */
     private final @Nullable List<Object> arguments;
-    /**
-     * Combiner executable name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Combiner executable name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object combiner;
-    /**
-     * Command line environment values.
-     * 
-     */
+        /**
+         * @return Command line environment values.
+         * 
+         */
     private final @Nullable List<Object> commandEnvironment;
-    /**
-     * Allows user to specify defines for streaming job request.
-     * 
-     */
+        /**
+         * @return Allows user to specify defines for streaming job request.
+         * 
+         */
     private final @Nullable Map<String,Object> defines;
-    /**
-     * Activity depends on condition.
-     * 
-     */
+        /**
+         * @return Activity depends on condition.
+         * 
+         */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
-    /**
-     * Activity description.
-     * 
-     */
+        /**
+         * @return Activity description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Linked service reference where the files are located.
-     * 
-     */
+        /**
+         * @return Linked service reference where the files are located.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse fileLinkedService;
-    /**
-     * Paths to streaming job files. Can be directories.
-     * 
-     */
+        /**
+         * @return Paths to streaming job files. Can be directories.
+         * 
+         */
     private final List<Object> filePaths;
-    /**
-     * Debug info option.
-     * 
-     */
+        /**
+         * @return Debug info option.
+         * 
+         */
     private final @Nullable String getDebugInfo;
-    /**
-     * Input blob path. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Input blob path. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object input;
-    /**
-     * Linked service reference.
-     * 
-     */
+        /**
+         * @return Linked service reference.
+         * 
+         */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
-    /**
-     * Mapper executable name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Mapper executable name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object mapper;
-    /**
-     * Activity name.
-     * 
-     */
+        /**
+         * @return Activity name.
+         * 
+         */
     private final String name;
-    /**
-     * Output blob path. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Output blob path. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object output;
-    /**
-     * Activity policy.
-     * 
-     */
+        /**
+         * @return Activity policy.
+         * 
+         */
     private final @Nullable ActivityPolicyResponse policy;
-    /**
-     * Reducer executable name. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return Reducer executable name. Type: string (or Expression with resultType string).
+         * 
+         */
     private final Object reducer;
-    /**
-     * Storage linked service references.
-     * 
-     */
+        /**
+         * @return Storage linked service references.
+         * 
+         */
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
-    /**
-     * Type of activity.
-     * Expected value is &#39;HDInsightStreaming&#39;.
-     * 
-     */
+        /**
+         * @return Type of activity.
+         * Expected value is &#39;HDInsightStreaming&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Activity user properties.
-     * 
-     */
+        /**
+         * @return Activity user properties.
+         * 
+         */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @CustomType.Constructor
@@ -158,136 +158,136 @@ public final class HDInsightStreamingActivityResponse {
     }
 
     /**
-     * User specified arguments to HDInsightActivity.
+     * @return User specified arguments to HDInsightActivity.
      * 
-    */
+     */
     public List<Object> arguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
-     * Combiner executable name. Type: string (or Expression with resultType string).
+     * @return Combiner executable name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> combiner() {
         return Optional.ofNullable(this.combiner);
     }
     /**
-     * Command line environment values.
+     * @return Command line environment values.
      * 
-    */
+     */
     public List<Object> commandEnvironment() {
         return this.commandEnvironment == null ? List.of() : this.commandEnvironment;
     }
     /**
-     * Allows user to specify defines for streaming job request.
+     * @return Allows user to specify defines for streaming job request.
      * 
-    */
+     */
     public Map<String,Object> defines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Linked service reference where the files are located.
+     * @return Linked service reference where the files are located.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> fileLinkedService() {
         return Optional.ofNullable(this.fileLinkedService);
     }
     /**
-     * Paths to streaming job files. Can be directories.
+     * @return Paths to streaming job files. Can be directories.
      * 
-    */
+     */
     public List<Object> filePaths() {
         return this.filePaths;
     }
     /**
-     * Debug info option.
+     * @return Debug info option.
      * 
-    */
+     */
     public Optional<String> getDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
-     * Input blob path. Type: string (or Expression with resultType string).
+     * @return Input blob path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object input() {
         return this.input;
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Mapper executable name. Type: string (or Expression with resultType string).
+     * @return Mapper executable name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object mapper() {
         return this.mapper;
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Output blob path. Type: string (or Expression with resultType string).
+     * @return Output blob path. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object output() {
         return this.output;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * Reducer executable name. Type: string (or Expression with resultType string).
+     * @return Reducer executable name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object reducer() {
         return this.reducer;
     }
     /**
-     * Storage linked service references.
+     * @return Storage linked service references.
      * 
-    */
+     */
     public List<LinkedServiceReferenceResponse> storageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;HDInsightStreaming&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

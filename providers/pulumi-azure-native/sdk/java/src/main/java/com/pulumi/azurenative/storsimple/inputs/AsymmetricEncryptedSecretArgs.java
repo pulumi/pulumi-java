@@ -27,6 +27,10 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
     @Import(name="encryptionAlgorithm", required=true)
     private Output<EncryptionAlgorithm> encryptionAlgorithm;
 
+    /**
+     * @return The algorithm used to encrypt &#34;Value&#34;.
+     * 
+     */
     public Output<EncryptionAlgorithm> encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
@@ -38,6 +42,10 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
     @Import(name="encryptionCertThumbprint")
     private @Nullable Output<String> encryptionCertThumbprint;
 
+    /**
+     * @return Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
+     * 
+     */
     public Optional<Output<String>> encryptionCertThumbprint() {
         return Optional.ofNullable(this.encryptionCertThumbprint);
     }
@@ -49,6 +57,10 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return The value of the secret.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -79,29 +91,65 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
             $ = new AsymmetricEncryptedSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionAlgorithm The algorithm used to encrypt &#34;Value&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(Output<EncryptionAlgorithm> encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionAlgorithm The algorithm used to encrypt &#34;Value&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionCertThumbprint Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionCertThumbprint(@Nullable Output<String> encryptionCertThumbprint) {
             $.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
 
+        /**
+         * @param encryptionCertThumbprint Thumbprint certificate that was used to encrypt &#34;Value&#34;. If the value in unencrypted, it will be null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionCertThumbprint(String encryptionCertThumbprint) {
             return encryptionCertThumbprint(Output.of(encryptionCertThumbprint));
         }
 
+        /**
+         * @param value The value of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

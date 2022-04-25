@@ -11,21 +11,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
-    /**
-     * Timespan applied to the start time of a tumbling window when evaluating dependency.
-     * 
-     */
+        /**
+         * @return Timespan applied to the start time of a tumbling window when evaluating dependency.
+         * 
+         */
     private final String offset;
-    /**
-     * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
-     * 
-     */
+        /**
+         * @return The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+         * 
+         */
     private final @Nullable String size;
-    /**
-     * The type of dependency reference.
-     * Expected value is &#39;SelfDependencyTumblingWindowTriggerReference&#39;.
-     * 
-     */
+        /**
+         * @return The type of dependency reference.
+         * Expected value is &#39;SelfDependencyTumblingWindowTriggerReference&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
     }
 
     /**
-     * Timespan applied to the start time of a tumbling window when evaluating dependency.
+     * @return Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
-    */
+     */
     public String offset() {
         return this.offset;
     }
     /**
-     * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+     * @return The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The type of dependency reference.
+     * @return The type of dependency reference.
      * Expected value is &#39;SelfDependencyTumblingWindowTriggerReference&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

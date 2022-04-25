@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DFPInstanceAdministratorsResponse {
-    /**
-     * An array of administrator user identities.
-     * 
-     */
+        /**
+         * @return An array of administrator user identities.
+         * 
+         */
     private final @Nullable List<String> members;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class DFPInstanceAdministratorsResponse {
     }
 
     /**
-     * An array of administrator user identities.
+     * @return An array of administrator user identities.
      * 
-    */
+     */
     public List<String> members() {
         return this.members == null ? List.of() : this.members;
     }

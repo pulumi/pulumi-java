@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ImageRegistryCredentialResponse {
-    /**
-     * The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
-     * 
-     */
+        /**
+         * @return The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * Docker image registry server, without protocol such as `http` and `https`.
-     * 
-     */
+        /**
+         * @return Docker image registry server, without protocol such as `http` and `https`.
+         * 
+         */
     private final String server;
-    /**
-     * The username for the private registry.
-     * 
-     */
+        /**
+         * @return The username for the private registry.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ImageRegistryCredentialResponse {
     }
 
     /**
-     * The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
+     * @return The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Docker image registry server, without protocol such as `http` and `https`.
+     * @return Docker image registry server, without protocol such as `http` and `https`.
      * 
-    */
+     */
     public String server() {
         return this.server;
     }
     /**
-     * The username for the private registry.
+     * @return The username for the private registry.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

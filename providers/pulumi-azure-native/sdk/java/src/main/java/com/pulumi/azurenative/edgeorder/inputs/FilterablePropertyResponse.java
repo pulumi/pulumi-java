@@ -24,6 +24,10 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
     @Import(name="supportedValues", required=true)
     private List<String> supportedValues;
 
+    /**
+     * @return Values to be filtered.
+     * 
+     */
     public List<String> supportedValues() {
         return this.supportedValues;
     }
@@ -35,6 +39,10 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of product filter.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -64,15 +72,33 @@ public final class FilterablePropertyResponse extends com.pulumi.resources.Invok
             $ = new FilterablePropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param supportedValues Values to be filtered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedValues(List<String> supportedValues) {
             $.supportedValues = supportedValues;
             return this;
         }
 
+        /**
+         * @param supportedValues Values to be filtered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedValues(String... supportedValues) {
             return supportedValues(List.of(supportedValues));
         }
 
+        /**
+         * @param type Type of product filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

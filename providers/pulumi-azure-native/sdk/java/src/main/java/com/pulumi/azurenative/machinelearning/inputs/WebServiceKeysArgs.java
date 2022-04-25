@@ -26,6 +26,10 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="primary")
     private @Nullable Output<String> primary;
 
+    /**
+     * @return The primary access key.
+     * 
+     */
     public Optional<Output<String>> primary() {
         return Optional.ofNullable(this.primary);
     }
@@ -37,6 +41,10 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="secondary")
     private @Nullable Output<String> secondary;
 
+    /**
+     * @return The secondary access key.
+     * 
+     */
     public Optional<Output<String>> secondary() {
         return Optional.ofNullable(this.secondary);
     }
@@ -66,20 +74,44 @@ public final class WebServiceKeysArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WebServiceKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primary The primary access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(@Nullable Output<String> primary) {
             $.primary = primary;
             return this;
         }
 
+        /**
+         * @param primary The primary access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primary(String primary) {
             return primary(Output.of(primary));
         }
 
+        /**
+         * @param secondary The secondary access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondary(@Nullable Output<String> secondary) {
             $.secondary = secondary;
             return this;
         }
 
+        /**
+         * @param secondary The secondary access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondary(String secondary) {
             return secondary(Output.of(secondary));
         }

@@ -14,45 +14,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIotDpsResourceResult {
-    /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
-     * 
-     */
+        /**
+         * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final String location;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Service specific properties for a provisioning service
-     * 
-     */
+        /**
+         * @return Service specific properties for a provisioning service
+         * 
+         */
     private final IotDpsPropertiesDescriptionResponse properties;
-    /**
-     * Sku info for a provisioning Service.
-     * 
-     */
+        /**
+         * @return Sku info for a provisioning Service.
+         * 
+         */
     private final IotDpsSkuInfoResponse sku;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,58 +76,58 @@ public final class GetIotDpsResourceResult {
     }
 
     /**
-     * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+     * @return The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Service specific properties for a provisioning service
+     * @return Service specific properties for a provisioning service
      * 
-    */
+     */
     public IotDpsPropertiesDescriptionResponse properties() {
         return this.properties;
     }
     /**
-     * Sku info for a provisioning Service.
+     * @return Sku info for a provisioning Service.
      * 
-    */
+     */
     public IotDpsSkuInfoResponse sku() {
         return this.sku;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AutoscaleCapacityResponse {
-    /**
-     * The maximum instance count of the cluster
-     * 
-     */
+        /**
+         * @return The maximum instance count of the cluster
+         * 
+         */
     private final @Nullable Integer maxInstanceCount;
-    /**
-     * The minimum instance count of the cluster
-     * 
-     */
+        /**
+         * @return The minimum instance count of the cluster
+         * 
+         */
     private final @Nullable Integer minInstanceCount;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class AutoscaleCapacityResponse {
     }
 
     /**
-     * The maximum instance count of the cluster
+     * @return The maximum instance count of the cluster
      * 
-    */
+     */
     public Optional<Integer> maxInstanceCount() {
         return Optional.ofNullable(this.maxInstanceCount);
     }
     /**
-     * The minimum instance count of the cluster
+     * @return The minimum instance count of the cluster
      * 
-    */
+     */
     public Optional<Integer> minInstanceCount() {
         return Optional.ofNullable(this.minInstanceCount);
     }

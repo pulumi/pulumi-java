@@ -29,6 +29,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="accessEndpoint")
     private @Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
 
+    /**
+     * @return The access endpoint.
+     * 
+     */
     public Optional<Output<IntegrationServiceEnvironmentAccessEndpointArgs>> accessEndpoint() {
         return Optional.ofNullable(this.accessEndpoint);
     }
@@ -40,6 +44,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="subnets")
     private @Nullable Output<List<ResourceReferenceArgs>> subnets;
 
+    /**
+     * @return The subnets.
+     * 
+     */
     public Optional<Output<List<ResourceReferenceArgs>>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -51,6 +59,10 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
     @Import(name="virtualNetworkAddressSpace")
     private @Nullable Output<String> virtualNetworkAddressSpace;
 
+    /**
+     * @return Gets the virtual network address space.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkAddressSpace() {
         return Optional.ofNullable(this.virtualNetworkAddressSpace);
     }
@@ -81,33 +93,75 @@ public final class NetworkConfigurationArgs extends com.pulumi.resources.Resourc
             $ = new NetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessEndpoint The access endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpoint(@Nullable Output<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint) {
             $.accessEndpoint = accessEndpoint;
             return this;
         }
 
+        /**
+         * @param accessEndpoint The access endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpoint(IntegrationServiceEnvironmentAccessEndpointArgs accessEndpoint) {
             return accessEndpoint(Output.of(accessEndpoint));
         }
 
+        /**
+         * @param subnets The subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable Output<List<ResourceReferenceArgs>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<ResourceReferenceArgs> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets The subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(ResourceReferenceArgs... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param virtualNetworkAddressSpace Gets the virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkAddressSpace(@Nullable Output<String> virtualNetworkAddressSpace) {
             $.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
 
+        /**
+         * @param virtualNetworkAddressSpace Gets the virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkAddressSpace(String virtualNetworkAddressSpace) {
             return virtualNetworkAddressSpace(Output.of(virtualNetworkAddressSpace));
         }

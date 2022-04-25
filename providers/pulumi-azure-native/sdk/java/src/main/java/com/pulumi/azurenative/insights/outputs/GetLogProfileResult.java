@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLogProfileResult {
-    /**
-     * the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
-     * 
-     */
+        /**
+         * @return the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
+         * 
+         */
     private final List<String> categories;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
-     * 
-     */
+        /**
+         * @return List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
+         * 
+         */
     private final List<String> locations;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * the retention policy for the events in the log.
-     * 
-     */
+        /**
+         * @return the retention policy for the events in the log.
+         * 
+         */
     private final RetentionPolicyResponse retentionPolicy;
-    /**
-     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
-     * 
-     */
+        /**
+         * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
+         * 
+         */
     private final @Nullable String serviceBusRuleId;
-    /**
-     * the resource id of the storage account to which you would like to send the Activity Log.
-     * 
-     */
+        /**
+         * @return the resource id of the storage account to which you would like to send the Activity Log.
+         * 
+         */
     private final @Nullable String storageAccountId;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetLogProfileResult {
     }
 
     /**
-     * the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
+     * @return the categories of the logs. These categories are created as is convenient to the user. Some values are: &#39;Write&#39;, &#39;Delete&#39;, and/or &#39;Action.&#39;
      * 
-    */
+     */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
+     * @return List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the &#39;global&#39; location.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the retention policy for the events in the log.
+     * @return the retention policy for the events in the log.
      * 
-    */
+     */
     public RetentionPolicyResponse retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
-     * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
+     * @return The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: &#39;{service bus resource ID}/authorizationrules/{key name}&#39;.
      * 
-    */
+     */
     public Optional<String> serviceBusRuleId() {
         return Optional.ofNullable(this.serviceBusRuleId);
     }
     /**
-     * the resource id of the storage account to which you would like to send the Activity Log.
+     * @return the resource id of the storage account to which you would like to send the Activity Log.
      * 
-    */
+     */
     public Optional<String> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

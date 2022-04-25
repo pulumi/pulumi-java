@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ComputeResourceResponse {
-    /**
-     * Memory in GB
-     * 
-     */
+        /**
+         * @return Memory in GB
+         * 
+         */
     private final Double memoryInGB;
-    /**
-     * Processor count
-     * 
-     */
+        /**
+         * @return Processor count
+         * 
+         */
     private final Integer processorCount;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class ComputeResourceResponse {
     }
 
     /**
-     * Memory in GB
+     * @return Memory in GB
      * 
-    */
+     */
     public Double memoryInGB() {
         return this.memoryInGB;
     }
     /**
-     * Processor count
+     * @return Processor count
      * 
-    */
+     */
     public Integer processorCount() {
         return this.processorCount;
     }

@@ -15,31 +15,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class JwtAuthenticationResponse {
-    /**
-     * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
-     * 
-     */
+        /**
+         * @return List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+         * 
+         */
     private final @Nullable List<String> audiences;
-    /**
-     * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
-     * 
-     */
+        /**
+         * @return List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+         * 
+         */
     private final @Nullable List<TokenClaimResponse> claims;
-    /**
-     * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
-     * 
-     */
+        /**
+         * @return List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+         * 
+         */
     private final @Nullable List<String> issuers;
-    /**
-     * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
-     * 
-     */
+        /**
+         * @return List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+         * 
+         */
     private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -57,38 +57,38 @@ public final class JwtAuthenticationResponse {
     }
 
     /**
-     * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+     * @return List of expected token audiences. Token audience is valid if it matches at least one of the given values.
      * 
-    */
+     */
     public List<String> audiences() {
         return this.audiences == null ? List.of() : this.audiences;
     }
     /**
-     * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+     * @return List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
      * 
-    */
+     */
     public List<TokenClaimResponse> claims() {
         return this.claims == null ? List.of() : this.claims;
     }
     /**
-     * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+     * @return List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
      * 
-    */
+     */
     public List<String> issuers() {
         return this.issuers == null ? List.of() : this.issuers;
     }
     /**
-     * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+     * @return List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
      * 
-    */
+     */
     public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

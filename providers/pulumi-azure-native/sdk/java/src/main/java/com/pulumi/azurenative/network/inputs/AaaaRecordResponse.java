@@ -25,6 +25,10 @@ public final class AaaaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipv6Address")
     private @Nullable String ipv6Address;
 
+    /**
+     * @return The IPv6 address of this AAAA record.
+     * 
+     */
     public Optional<String> ipv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }
@@ -53,6 +57,12 @@ public final class AaaaRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AaaaRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipv6Address The IPv6 address of this AAAA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipv6Address(@Nullable String ipv6Address) {
             $.ipv6Address = ipv6Address;
             return this;

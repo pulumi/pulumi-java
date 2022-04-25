@@ -12,46 +12,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class NatRuleConditionResponse {
-    /**
-     * Description of the rule condition.
-     * 
-     */
+        /**
+         * @return Description of the rule condition.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * List of destination IP addresses or Service Tags.
-     * 
-     */
+        /**
+         * @return List of destination IP addresses or Service Tags.
+         * 
+         */
     private final @Nullable List<String> destinationAddresses;
-    /**
-     * List of destination ports.
-     * 
-     */
+        /**
+         * @return List of destination ports.
+         * 
+         */
     private final @Nullable List<String> destinationPorts;
-    /**
-     * Array of FirewallPolicyRuleConditionNetworkProtocols.
-     * 
-     */
+        /**
+         * @return Array of FirewallPolicyRuleConditionNetworkProtocols.
+         * 
+         */
     private final @Nullable List<String> ipProtocols;
-    /**
-     * Name of the rule condition.
-     * 
-     */
+        /**
+         * @return Name of the rule condition.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Rule Condition Type.
-     * Expected value is &#39;NatRuleCondition&#39;.
-     * 
-     */
+        /**
+         * @return Rule Condition Type.
+         * Expected value is &#39;NatRuleCondition&#39;.
+         * 
+         */
     private final String ruleConditionType;
-    /**
-     * List of source IP addresses for this rule.
-     * 
-     */
+        /**
+         * @return List of source IP addresses for this rule.
+         * 
+         */
     private final @Nullable List<String> sourceAddresses;
-    /**
-     * List of source IpGroups for this rule.
-     * 
-     */
+        /**
+         * @return List of source IpGroups for this rule.
+         * 
+         */
     private final @Nullable List<String> sourceIpGroups;
 
     @CustomType.Constructor
@@ -75,59 +75,59 @@ public final class NatRuleConditionResponse {
     }
 
     /**
-     * Description of the rule condition.
+     * @return Description of the rule condition.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * List of destination IP addresses or Service Tags.
+     * @return List of destination IP addresses or Service Tags.
      * 
-    */
+     */
     public List<String> destinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
-     * List of destination ports.
+     * @return List of destination ports.
      * 
-    */
+     */
     public List<String> destinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
-     * Array of FirewallPolicyRuleConditionNetworkProtocols.
+     * @return Array of FirewallPolicyRuleConditionNetworkProtocols.
      * 
-    */
+     */
     public List<String> ipProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
     /**
-     * Name of the rule condition.
+     * @return Name of the rule condition.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Rule Condition Type.
+     * @return Rule Condition Type.
      * Expected value is &#39;NatRuleCondition&#39;.
      * 
-    */
+     */
     public String ruleConditionType() {
         return this.ruleConditionType;
     }
     /**
-     * List of source IP addresses for this rule.
+     * @return List of source IP addresses for this rule.
      * 
-    */
+     */
     public List<String> sourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
-     * List of source IpGroups for this rule.
+     * @return List of source IpGroups for this rule.
      * 
-    */
+     */
     public List<String> sourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }

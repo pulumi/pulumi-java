@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class JobStagesResponse {
-    /**
-     * Display name of the job stage.
-     * 
-     */
+        /**
+         * @return Display name of the job stage.
+         * 
+         */
     private final String displayName;
-    /**
-     * Job Stage Details
-     * 
-     */
+        /**
+         * @return Job Stage Details
+         * 
+         */
     private final Object jobStageDetails;
-    /**
-     * Name of the job stage.
-     * 
-     */
+        /**
+         * @return Name of the job stage.
+         * 
+         */
     private final String stageName;
-    /**
-     * Status of the job stage.
-     * 
-     */
+        /**
+         * @return Status of the job stage.
+         * 
+         */
     private final String stageStatus;
-    /**
-     * Time for the job stage in UTC ISO 8601 format.
-     * 
-     */
+        /**
+         * @return Time for the job stage in UTC ISO 8601 format.
+         * 
+         */
     private final String stageTime;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class JobStagesResponse {
     }
 
     /**
-     * Display name of the job stage.
+     * @return Display name of the job stage.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Job Stage Details
+     * @return Job Stage Details
      * 
-    */
+     */
     public Object jobStageDetails() {
         return this.jobStageDetails;
     }
     /**
-     * Name of the job stage.
+     * @return Name of the job stage.
      * 
-    */
+     */
     public String stageName() {
         return this.stageName;
     }
     /**
-     * Status of the job stage.
+     * @return Status of the job stage.
      * 
-    */
+     */
     public String stageStatus() {
         return this.stageStatus;
     }
     /**
-     * Time for the job stage in UTC ISO 8601 format.
+     * @return Time for the job stage in UTC ISO 8601 format.
      * 
-    */
+     */
     public String stageTime() {
         return this.stageTime;
     }

@@ -26,6 +26,10 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="failureThreshold")
     private @Nullable Output<Integer> failureThreshold;
 
+    /**
+     * @return The number of failures to allow before returning an unhealthy status.
+     * 
+     */
     public Optional<Output<Integer>> failureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
@@ -37,6 +41,10 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="initialDelaySeconds")
     private @Nullable Output<Integer> initialDelaySeconds;
 
+    /**
+     * @return The delay before the first probe in seconds.
+     * 
+     */
     public Optional<Output<Integer>> initialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
@@ -48,6 +56,10 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="periodSeconds")
     private @Nullable Output<Integer> periodSeconds;
 
+    /**
+     * @return The length of time between probes in seconds.
+     * 
+     */
     public Optional<Output<Integer>> periodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
@@ -59,6 +71,10 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="successThreshold")
     private @Nullable Output<Integer> successThreshold;
 
+    /**
+     * @return The number of successful probes before returning a healthy status.
+     * 
+     */
     public Optional<Output<Integer>> successThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
@@ -70,6 +86,10 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
+    /**
+     * @return The probe timeout in seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -102,47 +122,107 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             $ = new AKSServiceCreateRequestLivenessProbeRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureThreshold The number of failures to allow before returning an unhealthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             $.failureThreshold = failureThreshold;
             return this;
         }
 
+        /**
+         * @param failureThreshold The number of failures to allow before returning an unhealthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureThreshold(Integer failureThreshold) {
             return failureThreshold(Output.of(failureThreshold));
         }
 
+        /**
+         * @param initialDelaySeconds The delay before the first probe in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
             $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
+        /**
+         * @param initialDelaySeconds The delay before the first probe in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             return initialDelaySeconds(Output.of(initialDelaySeconds));
         }
 
+        /**
+         * @param periodSeconds The length of time between probes in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
             $.periodSeconds = periodSeconds;
             return this;
         }
 
+        /**
+         * @param periodSeconds The length of time between probes in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder periodSeconds(Integer periodSeconds) {
             return periodSeconds(Output.of(periodSeconds));
         }
 
+        /**
+         * @param successThreshold The number of successful probes before returning a healthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             $.successThreshold = successThreshold;
             return this;
         }
 
+        /**
+         * @param successThreshold The number of successful probes before returning a healthy status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder successThreshold(Integer successThreshold) {
             return successThreshold(Output.of(successThreshold));
         }
 
+        /**
+         * @param timeoutSeconds The probe timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds The probe timeout in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             return timeoutSeconds(Output.of(timeoutSeconds));
         }

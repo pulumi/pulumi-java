@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
-    /**
-     * Is arc auto provisioning enabled
-     * 
-     */
+        /**
+         * @return Is arc auto provisioning enabled
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Metadata of Service Principal secret for autoprovisioning
-     * 
-     */
+        /**
+         * @return Metadata of Service Principal secret for autoprovisioning
+         * 
+         */
     private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
     }
 
     /**
-     * Is arc auto provisioning enabled
+     * @return Is arc auto provisioning enabled
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Metadata of Service Principal secret for autoprovisioning
+     * @return Metadata of Service Principal secret for autoprovisioning
      * 
-    */
+     */
     public Optional<DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata> servicePrincipalSecretMetadata() {
         return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }

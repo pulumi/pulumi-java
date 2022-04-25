@@ -9,30 +9,30 @@ import java.util.Objects;
 
 @CustomType
 public final class LinkedIntegrationRuntimeResponse {
-    /**
-     * The creating time of the linked integration runtime.
-     * 
-     */
+        /**
+         * @return The creating time of the linked integration runtime.
+         * 
+         */
     private final String createTime;
-    /**
-     * The location of the data factory for which the linked integration runtime belong to.
-     * 
-     */
+        /**
+         * @return The location of the data factory for which the linked integration runtime belong to.
+         * 
+         */
     private final String dataFactoryLocation;
-    /**
-     * The name of the data factory for which the linked integration runtime belong to.
-     * 
-     */
+        /**
+         * @return The name of the data factory for which the linked integration runtime belong to.
+         * 
+         */
     private final String dataFactoryName;
-    /**
-     * The name of the linked integration runtime.
-     * 
-     */
+        /**
+         * @return The name of the linked integration runtime.
+         * 
+         */
     private final String name;
-    /**
-     * The subscription ID for which the linked integration runtime belong to.
-     * 
-     */
+        /**
+         * @return The subscription ID for which the linked integration runtime belong to.
+         * 
+         */
     private final String subscriptionId;
 
     @CustomType.Constructor
@@ -50,37 +50,37 @@ public final class LinkedIntegrationRuntimeResponse {
     }
 
     /**
-     * The creating time of the linked integration runtime.
+     * @return The creating time of the linked integration runtime.
      * 
-    */
+     */
     public String createTime() {
         return this.createTime;
     }
     /**
-     * The location of the data factory for which the linked integration runtime belong to.
+     * @return The location of the data factory for which the linked integration runtime belong to.
      * 
-    */
+     */
     public String dataFactoryLocation() {
         return this.dataFactoryLocation;
     }
     /**
-     * The name of the data factory for which the linked integration runtime belong to.
+     * @return The name of the data factory for which the linked integration runtime belong to.
      * 
-    */
+     */
     public String dataFactoryName() {
         return this.dataFactoryName;
     }
     /**
-     * The name of the linked integration runtime.
+     * @return The name of the linked integration runtime.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The subscription ID for which the linked integration runtime belong to.
+     * @return The subscription ID for which the linked integration runtime belong to.
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }

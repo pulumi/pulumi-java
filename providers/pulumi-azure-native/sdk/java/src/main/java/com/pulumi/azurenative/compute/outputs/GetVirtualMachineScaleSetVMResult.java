@@ -28,140 +28,140 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVirtualMachineScaleSetVMResult {
-    /**
-     * Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
-     * 
-     */
+        /**
+         * @return Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+         * 
+         */
     private final @Nullable AdditionalCapabilitiesResponse additionalCapabilities;
-    /**
-     * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
-     * 
-     */
+        /**
+         * @return Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
+         * 
+         */
     private final @Nullable SubResourceResponse availabilitySet;
-    /**
-     * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
-     * 
-     */
+        /**
+         * @return Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
+         * 
+         */
     private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
-    /**
-     * Specifies the hardware settings for the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the hardware settings for the virtual machine.
+         * 
+         */
     private final @Nullable HardwareProfileResponse hardwareProfile;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The virtual machine instance ID.
-     * 
-     */
+        /**
+         * @return The virtual machine instance ID.
+         * 
+         */
     private final String instanceId;
-    /**
-     * The virtual machine instance view.
-     * 
-     */
+        /**
+         * @return The virtual machine instance view.
+         * 
+         */
     private final VirtualMachineScaleSetVMInstanceViewResponse instanceView;
-    /**
-     * Specifies whether the latest model has been applied to the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies whether the latest model has been applied to the virtual machine.
+         * 
+         */
     private final Boolean latestModelApplied;
-    /**
-     * Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
-     * 
-     */
+        /**
+         * @return Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+         * 
+         */
     private final @Nullable String licenseType;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.
+         * 
+         */
     private final String modelDefinitionApplied;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Specifies the network interfaces of the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the network interfaces of the virtual machine.
+         * 
+         */
     private final @Nullable NetworkProfileResponse networkProfile;
-    /**
-     * Specifies the network profile configuration of the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the network profile configuration of the virtual machine.
+         * 
+         */
     private final @Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration;
-    /**
-     * Specifies the operating system settings for the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the operating system settings for the virtual machine.
+         * 
+         */
     private final @Nullable OSProfileResponse osProfile;
-    /**
-     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
-     * 
-     */
+        /**
+         * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
+         * 
+         */
     private final @Nullable PlanResponse plan;
-    /**
-     * Specifies the protection policy of the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the protection policy of the virtual machine.
+         * 
+         */
     private final @Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy;
-    /**
-     * The provisioning state, which only appears in the response.
-     * 
-     */
+        /**
+         * @return The provisioning state, which only appears in the response.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The virtual machine child extension resources.
-     * 
-     */
+        /**
+         * @return The virtual machine child extension resources.
+         * 
+         */
     private final List<VirtualMachineExtensionResponse> resources;
-    /**
-     * Specifies the Security related profile settings for the virtual machine.
-     * 
-     */
+        /**
+         * @return Specifies the Security related profile settings for the virtual machine.
+         * 
+         */
     private final @Nullable SecurityProfileResponse securityProfile;
-    /**
-     * The virtual machine SKU.
-     * 
-     */
+        /**
+         * @return The virtual machine SKU.
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * Specifies the storage settings for the virtual machine disks.
-     * 
-     */
+        /**
+         * @return Specifies the storage settings for the virtual machine disks.
+         * 
+         */
     private final @Nullable StorageProfileResponse storageProfile;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
-     * 
-     */
+        /**
+         * @return UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
+         * 
+         */
     private final @Nullable String userData;
-    /**
-     * Azure VM unique ID.
-     * 
-     */
+        /**
+         * @return Azure VM unique ID.
+         * 
+         */
     private final String vmId;
-    /**
-     * The virtual machine zones.
-     * 
-     */
+        /**
+         * @return The virtual machine zones.
+         * 
+         */
     private final List<String> zones;
 
     @CustomType.Constructor
@@ -223,191 +223,191 @@ public final class GetVirtualMachineScaleSetVMResult {
     }
 
     /**
-     * Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+     * @return Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
      * 
-    */
+     */
     public Optional<AdditionalCapabilitiesResponse> additionalCapabilities() {
         return Optional.ofNullable(this.additionalCapabilities);
     }
     /**
-     * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
+     * @return Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). &lt;br&gt;&lt;br&gt; For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) &lt;br&gt;&lt;br&gt; Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
      * 
-    */
+     */
     public Optional<SubResourceResponse> availabilitySet() {
         return Optional.ofNullable(this.availabilitySet);
     }
     /**
-     * Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
+     * @return Specifies the boot diagnostic settings state. &lt;br&gt;&lt;br&gt;Minimum api-version: 2015-06-15.
      * 
-    */
+     */
     public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
     /**
-     * Specifies the hardware settings for the virtual machine.
+     * @return Specifies the hardware settings for the virtual machine.
      * 
-    */
+     */
     public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The virtual machine instance ID.
+     * @return The virtual machine instance ID.
      * 
-    */
+     */
     public String instanceId() {
         return this.instanceId;
     }
     /**
-     * The virtual machine instance view.
+     * @return The virtual machine instance view.
      * 
-    */
+     */
     public VirtualMachineScaleSetVMInstanceViewResponse instanceView() {
         return this.instanceView;
     }
     /**
-     * Specifies whether the latest model has been applied to the virtual machine.
+     * @return Specifies whether the latest model has been applied to the virtual machine.
      * 
-    */
+     */
     public Boolean latestModelApplied() {
         return this.latestModelApplied;
     }
     /**
-     * Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
+     * @return Specifies that the image or disk that is being used was licensed on-premises. &lt;br&gt;&lt;br&gt; Possible values for Windows Server operating system are: &lt;br&gt;&lt;br&gt; Windows_Client &lt;br&gt;&lt;br&gt; Windows_Server &lt;br&gt;&lt;br&gt; Possible values for Linux Server operating system are: &lt;br&gt;&lt;br&gt; RHEL_BYOS (for RHEL) &lt;br&gt;&lt;br&gt; SLES_BYOS (for SUSE) &lt;br&gt;&lt;br&gt; For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) &lt;br&gt;&lt;br&gt; [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) &lt;br&gt;&lt;br&gt; Minimum api-version: 2015-06-15
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.
+     * @return Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.
      * 
-    */
+     */
     public String modelDefinitionApplied() {
         return this.modelDefinitionApplied;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the network interfaces of the virtual machine.
+     * @return Specifies the network interfaces of the virtual machine.
      * 
-    */
+     */
     public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
-     * Specifies the network profile configuration of the virtual machine.
+     * @return Specifies the network profile configuration of the virtual machine.
      * 
-    */
+     */
     public Optional<VirtualMachineScaleSetVMNetworkProfileConfigurationResponse> networkProfileConfiguration() {
         return Optional.ofNullable(this.networkProfileConfiguration);
     }
     /**
-     * Specifies the operating system settings for the virtual machine.
+     * @return Specifies the operating system settings for the virtual machine.
      * 
-    */
+     */
     public Optional<OSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
+     * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
      * 
-    */
+     */
     public Optional<PlanResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * Specifies the protection policy of the virtual machine.
+     * @return Specifies the protection policy of the virtual machine.
      * 
-    */
+     */
     public Optional<VirtualMachineScaleSetVMProtectionPolicyResponse> protectionPolicy() {
         return Optional.ofNullable(this.protectionPolicy);
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The virtual machine child extension resources.
+     * @return The virtual machine child extension resources.
      * 
-    */
+     */
     public List<VirtualMachineExtensionResponse> resources() {
         return this.resources;
     }
     /**
-     * Specifies the Security related profile settings for the virtual machine.
+     * @return Specifies the Security related profile settings for the virtual machine.
      * 
-    */
+     */
     public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
-     * The virtual machine SKU.
+     * @return The virtual machine SKU.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * Specifies the storage settings for the virtual machine disks.
+     * @return Specifies the storage settings for the virtual machine disks.
      * 
-    */
+     */
     public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
+     * @return UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. &lt;br&gt;&lt;br&gt;Minimum api-version: 2021-03-01
      * 
-    */
+     */
     public Optional<String> userData() {
         return Optional.ofNullable(this.userData);
     }
     /**
-     * Azure VM unique ID.
+     * @return Azure VM unique ID.
      * 
-    */
+     */
     public String vmId() {
         return this.vmId;
     }
     /**
-     * The virtual machine zones.
+     * @return The virtual machine zones.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones;
     }

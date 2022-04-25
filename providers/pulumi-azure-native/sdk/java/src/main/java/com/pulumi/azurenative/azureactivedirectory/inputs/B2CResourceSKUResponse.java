@@ -25,6 +25,10 @@ public final class B2CResourceSKUResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the SKU for the tenant.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class B2CResourceSKUResponse extends com.pulumi.resources.InvokeArg
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The tier of the tenant.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -65,11 +73,23 @@ public final class B2CResourceSKUResponse extends com.pulumi.resources.InvokeArg
             $ = new B2CResourceSKUResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the SKU for the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier The tier of the tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

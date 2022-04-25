@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class AccountPropertiesResponseManagedResources {
-    /**
-     * Gets the managed event hub namespace resource identifier.
-     * 
-     */
+        /**
+         * @return Gets the managed event hub namespace resource identifier.
+         * 
+         */
     private final String eventHubNamespace;
-    /**
-     * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
-     * 
-     */
+        /**
+         * @return Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+         * 
+         */
     private final String resourceGroup;
-    /**
-     * Gets the managed storage account resource identifier.
-     * 
-     */
+        /**
+         * @return Gets the managed storage account resource identifier.
+         * 
+         */
     private final String storageAccount;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class AccountPropertiesResponseManagedResources {
     }
 
     /**
-     * Gets the managed event hub namespace resource identifier.
+     * @return Gets the managed event hub namespace resource identifier.
      * 
-    */
+     */
     public String eventHubNamespace() {
         return this.eventHubNamespace;
     }
     /**
-     * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+     * @return Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * Gets the managed storage account resource identifier.
+     * @return Gets the managed storage account resource identifier.
      * 
-    */
+     */
     public String storageAccount() {
         return this.storageAccount;
     }

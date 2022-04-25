@@ -26,6 +26,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return List of dns servers to use
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -37,6 +41,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
     @Import(name="hostName")
     private @Nullable String hostName;
 
+    /**
+     * @return Virtual Machine hostname
+     * 
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -48,6 +56,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password for login
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -59,6 +71,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
     @Import(name="policyId")
     private @Nullable String policyId;
 
+    /**
+     * @return id of customization policy
+     * 
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -70,6 +86,10 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return Username for login
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -102,30 +122,66 @@ public final class GuestOSCustomizationResponse extends com.pulumi.resources.Inv
             $ = new GuestOSCustomizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers List of dns servers to use
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param hostName Virtual Machine hostname
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param password Password for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param policyId id of customization policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param username Username for login
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

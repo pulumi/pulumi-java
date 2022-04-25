@@ -16,65 +16,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWorkspaceResult {
-    /**
-     * The URI of the workspace endpoint.
-     * 
-     */
+        /**
+         * @return The URI of the workspace endpoint.
+         * 
+         */
     private final String endpointUri;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Managed Identity information.
-     * 
-     */
+        /**
+         * @return Managed Identity information.
+         * 
+         */
     private final @Nullable QuantumWorkspaceResponseIdentity identity;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * List of Providers selected for this Workspace
-     * 
-     */
+        /**
+         * @return List of Providers selected for this Workspace
+         * 
+         */
     private final @Nullable List<ProviderResponse> providers;
-    /**
-     * Provisioning status field
-     * 
-     */
+        /**
+         * @return Provisioning status field
+         * 
+         */
     private final String provisioningState;
-    /**
-     * ARM Resource Id of the storage account associated with this workspace.
-     * 
-     */
+        /**
+         * @return ARM Resource Id of the storage account associated with this workspace.
+         * 
+         */
     private final @Nullable String storageAccount;
-    /**
-     * System metadata
-     * 
-     */
+        /**
+         * @return System metadata
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Whether the current workspace is ready to accept Jobs.
-     * 
-     */
+        /**
+         * @return Whether the current workspace is ready to accept Jobs.
+         * 
+         */
     private final String usable;
 
     @CustomType.Constructor
@@ -106,86 +106,86 @@ public final class GetWorkspaceResult {
     }
 
     /**
-     * The URI of the workspace endpoint.
+     * @return The URI of the workspace endpoint.
      * 
-    */
+     */
     public String endpointUri() {
         return this.endpointUri;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Managed Identity information.
+     * @return Managed Identity information.
      * 
-    */
+     */
     public Optional<QuantumWorkspaceResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of Providers selected for this Workspace
+     * @return List of Providers selected for this Workspace
      * 
-    */
+     */
     public List<ProviderResponse> providers() {
         return this.providers == null ? List.of() : this.providers;
     }
     /**
-     * Provisioning status field
+     * @return Provisioning status field
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * ARM Resource Id of the storage account associated with this workspace.
+     * @return ARM Resource Id of the storage account associated with this workspace.
      * 
-    */
+     */
     public Optional<String> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
-     * System metadata
+     * @return System metadata
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Whether the current workspace is ready to accept Jobs.
+     * @return Whether the current workspace is ready to accept Jobs.
      * 
-    */
+     */
     public String usable() {
         return this.usable;
     }

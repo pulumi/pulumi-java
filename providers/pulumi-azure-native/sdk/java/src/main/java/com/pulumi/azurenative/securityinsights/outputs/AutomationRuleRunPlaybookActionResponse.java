@@ -11,21 +11,21 @@ import java.util.Objects;
 
 @CustomType
 public final class AutomationRuleRunPlaybookActionResponse {
-    /**
-     * The configuration of the run playbook automation rule action
-     * 
-     */
+        /**
+         * @return The configuration of the run playbook automation rule action
+         * 
+         */
     private final AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration;
-    /**
-     * The type of the automation rule action
-     * Expected value is &#39;RunPlaybook&#39;.
-     * 
-     */
+        /**
+         * @return The type of the automation rule action
+         * Expected value is &#39;RunPlaybook&#39;.
+         * 
+         */
     private final String actionType;
-    /**
-     * The order of execution of the automation rule action
-     * 
-     */
+        /**
+         * @return The order of execution of the automation rule action
+         * 
+         */
     private final Integer order;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class AutomationRuleRunPlaybookActionResponse {
     }
 
     /**
-     * The configuration of the run playbook automation rule action
+     * @return The configuration of the run playbook automation rule action
      * 
-    */
+     */
     public AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration() {
         return this.actionConfiguration;
     }
     /**
-     * The type of the automation rule action
+     * @return The type of the automation rule action
      * Expected value is &#39;RunPlaybook&#39;.
      * 
-    */
+     */
     public String actionType() {
         return this.actionType;
     }
     /**
-     * The order of execution of the automation rule action
+     * @return The order of execution of the automation rule action
      * 
-    */
+     */
     public Integer order() {
         return this.order;
     }

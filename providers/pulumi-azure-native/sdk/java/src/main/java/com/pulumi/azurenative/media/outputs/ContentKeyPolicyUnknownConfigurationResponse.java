@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class ContentKeyPolicyUnknownConfigurationResponse {
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyUnknownConfiguration&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyUnknownConfiguration&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyUnknownConfiguration&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

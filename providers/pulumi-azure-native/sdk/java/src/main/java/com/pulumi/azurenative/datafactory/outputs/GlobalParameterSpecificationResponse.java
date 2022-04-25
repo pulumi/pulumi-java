@@ -10,15 +10,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GlobalParameterSpecificationResponse {
-    /**
-     * Global Parameter type.
-     * 
-     */
+        /**
+         * @return Global Parameter type.
+         * 
+         */
     private final String type;
-    /**
-     * Value of parameter.
-     * 
-     */
+        /**
+         * @return Value of parameter.
+         * 
+         */
     private final Object value;
 
     @CustomType.Constructor
@@ -30,16 +30,16 @@ public final class GlobalParameterSpecificationResponse {
     }
 
     /**
-     * Global Parameter type.
+     * @return Global Parameter type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Value of parameter.
+     * @return Value of parameter.
      * 
-    */
+     */
     public Object value() {
         return this.value;
     }

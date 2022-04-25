@@ -25,6 +25,10 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="memoryInGB", required=true)
     private Output<Double> memoryInGB;
 
+    /**
+     * @return Memory in GB
+     * 
+     */
     public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
@@ -36,6 +40,10 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="processorCount", required=true)
     private Output<Integer> processorCount;
 
+    /**
+     * @return Processor count
+     * 
+     */
     public Output<Integer> processorCount() {
         return this.processorCount;
     }
@@ -65,20 +73,44 @@ public final class ComputeResourceArgs extends com.pulumi.resources.ResourceArgs
             $ = new ComputeResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param memoryInGB Memory in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Output<Double> memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param memoryInGB Memory in GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             return memoryInGB(Output.of(memoryInGB));
         }
 
+        /**
+         * @param processorCount Processor count
+         * 
+         * @return builder
+         * 
+         */
         public Builder processorCount(Output<Integer> processorCount) {
             $.processorCount = processorCount;
             return this;
         }
 
+        /**
+         * @param processorCount Processor count
+         * 
+         * @return builder
+         * 
+         */
         public Builder processorCount(Integer processorCount) {
             return processorCount(Output.of(processorCount));
         }

@@ -23,6 +23,10 @@ public final class SubscriptionFeatureRegistrationArgs extends com.pulumi.resour
     @Import(name="featureName")
     private @Nullable Output<String> featureName;
 
+    /**
+     * @return The feature name.
+     * 
+     */
     public Optional<Output<String>> featureName() {
         return Optional.ofNullable(this.featureName);
     }
@@ -41,6 +45,10 @@ public final class SubscriptionFeatureRegistrationArgs extends com.pulumi.resour
     @Import(name="providerNamespace", required=true)
     private Output<String> providerNamespace;
 
+    /**
+     * @return The provider namespace.
+     * 
+     */
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
@@ -71,11 +79,23 @@ public final class SubscriptionFeatureRegistrationArgs extends com.pulumi.resour
             $ = new SubscriptionFeatureRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param featureName The feature name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureName(@Nullable Output<String> featureName) {
             $.featureName = featureName;
             return this;
         }
 
+        /**
+         * @param featureName The feature name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureName(String featureName) {
             return featureName(Output.of(featureName));
         }
@@ -89,11 +109,23 @@ public final class SubscriptionFeatureRegistrationArgs extends com.pulumi.resour
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerNamespace The provider namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(Output<String> providerNamespace) {
             $.providerNamespace = providerNamespace;
             return this;
         }
 
+        /**
+         * @param providerNamespace The provider namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerNamespace(String providerNamespace) {
             return providerNamespace(Output.of(providerNamespace));
         }

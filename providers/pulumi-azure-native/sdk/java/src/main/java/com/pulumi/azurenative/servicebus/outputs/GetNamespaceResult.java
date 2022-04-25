@@ -13,60 +13,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetNamespaceResult {
-    /**
-     * The time the namespace was created.
-     * 
-     */
+        /**
+         * @return The time the namespace was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The Geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The Geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * Identifier for Azure Insights metrics
-     * 
-     */
+        /**
+         * @return Identifier for Azure Insights metrics
+         * 
+         */
     private final String metricId;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state of the namespace.
-     * 
-     */
+        /**
+         * @return Provisioning state of the namespace.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Endpoint you can use to perform Service Bus operations.
-     * 
-     */
+        /**
+         * @return Endpoint you can use to perform Service Bus operations.
+         * 
+         */
     private final String serviceBusEndpoint;
-    /**
-     * Properties of Sku
-     * 
-     */
+        /**
+         * @return Properties of Sku
+         * 
+         */
     private final @Nullable SBSkuResponse sku;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * The time the namespace was updated.
-     * 
-     */
+        /**
+         * @return The time the namespace was updated.
+         * 
+         */
     private final String updatedAt;
 
     @CustomType.Constructor
@@ -96,79 +96,79 @@ public final class GetNamespaceResult {
     }
 
     /**
-     * The time the namespace was created.
+     * @return The time the namespace was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The Geo-location where the resource lives
+     * @return The Geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Identifier for Azure Insights metrics
+     * @return Identifier for Azure Insights metrics
      * 
-    */
+     */
     public String metricId() {
         return this.metricId;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the namespace.
+     * @return Provisioning state of the namespace.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Endpoint you can use to perform Service Bus operations.
+     * @return Endpoint you can use to perform Service Bus operations.
      * 
-    */
+     */
     public String serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
-     * Properties of Sku
+     * @return Properties of Sku
      * 
-    */
+     */
     public Optional<SBSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The time the namespace was updated.
+     * @return The time the namespace was updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

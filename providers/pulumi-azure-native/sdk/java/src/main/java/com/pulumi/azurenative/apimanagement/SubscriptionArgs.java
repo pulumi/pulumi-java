@@ -24,6 +24,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="allowTracing")
     private @Nullable Output<Boolean> allowTracing;
 
+    /**
+     * @return Determines whether tracing can be enabled
+     * 
+     */
     public Optional<Output<Boolean>> allowTracing() {
         return Optional.ofNullable(this.allowTracing);
     }
@@ -35,6 +39,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="appType")
     private @Nullable Output<String> appType;
 
+    /**
+     * @return Determines the type of application which send the create user request. Default is legacy publisher portal.
+     * 
+     */
     public Optional<Output<String>> appType() {
         return Optional.ofNullable(this.appType);
     }
@@ -46,6 +54,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return Subscription name.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -59,6 +71,12 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notify")
     private @Nullable Output<Boolean> notify;
 
+    /**
+     * @return Notify change in Subscription State.
+     *  - If false, do not send any email notification for change of state of subscription
+     *  - If true, send email notification of change of state of subscription
+     * 
+     */
     public Optional<Output<Boolean>> notify_() {
         return Optional.ofNullable(this.notify);
     }
@@ -70,6 +88,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
     private @Nullable Output<String> ownerId;
 
+    /**
+     * @return User (user id path) for whom subscription is being created in form /users/{userId}
+     * 
+     */
     public Optional<Output<String>> ownerId() {
         return Optional.ofNullable(this.ownerId);
     }
@@ -81,6 +103,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="primaryKey")
     private @Nullable Output<String> primaryKey;
 
+    /**
+     * @return Primary subscription key. If not specified during request key will be generated automatically.
+     * 
+     */
     public Optional<Output<String>> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -92,6 +118,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -103,6 +133,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return Scope like /products/{productId} or /apis or /apis/{apiId}.
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -114,6 +148,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="secondaryKey")
     private @Nullable Output<String> secondaryKey;
 
+    /**
+     * @return Secondary subscription key. If not specified during request key will be generated automatically.
+     * 
+     */
     public Optional<Output<String>> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -125,6 +163,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -136,6 +178,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sid")
     private @Nullable Output<String> sid;
 
+    /**
+     * @return Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
+     * 
+     */
     public Optional<Output<String>> sid() {
         return Optional.ofNullable(this.sid);
     }
@@ -147,6 +193,10 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state")
     private @Nullable Output<SubscriptionState> state;
 
+    /**
+     * @return Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+     * 
+     */
     public Optional<Output<SubscriptionState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -186,110 +236,258 @@ public final class SubscriptionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowTracing Determines whether tracing can be enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTracing(@Nullable Output<Boolean> allowTracing) {
             $.allowTracing = allowTracing;
             return this;
         }
 
+        /**
+         * @param allowTracing Determines whether tracing can be enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowTracing(Boolean allowTracing) {
             return allowTracing(Output.of(allowTracing));
         }
 
+        /**
+         * @param appType Determines the type of application which send the create user request. Default is legacy publisher portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(@Nullable Output<String> appType) {
             $.appType = appType;
             return this;
         }
 
+        /**
+         * @param appType Determines the type of application which send the create user request. Default is legacy publisher portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appType(String appType) {
             return appType(Output.of(appType));
         }
 
+        /**
+         * @param displayName Subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Subscription name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param notify Notify change in Subscription State.
+         *  - If false, do not send any email notification for change of state of subscription
+         *  - If true, send email notification of change of state of subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder notify_(@Nullable Output<Boolean> notify) {
             $.notify = notify;
             return this;
         }
 
+        /**
+         * @param notify Notify change in Subscription State.
+         *  - If false, do not send any email notification for change of state of subscription
+         *  - If true, send email notification of change of state of subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder notify_(Boolean notify) {
             return notify_(Output.of(notify));
         }
 
+        /**
+         * @param ownerId User (user id path) for whom subscription is being created in form /users/{userId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(@Nullable Output<String> ownerId) {
             $.ownerId = ownerId;
             return this;
         }
 
+        /**
+         * @param ownerId User (user id path) for whom subscription is being created in form /users/{userId}
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerId(String ownerId) {
             return ownerId(Output.of(ownerId));
         }
 
+        /**
+         * @param primaryKey Primary subscription key. If not specified during request key will be generated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param primaryKey Primary subscription key. If not specified during request key will be generated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             return primaryKey(Output.of(primaryKey));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scope Scope like /products/{productId} or /apis or /apis/{apiId}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope Scope like /products/{productId} or /apis or /apis/{apiId}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param secondaryKey Secondary subscription key. If not specified during request key will be generated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;
         }
 
+        /**
+         * @param secondaryKey Secondary subscription key. If not specified during request key will be generated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             return secondaryKey(Output.of(secondaryKey));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param sid Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(@Nullable Output<String> sid) {
             $.sid = sid;
             return this;
         }
 
+        /**
+         * @param sid Subscription entity Identifier. The entity represents the association between a user and a product in API Management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sid(String sid) {
             return sid(Output.of(sid));
         }
 
+        /**
+         * @param state Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<SubscriptionState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(SubscriptionState state) {
             return state(Output.of(state));
         }

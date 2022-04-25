@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncryptionResponse {
-    /**
-     * ResourceId of the disk encryption set to use for enabling encryption at rest.
-     * 
-     */
+        /**
+         * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
+         * 
+         */
     private final @Nullable String diskEncryptionSetId;
-    /**
-     * The type of key used to encrypt the data of the disk.
-     * 
-     */
+        /**
+         * @return The type of key used to encrypt the data of the disk.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class EncryptionResponse {
     }
 
     /**
-     * ResourceId of the disk encryption set to use for enabling encryption at rest.
+     * @return ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
-    */
+     */
     public Optional<String> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
     /**
-     * The type of key used to encrypt the data of the disk.
+     * @return The type of key used to encrypt the data of the disk.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

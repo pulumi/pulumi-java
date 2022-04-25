@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ListDeviceRegistrationKeyResult {
-    /**
-     * The registration key for the device.
-     * 
-     */
+        /**
+         * @return The registration key for the device.
+         * 
+         */
     private final String registrationKey;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ListDeviceRegistrationKeyResult {
     }
 
     /**
-     * The registration key for the device.
+     * @return The registration key for the device.
      * 
-    */
+     */
     public String registrationKey() {
         return this.registrationKey;
     }

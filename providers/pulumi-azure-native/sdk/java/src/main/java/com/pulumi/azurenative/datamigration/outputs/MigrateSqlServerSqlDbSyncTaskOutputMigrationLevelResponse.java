@@ -10,51 +10,51 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
-    /**
-     * Count of databases
-     * 
-     */
+        /**
+         * @return Count of databases
+         * 
+         */
     private final Integer databaseCount;
-    /**
-     * Migration end time
-     * 
-     */
+        /**
+         * @return Migration end time
+         * 
+         */
     private final String endedOn;
-    /**
-     * Result identifier
-     * 
-     */
+        /**
+         * @return Result identifier
+         * 
+         */
     private final String id;
-    /**
-     * Result type
-     * Expected value is &#39;MigrationLevelOutput&#39;.
-     * 
-     */
+        /**
+         * @return Result type
+         * Expected value is &#39;MigrationLevelOutput&#39;.
+         * 
+         */
     private final String resultType;
-    /**
-     * Source server name
-     * 
-     */
+        /**
+         * @return Source server name
+         * 
+         */
     private final String sourceServer;
-    /**
-     * Source server version
-     * 
-     */
+        /**
+         * @return Source server version
+         * 
+         */
     private final String sourceServerVersion;
-    /**
-     * Migration start time
-     * 
-     */
+        /**
+         * @return Migration start time
+         * 
+         */
     private final String startedOn;
-    /**
-     * Target server name
-     * 
-     */
+        /**
+         * @return Target server name
+         * 
+         */
     private final String targetServer;
-    /**
-     * Target server version
-     * 
-     */
+        /**
+         * @return Target server version
+         * 
+         */
     private final String targetServerVersion;
 
     @CustomType.Constructor
@@ -80,66 +80,66 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
     }
 
     /**
-     * Count of databases
+     * @return Count of databases
      * 
-    */
+     */
     public Integer databaseCount() {
         return this.databaseCount;
     }
     /**
-     * Migration end time
+     * @return Migration end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationLevelOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Source server name
+     * @return Source server name
      * 
-    */
+     */
     public String sourceServer() {
         return this.sourceServer;
     }
     /**
-     * Source server version
+     * @return Source server version
      * 
-    */
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
     /**
-     * Migration start time
+     * @return Migration start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Target server name
+     * @return Target server name
      * 
-    */
+     */
     public String targetServer() {
         return this.targetServer;
     }
     /**
-     * Target server version
+     * @return Target server version
      * 
-    */
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }

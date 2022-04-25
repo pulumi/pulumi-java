@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class ReplicationAgentDetailsResponse {
-    /**
-     * The health of the replication agent.
-     * 
-     */
+        /**
+         * @return The health of the replication agent.
+         * 
+         */
     private final String health;
-    /**
-     * The health errors.
-     * 
-     */
+        /**
+         * @return The health errors.
+         * 
+         */
     private final List<HealthErrorResponse> healthErrors;
-    /**
-     * The replication agent Id.
-     * 
-     */
+        /**
+         * @return The replication agent Id.
+         * 
+         */
     private final String id;
-    /**
-     * The last heartbeat received from the replication agent.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the replication agent.
+         * 
+         */
     private final String lastHeartbeatUtc;
-    /**
-     * The replication agent name.
-     * 
-     */
+        /**
+         * @return The replication agent name.
+         * 
+         */
     private final String name;
-    /**
-     * The replication agent version.
-     * 
-     */
+        /**
+         * @return The replication agent version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ReplicationAgentDetailsResponse {
     }
 
     /**
-     * The health of the replication agent.
+     * @return The health of the replication agent.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The health errors.
+     * @return The health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The replication agent Id.
+     * @return The replication agent Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last heartbeat received from the replication agent.
+     * @return The last heartbeat received from the replication agent.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The replication agent name.
+     * @return The replication agent name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The replication agent version.
+     * @return The replication agent version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

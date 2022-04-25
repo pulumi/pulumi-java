@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CollectorPropertiesResponse {
     private final @Nullable CollectorAgentPropertiesResponse agentProperties;
-    /**
-     * Time when this collector was created. Date-Time represented in ISO-8601 format.
-     * 
-     */
+        /**
+         * @return Time when this collector was created. Date-Time represented in ISO-8601 format.
+         * 
+         */
     private final String createdTimestamp;
-    /**
-     * The ARM id of the discovery service site.
-     * 
-     */
+        /**
+         * @return The ARM id of the discovery service site.
+         * 
+         */
     private final @Nullable String discoverySiteId;
-    /**
-     * Time when this collector was updated. Date-Time represented in ISO-8601 format.
-     * 
-     */
+        /**
+         * @return Time when this collector was updated. Date-Time represented in ISO-8601 format.
+         * 
+         */
     private final String updatedTimestamp;
 
     @CustomType.Constructor
@@ -45,23 +45,23 @@ public final class CollectorPropertiesResponse {
         return Optional.ofNullable(this.agentProperties);
     }
     /**
-     * Time when this collector was created. Date-Time represented in ISO-8601 format.
+     * @return Time when this collector was created. Date-Time represented in ISO-8601 format.
      * 
-    */
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
     /**
-     * The ARM id of the discovery service site.
+     * @return The ARM id of the discovery service site.
      * 
-    */
+     */
     public Optional<String> discoverySiteId() {
         return Optional.ofNullable(this.discoverySiteId);
     }
     /**
-     * Time when this collector was updated. Date-Time represented in ISO-8601 format.
+     * @return Time when this collector was updated. Date-Time represented in ISO-8601 format.
      * 
-    */
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }

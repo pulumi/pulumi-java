@@ -28,6 +28,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="allowedAuthenticationType")
     private @Nullable Output<Integer> allowedAuthenticationType;
 
+    /**
+     * @return A value indicating the authentication type.
+     * 
+     */
     public Optional<Output<Integer>> allowedAuthenticationType() {
         return Optional.ofNullable(this.allowedAuthenticationType);
     }
@@ -39,6 +43,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="applicationConsistentSnapshotFrequencyInHours")
     private @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
+    /**
+     * @return A value indicating the application consistent frequency.
+     * 
+     */
     public Optional<Output<Integer>> applicationConsistentSnapshotFrequencyInHours() {
         return Optional.ofNullable(this.applicationConsistentSnapshotFrequencyInHours);
     }
@@ -50,6 +58,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="compression")
     private @Nullable Output<String> compression;
 
+    /**
+     * @return A value indicating whether compression has to be enabled.
+     * 
+     */
     public Optional<Output<String>> compression() {
         return Optional.ofNullable(this.compression);
     }
@@ -61,6 +73,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="initialReplicationMethod")
     private @Nullable Output<String> initialReplicationMethod;
 
+    /**
+     * @return A value indicating whether IR is online.
+     * 
+     */
     public Optional<Output<String>> initialReplicationMethod() {
         return Optional.ofNullable(this.initialReplicationMethod);
     }
@@ -73,6 +89,11 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;HyperVReplica2012R2&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -84,6 +105,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="offlineReplicationExportPath")
     private @Nullable Output<String> offlineReplicationExportPath;
 
+    /**
+     * @return A value indicating the offline IR export path.
+     * 
+     */
     public Optional<Output<String>> offlineReplicationExportPath() {
         return Optional.ofNullable(this.offlineReplicationExportPath);
     }
@@ -95,6 +120,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="offlineReplicationImportPath")
     private @Nullable Output<String> offlineReplicationImportPath;
 
+    /**
+     * @return A value indicating the offline IR import path.
+     * 
+     */
     public Optional<Output<String>> offlineReplicationImportPath() {
         return Optional.ofNullable(this.offlineReplicationImportPath);
     }
@@ -106,6 +135,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="onlineReplicationStartTime")
     private @Nullable Output<String> onlineReplicationStartTime;
 
+    /**
+     * @return A value indicating the online IR start time.
+     * 
+     */
     public Optional<Output<String>> onlineReplicationStartTime() {
         return Optional.ofNullable(this.onlineReplicationStartTime);
     }
@@ -117,6 +150,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="recoveryPoints")
     private @Nullable Output<Integer> recoveryPoints;
 
+    /**
+     * @return A value indicating the number of recovery points.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPoints() {
         return Optional.ofNullable(this.recoveryPoints);
     }
@@ -128,6 +165,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="replicaDeletion")
     private @Nullable Output<String> replicaDeletion;
 
+    /**
+     * @return A value indicating whether the VM has to be auto deleted.
+     * 
+     */
     public Optional<Output<String>> replicaDeletion() {
         return Optional.ofNullable(this.replicaDeletion);
     }
@@ -139,6 +180,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="replicationFrequencyInSeconds")
     private @Nullable Output<Integer> replicationFrequencyInSeconds;
 
+    /**
+     * @return A value indicating the replication interval.
+     * 
+     */
     public Optional<Output<Integer>> replicationFrequencyInSeconds() {
         return Optional.ofNullable(this.replicationFrequencyInSeconds);
     }
@@ -150,6 +195,10 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
     @Import(name="replicationPort")
     private @Nullable Output<Integer> replicationPort;
 
+    /**
+     * @return A value indicating the recovery HTTPS port.
+     * 
+     */
     public Optional<Output<Integer>> replicationPort() {
         return Optional.ofNullable(this.replicationPort);
     }
@@ -189,110 +238,256 @@ public final class HyperVReplicaBluePolicyInputArgs extends com.pulumi.resources
             $ = new HyperVReplicaBluePolicyInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedAuthenticationType A value indicating the authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAuthenticationType(@Nullable Output<Integer> allowedAuthenticationType) {
             $.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
 
+        /**
+         * @param allowedAuthenticationType A value indicating the authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedAuthenticationType(Integer allowedAuthenticationType) {
             return allowedAuthenticationType(Output.of(allowedAuthenticationType));
         }
 
+        /**
+         * @param applicationConsistentSnapshotFrequencyInHours A value indicating the application consistent frequency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours) {
             $.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
+        /**
+         * @param applicationConsistentSnapshotFrequencyInHours A value indicating the application consistent frequency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationConsistentSnapshotFrequencyInHours(Integer applicationConsistentSnapshotFrequencyInHours) {
             return applicationConsistentSnapshotFrequencyInHours(Output.of(applicationConsistentSnapshotFrequencyInHours));
         }
 
+        /**
+         * @param compression A value indicating whether compression has to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(@Nullable Output<String> compression) {
             $.compression = compression;
             return this;
         }
 
+        /**
+         * @param compression A value indicating whether compression has to be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compression(String compression) {
             return compression(Output.of(compression));
         }
 
+        /**
+         * @param initialReplicationMethod A value indicating whether IR is online.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationMethod(@Nullable Output<String> initialReplicationMethod) {
             $.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
 
+        /**
+         * @param initialReplicationMethod A value indicating whether IR is online.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationMethod(String initialReplicationMethod) {
             return initialReplicationMethod(Output.of(initialReplicationMethod));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;HyperVReplica2012R2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;HyperVReplica2012R2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param offlineReplicationExportPath A value indicating the offline IR export path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineReplicationExportPath(@Nullable Output<String> offlineReplicationExportPath) {
             $.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
 
+        /**
+         * @param offlineReplicationExportPath A value indicating the offline IR export path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineReplicationExportPath(String offlineReplicationExportPath) {
             return offlineReplicationExportPath(Output.of(offlineReplicationExportPath));
         }
 
+        /**
+         * @param offlineReplicationImportPath A value indicating the offline IR import path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineReplicationImportPath(@Nullable Output<String> offlineReplicationImportPath) {
             $.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
 
+        /**
+         * @param offlineReplicationImportPath A value indicating the offline IR import path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offlineReplicationImportPath(String offlineReplicationImportPath) {
             return offlineReplicationImportPath(Output.of(offlineReplicationImportPath));
         }
 
+        /**
+         * @param onlineReplicationStartTime A value indicating the online IR start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineReplicationStartTime(@Nullable Output<String> onlineReplicationStartTime) {
             $.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
+        /**
+         * @param onlineReplicationStartTime A value indicating the online IR start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder onlineReplicationStartTime(String onlineReplicationStartTime) {
             return onlineReplicationStartTime(Output.of(onlineReplicationStartTime));
         }
 
+        /**
+         * @param recoveryPoints A value indicating the number of recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPoints(@Nullable Output<Integer> recoveryPoints) {
             $.recoveryPoints = recoveryPoints;
             return this;
         }
 
+        /**
+         * @param recoveryPoints A value indicating the number of recovery points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPoints(Integer recoveryPoints) {
             return recoveryPoints(Output.of(recoveryPoints));
         }
 
+        /**
+         * @param replicaDeletion A value indicating whether the VM has to be auto deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaDeletion(@Nullable Output<String> replicaDeletion) {
             $.replicaDeletion = replicaDeletion;
             return this;
         }
 
+        /**
+         * @param replicaDeletion A value indicating whether the VM has to be auto deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaDeletion(String replicaDeletion) {
             return replicaDeletion(Output.of(replicaDeletion));
         }
 
+        /**
+         * @param replicationFrequencyInSeconds A value indicating the replication interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFrequencyInSeconds(@Nullable Output<Integer> replicationFrequencyInSeconds) {
             $.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
             return this;
         }
 
+        /**
+         * @param replicationFrequencyInSeconds A value indicating the replication interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationFrequencyInSeconds(Integer replicationFrequencyInSeconds) {
             return replicationFrequencyInSeconds(Output.of(replicationFrequencyInSeconds));
         }
 
+        /**
+         * @param replicationPort A value indicating the recovery HTTPS port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationPort(@Nullable Output<Integer> replicationPort) {
             $.replicationPort = replicationPort;
             return this;
         }
 
+        /**
+         * @param replicationPort A value indicating the recovery HTTPS port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicationPort(Integer replicationPort) {
             return replicationPort(Output.of(replicationPort));
         }

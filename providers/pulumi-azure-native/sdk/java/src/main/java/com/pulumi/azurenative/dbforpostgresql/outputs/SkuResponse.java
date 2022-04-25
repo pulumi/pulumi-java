@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SkuResponse {
-    /**
-     * The scale up/out capacity, representing server&#39;s compute units.
-     * 
-     */
+        /**
+         * @return The scale up/out capacity, representing server&#39;s compute units.
+         * 
+         */
     private final @Nullable Integer capacity;
-    /**
-     * The family of hardware.
-     * 
-     */
+        /**
+         * @return The family of hardware.
+         * 
+         */
     private final @Nullable String family;
-    /**
-     * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
-     * 
-     */
+        /**
+         * @return The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+         * 
+         */
     private final String name;
-    /**
-     * The size code, to be interpreted by resource as appropriate.
-     * 
-     */
+        /**
+         * @return The size code, to be interpreted by resource as appropriate.
+         * 
+         */
     private final @Nullable String size;
-    /**
-     * The tier of the particular SKU, e.g. Basic.
-     * 
-     */
+        /**
+         * @return The tier of the particular SKU, e.g. Basic.
+         * 
+         */
     private final @Nullable String tier;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class SkuResponse {
     }
 
     /**
-     * The scale up/out capacity, representing server&#39;s compute units.
+     * @return The scale up/out capacity, representing server&#39;s compute units.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The family of hardware.
+     * @return The family of hardware.
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
+     * @return The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The size code, to be interpreted by resource as appropriate.
+     * @return The size code, to be interpreted by resource as appropriate.
      * 
-    */
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
     /**
-     * The tier of the particular SKU, e.g. Basic.
+     * @return The tier of the particular SKU, e.g. Basic.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

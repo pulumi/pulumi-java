@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PipelineTriggerPropertiesResponse {
-    /**
-     * The source trigger properties of the pipeline.
-     * 
-     */
+        /**
+         * @return The source trigger properties of the pipeline.
+         * 
+         */
     private final @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class PipelineTriggerPropertiesResponse {
     }
 
     /**
-     * The source trigger properties of the pipeline.
+     * @return The source trigger properties of the pipeline.
      * 
-    */
+     */
     public Optional<PipelineSourceTriggerPropertiesResponse> sourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }

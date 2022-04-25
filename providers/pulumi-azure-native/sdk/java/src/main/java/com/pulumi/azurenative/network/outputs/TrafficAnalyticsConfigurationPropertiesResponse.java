@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TrafficAnalyticsConfigurationPropertiesResponse {
-    /**
-     * Flag to enable/disable traffic analytics.
-     * 
-     */
+        /**
+         * @return Flag to enable/disable traffic analytics.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The interval in minutes which would decide how frequently TA service should do flow analytics.
-     * 
-     */
+        /**
+         * @return The interval in minutes which would decide how frequently TA service should do flow analytics.
+         * 
+         */
     private final @Nullable Integer trafficAnalyticsInterval;
-    /**
-     * The resource guid of the attached workspace.
-     * 
-     */
+        /**
+         * @return The resource guid of the attached workspace.
+         * 
+         */
     private final @Nullable String workspaceId;
-    /**
-     * The location of the attached workspace.
-     * 
-     */
+        /**
+         * @return The location of the attached workspace.
+         * 
+         */
     private final @Nullable String workspaceRegion;
-    /**
-     * Resource Id of the attached workspace.
-     * 
-     */
+        /**
+         * @return Resource Id of the attached workspace.
+         * 
+         */
     private final @Nullable String workspaceResourceId;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
     }
 
     /**
-     * Flag to enable/disable traffic analytics.
+     * @return Flag to enable/disable traffic analytics.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The interval in minutes which would decide how frequently TA service should do flow analytics.
+     * @return The interval in minutes which would decide how frequently TA service should do flow analytics.
      * 
-    */
+     */
     public Optional<Integer> trafficAnalyticsInterval() {
         return Optional.ofNullable(this.trafficAnalyticsInterval);
     }
     /**
-     * The resource guid of the attached workspace.
+     * @return The resource guid of the attached workspace.
      * 
-    */
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
     /**
-     * The location of the attached workspace.
+     * @return The location of the attached workspace.
      * 
-    */
+     */
     public Optional<String> workspaceRegion() {
         return Optional.ofNullable(this.workspaceRegion);
     }
     /**
-     * Resource Id of the attached workspace.
+     * @return Resource Id of the attached workspace.
      * 
-    */
+     */
     public Optional<String> workspaceResourceId() {
         return Optional.ofNullable(this.workspaceResourceId);
     }

@@ -11,16 +11,16 @@ import java.util.Objects;
 
 @CustomType
 public final class LogToMetricActionResponse {
-    /**
-     * Criteria of Metric
-     * 
-     */
+        /**
+         * @return Criteria of Metric
+         * 
+         */
     private final List<CriteriaResponse> criteria;
-    /**
-     * Specifies the action. Supported values - AlertingAction, LogToMetricAction
-     * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
-     * 
-     */
+        /**
+         * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
+         * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -32,17 +32,17 @@ public final class LogToMetricActionResponse {
     }
 
     /**
-     * Criteria of Metric
+     * @return Criteria of Metric
      * 
-    */
+     */
     public List<CriteriaResponse> criteria() {
         return this.criteria;
     }
     /**
-     * Specifies the action. Supported values - AlertingAction, LogToMetricAction
+     * @return Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is &#39;Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

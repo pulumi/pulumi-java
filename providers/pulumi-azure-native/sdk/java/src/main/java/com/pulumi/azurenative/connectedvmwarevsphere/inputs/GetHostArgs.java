@@ -19,6 +19,10 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostName", required=true)
     private String hostName;
 
+    /**
+     * @return Name of the host.
+     * 
+     */
     public String hostName() {
         return this.hostName;
     }
@@ -30,6 +34,10 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHostArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostName Name of the host.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

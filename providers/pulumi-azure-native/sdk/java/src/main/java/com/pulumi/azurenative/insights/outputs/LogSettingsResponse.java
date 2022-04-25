@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LogSettingsResponse {
-    /**
-     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
-     * 
-     */
+        /**
+         * @return Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+         * 
+         */
     private final @Nullable String category;
-    /**
-     * a value indicating whether this log is enabled.
-     * 
-     */
+        /**
+         * @return a value indicating whether this log is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * the retention policy for this log.
-     * 
-     */
+        /**
+         * @return the retention policy for this log.
+         * 
+         */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class LogSettingsResponse {
     }
 
     /**
-     * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
+     * @return Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * a value indicating whether this log is enabled.
+     * @return a value indicating whether this log is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * the retention policy for this log.
+     * @return the retention policy for this log.
      * 
-    */
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }

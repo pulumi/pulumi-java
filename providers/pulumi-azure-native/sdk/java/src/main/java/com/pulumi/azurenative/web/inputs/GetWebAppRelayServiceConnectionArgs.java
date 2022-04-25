@@ -19,6 +19,10 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
     @Import(name="entityName", required=true)
     private String entityName;
 
+    /**
+     * @return Name of the hybrid connection.
+     * 
+     */
     public String entityName() {
         return this.entityName;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the app.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
             $ = new GetWebAppRelayServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param entityName Name of the hybrid connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityName(String entityName) {
             $.entityName = entityName;
             return this;
         }
 
+        /**
+         * @param name Name of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

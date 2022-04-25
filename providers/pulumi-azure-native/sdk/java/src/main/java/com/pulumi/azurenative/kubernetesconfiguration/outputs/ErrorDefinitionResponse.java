@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ErrorDefinitionResponse {
-    /**
-     * Service specific error code which serves as the substatus for the HTTP error code.
-     * 
-     */
+        /**
+         * @return Service specific error code which serves as the substatus for the HTTP error code.
+         * 
+         */
     private final String code;
-    /**
-     * Description of the error.
-     * 
-     */
+        /**
+         * @return Description of the error.
+         * 
+         */
     private final String message;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ErrorDefinitionResponse {
     }
 
     /**
-     * Service specific error code which serves as the substatus for the HTTP error code.
+     * @return Service specific error code which serves as the substatus for the HTTP error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Description of the error.
+     * @return Description of the error.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }

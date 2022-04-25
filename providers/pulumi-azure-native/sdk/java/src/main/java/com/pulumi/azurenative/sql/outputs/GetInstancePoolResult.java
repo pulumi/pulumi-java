@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetInstancePoolResult {
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
-     * 
-     */
+        /**
+         * @return The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+         * 
+         */
     private final String licenseType;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The name and tier of the SKU.
-     * 
-     */
+        /**
+         * @return The name and tier of the SKU.
+         * 
+         */
     private final @Nullable SkuResponse sku;
-    /**
-     * Resource ID of the subnet to place this instance pool in.
-     * 
-     */
+        /**
+         * @return Resource ID of the subnet to place this instance pool in.
+         * 
+         */
     private final String subnetId;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Count of vCores belonging to this instance pool.
-     * 
-     */
+        /**
+         * @return Count of vCores belonging to this instance pool.
+         * 
+         */
     private final Integer vCores;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetInstancePoolResult {
     }
 
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
+     * @return The license type. Possible values are &#39;LicenseIncluded&#39; (price for SQL license is included) and &#39;BasePrice&#39; (without SQL license price).
      * 
-    */
+     */
     public String licenseType() {
         return this.licenseType;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The name and tier of the SKU.
+     * @return The name and tier of the SKU.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource ID of the subnet to place this instance pool in.
+     * @return Resource ID of the subnet to place this instance pool in.
      * 
-    */
+     */
     public String subnetId() {
         return this.subnetId;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Count of vCores belonging to this instance pool.
+     * @return Count of vCores belonging to this instance pool.
      * 
-    */
+     */
     public Integer vCores() {
         return this.vCores;
     }

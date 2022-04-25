@@ -25,6 +25,10 @@ public final class A2AUnprotectedDiskDetailsResponse extends com.pulumi.resource
     @Import(name="diskLunId")
     private @Nullable Integer diskLunId;
 
+    /**
+     * @return The source lun Id for the data disk.
+     * 
+     */
     public Optional<Integer> diskLunId() {
         return Optional.ofNullable(this.diskLunId);
     }
@@ -53,6 +57,12 @@ public final class A2AUnprotectedDiskDetailsResponse extends com.pulumi.resource
             $ = new A2AUnprotectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskLunId The source lun Id for the data disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskLunId(@Nullable Integer diskLunId) {
             $.diskLunId = diskLunId;
             return this;

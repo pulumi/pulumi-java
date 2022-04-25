@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class PropertiesResponseNetworkInjection {
-    /**
-     * Network injection configuration
-     * 
-     */
+        /**
+         * @return Network injection configuration
+         * 
+         */
     private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class PropertiesResponseNetworkInjection {
     }
 
     /**
-     * Network injection configuration
+     * @return Network injection configuration
      * 
-    */
+     */
     public Optional<VirtualNetworkPropertiesListResponse> virtualNetworks() {
         return Optional.ofNullable(this.virtualNetworks);
     }

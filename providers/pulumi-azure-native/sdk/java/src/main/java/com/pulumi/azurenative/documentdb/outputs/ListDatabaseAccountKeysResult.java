@@ -9,25 +9,25 @@ import java.util.Objects;
 
 @CustomType
 public final class ListDatabaseAccountKeysResult {
-    /**
-     * Base 64 encoded value of the primary read-write key.
-     * 
-     */
+        /**
+         * @return Base 64 encoded value of the primary read-write key.
+         * 
+         */
     private final String primaryMasterKey;
-    /**
-     * Base 64 encoded value of the primary read-only key.
-     * 
-     */
+        /**
+         * @return Base 64 encoded value of the primary read-only key.
+         * 
+         */
     private final String primaryReadonlyMasterKey;
-    /**
-     * Base 64 encoded value of the secondary read-write key.
-     * 
-     */
+        /**
+         * @return Base 64 encoded value of the secondary read-write key.
+         * 
+         */
     private final String secondaryMasterKey;
-    /**
-     * Base 64 encoded value of the secondary read-only key.
-     * 
-     */
+        /**
+         * @return Base 64 encoded value of the secondary read-only key.
+         * 
+         */
     private final String secondaryReadonlyMasterKey;
 
     @CustomType.Constructor
@@ -43,30 +43,30 @@ public final class ListDatabaseAccountKeysResult {
     }
 
     /**
-     * Base 64 encoded value of the primary read-write key.
+     * @return Base 64 encoded value of the primary read-write key.
      * 
-    */
+     */
     public String primaryMasterKey() {
         return this.primaryMasterKey;
     }
     /**
-     * Base 64 encoded value of the primary read-only key.
+     * @return Base 64 encoded value of the primary read-only key.
      * 
-    */
+     */
     public String primaryReadonlyMasterKey() {
         return this.primaryReadonlyMasterKey;
     }
     /**
-     * Base 64 encoded value of the secondary read-write key.
+     * @return Base 64 encoded value of the secondary read-write key.
      * 
-    */
+     */
     public String secondaryMasterKey() {
         return this.secondaryMasterKey;
     }
     /**
-     * Base 64 encoded value of the secondary read-only key.
+     * @return Base 64 encoded value of the secondary read-only key.
      * 
-    */
+     */
     public String secondaryReadonlyMasterKey() {
         return this.secondaryReadonlyMasterKey;
     }

@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AssemblyPropertiesResponse {
-    /**
-     * The assembly culture.
-     * 
-     */
+        /**
+         * @return The assembly culture.
+         * 
+         */
     private final @Nullable String assemblyCulture;
-    /**
-     * The assembly name.
-     * 
-     */
+        /**
+         * @return The assembly name.
+         * 
+         */
     private final String assemblyName;
-    /**
-     * The assembly public key token.
-     * 
-     */
+        /**
+         * @return The assembly public key token.
+         * 
+         */
     private final @Nullable String assemblyPublicKeyToken;
-    /**
-     * The assembly version.
-     * 
-     */
+        /**
+         * @return The assembly version.
+         * 
+         */
     private final @Nullable String assemblyVersion;
-    /**
-     * The artifact changed time.
-     * 
-     */
+        /**
+         * @return The artifact changed time.
+         * 
+         */
     private final @Nullable String changedTime;
     private final @Nullable Object content;
-    /**
-     * The content link.
-     * 
-     */
+        /**
+         * @return The content link.
+         * 
+         */
     private final @Nullable ContentLinkResponse contentLink;
-    /**
-     * The content type.
-     * 
-     */
+        /**
+         * @return The content type.
+         * 
+         */
     private final @Nullable String contentType;
-    /**
-     * The artifact creation time.
-     * 
-     */
+        /**
+         * @return The artifact creation time.
+         * 
+         */
     private final @Nullable String createdTime;
     private final @Nullable Object metadata;
 
@@ -81,37 +81,37 @@ public final class AssemblyPropertiesResponse {
     }
 
     /**
-     * The assembly culture.
+     * @return The assembly culture.
      * 
-    */
+     */
     public Optional<String> assemblyCulture() {
         return Optional.ofNullable(this.assemblyCulture);
     }
     /**
-     * The assembly name.
+     * @return The assembly name.
      * 
-    */
+     */
     public String assemblyName() {
         return this.assemblyName;
     }
     /**
-     * The assembly public key token.
+     * @return The assembly public key token.
      * 
-    */
+     */
     public Optional<String> assemblyPublicKeyToken() {
         return Optional.ofNullable(this.assemblyPublicKeyToken);
     }
     /**
-     * The assembly version.
+     * @return The assembly version.
      * 
-    */
+     */
     public Optional<String> assemblyVersion() {
         return Optional.ofNullable(this.assemblyVersion);
     }
     /**
-     * The artifact changed time.
+     * @return The artifact changed time.
      * 
-    */
+     */
     public Optional<String> changedTime() {
         return Optional.ofNullable(this.changedTime);
     }
@@ -119,23 +119,23 @@ public final class AssemblyPropertiesResponse {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The content link.
+     * @return The content link.
      * 
-    */
+     */
     public Optional<ContentLinkResponse> contentLink() {
         return Optional.ofNullable(this.contentLink);
     }
     /**
-     * The content type.
+     * @return The content type.
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * The artifact creation time.
+     * @return The artifact creation time.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }

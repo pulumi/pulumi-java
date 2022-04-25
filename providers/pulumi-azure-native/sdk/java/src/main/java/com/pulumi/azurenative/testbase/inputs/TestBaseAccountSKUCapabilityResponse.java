@@ -23,6 +23,10 @@ public final class TestBaseAccountSKUCapabilityResponse extends com.pulumi.resou
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return An invariant to describe the feature, such as &#39;SLA&#39;.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class TestBaseAccountSKUCapabilityResponse extends com.pulumi.resou
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return An invariant if the feature is measured by quantity, such as 99.9%.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class TestBaseAccountSKUCapabilityResponse extends com.pulumi.resou
             $ = new TestBaseAccountSKUCapabilityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name An invariant to describe the feature, such as &#39;SLA&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value An invariant if the feature is measured by quantity, such as 99.9%.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

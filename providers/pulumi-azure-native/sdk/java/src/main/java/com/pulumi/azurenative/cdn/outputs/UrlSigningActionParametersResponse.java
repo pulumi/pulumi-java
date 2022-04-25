@@ -13,16 +13,16 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class UrlSigningActionParametersResponse {
-    /**
-     * Algorithm to use for URL signing
-     * 
-     */
+        /**
+         * @return Algorithm to use for URL signing
+         * 
+         */
     private final @Nullable String algorithm;
     private final String odataType;
-    /**
-     * Defines which query string parameters in the url to be considered for expires, key id etc.
-     * 
-     */
+        /**
+         * @return Defines which query string parameters in the url to be considered for expires, key id etc.
+         * 
+         */
     private final @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 
     @CustomType.Constructor
@@ -36,9 +36,9 @@ public final class UrlSigningActionParametersResponse {
     }
 
     /**
-     * Algorithm to use for URL signing
+     * @return Algorithm to use for URL signing
      * 
-    */
+     */
     public Optional<String> algorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -46,9 +46,9 @@ public final class UrlSigningActionParametersResponse {
         return this.odataType;
     }
     /**
-     * Defines which query string parameters in the url to be considered for expires, key id etc.
+     * @return Defines which query string parameters in the url to be considered for expires, key id etc.
      * 
-    */
+     */
     public List<UrlSigningParamIdentifierResponse> parameterNameOverride() {
         return this.parameterNameOverride == null ? List.of() : this.parameterNameOverride;
     }

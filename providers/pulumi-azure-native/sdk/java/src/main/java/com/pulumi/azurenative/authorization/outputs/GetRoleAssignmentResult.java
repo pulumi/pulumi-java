@@ -11,80 +11,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRoleAssignmentResult {
-    /**
-     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
-     * 
-     */
+        /**
+         * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
+         * 
+         */
     private final @Nullable String condition;
-    /**
-     * Version of the condition. Currently accepted value is &#39;2.0&#39;
-     * 
-     */
+        /**
+         * @return Version of the condition. Currently accepted value is &#39;2.0&#39;
+         * 
+         */
     private final @Nullable String conditionVersion;
-    /**
-     * Id of the user who created the assignment
-     * 
-     */
+        /**
+         * @return Id of the user who created the assignment
+         * 
+         */
     private final String createdBy;
-    /**
-     * Time it was created
-     * 
-     */
+        /**
+         * @return Time it was created
+         * 
+         */
     private final String createdOn;
-    /**
-     * Id of the delegated managed identity resource
-     * 
-     */
+        /**
+         * @return Id of the delegated managed identity resource
+         * 
+         */
     private final @Nullable String delegatedManagedIdentityResourceId;
-    /**
-     * Description of role assignment
-     * 
-     */
+        /**
+         * @return Description of role assignment
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The role assignment ID.
-     * 
-     */
+        /**
+         * @return The role assignment ID.
+         * 
+         */
     private final String id;
-    /**
-     * The role assignment name.
-     * 
-     */
+        /**
+         * @return The role assignment name.
+         * 
+         */
     private final String name;
-    /**
-     * The principal ID.
-     * 
-     */
+        /**
+         * @return The principal ID.
+         * 
+         */
     private final String principalId;
-    /**
-     * The principal type of the assigned principal ID.
-     * 
-     */
+        /**
+         * @return The principal type of the assigned principal ID.
+         * 
+         */
     private final @Nullable String principalType;
-    /**
-     * The role definition ID.
-     * 
-     */
+        /**
+         * @return The role definition ID.
+         * 
+         */
     private final String roleDefinitionId;
-    /**
-     * The role assignment scope.
-     * 
-     */
+        /**
+         * @return The role assignment scope.
+         * 
+         */
     private final String scope;
-    /**
-     * The role assignment type.
-     * 
-     */
+        /**
+         * @return The role assignment type.
+         * 
+         */
     private final String type;
-    /**
-     * Id of the user who updated the assignment
-     * 
-     */
+        /**
+         * @return Id of the user who updated the assignment
+         * 
+         */
     private final String updatedBy;
-    /**
-     * Time it was updated
-     * 
-     */
+        /**
+         * @return Time it was updated
+         * 
+         */
     private final String updatedOn;
 
     @CustomType.Constructor
@@ -122,107 +122,107 @@ public final class GetRoleAssignmentResult {
     }
 
     /**
-     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
+     * @return The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase &#39;foo_storage_container&#39;
      * 
-    */
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
     /**
-     * Version of the condition. Currently accepted value is &#39;2.0&#39;
+     * @return Version of the condition. Currently accepted value is &#39;2.0&#39;
      * 
-    */
+     */
     public Optional<String> conditionVersion() {
         return Optional.ofNullable(this.conditionVersion);
     }
     /**
-     * Id of the user who created the assignment
+     * @return Id of the user who created the assignment
      * 
-    */
+     */
     public String createdBy() {
         return this.createdBy;
     }
     /**
-     * Time it was created
+     * @return Time it was created
      * 
-    */
+     */
     public String createdOn() {
         return this.createdOn;
     }
     /**
-     * Id of the delegated managed identity resource
+     * @return Id of the delegated managed identity resource
      * 
-    */
+     */
     public Optional<String> delegatedManagedIdentityResourceId() {
         return Optional.ofNullable(this.delegatedManagedIdentityResourceId);
     }
     /**
-     * Description of role assignment
+     * @return Description of role assignment
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The role assignment ID.
+     * @return The role assignment ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The role assignment name.
+     * @return The role assignment name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principal ID.
+     * @return The principal ID.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The principal type of the assigned principal ID.
+     * @return The principal type of the assigned principal ID.
      * 
-    */
+     */
     public Optional<String> principalType() {
         return Optional.ofNullable(this.principalType);
     }
     /**
-     * The role definition ID.
+     * @return The role definition ID.
      * 
-    */
+     */
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
     /**
-     * The role assignment scope.
+     * @return The role assignment scope.
      * 
-    */
+     */
     public String scope() {
         return this.scope;
     }
     /**
-     * The role assignment type.
+     * @return The role assignment type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Id of the user who updated the assignment
+     * @return Id of the user who updated the assignment
      * 
-    */
+     */
     public String updatedBy() {
         return this.updatedBy;
     }
     /**
-     * Time it was updated
+     * @return Time it was updated
      * 
-    */
+     */
     public String updatedOn() {
         return this.updatedOn;
     }

@@ -26,6 +26,10 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="interimSchemaName")
     private @Nullable Output<Object> interimSchemaName;
 
+    /**
+     * @return Schema name for interim table. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> interimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
@@ -37,6 +41,10 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="keys")
     private @Nullable Output<Object> keys;
 
+    /**
+     * @return Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+     * 
+     */
     public Optional<Output<Object>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -48,6 +56,10 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="useTempDB")
     private @Nullable Output<Object> useTempDB;
 
+    /**
+     * @return Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> useTempDB() {
         return Optional.ofNullable(this.useTempDB);
     }
@@ -78,29 +90,65 @@ public final class SqlUpsertSettingsArgs extends com.pulumi.resources.ResourceAr
             $ = new SqlUpsertSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interimSchemaName Schema name for interim table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interimSchemaName(@Nullable Output<Object> interimSchemaName) {
             $.interimSchemaName = interimSchemaName;
             return this;
         }
 
+        /**
+         * @param interimSchemaName Schema name for interim table. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder interimSchemaName(Object interimSchemaName) {
             return interimSchemaName(Output.of(interimSchemaName));
         }
 
+        /**
+         * @param keys Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<Object> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(Object keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param useTempDB Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useTempDB(@Nullable Output<Object> useTempDB) {
             $.useTempDB = useTempDB;
             return this;
         }
 
+        /**
+         * @param useTempDB Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useTempDB(Object useTempDB) {
             return useTempDB(Output.of(useTempDB));
         }

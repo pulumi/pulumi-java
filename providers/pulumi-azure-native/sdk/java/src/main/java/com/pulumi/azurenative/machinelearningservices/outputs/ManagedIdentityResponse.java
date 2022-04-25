@@ -11,26 +11,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedIdentityResponse {
-    /**
-     * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
-     * 
-     */
+        /**
+         * @return Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+         * 
+         */
     private final @Nullable String clientId;
-    /**
-     * Enum to determine identity framework.
-     * Expected value is &#39;Managed&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine identity framework.
+         * Expected value is &#39;Managed&#39;.
+         * 
+         */
     private final String identityType;
-    /**
-     * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
-     * 
-     */
+        /**
+         * @return Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+         * 
+         */
     private final @Nullable String objectId;
-    /**
-     * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
-     * 
-     */
+        /**
+         * @return Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+         * 
+         */
     private final @Nullable String resourceId;
 
     @CustomType.Constructor
@@ -46,31 +46,31 @@ public final class ManagedIdentityResponse {
     }
 
     /**
-     * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
+     * @return Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * Enum to determine identity framework.
+     * @return Enum to determine identity framework.
      * Expected value is &#39;Managed&#39;.
      * 
-    */
+     */
     public String identityType() {
         return this.identityType;
     }
     /**
-     * Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
+     * @return Specifies a user-assigned identity by object ID. For system-assigned, do not set this field.
      * 
-    */
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
-     * Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
+     * @return Specifies a user-assigned identity by ARM resource ID. For system-assigned, do not set this field.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

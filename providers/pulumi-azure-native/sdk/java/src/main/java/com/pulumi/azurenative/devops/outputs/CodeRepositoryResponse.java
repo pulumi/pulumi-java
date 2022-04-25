@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CodeRepositoryResponse {
-    /**
-     * Authorization info to access the code repository.
-     * 
-     */
+        /**
+         * @return Authorization info to access the code repository.
+         * 
+         */
     private final @Nullable AuthorizationResponse authorization;
-    /**
-     * Default branch used to configure Continuous Integration (CI) in the pipeline.
-     * 
-     */
+        /**
+         * @return Default branch used to configure Continuous Integration (CI) in the pipeline.
+         * 
+         */
     private final String defaultBranch;
-    /**
-     * Unique immutable identifier of the code repository.
-     * 
-     */
+        /**
+         * @return Unique immutable identifier of the code repository.
+         * 
+         */
     private final String id;
-    /**
-     * Repository-specific properties.
-     * 
-     */
+        /**
+         * @return Repository-specific properties.
+         * 
+         */
     private final @Nullable Map<String,String> properties;
-    /**
-     * Type of code repository.
-     * 
-     */
+        /**
+         * @return Type of code repository.
+         * 
+         */
     private final String repositoryType;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class CodeRepositoryResponse {
     }
 
     /**
-     * Authorization info to access the code repository.
+     * @return Authorization info to access the code repository.
      * 
-    */
+     */
     public Optional<AuthorizationResponse> authorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
-     * Default branch used to configure Continuous Integration (CI) in the pipeline.
+     * @return Default branch used to configure Continuous Integration (CI) in the pipeline.
      * 
-    */
+     */
     public String defaultBranch() {
         return this.defaultBranch;
     }
     /**
-     * Unique immutable identifier of the code repository.
+     * @return Unique immutable identifier of the code repository.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Repository-specific properties.
+     * @return Repository-specific properties.
      * 
-    */
+     */
     public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
-     * Type of code repository.
+     * @return Type of code repository.
      * 
-    */
+     */
     public String repositoryType() {
         return this.repositoryType;
     }

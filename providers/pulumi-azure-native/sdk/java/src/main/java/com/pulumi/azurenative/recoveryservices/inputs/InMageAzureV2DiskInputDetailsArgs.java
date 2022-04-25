@@ -28,6 +28,10 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="diskEncryptionSetId")
     private @Nullable Output<String> diskEncryptionSetId;
 
+    /**
+     * @return The DiskEncryptionSet ARM ID.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -39,6 +43,10 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="diskId")
     private @Nullable Output<String> diskId;
 
+    /**
+     * @return The DiskId.
+     * 
+     */
     public Optional<Output<String>> diskId() {
         return Optional.ofNullable(this.diskId);
     }
@@ -50,6 +58,10 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="diskType")
     private @Nullable Output<Either<String,DiskAccountType>> diskType;
 
+    /**
+     * @return The DiskType.
+     * 
+     */
     public Optional<Output<Either<String,DiskAccountType>>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -61,6 +73,10 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
     @Import(name="logStorageAccountId")
     private @Nullable Output<String> logStorageAccountId;
 
+    /**
+     * @return The LogStorageAccountId.
+     * 
+     */
     public Optional<Output<String>> logStorageAccountId() {
         return Optional.ofNullable(this.logStorageAccountId);
     }
@@ -92,46 +108,106 @@ public final class InMageAzureV2DiskInputDetailsArgs extends com.pulumi.resource
             $ = new InMageAzureV2DiskInputDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId The DiskEncryptionSet ARM ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetId The DiskEncryptionSet ARM ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
             return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
 
+        /**
+         * @param diskId The DiskId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(@Nullable Output<String> diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param diskId The DiskId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(String diskId) {
             return diskId(Output.of(diskId));
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(Either<String,DiskAccountType> diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Either.ofLeft(diskType));
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(DiskAccountType diskType) {
             return diskType(Either.ofRight(diskType));
         }
 
+        /**
+         * @param logStorageAccountId The LogStorageAccountId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
             $.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
+        /**
+         * @param logStorageAccountId The LogStorageAccountId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(String logStorageAccountId) {
             return logStorageAccountId(Output.of(logStorageAccountId));
         }

@@ -13,21 +13,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncoderCustomPresetResponse {
-    /**
-     * Describes a custom preset for encoding audio.
-     * 
-     */
+        /**
+         * @return Describes a custom preset for encoding audio.
+         * 
+         */
     private final @Nullable AudioEncoderAacResponse audioEncoder;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Describes a custom preset for encoding video.
-     * 
-     */
+        /**
+         * @return Describes a custom preset for encoding video.
+         * 
+         */
     private final @Nullable VideoEncoderH264Response videoEncoder;
 
     @CustomType.Constructor
@@ -41,24 +41,24 @@ public final class EncoderCustomPresetResponse {
     }
 
     /**
-     * Describes a custom preset for encoding audio.
+     * @return Describes a custom preset for encoding audio.
      * 
-    */
+     */
     public Optional<AudioEncoderAacResponse> audioEncoder() {
         return Optional.ofNullable(this.audioEncoder);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.EncoderCustomPreset&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Describes a custom preset for encoding video.
+     * @return Describes a custom preset for encoding video.
      * 
-    */
+     */
     public Optional<VideoEncoderH264Response> videoEncoder() {
         return Optional.ofNullable(this.videoEncoder);
     }

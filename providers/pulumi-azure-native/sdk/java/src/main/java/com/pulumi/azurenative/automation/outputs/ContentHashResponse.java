@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ContentHashResponse {
-    /**
-     * Gets or sets the content hash algorithm used to hash the content.
-     * 
-     */
+        /**
+         * @return Gets or sets the content hash algorithm used to hash the content.
+         * 
+         */
     private final String algorithm;
-    /**
-     * Gets or sets expected hash value of the content.
-     * 
-     */
+        /**
+         * @return Gets or sets expected hash value of the content.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ContentHashResponse {
     }
 
     /**
-     * Gets or sets the content hash algorithm used to hash the content.
+     * @return Gets or sets the content hash algorithm used to hash the content.
      * 
-    */
+     */
     public String algorithm() {
         return this.algorithm;
     }
     /**
-     * Gets or sets expected hash value of the content.
+     * @return Gets or sets expected hash value of the content.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

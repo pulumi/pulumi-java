@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EventHubPropertiesResponse {
-    /**
-     * The Event Hub-compatible endpoint.
-     * 
-     */
+        /**
+         * @return The Event Hub-compatible endpoint.
+         * 
+         */
     private final String endpoint;
-    /**
-     * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
-     * 
-     */
+        /**
+         * @return The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+         * 
+         */
     private final @Nullable Integer partitionCount;
-    /**
-     * The partition ids in the Event Hub-compatible endpoint.
-     * 
-     */
+        /**
+         * @return The partition ids in the Event Hub-compatible endpoint.
+         * 
+         */
     private final List<String> partitionIds;
-    /**
-     * The Event Hub-compatible name.
-     * 
-     */
+        /**
+         * @return The Event Hub-compatible name.
+         * 
+         */
     private final String path;
-    /**
-     * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
-     * 
-     */
+        /**
+         * @return The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+         * 
+         */
     private final @Nullable Double retentionTimeInDays;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class EventHubPropertiesResponse {
     }
 
     /**
-     * The Event Hub-compatible endpoint.
+     * @return The Event Hub-compatible endpoint.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+     * @return The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
      * 
-    */
+     */
     public Optional<Integer> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
     /**
-     * The partition ids in the Event Hub-compatible endpoint.
+     * @return The partition ids in the Event Hub-compatible endpoint.
      * 
-    */
+     */
     public List<String> partitionIds() {
         return this.partitionIds;
     }
     /**
-     * The Event Hub-compatible name.
+     * @return The Event Hub-compatible name.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+     * @return The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
      * 
-    */
+     */
     public Optional<Double> retentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }

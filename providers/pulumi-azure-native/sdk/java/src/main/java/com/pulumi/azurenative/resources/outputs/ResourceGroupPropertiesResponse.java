@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ResourceGroupPropertiesResponse {
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final String provisioningState;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class ResourceGroupPropertiesResponse {
     }
 
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }

@@ -15,100 +15,100 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAccessReviewHistoryDefinitionByIdResult {
-    /**
-     * Date time when history definition was created
-     * 
-     */
+        /**
+         * @return Date time when history definition was created
+         * 
+         */
     private final String createdDateTime;
-    /**
-     * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
-     * 
-     */
+        /**
+         * @return Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
+         * 
+         */
     private final @Nullable List<String> decisions;
-    /**
-     * The display name for the history definition.
-     * 
-     */
+        /**
+         * @return The display name for the history definition.
+         * 
+         */
     private final @Nullable String displayName;
-    /**
-     * The DateTime when the review is scheduled to end. Required if type is endDate
-     * 
-     */
+        /**
+         * @return The DateTime when the review is scheduled to end. Required if type is endDate
+         * 
+         */
     private final @Nullable String endDate;
-    /**
-     * The access review history definition id.
-     * 
-     */
+        /**
+         * @return The access review history definition id.
+         * 
+         */
     private final String id;
-    /**
-     * Set of access review history instances for this history definition.
-     * 
-     */
+        /**
+         * @return Set of access review history instances for this history definition.
+         * 
+         */
     private final @Nullable List<AccessReviewHistoryInstanceResponse> instances;
-    /**
-     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
-     * 
-     */
+        /**
+         * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+         * 
+         */
     private final @Nullable Integer interval;
-    /**
-     * The access review history definition unique id.
-     * 
-     */
+        /**
+         * @return The access review history definition unique id.
+         * 
+         */
     private final String name;
-    /**
-     * The number of times to repeat the access review. Required and must be positive if type is numbered.
-     * 
-     */
+        /**
+         * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
+         * 
+         */
     private final @Nullable Integer numberOfOccurrences;
-    /**
-     * The identity id
-     * 
-     */
+        /**
+         * @return The identity id
+         * 
+         */
     private final String principalId;
-    /**
-     * The identity display name
-     * 
-     */
+        /**
+         * @return The identity display name
+         * 
+         */
     private final String principalName;
-    /**
-     * The identity type : user/servicePrincipal
-     * 
-     */
+        /**
+         * @return The identity type : user/servicePrincipal
+         * 
+         */
     private final String principalType;
-    /**
-     * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
-     * 
-     */
+        /**
+         * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+         * 
+         */
     private final String reviewHistoryPeriodEndDateTime;
-    /**
-     * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
-     * 
-     */
+        /**
+         * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+         * 
+         */
     private final String reviewHistoryPeriodStartDateTime;
-    /**
-     * A collection of scopes used when selecting review history data
-     * 
-     */
+        /**
+         * @return A collection of scopes used when selecting review history data
+         * 
+         */
     private final @Nullable List<AccessReviewScopeResponse> scopes;
-    /**
-     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
-     * 
-     */
+        /**
+         * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+         * 
+         */
     private final @Nullable String startDate;
-    /**
-     * This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
-     * 
-     */
+        /**
+         * @return This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
+         * 
+         */
     private final String status;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The user principal name(if valid)
-     * 
-     */
+        /**
+         * @return The user principal name(if valid)
+         * 
+         */
     private final String userPrincipalName;
 
     @CustomType.Constructor
@@ -154,135 +154,135 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
     }
 
     /**
-     * Date time when history definition was created
+     * @return Date time when history definition was created
      * 
-    */
+     */
     public String createdDateTime() {
         return this.createdDateTime;
     }
     /**
-     * Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
+     * @return Collection of review decisions which the history data should be filtered on. For example if Approve and Deny are supplied the data will only contain review results in which the decision maker approved or denied a review request.
      * 
-    */
+     */
     public List<String> decisions() {
         return this.decisions == null ? List.of() : this.decisions;
     }
     /**
-     * The display name for the history definition.
+     * @return The display name for the history definition.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The DateTime when the review is scheduled to end. Required if type is endDate
+     * @return The DateTime when the review is scheduled to end. Required if type is endDate
      * 
-    */
+     */
     public Optional<String> endDate() {
         return Optional.ofNullable(this.endDate);
     }
     /**
-     * The access review history definition id.
+     * @return The access review history definition id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Set of access review history instances for this history definition.
+     * @return Set of access review history instances for this history definition.
      * 
-    */
+     */
     public List<AccessReviewHistoryInstanceResponse> instances() {
         return this.instances == null ? List.of() : this.instances;
     }
     /**
-     * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+     * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
-    */
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
-     * The access review history definition unique id.
+     * @return The access review history definition unique id.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The number of times to repeat the access review. Required and must be positive if type is numbered.
+     * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
-    */
+     */
     public Optional<Integer> numberOfOccurrences() {
         return Optional.ofNullable(this.numberOfOccurrences);
     }
     /**
-     * The identity id
+     * @return The identity id
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The identity display name
+     * @return The identity display name
      * 
-    */
+     */
     public String principalName() {
         return this.principalName;
     }
     /**
-     * The identity type : user/servicePrincipal
+     * @return The identity type : user/servicePrincipal
      * 
-    */
+     */
     public String principalType() {
         return this.principalType;
     }
     /**
-     * Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
+     * @return Date time used when selecting review data, all reviews included in data end on or before this date. For use only with one-time/non-recurring reports.
      * 
-    */
+     */
     public String reviewHistoryPeriodEndDateTime() {
         return this.reviewHistoryPeriodEndDateTime;
     }
     /**
-     * Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
+     * @return Date time used when selecting review data, all reviews included in data start on or after this date. For use only with one-time/non-recurring reports.
      * 
-    */
+     */
     public String reviewHistoryPeriodStartDateTime() {
         return this.reviewHistoryPeriodStartDateTime;
     }
     /**
-     * A collection of scopes used when selecting review history data
+     * @return A collection of scopes used when selecting review history data
      * 
-    */
+     */
     public List<AccessReviewScopeResponse> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
-     * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+     * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
-    */
+     */
     public Optional<String> startDate() {
         return Optional.ofNullable(this.startDate);
     }
     /**
-     * This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
+     * @return This read-only field specifies the of the requested review history data. This is either requested, in-progress, done or error.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The user principal name(if valid)
+     * @return The user principal name(if valid)
      * 
-    */
+     */
     public String userPrincipalName() {
         return this.userPrincipalName;
     }

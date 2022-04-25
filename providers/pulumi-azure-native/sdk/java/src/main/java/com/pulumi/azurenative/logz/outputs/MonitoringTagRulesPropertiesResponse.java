@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MonitoringTagRulesPropertiesResponse {
-    /**
-     * Set of rules for sending logs for the Monitor resource.
-     * 
-     */
+        /**
+         * @return Set of rules for sending logs for the Monitor resource.
+         * 
+         */
     private final @Nullable LogRulesResponse logRules;
-    /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
-     * 
-     */
+        /**
+         * @return Flag specifying if the resource provisioning state as tracked by ARM.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class MonitoringTagRulesPropertiesResponse {
     }
 
     /**
-     * Set of rules for sending logs for the Monitor resource.
+     * @return Set of rules for sending logs for the Monitor resource.
      * 
-    */
+     */
     public Optional<LogRulesResponse> logRules() {
         return Optional.ofNullable(this.logRules);
     }
     /**
-     * Flag specifying if the resource provisioning state as tracked by ARM.
+     * @return Flag specifying if the resource provisioning state as tracked by ARM.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }

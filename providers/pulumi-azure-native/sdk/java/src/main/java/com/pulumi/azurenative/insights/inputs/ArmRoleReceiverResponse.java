@@ -27,6 +27,10 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the arm role receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="roleId", required=true)
     private String roleId;
 
+    /**
+     * @return The arm role id.
+     * 
+     */
     public String roleId() {
         return this.roleId;
     }
@@ -49,6 +57,10 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useCommonAlertSchema")
     private @Nullable Boolean useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -79,16 +91,34 @@ public final class ArmRoleReceiverResponse extends com.pulumi.resources.InvokeAr
             $ = new ArmRoleReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the arm role receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param roleId The arm role id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(String roleId) {
             $.roleId = roleId;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;

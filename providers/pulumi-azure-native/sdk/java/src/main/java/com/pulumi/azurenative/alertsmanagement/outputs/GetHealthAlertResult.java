@@ -15,60 +15,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetHealthAlertResult {
-    /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
-     * 
-     */
+        /**
+         * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+         * 
+         */
     private final @Nullable List<HealthAlertActionResponse> actions;
-    /**
-     * defines the specific alert criteria information.
-     * 
-     */
+        /**
+         * @return defines the specific alert criteria information.
+         * 
+         */
     private final HealthAlertCriteriaResponse criteria;
-    /**
-     * the description of the health alert that will be included in the alert email.
-     * 
-     */
+        /**
+         * @return the description of the health alert that will be included in the alert email.
+         * 
+         */
     private final String description;
-    /**
-     * the flag that indicates whether the health alert is enabled.
-     * 
-     */
+        /**
+         * @return the flag that indicates whether the health alert is enabled.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * Azure resource Id
-     * 
-     */
+        /**
+         * @return Azure resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Last time the rule was updated in ISO8601 format.
-     * 
-     */
+        /**
+         * @return Last time the rule was updated in ISO8601 format.
+         * 
+         */
     private final String lastUpdatedTime;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Azure resource name
-     * 
-     */
+        /**
+         * @return Azure resource name
+         * 
+         */
     private final String name;
-    /**
-     * the list of resource id&#39;s that this health alert is scoped to.
-     * 
-     */
+        /**
+         * @return the list of resource id&#39;s that this health alert is scoped to.
+         * 
+         */
     private final @Nullable List<String> scopes;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Azure resource type
-     * 
-     */
+        /**
+         * @return Azure resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -98,79 +98,79 @@ public final class GetHealthAlertResult {
     }
 
     /**
-     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
-    */
+     */
     public List<HealthAlertActionResponse> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * defines the specific alert criteria information.
+     * @return defines the specific alert criteria information.
      * 
-    */
+     */
     public HealthAlertCriteriaResponse criteria() {
         return this.criteria;
     }
     /**
-     * the description of the health alert that will be included in the alert email.
+     * @return the description of the health alert that will be included in the alert email.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * the flag that indicates whether the health alert is enabled.
+     * @return the flag that indicates whether the health alert is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Last time the rule was updated in ISO8601 format.
+     * @return Last time the rule was updated in ISO8601 format.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * the list of resource id&#39;s that this health alert is scoped to.
+     * @return the list of resource id&#39;s that this health alert is scoped to.
      * 
-    */
+     */
     public List<String> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

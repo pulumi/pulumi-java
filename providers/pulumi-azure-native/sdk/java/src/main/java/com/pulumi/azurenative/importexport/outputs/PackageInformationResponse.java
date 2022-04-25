@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageInformationResponse {
-    /**
-     * The name of the carrier that is used to ship the import or export drives.
-     * 
-     */
+        /**
+         * @return The name of the carrier that is used to ship the import or export drives.
+         * 
+         */
     private final String carrierName;
-    /**
-     * The number of drives included in the package.
-     * 
-     */
+        /**
+         * @return The number of drives included in the package.
+         * 
+         */
     private final Double driveCount;
-    /**
-     * The date when the package is shipped.
-     * 
-     */
+        /**
+         * @return The date when the package is shipped.
+         * 
+         */
     private final String shipDate;
-    /**
-     * The tracking number of the package.
-     * 
-     */
+        /**
+         * @return The tracking number of the package.
+         * 
+         */
     private final String trackingNumber;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class PackageInformationResponse {
     }
 
     /**
-     * The name of the carrier that is used to ship the import or export drives.
+     * @return The name of the carrier that is used to ship the import or export drives.
      * 
-    */
+     */
     public String carrierName() {
         return this.carrierName;
     }
     /**
-     * The number of drives included in the package.
+     * @return The number of drives included in the package.
      * 
-    */
+     */
     public Double driveCount() {
         return this.driveCount;
     }
     /**
-     * The date when the package is shipped.
+     * @return The date when the package is shipped.
      * 
-    */
+     */
     public String shipDate() {
         return this.shipDate;
     }
     /**
-     * The tracking number of the package.
+     * @return The tracking number of the package.
      * 
-    */
+     */
     public String trackingNumber() {
         return this.trackingNumber;
     }

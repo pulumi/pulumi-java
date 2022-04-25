@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConnectionMonitorEndpointFilterResponse {
-    /**
-     * List of items in the filter.
-     * 
-     */
+        /**
+         * @return List of items in the filter.
+         * 
+         */
     private final @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items;
-    /**
-     * The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
-     * 
-     */
+        /**
+         * @return The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ConnectionMonitorEndpointFilterResponse {
     }
 
     /**
-     * List of items in the filter.
+     * @return List of items in the filter.
      * 
-    */
+     */
     public List<ConnectionMonitorEndpointFilterItemResponse> items() {
         return this.items == null ? List.of() : this.items;
     }
     /**
-     * The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
+     * @return The behavior of the endpoint filter. Currently only &#39;Include&#39; is supported.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

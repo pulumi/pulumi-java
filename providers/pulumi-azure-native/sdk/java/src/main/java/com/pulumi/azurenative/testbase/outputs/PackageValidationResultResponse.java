@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class PackageValidationResultResponse {
-    /**
-     * Error information.
-     * 
-     */
+        /**
+         * @return Error information.
+         * 
+         */
     private final List<String> errors;
-    /**
-     * Indicates whether the package passed the validation.
-     * 
-     */
+        /**
+         * @return Indicates whether the package passed the validation.
+         * 
+         */
     private final Boolean isValid;
-    /**
-     * Validation name.
-     * 
-     */
+        /**
+         * @return Validation name.
+         * 
+         */
     private final String validationName;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class PackageValidationResultResponse {
     }
 
     /**
-     * Error information.
+     * @return Error information.
      * 
-    */
+     */
     public List<String> errors() {
         return this.errors;
     }
     /**
-     * Indicates whether the package passed the validation.
+     * @return Indicates whether the package passed the validation.
      * 
-    */
+     */
     public Boolean isValid() {
         return this.isValid;
     }
     /**
-     * Validation name.
+     * @return Validation name.
      * 
-    */
+     */
     public String validationName() {
         return this.validationName;
     }

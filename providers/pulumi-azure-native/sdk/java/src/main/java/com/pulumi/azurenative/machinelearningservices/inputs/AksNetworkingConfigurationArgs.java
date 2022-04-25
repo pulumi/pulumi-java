@@ -26,6 +26,10 @@ public final class AksNetworkingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="dnsServiceIP")
     private @Nullable Output<String> dnsServiceIP;
 
+    /**
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * 
+     */
     public Optional<Output<String>> dnsServiceIP() {
         return Optional.ofNullable(this.dnsServiceIP);
     }
@@ -37,6 +41,10 @@ public final class AksNetworkingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="dockerBridgeCidr")
     private @Nullable Output<String> dockerBridgeCidr;
 
+    /**
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * 
+     */
     public Optional<Output<String>> dockerBridgeCidr() {
         return Optional.ofNullable(this.dockerBridgeCidr);
     }
@@ -48,6 +56,10 @@ public final class AksNetworkingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="serviceCidr")
     private @Nullable Output<String> serviceCidr;
 
+    /**
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * 
+     */
     public Optional<Output<String>> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
@@ -59,6 +71,10 @@ public final class AksNetworkingConfigurationArgs extends com.pulumi.resources.R
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return Virtual network subnet resource ID the compute nodes belong to
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -90,38 +106,86 @@ public final class AksNetworkingConfigurationArgs extends com.pulumi.resources.R
             $ = new AksNetworkingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServiceIP An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIP(@Nullable Output<String> dnsServiceIP) {
             $.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
+        /**
+         * @param dnsServiceIP An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServiceIP(String dnsServiceIP) {
             return dnsServiceIP(Output.of(dnsServiceIP));
         }
 
+        /**
+         * @param dockerBridgeCidr A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerBridgeCidr(@Nullable Output<String> dockerBridgeCidr) {
             $.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
+        /**
+         * @param dockerBridgeCidr A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerBridgeCidr(String dockerBridgeCidr) {
             return dockerBridgeCidr(Output.of(dockerBridgeCidr));
         }
 
+        /**
+         * @param serviceCidr A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
             $.serviceCidr = serviceCidr;
             return this;
         }
 
+        /**
+         * @param serviceCidr A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceCidr(String serviceCidr) {
             return serviceCidr(Output.of(serviceCidr));
         }
 
+        /**
+         * @param subnetId Virtual network subnet resource ID the compute nodes belong to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Virtual network subnet resource ID the compute nodes belong to
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

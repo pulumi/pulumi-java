@@ -18,75 +18,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRegistryResult {
-    /**
-     * The value that indicates whether the admin user is enabled.
-     * 
-     */
+        /**
+         * @return The value that indicates whether the admin user is enabled.
+         * 
+         */
     private final @Nullable Boolean adminUserEnabled;
-    /**
-     * The creation date of the container registry in ISO8601 format.
-     * 
-     */
+        /**
+         * @return The creation date of the container registry in ISO8601 format.
+         * 
+         */
     private final String creationDate;
-    /**
-     * The resource ID.
-     * 
-     */
+        /**
+         * @return The resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * The location of the resource. This cannot be changed after the resource is created.
-     * 
-     */
+        /**
+         * @return The location of the resource. This cannot be changed after the resource is created.
+         * 
+         */
     private final String location;
-    /**
-     * The URL that can be used to log into the container registry.
-     * 
-     */
+        /**
+         * @return The URL that can be used to log into the container registry.
+         * 
+         */
     private final String loginServer;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * The network rule set for a container registry.
-     * 
-     */
+        /**
+         * @return The network rule set for a container registry.
+         * 
+         */
     private final @Nullable NetworkRuleSetResponse networkRuleSet;
-    /**
-     * The policies for a container registry.
-     * 
-     */
+        /**
+         * @return The policies for a container registry.
+         * 
+         */
     private final @Nullable PoliciesResponse policies;
-    /**
-     * The provisioning state of the container registry at the time the operation was called.
-     * 
-     */
+        /**
+         * @return The provisioning state of the container registry at the time the operation was called.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The SKU of the container registry.
-     * 
-     */
+        /**
+         * @return The SKU of the container registry.
+         * 
+         */
     private final SkuResponse sku;
-    /**
-     * The status of the container registry at the time the operation was called.
-     * 
-     */
+        /**
+         * @return The status of the container registry at the time the operation was called.
+         * 
+         */
     private final StatusResponse status;
-    /**
-     * The properties of the storage account for the container registry. Only applicable to Classic SKU.
-     * 
-     */
+        /**
+         * @return The properties of the storage account for the container registry. Only applicable to Classic SKU.
+         * 
+         */
     private final @Nullable StorageAccountPropertiesResponse storageAccount;
-    /**
-     * The tags of the resource.
-     * 
-     */
+        /**
+         * @return The tags of the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -122,100 +122,100 @@ public final class GetRegistryResult {
     }
 
     /**
-     * The value that indicates whether the admin user is enabled.
+     * @return The value that indicates whether the admin user is enabled.
      * 
-    */
+     */
     public Optional<Boolean> adminUserEnabled() {
         return Optional.ofNullable(this.adminUserEnabled);
     }
     /**
-     * The creation date of the container registry in ISO8601 format.
+     * @return The creation date of the container registry in ISO8601 format.
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * The resource ID.
+     * @return The resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The location of the resource. This cannot be changed after the resource is created.
+     * @return The location of the resource. This cannot be changed after the resource is created.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The URL that can be used to log into the container registry.
+     * @return The URL that can be used to log into the container registry.
      * 
-    */
+     */
     public String loginServer() {
         return this.loginServer;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The network rule set for a container registry.
+     * @return The network rule set for a container registry.
      * 
-    */
+     */
     public Optional<NetworkRuleSetResponse> networkRuleSet() {
         return Optional.ofNullable(this.networkRuleSet);
     }
     /**
-     * The policies for a container registry.
+     * @return The policies for a container registry.
      * 
-    */
+     */
     public Optional<PoliciesResponse> policies() {
         return Optional.ofNullable(this.policies);
     }
     /**
-     * The provisioning state of the container registry at the time the operation was called.
+     * @return The provisioning state of the container registry at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The SKU of the container registry.
+     * @return The SKU of the container registry.
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * The status of the container registry at the time the operation was called.
+     * @return The status of the container registry at the time the operation was called.
      * 
-    */
+     */
     public StatusResponse status() {
         return this.status;
     }
     /**
-     * The properties of the storage account for the container registry. Only applicable to Classic SKU.
+     * @return The properties of the storage account for the container registry. Only applicable to Classic SKU.
      * 
-    */
+     */
     public Optional<StorageAccountPropertiesResponse> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
     /**
-     * The tags of the resource.
+     * @return The tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

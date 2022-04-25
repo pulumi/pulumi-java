@@ -12,95 +12,95 @@ import java.util.Objects;
 
 @CustomType
 public final class ProcessServerDetailsResponse {
-    /**
-     * The available memory.
-     * 
-     */
+        /**
+         * @return The available memory.
+         * 
+         */
     private final Double availableMemoryInBytes;
-    /**
-     * The available disk space.
-     * 
-     */
+        /**
+         * @return The available disk space.
+         * 
+         */
     private final Double availableSpaceInBytes;
-    /**
-     * The free disk space percentage.
-     * 
-     */
+        /**
+         * @return The free disk space percentage.
+         * 
+         */
     private final Double freeSpacePercentage;
-    /**
-     * The health of the process server.
-     * 
-     */
+        /**
+         * @return The health of the process server.
+         * 
+         */
     private final String health;
-    /**
-     * The health errors.
-     * 
-     */
+        /**
+         * @return The health errors.
+         * 
+         */
     private final List<HealthErrorResponse> healthErrors;
-    /**
-     * The historic health of the process server based on the health in last 24 hours.
-     * 
-     */
+        /**
+         * @return The historic health of the process server based on the health in last 24 hours.
+         * 
+         */
     private final String historicHealth;
-    /**
-     * The process server Id.
-     * 
-     */
+        /**
+         * @return The process server Id.
+         * 
+         */
     private final String id;
-    /**
-     * The last heartbeat received from the process server.
-     * 
-     */
+        /**
+         * @return The last heartbeat received from the process server.
+         * 
+         */
     private final String lastHeartbeatUtc;
-    /**
-     * The memory usage percentage.
-     * 
-     */
+        /**
+         * @return The memory usage percentage.
+         * 
+         */
     private final Double memoryUsagePercentage;
-    /**
-     * The process server name.
-     * 
-     */
+        /**
+         * @return The process server name.
+         * 
+         */
     private final String name;
-    /**
-     * The processor usage percentage.
-     * 
-     */
+        /**
+         * @return The processor usage percentage.
+         * 
+         */
     private final Double processorUsagePercentage;
-    /**
-     * The throughput in bytes.
-     * 
-     */
+        /**
+         * @return The throughput in bytes.
+         * 
+         */
     private final Double throughputInBytes;
-    /**
-     * The uploading pending data in bytes.
-     * 
-     */
+        /**
+         * @return The uploading pending data in bytes.
+         * 
+         */
     private final Double throughputUploadPendingDataInBytes;
-    /**
-     * The total memory.
-     * 
-     */
+        /**
+         * @return The total memory.
+         * 
+         */
     private final Double totalMemoryInBytes;
-    /**
-     * The total disk space.
-     * 
-     */
+        /**
+         * @return The total disk space.
+         * 
+         */
     private final Double totalSpaceInBytes;
-    /**
-     * The used memory.
-     * 
-     */
+        /**
+         * @return The used memory.
+         * 
+         */
     private final Double usedMemoryInBytes;
-    /**
-     * The used disk space.
-     * 
-     */
+        /**
+         * @return The used disk space.
+         * 
+         */
     private final Double usedSpaceInBytes;
-    /**
-     * The process server version.
-     * 
-     */
+        /**
+         * @return The process server version.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -144,128 +144,128 @@ public final class ProcessServerDetailsResponse {
     }
 
     /**
-     * The available memory.
+     * @return The available memory.
      * 
-    */
+     */
     public Double availableMemoryInBytes() {
         return this.availableMemoryInBytes;
     }
     /**
-     * The available disk space.
+     * @return The available disk space.
      * 
-    */
+     */
     public Double availableSpaceInBytes() {
         return this.availableSpaceInBytes;
     }
     /**
-     * The free disk space percentage.
+     * @return The free disk space percentage.
      * 
-    */
+     */
     public Double freeSpacePercentage() {
         return this.freeSpacePercentage;
     }
     /**
-     * The health of the process server.
+     * @return The health of the process server.
      * 
-    */
+     */
     public String health() {
         return this.health;
     }
     /**
-     * The health errors.
+     * @return The health errors.
      * 
-    */
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
     /**
-     * The historic health of the process server based on the health in last 24 hours.
+     * @return The historic health of the process server based on the health in last 24 hours.
      * 
-    */
+     */
     public String historicHealth() {
         return this.historicHealth;
     }
     /**
-     * The process server Id.
+     * @return The process server Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The last heartbeat received from the process server.
+     * @return The last heartbeat received from the process server.
      * 
-    */
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
     /**
-     * The memory usage percentage.
+     * @return The memory usage percentage.
      * 
-    */
+     */
     public Double memoryUsagePercentage() {
         return this.memoryUsagePercentage;
     }
     /**
-     * The process server name.
+     * @return The process server name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The processor usage percentage.
+     * @return The processor usage percentage.
      * 
-    */
+     */
     public Double processorUsagePercentage() {
         return this.processorUsagePercentage;
     }
     /**
-     * The throughput in bytes.
+     * @return The throughput in bytes.
      * 
-    */
+     */
     public Double throughputInBytes() {
         return this.throughputInBytes;
     }
     /**
-     * The uploading pending data in bytes.
+     * @return The uploading pending data in bytes.
      * 
-    */
+     */
     public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
     /**
-     * The total memory.
+     * @return The total memory.
      * 
-    */
+     */
     public Double totalMemoryInBytes() {
         return this.totalMemoryInBytes;
     }
     /**
-     * The total disk space.
+     * @return The total disk space.
      * 
-    */
+     */
     public Double totalSpaceInBytes() {
         return this.totalSpaceInBytes;
     }
     /**
-     * The used memory.
+     * @return The used memory.
      * 
-    */
+     */
     public Double usedMemoryInBytes() {
         return this.usedMemoryInBytes;
     }
     /**
-     * The used disk space.
+     * @return The used disk space.
      * 
-    */
+     */
     public Double usedSpaceInBytes() {
         return this.usedSpaceInBytes;
     }
     /**
-     * The process server version.
+     * @return The process server version.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

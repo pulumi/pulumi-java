@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class AvroSerializationResponse {
-    /**
-     * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
-     * Expected value is &#39;Avro&#39;.
-     * 
-     */
+        /**
+         * @return Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+         * Expected value is &#39;Avro&#39;.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class AvroSerializationResponse {
     }
 
     /**
-     * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Avro&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

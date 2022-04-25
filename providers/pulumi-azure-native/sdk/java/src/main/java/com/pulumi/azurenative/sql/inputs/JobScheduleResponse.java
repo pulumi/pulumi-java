@@ -27,6 +27,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Whether or not the schedule is enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return Schedule end time.
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -49,6 +57,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="interval")
     private @Nullable String interval;
 
+    /**
+     * @return Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+     * 
+     */
     public Optional<String> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -60,6 +72,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return Schedule start time.
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -71,6 +87,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Schedule interval type
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -103,26 +123,56 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Whether or not the schedule is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param endTime Schedule end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param interval Value of the schedule&#39;s recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable String interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param startTime Schedule start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param type Schedule interval type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

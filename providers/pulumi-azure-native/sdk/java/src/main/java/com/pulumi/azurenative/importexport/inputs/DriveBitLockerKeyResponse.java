@@ -25,6 +25,10 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="bitLockerKey")
     private @Nullable String bitLockerKey;
 
+    /**
+     * @return BitLocker recovery key or password
+     * 
+     */
     public Optional<String> bitLockerKey() {
         return Optional.ofNullable(this.bitLockerKey);
     }
@@ -36,6 +40,10 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
     @Import(name="driveId")
     private @Nullable String driveId;
 
+    /**
+     * @return Drive ID
+     * 
+     */
     public Optional<String> driveId() {
         return Optional.ofNullable(this.driveId);
     }
@@ -65,11 +73,23 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
             $ = new DriveBitLockerKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitLockerKey BitLocker recovery key or password
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitLockerKey(@Nullable String bitLockerKey) {
             $.bitLockerKey = bitLockerKey;
             return this;
         }
 
+        /**
+         * @param driveId Drive ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveId(@Nullable String driveId) {
             $.driveId = driveId;
             return this;

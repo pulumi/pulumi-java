@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ExportDatasetResponse {
-    /**
-     * The export dataset configuration.
-     * 
-     */
+        /**
+         * @return The export dataset configuration.
+         * 
+         */
     private final @Nullable ExportDatasetConfigurationResponse configuration;
-    /**
-     * The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
-     * 
-     */
+        /**
+         * @return The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+         * 
+         */
     private final @Nullable String granularity;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class ExportDatasetResponse {
     }
 
     /**
-     * The export dataset configuration.
+     * @return The export dataset configuration.
      * 
-    */
+     */
     public Optional<ExportDatasetConfigurationResponse> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
+     * @return The granularity of rows in the export. Currently only &#39;Daily&#39; is supported.
      * 
-    */
+     */
     public Optional<String> granularity() {
         return Optional.ofNullable(this.granularity);
     }

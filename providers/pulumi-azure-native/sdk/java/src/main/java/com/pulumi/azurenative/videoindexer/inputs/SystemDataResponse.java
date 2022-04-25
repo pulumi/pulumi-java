@@ -25,6 +25,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdAt")
     private @Nullable String createdAt;
 
+    /**
+     * @return The timestamp of resource creation (UTC).
+     * 
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -36,6 +40,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdBy")
     private @Nullable String createdBy;
 
+    /**
+     * @return The identity that created the resource.
+     * 
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -47,6 +55,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdByType")
     private @Nullable String createdByType;
 
+    /**
+     * @return The type of identity that created the resource.
+     * 
+     */
     public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
@@ -58,6 +70,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedAt")
     private @Nullable String lastModifiedAt;
 
+    /**
+     * @return The timestamp of resource last modification (UTC)
+     * 
+     */
     public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
@@ -69,6 +85,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedBy")
     private @Nullable String lastModifiedBy;
 
+    /**
+     * @return The identity that last modified the resource.
+     * 
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
@@ -80,6 +100,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastModifiedByType")
     private @Nullable String lastModifiedByType;
 
+    /**
+     * @return The type of identity that last modified the resource.
+     * 
+     */
     public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
@@ -113,31 +137,67 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SystemDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdAt The timestamp of resource creation (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdAt(@Nullable String createdAt) {
             $.createdAt = createdAt;
             return this;
         }
 
+        /**
+         * @param createdBy The identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable String createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdByType The type of identity that created the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdByType(@Nullable String createdByType) {
             $.createdByType = createdByType;
             return this;
         }
 
+        /**
+         * @param lastModifiedAt The timestamp of resource last modification (UTC)
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             $.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
+        /**
+         * @param lastModifiedBy The identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             $.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
+        /**
+         * @param lastModifiedByType The type of identity that last modified the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             $.lastModifiedByType = lastModifiedByType;
             return this;

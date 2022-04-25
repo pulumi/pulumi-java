@@ -14,55 +14,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDicomServiceResult {
-    /**
-     * Dicom Service authentication configuration.
-     * 
-     */
+        /**
+         * @return Dicom Service authentication configuration.
+         * 
+         */
     private final @Nullable DicomServiceAuthenticationConfigurationResponse authenticationConfiguration;
-    /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
-     * 
-     */
+        /**
+         * @return An etag associated with the resource, used for optimistic concurrency when editing it.
+         * 
+         */
     private final @Nullable String etag;
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The url of the Dicom Services.
-     * 
-     */
+        /**
+         * @return The url of the Dicom Services.
+         * 
+         */
     private final String serviceUrl;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -90,72 +90,72 @@ public final class GetDicomServiceResult {
     }
 
     /**
-     * Dicom Service authentication configuration.
+     * @return Dicom Service authentication configuration.
      * 
-    */
+     */
     public Optional<DicomServiceAuthenticationConfigurationResponse> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The url of the Dicom Services.
+     * @return The url of the Dicom Services.
      * 
-    */
+     */
     public String serviceUrl() {
         return this.serviceUrl;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

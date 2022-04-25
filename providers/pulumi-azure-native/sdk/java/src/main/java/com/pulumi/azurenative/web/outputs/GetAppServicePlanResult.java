@@ -17,141 +17,141 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetAppServicePlanResult {
-    /**
-     * The time when the server farm free offer expires.
-     * 
-     */
+        /**
+         * @return The time when the server farm free offer expires.
+         * 
+         */
     private final @Nullable String freeOfferExpirationTime;
-    /**
-     * Geographical location for the App Service plan.
-     * 
-     */
+        /**
+         * @return Geographical location for the App Service plan.
+         * 
+         */
     private final String geoRegion;
-    /**
-     * Specification for the App Service Environment to use for the App Service plan.
-     * 
-     */
+        /**
+         * @return Specification for the App Service Environment to use for the App Service plan.
+         * 
+         */
     private final @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile;
-    /**
-     * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
-     * 
-     */
+        /**
+         * @return If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
+         * 
+         */
     private final @Nullable Boolean hyperV;
-    /**
-     * Resource Id.
-     * 
-     */
+        /**
+         * @return Resource Id.
+         * 
+         */
     private final String id;
-    /**
-     * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
-     * 
-     */
+        /**
+         * @return If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
+         * 
+         */
     private final @Nullable Boolean isSpot;
-    /**
-     * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
-     * 
-     */
+        /**
+         * @return Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
+         * 
+         */
     private final @Nullable Boolean isXenon;
-    /**
-     * Kind of resource.
-     * 
-     */
+        /**
+         * @return Kind of resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * Specification for the Kubernetes Environment to use for the App Service plan.
-     * 
-     */
+        /**
+         * @return Specification for the Kubernetes Environment to use for the App Service plan.
+         * 
+         */
     private final @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile;
-    /**
-     * Resource Location.
-     * 
-     */
+        /**
+         * @return Resource Location.
+         * 
+         */
     private final String location;
-    /**
-     * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
-     * 
-     */
+        /**
+         * @return Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
+         * 
+         */
     private final @Nullable Integer maximumElasticWorkerCount;
-    /**
-     * Maximum number of instances that can be assigned to this App Service plan.
-     * 
-     */
+        /**
+         * @return Maximum number of instances that can be assigned to this App Service plan.
+         * 
+         */
     private final Integer maximumNumberOfWorkers;
-    /**
-     * Resource Name.
-     * 
-     */
+        /**
+         * @return Resource Name.
+         * 
+         */
     private final String name;
-    /**
-     * Number of apps assigned to this App Service plan.
-     * 
-     */
+        /**
+         * @return Number of apps assigned to this App Service plan.
+         * 
+         */
     private final Integer numberOfSites;
-    /**
-     * If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
-     * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
-     * 
-     */
+        /**
+         * @return If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+         * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
+         * 
+         */
     private final @Nullable Boolean perSiteScaling;
-    /**
-     * Provisioning state of the App Service Plan.
-     * 
-     */
+        /**
+         * @return Provisioning state of the App Service Plan.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
-     * 
-     */
+        /**
+         * @return If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
+         * 
+         */
     private final @Nullable Boolean reserved;
-    /**
-     * Resource group of the App Service plan.
-     * 
-     */
+        /**
+         * @return Resource group of the App Service plan.
+         * 
+         */
     private final String resourceGroup;
-    /**
-     * Description of a SKU for a scalable resource.
-     * 
-     */
+        /**
+         * @return Description of a SKU for a scalable resource.
+         * 
+         */
     private final @Nullable SkuDescriptionResponse sku;
-    /**
-     * The time when the server farm expires. Valid only if it is a spot server farm.
-     * 
-     */
+        /**
+         * @return The time when the server farm expires. Valid only if it is a spot server farm.
+         * 
+         */
     private final @Nullable String spotExpirationTime;
-    /**
-     * App Service plan status.
-     * 
-     */
+        /**
+         * @return App Service plan status.
+         * 
+         */
     private final String status;
-    /**
-     * App Service plan subscription.
-     * 
-     */
+        /**
+         * @return App Service plan subscription.
+         * 
+         */
     private final String subscription;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Scaling worker count.
-     * 
-     */
+        /**
+         * @return Scaling worker count.
+         * 
+         */
     private final @Nullable Integer targetWorkerCount;
-    /**
-     * Scaling worker size ID.
-     * 
-     */
+        /**
+         * @return Scaling worker size ID.
+         * 
+         */
     private final @Nullable Integer targetWorkerSizeId;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
-    /**
-     * Target worker tier assigned to the App Service plan.
-     * 
-     */
+        /**
+         * @return Target worker tier assigned to the App Service plan.
+         * 
+         */
     private final @Nullable String workerTierName;
 
     @CustomType.Constructor
@@ -213,192 +213,192 @@ public final class GetAppServicePlanResult {
     }
 
     /**
-     * The time when the server farm free offer expires.
+     * @return The time when the server farm free offer expires.
      * 
-    */
+     */
     public Optional<String> freeOfferExpirationTime() {
         return Optional.ofNullable(this.freeOfferExpirationTime);
     }
     /**
-     * Geographical location for the App Service plan.
+     * @return Geographical location for the App Service plan.
      * 
-    */
+     */
     public String geoRegion() {
         return this.geoRegion;
     }
     /**
-     * Specification for the App Service Environment to use for the App Service plan.
+     * @return Specification for the App Service Environment to use for the App Service plan.
      * 
-    */
+     */
     public Optional<HostingEnvironmentProfileResponse> hostingEnvironmentProfile() {
         return Optional.ofNullable(this.hostingEnvironmentProfile);
     }
     /**
-     * If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
+     * @return If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
-    */
+     */
     public Optional<Boolean> hyperV() {
         return Optional.ofNullable(this.hyperV);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
+     * @return If &lt;code&gt;true&lt;/code&gt;, this App Service Plan owns spot instances.
      * 
-    */
+     */
     public Optional<Boolean> isSpot() {
         return Optional.ofNullable(this.isSpot);
     }
     /**
-     * Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
+     * @return Obsolete: If Hyper-V container app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
-    */
+     */
     public Optional<Boolean> isXenon() {
         return Optional.ofNullable(this.isXenon);
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Specification for the Kubernetes Environment to use for the App Service plan.
+     * @return Specification for the Kubernetes Environment to use for the App Service plan.
      * 
-    */
+     */
     public Optional<KubeEnvironmentProfileResponse> kubeEnvironmentProfile() {
         return Optional.ofNullable(this.kubeEnvironmentProfile);
     }
     /**
-     * Resource Location.
+     * @return Resource Location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
+     * @return Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
      * 
-    */
+     */
     public Optional<Integer> maximumElasticWorkerCount() {
         return Optional.ofNullable(this.maximumElasticWorkerCount);
     }
     /**
-     * Maximum number of instances that can be assigned to this App Service plan.
+     * @return Maximum number of instances that can be assigned to this App Service plan.
      * 
-    */
+     */
     public Integer maximumNumberOfWorkers() {
         return this.maximumNumberOfWorkers;
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Number of apps assigned to this App Service plan.
+     * @return Number of apps assigned to this App Service plan.
      * 
-    */
+     */
     public Integer numberOfSites() {
         return this.numberOfSites;
     }
     /**
-     * If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
+     * @return If &lt;code&gt;true&lt;/code&gt;, apps assigned to this App Service plan can be scaled independently.
      * If &lt;code&gt;false&lt;/code&gt;, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
-    */
+     */
     public Optional<Boolean> perSiteScaling() {
         return Optional.ofNullable(this.perSiteScaling);
     }
     /**
-     * Provisioning state of the App Service Plan.
+     * @return Provisioning state of the App Service Plan.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
+     * @return If Linux app service plan &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.
      * 
-    */
+     */
     public Optional<Boolean> reserved() {
         return Optional.ofNullable(this.reserved);
     }
     /**
-     * Resource group of the App Service plan.
+     * @return Resource group of the App Service plan.
      * 
-    */
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
     /**
-     * Description of a SKU for a scalable resource.
+     * @return Description of a SKU for a scalable resource.
      * 
-    */
+     */
     public Optional<SkuDescriptionResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The time when the server farm expires. Valid only if it is a spot server farm.
+     * @return The time when the server farm expires. Valid only if it is a spot server farm.
      * 
-    */
+     */
     public Optional<String> spotExpirationTime() {
         return Optional.ofNullable(this.spotExpirationTime);
     }
     /**
-     * App Service plan status.
+     * @return App Service plan status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * App Service plan subscription.
+     * @return App Service plan subscription.
      * 
-    */
+     */
     public String subscription() {
         return this.subscription;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Scaling worker count.
+     * @return Scaling worker count.
      * 
-    */
+     */
     public Optional<Integer> targetWorkerCount() {
         return Optional.ofNullable(this.targetWorkerCount);
     }
     /**
-     * Scaling worker size ID.
+     * @return Scaling worker size ID.
      * 
-    */
+     */
     public Optional<Integer> targetWorkerSizeId() {
         return Optional.ofNullable(this.targetWorkerSizeId);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Target worker tier assigned to the App Service plan.
+     * @return Target worker tier assigned to the App Service plan.
      * 
-    */
+     */
     public Optional<String> workerTierName() {
         return Optional.ofNullable(this.workerTierName);
     }

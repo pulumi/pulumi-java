@@ -23,6 +23,10 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
     @Import(name="justification")
     private @Nullable String justification;
 
+    /**
+     * @return The justification for making the initiate request
+     * 
+     */
     public Optional<String> justification() {
         return Optional.ofNullable(this.justification);
     }
@@ -34,6 +38,10 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
     @Import(name="requestor", required=true)
     private String requestor;
 
+    /**
+     * @return The identity of the person who made the request
+     * 
+     */
     public String requestor() {
         return this.requestor;
     }
@@ -45,6 +53,10 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
     @Import(name="startTimeUtc", required=true)
     private String startTimeUtc;
 
+    /**
+     * @return The start time of the request in UTC
+     * 
+     */
     public String startTimeUtc() {
         return this.startTimeUtc;
     }
@@ -83,16 +95,34 @@ public final class JitNetworkAccessRequestResponse extends com.pulumi.resources.
             $ = new JitNetworkAccessRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param justification The justification for making the initiate request
+         * 
+         * @return builder
+         * 
+         */
         public Builder justification(@Nullable String justification) {
             $.justification = justification;
             return this;
         }
 
+        /**
+         * @param requestor The identity of the person who made the request
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestor(String requestor) {
             $.requestor = requestor;
             return this;
         }
 
+        /**
+         * @param startTimeUtc The start time of the request in UTC
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTimeUtc(String startTimeUtc) {
             $.startTimeUtc = startTimeUtc;
             return this;

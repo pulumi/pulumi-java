@@ -13,65 +13,65 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCommunicationServiceResult {
-    /**
-     * The location where the communication service stores its data at rest.
-     * 
-     */
+        /**
+         * @return The location where the communication service stores its data at rest.
+         * 
+         */
     private final String dataLocation;
-    /**
-     * FQDN of the CommunicationService instance.
-     * 
-     */
+        /**
+         * @return FQDN of the CommunicationService instance.
+         * 
+         */
     private final String hostName;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The immutable resource Id of the communication service.
-     * 
-     */
+        /**
+         * @return The immutable resource Id of the communication service.
+         * 
+         */
     private final String immutableResourceId;
-    /**
-     * The Azure location where the CommunicationService is running.
-     * 
-     */
+        /**
+         * @return The Azure location where the CommunicationService is running.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Resource ID of an Azure Notification Hub linked to this resource.
-     * 
-     */
+        /**
+         * @return Resource ID of an Azure Notification Hub linked to this resource.
+         * 
+         */
     private final String notificationHubId;
-    /**
-     * Provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
-     */
+        /**
+         * @return Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
-     * 
-     */
+        /**
+         * @return Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -103,86 +103,86 @@ public final class GetCommunicationServiceResult {
     }
 
     /**
-     * The location where the communication service stores its data at rest.
+     * @return The location where the communication service stores its data at rest.
      * 
-    */
+     */
     public String dataLocation() {
         return this.dataLocation;
     }
     /**
-     * FQDN of the CommunicationService instance.
+     * @return FQDN of the CommunicationService instance.
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The immutable resource Id of the communication service.
+     * @return The immutable resource Id of the communication service.
      * 
-    */
+     */
     public String immutableResourceId() {
         return this.immutableResourceId;
     }
     /**
-     * The Azure location where the CommunicationService is running.
+     * @return The Azure location where the CommunicationService is running.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource ID of an Azure Notification Hub linked to this resource.
+     * @return Resource ID of an Azure Notification Hub linked to this resource.
      * 
-    */
+     */
     public String notificationHubId() {
         return this.notificationHubId;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
+     * @return Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

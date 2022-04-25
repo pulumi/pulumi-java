@@ -14,40 +14,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CassandraTableGetPropertiesResponseResource {
-    /**
-     * Analytical TTL.
-     * 
-     */
+        /**
+         * @return Analytical TTL.
+         * 
+         */
     private final @Nullable Integer analyticalStorageTtl;
-    /**
-     * Time to live of the Cosmos DB Cassandra table
-     * 
-     */
+        /**
+         * @return Time to live of the Cosmos DB Cassandra table
+         * 
+         */
     private final @Nullable Integer defaultTtl;
-    /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
-     * 
-     */
+        /**
+         * @return A system generated property representing the resource etag required for optimistic concurrency control.
+         * 
+         */
     private final String etag;
-    /**
-     * Name of the Cosmos DB Cassandra table
-     * 
-     */
+        /**
+         * @return Name of the Cosmos DB Cassandra table
+         * 
+         */
     private final String id;
-    /**
-     * A system generated property. A unique identifier.
-     * 
-     */
+        /**
+         * @return A system generated property. A unique identifier.
+         * 
+         */
     private final String rid;
-    /**
-     * Schema of the Cosmos DB Cassandra table
-     * 
-     */
+        /**
+         * @return Schema of the Cosmos DB Cassandra table
+         * 
+         */
     private final @Nullable CassandraSchemaResponse schema;
-    /**
-     * A system generated property that denotes the last updated timestamp of the resource.
-     * 
-     */
+        /**
+         * @return A system generated property that denotes the last updated timestamp of the resource.
+         * 
+         */
     private final Double ts;
 
     @CustomType.Constructor
@@ -69,51 +69,51 @@ public final class CassandraTableGetPropertiesResponseResource {
     }
 
     /**
-     * Analytical TTL.
+     * @return Analytical TTL.
      * 
-    */
+     */
     public Optional<Integer> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
     /**
-     * Time to live of the Cosmos DB Cassandra table
+     * @return Time to live of the Cosmos DB Cassandra table
      * 
-    */
+     */
     public Optional<Integer> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
-     * A system generated property representing the resource etag required for optimistic concurrency control.
+     * @return A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Name of the Cosmos DB Cassandra table
+     * @return Name of the Cosmos DB Cassandra table
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A system generated property. A unique identifier.
+     * @return A system generated property. A unique identifier.
      * 
-    */
+     */
     public String rid() {
         return this.rid;
     }
     /**
-     * Schema of the Cosmos DB Cassandra table
+     * @return Schema of the Cosmos DB Cassandra table
      * 
-    */
+     */
     public Optional<CassandraSchemaResponse> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * A system generated property that denotes the last updated timestamp of the resource.
+     * @return A system generated property that denotes the last updated timestamp of the resource.
      * 
-    */
+     */
     public Double ts() {
         return this.ts;
     }

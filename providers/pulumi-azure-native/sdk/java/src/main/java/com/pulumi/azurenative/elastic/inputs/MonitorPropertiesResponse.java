@@ -27,6 +27,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="elasticProperties")
     private @Nullable ElasticPropertiesResponse elasticProperties;
 
+    /**
+     * @return Elastic cloud properties.
+     * 
+     */
     public Optional<ElasticPropertiesResponse> elasticProperties() {
         return Optional.ofNullable(this.elasticProperties);
     }
@@ -45,6 +49,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="liftrResourcePreference", required=true)
     private Integer liftrResourcePreference;
 
+    /**
+     * @return The priority of the resource.
+     * 
+     */
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
@@ -56,6 +64,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="monitoringStatus")
     private @Nullable String monitoringStatus;
 
+    /**
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
+     * 
+     */
     public Optional<String> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -67,6 +79,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Provisioning state of the monitor resource.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -99,6 +115,12 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new MonitorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elasticProperties Elastic cloud properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticProperties(@Nullable ElasticPropertiesResponse elasticProperties) {
             $.elasticProperties = elasticProperties;
             return this;
@@ -109,16 +131,34 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param liftrResourcePreference The priority of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             $.liftrResourcePreference = liftrResourcePreference;
             return this;
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

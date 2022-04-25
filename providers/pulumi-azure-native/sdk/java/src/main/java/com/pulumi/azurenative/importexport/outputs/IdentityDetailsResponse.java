@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IdentityDetailsResponse {
-    /**
-     * Specifies the principal id for the identity for the job.
-     * 
-     */
+        /**
+         * @return Specifies the principal id for the identity for the job.
+         * 
+         */
     private final String principalId;
-    /**
-     * Specifies the tenant id for the identity for the job.
-     * 
-     */
+        /**
+         * @return Specifies the tenant id for the identity for the job.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of identity
-     * 
-     */
+        /**
+         * @return The type of identity
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class IdentityDetailsResponse {
     }
 
     /**
-     * Specifies the principal id for the identity for the job.
+     * @return Specifies the principal id for the identity for the job.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * Specifies the tenant id for the identity for the job.
+     * @return Specifies the tenant id for the identity for the job.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of identity
+     * @return The type of identity
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

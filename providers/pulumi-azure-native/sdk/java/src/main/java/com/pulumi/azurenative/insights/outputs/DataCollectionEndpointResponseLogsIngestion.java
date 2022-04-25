@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class DataCollectionEndpointResponseLogsIngestion {
-    /**
-     * The endpoint. This property is READ-ONLY.
-     * 
-     */
+        /**
+         * @return The endpoint. This property is READ-ONLY.
+         * 
+         */
     private final String endpoint;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class DataCollectionEndpointResponseLogsIngestion {
     }
 
     /**
-     * The endpoint. This property is READ-ONLY.
+     * @return The endpoint. This property is READ-ONLY.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MapsAccountPropertiesResponse {
-    /**
-     * A unique identifier for the maps account
-     * 
-     */
+        /**
+         * @return A unique identifier for the maps account
+         * 
+         */
     private final @Nullable String xMsClientId;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class MapsAccountPropertiesResponse {
     }
 
     /**
-     * A unique identifier for the maps account
+     * @return A unique identifier for the maps account
      * 
-    */
+     */
     public Optional<String> xMsClientId() {
         return Optional.ofNullable(this.xMsClientId);
     }

@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HDInsightResponseProperties {
-    /**
-     * Public IP address of the master node of the cluster.
-     * 
-     */
+        /**
+         * @return Public IP address of the master node of the cluster.
+         * 
+         */
     private final @Nullable String address;
-    /**
-     * Admin credentials for master node of the cluster
-     * 
-     */
+        /**
+         * @return Admin credentials for master node of the cluster
+         * 
+         */
     private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
-    /**
-     * Port open for ssh connections on the master node of the cluster.
-     * 
-     */
+        /**
+         * @return Port open for ssh connections on the master node of the cluster.
+         * 
+         */
     private final @Nullable Integer sshPort;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class HDInsightResponseProperties {
     }
 
     /**
-     * Public IP address of the master node of the cluster.
+     * @return Public IP address of the master node of the cluster.
      * 
-    */
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * Admin credentials for master node of the cluster
+     * @return Admin credentials for master node of the cluster
      * 
-    */
+     */
     public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
         return Optional.ofNullable(this.administratorAccount);
     }
     /**
-     * Port open for ssh connections on the master node of the cluster.
+     * @return Port open for ssh connections on the master node of the cluster.
      * 
-    */
+     */
     public Optional<Integer> sshPort() {
         return Optional.ofNullable(this.sshPort);
     }

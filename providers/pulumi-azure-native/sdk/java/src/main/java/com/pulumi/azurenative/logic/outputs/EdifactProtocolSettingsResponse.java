@@ -21,60 +21,60 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EdifactProtocolSettingsResponse {
-    /**
-     * The EDIFACT acknowledgement settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT acknowledgement settings.
+         * 
+         */
     private final EdifactAcknowledgementSettingsResponse acknowledgementSettings;
-    /**
-     * The EDIFACT delimiter override settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT delimiter override settings.
+         * 
+         */
     private final @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
-    /**
-     * The EDIFACT envelope override settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT envelope override settings.
+         * 
+         */
     private final @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
-    /**
-     * The EDIFACT envelope settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT envelope settings.
+         * 
+         */
     private final EdifactEnvelopeSettingsResponse envelopeSettings;
-    /**
-     * The EDIFACT framing settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT framing settings.
+         * 
+         */
     private final EdifactFramingSettingsResponse framingSettings;
-    /**
-     * The EDIFACT message filter.
-     * 
-     */
+        /**
+         * @return The EDIFACT message filter.
+         * 
+         */
     private final EdifactMessageFilterResponse messageFilter;
-    /**
-     * The EDIFACT message filter list.
-     * 
-     */
+        /**
+         * @return The EDIFACT message filter list.
+         * 
+         */
     private final @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
-    /**
-     * The EDIFACT processing Settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT processing Settings.
+         * 
+         */
     private final EdifactProcessingSettingsResponse processingSettings;
-    /**
-     * The EDIFACT schema references.
-     * 
-     */
+        /**
+         * @return The EDIFACT schema references.
+         * 
+         */
     private final List<EdifactSchemaReferenceResponse> schemaReferences;
-    /**
-     * The EDIFACT validation override settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT validation override settings.
+         * 
+         */
     private final @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
-    /**
-     * The EDIFACT validation settings.
-     * 
-     */
+        /**
+         * @return The EDIFACT validation settings.
+         * 
+         */
     private final EdifactValidationSettingsResponse validationSettings;
 
     @CustomType.Constructor
@@ -104,79 +104,79 @@ public final class EdifactProtocolSettingsResponse {
     }
 
     /**
-     * The EDIFACT acknowledgement settings.
+     * @return The EDIFACT acknowledgement settings.
      * 
-    */
+     */
     public EdifactAcknowledgementSettingsResponse acknowledgementSettings() {
         return this.acknowledgementSettings;
     }
     /**
-     * The EDIFACT delimiter override settings.
+     * @return The EDIFACT delimiter override settings.
      * 
-    */
+     */
     public List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides() {
         return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
     }
     /**
-     * The EDIFACT envelope override settings.
+     * @return The EDIFACT envelope override settings.
      * 
-    */
+     */
     public List<EdifactEnvelopeOverrideResponse> envelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
     }
     /**
-     * The EDIFACT envelope settings.
+     * @return The EDIFACT envelope settings.
      * 
-    */
+     */
     public EdifactEnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
     }
     /**
-     * The EDIFACT framing settings.
+     * @return The EDIFACT framing settings.
      * 
-    */
+     */
     public EdifactFramingSettingsResponse framingSettings() {
         return this.framingSettings;
     }
     /**
-     * The EDIFACT message filter.
+     * @return The EDIFACT message filter.
      * 
-    */
+     */
     public EdifactMessageFilterResponse messageFilter() {
         return this.messageFilter;
     }
     /**
-     * The EDIFACT message filter list.
+     * @return The EDIFACT message filter list.
      * 
-    */
+     */
     public List<EdifactMessageIdentifierResponse> messageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
     }
     /**
-     * The EDIFACT processing Settings.
+     * @return The EDIFACT processing Settings.
      * 
-    */
+     */
     public EdifactProcessingSettingsResponse processingSettings() {
         return this.processingSettings;
     }
     /**
-     * The EDIFACT schema references.
+     * @return The EDIFACT schema references.
      * 
-    */
+     */
     public List<EdifactSchemaReferenceResponse> schemaReferences() {
         return this.schemaReferences;
     }
     /**
-     * The EDIFACT validation override settings.
+     * @return The EDIFACT validation override settings.
      * 
-    */
+     */
     public List<EdifactValidationOverrideResponse> validationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
     }
     /**
-     * The EDIFACT validation settings.
+     * @return The EDIFACT validation settings.
      * 
-    */
+     */
     public EdifactValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }

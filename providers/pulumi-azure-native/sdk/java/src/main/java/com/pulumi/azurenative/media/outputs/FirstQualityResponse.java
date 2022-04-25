@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class FirstQualityResponse {
-    /**
-     * The first quality bitrate.
-     * 
-     */
+        /**
+         * @return The first quality bitrate.
+         * 
+         */
     private final Integer bitrate;
 
     @CustomType.Constructor
@@ -21,9 +21,9 @@ public final class FirstQualityResponse {
     }
 
     /**
-     * The first quality bitrate.
+     * @return The first quality bitrate.
      * 
-    */
+     */
     public Integer bitrate() {
         return this.bitrate;
     }

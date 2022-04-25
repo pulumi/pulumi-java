@@ -10,30 +10,30 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCertificateResult {
-    /**
-     * The entity tag.
-     * 
-     */
+        /**
+         * @return The entity tag.
+         * 
+         */
     private final String etag;
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the certificate.
-     * 
-     */
+        /**
+         * @return The name of the certificate.
+         * 
+         */
     private final String name;
-    /**
-     * The description of an X509 CA Certificate.
-     * 
-     */
+        /**
+         * @return The description of an X509 CA Certificate.
+         * 
+         */
     private final CertificatePropertiesResponse properties;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -51,37 +51,37 @@ public final class GetCertificateResult {
     }
 
     /**
-     * The entity tag.
+     * @return The entity tag.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the certificate.
+     * @return The name of the certificate.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The description of an X509 CA Certificate.
+     * @return The description of an X509 CA Certificate.
      * 
-    */
+     */
     public CertificatePropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

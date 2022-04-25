@@ -25,6 +25,10 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="credentials")
     private @Nullable String credentials;
 
+    /**
+     * @return Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+     * 
+     */
     public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -36,6 +40,10 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uri", required=true)
     private String uri;
 
+    /**
+     * @return The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+     * 
+     */
     public String uri() {
         return this.uri;
     }
@@ -65,11 +73,23 @@ public final class BlobLocationResponse extends com.pulumi.resources.InvokeArgs 
             $ = new BlobLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable String credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param uri The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             $.uri = uri;
             return this;

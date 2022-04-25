@@ -15,20 +15,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataExportDetailsResponse {
-    /**
-     * Account details of the data to be transferred
-     * 
-     */
+        /**
+         * @return Account details of the data to be transferred
+         * 
+         */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
-    /**
-     * Level of the logs to be collected.
-     * 
-     */
+        /**
+         * @return Level of the logs to be collected.
+         * 
+         */
     private final @Nullable String logCollectionLevel;
-    /**
-     * Configuration for the data transfer.
-     * 
-     */
+        /**
+         * @return Configuration for the data transfer.
+         * 
+         */
     private final TransferConfigurationResponse transferConfiguration;
 
     @CustomType.Constructor
@@ -42,23 +42,23 @@ public final class DataExportDetailsResponse {
     }
 
     /**
-     * Account details of the data to be transferred
+     * @return Account details of the data to be transferred
      * 
-    */
+     */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }
     /**
-     * Level of the logs to be collected.
+     * @return Level of the logs to be collected.
      * 
-    */
+     */
     public Optional<String> logCollectionLevel() {
         return Optional.ofNullable(this.logCollectionLevel);
     }
     /**
-     * Configuration for the data transfer.
+     * @return Configuration for the data transfer.
      * 
-    */
+     */
     public TransferConfigurationResponse transferConfiguration() {
         return this.transferConfiguration;
     }

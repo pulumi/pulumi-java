@@ -13,30 +13,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ActivityPolicyResponse {
-    /**
-     * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
-     * 
-     */
+        /**
+         * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+         * 
+         */
     private final @Nullable Object retry;
-    /**
-     * Interval between each retry attempt (in seconds). The default is 30 sec.
-     * 
-     */
+        /**
+         * @return Interval between each retry attempt (in seconds). The default is 30 sec.
+         * 
+         */
     private final @Nullable Integer retryIntervalInSeconds;
-    /**
-     * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
-     * 
-     */
+        /**
+         * @return When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+         * 
+         */
     private final @Nullable Boolean secureInput;
-    /**
-     * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
-     * 
-     */
+        /**
+         * @return When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+         * 
+         */
     private final @Nullable Boolean secureOutput;
-    /**
-     * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
-     * 
-     */
+        /**
+         * @return Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         */
     private final @Nullable Object timeout;
 
     @CustomType.Constructor
@@ -54,37 +54,37 @@ public final class ActivityPolicyResponse {
     }
 
     /**
-     * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> retry() {
         return Optional.ofNullable(this.retry);
     }
     /**
-     * Interval between each retry attempt (in seconds). The default is 30 sec.
+     * @return Interval between each retry attempt (in seconds). The default is 30 sec.
      * 
-    */
+     */
     public Optional<Integer> retryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
     /**
-     * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+     * @return When set to true, Input from activity is considered as secure and will not be logged to monitoring.
      * 
-    */
+     */
     public Optional<Boolean> secureInput() {
         return Optional.ofNullable(this.secureInput);
     }
     /**
-     * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+     * @return When set to true, Output from activity is considered as secure and will not be logged to monitoring.
      * 
-    */
+     */
     public Optional<Boolean> secureOutput() {
         return Optional.ofNullable(this.secureOutput);
     }
     /**
-     * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> timeout() {
         return Optional.ofNullable(this.timeout);
     }

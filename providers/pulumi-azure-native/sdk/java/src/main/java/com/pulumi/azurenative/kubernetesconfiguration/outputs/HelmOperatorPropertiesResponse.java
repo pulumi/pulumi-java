@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class HelmOperatorPropertiesResponse {
-    /**
-     * Values override for the operator Helm chart.
-     * 
-     */
+        /**
+         * @return Values override for the operator Helm chart.
+         * 
+         */
     private final @Nullable String chartValues;
-    /**
-     * Version of the operator Helm chart.
-     * 
-     */
+        /**
+         * @return Version of the operator Helm chart.
+         * 
+         */
     private final @Nullable String chartVersion;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class HelmOperatorPropertiesResponse {
     }
 
     /**
-     * Values override for the operator Helm chart.
+     * @return Values override for the operator Helm chart.
      * 
-    */
+     */
     public Optional<String> chartValues() {
         return Optional.ofNullable(this.chartValues);
     }
     /**
-     * Version of the operator Helm chart.
+     * @return Version of the operator Helm chart.
      * 
-    */
+     */
     public Optional<String> chartVersion() {
         return Optional.ofNullable(this.chartVersion);
     }

@@ -19,6 +19,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -41,6 +49,10 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return User identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -71,16 +83,34 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param userId User identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;

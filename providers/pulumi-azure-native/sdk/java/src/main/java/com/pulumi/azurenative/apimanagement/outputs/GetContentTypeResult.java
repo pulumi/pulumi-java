@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetContentTypeResult {
-    /**
-     * Content type description.
-     * 
-     */
+        /**
+         * @return Content type description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Content type schema.
-     * 
-     */
+        /**
+         * @return Content type schema.
+         * 
+         */
     private final @Nullable Object schema;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
-    /**
-     * Content type version.
-     * 
-     */
+        /**
+         * @return Content type version.
+         * 
+         */
     private final @Nullable String version;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class GetContentTypeResult {
     }
 
     /**
-     * Content type description.
+     * @return Content type description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Content type schema.
+     * @return Content type schema.
      * 
-    */
+     */
     public Optional<Object> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Content type version.
+     * @return Content type version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

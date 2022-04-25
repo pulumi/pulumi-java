@@ -25,6 +25,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
     @Import(name="operationId", required=true)
     private String operationId;
 
+    /**
+     * @return Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
+     * 
+     */
     public String operationId() {
         return this.operationId;
     }
@@ -36,6 +40,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -47,6 +55,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceName")
     private @Nullable String resourceName;
 
+    /**
+     * @return Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
+     * 
+     */
     public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -58,6 +70,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -69,6 +85,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
     @Import(name="statusCode", required=true)
     private String statusCode;
 
+    /**
+     * @return Http status code of the operation.
+     * 
+     */
     public String statusCode() {
         return this.statusCode;
     }
@@ -80,6 +100,10 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
     @Import(name="statusMessage", required=true)
     private String statusMessage;
 
+    /**
+     * @return Descriptive information of the resource operation.
+     * 
+     */
     public String statusMessage() {
         return this.statusMessage;
     }
@@ -113,31 +137,67 @@ public final class ResourceOperationResponse extends com.pulumi.resources.Invoke
             $ = new ResourceOperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationId Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationId(String operationId) {
             $.operationId = operationId;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceName Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param statusCode Http status code of the operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusCode(String statusCode) {
             $.statusCode = statusCode;
             return this;
         }
 
+        /**
+         * @param statusMessage Descriptive information of the resource operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusMessage(String statusMessage) {
             $.statusMessage = statusMessage;
             return this;

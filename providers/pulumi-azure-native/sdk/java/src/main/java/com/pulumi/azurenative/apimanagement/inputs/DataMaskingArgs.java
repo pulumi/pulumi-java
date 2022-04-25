@@ -23,6 +23,10 @@ public final class DataMaskingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="headers")
     private @Nullable Output<List<DataMaskingEntityArgs>> headers;
 
+    /**
+     * @return Masking settings for headers
+     * 
+     */
     public Optional<Output<List<DataMaskingEntityArgs>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -34,6 +38,10 @@ public final class DataMaskingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryParams")
     private @Nullable Output<List<DataMaskingEntityArgs>> queryParams;
 
+    /**
+     * @return Masking settings for Url query parameters
+     * 
+     */
     public Optional<Output<List<DataMaskingEntityArgs>>> queryParams() {
         return Optional.ofNullable(this.queryParams);
     }
@@ -63,28 +71,64 @@ public final class DataMaskingArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataMaskingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headers Masking settings for headers
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<DataMaskingEntityArgs>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Masking settings for headers
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<DataMaskingEntityArgs> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers Masking settings for headers
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(DataMaskingEntityArgs... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param queryParams Masking settings for Url query parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParams(@Nullable Output<List<DataMaskingEntityArgs>> queryParams) {
             $.queryParams = queryParams;
             return this;
         }
 
+        /**
+         * @param queryParams Masking settings for Url query parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParams(List<DataMaskingEntityArgs> queryParams) {
             return queryParams(Output.of(queryParams));
         }
 
+        /**
+         * @param queryParams Masking settings for Url query parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParams(DataMaskingEntityArgs... queryParams) {
             return queryParams(List.of(queryParams));
         }

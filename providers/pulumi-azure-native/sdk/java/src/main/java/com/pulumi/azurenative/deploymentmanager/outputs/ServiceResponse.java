@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServiceResponse {
-    /**
-     * Name of the service.
-     * 
-     */
+        /**
+         * @return Name of the service.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The detailed information about the units that make up the service.
-     * 
-     */
+        /**
+         * @return The detailed information about the units that make up the service.
+         * 
+         */
     private final @Nullable List<ServiceUnitResponse> serviceUnits;
-    /**
-     * The Azure location to which the resources in the service belong to or should be deployed to.
-     * 
-     */
+        /**
+         * @return The Azure location to which the resources in the service belong to or should be deployed to.
+         * 
+         */
     private final String targetLocation;
-    /**
-     * The subscription to which the resources in the service belong to or should be deployed to.
-     * 
-     */
+        /**
+         * @return The subscription to which the resources in the service belong to or should be deployed to.
+         * 
+         */
     private final String targetSubscriptionId;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class ServiceResponse {
     }
 
     /**
-     * Name of the service.
+     * @return Name of the service.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The detailed information about the units that make up the service.
+     * @return The detailed information about the units that make up the service.
      * 
-    */
+     */
     public List<ServiceUnitResponse> serviceUnits() {
         return this.serviceUnits == null ? List.of() : this.serviceUnits;
     }
     /**
-     * The Azure location to which the resources in the service belong to or should be deployed to.
+     * @return The Azure location to which the resources in the service belong to or should be deployed to.
      * 
-    */
+     */
     public String targetLocation() {
         return this.targetLocation;
     }
     /**
-     * The subscription to which the resources in the service belong to or should be deployed to.
+     * @return The subscription to which the resources in the service belong to or should be deployed to.
      * 
-    */
+     */
     public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }

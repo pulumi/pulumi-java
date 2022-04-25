@@ -27,6 +27,10 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
     @Import(name="databasesToTables", required=true)
     private Map<String,List<DatabaseTableResponse>> databasesToTables;
 
+    /**
+     * @return Mapping from database name to list of tables
+     * 
+     */
     public Map<String,List<DatabaseTableResponse>> databasesToTables() {
         return this.databasesToTables;
     }
@@ -38,6 +42,10 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -49,6 +57,10 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -79,21 +91,45 @@ public final class GetUserTablesSqlTaskOutputResponse extends com.pulumi.resourc
             $ = new GetUserTablesSqlTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databasesToTables Mapping from database name to list of tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder databasesToTables(Map<String,List<DatabaseTableResponse>> databasesToTables) {
             $.databasesToTables = databasesToTables;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

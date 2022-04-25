@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class StepOperationInfoResponse {
-    /**
-     * Unique identifier to track the request for ARM-based resources.
-     * 
-     */
+        /**
+         * @return Unique identifier to track the request for ARM-based resources.
+         * 
+         */
     private final String correlationId;
-    /**
-     * The name of the ARM deployment initiated as part of the step.
-     * 
-     */
+        /**
+         * @return The name of the ARM deployment initiated as part of the step.
+         * 
+         */
     private final String deploymentName;
-    /**
-     * End time of the action in UTC.
-     * 
-     */
+        /**
+         * @return End time of the action in UTC.
+         * 
+         */
     private final String endTime;
-    /**
-     * The errors, if any, for the action.
-     * 
-     */
+        /**
+         * @return The errors, if any, for the action.
+         * 
+         */
     private final @Nullable CloudErrorBodyResponse error;
-    /**
-     * Last time in UTC this operation was updated.
-     * 
-     */
+        /**
+         * @return Last time in UTC this operation was updated.
+         * 
+         */
     private final String lastUpdatedTime;
-    /**
-     * Start time of the action in UTC.
-     * 
-     */
+        /**
+         * @return Start time of the action in UTC.
+         * 
+         */
     private final String startTime;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class StepOperationInfoResponse {
     }
 
     /**
-     * Unique identifier to track the request for ARM-based resources.
+     * @return Unique identifier to track the request for ARM-based resources.
      * 
-    */
+     */
     public String correlationId() {
         return this.correlationId;
     }
     /**
-     * The name of the ARM deployment initiated as part of the step.
+     * @return The name of the ARM deployment initiated as part of the step.
      * 
-    */
+     */
     public String deploymentName() {
         return this.deploymentName;
     }
     /**
-     * End time of the action in UTC.
+     * @return End time of the action in UTC.
      * 
-    */
+     */
     public String endTime() {
         return this.endTime;
     }
     /**
-     * The errors, if any, for the action.
+     * @return The errors, if any, for the action.
      * 
-    */
+     */
     public Optional<CloudErrorBodyResponse> error() {
         return Optional.ofNullable(this.error);
     }
     /**
-     * Last time in UTC this operation was updated.
+     * @return Last time in UTC this operation was updated.
      * 
-    */
+     */
     public String lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
-     * Start time of the action in UTC.
+     * @return Start time of the action in UTC.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

@@ -31,6 +31,10 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
     @Import(name="compressionProperties")
     private @Nullable Output<Object> compressionProperties;
 
+    /**
+     * @return Compression settings.
+     * 
+     */
     public Optional<Output<Object>> compressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
@@ -42,6 +46,10 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
     @Import(name="skipLineCount")
     private @Nullable Output<Object> skipLineCount;
 
+    /**
+     * @return Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> skipLineCount() {
         return Optional.ofNullable(this.skipLineCount);
     }
@@ -54,6 +62,11 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The read setting type.
+     * Expected value is &#39;DelimitedTextReadSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -84,29 +97,67 @@ public final class DelimitedTextReadSettingsArgs extends com.pulumi.resources.Re
             $ = new DelimitedTextReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
             $.compressionProperties = compressionProperties;
             return this;
         }
 
+        /**
+         * @param compressionProperties Compression settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionProperties(Object compressionProperties) {
             return compressionProperties(Output.of(compressionProperties));
         }
 
+        /**
+         * @param skipLineCount Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
             $.skipLineCount = skipLineCount;
             return this;
         }
 
+        /**
+         * @param skipLineCount Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipLineCount(Object skipLineCount) {
             return skipLineCount(Output.of(skipLineCount));
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;DelimitedTextReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The read setting type.
+         * Expected value is &#39;DelimitedTextReadSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

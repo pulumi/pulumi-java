@@ -27,6 +27,10 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
     @Import(name="fileName")
     private @Nullable Object fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -38,6 +42,10 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
     @Import(name="folderPath")
     private @Nullable Object folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -50,6 +58,11 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;AzureFileStorageLocation&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -80,16 +93,35 @@ public final class AzureFileStorageLocationResponse extends com.pulumi.resources
             $ = new AzureFileStorageLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Object fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Object folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AzureFileStorageLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

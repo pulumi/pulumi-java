@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DataDiskResponse {
-    /**
-     * Values are:
-     * 
-     *  none - The caching mode for the disk is not enabled.
-     *  readOnly - The caching mode for the disk is read only.
-     *  readWrite - The caching mode for the disk is read and write.
-     * 
-     *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
-     * 
-     */
+        /**
+         * @return Values are:
+         * 
+         *  none - The caching mode for the disk is not enabled.
+         *  readOnly - The caching mode for the disk is read only.
+         *  readWrite - The caching mode for the disk is read and write.
+         * 
+         *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+         * 
+         */
     private final @Nullable String caching;
     private final Integer diskSizeGB;
-    /**
-     * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
-     * 
-     */
+        /**
+         * @return The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+         * 
+         */
     private final Integer lun;
-    /**
-     * If omitted, the default is &#34;Standard_LRS&#34;. Values are:
-     * 
-     *  Standard_LRS - The data disk should use standard locally redundant storage.
-     *  Premium_LRS - The data disk should use premium locally redundant storage.
-     * 
-     */
+        /**
+         * @return If omitted, the default is &#34;Standard_LRS&#34;. Values are:
+         * 
+         *  Standard_LRS - The data disk should use standard locally redundant storage.
+         *  Premium_LRS - The data disk should use premium locally redundant storage.
+         * 
+         */
     private final @Nullable String storageAccountType;
 
     @CustomType.Constructor
@@ -51,7 +51,7 @@ public final class DataDiskResponse {
     }
 
     /**
-     * Values are:
+     * @return Values are:
      * 
      *  none - The caching mode for the disk is not enabled.
      *  readOnly - The caching mode for the disk is read only.
@@ -59,7 +59,7 @@ public final class DataDiskResponse {
      * 
      *  The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
      * 
-    */
+     */
     public Optional<String> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -67,19 +67,19 @@ public final class DataDiskResponse {
         return this.diskSizeGB;
     }
     /**
-     * The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
+     * @return The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun. The value must be between 0 and 63, inclusive.
      * 
-    */
+     */
     public Integer lun() {
         return this.lun;
     }
     /**
-     * If omitted, the default is &#34;Standard_LRS&#34;. Values are:
+     * @return If omitted, the default is &#34;Standard_LRS&#34;. Values are:
      * 
      *  Standard_LRS - The data disk should use standard locally redundant storage.
      *  Premium_LRS - The data disk should use premium locally redundant storage.
      * 
-    */
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }

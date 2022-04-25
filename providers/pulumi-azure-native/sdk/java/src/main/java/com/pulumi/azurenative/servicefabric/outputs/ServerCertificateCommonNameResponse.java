@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ServerCertificateCommonNameResponse {
-    /**
-     * The common name of the server certificate.
-     * 
-     */
+        /**
+         * @return The common name of the server certificate.
+         * 
+         */
     private final String certificateCommonName;
-    /**
-     * The issuer thumbprint of the server certificate.
-     * 
-     */
+        /**
+         * @return The issuer thumbprint of the server certificate.
+         * 
+         */
     private final String certificateIssuerThumbprint;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ServerCertificateCommonNameResponse {
     }
 
     /**
-     * The common name of the server certificate.
+     * @return The common name of the server certificate.
      * 
-    */
+     */
     public String certificateCommonName() {
         return this.certificateCommonName;
     }
     /**
-     * The issuer thumbprint of the server certificate.
+     * @return The issuer thumbprint of the server certificate.
      * 
-    */
+     */
     public String certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }

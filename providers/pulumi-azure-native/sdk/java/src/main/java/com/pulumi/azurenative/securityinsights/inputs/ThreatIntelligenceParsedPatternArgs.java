@@ -28,6 +28,10 @@ public final class ThreatIntelligenceParsedPatternArgs extends com.pulumi.resour
     @Import(name="patternTypeKey")
     private @Nullable Output<String> patternTypeKey;
 
+    /**
+     * @return Pattern type key
+     * 
+     */
     public Optional<Output<String>> patternTypeKey() {
         return Optional.ofNullable(this.patternTypeKey);
     }
@@ -39,6 +43,10 @@ public final class ThreatIntelligenceParsedPatternArgs extends com.pulumi.resour
     @Import(name="patternTypeValues")
     private @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
+    /**
+     * @return Pattern type keys
+     * 
+     */
     public Optional<Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>>> patternTypeValues() {
         return Optional.ofNullable(this.patternTypeValues);
     }
@@ -68,24 +76,54 @@ public final class ThreatIntelligenceParsedPatternArgs extends com.pulumi.resour
             $ = new ThreatIntelligenceParsedPatternArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param patternTypeKey Pattern type key
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternTypeKey(@Nullable Output<String> patternTypeKey) {
             $.patternTypeKey = patternTypeKey;
             return this;
         }
 
+        /**
+         * @param patternTypeKey Pattern type key
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternTypeKey(String patternTypeKey) {
             return patternTypeKey(Output.of(patternTypeKey));
         }
 
+        /**
+         * @param patternTypeValues Pattern type keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternTypeValues(@Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
             $.patternTypeValues = patternTypeValues;
             return this;
         }
 
+        /**
+         * @param patternTypeValues Pattern type keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternTypeValues(List<ThreatIntelligenceParsedPatternTypeValueArgs> patternTypeValues) {
             return patternTypeValues(Output.of(patternTypeValues));
         }
 
+        /**
+         * @param patternTypeValues Pattern type keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternTypeValues(ThreatIntelligenceParsedPatternTypeValueArgs... patternTypeValues) {
             return patternTypeValues(List.of(patternTypeValues));
         }

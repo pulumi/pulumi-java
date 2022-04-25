@@ -26,6 +26,10 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="endDate")
     private @Nullable Output<String> endDate;
 
+    /**
+     * @return The end date for the budget. If not provided, we default this to 10 years from the start date.
+     * 
+     */
     public Optional<Output<String>> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -37,6 +41,10 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="startDate", required=true)
     private Output<String> startDate;
 
+    /**
+     * @return The start date for the budget.
+     * 
+     */
     public Output<String> startDate() {
         return this.startDate;
     }
@@ -66,20 +74,44 @@ public final class BudgetTimePeriodArgs extends com.pulumi.resources.ResourceArg
             $ = new BudgetTimePeriodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endDate The end date for the budget. If not provided, we default this to 10 years from the start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<String> endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param endDate The end date for the budget. If not provided, we default this to 10 years from the start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(String endDate) {
             return endDate(Output.of(endDate));
         }
 
+        /**
+         * @param startDate The start date for the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(Output<String> startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param startDate The start date for the budget.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(String startDate) {
             return startDate(Output.of(startDate));
         }

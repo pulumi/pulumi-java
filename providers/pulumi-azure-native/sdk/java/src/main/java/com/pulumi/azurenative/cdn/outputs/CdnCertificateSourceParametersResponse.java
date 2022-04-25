@@ -9,10 +9,10 @@ import java.util.Objects;
 
 @CustomType
 public final class CdnCertificateSourceParametersResponse {
-    /**
-     * Type of certificate used
-     * 
-     */
+        /**
+         * @return Type of certificate used
+         * 
+         */
     private final String certificateType;
     private final String odataType;
 
@@ -25,9 +25,9 @@ public final class CdnCertificateSourceParametersResponse {
     }
 
     /**
-     * Type of certificate used
+     * @return Type of certificate used
      * 
-    */
+     */
     public String certificateType() {
         return this.certificateType;
     }

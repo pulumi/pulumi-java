@@ -25,40 +25,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetProtectionContainerResult {
-    /**
-     * Optional ETag.
-     * 
-     */
+        /**
+         * @return Optional ETag.
+         * 
+         */
     private final @Nullable String eTag;
-    /**
-     * Resource Id represents the complete path to the resource.
-     * 
-     */
+        /**
+         * @return Resource Id represents the complete path to the resource.
+         * 
+         */
     private final String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Resource name associated with the resource.
-     * 
-     */
+        /**
+         * @return Resource name associated with the resource.
+         * 
+         */
     private final String name;
-    /**
-     * ProtectionContainerResource properties
-     * 
-     */
+        /**
+         * @return ProtectionContainerResource properties
+         * 
+         */
     private final Object properties;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
-     * 
-     */
+        /**
+         * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -80,51 +80,51 @@ public final class GetProtectionContainerResult {
     }
 
     /**
-     * Optional ETag.
+     * @return Optional ETag.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * Resource Id represents the complete path to the resource.
+     * @return Resource Id represents the complete path to the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name associated with the resource.
+     * @return Resource name associated with the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * ProtectionContainerResource properties
+     * @return ProtectionContainerResource properties
      * 
-    */
+     */
     public Object properties() {
         return this.properties;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

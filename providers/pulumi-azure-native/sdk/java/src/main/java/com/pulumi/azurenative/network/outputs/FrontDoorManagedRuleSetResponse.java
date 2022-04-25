@@ -14,30 +14,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class FrontDoorManagedRuleSetResponse {
-    /**
-     * Describes the exclusions that are applied to all rules in the set.
-     * 
-     */
+        /**
+         * @return Describes the exclusions that are applied to all rules in the set.
+         * 
+         */
     private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
-    /**
-     * Defines the rule group overrides to apply to the rule set.
-     * 
-     */
+        /**
+         * @return Defines the rule group overrides to apply to the rule set.
+         * 
+         */
     private final @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides;
-    /**
-     * Defines the action to take when a managed rule set score threshold is met.
-     * 
-     */
+        /**
+         * @return Defines the action to take when a managed rule set score threshold is met.
+         * 
+         */
     private final @Nullable String ruleSetAction;
-    /**
-     * Defines the rule set type to use.
-     * 
-     */
+        /**
+         * @return Defines the rule set type to use.
+         * 
+         */
     private final String ruleSetType;
-    /**
-     * Defines the version of the rule set to use.
-     * 
-     */
+        /**
+         * @return Defines the version of the rule set to use.
+         * 
+         */
     private final String ruleSetVersion;
 
     @CustomType.Constructor
@@ -55,37 +55,37 @@ public final class FrontDoorManagedRuleSetResponse {
     }
 
     /**
-     * Describes the exclusions that are applied to all rules in the set.
+     * @return Describes the exclusions that are applied to all rules in the set.
      * 
-    */
+     */
     public List<ManagedRuleExclusionResponse> exclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
-     * Defines the rule group overrides to apply to the rule set.
+     * @return Defines the rule group overrides to apply to the rule set.
      * 
-    */
+     */
     public List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides() {
         return this.ruleGroupOverrides == null ? List.of() : this.ruleGroupOverrides;
     }
     /**
-     * Defines the action to take when a managed rule set score threshold is met.
+     * @return Defines the action to take when a managed rule set score threshold is met.
      * 
-    */
+     */
     public Optional<String> ruleSetAction() {
         return Optional.ofNullable(this.ruleSetAction);
     }
     /**
-     * Defines the rule set type to use.
+     * @return Defines the rule set type to use.
      * 
-    */
+     */
     public String ruleSetType() {
         return this.ruleSetType;
     }
     /**
-     * Defines the version of the rule set to use.
+     * @return Defines the version of the rule set to use.
      * 
-    */
+     */
     public String ruleSetVersion() {
         return this.ruleSetVersion;
     }

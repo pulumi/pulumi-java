@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AssignmentReportResourceComplianceReasonResponse {
-    /**
-     * Code for the compliance of the guest configuration assignment resource.
-     * 
-     */
+        /**
+         * @return Code for the compliance of the guest configuration assignment resource.
+         * 
+         */
     private final String code;
-    /**
-     * Reason for the compliance of the guest configuration assignment resource.
-     * 
-     */
+        /**
+         * @return Reason for the compliance of the guest configuration assignment resource.
+         * 
+         */
     private final String phrase;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AssignmentReportResourceComplianceReasonResponse {
     }
 
     /**
-     * Code for the compliance of the guest configuration assignment resource.
+     * @return Code for the compliance of the guest configuration assignment resource.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Reason for the compliance of the guest configuration assignment resource.
+     * @return Reason for the compliance of the guest configuration assignment resource.
      * 
-    */
+     */
     public String phrase() {
         return this.phrase;
     }

@@ -11,25 +11,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class MetadataSupportResponse {
-    /**
-     * Email of support contact
-     * 
-     */
+        /**
+         * @return Email of support contact
+         * 
+         */
     private final @Nullable String email;
-    /**
-     * Link for support help, like to support page to open a ticket etc.
-     * 
-     */
+        /**
+         * @return Link for support help, like to support page to open a ticket etc.
+         * 
+         */
     private final @Nullable String link;
-    /**
-     * Name of the support contact. Company or person.
-     * 
-     */
+        /**
+         * @return Name of the support contact. Company or person.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Type of support for content item
-     * 
-     */
+        /**
+         * @return Type of support for content item
+         * 
+         */
     private final String tier;
 
     @CustomType.Constructor
@@ -45,30 +45,30 @@ public final class MetadataSupportResponse {
     }
 
     /**
-     * Email of support contact
+     * @return Email of support contact
      * 
-    */
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * Link for support help, like to support page to open a ticket etc.
+     * @return Link for support help, like to support page to open a ticket etc.
      * 
-    */
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
     /**
-     * Name of the support contact. Company or person.
+     * @return Name of the support contact. Company or person.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Type of support for content item
+     * @return Type of support for content item
      * 
-    */
+     */
     public String tier() {
         return this.tier;
     }

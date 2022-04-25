@@ -19,6 +19,10 @@ public final class GetVpnSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VpnSite.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVpnSiteArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpnSiteName", required=true)
     private String vpnSiteName;
 
+    /**
+     * @return The name of the VpnSite being retrieved.
+     * 
+     */
     public String vpnSiteName() {
         return this.vpnSiteName;
     }
@@ -59,11 +67,23 @@ public final class GetVpnSiteArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVpnSiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VpnSite.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param vpnSiteName The name of the VpnSite being retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnSiteName(String vpnSiteName) {
             $.vpnSiteName = vpnSiteName;
             return this;

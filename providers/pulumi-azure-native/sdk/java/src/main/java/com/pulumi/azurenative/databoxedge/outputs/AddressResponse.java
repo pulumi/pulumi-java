@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AddressResponse {
-    /**
-     * The address line1.
-     * 
-     */
+        /**
+         * @return The address line1.
+         * 
+         */
     private final @Nullable String addressLine1;
-    /**
-     * The address line2.
-     * 
-     */
+        /**
+         * @return The address line2.
+         * 
+         */
     private final @Nullable String addressLine2;
-    /**
-     * The address line3.
-     * 
-     */
+        /**
+         * @return The address line3.
+         * 
+         */
     private final @Nullable String addressLine3;
-    /**
-     * The city name.
-     * 
-     */
+        /**
+         * @return The city name.
+         * 
+         */
     private final @Nullable String city;
-    /**
-     * The country name.
-     * 
-     */
+        /**
+         * @return The country name.
+         * 
+         */
     private final String country;
-    /**
-     * The postal code.
-     * 
-     */
+        /**
+         * @return The postal code.
+         * 
+         */
     private final @Nullable String postalCode;
-    /**
-     * The state name.
-     * 
-     */
+        /**
+         * @return The state name.
+         * 
+         */
     private final @Nullable String state;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class AddressResponse {
     }
 
     /**
-     * The address line1.
+     * @return The address line1.
      * 
-    */
+     */
     public Optional<String> addressLine1() {
         return Optional.ofNullable(this.addressLine1);
     }
     /**
-     * The address line2.
+     * @return The address line2.
      * 
-    */
+     */
     public Optional<String> addressLine2() {
         return Optional.ofNullable(this.addressLine2);
     }
     /**
-     * The address line3.
+     * @return The address line3.
      * 
-    */
+     */
     public Optional<String> addressLine3() {
         return Optional.ofNullable(this.addressLine3);
     }
     /**
-     * The city name.
+     * @return The city name.
      * 
-    */
+     */
     public Optional<String> city() {
         return Optional.ofNullable(this.city);
     }
     /**
-     * The country name.
+     * @return The country name.
      * 
-    */
+     */
     public String country() {
         return this.country;
     }
     /**
-     * The postal code.
+     * @return The postal code.
      * 
-    */
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
-     * The state name.
+     * @return The state name.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

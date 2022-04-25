@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class GraphParameterLinkResponse {
-    /**
-     * The graph node&#39;s identifier
-     * 
-     */
+        /**
+         * @return The graph node&#39;s identifier
+         * 
+         */
     private final String nodeId;
-    /**
-     * The identifier of the node parameter that the global parameter maps to.
-     * 
-     */
+        /**
+         * @return The identifier of the node parameter that the global parameter maps to.
+         * 
+         */
     private final String parameterKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class GraphParameterLinkResponse {
     }
 
     /**
-     * The graph node&#39;s identifier
+     * @return The graph node&#39;s identifier
      * 
-    */
+     */
     public String nodeId() {
         return this.nodeId;
     }
     /**
-     * The identifier of the node parameter that the global parameter maps to.
+     * @return The identifier of the node parameter that the global parameter maps to.
      * 
-    */
+     */
     public String parameterKey() {
         return this.parameterKey;
     }

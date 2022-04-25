@@ -11,20 +11,20 @@ import java.util.Objects;
 
 @CustomType
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
-    /**
-     * Databases to migrate
-     * 
-     */
+        /**
+         * @return Databases to migrate
+         * 
+         */
     private final List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases;
-    /**
-     * Connection information for source PostgreSQL
-     * 
-     */
+        /**
+         * @return Connection information for source PostgreSQL
+         * 
+         */
     private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
-    /**
-     * Connection information for target Azure Database for PostgreSQL
-     * 
-     */
+        /**
+         * @return Connection information for target Azure Database for PostgreSQL
+         * 
+         */
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
     }
 
     /**
-     * Databases to migrate
+     * @return Databases to migrate
      * 
-    */
+     */
     public List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
     /**
-     * Connection information for source PostgreSQL
+     * @return Connection information for source PostgreSQL
      * 
-    */
+     */
     public PostgreSqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Connection information for target Azure Database for PostgreSQL
+     * @return Connection information for target Azure Database for PostgreSQL
      * 
-    */
+     */
     public PostgreSqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TrackSelectionResponse {
-    /**
-     * TrackSelections is a track property condition list which can specify track(s)
-     * 
-     */
+        /**
+         * @return TrackSelections is a track property condition list which can specify track(s)
+         * 
+         */
     private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class TrackSelectionResponse {
     }
 
     /**
-     * TrackSelections is a track property condition list which can specify track(s)
+     * @return TrackSelections is a track property condition list which can specify track(s)
      * 
-    */
+     */
     public List<TrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections == null ? List.of() : this.trackSelections;
     }

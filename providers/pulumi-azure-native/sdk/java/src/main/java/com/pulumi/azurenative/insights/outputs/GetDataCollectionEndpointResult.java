@@ -16,75 +16,75 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDataCollectionEndpointResult {
-    /**
-     * The endpoint used by agents to access their configuration.
-     * 
-     */
+        /**
+         * @return The endpoint used by agents to access their configuration.
+         * 
+         */
     private final @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess;
-    /**
-     * Description of the data collection endpoint.
-     * 
-     */
+        /**
+         * @return Description of the data collection endpoint.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource entity tag (ETag).
-     * 
-     */
+        /**
+         * @return Resource entity tag (ETag).
+         * 
+         */
     private final String etag;
-    /**
-     * Fully qualified ID of the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified ID of the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
-     * 
-     */
+        /**
+         * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+         * 
+         */
     private final @Nullable String immutableId;
-    /**
-     * The kind of the resource.
-     * 
-     */
+        /**
+         * @return The kind of the resource.
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The geo-location where the resource lives.
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives.
+         * 
+         */
     private final String location;
-    /**
-     * The endpoint used by clients to ingest logs.
-     * 
-     */
+        /**
+         * @return The endpoint used by clients to ingest logs.
+         * 
+         */
     private final @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Network access control rules for the endpoints.
-     * 
-     */
+        /**
+         * @return Network access control rules for the endpoints.
+         * 
+         */
     private final @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls;
-    /**
-     * The resource provisioning state. This property is READ-ONLY.
-     * 
-     */
+        /**
+         * @return The resource provisioning state. This property is READ-ONLY.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Metadata pertaining to creation and last modification of the resource.
-     * 
-     */
+        /**
+         * @return Metadata pertaining to creation and last modification of the resource.
+         * 
+         */
     private final DataCollectionEndpointResourceResponseSystemData systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -120,100 +120,100 @@ public final class GetDataCollectionEndpointResult {
     }
 
     /**
-     * The endpoint used by agents to access their configuration.
+     * @return The endpoint used by agents to access their configuration.
      * 
-    */
+     */
     public Optional<DataCollectionEndpointResponseConfigurationAccess> configurationAccess() {
         return Optional.ofNullable(this.configurationAccess);
     }
     /**
-     * Description of the data collection endpoint.
+     * @return Description of the data collection endpoint.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource entity tag (ETag).
+     * @return Resource entity tag (ETag).
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Fully qualified ID of the resource.
+     * @return Fully qualified ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+     * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
      * 
-    */
+     */
     public Optional<String> immutableId() {
         return Optional.ofNullable(this.immutableId);
     }
     /**
-     * The kind of the resource.
+     * @return The kind of the resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The geo-location where the resource lives.
+     * @return The geo-location where the resource lives.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The endpoint used by clients to ingest logs.
+     * @return The endpoint used by clients to ingest logs.
      * 
-    */
+     */
     public Optional<DataCollectionEndpointResponseLogsIngestion> logsIngestion() {
         return Optional.ofNullable(this.logsIngestion);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network access control rules for the endpoints.
+     * @return Network access control rules for the endpoints.
      * 
-    */
+     */
     public Optional<DataCollectionEndpointResponseNetworkAcls> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
     /**
-     * The resource provisioning state. This property is READ-ONLY.
+     * @return The resource provisioning state. This property is READ-ONLY.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public DataCollectionEndpointResourceResponseSystemData systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

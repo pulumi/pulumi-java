@@ -13,10 +13,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class DatadogHostMetadataResponse {
-    /**
-     * The agent version.
-     * 
-     */
+        /**
+         * @return The agent version.
+         * 
+         */
     private final @Nullable String agentVersion;
     private final @Nullable DatadogInstallMethodResponse installMethod;
     private final @Nullable DatadogLogsAgentResponse logsAgent;
@@ -32,9 +32,9 @@ public final class DatadogHostMetadataResponse {
     }
 
     /**
-     * The agent version.
+     * @return The agent version.
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }

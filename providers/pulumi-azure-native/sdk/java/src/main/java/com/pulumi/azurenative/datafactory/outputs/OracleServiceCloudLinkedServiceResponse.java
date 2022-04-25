@@ -19,66 +19,66 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class OracleServiceCloudLinkedServiceResponse {
-    /**
-     * List of tags that can be used for describing the linked service.
-     * 
-     */
+        /**
+         * @return List of tags that can be used for describing the linked service.
+         * 
+         */
     private final @Nullable List<Object> annotations;
-    /**
-     * The integration runtime reference.
-     * 
-     */
+        /**
+         * @return The integration runtime reference.
+         * 
+         */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
-    /**
-     * Linked service description.
-     * 
-     */
+        /**
+         * @return Linked service description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
-     * 
-     */
+        /**
+         * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         */
     private final @Nullable Object encryptedCredential;
-    /**
-     * The URL of the Oracle Service Cloud instance.
-     * 
-     */
+        /**
+         * @return The URL of the Oracle Service Cloud instance.
+         * 
+         */
     private final Object host;
-    /**
-     * Parameters for linked service.
-     * 
-     */
+        /**
+         * @return Parameters for linked service.
+         * 
+         */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
-    /**
-     * The password corresponding to the user name that you provided in the username key.
-     * 
-     */
+        /**
+         * @return The password corresponding to the user name that you provided in the username key.
+         * 
+         */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-    /**
-     * Type of linked service.
-     * Expected value is &#39;OracleServiceCloud&#39;.
-     * 
-     */
+        /**
+         * @return Type of linked service.
+         * Expected value is &#39;OracleServiceCloud&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object useEncryptedEndpoints;
-    /**
-     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object useHostVerification;
-    /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
-     * 
-     */
+        /**
+         * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         */
     private final @Nullable Object usePeerVerification;
-    /**
-     * The user name that you use to access Oracle Service Cloud server.
-     * 
-     */
+        /**
+         * @return The user name that you use to access Oracle Service Cloud server.
+         * 
+         */
     private final Object username;
 
     @CustomType.Constructor
@@ -110,87 +110,87 @@ public final class OracleServiceCloudLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The URL of the Oracle Service Cloud instance.
+     * @return The URL of the Oracle Service Cloud instance.
      * 
-    */
+     */
     public Object host() {
         return this.host;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The password corresponding to the user name that you provided in the username key.
+     * @return The password corresponding to the user name that you provided in the username key.
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;OracleServiceCloud&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> useEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
     /**
-     * Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to require the host name in the server&#39;s certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> useHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
     /**
-     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> usePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }
     /**
-     * The user name that you use to access Oracle Service Cloud server.
+     * @return The user name that you use to access Oracle Service Cloud server.
      * 
-    */
+     */
     public Object username() {
         return this.username;
     }

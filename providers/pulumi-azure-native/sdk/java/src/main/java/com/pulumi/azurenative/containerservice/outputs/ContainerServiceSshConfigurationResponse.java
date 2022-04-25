@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ContainerServiceSshConfigurationResponse {
-    /**
-     * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
-     * 
-     */
+        /**
+         * @return The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+         * 
+         */
     private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ContainerServiceSshConfigurationResponse {
     }
 
     /**
-     * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
+     * @return The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
      * 
-    */
+     */
     public List<ContainerServiceSshPublicKeyResponse> publicKeys() {
         return this.publicKeys;
     }

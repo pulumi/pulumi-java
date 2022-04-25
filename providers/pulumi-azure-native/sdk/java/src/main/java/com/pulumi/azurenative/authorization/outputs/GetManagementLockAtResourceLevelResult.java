@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetManagementLockAtResourceLevelResult {
-    /**
-     * The resource ID of the lock.
-     * 
-     */
+        /**
+         * @return The resource ID of the lock.
+         * 
+         */
     private final String id;
-    /**
-     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
-     * 
-     */
+        /**
+         * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+         * 
+         */
     private final String level;
-    /**
-     * The name of the lock.
-     * 
-     */
+        /**
+         * @return The name of the lock.
+         * 
+         */
     private final String name;
-    /**
-     * Notes about the lock. Maximum of 512 characters.
-     * 
-     */
+        /**
+         * @return Notes about the lock. Maximum of 512 characters.
+         * 
+         */
     private final @Nullable String notes;
-    /**
-     * The owners of the lock.
-     * 
-     */
+        /**
+         * @return The owners of the lock.
+         * 
+         */
     private final @Nullable List<ManagementLockOwnerResponse> owners;
-    /**
-     * The resource type of the lock - Microsoft.Authorization/locks.
-     * 
-     */
+        /**
+         * @return The resource type of the lock - Microsoft.Authorization/locks.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class GetManagementLockAtResourceLevelResult {
     }
 
     /**
-     * The resource ID of the lock.
+     * @return The resource ID of the lock.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
+     * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can&#39;t modify or delete it.
      * 
-    */
+     */
     public String level() {
         return this.level;
     }
     /**
-     * The name of the lock.
+     * @return The name of the lock.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Notes about the lock. Maximum of 512 characters.
+     * @return Notes about the lock. Maximum of 512 characters.
      * 
-    */
+     */
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
     }
     /**
-     * The owners of the lock.
+     * @return The owners of the lock.
      * 
-    */
+     */
     public List<ManagementLockOwnerResponse> owners() {
         return this.owners == null ? List.of() : this.owners;
     }
     /**
-     * The resource type of the lock - Microsoft.Authorization/locks.
+     * @return The resource type of the lock - Microsoft.Authorization/locks.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

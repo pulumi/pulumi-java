@@ -10,20 +10,20 @@ import java.util.Objects;
 
 @CustomType
 public final class MigrationPropertiesResponse {
-    /**
-     * Migration Progress
-     * 
-     */
+        /**
+         * @return Migration Progress
+         * 
+         */
     private final MigrationProgressResponse migrationProgress;
-    /**
-     * Old Subnet Id
-     * 
-     */
+        /**
+         * @return Old Subnet Id
+         * 
+         */
     private final String oldSubnetId;
-    /**
-     * Old Vnet Site Id
-     * 
-     */
+        /**
+         * @return Old Vnet Site Id
+         * 
+         */
     private final String oldVnetSiteId;
 
     @CustomType.Constructor
@@ -37,23 +37,23 @@ public final class MigrationPropertiesResponse {
     }
 
     /**
-     * Migration Progress
+     * @return Migration Progress
      * 
-    */
+     */
     public MigrationProgressResponse migrationProgress() {
         return this.migrationProgress;
     }
     /**
-     * Old Subnet Id
+     * @return Old Subnet Id
      * 
-    */
+     */
     public String oldSubnetId() {
         return this.oldSubnetId;
     }
     /**
-     * Old Vnet Site Id
+     * @return Old Vnet Site Id
      * 
-    */
+     */
     public String oldVnetSiteId() {
         return this.oldVnetSiteId;
     }

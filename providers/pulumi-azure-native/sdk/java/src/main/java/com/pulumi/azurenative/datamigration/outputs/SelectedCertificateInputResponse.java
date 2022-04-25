@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class SelectedCertificateInputResponse {
-    /**
-     * Name of certificate to be exported.
-     * 
-     */
+        /**
+         * @return Name of certificate to be exported.
+         * 
+         */
     private final String certificateName;
-    /**
-     * Password to use for encrypting the exported certificate.
-     * 
-     */
+        /**
+         * @return Password to use for encrypting the exported certificate.
+         * 
+         */
     private final String password;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class SelectedCertificateInputResponse {
     }
 
     /**
-     * Name of certificate to be exported.
+     * @return Name of certificate to be exported.
      * 
-    */
+     */
     public String certificateName() {
         return this.certificateName;
     }
     /**
-     * Password to use for encrypting the exported certificate.
+     * @return Password to use for encrypting the exported certificate.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }

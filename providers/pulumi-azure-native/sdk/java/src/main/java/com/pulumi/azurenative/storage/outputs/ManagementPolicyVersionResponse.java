@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagementPolicyVersionResponse {
-    /**
-     * The function to delete the blob version
-     * 
-     */
+        /**
+         * @return The function to delete the blob version
+         * 
+         */
     private final @Nullable DateAfterCreationResponse delete;
-    /**
-     * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
-     * 
-     */
+        /**
+         * @return The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
+         * 
+         */
     private final @Nullable DateAfterCreationResponse tierToArchive;
-    /**
-     * The function to tier blob version to cool storage. Support blob version currently at Hot tier
-     * 
-     */
+        /**
+         * @return The function to tier blob version to cool storage. Support blob version currently at Hot tier
+         * 
+         */
     private final @Nullable DateAfterCreationResponse tierToCool;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class ManagementPolicyVersionResponse {
     }
 
     /**
-     * The function to delete the blob version
+     * @return The function to delete the blob version
      * 
-    */
+     */
     public Optional<DateAfterCreationResponse> delete() {
         return Optional.ofNullable(this.delete);
     }
     /**
-     * The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
+     * @return The function to tier blob version to archive storage. Support blob version currently at Hot or Cool tier
      * 
-    */
+     */
     public Optional<DateAfterCreationResponse> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
     /**
-     * The function to tier blob version to cool storage. Support blob version currently at Hot tier
+     * @return The function to tier blob version to cool storage. Support blob version currently at Hot tier
      * 
-    */
+     */
     public Optional<DateAfterCreationResponse> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }

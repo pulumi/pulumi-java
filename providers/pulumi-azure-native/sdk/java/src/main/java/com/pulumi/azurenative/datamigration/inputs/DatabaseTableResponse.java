@@ -24,6 +24,10 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="hasRows", required=true)
     private Boolean hasRows;
 
+    /**
+     * @return Indicates whether table is empty or not
+     * 
+     */
     public Boolean hasRows() {
         return this.hasRows;
     }
@@ -35,6 +39,10 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Schema-qualified name of the table
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
             $ = new DatabaseTableResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hasRows Indicates whether table is empty or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder hasRows(Boolean hasRows) {
             $.hasRows = hasRows;
             return this;
         }
 
+        /**
+         * @param name Schema-qualified name of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

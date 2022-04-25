@@ -27,6 +27,10 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
     @Import(name="endpoint", required=true)
     private Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
 
+    /**
+     * @return RTSP endpoint of the stream being connected to.
+     * 
+     */
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint() {
         return this.endpoint;
     }
@@ -38,6 +42,10 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Source name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -50,6 +58,11 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -61,6 +74,10 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
     @Import(name="transport", required=true)
     private String transport;
 
+    /**
+     * @return Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
+     * 
+     */
     public String transport() {
         return this.transport;
     }
@@ -92,29 +109,66 @@ public final class MediaGraphRtspSourceResponse extends com.pulumi.resources.Inv
             $ = new MediaGraphRtspSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint RTSP endpoint of the stream being connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint RTSP endpoint of the stream being connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(MediaGraphClearEndpointResponse endpoint) {
             return endpoint(Either.ofLeft(endpoint));
         }
 
+        /**
+         * @param endpoint RTSP endpoint of the stream being connected to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(MediaGraphTlsEndpointResponse endpoint) {
             return endpoint(Either.ofRight(endpoint));
         }
 
+        /**
+         * @param name Source name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphRtspSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param transport Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(String transport) {
             $.transport = transport;
             return this;

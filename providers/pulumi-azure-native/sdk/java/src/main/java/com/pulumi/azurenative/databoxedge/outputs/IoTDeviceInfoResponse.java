@@ -12,25 +12,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IoTDeviceInfoResponse {
-    /**
-     * Encrypted IoT device/IoT edge device connection string.
-     * 
-     */
+        /**
+         * @return Encrypted IoT device/IoT edge device connection string.
+         * 
+         */
     private final @Nullable AuthenticationResponse authentication;
-    /**
-     * ID of the IoT device/edge device.
-     * 
-     */
+        /**
+         * @return ID of the IoT device/edge device.
+         * 
+         */
     private final String deviceId;
-    /**
-     * Host name for the IoT hub associated to the device.
-     * 
-     */
+        /**
+         * @return Host name for the IoT hub associated to the device.
+         * 
+         */
     private final String ioTHostHub;
-    /**
-     * Id for the IoT hub associated to the device.
-     * 
-     */
+        /**
+         * @return Id for the IoT hub associated to the device.
+         * 
+         */
     private final @Nullable String ioTHostHubId;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class IoTDeviceInfoResponse {
     }
 
     /**
-     * Encrypted IoT device/IoT edge device connection string.
+     * @return Encrypted IoT device/IoT edge device connection string.
      * 
-    */
+     */
     public Optional<AuthenticationResponse> authentication() {
         return Optional.ofNullable(this.authentication);
     }
     /**
-     * ID of the IoT device/edge device.
+     * @return ID of the IoT device/edge device.
      * 
-    */
+     */
     public String deviceId() {
         return this.deviceId;
     }
     /**
-     * Host name for the IoT hub associated to the device.
+     * @return Host name for the IoT hub associated to the device.
      * 
-    */
+     */
     public String ioTHostHub() {
         return this.ioTHostHub;
     }
     /**
-     * Id for the IoT hub associated to the device.
+     * @return Id for the IoT hub associated to the device.
      * 
-    */
+     */
     public Optional<String> ioTHostHubId() {
         return Optional.ofNullable(this.ioTHostHubId);
     }

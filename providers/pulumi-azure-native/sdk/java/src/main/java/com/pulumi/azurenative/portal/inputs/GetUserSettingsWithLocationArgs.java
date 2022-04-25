@@ -19,6 +19,10 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The provider location
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -30,6 +34,10 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
     @Import(name="userSettingsName", required=true)
     private String userSettingsName;
 
+    /**
+     * @return The name of the user settings
+     * 
+     */
     public String userSettingsName() {
         return this.userSettingsName;
     }
@@ -59,11 +67,23 @@ public final class GetUserSettingsWithLocationArgs extends com.pulumi.resources.
             $ = new GetUserSettingsWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param userSettingsName The name of the user settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettingsName(String userSettingsName) {
             $.userSettingsName = userSettingsName;
             return this;

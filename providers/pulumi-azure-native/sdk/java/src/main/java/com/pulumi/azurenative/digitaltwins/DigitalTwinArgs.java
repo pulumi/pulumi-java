@@ -28,6 +28,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<DigitalTwinsIdentityArgs> identity;
 
+    /**
+     * @return The managed identity for the DigitalTwinsInstance.
+     * 
+     */
     public Optional<Output<DigitalTwinsIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -39,6 +43,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +65,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return Public network access for the DigitalTwinsInstance.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -68,6 +80,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +95,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the DigitalTwinsInstance.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -90,6 +110,10 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -124,20 +148,44 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DigitalTwinArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The managed identity for the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<DigitalTwinsIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The managed identity for the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(DigitalTwinsIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
@@ -155,46 +203,106 @@ public final class DigitalTwinArgs extends com.pulumi.resources.ResourceArgs {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param publicNetworkAccess Public network access for the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Public network access for the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Public network access for the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess Public network access for the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

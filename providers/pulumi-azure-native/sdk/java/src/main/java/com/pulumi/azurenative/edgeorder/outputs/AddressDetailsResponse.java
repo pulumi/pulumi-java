@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class AddressDetailsResponse {
-    /**
-     * Customer address and contact details. It should be address resource
-     * 
-     */
+        /**
+         * @return Customer address and contact details. It should be address resource
+         * 
+         */
     private final AddressPropertiesResponse forwardAddress;
-    /**
-     * Return shipping address
-     * 
-     */
+        /**
+         * @return Return shipping address
+         * 
+         */
     private final AddressPropertiesResponse returnAddress;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class AddressDetailsResponse {
     }
 
     /**
-     * Customer address and contact details. It should be address resource
+     * @return Customer address and contact details. It should be address resource
      * 
-    */
+     */
     public AddressPropertiesResponse forwardAddress() {
         return this.forwardAddress;
     }
     /**
-     * Return shipping address
+     * @return Return shipping address
      * 
-    */
+     */
     public AddressPropertiesResponse returnAddress() {
         return this.returnAddress;
     }

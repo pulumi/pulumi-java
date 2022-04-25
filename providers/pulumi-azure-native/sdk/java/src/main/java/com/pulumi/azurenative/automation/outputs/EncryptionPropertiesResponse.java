@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncryptionPropertiesResponse {
-    /**
-     * User identity used for CMK.
-     * 
-     */
+        /**
+         * @return User identity used for CMK.
+         * 
+         */
     private final @Nullable EncryptionPropertiesResponseIdentity identity;
-    /**
-     * Encryption Key Source
-     * 
-     */
+        /**
+         * @return Encryption Key Source
+         * 
+         */
     private final @Nullable String keySource;
-    /**
-     * Key vault properties.
-     * 
-     */
+        /**
+         * @return Key vault properties.
+         * 
+         */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class EncryptionPropertiesResponse {
     }
 
     /**
-     * User identity used for CMK.
+     * @return User identity used for CMK.
      * 
-    */
+     */
     public Optional<EncryptionPropertiesResponseIdentity> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Encryption Key Source
+     * @return Encryption Key Source
      * 
-    */
+     */
     public Optional<String> keySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
-     * Key vault properties.
+     * @return Key vault properties.
      * 
-    */
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }

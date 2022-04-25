@@ -12,30 +12,30 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SecretAttributesResponse {
-    /**
-     * Creation time in seconds since 1970-01-01T00:00:00Z.
-     * 
-     */
+        /**
+         * @return Creation time in seconds since 1970-01-01T00:00:00Z.
+         * 
+         */
     private final Integer created;
-    /**
-     * Determines whether the object is enabled.
-     * 
-     */
+        /**
+         * @return Determines whether the object is enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * Expiry date in seconds since 1970-01-01T00:00:00Z.
-     * 
-     */
+        /**
+         * @return Expiry date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         */
     private final @Nullable Integer expires;
-    /**
-     * Not before date in seconds since 1970-01-01T00:00:00Z.
-     * 
-     */
+        /**
+         * @return Not before date in seconds since 1970-01-01T00:00:00Z.
+         * 
+         */
     private final @Nullable Integer notBefore;
-    /**
-     * Last updated time in seconds since 1970-01-01T00:00:00Z.
-     * 
-     */
+        /**
+         * @return Last updated time in seconds since 1970-01-01T00:00:00Z.
+         * 
+         */
     private final Integer updated;
 
     @CustomType.Constructor
@@ -53,37 +53,37 @@ public final class SecretAttributesResponse {
     }
 
     /**
-     * Creation time in seconds since 1970-01-01T00:00:00Z.
+     * @return Creation time in seconds since 1970-01-01T00:00:00Z.
      * 
-    */
+     */
     public Integer created() {
         return this.created;
     }
     /**
-     * Determines whether the object is enabled.
+     * @return Determines whether the object is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Expiry date in seconds since 1970-01-01T00:00:00Z.
+     * @return Expiry date in seconds since 1970-01-01T00:00:00Z.
      * 
-    */
+     */
     public Optional<Integer> expires() {
         return Optional.ofNullable(this.expires);
     }
     /**
-     * Not before date in seconds since 1970-01-01T00:00:00Z.
+     * @return Not before date in seconds since 1970-01-01T00:00:00Z.
      * 
-    */
+     */
     public Optional<Integer> notBefore() {
         return Optional.ofNullable(this.notBefore);
     }
     /**
-     * Last updated time in seconds since 1970-01-01T00:00:00Z.
+     * @return Last updated time in seconds since 1970-01-01T00:00:00Z.
      * 
-    */
+     */
     public Integer updated() {
         return this.updated;
     }

@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class WsdlServiceResponse {
-    /**
-     * The list of endpoints&#39; qualified names.
-     * 
-     */
+        /**
+         * @return The list of endpoints&#39; qualified names.
+         * 
+         */
     private final @Nullable List<String> endpointQualifiedNames;
-    /**
-     * The qualified name.
-     * 
-     */
+        /**
+         * @return The qualified name.
+         * 
+         */
     private final @Nullable String qualifiedName;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class WsdlServiceResponse {
     }
 
     /**
-     * The list of endpoints&#39; qualified names.
+     * @return The list of endpoints&#39; qualified names.
      * 
-    */
+     */
     public List<String> endpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
     }
     /**
-     * The qualified name.
+     * @return The qualified name.
      * 
-    */
+     */
     public Optional<String> qualifiedName() {
         return Optional.ofNullable(this.qualifiedName);
     }

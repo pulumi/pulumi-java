@@ -24,6 +24,10 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
     @Import(name="expiry", required=true)
     private Output<String> expiry;
 
+    /**
+     * @return Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+     * 
+     */
     public Output<String> expiry() {
         return this.expiry;
     }
@@ -35,6 +39,10 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
     @Import(name="subject", required=true)
     private Output<String> subject;
 
+    /**
+     * @return Subject of the certificate.
+     * 
+     */
     public Output<String> subject() {
         return this.subject;
     }
@@ -46,6 +54,10 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
     @Import(name="thumbprint", required=true)
     private Output<String> thumbprint;
 
+    /**
+     * @return Thumbprint of the certificate.
+     * 
+     */
     public Output<String> thumbprint() {
         return this.thumbprint;
     }
@@ -76,29 +88,65 @@ public final class CertificateInformationArgs extends com.pulumi.resources.Resou
             $ = new CertificateInformationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiry Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(Output<String> expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param expiry Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             return expiry(Output.of(expiry));
         }
 
+        /**
+         * @param subject Subject of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(Output<String> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Subject of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param thumbprint Thumbprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint Thumbprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

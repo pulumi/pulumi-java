@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class RecommendedActionErrorInfoResponse {
-    /**
-     * Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
-     * 
-     */
+        /**
+         * @return Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
+         * 
+         */
     private final String errorCode;
-    /**
-     * Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
-     * 
-     */
+        /**
+         * @return Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
+         * 
+         */
     private final String isRetryable;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class RecommendedActionErrorInfoResponse {
     }
 
     /**
-     * Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
+     * @return Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
      * 
-    */
+     */
     public String errorCode() {
         return this.errorCode;
     }
     /**
-     * Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
+     * @return Gets whether the error could be ignored and recommended action could be retried. Possible values are: Yes/No
      * 
-    */
+     */
     public String isRetryable() {
         return this.isRetryable;
     }

@@ -14,85 +14,85 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LoadBalancingRuleResponse {
-    /**
-     * A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
-     * 
-     */
+        /**
+         * @return A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
+         * 
+         */
     private final @Nullable SubResourceResponse backendAddressPool;
-    /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
-     * 
-     */
+        /**
+         * @return The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
+         * 
+         */
     private final @Nullable Integer backendPort;
-    /**
-     * Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
-     * 
-     */
+        /**
+         * @return Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
+         * 
+         */
     private final @Nullable Boolean disableOutboundSnat;
-    /**
-     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
-     * 
-     */
+        /**
+         * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
+         * 
+         */
     private final @Nullable Boolean enableFloatingIP;
-    /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
-     * 
-     */
+        /**
+         * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+         * 
+         */
     private final @Nullable Boolean enableTcpReset;
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * A reference to frontend IP addresses.
-     * 
-     */
+        /**
+         * @return A reference to frontend IP addresses.
+         * 
+         */
     private final @Nullable SubResourceResponse frontendIPConfiguration;
-    /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
-     * 
-     */
+        /**
+         * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
+         * 
+         */
     private final Integer frontendPort;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
-     * 
-     */
+        /**
+         * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+         * 
+         */
     private final @Nullable Integer idleTimeoutInMinutes;
-    /**
-     * The load distribution policy for this rule.
-     * 
-     */
+        /**
+         * @return The load distribution policy for this rule.
+         * 
+         */
     private final @Nullable String loadDistribution;
-    /**
-     * The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The reference to the load balancer probe used by the load balancing rule.
-     * 
-     */
+        /**
+         * @return The reference to the load balancer probe used by the load balancing rule.
+         * 
+         */
     private final @Nullable SubResourceResponse probe;
-    /**
-     * The reference to the transport protocol used by the load balancing rule.
-     * 
-     */
+        /**
+         * @return The reference to the transport protocol used by the load balancing rule.
+         * 
+         */
     private final String protocol;
-    /**
-     * The provisioning state of the load balancing rule resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the load balancing rule resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -132,114 +132,114 @@ public final class LoadBalancingRuleResponse {
     }
 
     /**
-     * A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
+     * @return A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
-    */
+     */
     public Optional<SubResourceResponse> backendAddressPool() {
         return Optional.ofNullable(this.backendAddressPool);
     }
     /**
-     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
+     * @return The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables &#34;Any Port&#34;.
      * 
-    */
+     */
     public Optional<Integer> backendPort() {
         return Optional.ofNullable(this.backendPort);
     }
     /**
-     * Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
+     * @return Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
      * 
-    */
+     */
     public Optional<Boolean> disableOutboundSnat() {
         return Optional.ofNullable(this.disableOutboundSnat);
     }
     /**
-     * Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
+     * @return Configures a virtual machine&#39;s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can&#39;t be changed after you create the endpoint.
      * 
-    */
+     */
     public Optional<Boolean> enableFloatingIP() {
         return Optional.ofNullable(this.enableFloatingIP);
     }
     /**
-     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     * @return Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
-    */
+     */
     public Optional<Boolean> enableTcpReset() {
         return Optional.ofNullable(this.enableTcpReset);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A reference to frontend IP addresses.
+     * @return A reference to frontend IP addresses.
      * 
-    */
+     */
     public Optional<SubResourceResponse> frontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
     /**
-     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables &#34;Any Port&#34;.
      * 
-    */
+     */
     public Integer frontendPort() {
         return this.frontendPort;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     * @return The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
-     * The load distribution policy for this rule.
+     * @return The load distribution policy for this rule.
      * 
-    */
+     */
     public Optional<String> loadDistribution() {
         return Optional.ofNullable(this.loadDistribution);
     }
     /**
-     * The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
+     * @return The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The reference to the load balancer probe used by the load balancing rule.
+     * @return The reference to the load balancer probe used by the load balancing rule.
      * 
-    */
+     */
     public Optional<SubResourceResponse> probe() {
         return Optional.ofNullable(this.probe);
     }
     /**
-     * The reference to the transport protocol used by the load balancing rule.
+     * @return The reference to the transport protocol used by the load balancing rule.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The provisioning state of the load balancing rule resource.
+     * @return The provisioning state of the load balancing rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -11,35 +11,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApiVersionSetContractDetailsResponse {
-    /**
-     * Description of API Version Set.
-     * 
-     */
+        /**
+         * @return Description of API Version Set.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Identifier for existing API Version Set. Omit this value to create a new Version Set.
-     * 
-     */
+        /**
+         * @return Identifier for existing API Version Set. Omit this value to create a new Version Set.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * The display Name of the API Version Set.
-     * 
-     */
+        /**
+         * @return The display Name of the API Version Set.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
-     * 
-     */
+        /**
+         * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+         * 
+         */
     private final @Nullable String versionHeaderName;
-    /**
-     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
-     * 
-     */
+        /**
+         * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+         * 
+         */
     private final @Nullable String versionQueryName;
-    /**
-     * An value that determines where the API Version identifier will be located in a HTTP request.
-     * 
-     */
+        /**
+         * @return An value that determines where the API Version identifier will be located in a HTTP request.
+         * 
+         */
     private final @Nullable String versioningScheme;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class ApiVersionSetContractDetailsResponse {
     }
 
     /**
-     * Description of API Version Set.
+     * @return Description of API Version Set.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Identifier for existing API Version Set. Omit this value to create a new Version Set.
+     * @return Identifier for existing API Version Set. Omit this value to create a new Version Set.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The display Name of the API Version Set.
+     * @return The display Name of the API Version Set.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
-    */
+     */
     public Optional<String> versionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
     /**
-     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
-    */
+     */
     public Optional<String> versionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
     /**
-     * An value that determines where the API Version identifier will be located in a HTTP request.
+     * @return An value that determines where the API Version identifier will be located in a HTTP request.
      * 
-    */
+     */
     public Optional<String> versioningScheme() {
         return Optional.ofNullable(this.versioningScheme);
     }

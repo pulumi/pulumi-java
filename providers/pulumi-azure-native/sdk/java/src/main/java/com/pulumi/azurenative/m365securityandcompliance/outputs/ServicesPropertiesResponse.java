@@ -18,45 +18,45 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ServicesPropertiesResponse {
-    /**
-     * The access policies of the service instance.
-     * 
-     */
+        /**
+         * @return The access policies of the service instance.
+         * 
+         */
     private final @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
-    /**
-     * The authentication configuration for the service instance.
-     * 
-     */
+        /**
+         * @return The authentication configuration for the service instance.
+         * 
+         */
     private final @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
-    /**
-     * The settings for the CORS configuration of the service instance.
-     * 
-     */
+        /**
+         * @return The settings for the CORS configuration of the service instance.
+         * 
+         */
     private final @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
-    /**
-     * The settings for the Cosmos DB database backing the service.
-     * 
-     */
+        /**
+         * @return The settings for the Cosmos DB database backing the service.
+         * 
+         */
     private final @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
-    /**
-     * The settings for the export operation of the service instance.
-     * 
-     */
+        /**
+         * @return The settings for the export operation of the service instance.
+         * 
+         */
     private final @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
-    /**
-     * The list of private endpoint connections that are set up for this resource.
-     * 
-     */
+        /**
+         * @return The list of private endpoint connections that are set up for this resource.
+         * 
+         */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * The provisioning state.
-     * 
-     */
+        /**
+         * @return The provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
-     * 
-     */
+        /**
+         * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+         * 
+         */
     private final @Nullable String publicNetworkAccess;
 
     @CustomType.Constructor
@@ -80,58 +80,58 @@ public final class ServicesPropertiesResponse {
     }
 
     /**
-     * The access policies of the service instance.
+     * @return The access policies of the service instance.
      * 
-    */
+     */
     public List<ServiceAccessPolicyEntryResponse> accessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
     /**
-     * The authentication configuration for the service instance.
+     * @return The authentication configuration for the service instance.
      * 
-    */
+     */
     public Optional<ServiceAuthenticationConfigurationInfoResponse> authenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
-     * The settings for the CORS configuration of the service instance.
+     * @return The settings for the CORS configuration of the service instance.
      * 
-    */
+     */
     public Optional<ServiceCorsConfigurationInfoResponse> corsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
     /**
-     * The settings for the Cosmos DB database backing the service.
+     * @return The settings for the Cosmos DB database backing the service.
      * 
-    */
+     */
     public Optional<ServiceCosmosDbConfigurationInfoResponse> cosmosDbConfiguration() {
         return Optional.ofNullable(this.cosmosDbConfiguration);
     }
     /**
-     * The settings for the export operation of the service instance.
+     * @return The settings for the export operation of the service instance.
      * 
-    */
+     */
     public Optional<ServiceExportConfigurationInfoResponse> exportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
     /**
-     * The list of private endpoint connections that are set up for this resource.
+     * @return The list of private endpoint connections that are set up for this resource.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     * @return Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }

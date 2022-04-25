@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class ListObjectAnchorsAccountKeysResult {
-    /**
-     * value of primary key.
-     * 
-     */
+        /**
+         * @return value of primary key.
+         * 
+         */
     private final String primaryKey;
-    /**
-     * value of secondary key.
-     * 
-     */
+        /**
+         * @return value of secondary key.
+         * 
+         */
     private final String secondaryKey;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class ListObjectAnchorsAccountKeysResult {
     }
 
     /**
-     * value of primary key.
+     * @return value of primary key.
      * 
-    */
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
     /**
-     * value of secondary key.
+     * @return value of secondary key.
      * 
-    */
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }

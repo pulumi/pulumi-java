@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AuthPlatformResponse {
-    /**
-     * The path of the config file containing auth settings if they come from a file.
-     * If the path is relative, base will the site&#39;s root directory.
-     * 
-     */
+        /**
+         * @return The path of the config file containing auth settings if they come from a file.
+         * If the path is relative, base will the site&#39;s root directory.
+         * 
+         */
     private final @Nullable String configFilePath;
-    /**
-     * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
-     * 
-     */
+        /**
+         * @return &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
-     * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
-     * 
-     */
+        /**
+         * @return The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+         * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
+         * 
+         */
     private final @Nullable String runtimeVersion;
 
     @CustomType.Constructor
@@ -41,25 +41,25 @@ public final class AuthPlatformResponse {
     }
 
     /**
-     * The path of the config file containing auth settings if they come from a file.
+     * @return The path of the config file containing auth settings if they come from a file.
      * If the path is relative, base will the site&#39;s root directory.
      * 
-    */
+     */
     public Optional<String> configFilePath() {
         return Optional.ofNullable(this.configFilePath);
     }
     /**
-     * &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * @return &lt;code&gt;true&lt;/code&gt; if the Authentication / Authorization feature is enabled for the current app; otherwise, &lt;code&gt;false&lt;/code&gt;.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+     * @return The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
-    */
+     */
     public Optional<String> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }

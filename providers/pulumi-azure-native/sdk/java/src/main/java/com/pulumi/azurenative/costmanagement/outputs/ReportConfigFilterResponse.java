@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReportConfigFilterResponse {
-    /**
-     * The logical &#34;AND&#34; expression. Must have at least 2 items.
-     * 
-     */
+        /**
+         * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         */
     private final @Nullable List<ReportConfigFilterResponse> and;
-    /**
-     * Has comparison expression for a dimension
-     * 
-     */
+        /**
+         * @return Has comparison expression for a dimension
+         * 
+         */
     private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
-    /**
-     * The logical &#34;OR&#34; expression. Must have at least 2 items.
-     * 
-     */
+        /**
+         * @return The logical &#34;OR&#34; expression. Must have at least 2 items.
+         * 
+         */
     private final @Nullable List<ReportConfigFilterResponse> or;
-    /**
-     * Has comparison expression for a tag key
-     * 
-     */
+        /**
+         * @return Has comparison expression for a tag key
+         * 
+         */
     private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
-    /**
-     * Has comparison expression for a tag value
-     * 
-     */
+        /**
+         * @return Has comparison expression for a tag value
+         * 
+         */
     private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
-    /**
-     * Has comparison expression for a tag
-     * 
-     */
+        /**
+         * @return Has comparison expression for a tag
+         * 
+         */
     private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ReportConfigFilterResponse {
     }
 
     /**
-     * The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
      * 
-    */
+     */
     public List<ReportConfigFilterResponse> and() {
         return this.and == null ? List.of() : this.and;
     }
     /**
-     * Has comparison expression for a dimension
+     * @return Has comparison expression for a dimension
      * 
-    */
+     */
     public Optional<ReportConfigComparisonExpressionResponse> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
-     * The logical &#34;OR&#34; expression. Must have at least 2 items.
+     * @return The logical &#34;OR&#34; expression. Must have at least 2 items.
      * 
-    */
+     */
     public List<ReportConfigFilterResponse> or() {
         return this.or == null ? List.of() : this.or;
     }
     /**
-     * Has comparison expression for a tag key
+     * @return Has comparison expression for a tag key
      * 
-    */
+     */
     public Optional<ReportConfigComparisonExpressionResponse> tagKey() {
         return Optional.ofNullable(this.tagKey);
     }
     /**
-     * Has comparison expression for a tag value
+     * @return Has comparison expression for a tag value
      * 
-    */
+     */
     public Optional<ReportConfigComparisonExpressionResponse> tagValue() {
         return Optional.ofNullable(this.tagValue);
     }
     /**
-     * Has comparison expression for a tag
+     * @return Has comparison expression for a tag
      * 
-    */
+     */
     public Optional<ReportConfigComparisonExpressionResponse> tags() {
         return Optional.ofNullable(this.tags);
     }

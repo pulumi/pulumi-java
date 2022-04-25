@@ -19,6 +19,10 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
     @Import(name="peer", required=true)
     private String peer;
 
+    /**
+     * @return The IP address of the peer.
+     * 
+     */
     public String peer() {
         return this.peer;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
     @Import(name="virtualNetworkGatewayName", required=true)
     private String virtualNetworkGatewayName;
 
+    /**
+     * @return The name of the virtual network gateway.
+     * 
+     */
     public String virtualNetworkGatewayName() {
         return this.virtualNetworkGatewayName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends com.pulu
             $ = new GetVirtualNetworkGatewayAdvertisedRoutesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param peer The IP address of the peer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peer(String peer) {
             $.peer = peer;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkGatewayName The name of the virtual network gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkGatewayName(String virtualNetworkGatewayName) {
             $.virtualNetworkGatewayName = virtualNetworkGatewayName;
             return this;

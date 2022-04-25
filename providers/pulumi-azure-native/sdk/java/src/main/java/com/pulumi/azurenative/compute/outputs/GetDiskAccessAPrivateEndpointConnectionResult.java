@@ -11,35 +11,35 @@ import java.util.Objects;
 
 @CustomType
 public final class GetDiskAccessAPrivateEndpointConnectionResult {
-    /**
-     * private endpoint connection Id
-     * 
-     */
+        /**
+         * @return private endpoint connection Id
+         * 
+         */
     private final String id;
-    /**
-     * private endpoint connection name
-     * 
-     */
+        /**
+         * @return private endpoint connection name
+         * 
+         */
     private final String name;
-    /**
-     * The resource of private end point.
-     * 
-     */
+        /**
+         * @return The resource of private end point.
+         * 
+         */
     private final PrivateEndpointResponse privateEndpoint;
-    /**
-     * A collection of information about the state of the connection between DiskAccess and Virtual Network.
-     * 
-     */
+        /**
+         * @return A collection of information about the state of the connection between DiskAccess and Virtual Network.
+         * 
+         */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-    /**
-     * The provisioning state of the private endpoint connection resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the private endpoint connection resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * private endpoint connection type
-     * 
-     */
+        /**
+         * @return private endpoint connection type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -59,44 +59,44 @@ public final class GetDiskAccessAPrivateEndpointConnectionResult {
     }
 
     /**
-     * private endpoint connection Id
+     * @return private endpoint connection Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * private endpoint connection name
+     * @return private endpoint connection name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The resource of private end point.
+     * @return The resource of private end point.
      * 
-    */
+     */
     public PrivateEndpointResponse privateEndpoint() {
         return this.privateEndpoint;
     }
     /**
-     * A collection of information about the state of the connection between DiskAccess and Virtual Network.
+     * @return A collection of information about the state of the connection between DiskAccess and Virtual Network.
      * 
-    */
+     */
     public PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
-     * The provisioning state of the private endpoint connection resource.
+     * @return The provisioning state of the private endpoint connection resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * private endpoint connection type
+     * @return private endpoint connection type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

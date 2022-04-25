@@ -16,40 +16,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AKSResponseProperties {
-    /**
-     * Number of agents
-     * 
-     */
+        /**
+         * @return Number of agents
+         * 
+         */
     private final @Nullable Integer agentCount;
-    /**
-     * Agent virtual machine size
-     * 
-     */
+        /**
+         * @return Agent virtual machine size
+         * 
+         */
     private final @Nullable String agentVmSize;
-    /**
-     * AKS networking configuration for vnet
-     * 
-     */
+        /**
+         * @return AKS networking configuration for vnet
+         * 
+         */
     private final @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
-    /**
-     * Cluster full qualified domain name
-     * 
-     */
+        /**
+         * @return Cluster full qualified domain name
+         * 
+         */
     private final @Nullable String clusterFqdn;
-    /**
-     * Intended usage of the cluster
-     * 
-     */
+        /**
+         * @return Intended usage of the cluster
+         * 
+         */
     private final @Nullable String clusterPurpose;
-    /**
-     * SSL configuration
-     * 
-     */
+        /**
+         * @return SSL configuration
+         * 
+         */
     private final @Nullable SslConfigurationResponse sslConfiguration;
-    /**
-     * System services
-     * 
-     */
+        /**
+         * @return System services
+         * 
+         */
     private final List<SystemServiceResponse> systemServices;
 
     @CustomType.Constructor
@@ -71,51 +71,51 @@ public final class AKSResponseProperties {
     }
 
     /**
-     * Number of agents
+     * @return Number of agents
      * 
-    */
+     */
     public Optional<Integer> agentCount() {
         return Optional.ofNullable(this.agentCount);
     }
     /**
-     * Agent virtual machine size
+     * @return Agent virtual machine size
      * 
-    */
+     */
     public Optional<String> agentVmSize() {
         return Optional.ofNullable(this.agentVmSize);
     }
     /**
-     * AKS networking configuration for vnet
+     * @return AKS networking configuration for vnet
      * 
-    */
+     */
     public Optional<AksNetworkingConfigurationResponse> aksNetworkingConfiguration() {
         return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
     /**
-     * Cluster full qualified domain name
+     * @return Cluster full qualified domain name
      * 
-    */
+     */
     public Optional<String> clusterFqdn() {
         return Optional.ofNullable(this.clusterFqdn);
     }
     /**
-     * Intended usage of the cluster
+     * @return Intended usage of the cluster
      * 
-    */
+     */
     public Optional<String> clusterPurpose() {
         return Optional.ofNullable(this.clusterPurpose);
     }
     /**
-     * SSL configuration
+     * @return SSL configuration
      * 
-    */
+     */
     public Optional<SslConfigurationResponse> sslConfiguration() {
         return Optional.ofNullable(this.sslConfiguration);
     }
     /**
-     * System services
+     * @return System services
      * 
-    */
+     */
     public List<SystemServiceResponse> systemServices() {
         return this.systemServices;
     }

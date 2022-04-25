@@ -19,6 +19,10 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
     @Import(name="lockName", required=true)
     private String lockName;
 
+    /**
+     * @return The name of lock.
+     * 
+     */
     public String lockName() {
         return this.lockName;
     }
@@ -30,6 +34,10 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope for the lock.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetManagementLockByScopeArgs extends com.pulumi.resources.Inv
             $ = new GetManagementLockByScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lockName The name of lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockName(String lockName) {
             $.lockName = lockName;
             return this;
         }
 
+        /**
+         * @param scope The scope for the lock.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

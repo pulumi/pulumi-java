@@ -27,6 +27,10 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deserializer")
     private @Nullable Object deserializer;
 
+    /**
+     * @return Deserializer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> deserializer() {
         return Optional.ofNullable(this.deserializer);
     }
@@ -38,6 +42,10 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serializer")
     private @Nullable Object serializer;
 
+    /**
+     * @return Serializer. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> serializer() {
         return Optional.ofNullable(this.serializer);
     }
@@ -50,6 +58,11 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset storage format.
+     * Expected value is &#39;OrcFormat&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -80,16 +93,35 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OrcFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deserializer Deserializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder deserializer(@Nullable Object deserializer) {
             $.deserializer = deserializer;
             return this;
         }
 
+        /**
+         * @param serializer Serializer. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializer(@Nullable Object serializer) {
             $.serializer = serializer;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage format.
+         * Expected value is &#39;OrcFormat&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

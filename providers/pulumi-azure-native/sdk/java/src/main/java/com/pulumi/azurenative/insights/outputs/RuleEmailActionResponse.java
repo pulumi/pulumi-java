@@ -13,21 +13,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class RuleEmailActionResponse {
-    /**
-     * the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
-     * 
-     */
+        /**
+         * @return the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
+         * 
+         */
     private final @Nullable List<String> customEmails;
-    /**
-     * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
-     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
-     * 
-     */
+        /**
+         * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
+         * 
+         */
     private final String odataType;
-    /**
-     * Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
-     * 
-     */
+        /**
+         * @return Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
+         * 
+         */
     private final @Nullable Boolean sendToServiceOwners;
 
     @CustomType.Constructor
@@ -41,24 +41,24 @@ public final class RuleEmailActionResponse {
     }
 
     /**
-     * the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
+     * @return the list of administrator&#39;s custom email addresses to notify of the activation of the alert.
      * 
-    */
+     */
     public List<String> customEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
     /**
-     * specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+     * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
      * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleEmailAction&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
+     * @return Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
      * 
-    */
+     */
     public Optional<Boolean> sendToServiceOwners() {
         return Optional.ofNullable(this.sendToServiceOwners);
     }

@@ -12,35 +12,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationGatewayFrontendPortResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * Name of the frontend port that is unique within an Application Gateway.
-     * 
-     */
+        /**
+         * @return Name of the frontend port that is unique within an Application Gateway.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * Frontend port.
-     * 
-     */
+        /**
+         * @return Frontend port.
+         * 
+         */
     private final @Nullable Integer port;
-    /**
-     * The provisioning state of the frontend port resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the frontend port resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -60,44 +60,44 @@ public final class ApplicationGatewayFrontendPortResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the frontend port that is unique within an Application Gateway.
+     * @return Name of the frontend port that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Frontend port.
+     * @return Frontend port.
      * 
-    */
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * The provisioning state of the frontend port resource.
+     * @return The provisioning state of the frontend port resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

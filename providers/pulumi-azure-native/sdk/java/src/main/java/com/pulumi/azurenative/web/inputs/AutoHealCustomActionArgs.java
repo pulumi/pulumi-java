@@ -27,6 +27,10 @@ public final class AutoHealCustomActionArgs extends com.pulumi.resources.Resourc
     @Import(name="exe")
     private @Nullable Output<String> exe;
 
+    /**
+     * @return Executable to be run.
+     * 
+     */
     public Optional<Output<String>> exe() {
         return Optional.ofNullable(this.exe);
     }
@@ -38,6 +42,10 @@ public final class AutoHealCustomActionArgs extends com.pulumi.resources.Resourc
     @Import(name="parameters")
     private @Nullable Output<String> parameters;
 
+    /**
+     * @return Parameters for the executable.
+     * 
+     */
     public Optional<Output<String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -67,20 +75,44 @@ public final class AutoHealCustomActionArgs extends com.pulumi.resources.Resourc
             $ = new AutoHealCustomActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exe Executable to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exe(@Nullable Output<String> exe) {
             $.exe = exe;
             return this;
         }
 
+        /**
+         * @param exe Executable to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exe(String exe) {
             return exe(Output.of(exe));
         }
 
+        /**
+         * @param parameters Parameters for the executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for the executable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             return parameters(Output.of(parameters));
         }

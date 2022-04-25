@@ -13,35 +13,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationGatewayPrivateLinkConfigurationResponse {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * An array of application gateway private link ip configurations.
-     * 
-     */
+        /**
+         * @return An array of application gateway private link ip configurations.
+         * 
+         */
     private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
-    /**
-     * Name of the private link configuration that is unique within an Application Gateway.
-     * 
-     */
+        /**
+         * @return Name of the private link configuration that is unique within an Application Gateway.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The provisioning state of the application gateway private link configuration.
-     * 
-     */
+        /**
+         * @return The provisioning state of the application gateway private link configuration.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Type of the resource.
-     * 
-     */
+        /**
+         * @return Type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -61,44 +61,44 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * An array of application gateway private link ip configurations.
+     * @return An array of application gateway private link ip configurations.
      * 
-    */
+     */
     public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * Name of the private link configuration that is unique within an Application Gateway.
+     * @return Name of the private link configuration that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the application gateway private link configuration.
+     * @return The provisioning state of the application gateway private link configuration.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

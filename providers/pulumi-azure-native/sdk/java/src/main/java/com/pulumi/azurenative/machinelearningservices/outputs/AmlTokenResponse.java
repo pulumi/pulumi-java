@@ -9,11 +9,11 @@ import java.util.Objects;
 
 @CustomType
 public final class AmlTokenResponse {
-    /**
-     * Enum to determine identity framework.
-     * Expected value is &#39;AMLToken&#39;.
-     * 
-     */
+        /**
+         * @return Enum to determine identity framework.
+         * Expected value is &#39;AMLToken&#39;.
+         * 
+         */
     private final String identityType;
 
     @CustomType.Constructor
@@ -22,10 +22,10 @@ public final class AmlTokenResponse {
     }
 
     /**
-     * Enum to determine identity framework.
+     * @return Enum to determine identity framework.
      * Expected value is &#39;AMLToken&#39;.
      * 
-    */
+     */
     public String identityType() {
         return this.identityType;
     }

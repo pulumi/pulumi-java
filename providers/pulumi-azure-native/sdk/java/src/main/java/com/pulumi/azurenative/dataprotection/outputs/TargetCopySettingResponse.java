@@ -13,15 +13,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TargetCopySettingResponse {
-    /**
-     * It can be CustomCopyOption or ImmediateCopyOption.
-     * 
-     */
+        /**
+         * @return It can be CustomCopyOption or ImmediateCopyOption.
+         * 
+         */
     private final Object copyAfter;
-    /**
-     * Info of target datastore
-     * 
-     */
+        /**
+         * @return Info of target datastore
+         * 
+         */
     private final DataStoreInfoBaseResponse dataStore;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class TargetCopySettingResponse {
     }
 
     /**
-     * It can be CustomCopyOption or ImmediateCopyOption.
+     * @return It can be CustomCopyOption or ImmediateCopyOption.
      * 
-    */
+     */
     public Object copyAfter() {
         return this.copyAfter;
     }
     /**
-     * Info of target datastore
+     * @return Info of target datastore
      * 
-    */
+     */
     public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }

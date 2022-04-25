@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class TlsCertificatePropertiesResponse {
-    /**
-     * Indicates the location of the certificates.
-     * 
-     */
+        /**
+         * @return Indicates the location of the certificates.
+         * 
+         */
     private final String location;
-    /**
-     * The type of certificate location.
-     * 
-     */
+        /**
+         * @return The type of certificate location.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class TlsCertificatePropertiesResponse {
     }
 
     /**
-     * Indicates the location of the certificates.
+     * @return Indicates the location of the certificates.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The type of certificate location.
+     * @return The type of certificate location.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

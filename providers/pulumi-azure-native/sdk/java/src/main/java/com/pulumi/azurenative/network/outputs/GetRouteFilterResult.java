@@ -15,55 +15,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetRouteFilterResult {
-    /**
-     * A unique read-only string that changes whenever the resource is updated.
-     * 
-     */
+        /**
+         * @return A unique read-only string that changes whenever the resource is updated.
+         * 
+         */
     private final String etag;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final @Nullable String id;
-    /**
-     * A collection of references to express route circuit ipv6 peerings.
-     * 
-     */
+        /**
+         * @return A collection of references to express route circuit ipv6 peerings.
+         * 
+         */
     private final List<ExpressRouteCircuitPeeringResponse> ipv6Peerings;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final String location;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * A collection of references to express route circuit peerings.
-     * 
-     */
+        /**
+         * @return A collection of references to express route circuit peerings.
+         * 
+         */
     private final List<ExpressRouteCircuitPeeringResponse> peerings;
-    /**
-     * The provisioning state of the route filter resource.
-     * 
-     */
+        /**
+         * @return The provisioning state of the route filter resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Collection of RouteFilterRules contained within a route filter.
-     * 
-     */
+        /**
+         * @return Collection of RouteFilterRules contained within a route filter.
+         * 
+         */
     private final @Nullable List<RouteFilterRuleResponse> rules;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type.
-     * 
-     */
+        /**
+         * @return Resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -91,72 +91,72 @@ public final class GetRouteFilterResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * A collection of references to express route circuit ipv6 peerings.
+     * @return A collection of references to express route circuit ipv6 peerings.
      * 
-    */
+     */
     public List<ExpressRouteCircuitPeeringResponse> ipv6Peerings() {
         return this.ipv6Peerings;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A collection of references to express route circuit peerings.
+     * @return A collection of references to express route circuit peerings.
      * 
-    */
+     */
     public List<ExpressRouteCircuitPeeringResponse> peerings() {
         return this.peerings;
     }
     /**
-     * The provisioning state of the route filter resource.
+     * @return The provisioning state of the route filter resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Collection of RouteFilterRules contained within a route filter.
+     * @return Collection of RouteFilterRules contained within a route filter.
      * 
-    */
+     */
     public List<RouteFilterRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

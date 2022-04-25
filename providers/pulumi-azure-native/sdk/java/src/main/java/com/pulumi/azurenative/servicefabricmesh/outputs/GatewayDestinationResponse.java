@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class GatewayDestinationResponse {
-    /**
-     * Name of the service fabric Mesh application.
-     * 
-     */
+        /**
+         * @return Name of the service fabric Mesh application.
+         * 
+         */
     private final String applicationName;
-    /**
-     * name of the endpoint in the service.
-     * 
-     */
+        /**
+         * @return name of the endpoint in the service.
+         * 
+         */
     private final String endpointName;
-    /**
-     * service that contains the endpoint.
-     * 
-     */
+        /**
+         * @return service that contains the endpoint.
+         * 
+         */
     private final String serviceName;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class GatewayDestinationResponse {
     }
 
     /**
-     * Name of the service fabric Mesh application.
+     * @return Name of the service fabric Mesh application.
      * 
-    */
+     */
     public String applicationName() {
         return this.applicationName;
     }
     /**
-     * name of the endpoint in the service.
+     * @return name of the endpoint in the service.
      * 
-    */
+     */
     public String endpointName() {
         return this.endpointName;
     }
     /**
-     * service that contains the endpoint.
+     * @return service that contains the endpoint.
      * 
-    */
+     */
     public String serviceName() {
         return this.serviceName;
     }

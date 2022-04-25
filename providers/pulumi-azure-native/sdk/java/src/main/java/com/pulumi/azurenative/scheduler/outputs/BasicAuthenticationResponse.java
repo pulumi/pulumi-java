@@ -11,21 +11,21 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class BasicAuthenticationResponse {
-    /**
-     * Gets or sets the password, return value will always be empty.
-     * 
-     */
+        /**
+         * @return Gets or sets the password, return value will always be empty.
+         * 
+         */
     private final @Nullable String password;
-    /**
-     * Gets or sets the HTTP authentication type.
-     * Expected value is &#39;Basic&#39;.
-     * 
-     */
+        /**
+         * @return Gets or sets the HTTP authentication type.
+         * Expected value is &#39;Basic&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Gets or sets the username.
-     * 
-     */
+        /**
+         * @return Gets or sets the username.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -39,24 +39,24 @@ public final class BasicAuthenticationResponse {
     }
 
     /**
-     * Gets or sets the password, return value will always be empty.
+     * @return Gets or sets the password, return value will always be empty.
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Gets or sets the HTTP authentication type.
+     * @return Gets or sets the HTTP authentication type.
      * Expected value is &#39;Basic&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets or sets the username.
+     * @return Gets or sets the username.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

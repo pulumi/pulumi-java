@@ -13,55 +13,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetClusterResult {
-    /**
-     * The UTC time when the Event Hubs Cluster was created.
-     * 
-     */
+        /**
+         * @return The UTC time when the Event Hubs Cluster was created.
+         * 
+         */
     private final String createdAt;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * Resource location.
-     * 
-     */
+        /**
+         * @return Resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
-     * 
-     */
+        /**
+         * @return The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
+         * 
+         */
     private final String metricId;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the cluster SKU.
-     * 
-     */
+        /**
+         * @return Properties of the cluster SKU.
+         * 
+         */
     private final @Nullable ClusterSkuResponse sku;
-    /**
-     * Status of the Cluster resource
-     * 
-     */
+        /**
+         * @return Status of the Cluster resource
+         * 
+         */
     private final String status;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
-    /**
-     * The UTC time when the Event Hubs Cluster was last updated.
-     * 
-     */
+        /**
+         * @return The UTC time when the Event Hubs Cluster was last updated.
+         * 
+         */
     private final String updatedAt;
 
     @CustomType.Constructor
@@ -89,72 +89,72 @@ public final class GetClusterResult {
     }
 
     /**
-     * The UTC time when the Event Hubs Cluster was created.
+     * @return The UTC time when the Event Hubs Cluster was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
+     * @return The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
      * 
-    */
+     */
     public String metricId() {
         return this.metricId;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the cluster SKU.
+     * @return Properties of the cluster SKU.
      * 
-    */
+     */
     public Optional<ClusterSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Status of the Cluster resource
+     * @return Status of the Cluster resource
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The UTC time when the Event Hubs Cluster was last updated.
+     * @return The UTC time when the Event Hubs Cluster was last updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

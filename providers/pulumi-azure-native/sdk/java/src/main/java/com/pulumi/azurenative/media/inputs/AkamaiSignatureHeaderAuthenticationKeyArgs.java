@@ -26,6 +26,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends com.pulumi
     @Import(name="base64Key")
     private @Nullable Output<String> base64Key;
 
+    /**
+     * @return authentication key
+     * 
+     */
     public Optional<Output<String>> base64Key() {
         return Optional.ofNullable(this.base64Key);
     }
@@ -37,6 +41,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends com.pulumi
     @Import(name="expiration")
     private @Nullable Output<String> expiration;
 
+    /**
+     * @return The expiration time of the authentication key.
+     * 
+     */
     public Optional<Output<String>> expiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -48,6 +56,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends com.pulumi
     @Import(name="identifier")
     private @Nullable Output<String> identifier;
 
+    /**
+     * @return identifier of the key
+     * 
+     */
     public Optional<Output<String>> identifier() {
         return Optional.ofNullable(this.identifier);
     }
@@ -78,29 +90,65 @@ public final class AkamaiSignatureHeaderAuthenticationKeyArgs extends com.pulumi
             $ = new AkamaiSignatureHeaderAuthenticationKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param base64Key authentication key
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64Key(@Nullable Output<String> base64Key) {
             $.base64Key = base64Key;
             return this;
         }
 
+        /**
+         * @param base64Key authentication key
+         * 
+         * @return builder
+         * 
+         */
         public Builder base64Key(String base64Key) {
             return base64Key(Output.of(base64Key));
         }
 
+        /**
+         * @param expiration The expiration time of the authentication key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(@Nullable Output<String> expiration) {
             $.expiration = expiration;
             return this;
         }
 
+        /**
+         * @param expiration The expiration time of the authentication key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiration(String expiration) {
             return expiration(Output.of(expiration));
         }
 
+        /**
+         * @param identifier identifier of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifier(@Nullable Output<String> identifier) {
             $.identifier = identifier;
             return this;
         }
 
+        /**
+         * @param identifier identifier of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifier(String identifier) {
             return identifier(Output.of(identifier));
         }

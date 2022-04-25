@@ -17,20 +17,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class TransformOutputResponse {
-    /**
-     * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
-     * 
-     */
+        /**
+         * @return A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+         * 
+         */
     private final @Nullable String onError;
-    /**
-     * Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
-     * 
-     */
+        /**
+         * @return Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+         * 
+         */
     private final Object preset;
-    /**
-     * Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
-     * 
-     */
+        /**
+         * @return Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+         * 
+         */
     private final @Nullable String relativePriority;
 
     @CustomType.Constructor
@@ -44,23 +44,23 @@ public final class TransformOutputResponse {
     }
 
     /**
-     * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
+     * @return A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with &#39;ContinueJob&#39;. The default is &#39;StopProcessingJob&#39;.
      * 
-    */
+     */
     public Optional<String> onError() {
         return Optional.ofNullable(this.onError);
     }
     /**
-     * Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
+     * @return Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
      * 
-    */
+     */
     public Object preset() {
         return this.preset;
     }
     /**
-     * Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
+     * @return Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
      * 
-    */
+     */
     public Optional<String> relativePriority() {
         return Optional.ofNullable(this.relativePriority);
     }

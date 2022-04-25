@@ -12,15 +12,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VpnLinkProviderPropertiesResponse {
-    /**
-     * Name of the link provider.
-     * 
-     */
+        /**
+         * @return Name of the link provider.
+         * 
+         */
     private final @Nullable String linkProviderName;
-    /**
-     * Link speed.
-     * 
-     */
+        /**
+         * @return Link speed.
+         * 
+         */
     private final @Nullable Integer linkSpeedInMbps;
 
     @CustomType.Constructor
@@ -32,16 +32,16 @@ public final class VpnLinkProviderPropertiesResponse {
     }
 
     /**
-     * Name of the link provider.
+     * @return Name of the link provider.
      * 
-    */
+     */
     public Optional<String> linkProviderName() {
         return Optional.ofNullable(this.linkProviderName);
     }
     /**
-     * Link speed.
+     * @return Link speed.
      * 
-    */
+     */
     public Optional<Integer> linkSpeedInMbps() {
         return Optional.ofNullable(this.linkSpeedInMbps);
     }

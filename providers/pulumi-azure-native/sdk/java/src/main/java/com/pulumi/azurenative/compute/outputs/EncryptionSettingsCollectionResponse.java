@@ -14,20 +14,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class EncryptionSettingsCollectionResponse {
-    /**
-     * Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
-     * 
-     */
+        /**
+         * @return Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+         * 
+         */
     private final Boolean enabled;
-    /**
-     * A collection of encryption settings, one for each disk volume.
-     * 
-     */
+        /**
+         * @return A collection of encryption settings, one for each disk volume.
+         * 
+         */
     private final @Nullable List<EncryptionSettingsElementResponse> encryptionSettings;
-    /**
-     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
-     * 
-     */
+        /**
+         * @return Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
+         * 
+         */
     private final @Nullable String encryptionSettingsVersion;
 
     @CustomType.Constructor
@@ -41,23 +41,23 @@ public final class EncryptionSettingsCollectionResponse {
     }
 
     /**
-     * Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+     * @return Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * A collection of encryption settings, one for each disk volume.
+     * @return A collection of encryption settings, one for each disk volume.
      * 
-    */
+     */
     public List<EncryptionSettingsElementResponse> encryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
     /**
-     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
+     * @return Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
      * 
-    */
+     */
     public Optional<String> encryptionSettingsVersion() {
         return Optional.ofNullable(this.encryptionSettingsVersion);
     }

@@ -26,6 +26,10 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the IP configuration that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the application gateway IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -70,6 +86,10 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return Reference to the subnet resource. A subnet from where application gateway gets its private address.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -81,6 +101,10 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -114,31 +138,67 @@ public final class ApplicationGatewayIPConfigurationResponse extends com.pulumi.
             $ = new ApplicationGatewayIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the IP configuration that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the application gateway IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param subnet Reference to the subnet resource. A subnet from where application gateway gets its private address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -9,50 +9,50 @@ import java.util.Objects;
 
 @CustomType
 public final class HiveMetastoreResponse {
-    /**
-     * The databaseName for the Hive MetaStore
-     * 
-     */
+        /**
+         * @return The databaseName for the Hive MetaStore
+         * 
+         */
     private final String databaseName;
-    /**
-     * The resource identifier.
-     * 
-     */
+        /**
+         * @return The resource identifier.
+         * 
+         */
     private final String id;
-    /**
-     * The resource name.
-     * 
-     */
+        /**
+         * @return The resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The current state of the NestedResource
-     * 
-     */
+        /**
+         * @return The current state of the NestedResource
+         * 
+         */
     private final String nestedResourceProvisioningState;
-    /**
-     * The password for the Hive MetaStore
-     * 
-     */
+        /**
+         * @return The password for the Hive MetaStore
+         * 
+         */
     private final String password;
-    /**
-     * The runtimeVersion for the Hive MetaStore
-     * 
-     */
+        /**
+         * @return The runtimeVersion for the Hive MetaStore
+         * 
+         */
     private final String runtimeVersion;
-    /**
-     * The serverUri for the Hive MetaStore
-     * 
-     */
+        /**
+         * @return The serverUri for the Hive MetaStore
+         * 
+         */
     private final String serverUri;
-    /**
-     * The resource type.
-     * 
-     */
+        /**
+         * @return The resource type.
+         * 
+         */
     private final String type;
-    /**
-     * The userName for the Hive MetaStore
-     * 
-     */
+        /**
+         * @return The userName for the Hive MetaStore
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -78,65 +78,65 @@ public final class HiveMetastoreResponse {
     }
 
     /**
-     * The databaseName for the Hive MetaStore
+     * @return The databaseName for the Hive MetaStore
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current state of the NestedResource
+     * @return The current state of the NestedResource
      * 
-    */
+     */
     public String nestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
     }
     /**
-     * The password for the Hive MetaStore
+     * @return The password for the Hive MetaStore
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The runtimeVersion for the Hive MetaStore
+     * @return The runtimeVersion for the Hive MetaStore
      * 
-    */
+     */
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
     /**
-     * The serverUri for the Hive MetaStore
+     * @return The serverUri for the Hive MetaStore
      * 
-    */
+     */
     public String serverUri() {
         return this.serverUri;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The userName for the Hive MetaStore
+     * @return The userName for the Hive MetaStore
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

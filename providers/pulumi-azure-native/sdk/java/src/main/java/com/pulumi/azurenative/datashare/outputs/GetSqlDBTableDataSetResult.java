@@ -10,56 +10,56 @@ import java.util.Objects;
 
 @CustomType
 public final class GetSqlDBTableDataSetResult {
-    /**
-     * Unique id for identifying a data set resource
-     * 
-     */
+        /**
+         * @return Unique id for identifying a data set resource
+         * 
+         */
     private final String dataSetId;
-    /**
-     * Database name of the source data set
-     * 
-     */
+        /**
+         * @return Database name of the source data set
+         * 
+         */
     private final String databaseName;
-    /**
-     * The resource id of the azure resource
-     * 
-     */
+        /**
+         * @return The resource id of the azure resource
+         * 
+         */
     private final String id;
-    /**
-     * Kind of data set.
-     * Expected value is &#39;SqlDBTable&#39;.
-     * 
-     */
+        /**
+         * @return Kind of data set.
+         * Expected value is &#39;SqlDBTable&#39;.
+         * 
+         */
     private final String kind;
-    /**
-     * Name of the azure resource
-     * 
-     */
+        /**
+         * @return Name of the azure resource
+         * 
+         */
     private final String name;
-    /**
-     * Schema of the table. Default value is dbo.
-     * 
-     */
+        /**
+         * @return Schema of the table. Default value is dbo.
+         * 
+         */
     private final String schemaName;
-    /**
-     * Resource id of SQL server
-     * 
-     */
+        /**
+         * @return Resource id of SQL server
+         * 
+         */
     private final String sqlServerResourceId;
-    /**
-     * System Data of the Azure resource.
-     * 
-     */
+        /**
+         * @return System Data of the Azure resource.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * SQL DB table name.
-     * 
-     */
+        /**
+         * @return SQL DB table name.
+         * 
+         */
     private final String tableName;
-    /**
-     * Type of the azure resource
-     * 
-     */
+        /**
+         * @return Type of the azure resource
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -87,73 +87,73 @@ public final class GetSqlDBTableDataSetResult {
     }
 
     /**
-     * Unique id for identifying a data set resource
+     * @return Unique id for identifying a data set resource
      * 
-    */
+     */
     public String dataSetId() {
         return this.dataSetId;
     }
     /**
-     * Database name of the source data set
+     * @return Database name of the source data set
      * 
-    */
+     */
     public String databaseName() {
         return this.databaseName;
     }
     /**
-     * The resource id of the azure resource
+     * @return The resource id of the azure resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of data set.
+     * @return Kind of data set.
      * Expected value is &#39;SqlDBTable&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the azure resource
+     * @return Name of the azure resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Schema of the table. Default value is dbo.
+     * @return Schema of the table. Default value is dbo.
      * 
-    */
+     */
     public String schemaName() {
         return this.schemaName;
     }
     /**
-     * Resource id of SQL server
+     * @return Resource id of SQL server
      * 
-    */
+     */
     public String sqlServerResourceId() {
         return this.sqlServerResourceId;
     }
     /**
-     * System Data of the Azure resource.
+     * @return System Data of the Azure resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * SQL DB table name.
+     * @return SQL DB table name.
      * 
-    */
+     */
     public String tableName() {
         return this.tableName;
     }
     /**
-     * Type of the azure resource
+     * @return Type of the azure resource
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

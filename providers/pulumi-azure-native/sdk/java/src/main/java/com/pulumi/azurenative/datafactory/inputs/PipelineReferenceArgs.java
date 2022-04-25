@@ -26,6 +26,10 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Reference name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="referenceName", required=true)
     private Output<String> referenceName;
 
+    /**
+     * @return Reference pipeline name.
+     * 
+     */
     public Output<String> referenceName() {
         return this.referenceName;
     }
@@ -48,6 +56,10 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Pipeline reference type.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -78,29 +90,65 @@ public final class PipelineReferenceArgs extends com.pulumi.resources.ResourceAr
             $ = new PipelineReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Reference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Reference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param referenceName Reference pipeline name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(Output<String> referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param referenceName Reference pipeline name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             return referenceName(Output.of(referenceName));
         }
 
+        /**
+         * @param type Pipeline reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Pipeline reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

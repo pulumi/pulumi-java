@@ -30,6 +30,10 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -41,6 +45,10 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The VHD name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,10 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="osType")
     private @Nullable Output<Either<String,OperatingSystemTypes>> osType;
 
+    /**
+     * @return The OS type.
+     * 
+     */
     public Optional<Output<Either<String,OperatingSystemTypes>>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -63,6 +75,10 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
     private @Nullable Output<VirtualHardDiskArgs> vhd;
 
+    /**
+     * @return The virtual hard disk.
+     * 
+     */
     public Optional<Output<VirtualHardDiskArgs>> vhd() {
         return Optional.ofNullable(this.vhd);
     }
@@ -94,46 +110,106 @@ public final class OsDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OsDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param name The VHD name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The VHD name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param osType The OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<Either<String,OperatingSystemTypes>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OperatingSystemTypes> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType The OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType The OS type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OperatingSystemTypes osType) {
             return osType(Either.ofRight(osType));
         }
 
+        /**
+         * @param vhd The virtual hard disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
             $.vhd = vhd;
             return this;
         }
 
+        /**
+         * @param vhd The virtual hard disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhd(VirtualHardDiskArgs vhd) {
             return vhd(Output.of(vhd));
         }

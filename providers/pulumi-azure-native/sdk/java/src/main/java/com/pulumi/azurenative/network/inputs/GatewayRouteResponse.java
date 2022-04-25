@@ -24,6 +24,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="asPath", required=true)
     private String asPath;
 
+    /**
+     * @return The route&#39;s AS path sequence.
+     * 
+     */
     public String asPath() {
         return this.asPath;
     }
@@ -35,6 +39,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="localAddress", required=true)
     private String localAddress;
 
+    /**
+     * @return The gateway&#39;s local address.
+     * 
+     */
     public String localAddress() {
         return this.localAddress;
     }
@@ -46,6 +54,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="network", required=true)
     private String network;
 
+    /**
+     * @return The route&#39;s network prefix.
+     * 
+     */
     public String network() {
         return this.network;
     }
@@ -57,6 +69,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nextHop", required=true)
     private String nextHop;
 
+    /**
+     * @return The route&#39;s next hop.
+     * 
+     */
     public String nextHop() {
         return this.nextHop;
     }
@@ -68,6 +84,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="origin", required=true)
     private String origin;
 
+    /**
+     * @return The source this route was learned from.
+     * 
+     */
     public String origin() {
         return this.origin;
     }
@@ -79,6 +99,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourcePeer", required=true)
     private String sourcePeer;
 
+    /**
+     * @return The peer this route was learned from.
+     * 
+     */
     public String sourcePeer() {
         return this.sourcePeer;
     }
@@ -90,6 +114,10 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="weight", required=true)
     private Integer weight;
 
+    /**
+     * @return The route&#39;s weight.
+     * 
+     */
     public Integer weight() {
         return this.weight;
     }
@@ -124,36 +152,78 @@ public final class GatewayRouteResponse extends com.pulumi.resources.InvokeArgs 
             $ = new GatewayRouteResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param asPath The route&#39;s AS path sequence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder asPath(String asPath) {
             $.asPath = asPath;
             return this;
         }
 
+        /**
+         * @param localAddress The gateway&#39;s local address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localAddress(String localAddress) {
             $.localAddress = localAddress;
             return this;
         }
 
+        /**
+         * @param network The route&#39;s network prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder network(String network) {
             $.network = network;
             return this;
         }
 
+        /**
+         * @param nextHop The route&#39;s next hop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHop(String nextHop) {
             $.nextHop = nextHop;
             return this;
         }
 
+        /**
+         * @param origin The source this route was learned from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origin(String origin) {
             $.origin = origin;
             return this;
         }
 
+        /**
+         * @param sourcePeer The peer this route was learned from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePeer(String sourcePeer) {
             $.sourcePeer = sourcePeer;
             return this;
         }
 
+        /**
+         * @param weight The route&#39;s weight.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(Integer weight) {
             $.weight = weight;
             return this;

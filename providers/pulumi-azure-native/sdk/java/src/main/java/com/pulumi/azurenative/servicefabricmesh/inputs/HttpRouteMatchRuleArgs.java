@@ -28,6 +28,10 @@ public final class HttpRouteMatchRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="headers")
     private @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
 
+    /**
+     * @return headers and their values to match in request.
+     * 
+     */
     public Optional<Output<List<HttpRouteMatchHeaderArgs>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -39,6 +43,10 @@ public final class HttpRouteMatchRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="path", required=true)
     private Output<HttpRouteMatchPathArgs> path;
 
+    /**
+     * @return Path to match for routing.
+     * 
+     */
     public Output<HttpRouteMatchPathArgs> path() {
         return this.path;
     }
@@ -68,24 +76,54 @@ public final class HttpRouteMatchRuleArgs extends com.pulumi.resources.ResourceA
             $ = new HttpRouteMatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param headers headers and their values to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<HttpRouteMatchHeaderArgs>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers headers and their values to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<HttpRouteMatchHeaderArgs> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers headers and their values to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(HttpRouteMatchHeaderArgs... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param path Path to match for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(Output<HttpRouteMatchPathArgs> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Path to match for routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(HttpRouteMatchPathArgs path) {
             return path(Output.of(path));
         }

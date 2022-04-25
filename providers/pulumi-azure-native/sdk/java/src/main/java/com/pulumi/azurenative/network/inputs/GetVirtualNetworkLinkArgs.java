@@ -19,6 +19,10 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
     @Import(name="privateZoneName", required=true)
     private String privateZoneName;
 
+    /**
+     * @return The name of the Private DNS zone (without a terminating dot).
+     * 
+     */
     public String privateZoneName() {
         return this.privateZoneName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
     @Import(name="virtualNetworkLinkName", required=true)
     private String virtualNetworkLinkName;
 
+    /**
+     * @return The name of the virtual network link.
+     * 
+     */
     public String virtualNetworkLinkName() {
         return this.virtualNetworkLinkName;
     }
@@ -71,16 +83,34 @@ public final class GetVirtualNetworkLinkArgs extends com.pulumi.resources.Invoke
             $ = new GetVirtualNetworkLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateZoneName The name of the Private DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateZoneName(String privateZoneName) {
             $.privateZoneName = privateZoneName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkLinkName The name of the virtual network link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkLinkName(String virtualNetworkLinkName) {
             $.virtualNetworkLinkName = virtualNetworkLinkName;
             return this;

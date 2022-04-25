@@ -18,55 +18,55 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetVideoAnalyzerResult {
-    /**
-     * The account encryption properties.
-     * 
-     */
+        /**
+         * @return The account encryption properties.
+         * 
+         */
     private final AccountEncryptionResponse encryption;
-    /**
-     * The list of endpoints associated with this resource.
-     * 
-     */
+        /**
+         * @return The list of endpoints associated with this resource.
+         * 
+         */
     private final List<EndpointResponse> endpoints;
-    /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
-     * 
-     */
+        /**
+         * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+         * 
+         */
     private final String id;
-    /**
-     * The set of managed identities associated with the Video Analyzer resource.
-     * 
-     */
+        /**
+         * @return The set of managed identities associated with the Video Analyzer resource.
+         * 
+         */
     private final @Nullable VideoAnalyzerIdentityResponse identity;
-    /**
-     * The geo-location where the resource lives
-     * 
-     */
+        /**
+         * @return The geo-location where the resource lives
+         * 
+         */
     private final String location;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The storage accounts for this resource.
-     * 
-     */
+        /**
+         * @return The storage accounts for this resource.
+         * 
+         */
     private final List<StorageAccountResponse> storageAccounts;
-    /**
-     * The system data of the Video Analyzer account.
-     * 
-     */
+        /**
+         * @return The system data of the Video Analyzer account.
+         * 
+         */
     private final SystemDataResponse systemData;
-    /**
-     * Resource tags.
-     * 
-     */
+        /**
+         * @return Resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -94,72 +94,72 @@ public final class GetVideoAnalyzerResult {
     }
 
     /**
-     * The account encryption properties.
+     * @return The account encryption properties.
      * 
-    */
+     */
     public AccountEncryptionResponse encryption() {
         return this.encryption;
     }
     /**
-     * The list of endpoints associated with this resource.
+     * @return The list of endpoints associated with this resource.
      * 
-    */
+     */
     public List<EndpointResponse> endpoints() {
         return this.endpoints;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The set of managed identities associated with the Video Analyzer resource.
+     * @return The set of managed identities associated with the Video Analyzer resource.
      * 
-    */
+     */
     public Optional<VideoAnalyzerIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The storage accounts for this resource.
+     * @return The storage accounts for this resource.
      * 
-    */
+     */
     public List<StorageAccountResponse> storageAccounts() {
         return this.storageAccounts;
     }
     /**
-     * The system data of the Video Analyzer account.
+     * @return The system data of the Video Analyzer account.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

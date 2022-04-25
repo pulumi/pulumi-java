@@ -26,6 +26,10 @@ public final class ScalingHostPoolReferenceResponse extends com.pulumi.resources
     @Import(name="hostPoolArmPath")
     private @Nullable String hostPoolArmPath;
 
+    /**
+     * @return Arm path of referenced hostpool.
+     * 
+     */
     public Optional<String> hostPoolArmPath() {
         return Optional.ofNullable(this.hostPoolArmPath);
     }
@@ -37,6 +41,10 @@ public final class ScalingHostPoolReferenceResponse extends com.pulumi.resources
     @Import(name="scalingPlanEnabled")
     private @Nullable Boolean scalingPlanEnabled;
 
+    /**
+     * @return Is the scaling plan enabled for this hostpool.
+     * 
+     */
     public Optional<Boolean> scalingPlanEnabled() {
         return Optional.ofNullable(this.scalingPlanEnabled);
     }
@@ -66,11 +74,23 @@ public final class ScalingHostPoolReferenceResponse extends com.pulumi.resources
             $ = new ScalingHostPoolReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostPoolArmPath Arm path of referenced hostpool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostPoolArmPath(@Nullable String hostPoolArmPath) {
             $.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
 
+        /**
+         * @param scalingPlanEnabled Is the scaling plan enabled for this hostpool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
             $.scalingPlanEnabled = scalingPlanEnabled;
             return this;

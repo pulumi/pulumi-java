@@ -19,6 +19,10 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return The device name
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -30,6 +34,10 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
     @Import(name="managerName", required=true)
     private String managerName;
 
+    /**
+     * @return The manager name
+     * 
+     */
     public String managerName() {
         return this.managerName;
     }
@@ -41,6 +49,10 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
     @Import(name="volumeContainerName", required=true)
     private String volumeContainerName;
 
+    /**
+     * @return The name of the volume container.
+     * 
+     */
     public String volumeContainerName() {
         return this.volumeContainerName;
     }
@@ -83,21 +99,45 @@ public final class GetVolumeContainerArgs extends com.pulumi.resources.InvokeArg
             $ = new GetVolumeContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param managerName The manager name
+         * 
+         * @return builder
+         * 
+         */
         public Builder managerName(String managerName) {
             $.managerName = managerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param volumeContainerName The name of the volume container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeContainerName(String volumeContainerName) {
             $.volumeContainerName = volumeContainerName;
             return this;

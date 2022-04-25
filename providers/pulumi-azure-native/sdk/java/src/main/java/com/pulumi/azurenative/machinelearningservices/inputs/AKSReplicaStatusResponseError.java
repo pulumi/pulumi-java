@@ -23,6 +23,10 @@ public final class AKSReplicaStatusResponseError extends com.pulumi.resources.In
     @Import(name="error", required=true)
     private ErrorResponseResponse error;
 
+    /**
+     * @return The error response.
+     * 
+     */
     public ErrorResponseResponse error() {
         return this.error;
     }
@@ -51,6 +55,12 @@ public final class AKSReplicaStatusResponseError extends com.pulumi.resources.In
             $ = new AKSReplicaStatusResponseError(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error The error response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(ErrorResponseResponse error) {
             $.error = error;
             return this;

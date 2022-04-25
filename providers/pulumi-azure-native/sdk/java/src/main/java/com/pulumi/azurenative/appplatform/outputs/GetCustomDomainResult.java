@@ -10,25 +10,25 @@ import java.util.Objects;
 
 @CustomType
 public final class GetCustomDomainResult {
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Properties of the custom domain resource.
-     * 
-     */
+        /**
+         * @return Properties of the custom domain resource.
+         * 
+         */
     private final CustomDomainPropertiesResponse properties;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -44,30 +44,30 @@ public final class GetCustomDomainResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the custom domain resource.
+     * @return Properties of the custom domain resource.
      * 
-    */
+     */
     public CustomDomainPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

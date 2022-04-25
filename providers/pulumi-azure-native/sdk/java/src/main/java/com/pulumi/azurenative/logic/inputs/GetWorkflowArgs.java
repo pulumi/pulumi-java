@@ -19,6 +19,10 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workflowName", required=true)
     private String workflowName;
 
+    /**
+     * @return The workflow name.
+     * 
+     */
     public String workflowName() {
         return this.workflowName;
     }
@@ -59,11 +67,23 @@ public final class GetWorkflowArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkflowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workflowName The workflow name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflowName(String workflowName) {
             $.workflowName = workflowName;
             return this;

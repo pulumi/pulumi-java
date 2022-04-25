@@ -11,20 +11,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IPv4FirewallRuleResponse {
-    /**
-     * The rule name.
-     * 
-     */
+        /**
+         * @return The rule name.
+         * 
+         */
     private final @Nullable String firewallRuleName;
-    /**
-     * The end range of IPv4.
-     * 
-     */
+        /**
+         * @return The end range of IPv4.
+         * 
+         */
     private final @Nullable String rangeEnd;
-    /**
-     * The start range of IPv4.
-     * 
-     */
+        /**
+         * @return The start range of IPv4.
+         * 
+         */
     private final @Nullable String rangeStart;
 
     @CustomType.Constructor
@@ -38,23 +38,23 @@ public final class IPv4FirewallRuleResponse {
     }
 
     /**
-     * The rule name.
+     * @return The rule name.
      * 
-    */
+     */
     public Optional<String> firewallRuleName() {
         return Optional.ofNullable(this.firewallRuleName);
     }
     /**
-     * The end range of IPv4.
+     * @return The end range of IPv4.
      * 
-    */
+     */
     public Optional<String> rangeEnd() {
         return Optional.ofNullable(this.rangeEnd);
     }
     /**
-     * The start range of IPv4.
+     * @return The start range of IPv4.
      * 
-    */
+     */
     public Optional<String> rangeStart() {
         return Optional.ofNullable(this.rangeStart);
     }

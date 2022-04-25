@@ -26,6 +26,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="groupConnectivity")
     private @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
 
+    /**
+     * @return Group connectivity type.
+     * 
+     */
     public Optional<Output<Either<String,GroupConnectivity>>> groupConnectivity() {
         return Optional.ofNullable(this.groupConnectivity);
     }
@@ -37,6 +41,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="isGlobal")
     private @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
+    /**
+     * @return Flag if global is supported.
+     * 
+     */
     public Optional<Output<Either<String,IsGlobal>>> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
@@ -48,6 +56,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="networkGroupId")
     private @Nullable Output<String> networkGroupId;
 
+    /**
+     * @return Network group Id.
+     * 
+     */
     public Optional<Output<String>> networkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }
@@ -59,6 +71,10 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
     @Import(name="useHubGateway")
     private @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
+    /**
+     * @return Flag if need to use hub gateway.
+     * 
+     */
     public Optional<Output<Either<String,UseHubGateway>>> useHubGateway() {
         return Optional.ofNullable(this.useHubGateway);
     }
@@ -90,62 +106,146 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
             $ = new ConnectivityGroupItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupConnectivity Group connectivity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivity(@Nullable Output<Either<String,GroupConnectivity>> groupConnectivity) {
             $.groupConnectivity = groupConnectivity;
             return this;
         }
 
+        /**
+         * @param groupConnectivity Group connectivity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivity(Either<String,GroupConnectivity> groupConnectivity) {
             return groupConnectivity(Output.of(groupConnectivity));
         }
 
+        /**
+         * @param groupConnectivity Group connectivity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivity(String groupConnectivity) {
             return groupConnectivity(Either.ofLeft(groupConnectivity));
         }
 
+        /**
+         * @param groupConnectivity Group connectivity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivity(GroupConnectivity groupConnectivity) {
             return groupConnectivity(Either.ofRight(groupConnectivity));
         }
 
+        /**
+         * @param isGlobal Flag if global is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             $.isGlobal = isGlobal;
             return this;
         }
 
+        /**
+         * @param isGlobal Flag if global is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(Either<String,IsGlobal> isGlobal) {
             return isGlobal(Output.of(isGlobal));
         }
 
+        /**
+         * @param isGlobal Flag if global is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(String isGlobal) {
             return isGlobal(Either.ofLeft(isGlobal));
         }
 
+        /**
+         * @param isGlobal Flag if global is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(IsGlobal isGlobal) {
             return isGlobal(Either.ofRight(isGlobal));
         }
 
+        /**
+         * @param networkGroupId Network group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
             $.networkGroupId = networkGroupId;
             return this;
         }
 
+        /**
+         * @param networkGroupId Network group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupId(String networkGroupId) {
             return networkGroupId(Output.of(networkGroupId));
         }
 
+        /**
+         * @param useHubGateway Flag if need to use hub gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHubGateway(@Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
             $.useHubGateway = useHubGateway;
             return this;
         }
 
+        /**
+         * @param useHubGateway Flag if need to use hub gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHubGateway(Either<String,UseHubGateway> useHubGateway) {
             return useHubGateway(Output.of(useHubGateway));
         }
 
+        /**
+         * @param useHubGateway Flag if need to use hub gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHubGateway(String useHubGateway) {
             return useHubGateway(Either.ofLeft(useHubGateway));
         }
 
+        /**
+         * @param useHubGateway Flag if need to use hub gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useHubGateway(UseHubGateway useHubGateway) {
             return useHubGateway(Either.ofRight(useHubGateway));
         }

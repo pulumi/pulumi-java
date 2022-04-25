@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ReferenceDataSetKeyPropertyResponse {
-    /**
-     * The name of the key property.
-     * 
-     */
+        /**
+         * @return The name of the key property.
+         * 
+         */
     private final @Nullable String name;
-    /**
-     * The type of the key property.
-     * 
-     */
+        /**
+         * @return The type of the key property.
+         * 
+         */
     private final @Nullable String type;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class ReferenceDataSetKeyPropertyResponse {
     }
 
     /**
-     * The name of the key property.
+     * @return The name of the key property.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The type of the key property.
+     * @return The type of the key property.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -19,6 +19,10 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the backup vault is present.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGuardsName", required=true)
     private String resourceGuardsName;
 
+    /**
+     * @return The name of ResourceGuard
+     * 
+     */
     public String resourceGuardsName() {
         return this.resourceGuardsName;
     }
@@ -59,11 +67,23 @@ public final class GetResourceGuardArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetResourceGuardArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the backup vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGuardsName The name of ResourceGuard
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGuardsName(String resourceGuardsName) {
             $.resourceGuardsName = resourceGuardsName;
             return this;

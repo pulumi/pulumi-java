@@ -20,106 +20,106 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetSignalRResult {
-    /**
-     * Cross-Origin Resource Sharing (CORS) settings.
-     * 
-     */
+        /**
+         * @return Cross-Origin Resource Sharing (CORS) settings.
+         * 
+         */
     private final @Nullable SignalRCorsSettingsResponse cors;
-    /**
-     * The publicly accessible IP of the SignalR service.
-     * 
-     */
+        /**
+         * @return The publicly accessible IP of the SignalR service.
+         * 
+         */
     private final String externalIP;
-    /**
-     * List of SignalR featureFlags. e.g. ServiceMode.
-     * 
-     * FeatureFlags that are not included in the parameters for the update operation will not be modified.
-     * And the response will only include featureFlags that are explicitly set.
-     * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
-     * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
-     * 
-     */
+        /**
+         * @return List of SignalR featureFlags. e.g. ServiceMode.
+         * 
+         * FeatureFlags that are not included in the parameters for the update operation will not be modified.
+         * And the response will only include featureFlags that are explicitly set.
+         * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
+         * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
+         * 
+         */
     private final @Nullable List<SignalRFeatureResponse> features;
-    /**
-     * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
-     * 
-     */
+        /**
+         * @return FQDN of the SignalR service instance. Format: xxx.service.signalr.net
+         * 
+         */
     private final String hostName;
-    /**
-     * Prefix for the hostName of the SignalR service. Retained for future use.
-     * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
-     * 
-     */
+        /**
+         * @return Prefix for the hostName of the SignalR service. Retained for future use.
+         * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
+         * 
+         */
     private final String hostNamePrefix;
-    /**
-     * Fully qualified resource Id for the resource.
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource.
+         * 
+         */
     private final String id;
-    /**
-     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
-     * 
-     */
+        /**
+         * @return The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         */
     private final @Nullable String kind;
-    /**
-     * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
-     * 
-     */
+        /**
+         * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The name of the resource.
-     * 
-     */
+        /**
+         * @return The name of the resource.
+         * 
+         */
     private final String name;
-    /**
-     * Network ACLs
-     * 
-     */
+        /**
+         * @return Network ACLs
+         * 
+         */
     private final @Nullable SignalRNetworkACLsResponse networkACLs;
-    /**
-     * Private endpoint connections to the SignalR resource.
-     * 
-     */
+        /**
+         * @return Private endpoint connections to the SignalR resource.
+         * 
+         */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-    /**
-     * Provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * The publicly accessible port of the SignalR service which is designed for browser/client side usage.
-     * 
-     */
+        /**
+         * @return The publicly accessible port of the SignalR service which is designed for browser/client side usage.
+         * 
+         */
     private final Integer publicPort;
-    /**
-     * The publicly accessible port of the SignalR service which is designed for customer server side usage.
-     * 
-     */
+        /**
+         * @return The publicly accessible port of the SignalR service which is designed for customer server side usage.
+         * 
+         */
     private final Integer serverPort;
-    /**
-     * The billing information of the resource.(e.g. Free, Standard)
-     * 
-     */
+        /**
+         * @return The billing information of the resource.(e.g. Free, Standard)
+         * 
+         */
     private final @Nullable ResourceSkuResponse sku;
-    /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
-     * 
-     */
+        /**
+         * @return Tags of the service which is a list of key value pairs that describe the resource.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
-     * 
-     */
+        /**
+         * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+         * 
+         */
     private final String type;
-    /**
-     * Upstream settings when the Azure SignalR is in server-less mode.
-     * 
-     */
+        /**
+         * @return Upstream settings when the Azure SignalR is in server-less mode.
+         * 
+         */
     private final @Nullable ServerlessUpstreamSettingsResponse upstream;
-    /**
-     * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
-     * 
-     */
+        /**
+         * @return Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
+         * 
+         */
     private final String version;
 
     @CustomType.Constructor
@@ -165,141 +165,141 @@ public final class GetSignalRResult {
     }
 
     /**
-     * Cross-Origin Resource Sharing (CORS) settings.
+     * @return Cross-Origin Resource Sharing (CORS) settings.
      * 
-    */
+     */
     public Optional<SignalRCorsSettingsResponse> cors() {
         return Optional.ofNullable(this.cors);
     }
     /**
-     * The publicly accessible IP of the SignalR service.
+     * @return The publicly accessible IP of the SignalR service.
      * 
-    */
+     */
     public String externalIP() {
         return this.externalIP;
     }
     /**
-     * List of SignalR featureFlags. e.g. ServiceMode.
+     * @return List of SignalR featureFlags. e.g. ServiceMode.
      * 
      * FeatureFlags that are not included in the parameters for the update operation will not be modified.
      * And the response will only include featureFlags that are explicitly set.
      * When a featureFlag is not explicitly set, SignalR service will use its globally default value.
      * But keep in mind, the default value doesn&#39;t mean &#34;false&#34;. It varies in terms of different FeatureFlags.
      * 
-    */
+     */
     public List<SignalRFeatureResponse> features() {
         return this.features == null ? List.of() : this.features;
     }
     /**
-     * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
+     * @return FQDN of the SignalR service instance. Format: xxx.service.signalr.net
      * 
-    */
+     */
     public String hostName() {
         return this.hostName;
     }
     /**
-     * Prefix for the hostName of the SignalR service. Retained for future use.
+     * @return Prefix for the hostName of the SignalR service. Retained for future use.
      * The hostname will be of format: &amp;lt;hostNamePrefix&amp;gt;.service.signalr.net.
      * 
-    */
+     */
     public String hostNamePrefix() {
         return this.hostNamePrefix;
     }
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
+     * @return The kind of the service - e.g. &#34;SignalR&#34;, or &#34;RawWebSockets&#34; for &#34;Microsoft.SignalRService/SignalR&#34;
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+     * @return The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Network ACLs
+     * @return Network ACLs
      * 
-    */
+     */
     public Optional<SignalRNetworkACLsResponse> networkACLs() {
         return Optional.ofNullable(this.networkACLs);
     }
     /**
-     * Private endpoint connections to the SignalR resource.
+     * @return Private endpoint connections to the SignalR resource.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The publicly accessible port of the SignalR service which is designed for browser/client side usage.
+     * @return The publicly accessible port of the SignalR service which is designed for browser/client side usage.
      * 
-    */
+     */
     public Integer publicPort() {
         return this.publicPort;
     }
     /**
-     * The publicly accessible port of the SignalR service which is designed for customer server side usage.
+     * @return The publicly accessible port of the SignalR service which is designed for customer server side usage.
      * 
-    */
+     */
     public Integer serverPort() {
         return this.serverPort;
     }
     /**
-     * The billing information of the resource.(e.g. Free, Standard)
+     * @return The billing information of the resource.(e.g. Free, Standard)
      * 
-    */
+     */
     public Optional<ResourceSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Tags of the service which is a list of key value pairs that describe the resource.
+     * @return Tags of the service which is a list of key value pairs that describe the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
+     * @return The type of the resource - e.g. &#34;Microsoft.SignalRService/SignalR&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Upstream settings when the Azure SignalR is in server-less mode.
+     * @return Upstream settings when the Azure SignalR is in server-less mode.
      * 
-    */
+     */
     public Optional<ServerlessUpstreamSettingsResponse> upstream() {
         return Optional.ofNullable(this.upstream);
     }
     /**
-     * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
+     * @return Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

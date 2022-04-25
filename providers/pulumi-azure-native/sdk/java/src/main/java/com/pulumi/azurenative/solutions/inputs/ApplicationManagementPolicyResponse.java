@@ -25,6 +25,10 @@ public final class ApplicationManagementPolicyResponse extends com.pulumi.resour
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return The managed application management mode.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -53,6 +57,12 @@ public final class ApplicationManagementPolicyResponse extends com.pulumi.resour
             $ = new ApplicationManagementPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode The managed application management mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;

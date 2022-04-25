@@ -11,31 +11,31 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class SelectAudioTrackByAttributeResponse {
-    /**
-     * The TrackAttribute to filter the tracks by.
-     * 
-     */
+        /**
+         * @return The TrackAttribute to filter the tracks by.
+         * 
+         */
     private final String attribute;
-    /**
-     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
-     * 
-     */
+        /**
+         * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         */
     private final @Nullable String channelMapping;
-    /**
-     * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
-     * 
-     */
+        /**
+         * @return The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+         * 
+         */
     private final String filter;
-    /**
-     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
-     * 
-     */
+        /**
+         * @return The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+         * 
+         */
     private final @Nullable String filterValue;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
+         * 
+         */
     private final String odataType;
 
     @CustomType.Constructor
@@ -53,38 +53,38 @@ public final class SelectAudioTrackByAttributeResponse {
     }
 
     /**
-     * The TrackAttribute to filter the tracks by.
+     * @return The TrackAttribute to filter the tracks by.
      * 
-    */
+     */
     public String attribute() {
         return this.attribute;
     }
     /**
-     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
      * 
-    */
+     */
     public Optional<String> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
     /**
-     * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+     * @return The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
      * 
-    */
+     */
     public String filter() {
         return this.filter;
     }
     /**
-     * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
+     * @return The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
      * 
-    */
+     */
     public Optional<String> filterValue() {
         return Optional.ofNullable(this.filterValue);
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.SelectAudioTrackByAttribute&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }

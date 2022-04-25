@@ -26,6 +26,11 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;EnvironmentVariableSetup&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -37,6 +42,10 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
     @Import(name="variableName", required=true)
     private Output<String> variableName;
 
+    /**
+     * @return The name of the environment variable.
+     * 
+     */
     public Output<String> variableName() {
         return this.variableName;
     }
@@ -48,6 +57,10 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
     @Import(name="variableValue", required=true)
     private Output<String> variableValue;
 
+    /**
+     * @return The value of the environment variable.
+     * 
+     */
     public Output<String> variableValue() {
         return this.variableValue;
     }
@@ -78,29 +91,67 @@ public final class EnvironmentVariableSetupArgs extends com.pulumi.resources.Res
             $ = new EnvironmentVariableSetupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;EnvironmentVariableSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;EnvironmentVariableSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param variableName The name of the environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(Output<String> variableName) {
             $.variableName = variableName;
             return this;
         }
 
+        /**
+         * @param variableName The name of the environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableName(String variableName) {
             return variableName(Output.of(variableName));
         }
 
+        /**
+         * @param variableValue The value of the environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableValue(Output<String> variableValue) {
             $.variableValue = variableValue;
             return this;
         }
 
+        /**
+         * @param variableValue The value of the environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variableValue(String variableValue) {
             return variableValue(Output.of(variableValue));
         }

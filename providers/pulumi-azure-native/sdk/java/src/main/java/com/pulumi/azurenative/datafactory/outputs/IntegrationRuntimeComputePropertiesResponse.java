@@ -14,35 +14,35 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class IntegrationRuntimeComputePropertiesResponse {
-    /**
-     * Data flow properties for managed integration runtime.
-     * 
-     */
+        /**
+         * @return Data flow properties for managed integration runtime.
+         * 
+         */
     private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
-    /**
-     * The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
-     * 
-     */
+        /**
+         * @return The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * Maximum parallel executions count per node for managed integration runtime.
-     * 
-     */
+        /**
+         * @return Maximum parallel executions count per node for managed integration runtime.
+         * 
+         */
     private final @Nullable Integer maxParallelExecutionsPerNode;
-    /**
-     * The node size requirement to managed integration runtime.
-     * 
-     */
+        /**
+         * @return The node size requirement to managed integration runtime.
+         * 
+         */
     private final @Nullable String nodeSize;
-    /**
-     * The required number of nodes for managed integration runtime.
-     * 
-     */
+        /**
+         * @return The required number of nodes for managed integration runtime.
+         * 
+         */
     private final @Nullable Integer numberOfNodes;
-    /**
-     * VNet properties for managed integration runtime.
-     * 
-     */
+        /**
+         * @return VNet properties for managed integration runtime.
+         * 
+         */
     private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
     @CustomType.Constructor
@@ -62,44 +62,44 @@ public final class IntegrationRuntimeComputePropertiesResponse {
     }
 
     /**
-     * Data flow properties for managed integration runtime.
+     * @return Data flow properties for managed integration runtime.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeDataFlowPropertiesResponse> dataFlowProperties() {
         return Optional.ofNullable(this.dataFlowProperties);
     }
     /**
-     * The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
+     * @return The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Maximum parallel executions count per node for managed integration runtime.
+     * @return Maximum parallel executions count per node for managed integration runtime.
      * 
-    */
+     */
     public Optional<Integer> maxParallelExecutionsPerNode() {
         return Optional.ofNullable(this.maxParallelExecutionsPerNode);
     }
     /**
-     * The node size requirement to managed integration runtime.
+     * @return The node size requirement to managed integration runtime.
      * 
-    */
+     */
     public Optional<String> nodeSize() {
         return Optional.ofNullable(this.nodeSize);
     }
     /**
-     * The required number of nodes for managed integration runtime.
+     * @return The required number of nodes for managed integration runtime.
      * 
-    */
+     */
     public Optional<Integer> numberOfNodes() {
         return Optional.ofNullable(this.numberOfNodes);
     }
     /**
-     * VNet properties for managed integration runtime.
+     * @return VNet properties for managed integration runtime.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeVNetPropertiesResponse> vNetProperties() {
         return Optional.ofNullable(this.vNetProperties);
     }

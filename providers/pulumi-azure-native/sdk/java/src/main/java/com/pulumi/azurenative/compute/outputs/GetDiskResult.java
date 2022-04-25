@@ -25,180 +25,180 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDiskResult {
-    /**
-     * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
-     * 
-     */
+        /**
+         * @return Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
+         * 
+         */
     private final @Nullable Boolean burstingEnabled;
-    /**
-     * Disk source information. CreationData information cannot be changed after the disk has been created.
-     * 
-     */
+        /**
+         * @return Disk source information. CreationData information cannot be changed after the disk has been created.
+         * 
+         */
     private final CreationDataResponse creationData;
-    /**
-     * ARM id of the DiskAccess resource for using private endpoints on disks.
-     * 
-     */
+        /**
+         * @return ARM id of the DiskAccess resource for using private endpoints on disks.
+         * 
+         */
     private final @Nullable String diskAccessId;
-    /**
-     * The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
-     * 
-     */
+        /**
+         * @return The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
+         * 
+         */
     private final @Nullable Double diskIOPSReadOnly;
-    /**
-     * The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
-     * 
-     */
+        /**
+         * @return The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
+         * 
+         */
     private final @Nullable Double diskIOPSReadWrite;
-    /**
-     * The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
-     * 
-     */
+        /**
+         * @return The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+         * 
+         */
     private final @Nullable Double diskMBpsReadOnly;
-    /**
-     * The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
-     * 
-     */
+        /**
+         * @return The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+         * 
+         */
     private final @Nullable Double diskMBpsReadWrite;
-    /**
-     * The size of the disk in bytes. This field is read only.
-     * 
-     */
+        /**
+         * @return The size of the disk in bytes. This field is read only.
+         * 
+         */
     private final Double diskSizeBytes;
-    /**
-     * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
-     * 
-     */
+        /**
+         * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
+         * 
+         */
     private final @Nullable Integer diskSizeGB;
-    /**
-     * The state of the disk.
-     * 
-     */
+        /**
+         * @return The state of the disk.
+         * 
+         */
     private final String diskState;
-    /**
-     * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
-     * 
-     */
+        /**
+         * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+         * 
+         */
     private final @Nullable EncryptionResponse encryption;
-    /**
-     * Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
-     * 
-     */
+        /**
+         * @return Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+         * 
+         */
     private final @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection;
-    /**
-     * The extended location where the disk will be created. Extended location cannot be changed.
-     * 
-     */
+        /**
+         * @return The extended location where the disk will be created. Extended location cannot be changed.
+         * 
+         */
     private final @Nullable ExtendedLocationResponse extendedLocation;
-    /**
-     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
-     * 
-     */
+        /**
+         * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+         * 
+         */
     private final @Nullable String hyperVGeneration;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * A relative URI containing the ID of the VM that has the disk attached.
-     * 
-     */
+        /**
+         * @return A relative URI containing the ID of the VM that has the disk attached.
+         * 
+         */
     private final String managedBy;
-    /**
-     * List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
-     * 
-     */
+        /**
+         * @return List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+         * 
+         */
     private final List<String> managedByExtended;
-    /**
-     * The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
-     * 
-     */
+        /**
+         * @return The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+         * 
+         */
     private final @Nullable Integer maxShares;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Policy for accessing the disk via network.
-     * 
-     */
+        /**
+         * @return Policy for accessing the disk via network.
+         * 
+         */
     private final @Nullable String networkAccessPolicy;
-    /**
-     * The Operating System type.
-     * 
-     */
+        /**
+         * @return The Operating System type.
+         * 
+         */
     private final @Nullable String osType;
-    /**
-     * Properties of the disk for which update is pending.
-     * 
-     */
+        /**
+         * @return Properties of the disk for which update is pending.
+         * 
+         */
     private final PropertyUpdatesInProgressResponse propertyUpdatesInProgress;
-    /**
-     * The disk provisioning state.
-     * 
-     */
+        /**
+         * @return The disk provisioning state.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
-     * 
-     */
+        /**
+         * @return Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
+         * 
+         */
     private final @Nullable PurchasePlanResponse purchasePlan;
-    /**
-     * Contains the security related information for the resource.
-     * 
-     */
+        /**
+         * @return Contains the security related information for the resource.
+         * 
+         */
     private final @Nullable DiskSecurityProfileResponse securityProfile;
-    /**
-     * Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
-     * 
-     */
+        /**
+         * @return Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+         * 
+         */
     private final List<ShareInfoElementResponse> shareInfo;
-    /**
-     * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
-     * 
-     */
+        /**
+         * @return The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+         * 
+         */
     private final @Nullable DiskSkuResponse sku;
-    /**
-     * Indicates the OS on a disk supports hibernation.
-     * 
-     */
+        /**
+         * @return Indicates the OS on a disk supports hibernation.
+         * 
+         */
     private final @Nullable Boolean supportsHibernation;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
-     * 
-     */
+        /**
+         * @return Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
+         * 
+         */
     private final @Nullable String tier;
-    /**
-     * The time when the disk was created.
-     * 
-     */
+        /**
+         * @return The time when the disk was created.
+         * 
+         */
     private final String timeCreated;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
-    /**
-     * Unique Guid identifying the resource.
-     * 
-     */
+        /**
+         * @return Unique Guid identifying the resource.
+         * 
+         */
     private final String uniqueId;
-    /**
-     * The Logical zone list for Disk.
-     * 
-     */
+        /**
+         * @return The Logical zone list for Disk.
+         * 
+         */
     private final @Nullable List<String> zones;
 
     @CustomType.Constructor
@@ -276,247 +276,247 @@ public final class GetDiskResult {
     }
 
     /**
-     * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
+     * @return Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
      * 
-    */
+     */
     public Optional<Boolean> burstingEnabled() {
         return Optional.ofNullable(this.burstingEnabled);
     }
     /**
-     * Disk source information. CreationData information cannot be changed after the disk has been created.
+     * @return Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
-    */
+     */
     public CreationDataResponse creationData() {
         return this.creationData;
     }
     /**
-     * ARM id of the DiskAccess resource for using private endpoints on disks.
+     * @return ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
-    */
+     */
     public Optional<String> diskAccessId() {
         return Optional.ofNullable(this.diskAccessId);
     }
     /**
-     * The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
+     * @return The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
      * 
-    */
+     */
     public Optional<Double> diskIOPSReadOnly() {
         return Optional.ofNullable(this.diskIOPSReadOnly);
     }
     /**
-     * The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
+     * @return The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
      * 
-    */
+     */
     public Optional<Double> diskIOPSReadWrite() {
         return Optional.ofNullable(this.diskIOPSReadWrite);
     }
     /**
-     * The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+     * @return The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
      * 
-    */
+     */
     public Optional<Double> diskMBpsReadOnly() {
         return Optional.ofNullable(this.diskMBpsReadOnly);
     }
     /**
-     * The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+     * @return The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
      * 
-    */
+     */
     public Optional<Double> diskMBpsReadWrite() {
         return Optional.ofNullable(this.diskMBpsReadWrite);
     }
     /**
-     * The size of the disk in bytes. This field is read only.
+     * @return The size of the disk in bytes. This field is read only.
      * 
-    */
+     */
     public Double diskSizeBytes() {
         return this.diskSizeBytes;
     }
     /**
-     * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
+     * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
-     * The state of the disk.
+     * @return The state of the disk.
      * 
-    */
+     */
     public String diskState() {
         return this.diskState;
     }
     /**
-     * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+     * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
-    */
+     */
     public Optional<EncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+     * @return Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
-    */
+     */
     public Optional<EncryptionSettingsCollectionResponse> encryptionSettingsCollection() {
         return Optional.ofNullable(this.encryptionSettingsCollection);
     }
     /**
-     * The extended location where the disk will be created. Extended location cannot be changed.
+     * @return The extended location where the disk will be created. Extended location cannot be changed.
      * 
-    */
+     */
     public Optional<ExtendedLocationResponse> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
-     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
-    */
+     */
     public Optional<String> hyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * A relative URI containing the ID of the VM that has the disk attached.
+     * @return A relative URI containing the ID of the VM that has the disk attached.
      * 
-    */
+     */
     public String managedBy() {
         return this.managedBy;
     }
     /**
-     * List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+     * @return List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
      * 
-    */
+     */
     public List<String> managedByExtended() {
         return this.managedByExtended;
     }
     /**
-     * The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+     * @return The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
      * 
-    */
+     */
     public Optional<Integer> maxShares() {
         return Optional.ofNullable(this.maxShares);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Policy for accessing the disk via network.
+     * @return Policy for accessing the disk via network.
      * 
-    */
+     */
     public Optional<String> networkAccessPolicy() {
         return Optional.ofNullable(this.networkAccessPolicy);
     }
     /**
-     * The Operating System type.
+     * @return The Operating System type.
      * 
-    */
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
     /**
-     * Properties of the disk for which update is pending.
+     * @return Properties of the disk for which update is pending.
      * 
-    */
+     */
     public PropertyUpdatesInProgressResponse propertyUpdatesInProgress() {
         return this.propertyUpdatesInProgress;
     }
     /**
-     * The disk provisioning state.
+     * @return The disk provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
+     * @return Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
      * 
-    */
+     */
     public Optional<PurchasePlanResponse> purchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
     /**
-     * Contains the security related information for the resource.
+     * @return Contains the security related information for the resource.
      * 
-    */
+     */
     public Optional<DiskSecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
-     * Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+     * @return Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
      * 
-    */
+     */
     public List<ShareInfoElementResponse> shareInfo() {
         return this.shareInfo;
     }
     /**
-     * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+     * @return The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
      * 
-    */
+     */
     public Optional<DiskSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Indicates the OS on a disk supports hibernation.
+     * @return Indicates the OS on a disk supports hibernation.
      * 
-    */
+     */
     public Optional<Boolean> supportsHibernation() {
         return Optional.ofNullable(this.supportsHibernation);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
+     * @return Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
     /**
-     * The time when the disk was created.
+     * @return The time when the disk was created.
      * 
-    */
+     */
     public String timeCreated() {
         return this.timeCreated;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Unique Guid identifying the resource.
+     * @return Unique Guid identifying the resource.
      * 
-    */
+     */
     public String uniqueId() {
         return this.uniqueId;
     }
     /**
-     * The Logical zone list for Disk.
+     * @return The Logical zone list for Disk.
      * 
-    */
+     */
     public List<String> zones() {
         return this.zones == null ? List.of() : this.zones;
     }

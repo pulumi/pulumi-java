@@ -11,15 +11,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class CompositePathResponse {
-    /**
-     * Sort order for composite paths.
-     * 
-     */
+        /**
+         * @return Sort order for composite paths.
+         * 
+         */
     private final @Nullable String order;
-    /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
-     * 
-     */
+        /**
+         * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+         * 
+         */
     private final @Nullable String path;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class CompositePathResponse {
     }
 
     /**
-     * Sort order for composite paths.
+     * @return Sort order for composite paths.
      * 
-    */
+     */
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
     }
     /**
-     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     * @return The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }

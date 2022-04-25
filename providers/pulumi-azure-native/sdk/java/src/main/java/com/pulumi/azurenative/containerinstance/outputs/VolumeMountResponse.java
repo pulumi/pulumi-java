@@ -12,20 +12,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VolumeMountResponse {
-    /**
-     * The path within the container where the volume should be mounted. Must not contain colon (:).
-     * 
-     */
+        /**
+         * @return The path within the container where the volume should be mounted. Must not contain colon (:).
+         * 
+         */
     private final String mountPath;
-    /**
-     * The name of the volume mount.
-     * 
-     */
+        /**
+         * @return The name of the volume mount.
+         * 
+         */
     private final String name;
-    /**
-     * The flag indicating whether the volume mount is read-only.
-     * 
-     */
+        /**
+         * @return The flag indicating whether the volume mount is read-only.
+         * 
+         */
     private final @Nullable Boolean readOnly;
 
     @CustomType.Constructor
@@ -39,23 +39,23 @@ public final class VolumeMountResponse {
     }
 
     /**
-     * The path within the container where the volume should be mounted. Must not contain colon (:).
+     * @return The path within the container where the volume should be mounted. Must not contain colon (:).
      * 
-    */
+     */
     public String mountPath() {
         return this.mountPath;
     }
     /**
-     * The name of the volume mount.
+     * @return The name of the volume mount.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The flag indicating whether the volume mount is read-only.
+     * @return The flag indicating whether the volume mount is read-only.
      * 
-    */
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }

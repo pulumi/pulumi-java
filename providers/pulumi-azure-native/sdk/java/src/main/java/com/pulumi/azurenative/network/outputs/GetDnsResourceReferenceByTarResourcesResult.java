@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetDnsResourceReferenceByTarResourcesResult {
-    /**
-     * The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
-     * 
-     */
+        /**
+         * @return The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
+         * 
+         */
     private final @Nullable List<DnsResourceReferenceResponse> dnsResourceReferences;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
     }
 
     /**
-     * The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
+     * @return The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
      * 
-    */
+     */
     public List<DnsResourceReferenceResponse> dnsResourceReferences() {
         return this.dnsResourceReferences == null ? List.of() : this.dnsResourceReferences;
     }

@@ -24,6 +24,10 @@ public final class TypedErrorInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="info", required=true)
     private Object info;
 
+    /**
+     * @return The scenario specific error details.
+     * 
+     */
     public Object info() {
         return this.info;
     }
@@ -35,6 +39,10 @@ public final class TypedErrorInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of included error details.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -64,11 +72,23 @@ public final class TypedErrorInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new TypedErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param info The scenario specific error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(Object info) {
             $.info = info;
             return this;
         }
 
+        /**
+         * @param type The type of included error details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

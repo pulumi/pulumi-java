@@ -26,6 +26,10 @@ public final class SshConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="publicKeys")
     private @Nullable List<SshPublicKeyResponse> publicKeys;
 
+    /**
+     * @return The list of SSH public keys used to authenticate with linux based VMs.
+     * 
+     */
     public Optional<List<SshPublicKeyResponse>> publicKeys() {
         return Optional.ofNullable(this.publicKeys);
     }
@@ -54,11 +58,23 @@ public final class SshConfigurationResponse extends com.pulumi.resources.InvokeA
             $ = new SshConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys used to authenticate with linux based VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
             $.publicKeys = publicKeys;
             return this;
         }
 
+        /**
+         * @param publicKeys The list of SSH public keys used to authenticate with linux based VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }

@@ -13,50 +13,50 @@ import java.util.Objects;
 
 @CustomType
 public final class NodeMonitoringDataResponse {
-    /**
-     *  Unmatched properties from the message are deserialized in this collection.
-     * 
-     */
+        /**
+         * @return  Unmatched properties from the message are deserialized in this collection.
+         * 
+         */
     private final Map<String,Object> additionalProperties;
-    /**
-     * Available memory (MB) on the integration runtime node.
-     * 
-     */
+        /**
+         * @return Available memory (MB) on the integration runtime node.
+         * 
+         */
     private final Integer availableMemoryInMB;
-    /**
-     * Maximum concurrent jobs on the integration runtime node.
-     * 
-     */
+        /**
+         * @return Maximum concurrent jobs on the integration runtime node.
+         * 
+         */
     private final Integer concurrentJobsLimit;
-    /**
-     * The number of jobs currently running on the integration runtime node.
-     * 
-     */
+        /**
+         * @return The number of jobs currently running on the integration runtime node.
+         * 
+         */
     private final Integer concurrentJobsRunning;
-    /**
-     * CPU percentage on the integration runtime node.
-     * 
-     */
+        /**
+         * @return CPU percentage on the integration runtime node.
+         * 
+         */
     private final Integer cpuUtilization;
-    /**
-     * The maximum concurrent jobs in this integration runtime.
-     * 
-     */
+        /**
+         * @return The maximum concurrent jobs in this integration runtime.
+         * 
+         */
     private final Integer maxConcurrentJobs;
-    /**
-     * Name of the integration runtime node.
-     * 
-     */
+        /**
+         * @return Name of the integration runtime node.
+         * 
+         */
     private final String nodeName;
-    /**
-     * Received bytes on the integration runtime node.
-     * 
-     */
+        /**
+         * @return Received bytes on the integration runtime node.
+         * 
+         */
     private final Double receivedBytes;
-    /**
-     * Sent bytes on the integration runtime node.
-     * 
-     */
+        /**
+         * @return Sent bytes on the integration runtime node.
+         * 
+         */
     private final Double sentBytes;
 
     @CustomType.Constructor
@@ -82,65 +82,65 @@ public final class NodeMonitoringDataResponse {
     }
 
     /**
-     *  Unmatched properties from the message are deserialized in this collection.
+     * @return  Unmatched properties from the message are deserialized in this collection.
      * 
-    */
+     */
     public Map<String,Object> additionalProperties() {
         return this.additionalProperties;
     }
     /**
-     * Available memory (MB) on the integration runtime node.
+     * @return Available memory (MB) on the integration runtime node.
      * 
-    */
+     */
     public Integer availableMemoryInMB() {
         return this.availableMemoryInMB;
     }
     /**
-     * Maximum concurrent jobs on the integration runtime node.
+     * @return Maximum concurrent jobs on the integration runtime node.
      * 
-    */
+     */
     public Integer concurrentJobsLimit() {
         return this.concurrentJobsLimit;
     }
     /**
-     * The number of jobs currently running on the integration runtime node.
+     * @return The number of jobs currently running on the integration runtime node.
      * 
-    */
+     */
     public Integer concurrentJobsRunning() {
         return this.concurrentJobsRunning;
     }
     /**
-     * CPU percentage on the integration runtime node.
+     * @return CPU percentage on the integration runtime node.
      * 
-    */
+     */
     public Integer cpuUtilization() {
         return this.cpuUtilization;
     }
     /**
-     * The maximum concurrent jobs in this integration runtime.
+     * @return The maximum concurrent jobs in this integration runtime.
      * 
-    */
+     */
     public Integer maxConcurrentJobs() {
         return this.maxConcurrentJobs;
     }
     /**
-     * Name of the integration runtime node.
+     * @return Name of the integration runtime node.
      * 
-    */
+     */
     public String nodeName() {
         return this.nodeName;
     }
     /**
-     * Received bytes on the integration runtime node.
+     * @return Received bytes on the integration runtime node.
      * 
-    */
+     */
     public Double receivedBytes() {
         return this.receivedBytes;
     }
     /**
-     * Sent bytes on the integration runtime node.
+     * @return Sent bytes on the integration runtime node.
      * 
-    */
+     */
     public Double sentBytes() {
         return this.sentBytes;
     }

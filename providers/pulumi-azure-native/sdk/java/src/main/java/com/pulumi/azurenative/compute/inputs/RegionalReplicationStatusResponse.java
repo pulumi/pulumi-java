@@ -24,6 +24,10 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
     @Import(name="details", required=true)
     private String details;
 
+    /**
+     * @return The details of the replication status.
+     * 
+     */
     public String details() {
         return this.details;
     }
@@ -35,6 +39,10 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
     @Import(name="progress", required=true)
     private Integer progress;
 
+    /**
+     * @return It indicates progress of the replication job.
+     * 
+     */
     public Integer progress() {
         return this.progress;
     }
@@ -46,6 +54,10 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
     @Import(name="region", required=true)
     private String region;
 
+    /**
+     * @return The region to which the gallery image version is being replicated to.
+     * 
+     */
     public String region() {
         return this.region;
     }
@@ -57,6 +69,10 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return This is the regional replication state.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -88,21 +104,45 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
             $ = new RegionalReplicationStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param details The details of the replication status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(String details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param progress It indicates progress of the replication job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Integer progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param region The region to which the gallery image version is being replicated to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param state This is the regional replication state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

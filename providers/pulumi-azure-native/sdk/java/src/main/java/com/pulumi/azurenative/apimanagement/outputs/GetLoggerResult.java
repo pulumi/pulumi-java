@@ -13,46 +13,46 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetLoggerResult {
-    /**
-     * The name and SendRule connection string of the event hub for azureEventHub logger.
-     * Instrumentation key for applicationInsights logger.
-     * 
-     */
+        /**
+         * @return The name and SendRule connection string of the event hub for azureEventHub logger.
+         * Instrumentation key for applicationInsights logger.
+         * 
+         */
     private final @Nullable Map<String,String> credentials;
-    /**
-     * Logger description.
-     * 
-     */
+        /**
+         * @return Logger description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Whether records are buffered in the logger before publishing. Default is assumed to be true.
-     * 
-     */
+        /**
+         * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
+         * 
+         */
     private final @Nullable Boolean isBuffered;
-    /**
-     * Logger type.
-     * 
-     */
+        /**
+         * @return Logger type.
+         * 
+         */
     private final String loggerType;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
-     * 
-     */
+        /**
+         * @return Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
+         * 
+         */
     private final @Nullable String resourceId;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -76,59 +76,59 @@ public final class GetLoggerResult {
     }
 
     /**
-     * The name and SendRule connection string of the event hub for azureEventHub logger.
+     * @return The name and SendRule connection string of the event hub for azureEventHub logger.
      * Instrumentation key for applicationInsights logger.
      * 
-    */
+     */
     public Map<String,String> credentials() {
         return this.credentials == null ? Map.of() : this.credentials;
     }
     /**
-     * Logger description.
+     * @return Logger description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Whether records are buffered in the logger before publishing. Default is assumed to be true.
+     * @return Whether records are buffered in the logger before publishing. Default is assumed to be true.
      * 
-    */
+     */
     public Optional<Boolean> isBuffered() {
         return Optional.ofNullable(this.isBuffered);
     }
     /**
-     * Logger type.
+     * @return Logger type.
      * 
-    */
+     */
     public String loggerType() {
         return this.loggerType;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
+     * @return Azure Resource Id of a log target (either Azure Event Hub resource or Azure Application Insights resource).
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

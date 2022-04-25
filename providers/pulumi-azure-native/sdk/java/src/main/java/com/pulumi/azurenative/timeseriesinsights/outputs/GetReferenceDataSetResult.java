@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetReferenceDataSetResult {
-    /**
-     * The time the resource was created.
-     * 
-     */
+        /**
+         * @return The time the resource was created.
+         * 
+         */
     private final String creationTime;
-    /**
-     * The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
-     * 
-     */
+        /**
+         * @return The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+         * 
+         */
     private final @Nullable String dataStringComparisonBehavior;
-    /**
-     * Resource Id
-     * 
-     */
+        /**
+         * @return Resource Id
+         * 
+         */
     private final String id;
-    /**
-     * The list of key properties for the reference data set.
-     * 
-     */
+        /**
+         * @return The list of key properties for the reference data set.
+         * 
+         */
     private final List<ReferenceDataSetKeyPropertyResponse> keyProperties;
-    /**
-     * Resource location
-     * 
-     */
+        /**
+         * @return Resource location
+         * 
+         */
     private final String location;
-    /**
-     * Resource name
-     * 
-     */
+        /**
+         * @return Resource name
+         * 
+         */
     private final String name;
-    /**
-     * Provisioning state of the resource.
-     * 
-     */
+        /**
+         * @return Provisioning state of the resource.
+         * 
+         */
     private final String provisioningState;
-    /**
-     * Resource tags
-     * 
-     */
+        /**
+         * @return Resource tags
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * Resource type
-     * 
-     */
+        /**
+         * @return Resource type
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -83,65 +83,65 @@ public final class GetReferenceDataSetResult {
     }
 
     /**
-     * The time the resource was created.
+     * @return The time the resource was created.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
+     * @return The reference data set key comparison behavior can be set using this property. By default, the value is &#39;Ordinal&#39; - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When &#39;OrdinalIgnoreCase&#39; is set, case insensitive comparison will be used.
      * 
-    */
+     */
     public Optional<String> dataStringComparisonBehavior() {
         return Optional.ofNullable(this.dataStringComparisonBehavior);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The list of key properties for the reference data set.
+     * @return The list of key properties for the reference data set.
      * 
-    */
+     */
     public List<ReferenceDataSetKeyPropertyResponse> keyProperties() {
         return this.keyProperties;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the resource.
+     * @return Provisioning state of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

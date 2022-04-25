@@ -11,40 +11,40 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetCredentialResult {
-    /**
-     * Gets the creation time.
-     * 
-     */
+        /**
+         * @return Gets the creation time.
+         * 
+         */
     private final String creationTime;
-    /**
-     * Gets or sets the description.
-     * 
-     */
+        /**
+         * @return Gets or sets the description.
+         * 
+         */
     private final @Nullable String description;
-    /**
-     * Fully qualified resource Id for the resource
-     * 
-     */
+        /**
+         * @return Fully qualified resource Id for the resource
+         * 
+         */
     private final String id;
-    /**
-     * Gets the last modified time.
-     * 
-     */
+        /**
+         * @return Gets the last modified time.
+         * 
+         */
     private final String lastModifiedTime;
-    /**
-     * The name of the resource
-     * 
-     */
+        /**
+         * @return The name of the resource
+         * 
+         */
     private final String name;
-    /**
-     * The type of the resource.
-     * 
-     */
+        /**
+         * @return The type of the resource.
+         * 
+         */
     private final String type;
-    /**
-     * Gets the user name of the credential.
-     * 
-     */
+        /**
+         * @return Gets the user name of the credential.
+         * 
+         */
     private final String userName;
 
     @CustomType.Constructor
@@ -66,51 +66,51 @@ public final class GetCredentialResult {
     }
 
     /**
-     * Gets the creation time.
+     * @return Gets the creation time.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets the last modified time.
+     * @return Gets the last modified time.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Gets the user name of the credential.
+     * @return Gets the user name of the credential.
      * 
-    */
+     */
     public String userName() {
         return this.userName;
     }

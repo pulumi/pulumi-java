@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedIdentityResponse {
-    /**
-     * The principal id of the managed identity. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The principal id of the managed identity. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String principalId;
-    /**
-     * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
-     * 
-     */
+        /**
+         * @return The tenant id of the managed identity. This property will only be provided for a system assigned identity.
+         * 
+         */
     private final String tenantId;
-    /**
-     * The type of managed identity for the resource.
-     * 
-     */
+        /**
+         * @return The type of managed identity for the resource.
+         * 
+         */
     private final @Nullable String type;
-    /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
-     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
-     * 
-     */
+        /**
+         * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @CustomType.Constructor
@@ -48,31 +48,31 @@ public final class ManagedIdentityResponse {
     }
 
     /**
-     * The principal id of the managed identity. This property will only be provided for a system assigned identity.
+     * @return The principal id of the managed identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant id of the managed identity. This property will only be provided for a system assigned identity.
+     * @return The tenant id of the managed identity. This property will only be provided for a system assigned identity.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * The type of managed identity for the resource.
+     * @return The type of managed identity for the resource.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
      * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,UserAssignedIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

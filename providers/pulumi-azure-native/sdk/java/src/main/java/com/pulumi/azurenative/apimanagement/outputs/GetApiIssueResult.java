@@ -11,50 +11,50 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetApiIssueResult {
-    /**
-     * A resource identifier for the API the issue was created for.
-     * 
-     */
+        /**
+         * @return A resource identifier for the API the issue was created for.
+         * 
+         */
     private final @Nullable String apiId;
-    /**
-     * Date and time when the issue was created.
-     * 
-     */
+        /**
+         * @return Date and time when the issue was created.
+         * 
+         */
     private final @Nullable String createdDate;
-    /**
-     * Text describing the issue.
-     * 
-     */
+        /**
+         * @return Text describing the issue.
+         * 
+         */
     private final String description;
-    /**
-     * Resource ID.
-     * 
-     */
+        /**
+         * @return Resource ID.
+         * 
+         */
     private final String id;
-    /**
-     * Resource name.
-     * 
-     */
+        /**
+         * @return Resource name.
+         * 
+         */
     private final String name;
-    /**
-     * Status of the issue.
-     * 
-     */
+        /**
+         * @return Status of the issue.
+         * 
+         */
     private final @Nullable String state;
-    /**
-     * The issue title.
-     * 
-     */
+        /**
+         * @return The issue title.
+         * 
+         */
     private final String title;
-    /**
-     * Resource type for API Management resource.
-     * 
-     */
+        /**
+         * @return Resource type for API Management resource.
+         * 
+         */
     private final String type;
-    /**
-     * A resource identifier for the user created the issue.
-     * 
-     */
+        /**
+         * @return A resource identifier for the user created the issue.
+         * 
+         */
     private final String userId;
 
     @CustomType.Constructor
@@ -80,65 +80,65 @@ public final class GetApiIssueResult {
     }
 
     /**
-     * A resource identifier for the API the issue was created for.
+     * @return A resource identifier for the API the issue was created for.
      * 
-    */
+     */
     public Optional<String> apiId() {
         return Optional.ofNullable(this.apiId);
     }
     /**
-     * Date and time when the issue was created.
+     * @return Date and time when the issue was created.
      * 
-    */
+     */
     public Optional<String> createdDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
-     * Text describing the issue.
+     * @return Text describing the issue.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Status of the issue.
+     * @return Status of the issue.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
-     * The issue title.
+     * @return The issue title.
      * 
-    */
+     */
     public String title() {
         return this.title;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * A resource identifier for the user created the issue.
+     * @return A resource identifier for the user created the issue.
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

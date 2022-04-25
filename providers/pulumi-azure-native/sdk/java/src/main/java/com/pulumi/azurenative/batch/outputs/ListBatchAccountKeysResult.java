@@ -9,20 +9,20 @@ import java.util.Objects;
 
 @CustomType
 public final class ListBatchAccountKeysResult {
-    /**
-     * The Batch account name.
-     * 
-     */
+        /**
+         * @return The Batch account name.
+         * 
+         */
     private final String accountName;
-    /**
-     * The primary key associated with the account.
-     * 
-     */
+        /**
+         * @return The primary key associated with the account.
+         * 
+         */
     private final String primary;
-    /**
-     * The secondary key associated with the account.
-     * 
-     */
+        /**
+         * @return The secondary key associated with the account.
+         * 
+         */
     private final String secondary;
 
     @CustomType.Constructor
@@ -36,23 +36,23 @@ public final class ListBatchAccountKeysResult {
     }
 
     /**
-     * The Batch account name.
+     * @return The Batch account name.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * The primary key associated with the account.
+     * @return The primary key associated with the account.
      * 
-    */
+     */
     public String primary() {
         return this.primary;
     }
     /**
-     * The secondary key associated with the account.
+     * @return The secondary key associated with the account.
      * 
-    */
+     */
     public String secondary() {
         return this.secondary;
     }

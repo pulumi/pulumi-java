@@ -26,6 +26,10 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
     @Import(name="scheme", required=true)
     private Output<Either<String,ServiceCorrelationScheme>> scheme;
 
+    /**
+     * @return The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+     * 
+     */
     public Output<Either<String,ServiceCorrelationScheme>> scheme() {
         return this.scheme;
     }
@@ -37,6 +41,10 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the service that the correlation relationship is established with.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -66,28 +74,64 @@ public final class ServiceCorrelationDescriptionArgs extends com.pulumi.resource
             $ = new ServiceCorrelationDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scheme The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(Output<Either<String,ServiceCorrelationScheme>> scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param scheme The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(Either<String,ServiceCorrelationScheme> scheme) {
             return scheme(Output.of(scheme));
         }
 
+        /**
+         * @param scheme The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             return scheme(Either.ofLeft(scheme));
         }
 
+        /**
+         * @param scheme The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(ServiceCorrelationScheme scheme) {
             return scheme(Either.ofRight(scheme));
         }
 
+        /**
+         * @param serviceName The name of the service that the correlation relationship is established with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the service that the correlation relationship is established with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

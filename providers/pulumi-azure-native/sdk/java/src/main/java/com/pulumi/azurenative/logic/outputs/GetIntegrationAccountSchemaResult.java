@@ -14,80 +14,80 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetIntegrationAccountSchemaResult {
-    /**
-     * The changed time.
-     * 
-     */
+        /**
+         * @return The changed time.
+         * 
+         */
     private final String changedTime;
-    /**
-     * The content.
-     * 
-     */
+        /**
+         * @return The content.
+         * 
+         */
     private final @Nullable String content;
-    /**
-     * The content link.
-     * 
-     */
+        /**
+         * @return The content link.
+         * 
+         */
     private final ContentLinkResponse contentLink;
-    /**
-     * The content type.
-     * 
-     */
+        /**
+         * @return The content type.
+         * 
+         */
     private final @Nullable String contentType;
-    /**
-     * The created time.
-     * 
-     */
+        /**
+         * @return The created time.
+         * 
+         */
     private final String createdTime;
-    /**
-     * The document name.
-     * 
-     */
+        /**
+         * @return The document name.
+         * 
+         */
     private final @Nullable String documentName;
-    /**
-     * The file name.
-     * 
-     */
+        /**
+         * @return The file name.
+         * 
+         */
     private final @Nullable String fileName;
-    /**
-     * The resource id.
-     * 
-     */
+        /**
+         * @return The resource id.
+         * 
+         */
     private final String id;
-    /**
-     * The resource location.
-     * 
-     */
+        /**
+         * @return The resource location.
+         * 
+         */
     private final @Nullable String location;
-    /**
-     * The metadata.
-     * 
-     */
+        /**
+         * @return The metadata.
+         * 
+         */
     private final @Nullable Object metadata;
-    /**
-     * Gets the resource name.
-     * 
-     */
+        /**
+         * @return Gets the resource name.
+         * 
+         */
     private final String name;
-    /**
-     * The schema type.
-     * 
-     */
+        /**
+         * @return The schema type.
+         * 
+         */
     private final String schemaType;
-    /**
-     * The resource tags.
-     * 
-     */
+        /**
+         * @return The resource tags.
+         * 
+         */
     private final @Nullable Map<String,String> tags;
-    /**
-     * The target namespace of the schema.
-     * 
-     */
+        /**
+         * @return The target namespace of the schema.
+         * 
+         */
     private final @Nullable String targetNamespace;
-    /**
-     * Gets the resource type.
-     * 
-     */
+        /**
+         * @return Gets the resource type.
+         * 
+         */
     private final String type;
 
     @CustomType.Constructor
@@ -125,107 +125,107 @@ public final class GetIntegrationAccountSchemaResult {
     }
 
     /**
-     * The changed time.
+     * @return The changed time.
      * 
-    */
+     */
     public String changedTime() {
         return this.changedTime;
     }
     /**
-     * The content.
+     * @return The content.
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The content link.
+     * @return The content link.
      * 
-    */
+     */
     public ContentLinkResponse contentLink() {
         return this.contentLink;
     }
     /**
-     * The content type.
+     * @return The content type.
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * The created time.
+     * @return The created time.
      * 
-    */
+     */
     public String createdTime() {
         return this.createdTime;
     }
     /**
-     * The document name.
+     * @return The document name.
      * 
-    */
+     */
     public Optional<String> documentName() {
         return Optional.ofNullable(this.documentName);
     }
     /**
-     * The file name.
+     * @return The file name.
      * 
-    */
+     */
     public Optional<String> fileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metadata.
+     * @return The metadata.
      * 
-    */
+     */
     public Optional<Object> metadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The schema type.
+     * @return The schema type.
      * 
-    */
+     */
     public String schemaType() {
         return this.schemaType;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The target namespace of the schema.
+     * @return The target namespace of the schema.
      * 
-    */
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

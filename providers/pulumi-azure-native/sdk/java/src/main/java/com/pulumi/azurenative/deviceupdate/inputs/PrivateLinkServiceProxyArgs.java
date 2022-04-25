@@ -29,6 +29,10 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
     @Import(name="groupConnectivityInformation")
     private @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
+    /**
+     * @return Group connectivity information.
+     * 
+     */
     public Optional<Output<List<GroupConnectivityInformationArgs>>> groupConnectivityInformation() {
         return Optional.ofNullable(this.groupConnectivityInformation);
     }
@@ -40,6 +44,10 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return NRP resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
     @Import(name="remotePrivateLinkServiceConnectionState")
     private @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 
+    /**
+     * @return Remote private link service connection state
+     * 
+     */
     public Optional<Output<PrivateLinkServiceConnectionStateArgs>> remotePrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }
@@ -81,33 +93,75 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
             $ = new PrivateLinkServiceProxyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupConnectivityInformation Group connectivity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivityInformation(@Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation) {
             $.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
 
+        /**
+         * @param groupConnectivityInformation Group connectivity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivityInformation(List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
             return groupConnectivityInformation(Output.of(groupConnectivityInformation));
         }
 
+        /**
+         * @param groupConnectivityInformation Group connectivity information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupConnectivityInformation(GroupConnectivityInformationArgs... groupConnectivityInformation) {
             return groupConnectivityInformation(List.of(groupConnectivityInformation));
         }
 
+        /**
+         * @param id NRP resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id NRP resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param remotePrivateLinkServiceConnectionState Remote private link service connection state
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePrivateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
             $.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param remotePrivateLinkServiceConnectionState Remote private link service connection state
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePrivateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
             return remotePrivateLinkServiceConnectionState(Output.of(remotePrivateLinkServiceConnectionState));
         }

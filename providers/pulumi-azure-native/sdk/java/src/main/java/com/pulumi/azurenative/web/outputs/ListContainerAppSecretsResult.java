@@ -10,10 +10,10 @@ import java.util.Objects;
 
 @CustomType
 public final class ListContainerAppSecretsResult {
-    /**
-     * Collection of resources.
-     * 
-     */
+        /**
+         * @return Collection of resources.
+         * 
+         */
     private final List<ContainerAppSecretResponse> value;
 
     @CustomType.Constructor
@@ -22,9 +22,9 @@ public final class ListContainerAppSecretsResult {
     }
 
     /**
-     * Collection of resources.
+     * @return Collection of resources.
      * 
-    */
+     */
     public List<ContainerAppSecretResponse> value() {
         return this.value;
     }

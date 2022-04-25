@@ -27,6 +27,10 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends com.pulumi.resources
     @Import(name="ignoreMissingVnetServiceEndpoint")
     private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
+    /**
+     * @return Value that indicates whether to ignore missing VNet Service Endpoint
+     * 
+     */
     public Optional<Output<Boolean>> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
@@ -38,6 +42,10 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends com.pulumi.resources
     @Import(name="subnet")
     private @Nullable Output<SubnetArgs> subnet;
 
+    /**
+     * @return Subnet properties
+     * 
+     */
     public Optional<Output<SubnetArgs>> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -67,20 +75,44 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends com.pulumi.resources
             $ = new NWRuleSetVirtualNetworkRulesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ignoreMissingVnetServiceEndpoint Value that indicates whether to ignore missing VNet Service Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint) {
             $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
 
+        /**
+         * @param ignoreMissingVnetServiceEndpoint Value that indicates whether to ignore missing VNet Service Endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVnetServiceEndpoint(Boolean ignoreMissingVnetServiceEndpoint) {
             return ignoreMissingVnetServiceEndpoint(Output.of(ignoreMissingVnetServiceEndpoint));
         }
 
+        /**
+         * @param subnet Subnet properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param subnet Subnet properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(SubnetArgs subnet) {
             return subnet(Output.of(subnet));
         }

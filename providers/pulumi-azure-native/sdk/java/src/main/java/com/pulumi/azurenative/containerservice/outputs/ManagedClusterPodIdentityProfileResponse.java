@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ManagedClusterPodIdentityProfileResponse {
-    /**
-     * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
-     * 
-     */
+        /**
+         * @return Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
+         * 
+         */
     private final @Nullable Boolean allowNetworkPluginKubenet;
-    /**
-     * Whether the pod identity addon is enabled.
-     * 
-     */
+        /**
+         * @return Whether the pod identity addon is enabled.
+         * 
+         */
     private final @Nullable Boolean enabled;
-    /**
-     * User assigned pod identity settings.
-     * 
-     */
+        /**
+         * @return User assigned pod identity settings.
+         * 
+         */
     private final @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
-    /**
-     * User assigned pod identity exception settings.
-     * 
-     */
+        /**
+         * @return User assigned pod identity exception settings.
+         * 
+         */
     private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
     @CustomType.Constructor
@@ -48,30 +48,30 @@ public final class ManagedClusterPodIdentityProfileResponse {
     }
 
     /**
-     * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
+     * @return Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
      * 
-    */
+     */
     public Optional<Boolean> allowNetworkPluginKubenet() {
         return Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
     /**
-     * Whether the pod identity addon is enabled.
+     * @return Whether the pod identity addon is enabled.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * User assigned pod identity settings.
+     * @return User assigned pod identity settings.
      * 
-    */
+     */
     public List<ManagedClusterPodIdentityResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? List.of() : this.userAssignedIdentities;
     }
     /**
-     * User assigned pod identity exception settings.
+     * @return User assigned pod identity exception settings.
      * 
-    */
+     */
     public List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions() {
         return this.userAssignedIdentityExceptions == null ? List.of() : this.userAssignedIdentityExceptions;
     }

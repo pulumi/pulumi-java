@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class VICredentialResponse {
-    /**
-     * Gets or sets username to connect with the vCenter.
-     * 
-     */
+        /**
+         * @return Gets or sets username to connect with the vCenter.
+         * 
+         */
     private final @Nullable String username;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class VICredentialResponse {
     }
 
     /**
-     * Gets or sets username to connect with the vCenter.
+     * @return Gets or sets username to connect with the vCenter.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

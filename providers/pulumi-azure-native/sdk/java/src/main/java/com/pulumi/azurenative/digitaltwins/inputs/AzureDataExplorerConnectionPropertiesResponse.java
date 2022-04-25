@@ -26,6 +26,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxDatabaseName", required=true)
     private String adxDatabaseName;
 
+    /**
+     * @return The name of the Azure Data Explorer database.
+     * 
+     */
     public String adxDatabaseName() {
         return this.adxDatabaseName;
     }
@@ -37,6 +41,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxEndpointUri", required=true)
     private String adxEndpointUri;
 
+    /**
+     * @return The URI of the Azure Data Explorer endpoint.
+     * 
+     */
     public String adxEndpointUri() {
         return this.adxEndpointUri;
     }
@@ -48,6 +56,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxResourceId", required=true)
     private String adxResourceId;
 
+    /**
+     * @return The resource ID of the Azure Data Explorer cluster.
+     * 
+     */
     public String adxResourceId() {
         return this.adxResourceId;
     }
@@ -59,6 +71,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="adxTableName")
     private @Nullable String adxTableName;
 
+    /**
+     * @return The name of the Azure Data Explorer table.
+     * 
+     */
     public Optional<String> adxTableName() {
         return Optional.ofNullable(this.adxTableName);
     }
@@ -71,6 +87,11 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="connectionType", required=true)
     private String connectionType;
 
+    /**
+     * @return The type of time series connection resource.
+     * Expected value is &#39;AzureDataExplorer&#39;.
+     * 
+     */
     public String connectionType() {
         return this.connectionType;
     }
@@ -82,6 +103,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubConsumerGroup")
     private @Nullable String eventHubConsumerGroup;
 
+    /**
+     * @return The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
+     * 
+     */
     public Optional<String> eventHubConsumerGroup() {
         return Optional.ofNullable(this.eventHubConsumerGroup);
     }
@@ -93,6 +118,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubEndpointUri", required=true)
     private String eventHubEndpointUri;
 
+    /**
+     * @return The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+     * 
+     */
     public String eventHubEndpointUri() {
         return this.eventHubEndpointUri;
     }
@@ -104,6 +133,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubEntityPath", required=true)
     private String eventHubEntityPath;
 
+    /**
+     * @return The EventHub name in the EventHub namespace for identity-based authentication.
+     * 
+     */
     public String eventHubEntityPath() {
         return this.eventHubEntityPath;
     }
@@ -115,6 +148,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="eventHubNamespaceResourceId", required=true)
     private String eventHubNamespaceResourceId;
 
+    /**
+     * @return The resource ID of the EventHub namespace.
+     * 
+     */
     public String eventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
     }
@@ -126,6 +163,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -163,51 +204,112 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends com.pul
             $ = new AzureDataExplorerConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adxDatabaseName The name of the Azure Data Explorer database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adxDatabaseName(String adxDatabaseName) {
             $.adxDatabaseName = adxDatabaseName;
             return this;
         }
 
+        /**
+         * @param adxEndpointUri The URI of the Azure Data Explorer endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adxEndpointUri(String adxEndpointUri) {
             $.adxEndpointUri = adxEndpointUri;
             return this;
         }
 
+        /**
+         * @param adxResourceId The resource ID of the Azure Data Explorer cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adxResourceId(String adxResourceId) {
             $.adxResourceId = adxResourceId;
             return this;
         }
 
+        /**
+         * @param adxTableName The name of the Azure Data Explorer table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adxTableName(@Nullable String adxTableName) {
             $.adxTableName = adxTableName;
             return this;
         }
 
+        /**
+         * @param connectionType The type of time series connection resource.
+         * Expected value is &#39;AzureDataExplorer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(String connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param eventHubConsumerGroup The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
             $.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
 
+        /**
+         * @param eventHubEndpointUri The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEndpointUri(String eventHubEndpointUri) {
             $.eventHubEndpointUri = eventHubEndpointUri;
             return this;
         }
 
+        /**
+         * @param eventHubEntityPath The EventHub name in the EventHub namespace for identity-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEntityPath(String eventHubEntityPath) {
             $.eventHubEntityPath = eventHubEntityPath;
             return this;
         }
 
+        /**
+         * @param eventHubNamespaceResourceId The resource ID of the EventHub namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
             $.eventHubNamespaceResourceId = eventHubNamespaceResourceId;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

@@ -19,36 +19,36 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class AzureFileShareProtectionPolicyResponse {
-    /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
-     * Expected value is &#39;AzureStorage&#39;.
-     * 
-     */
+        /**
+         * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureStorage&#39;.
+         * 
+         */
     private final String backupManagementType;
-    /**
-     * Number of items associated with this policy.
-     * 
-     */
+        /**
+         * @return Number of items associated with this policy.
+         * 
+         */
     private final @Nullable Integer protectedItemsCount;
-    /**
-     * Retention policy with the details on backup copy retention ranges.
-     * 
-     */
+        /**
+         * @return Retention policy with the details on backup copy retention ranges.
+         * 
+         */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
-    /**
-     * Backup schedule specified as part of backup policy.
-     * 
-     */
+        /**
+         * @return Backup schedule specified as part of backup policy.
+         * 
+         */
     private final @Nullable Object schedulePolicy;
-    /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
-     * 
-     */
+        /**
+         * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         */
     private final @Nullable String timeZone;
-    /**
-     * Type of workload for the backup management
-     * 
-     */
+        /**
+         * @return Type of workload for the backup management
+         * 
+         */
     private final @Nullable String workLoadType;
 
     @CustomType.Constructor
@@ -68,45 +68,45 @@ public final class AzureFileShareProtectionPolicyResponse {
     }
 
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;AzureStorage&#39;.
      * 
-    */
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
-    */
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
-     * Retention policy with the details on backup copy retention ranges.
+     * @return Retention policy with the details on backup copy retention ranges.
      * 
-    */
+     */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * Backup schedule specified as part of backup policy.
+     * @return Backup schedule specified as part of backup policy.
      * 
-    */
+     */
     public Optional<Object> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
     /**
-     * Type of workload for the backup management
+     * @return Type of workload for the backup management
      * 
-    */
+     */
     public Optional<String> workLoadType() {
         return Optional.ofNullable(this.workLoadType);
     }

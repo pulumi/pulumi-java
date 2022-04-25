@@ -27,6 +27,10 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="encryption")
     private @Nullable EncryptionImagesResponse encryption;
 
+    /**
+     * @return Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+     * 
+     */
     public Optional<EncryptionImagesResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -38,6 +42,10 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the region.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="regionalReplicaCount")
     private @Nullable Integer regionalReplicaCount;
 
+    /**
+     * @return The number of replicas of the Image Version to be created per region. This property is updatable.
+     * 
+     */
     public Optional<Integer> regionalReplicaCount() {
         return Optional.ofNullable(this.regionalReplicaCount);
     }
@@ -60,6 +72,10 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="storageAccountType")
     private @Nullable String storageAccountType;
 
+    /**
+     * @return Specifies the storage account type to be used to store the image. This property is not updatable.
+     * 
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -91,21 +107,45 @@ public final class TargetRegionResponse extends com.pulumi.resources.InvokeArgs 
             $ = new TargetRegionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable EncryptionImagesResponse encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param name The name of the region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param regionalReplicaCount The number of replicas of the Image Version to be created per region. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
             $.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;

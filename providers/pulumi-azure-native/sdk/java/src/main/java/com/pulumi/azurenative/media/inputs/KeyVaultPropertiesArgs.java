@@ -22,6 +22,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="keyIdentifier")
     private @Nullable Output<String> keyIdentifier;
 
+    /**
+     * @return The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+     * 
+     */
     public Optional<Output<String>> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -50,11 +54,23 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyIdentifier The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(@Nullable Output<String> keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             return keyIdentifier(Output.of(keyIdentifier));
         }

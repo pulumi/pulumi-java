@@ -25,6 +25,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return Resource name for the device resource.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -36,6 +40,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceType", required=true)
     private Output<Either<String,DeviceType>> deviceType;
 
+    /**
+     * @return The type of the device.
+     * 
+     */
     public Output<Either<String,DeviceType>> deviceType() {
         return this.deviceType;
     }
@@ -47,6 +55,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -69,6 +85,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -101,55 +121,127 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName Resource name for the device resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName Resource name for the device resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param deviceType The type of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceType(Output<Either<String,DeviceType>> deviceType) {
             $.deviceType = deviceType;
             return this;
         }
 
+        /**
+         * @param deviceType The type of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceType(Either<String,DeviceType> deviceType) {
             return deviceType(Output.of(deviceType));
         }
 
+        /**
+         * @param deviceType The type of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceType(String deviceType) {
             return deviceType(Either.ofLeft(deviceType));
         }
 
+        /**
+         * @param deviceType The type of the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceType(DeviceType deviceType) {
             return deviceType(Either.ofRight(deviceType));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

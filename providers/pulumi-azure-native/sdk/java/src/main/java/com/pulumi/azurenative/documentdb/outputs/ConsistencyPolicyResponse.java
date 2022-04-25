@@ -13,20 +13,20 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ConsistencyPolicyResponse {
-    /**
-     * The default consistency level and configuration settings of the Cosmos DB account.
-     * 
-     */
+        /**
+         * @return The default consistency level and configuration settings of the Cosmos DB account.
+         * 
+         */
     private final String defaultConsistencyLevel;
-    /**
-     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
-     * 
-     */
+        /**
+         * @return When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+         * 
+         */
     private final @Nullable Integer maxIntervalInSeconds;
-    /**
-     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
-     * 
-     */
+        /**
+         * @return When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+         * 
+         */
     private final @Nullable Double maxStalenessPrefix;
 
     @CustomType.Constructor
@@ -40,23 +40,23 @@ public final class ConsistencyPolicyResponse {
     }
 
     /**
-     * The default consistency level and configuration settings of the Cosmos DB account.
+     * @return The default consistency level and configuration settings of the Cosmos DB account.
      * 
-    */
+     */
     public String defaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
     }
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+     * @return When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
-    */
+     */
     public Optional<Integer> maxIntervalInSeconds() {
         return Optional.ofNullable(this.maxIntervalInSeconds);
     }
     /**
-     * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
+     * @return When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to &#39;BoundedStaleness&#39;.
      * 
-    */
+     */
     public Optional<Double> maxStalenessPrefix() {
         return Optional.ofNullable(this.maxStalenessPrefix);
     }

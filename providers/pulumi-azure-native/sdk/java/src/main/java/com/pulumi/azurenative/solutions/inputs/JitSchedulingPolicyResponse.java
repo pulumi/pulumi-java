@@ -30,6 +30,10 @@ public final class JitSchedulingPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The start time of the request.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -41,6 +45,10 @@ public final class JitSchedulingPolicyResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of JIT schedule.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -76,11 +84,23 @@ public final class JitSchedulingPolicyResponse extends com.pulumi.resources.Invo
             return this;
         }
 
+        /**
+         * @param startTime The start time of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param type The type of JIT schedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

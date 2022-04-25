@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class LinuxOSConfigResponse {
-    /**
-     * SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
-     * 
-     */
+        /**
+         * @return SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+         * 
+         */
     private final @Nullable Integer swapFileSizeMB;
-    /**
-     * Sysctl settings for Linux agent nodes.
-     * 
-     */
+        /**
+         * @return Sysctl settings for Linux agent nodes.
+         * 
+         */
     private final @Nullable SysctlConfigResponse sysctls;
-    /**
-     * Transparent Huge Page defrag configuration.
-     * 
-     */
+        /**
+         * @return Transparent Huge Page defrag configuration.
+         * 
+         */
     private final @Nullable String transparentHugePageDefrag;
-    /**
-     * Transparent Huge Page enabled configuration.
-     * 
-     */
+        /**
+         * @return Transparent Huge Page enabled configuration.
+         * 
+         */
     private final @Nullable String transparentHugePageEnabled;
 
     @CustomType.Constructor
@@ -47,30 +47,30 @@ public final class LinuxOSConfigResponse {
     }
 
     /**
-     * SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
+     * @return SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
      * 
-    */
+     */
     public Optional<Integer> swapFileSizeMB() {
         return Optional.ofNullable(this.swapFileSizeMB);
     }
     /**
-     * Sysctl settings for Linux agent nodes.
+     * @return Sysctl settings for Linux agent nodes.
      * 
-    */
+     */
     public Optional<SysctlConfigResponse> sysctls() {
         return Optional.ofNullable(this.sysctls);
     }
     /**
-     * Transparent Huge Page defrag configuration.
+     * @return Transparent Huge Page defrag configuration.
      * 
-    */
+     */
     public Optional<String> transparentHugePageDefrag() {
         return Optional.ofNullable(this.transparentHugePageDefrag);
     }
     /**
-     * Transparent Huge Page enabled configuration.
+     * @return Transparent Huge Page enabled configuration.
      * 
-    */
+     */
     public Optional<String> transparentHugePageEnabled() {
         return Optional.ofNullable(this.transparentHugePageEnabled);
     }

@@ -9,21 +9,21 @@ import java.util.Objects;
 
 @CustomType
 public final class UsernamePasswordCredentialsResponse {
-    /**
-     * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
-     * 
-     */
+        /**
+         * @return Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+         * 
+         */
     private final String password;
-    /**
-     * The discriminator for derived types.
-     * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
-     * 
-     */
+        /**
+         * @return The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
+         * 
+         */
     private final String type;
-    /**
-     * Username to be presented as part of the credentials.
-     * 
-     */
+        /**
+         * @return Username to be presented as part of the credentials.
+         * 
+         */
     private final String username;
 
     @CustomType.Constructor
@@ -37,24 +37,24 @@ public final class UsernamePasswordCredentialsResponse {
     }
 
     /**
-     * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
+     * @return Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.VideoAnalyzer.UsernamePasswordCredentials&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Username to be presented as part of the credentials.
+     * @return Username to be presented as part of the credentials.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }
